@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-09-27T23:02:54.171460+00:00",
+  "updated": "2026-09-27T23:09:11.785005+00:00",
   "source": "nflverse",
   "definition": "Regular-season passing and rushing plays with valid EPA. Excludes nullified plays when identified. First half includes quarters 1 and 2. These are EPA-eligible play counts, not every official offensive snap. Early-season samples are small.",
   "teams": {
