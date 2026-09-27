@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Doc's NFL War Room</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 20px;
+  background: #081525;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  color: #35df93;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #aabbd0;
+}
+
+.panel {
+  background: #13263c;
+  border: 1px solid #304c67;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+h2 { color: #35df93; }
+
+label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 7px;
+}
+
+select, button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 7px;
+  font-size: 16px;
+}
+
+select {
+  background: #edf3fa;
+  color: #111;
+}
+
+button {
+  margin-top: 20px;
+  background: #35df93;
+  color: #081525;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover { background: #7cf5ba; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #304c67;
+  text-align: center;
+}
+
+th { background: #203c57; }
+
+td:first-child {
+  text-align: left;
+  font-weight: bold;
+}
+
+.table-wrap { overflow-x: auto; }
+
+.note {
+  color: #b5c6d6;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.status {
+  color: #35df93;
+  margin-top: 15px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<h1>DOC'S NFL WAR ROOM</h1>
+<p class="subtitle">
+EPA • SOS • QB Intelligence • Red Zone • Betting Lines
+</p>
+
+<div class="panel">
+<h2>Team Matchup</h2>
+
+<label for="away">Away Team</label>
+<select id="away"></select>
+
+<label for="home">Home Team</label>
+<select id="home"></select>
+
+<button onclick="analyze()">
+Analyze Matchup
+</button>
+
+<p id="matchup" class="status"></p>
+</div>
+
+<div class="panel">
+<h2>EPA & Strength of Schedule</h2>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Statistic</th>
+<th id="awayHeader">Away</th>
+<th id="homeHeader">Home</th>
+</tr>
+</thead>
+
+<tbody id="epaBody"></tbody>
+</table>
+</div>
+
+<p class="note">
+Statistics will appear once verified NFL data
+is connected. Missing data will never be
+replaced with invented numbers.
+</p>
+</div>
+
+<div class="panel">
+<h2>QB & Receiver Intelligence</h2>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Team</th>
+<th>QB</th>
+<th>Target</th>
+<th>Position</th>
+<th>Targets</th>
+<th>Red Zone</th>
+</tr>
+</thead>
+
+<tbody id="targetBody">
+<tr>
+<td colspan="6">
+Awaiting verified player statistics
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="panel">
+<h2>Sportsbook Research</h2>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Market</th>
+<th>Opening</th>
+<th>Recorded</th>
+<th>Movement</th>
+</tr>
+</thead>
+
+<tbody id="oddsBody">
+<tr>
+<td colspan="4">
+Awaiting verified sportsbook data
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<p class="note">
+Recorded lines are not necessarily live odds.
+Sportsbooks will be identified separately.
+</p>
+</div>
+
+<div class="panel">
+<h2>Postgame Evaluation</h2>
+<p class="note">
+We'll use this section to compare our
+pregame research against actual game results.
+</p>
+</div>
+
+</div>
+
+<script>
+const teams = [
+"Arizona Cardinals",
+"Atlanta Falcons",
+"Baltimore Ravens",
+"Buffalo Bills",
+"Carolina Panthers",
+"Chicago Bears",
+"Cincinnati Bengals",
+"Cleveland Browns",
+"Dallas Cowboys",
+"Denver Broncos",
+"Detroit Lions",
+"Green Bay Packers",
+"Houston Texans",
+"Indianapolis Colts",
+"Jacksonville Jaguars",
+"Kansas City Chiefs",
+"Las Vegas Raiders",
+"Los Angeles Chargers",
+"Los Angeles Rams",
+"Miami Dolphins",
+"Minnesota Vikings",
+"New England Patriots",
+"New Orleans Saints",
+"New York Giants",
+"New York Jets",
+"Philadelphia Eagles",
+"Pittsburgh Steelers",
+"San Francisco 49ers",
+"Seattle Seahawks",
+"Tampa Bay Buccaneers",
+"Tennessee Titans",
+"Washington Commanders"
+];
+
+const metrics = [
+"Offensive EPA / Play",
+"Defensive EPA / Play Allowed",
+"Passing EPA / Play",
+"Rushing EPA / Play",
+"Defensive Passing EPA Allowed",
+"Defensive Rushing EPA Allowed",
+"Strength of Schedule",
+"Offensive Success Rate",
+"Defensive Success Rate"
+];
+
+function populateTeams() {
+  const away = document.getElementById("away");
+  const home = document.getElementById("home");
+
+  teams.forEach(team => {
+    away.add(new Option(team, team));
+    home.add(new Option(team, team));
+  });
+
+  away.value = "Kansas City Chiefs";
+  home.value = "Miami Dolphins";
+}
+
+function analyze() {
+  const away =
+    document.getElementById("away").value;
+
+  const home =
+    document.getElementById("home").value;
+
+  const matchup =
+    document.getElementById("matchup");
+
+  if (away === home) {
+    matchup.textContent =
+      "Please select two different teams.";
+    return;
+  }
+
+  matchup.textContent =
+    away + " at " + home;
+
+  document.getElementById("awayHeader")
+    .textContent = away;
+
+  document.getElementById("homeHeader")
+    .textContent = home;
+
+  const body =
+    document.getElementById("epaBody");
+
+  body.replaceChildren();
+
+  metrics.forEach(metric => {
+    const row = document.createElement("tr");
+
+    [metric, "—", "—"].forEach(value => {
+      const cell = document.createElement("td");
+      cell.textContent = value;
+      row.appendChild(cell);
+    });
+
+    body.appendChild(row);
+  });
+}
+
+populateTeams();
+analyze();
+</script>
+
+</body>
+</html>
