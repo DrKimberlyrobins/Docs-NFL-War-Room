@@ -1,0 +1,328 @@
+{
+  "season": 2026,
+  "updated": "2026-09-27T15:11:42.431410+00:00",
+  "source": "nflverse",
+  "note": "Regular-season EPA per passing or rushing play. Defensive EPA is EPA allowed; lower is better. Figures are unadjusted for SOS.",
+  "teams": {
+    "ARI": {
+      "offensiveEPA": -0.033,
+      "defensiveEPAAllowed": 0.0084,
+      "passingEPA": 0.0491,
+      "rushingEPA": -0.1687,
+      "passingEPAAllowed": 0.2051,
+      "rushingEPAAllowed": -0.2263,
+      "offensivePlays": 122,
+      "defensivePlays": 125
+    },
+    "ATL": {
+      "offensiveEPA": -0.162,
+      "defensiveEPAAllowed": -0.0624,
+      "passingEPA": -0.3533,
+      "rushingEPA": 0.0255,
+      "passingEPAAllowed": 0.03,
+      "rushingEPAAllowed": -0.3116,
+      "offensivePlays": 198,
+      "defensivePlays": 196
+    },
+    "BAL": {
+      "offensiveEPA": 0.1571,
+      "defensiveEPAAllowed": -0.0254,
+      "passingEPA": 0.1841,
+      "rushingEPA": 0.1186,
+      "passingEPAAllowed": -0.0605,
+      "rushingEPAAllowed": 0.036,
+      "offensivePlays": 121,
+      "defensivePlays": 121
+    },
+    "BUF": {
+      "offensiveEPA": 0.3679,
+      "defensiveEPAAllowed": 0.1661,
+      "passingEPA": 0.5336,
+      "rushingEPA": 0.0952,
+      "passingEPAAllowed": 0.2948,
+      "rushingEPAAllowed": -0.0759,
+      "offensivePlays": 127,
+      "defensivePlays": 144
+    },
+    "CAR": {
+      "offensiveEPA": 0.0836,
+      "defensiveEPAAllowed": -0.0447,
+      "passingEPA": 0.2563,
+      "rushingEPA": -0.2325,
+      "passingEPAAllowed": -0.0775,
+      "rushingEPAAllowed": -0.0025,
+      "offensivePlays": 133,
+      "defensivePlays": 144
+    },
+    "CHI": {
+      "offensiveEPA": 0.1147,
+      "defensiveEPAAllowed": 0.042,
+      "passingEPA": 0.2495,
+      "rushingEPA": -0.0621,
+      "passingEPAAllowed": 0.1615,
+      "rushingEPAAllowed": -0.1312,
+      "offensivePlays": 148,
+      "defensivePlays": 120
+    },
+    "CIN": {
+      "offensiveEPA": -0.0508,
+      "defensiveEPAAllowed": -0.1735,
+      "passingEPA": -0.023,
+      "rushingEPA": -0.0938,
+      "passingEPAAllowed": -0.1311,
+      "rushingEPAAllowed": -0.3099,
+      "offensivePlays": 122,
+      "defensivePlays": 135
+    },
+    "CLE": {
+      "offensiveEPA": -0.089,
+      "defensiveEPAAllowed": 0.0317,
+      "passingEPA": 0.0599,
+      "rushingEPA": -0.3487,
+      "passingEPAAllowed": 0.0732,
+      "rushingEPAAllowed": -0.0237,
+      "offensivePlays": 107,
+      "defensivePlays": 119
+    },
+    "DAL": {
+      "offensiveEPA": 0.2514,
+      "defensiveEPAAllowed": 0.1909,
+      "passingEPA": 0.4423,
+      "rushingEPA": -0.1742,
+      "passingEPAAllowed": 0.333,
+      "rushingEPAAllowed": -0.0026,
+      "offensivePlays": 113,
+      "defensivePlays": 137
+    },
+    "DEN": {
+      "offensiveEPA": -0.1034,
+      "defensiveEPAAllowed": 0.0387,
+      "passingEPA": -0.0764,
+      "rushingEPA": -0.1481,
+      "passingEPAAllowed": -0.07,
+      "rushingEPAAllowed": 0.1745,
+      "offensivePlays": 109,
+      "defensivePlays": 126
+    },
+    "DET": {
+      "offensiveEPA": 0.1141,
+      "defensiveEPAAllowed": 0.2053,
+      "passingEPA": 0.2704,
+      "rushingEPA": -0.1332,
+      "passingEPAAllowed": 0.2315,
+      "rushingEPAAllowed": 0.1507,
+      "offensivePlays": 142,
+      "defensivePlays": 160
+    },
+    "GB": {
+      "offensiveEPA": -0.0993,
+      "defensiveEPAAllowed": 0.1017,
+      "passingEPA": 0.0328,
+      "rushingEPA": -0.4484,
+      "passingEPAAllowed": 0.2305,
+      "rushingEPAAllowed": -0.0551,
+      "offensivePlays": 193,
+      "defensivePlays": 204
+    },
+    "HOU": {
+      "offensiveEPA": -0.0838,
+      "defensiveEPAAllowed": 0.0807,
+      "passingEPA": -0.0201,
+      "rushingEPA": -0.2389,
+      "passingEPAAllowed": 0.2741,
+      "rushingEPAAllowed": -0.2556,
+      "offensivePlays": 158,
+      "defensivePlays": 115
+    },
+    "IND": {
+      "offensiveEPA": 0.0111,
+      "defensiveEPAAllowed": 0.2019,
+      "passingEPA": -0.0928,
+      "rushingEPA": 0.1595,
+      "passingEPAAllowed": 0.276,
+      "rushingEPAAllowed": 0.0981,
+      "offensivePlays": 119,
+      "defensivePlays": 144
+    },
+    "JAX": {
+      "offensiveEPA": 0.121,
+      "defensiveEPAAllowed": -0.0261,
+      "passingEPA": 0.2268,
+      "rushingEPA": -0.0007,
+      "passingEPAAllowed": 0.0314,
+      "rushingEPAAllowed": -0.1093,
+      "offensivePlays": 114,
+      "defensivePlays": 110
+    },
+    "KC": {
+      "offensiveEPA": 0.1611,
+      "defensiveEPAAllowed": -0.0473,
+      "passingEPA": 0.1465,
+      "rushingEPA": 0.1819,
+      "passingEPAAllowed": -0.1089,
+      "rushingEPAAllowed": 0.0486,
+      "offensivePlays": 146,
+      "defensivePlays": 115
+    },
+    "LA": {
+      "offensiveEPA": 0.0044,
+      "defensiveEPAAllowed": -0.0804,
+      "passingEPA": 0.1173,
+      "rushingEPA": -0.1389,
+      "passingEPAAllowed": -0.1032,
+      "rushingEPAAllowed": -0.0482,
+      "offensivePlays": 118,
+      "defensivePlays": 123
+    },
+    "LAC": {
+      "offensiveEPA": -0.2407,
+      "defensiveEPAAllowed": 0.0314,
+      "passingEPA": -0.0789,
+      "rushingEPA": -0.4816,
+      "passingEPAAllowed": 0.2525,
+      "rushingEPAAllowed": -0.2596,
+      "offensivePlays": 122,
+      "defensivePlays": 132
+    },
+    "LV": {
+      "offensiveEPA": -0.062,
+      "defensiveEPAAllowed": -0.2746,
+      "passingEPA": 0.13,
+      "rushingEPA": -0.27,
+      "passingEPAAllowed": -0.1309,
+      "rushingEPAAllowed": -0.4961,
+      "offensivePlays": 125,
+      "defensivePlays": 122
+    },
+    "MIA": {
+      "offensiveEPA": -0.1238,
+      "defensiveEPAAllowed": 0.149,
+      "passingEPA": -0.0416,
+      "rushingEPA": -0.2565,
+      "passingEPAAllowed": 0.4325,
+      "rushingEPAAllowed": -0.1496,
+      "offensivePlays": 115,
+      "defensivePlays": 115
+    },
+    "MIN": {
+      "offensiveEPA": 0.0057,
+      "defensiveEPAAllowed": -0.1588,
+      "passingEPA": 0.1395,
+      "rushingEPA": -0.1378,
+      "passingEPAAllowed": -0.0421,
+      "rushingEPAAllowed": -0.3647,
+      "offensivePlays": 114,
+      "defensivePlays": 141
+    },
+    "NE": {
+      "offensiveEPA": -0.0683,
+      "defensiveEPAAllowed": -0.1749,
+      "passingEPA": 0.0514,
+      "rushingEPA": -0.2395,
+      "passingEPAAllowed": -0.1971,
+      "rushingEPAAllowed": -0.1341,
+      "offensivePlays": 124,
+      "defensivePlays": 119
+    },
+    "NO": {
+      "offensiveEPA": 0.0688,
+      "defensiveEPAAllowed": 0.0265,
+      "passingEPA": 0.1211,
+      "rushingEPA": -0.0489,
+      "passingEPAAllowed": 0.0433,
+      "rushingEPAAllowed": 0.0016,
+      "offensivePlays": 156,
+      "defensivePlays": 134
+    },
+    "NYG": {
+      "offensiveEPA": 0.0137,
+      "defensiveEPAAllowed": 0.2565,
+      "passingEPA": 0.0909,
+      "rushingEPA": -0.0801,
+      "passingEPAAllowed": 0.4602,
+      "rushingEPAAllowed": -0.1024,
+      "offensivePlays": 124,
+      "defensivePlays": 116
+    },
+    "NYJ": {
+      "offensiveEPA": 0.0113,
+      "defensiveEPAAllowed": -0.1441,
+      "passingEPA": 0.2052,
+      "rushingEPA": -0.2375,
+      "passingEPAAllowed": -0.0511,
+      "rushingEPAAllowed": -0.3779,
+      "offensivePlays": 137,
+      "defensivePlays": 109
+    },
+    "PHI": {
+      "offensiveEPA": 0.0353,
+      "defensiveEPAAllowed": 0.052,
+      "passingEPA": 0.1551,
+      "rushingEPA": -0.1422,
+      "passingEPAAllowed": 0.0969,
+      "rushingEPAAllowed": 0.0001,
+      "offensivePlays": 129,
+      "defensivePlays": 123
+    },
+    "PIT": {
+      "offensiveEPA": -0.2856,
+      "defensiveEPAAllowed": -0.2068,
+      "passingEPA": -0.3382,
+      "rushingEPA": -0.156,
+      "passingEPAAllowed": -0.3459,
+      "rushingEPAAllowed": -0.0653,
+      "offensivePlays": 135,
+      "defensivePlays": 113
+    },
+    "SEA": {
+      "offensiveEPA": 0.0977,
+      "defensiveEPAAllowed": -0.1703,
+      "passingEPA": 0.4007,
+      "rushingEPA": -0.181,
+      "passingEPAAllowed": -0.0257,
+      "rushingEPAAllowed": -0.4324,
+      "offensivePlays": 119,
+      "defensivePlays": 121
+    },
+    "SF": {
+      "offensiveEPA": 0.2728,
+      "defensiveEPAAllowed": -0.1204,
+      "passingEPA": 0.5164,
+      "rushingEPA": -0.033,
+      "passingEPAAllowed": -0.0707,
+      "rushingEPAAllowed": -0.1773,
+      "offensivePlays": 115,
+      "defensivePlays": 120
+    },
+    "TB": {
+      "offensiveEPA": -0.1448,
+      "defensiveEPAAllowed": 0.0088,
+      "passingEPA": -0.2422,
+      "rushingEPA": 0.06,
+      "passingEPAAllowed": 0.1506,
+      "rushingEPAAllowed": -0.2243,
+      "offensivePlays": 121,
+      "defensivePlays": 119
+    },
+    "TEN": {
+      "offensiveEPA": -0.0463,
+      "defensiveEPAAllowed": 0.08,
+      "passingEPA": -0.0794,
+      "rushingEPA": 0.0104,
+      "passingEPAAllowed": 0.2364,
+      "rushingEPAAllowed": -0.081,
+      "offensivePlays": 103,
+      "defensivePlays": 140
+    },
+    "WAS": {
+      "offensiveEPA": 0.0448,
+      "defensiveEPAAllowed": 0.1309,
+      "passingEPA": 0.1121,
+      "rushingEPA": -0.0636,
+      "passingEPAAllowed": 0.3056,
+      "rushingEPAAllowed": -0.2044,
+      "offensivePlays": 141,
+      "defensivePlays": 108
+    }
+  }
+}
