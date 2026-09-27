@@ -27,8 +27,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install pandas pyarrow requests
 
-      - name: Calculate NFL statistics
-        run: python scripts/update_nfl_stats.py
+       - name: Calculate NFL statistics
+         run: |
+          python scripts/update_nfl_stats.py
+          python scripts/update_nfl_plays.py
 
       - name: Save updated statistics
         run: |
