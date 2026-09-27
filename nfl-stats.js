@@ -89,11 +89,38 @@
         format(homeStats?.[key])
       ];
 
-      values.forEach(value => {
-        const cell = document.createElement("td");
-        cell.textContent = value;
-        row.appendChild(cell);
-      });
+      values.forEach((value, index) => {
+  const cell = document.createElement("td");
+  cell.textContent = value;
+
+  const awayValue = awayStats?.[key];
+  const homeValue = homeStats?.[key];
+
+  if (
+    index > 0 &&
+    typeof awayValue === "number" &&
+    typeof homeValue === "number" &&
+    Number.isFinite(awayValue) &&
+    Number.isFinite(homeValue) &&
+    awayValue !== homeValue
+  ) {
+    const lowerIsBetter = key.toLowerCase().includes("allowed");
+
+    const awayWins = lowerIsBetter
+      ? awayValue < homeValue
+      : awayValue > homeValue;
+
+    const winningColumn = awayWins ? 1 : 2;
+
+    if (index === winningColumn) {
+      cell.style.backgroundColor = "#176b46";
+      cell.style.color = "#ffffff";
+      cell.style.fontWeight = "bold";
+    }
+  }
+
+  row.appendChild(cell);
+});
 
       body.appendChild(row);
     });
