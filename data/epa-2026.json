@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-09-28T01:32:59.949066+00:00",
+  "updated": "2026-09-28T18:13:23.921942+00:00",
   "source": "nflverse",
   "note": "Regular-season EPA per passing or rushing play. Defensive EPA is EPA allowed; lower is better. Figures are unadjusted for SOS.",
   "teams": {
@@ -95,14 +95,14 @@
       "defensivePlays": 201
     },
     "DEN": {
-      "offensiveEPA": -0.1034,
-      "defensiveEPAAllowed": 0.0387,
-      "passingEPA": -0.0764,
-      "rushingEPA": -0.1481,
-      "passingEPAAllowed": -0.07,
-      "rushingEPAAllowed": 0.1745,
-      "offensivePlays": 109,
-      "defensivePlays": 126
+      "offensiveEPA": -0.0503,
+      "defensiveEPAAllowed": 0.0231,
+      "passingEPA": -0.0277,
+      "rushingEPA": -0.0872,
+      "passingEPAAllowed": -0.0276,
+      "rushingEPAAllowed": 0.1071,
+      "offensivePlays": 176,
+      "defensivePlays": 210
     },
     "DET": {
       "offensiveEPA": 0.1407,
@@ -165,14 +165,14 @@
       "defensivePlays": 188
     },
     "LA": {
-      "offensiveEPA": 0.0044,
-      "defensiveEPAAllowed": -0.0804,
-      "passingEPA": 0.1173,
-      "rushingEPA": -0.1389,
-      "passingEPAAllowed": -0.1032,
-      "rushingEPAAllowed": -0.0482,
-      "offensivePlays": 118,
-      "defensivePlays": 123
+      "offensiveEPA": 0.0024,
+      "defensiveEPAAllowed": -0.0393,
+      "passingEPA": 0.0711,
+      "rushingEPA": -0.1138,
+      "passingEPAAllowed": -0.0465,
+      "rushingEPAAllowed": -0.0289,
+      "offensivePlays": 202,
+      "defensivePlays": 190
     },
     "LAC": {
       "offensiveEPA": -0.1771,
