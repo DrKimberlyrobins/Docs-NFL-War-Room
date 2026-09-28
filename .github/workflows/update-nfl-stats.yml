@@ -36,6 +36,9 @@ jobs:
       - name: Calculate NFL scoring
         run: python scripts/update_nfl_scoring.py
 
+      - name: Calculate NFL players
+        run: python scripts/update_nfl_players.py
+
       - name: Save updated statistics
         run: |
           git config user.name "github-actions[bot]"
