@@ -316,7 +316,7 @@ for team, group in defensive_plays.groupby("defteam"):
         round(yac_allowed / defensive_games, 2)
         if defensive_games else None
     )
-        defensive_stats[str(team)] = {
+    defensive_stats[str(team)] = {
         "games": int(defensive_games),
         "explosiveReceptionsAllowed": explosive_allowed,
         "explosiveReceptionsAllowedPerGame": explosive_per_game,
