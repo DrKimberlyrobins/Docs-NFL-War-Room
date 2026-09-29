@@ -174,6 +174,7 @@ for team in teams:
 
 output = {
     "season": SEASON,
+    "completedGames": df["game_id"].nunique(),
     "updated": datetime.now(
         timezone.utc
     ).isoformat(),
