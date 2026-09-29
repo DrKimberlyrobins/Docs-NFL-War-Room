@@ -210,6 +210,22 @@ for (team, player_id, name), group in targets.groupby(
         round(yac / catches, 2)
         if catches else None
     )
+        # Receptions gaining 20 or more yards
+    explosive_receptions = int(
+        (
+            (group["complete_pass"] == 1) &
+            (group["receiving_yards"] >= 20)
+        ).sum()
+    )
+
+    # Percentage of catches that were explosive
+    explosive_rate = (
+        round(
+            explosive_receptions / catches * 100,
+            1
+        )
+        if catches else None
+    )
 
     red_zone = int(
         (group["yardline_100"] <= 20).sum()
