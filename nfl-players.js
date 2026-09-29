@@ -234,13 +234,17 @@ function renderQBPassing() {
       const row = document.createElement("tr");
 
       [
-        teamName,
-        qb.name,
-        qb.attempts,
-        qb.completions,
-        qb.completionRate + "%",
-        qb.attemptsPerTeamGame
-      ].forEach(value => {
+  teamName,
+  qb.name,
+  qb.attempts,
+  qb.completions,
+  qb.completionRate + "%",
+  qb.attemptsPerTeamGame,
+  qb.passingYards,
+  qb.yardsPerAttempt,
+  qb.passingTDs,
+  qb.interceptions
+].forEach(value => {
         const cell = document.createElement("td");
         cell.textContent = value;
         row.appendChild(cell);
