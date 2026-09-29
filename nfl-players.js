@@ -207,3 +207,58 @@ analyze = function () {
 };
 
 loadPlayers();
+
+
+// QB PASSING INTELLIGENCE
+
+function renderQBPassing() {
+  const body = document.getElementById("qbPassingBody");
+  const status = document.getElementById("qbPassingStatus");
+
+  if (!body || !status || !playerData) return;
+
+  body.replaceChildren();
+
+  const selectedTeams = [
+    document.getElementById("away").value,
+    document.getElementById("home").value
+  ];
+
+  selectedTeams.forEach(teamName => {
+    const code = playerTeamCodes[teamName];
+    const team = playerData.teams[code];
+
+    if (!team) return;
+
+    team.quarterbacks.forEach(qb => {
+      const row = document.createElement("tr");
+
+      [
+        teamName,
+        qb.name,
+        qb.attempts,
+        qb.completions,
+        qb.completionRate + "%",
+        qb.attemptsPerTeamGame
+      ].forEach(value => {
+        const cell = document.createElement("td");
+        cell.textContent = value;
+        row.appendChild(cell);
+      });
+
+      body.appendChild(row);
+    });
+  });
+
+  status.textContent =
+    "Verified passing statistics from completed games.";
+}
+
+// Connect the new table to the existing functions.
+const previousRenderPlayers = renderPlayers;
+
+renderPlayers = function () {
+  previousRenderPlayers();
+  renderQBPassing();
+};
+
