@@ -270,3 +270,63 @@ renderPlayers = function () {
   renderQBPassing();
 };
 
+
+// DOC'S DEFENSIVE MATCHUP INTELLIGENCE
+
+function renderDefense() {
+
+  const body = document.getElementById("defenseBody");
+  const status = document.getElementById("defenseStatus");
+
+  if (!body || !status || !playerData) return;
+
+  body.replaceChildren();
+
+  const selectedTeams = [
+    document.getElementById("away").value,
+    document.getElementById("home").value
+  ];
+
+  selectedTeams.forEach(teamName => {
+
+    const code = playerTeamCodes[teamName];
+    const defense = playerData.teams[code]?.defense;
+
+    if (!defense || !defense.games) return;
+
+    const values = [
+      teamName,
+      defense.games,
+      defense.explosiveReceptionsAllowed,
+      defense.explosiveReceptionsAllowedPerGame,
+      defense.yardsAfterCatchAllowed,
+      defense.yardsAfterCatchAllowedPerGame
+    ];
+
+    const row = document.createElement("tr");
+
+    values.forEach(value => {
+      const cell = document.createElement("td");
+      cell.textContent = value ?? "—";
+      row.appendChild(cell);
+    });
+
+    body.appendChild(row);
+
+  });
+
+  status.textContent = body.children.length
+    ? "Defensive statistics from completed games."
+    : "No defensive statistics available.";
+}
+
+// Update defense whenever we analyze a matchup.
+
+const previousRenderPlayersForDefense = renderPlayers;
+
+renderPlayers = function () {
+  previousRenderPlayersForDefense();
+  renderDefense();
+};
+
+
