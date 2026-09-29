@@ -37,6 +37,9 @@ required = [
     "receiver_player_id",
     "receiver_player_name",
     "receiving_yards",
+    "passing_yards",
+    "pass_touchdown",
+    "interception",
     "yardline_100",
     "touchdown"
 ]
@@ -59,6 +62,9 @@ for col in [
     "pass_attempt",
     "complete_pass",
     "receiving_yards",
+    "passing_yards",
+    "pass_touchdown",
+    "interception",
     "yardline_100",
     "touchdown"
 ]:
@@ -124,6 +130,22 @@ for (team, name), group in passes.groupby(
     completions = int(
         (group["complete_pass"] == 1).sum()
     )
+        passing_yards = float(
+        group["passing_yards"].fillna(0).sum()
+    )
+
+    passing_tds = int(
+        (group["pass_touchdown"] == 1).sum()
+    )
+
+    interceptions = int(
+        (group["interception"] == 1).sum()
+    )
+
+    yards_per_attempt = (
+        round(passing_yards / attempts, 2)
+        if attempts else None
+    )
 
     quarterbacks.setdefault(
         str(team), []
@@ -131,6 +153,10 @@ for (team, name), group in passes.groupby(
         "name": str(name),
         "attempts": attempts,
         "completions": completions,
+        "passingYards": round(passing_yards, 1),
+        "passingTDs": passing_tds,
+        "interceptions": interceptions,
+        "yardsPerAttempt": yards_per_attempt,
         "completionRate": round(
             completions / attempts * 100, 1
         ) if attempts else None,
