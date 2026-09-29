@@ -130,7 +130,7 @@ for (team, name), group in passes.groupby(
     completions = int(
         (group["complete_pass"] == 1).sum()
     )
-        passing_yards = float(
+    passing_yards = float(
         group["passing_yards"].fillna(0).sum()
     )
 
