@@ -125,20 +125,37 @@
       body.appendChild(row);
     });
 
-    // SOS requires a separate verified calculation.
-    const sosRow = document.createElement("tr");
+    // Display offensive strength of schedule.
+const sosRow = document.createElement("tr");
 
-    [
-      "Strength of Schedule",
-      "Pending",
-      "Pending"
-    ].forEach(value => {
-      const cell = document.createElement("td");
-      cell.textContent = value;
-      sosRow.appendChild(cell);
-    });
+const sosValues = [
+  "Offensive Strength of Schedule",
+  format(awayStats?.offensiveSOS),
+  format(homeStats?.offensiveSOS)
+];
 
-    body.appendChild(sosRow);
+sosValues.forEach(value => {
+  const cell = document.createElement("td");
+  cell.textContent = value;
+  sosRow.appendChild(cell);
+});
+// Highlight the higher offensive SOS value.
+const awaySOS = awayStats?.offensiveSOS;
+const homeSOS = homeStats?.offensiveSOS;
+
+if (
+  Number.isFinite(awaySOS) &&
+  Number.isFinite(homeSOS) &&
+  awaySOS !== homeSOS
+) {
+  const higherColumn = awaySOS > homeSOS ? 1 : 2;
+  const cell = sosRow.children[higherColumn];
+
+  cell.style.backgroundColor = "#176b46";
+  cell.style.color = "#ffffff";
+  cell.style.fontWeight = "bold";
+}
+body.appendChild(sosRow);
 
     let status = document.getElementById("nflDataStatus");
 
