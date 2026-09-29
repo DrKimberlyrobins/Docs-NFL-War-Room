@@ -29,6 +29,7 @@ required = [
     "game_id",
     "season_type",
     "posteam",
+    "defteam",
     "qtr",
     "desc",
     "pass_attempt",
@@ -169,6 +170,8 @@ for (team, name), group in passes.groupby(
         )
     })
 
+# Defensive matchup statistics
+defensive_stats = {}
 # Identify receiver targets.
 targets = df[
     (df["pass_attempt"] == 1) &
@@ -277,6 +280,49 @@ for (team, player_id, name), group in targets.groupby(
         "receivingTouchdowns": touchdowns
     })
 
+# Calculate receiving production allowed by each defense.
+defensive_plays = df[
+    (df["pass_attempt"] == 1) &
+    df["defteam"].notna() &
+    df["receiver_player_id"].notna()
+].copy()
+
+for team, group in defensive_plays.groupby("defteam"):
+
+    catches = group[
+        group["complete_pass"] == 1
+    ]
+
+    explosive_allowed = int(
+        (catches["receiving_yards"] >= 20).sum()
+    )
+
+    yac_allowed = float(
+        catches["yards_after_catch"].fillna(0).sum()
+    )
+
+        # Count completed games faced by this defense
+    defensive_games = df.loc[
+        df["defteam"] == team,
+        "game_id"
+    ].nunique()
+
+    explosive_per_game = (
+        round(explosive_allowed / defensive_games, 2)
+        if defensive_games else None
+    )
+
+    yac_per_game = (
+        round(yac_allowed / defensive_games, 2)
+        if defensive_games else None
+    )
+        defensive_stats[str(team)] = {
+        "games": int(defensive_games),
+        "explosiveReceptionsAllowed": explosive_allowed,
+        "explosiveReceptionsAllowedPerGame": explosive_per_game,
+        "yardsAfterCatchAllowed": round(yac_allowed, 1),
+        "yardsAfterCatchAllowedPerGame": yac_per_game
+    }
 # Sort QBs by passing attempts and
 # receivers by total targets.
 for team in quarterbacks:
@@ -312,6 +358,11 @@ for team in all_teams:
         )
     }
 
+# Attach defensive statistics to each team.
+for team in results:
+    results[team]["defense"] = defensive_stats.get(
+        team, {}
+    )
 output = {
     "season": SEASON,
     "updated": datetime.now(
