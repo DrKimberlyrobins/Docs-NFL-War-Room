@@ -1,8 +1,8 @@
 {
   "season": 2026,
-  "updated": "2026-09-28T18:13:28.075143+00:00",
+  "updated": "2026-09-29T08:31:49.057788+00:00",
   "source": "nflverse play-by-play",
-  "completedGames": 47,
+  "completedGames": 48,
   "note": "Completed regular-season games only. Passing attempts exclude sacks. Receiver statistics use recorded targets. Per-game averages use completed team games, not individual player appearances. Red-zone targets are passes from the opponent's 20 or closer; inside-10 targets are from the opponent's 10 or closer. Verify totals against official stats.",
   "teams": {
     "ARI": {
@@ -12,6 +12,10 @@
           "name": "J.Brissett",
           "attempts": 122,
           "completions": 82,
+          "passingYards": 652.0,
+          "passingTDs": 4,
+          "interceptions": 1,
+          "yardsPerAttempt": 5.34,
           "completionRate": 67.2,
           "attemptsPerTeamGame": 40.67
         }
@@ -152,6 +156,10 @@
           "name": "C.Rush",
           "attempts": 44,
           "completions": 22,
+          "passingYards": 229.0,
+          "passingTDs": 1,
+          "interceptions": 4,
+          "yardsPerAttempt": 5.2,
           "completionRate": 50.0,
           "attemptsPerTeamGame": 14.67
         },
@@ -159,6 +167,10 @@
           "name": "M.Penix",
           "attempts": 26,
           "completions": 18,
+          "passingYards": 256.0,
+          "passingTDs": 1,
+          "interceptions": 1,
+          "yardsPerAttempt": 9.85,
           "completionRate": 69.2,
           "attemptsPerTeamGame": 8.67
         },
@@ -166,6 +178,10 @@
           "name": "J.Strand",
           "attempts": 17,
           "completions": 8,
+          "passingYards": 59.0,
+          "passingTDs": 0,
+          "interceptions": 1,
+          "yardsPerAttempt": 3.47,
           "completionRate": 47.1,
           "attemptsPerTeamGame": 5.67
         }
@@ -320,6 +336,10 @@
           "name": "L.Jackson",
           "attempts": 81,
           "completions": 53,
+          "passingYards": 745.0,
+          "passingTDs": 4,
+          "interceptions": 1,
+          "yardsPerAttempt": 9.2,
           "completionRate": 65.4,
           "attemptsPerTeamGame": 27.0
         }
@@ -502,6 +522,10 @@
           "name": "J.Allen",
           "attempts": 95,
           "completions": 56,
+          "passingYards": 786.0,
+          "passingTDs": 5,
+          "interceptions": 2,
+          "yardsPerAttempt": 8.27,
           "completionRate": 58.9,
           "attemptsPerTeamGame": 31.67
         }
@@ -656,6 +680,10 @@
           "name": "B.Young",
           "attempts": 128,
           "completions": 72,
+          "passingYards": 939.0,
+          "passingTDs": 7,
+          "interceptions": 2,
+          "yardsPerAttempt": 7.34,
           "completionRate": 56.2,
           "attemptsPerTeamGame": 42.67
         },
@@ -663,6 +691,10 @@
           "name": "K.Pickett",
           "attempts": 1,
           "completions": 0,
+          "passingYards": 0.0,
+          "passingTDs": 0,
+          "interceptions": 0,
+          "yardsPerAttempt": 0.0,
           "completionRate": 0.0,
           "attemptsPerTeamGame": 0.33
         }
@@ -853,76 +885,95 @@
       ]
     },
     "CHI": {
-      "games": 2,
+      "games": 3,
       "quarterbacks": [
         {
           "name": "C.Williams",
           "attempts": 60,
           "completions": 36,
+          "passingYards": 407.0,
+          "passingTDs": 2,
+          "interceptions": 1,
+          "yardsPerAttempt": 6.78,
           "completionRate": 60.0,
-          "attemptsPerTeamGame": 30.0
+          "attemptsPerTeamGame": 20.0
+        },
+        {
+          "name": "C.Keenum",
+          "attempts": 34,
+          "completions": 24,
+          "passingYards": 247.0,
+          "passingTDs": 2,
+          "interceptions": 0,
+          "yardsPerAttempt": 7.26,
+          "completionRate": 70.6,
+          "attemptsPerTeamGame": 11.33
         },
         {
           "name": "T.Bagent",
           "attempts": 10,
           "completions": 5,
+          "passingYards": 54.0,
+          "passingTDs": 0,
+          "interceptions": 0,
+          "yardsPerAttempt": 5.4,
           "completionRate": 50.0,
-          "attemptsPerTeamGame": 5.0
+          "attemptsPerTeamGame": 3.33
         }
       ],
       "receivers": [
         {
+          "id": "00-0040735",
+          "name": "L.Burden",
+          "targets": 23,
+          "targetsPerGame": 7.67,
+          "receptions": 15,
+          "receptionsPerGame": 5.0,
+          "receivingYards": 156.0,
+          "yardsPerGame": 52.0,
+          "catchRate": 65.2,
+          "redZoneTargets": 6,
+          "inside10Targets": 2,
+          "receivingTouchdowns": 1
+        },
+        {
           "id": "00-0032464",
           "name": "K.Raymond",
-          "targets": 14,
+          "targets": 21,
           "targetsPerGame": 7.0,
-          "receptions": 13,
-          "receptionsPerGame": 6.5,
-          "receivingYards": 124.0,
-          "yardsPerGame": 62.0,
-          "catchRate": 92.9,
+          "receptions": 19,
+          "receptionsPerGame": 6.33,
+          "receivingYards": 214.0,
+          "yardsPerGame": 71.33,
+          "catchRate": 90.5,
+          "redZoneTargets": 3,
+          "inside10Targets": 1,
+          "receivingTouchdowns": 1
+        },
+        {
+          "id": "00-0039919",
+          "name": "R.Odunze",
+          "targets": 13,
+          "targetsPerGame": 4.33,
+          "receptions": 8,
+          "receptionsPerGame": 2.67,
+          "receivingYards": 139.0,
+          "yardsPerGame": 46.33,
+          "catchRate": 61.5,
           "redZoneTargets": 2,
           "inside10Targets": 1,
           "receivingTouchdowns": 0
         },
         {
-          "id": "00-0040735",
-          "name": "L.Burden",
-          "targets": 12,
-          "targetsPerGame": 6.0,
-          "receptions": 8,
-          "receptionsPerGame": 4.0,
-          "receivingYards": 95.0,
-          "yardsPerGame": 47.5,
-          "catchRate": 66.7,
-          "redZoneTargets": 2,
-          "inside10Targets": 0,
-          "receivingTouchdowns": 0
-        },
-        {
-          "id": "00-0039919",
-          "name": "R.Odunze",
-          "targets": 7,
-          "targetsPerGame": 3.5,
-          "receptions": 5,
-          "receptionsPerGame": 2.5,
-          "receivingYards": 95.0,
-          "yardsPerGame": 47.5,
-          "catchRate": 71.4,
-          "redZoneTargets": 0,
-          "inside10Targets": 0,
-          "receivingTouchdowns": 0
-        },
-        {
           "id": "00-0036275",
           "name": "D.Swift",
-          "targets": 6,
+          "targets": 9,
           "targetsPerGame": 3.0,
-          "receptions": 6,
-          "receptionsPerGame": 3.0,
-          "receivingYards": 64.0,
-          "yardsPerGame": 32.0,
-          "catchRate": 100.0,
+          "receptions": 8,
+          "receptionsPerGame": 2.67,
+          "receivingYards": 68.0,
+          "yardsPerGame": 22.67,
+          "catchRate": 88.9,
           "redZoneTargets": 1,
           "inside10Targets": 1,
           "receivingTouchdowns": 0
@@ -930,27 +981,27 @@
         {
           "id": "00-0040126",
           "name": "C.Loveland",
-          "targets": 5,
-          "targetsPerGame": 2.5,
-          "receptions": 1,
-          "receptionsPerGame": 0.5,
-          "receivingYards": 3.0,
-          "yardsPerGame": 1.5,
-          "catchRate": 20.0,
-          "redZoneTargets": 2,
-          "inside10Targets": 0,
+          "targets": 9,
+          "targetsPerGame": 3.0,
+          "receptions": 5,
+          "receptionsPerGame": 1.67,
+          "receivingYards": 34.0,
+          "yardsPerGame": 11.33,
+          "catchRate": 55.6,
+          "redZoneTargets": 3,
+          "inside10Targets": 1,
           "receivingTouchdowns": 0
         },
         {
           "id": "00-0036290",
           "name": "C.Kmet",
-          "targets": 4,
-          "targetsPerGame": 2.0,
+          "targets": 5,
+          "targetsPerGame": 1.67,
           "receptions": 2,
-          "receptionsPerGame": 1.0,
+          "receptionsPerGame": 0.67,
           "receivingYards": 35.0,
-          "yardsPerGame": 17.5,
-          "catchRate": 50.0,
+          "yardsPerGame": 11.67,
+          "catchRate": 40.0,
           "redZoneTargets": 0,
           "inside10Targets": 0,
           "receivingTouchdowns": 1
@@ -959,11 +1010,11 @@
           "id": "00-0040236",
           "name": "K.Monangai",
           "targets": 4,
-          "targetsPerGame": 2.0,
+          "targetsPerGame": 1.33,
           "receptions": 4,
-          "receptionsPerGame": 2.0,
+          "receptionsPerGame": 1.33,
           "receivingYards": 35.0,
-          "yardsPerGame": 17.5,
+          "yardsPerGame": 11.67,
           "catchRate": 100.0,
           "redZoneTargets": 1,
           "inside10Targets": 0,
@@ -972,13 +1023,13 @@
         {
           "id": "00-0041558",
           "name": "S.Roush",
-          "targets": 3,
-          "targetsPerGame": 1.5,
-          "receptions": 1,
-          "receptionsPerGame": 0.5,
-          "receivingYards": 9.0,
-          "yardsPerGame": 4.5,
-          "catchRate": 33.3,
+          "targets": 4,
+          "targetsPerGame": 1.33,
+          "receptions": 2,
+          "receptionsPerGame": 0.67,
+          "receivingYards": 25.0,
+          "yardsPerGame": 8.33,
+          "catchRate": 50.0,
           "redZoneTargets": 1,
           "inside10Targets": 0,
           "receivingTouchdowns": 0
@@ -987,15 +1038,29 @@
           "id": "00-0040277",
           "name": "J.Walker",
           "targets": 1,
-          "targetsPerGame": 0.5,
+          "targetsPerGame": 0.33,
           "receptions": 1,
-          "receptionsPerGame": 0.5,
+          "receptionsPerGame": 0.33,
           "receivingYards": 1.0,
-          "yardsPerGame": 0.5,
+          "yardsPerGame": 0.33,
           "catchRate": 100.0,
           "redZoneTargets": 1,
           "inside10Targets": 1,
           "receivingTouchdowns": 1
+        },
+        {
+          "id": "00-0041051",
+          "name": "Z.Thomas",
+          "targets": 1,
+          "targetsPerGame": 0.33,
+          "receptions": 1,
+          "receptionsPerGame": 0.33,
+          "receivingYards": 1.0,
+          "yardsPerGame": 0.33,
+          "catchRate": 100.0,
+          "redZoneTargets": 0,
+          "inside10Targets": 0,
+          "receivingTouchdowns": 0
         }
       ]
     },
@@ -1006,6 +1071,10 @@
           "name": "J.Burrow",
           "attempts": 110,
           "completions": 73,
+          "passingYards": 743.0,
+          "passingTDs": 6,
+          "interceptions": 1,
+          "yardsPerAttempt": 6.75,
           "completionRate": 66.4,
           "attemptsPerTeamGame": 36.67
         }
@@ -1174,6 +1243,10 @@
           "name": "D.Watson",
           "attempts": 92,
           "completions": 56,
+          "passingYards": 587.0,
+          "passingTDs": 5,
+          "interceptions": 1,
+          "yardsPerAttempt": 6.38,
           "completionRate": 60.9,
           "attemptsPerTeamGame": 30.67
         },
@@ -1181,6 +1254,10 @@
           "name": "S.Sanders",
           "attempts": 1,
           "completions": 1,
+          "passingYards": 0.0,
+          "passingTDs": 0,
+          "interceptions": 0,
+          "yardsPerAttempt": 0.0,
           "completionRate": 100.0,
           "attemptsPerTeamGame": 0.33
         }
@@ -1335,6 +1412,10 @@
           "name": "D.Prescott",
           "attempts": 109,
           "completions": 73,
+          "passingYards": 730.0,
+          "passingTDs": 7,
+          "interceptions": 1,
+          "yardsPerAttempt": 6.7,
           "completionRate": 67.0,
           "attemptsPerTeamGame": 36.33
         }
@@ -1489,6 +1570,10 @@
           "name": "B.Nix",
           "attempts": 100,
           "completions": 56,
+          "passingYards": 605.0,
+          "passingTDs": 4,
+          "interceptions": 3,
+          "yardsPerAttempt": 6.05,
           "completionRate": 56.0,
           "attemptsPerTeamGame": 33.33
         }
@@ -1685,6 +1770,10 @@
           "name": "J.Goff",
           "attempts": 116,
           "completions": 77,
+          "passingYards": 802.0,
+          "passingTDs": 8,
+          "interceptions": 0,
+          "yardsPerAttempt": 6.91,
           "completionRate": 66.4,
           "attemptsPerTeamGame": 38.67
         }
@@ -1811,6 +1900,10 @@
           "name": "J.Love",
           "attempts": 132,
           "completions": 65,
+          "passingYards": 844.0,
+          "passingTDs": 6,
+          "interceptions": 2,
+          "yardsPerAttempt": 6.39,
           "completionRate": 49.2,
           "attemptsPerTeamGame": 44.0
         }
@@ -1979,6 +2072,10 @@
           "name": "C.Stroud",
           "attempts": 130,
           "completions": 72,
+          "passingYards": 794.0,
+          "passingTDs": 3,
+          "interceptions": 0,
+          "yardsPerAttempt": 6.11,
           "completionRate": 55.4,
           "attemptsPerTeamGame": 43.33
         },
@@ -1986,6 +2083,10 @@
           "name": "K.Kroeger",
           "attempts": 1,
           "completions": 0,
+          "passingYards": 0.0,
+          "passingTDs": 0,
+          "interceptions": 0,
+          "yardsPerAttempt": 0.0,
           "completionRate": 0.0,
           "attemptsPerTeamGame": 0.33
         }
@@ -2168,6 +2269,10 @@
           "name": "D.Jones",
           "attempts": 104,
           "completions": 65,
+          "passingYards": 611.0,
+          "passingTDs": 3,
+          "interceptions": 3,
+          "yardsPerAttempt": 5.88,
           "completionRate": 62.5,
           "attemptsPerTeamGame": 34.67
         }
@@ -2322,6 +2427,10 @@
           "name": "T.Lawrence",
           "attempts": 85,
           "completions": 54,
+          "passingYards": 616.0,
+          "passingTDs": 7,
+          "interceptions": 2,
+          "yardsPerAttempt": 7.25,
           "completionRate": 63.5,
           "attemptsPerTeamGame": 28.33
         }
@@ -2490,6 +2599,10 @@
           "name": "P.Mahomes",
           "attempts": 102,
           "completions": 67,
+          "passingYards": 812.0,
+          "passingTDs": 7,
+          "interceptions": 2,
+          "yardsPerAttempt": 7.96,
           "completionRate": 65.7,
           "attemptsPerTeamGame": 34.0
         }
@@ -2658,6 +2771,10 @@
           "name": "M.Stafford",
           "attempts": 116,
           "completions": 67,
+          "passingYards": 872.0,
+          "passingTDs": 6,
+          "interceptions": 4,
+          "yardsPerAttempt": 7.52,
           "completionRate": 57.8,
           "attemptsPerTeamGame": 38.67
         },
@@ -2665,6 +2782,10 @@
           "name": "S.Bennett",
           "attempts": 3,
           "completions": 2,
+          "passingYards": 13.0,
+          "passingTDs": 0,
+          "interceptions": 0,
+          "yardsPerAttempt": 4.33,
           "completionRate": 66.7,
           "attemptsPerTeamGame": 1.0
         }
@@ -2861,6 +2982,10 @@
           "name": "J.Herbert",
           "attempts": 96,
           "completions": 52,
+          "passingYards": 627.0,
+          "passingTDs": 3,
+          "interceptions": 4,
+          "yardsPerAttempt": 6.53,
           "completionRate": 54.2,
           "attemptsPerTeamGame": 32.0
         }
@@ -3057,6 +3182,10 @@
           "name": "K.Cousins",
           "attempts": 99,
           "completions": 62,
+          "passingYards": 661.0,
+          "passingTDs": 9,
+          "interceptions": 3,
+          "yardsPerAttempt": 6.68,
           "completionRate": 62.6,
           "attemptsPerTeamGame": 33.0
         }
@@ -3225,6 +3354,10 @@
           "name": "M.Willis",
           "attempts": 95,
           "completions": 49,
+          "passingYards": 627.0,
+          "passingTDs": 1,
+          "interceptions": 2,
+          "yardsPerAttempt": 6.6,
           "completionRate": 51.6,
           "attemptsPerTeamGame": 31.67
         }
@@ -3379,6 +3512,10 @@
           "name": "C.Wentz",
           "attempts": 46,
           "completions": 23,
+          "passingYards": 276.0,
+          "passingTDs": 3,
+          "interceptions": 0,
+          "yardsPerAttempt": 6.0,
           "completionRate": 50.0,
           "attemptsPerTeamGame": 15.33
         },
@@ -3386,6 +3523,10 @@
           "name": "K.Murray",
           "attempts": 37,
           "completions": 18,
+          "passingYards": 186.0,
+          "passingTDs": 1,
+          "interceptions": 2,
+          "yardsPerAttempt": 5.03,
           "completionRate": 48.6,
           "attemptsPerTeamGame": 12.33
         }
@@ -3540,6 +3681,10 @@
           "name": "D.Maye",
           "attempts": 89,
           "completions": 51,
+          "passingYards": 585.0,
+          "passingTDs": 1,
+          "interceptions": 6,
+          "yardsPerAttempt": 6.57,
           "completionRate": 57.3,
           "attemptsPerTeamGame": 29.67
         },
@@ -3547,6 +3692,10 @@
           "name": "T.DeVito",
           "attempts": 5,
           "completions": 3,
+          "passingYards": 30.0,
+          "passingTDs": 0,
+          "interceptions": 0,
+          "yardsPerAttempt": 6.0,
           "completionRate": 60.0,
           "attemptsPerTeamGame": 1.67
         },
@@ -3554,6 +3703,10 @@
           "name": "E.Chism",
           "attempts": 1,
           "completions": 1,
+          "passingYards": 16.0,
+          "passingTDs": 0,
+          "interceptions": 0,
+          "yardsPerAttempt": 16.0,
           "completionRate": 100.0,
           "attemptsPerTeamGame": 0.33
         }
@@ -3750,6 +3903,10 @@
           "name": "T.Shough",
           "attempts": 143,
           "completions": 91,
+          "passingYards": 917.0,
+          "passingTDs": 8,
+          "interceptions": 3,
+          "yardsPerAttempt": 6.41,
           "completionRate": 63.6,
           "attemptsPerTeamGame": 47.67
         }
@@ -3918,6 +4075,10 @@
           "name": "J.Winston",
           "attempts": 54,
           "completions": 25,
+          "passingYards": 229.0,
+          "passingTDs": 0,
+          "interceptions": 1,
+          "yardsPerAttempt": 4.24,
           "completionRate": 46.3,
           "attemptsPerTeamGame": 18.0
         },
@@ -3925,6 +4086,10 @@
           "name": "J.Dart",
           "attempts": 36,
           "completions": 26,
+          "passingYards": 250.0,
+          "passingTDs": 3,
+          "interceptions": 0,
+          "yardsPerAttempt": 6.94,
           "completionRate": 72.2,
           "attemptsPerTeamGame": 12.0
         }
@@ -4065,6 +4230,10 @@
           "name": "G.Smith",
           "attempts": 113,
           "completions": 77,
+          "passingYards": 783.0,
+          "passingTDs": 4,
+          "interceptions": 0,
+          "yardsPerAttempt": 6.93,
           "completionRate": 68.1,
           "attemptsPerTeamGame": 37.67
         }
@@ -4241,97 +4410,98 @@
       ]
     },
     "PHI": {
-      "games": 2,
+      "games": 3,
       "quarterbacks": [
         {
           "name": "J.Hurts",
-          "attempts": 68,
-          "completions": 40,
-          "completionRate": 58.8,
-          "attemptsPerTeamGame": 34.0
+          "attempts": 95,
+          "completions": 56,
+          "passingYards": 620.0,
+          "passingTDs": 5,
+          "interceptions": 3,
+          "yardsPerAttempt": 6.53,
+          "completionRate": 58.9,
+          "attemptsPerTeamGame": 31.67
+        },
+        {
+          "name": "A.Dalton",
+          "attempts": 1,
+          "completions": 0,
+          "passingYards": 0.0,
+          "passingTDs": 0,
+          "interceptions": 1,
+          "yardsPerAttempt": 0.0,
+          "completionRate": 0.0,
+          "attemptsPerTeamGame": 0.33
         }
       ],
       "receivers": [
         {
           "id": "00-0036912",
           "name": "D.Smith",
-          "targets": 19,
-          "targetsPerGame": 9.5,
-          "receptions": 13,
-          "receptionsPerGame": 6.5,
-          "receivingYards": 170.0,
-          "yardsPerGame": 85.0,
-          "catchRate": 68.4,
-          "redZoneTargets": 1,
-          "inside10Targets": 1,
+          "targets": 27,
+          "targetsPerGame": 9.0,
+          "receptions": 19,
+          "receptionsPerGame": 6.33,
+          "receivingYards": 235.0,
+          "yardsPerGame": 78.33,
+          "catchRate": 70.4,
+          "redZoneTargets": 2,
+          "inside10Targets": 2,
           "receivingTouchdowns": 1
         },
         {
           "id": "00-0038393",
           "name": "D.Wicks",
-          "targets": 10,
+          "targets": 15,
           "targetsPerGame": 5.0,
-          "receptions": 7,
-          "receptionsPerGame": 3.5,
-          "receivingYards": 147.0,
-          "yardsPerGame": 73.5,
-          "catchRate": 70.0,
-          "redZoneTargets": 2,
-          "inside10Targets": 1,
+          "receptions": 9,
+          "receptionsPerGame": 3.0,
+          "receivingYards": 179.0,
+          "yardsPerGame": 59.67,
+          "catchRate": 60.0,
+          "redZoneTargets": 4,
+          "inside10Targets": 3,
           "receivingTouchdowns": 1
+        },
+        {
+          "id": "00-0040867",
+          "name": "M.Lemon",
+          "targets": 9,
+          "targetsPerGame": 3.0,
+          "receptions": 7,
+          "receptionsPerGame": 2.33,
+          "receivingYards": 38.0,
+          "yardsPerGame": 12.67,
+          "catchRate": 77.8,
+          "redZoneTargets": 0,
+          "inside10Targets": 0,
+          "receivingTouchdowns": 0
         },
         {
           "id": "00-0034351",
           "name": "D.Goedert",
           "targets": 7,
-          "targetsPerGame": 3.5,
+          "targetsPerGame": 2.33,
           "receptions": 5,
-          "receptionsPerGame": 2.5,
+          "receptionsPerGame": 1.67,
           "receivingYards": 81.0,
-          "yardsPerGame": 40.5,
+          "yardsPerGame": 27.0,
           "catchRate": 71.4,
           "redZoneTargets": 2,
           "inside10Targets": 0,
           "receivingTouchdowns": 2
         },
         {
-          "id": "00-0040867",
-          "name": "M.Lemon",
-          "targets": 5,
-          "targetsPerGame": 2.5,
-          "receptions": 4,
-          "receptionsPerGame": 2.0,
-          "receivingYards": 9.0,
-          "yardsPerGame": 4.5,
-          "catchRate": 80.0,
-          "redZoneTargets": 0,
-          "inside10Targets": 0,
-          "receivingTouchdowns": 0
-        },
-        {
           "id": "00-0034844",
           "name": "S.Barkley",
-          "targets": 4,
+          "targets": 6,
           "targetsPerGame": 2.0,
-          "receptions": 2,
+          "receptions": 3,
           "receptionsPerGame": 1.0,
-          "receivingYards": 8.0,
-          "yardsPerGame": 4.0,
+          "receivingYards": 6.0,
+          "yardsPerGame": 2.0,
           "catchRate": 50.0,
-          "redZoneTargets": 0,
-          "inside10Targets": 0,
-          "receivingTouchdowns": 0
-        },
-        {
-          "id": "00-0033246",
-          "name": "J.Mundt",
-          "targets": 3,
-          "targetsPerGame": 1.5,
-          "receptions": 2,
-          "receptionsPerGame": 1.0,
-          "receivingYards": 8.0,
-          "yardsPerGame": 4.0,
-          "catchRate": 66.7,
           "redZoneTargets": 0,
           "inside10Targets": 0,
           "receivingTouchdowns": 0
@@ -4339,12 +4509,40 @@
         {
           "id": "00-0039746",
           "name": "W.Shipley",
-          "targets": 3,
-          "targetsPerGame": 1.5,
+          "targets": 5,
+          "targetsPerGame": 1.67,
+          "receptions": 4,
+          "receptionsPerGame": 1.33,
+          "receivingYards": 24.0,
+          "yardsPerGame": 8.0,
+          "catchRate": 80.0,
+          "redZoneTargets": 0,
+          "inside10Targets": 0,
+          "receivingTouchdowns": 0
+        },
+        {
+          "id": "00-0033246",
+          "name": "J.Mundt",
+          "targets": 4,
+          "targetsPerGame": 1.33,
           "receptions": 3,
-          "receptionsPerGame": 1.5,
-          "receivingYards": 13.0,
-          "yardsPerGame": 6.5,
+          "receptionsPerGame": 1.0,
+          "receivingYards": 12.0,
+          "yardsPerGame": 4.0,
+          "catchRate": 75.0,
+          "redZoneTargets": 0,
+          "inside10Targets": 0,
+          "receivingTouchdowns": 0
+        },
+        {
+          "id": "00-0038555",
+          "name": "T.Bigsby",
+          "targets": 3,
+          "targetsPerGame": 1.0,
+          "receptions": 3,
+          "receptionsPerGame": 1.0,
+          "receivingYards": 10.0,
+          "yardsPerGame": 3.33,
           "catchRate": 100.0,
           "redZoneTargets": 0,
           "inside10Targets": 0,
@@ -4354,27 +4552,27 @@
           "id": "00-0040024",
           "name": "D.Cooper",
           "targets": 3,
-          "targetsPerGame": 1.5,
+          "targetsPerGame": 1.0,
           "receptions": 2,
-          "receptionsPerGame": 1.0,
+          "receptionsPerGame": 0.67,
           "receivingYards": 26.0,
-          "yardsPerGame": 13.0,
+          "yardsPerGame": 8.67,
           "catchRate": 66.7,
           "redZoneTargets": 1,
           "inside10Targets": 1,
           "receivingTouchdowns": 1
         },
         {
-          "id": "00-0038555",
-          "name": "T.Bigsby",
+          "id": "00-0030061",
+          "name": "Z.Ertz",
           "targets": 2,
-          "targetsPerGame": 1.0,
-          "receptions": 2,
-          "receptionsPerGame": 1.0,
-          "receivingYards": 5.0,
-          "yardsPerGame": 2.5,
-          "catchRate": 100.0,
-          "redZoneTargets": 0,
+          "targetsPerGame": 0.67,
+          "receptions": 1,
+          "receptionsPerGame": 0.33,
+          "receivingYards": 9.0,
+          "yardsPerGame": 3.0,
+          "catchRate": 50.0,
+          "redZoneTargets": 1,
           "inside10Targets": 0,
           "receivingTouchdowns": 0
         }
@@ -4387,6 +4585,10 @@
           "name": "A.Rodgers",
           "attempts": 121,
           "completions": 66,
+          "passingYards": 700.0,
+          "passingTDs": 4,
+          "interceptions": 2,
+          "yardsPerAttempt": 5.79,
           "completionRate": 54.5,
           "attemptsPerTeamGame": 40.33
         },
@@ -4394,6 +4596,10 @@
           "name": "C.Johnston",
           "attempts": 1,
           "completions": 0,
+          "passingYards": 0.0,
+          "passingTDs": 0,
+          "interceptions": 0,
+          "yardsPerAttempt": 0.0,
           "completionRate": 0.0,
           "attemptsPerTeamGame": 0.33
         },
@@ -4401,6 +4607,10 @@
           "name": "M.Rudolph",
           "attempts": 1,
           "completions": 0,
+          "passingYards": 0.0,
+          "passingTDs": 0,
+          "interceptions": 0,
+          "yardsPerAttempt": 0.0,
           "completionRate": 0.0,
           "attemptsPerTeamGame": 0.33
         }
@@ -4555,6 +4765,10 @@
           "name": "D.Lock",
           "attempts": 50,
           "completions": 35,
+          "passingYards": 422.0,
+          "passingTDs": 4,
+          "interceptions": 0,
+          "yardsPerAttempt": 8.44,
           "completionRate": 70.0,
           "attemptsPerTeamGame": 16.67
         },
@@ -4562,6 +4776,10 @@
           "name": "S.Darnold",
           "attempts": 48,
           "completions": 32,
+          "passingYards": 392.0,
+          "passingTDs": 4,
+          "interceptions": 2,
+          "yardsPerAttempt": 8.17,
           "completionRate": 66.7,
           "attemptsPerTeamGame": 16.0
         },
@@ -4569,6 +4787,10 @@
           "name": "J.Smith-Njigba",
           "attempts": 1,
           "completions": 1,
+          "passingYards": 14.0,
+          "passingTDs": 0,
+          "interceptions": 0,
+          "yardsPerAttempt": 14.0,
           "completionRate": 100.0,
           "attemptsPerTeamGame": 0.33
         }
@@ -4737,6 +4959,10 @@
           "name": "B.Purdy",
           "attempts": 83,
           "completions": 60,
+          "passingYards": 789.0,
+          "passingTDs": 9,
+          "interceptions": 1,
+          "yardsPerAttempt": 9.51,
           "completionRate": 72.3,
           "attemptsPerTeamGame": 27.67
         }
@@ -4919,6 +5145,10 @@
           "name": "B.Mayfield",
           "attempts": 109,
           "completions": 61,
+          "passingYards": 615.0,
+          "passingTDs": 2,
+          "interceptions": 2,
+          "yardsPerAttempt": 5.64,
           "completionRate": 56.0,
           "attemptsPerTeamGame": 36.33
         },
@@ -4926,6 +5156,10 @@
           "name": "J.Daniels",
           "attempts": 3,
           "completions": 0,
+          "passingYards": 0.0,
+          "passingTDs": 0,
+          "interceptions": 1,
+          "yardsPerAttempt": 0.0,
           "completionRate": 0.0,
           "attemptsPerTeamGame": 1.0
         }
@@ -5066,6 +5300,10 @@
           "name": "C.Ward",
           "attempts": 93,
           "completions": 55,
+          "passingYards": 504.0,
+          "passingTDs": 2,
+          "interceptions": 1,
+          "yardsPerAttempt": 5.42,
           "completionRate": 59.1,
           "attemptsPerTeamGame": 31.0
         }
@@ -5206,6 +5444,10 @@
           "name": "J.Daniels",
           "attempts": 53,
           "completions": 29,
+          "passingYards": 260.0,
+          "passingTDs": 3,
+          "interceptions": 0,
+          "yardsPerAttempt": 4.91,
           "completionRate": 54.7,
           "attemptsPerTeamGame": 17.67
         },
@@ -5213,6 +5455,10 @@
           "name": "M.Mariota",
           "attempts": 49,
           "completions": 30,
+          "passingYards": 294.0,
+          "passingTDs": 4,
+          "interceptions": 0,
+          "yardsPerAttempt": 6.0,
           "completionRate": 61.2,
           "attemptsPerTeamGame": 16.33
         },
@@ -5220,6 +5466,10 @@
           "name": "A.Williams",
           "attempts": 1,
           "completions": 0,
+          "passingYards": 0.0,
+          "passingTDs": 0,
+          "interceptions": 0,
+          "yardsPerAttempt": 0.0,
           "completionRate": 0.0,
           "attemptsPerTeamGame": 0.33
         },
@@ -5227,6 +5477,10 @@
           "name": "D.Brown",
           "attempts": 1,
           "completions": 1,
+          "passingYards": 0.0,
+          "passingTDs": 0,
+          "interceptions": 0,
+          "yardsPerAttempt": 0.0,
           "completionRate": 100.0,
           "attemptsPerTeamGame": 0.33
         }
