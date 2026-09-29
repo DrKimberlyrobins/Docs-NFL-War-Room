@@ -264,6 +264,8 @@ for (team, player_id, name), group in targets.groupby(
         ),
         "yardsAfterCatch": round(yac, 1),
         "yacPerReception": yac_per_reception,
+        "explosiveReceptions": explosive_receptions,
+        "explosiveRate": explosive_rate,
         "yardsPerGame": round(
             yards / games, 2
         ),
