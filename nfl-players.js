@@ -97,16 +97,18 @@ function renderPlayers() {
   displayQuarterbacks(home, "qbHomeInfo");
 
   const columns = [
-    "targets",
-    "targetsPerGame",
-    "receptions",
-    "receivingYards",
-    "yardsPerGame",
-    "catchRate",
-    "redZoneTargets",
-    "inside10Targets",
-    "receivingTouchdowns"
-  ];
+  "targets",
+  "targetsPerGame",
+  "receptions",
+  "receivingYards",
+  "yardsPerGame",
+  "yardsAfterCatch",
+  "yacPerReception",
+  "catchRate",
+  "redZoneTargets",
+  "inside10Targets",
+  "receivingTouchdowns"
+];
 
   const receivers = [
     ...(away?.receivers || []).map(player => ({
