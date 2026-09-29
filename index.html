@@ -103,6 +103,39 @@ td:first-child {
   color: #35df93;
   margin-top: 15px;
 }
+ 
+/* FREEZE TEAM AND RECEIVER COLUMNS */
+
+#receiverTable {
+  --team-width: 110px;
+  --receiver-width: 110px;
+}
+
+#receiverTable th:nth-child(1),
+#receiverTable td:nth-child(1) {
+  position: sticky;
+  left: 0;
+  min-width: var(--team-width);
+  width: var(--team-width);
+  background: #213e58;
+  z-index: 2;
+}
+
+#receiverTable th:nth-child(2),
+#receiverTable td:nth-child(2) {
+  position: sticky;
+  left: var(--team-width);
+  min-width: var(--receiver-width);
+  width: var(--receiver-width);
+  background: #213e58;
+  z-index: 2;
+}
+
+#receiverTable th:nth-child(1),
+#receiverTable th:nth-child(2) {
+  z-index: 3;
+}
+ 
 </style>
 </head>
 
@@ -134,7 +167,7 @@ Analyze Matchup
 <h2>EPA & Strength of Schedule</h2>
 
 <div class="table-wrap">
-<table>
+<table id="receiverTable">
 <thead>
 <tr>
 <th>Statistic</th>
