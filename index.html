@@ -136,6 +136,24 @@ td:first-child {
   z-index: 3;
 }
  
+/* EPA TABLE COLUMN WIDTHS */
+
+#epaTable {
+  width: 100%;
+  table-layout: fixed;
+}
+
+#epaTable th:first-child,
+#epaTable td:first-child {
+  width: 34%;
+}
+
+#epaTable th:nth-child(2),
+#epaTable td:nth-child(2),
+#epaTable th:nth-child(3),
+#epaTable td:nth-child(3) {
+  width: 33%;
+}
 </style>
 </head>
 
@@ -167,7 +185,7 @@ Analyze Matchup
 <h2>EPA & Strength of Schedule</h2>
 
 <div class="table-wrap">
-<table>
+<table id="epaTable">
 <thead>
 <tr>
 <th>Statistic</th>
