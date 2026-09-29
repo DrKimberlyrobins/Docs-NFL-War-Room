@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-09-29T09:24:19.617716+00:00",
+  "updated": "2026-09-29T10:05:42.563006+00:00",
   "source": "nflverse play-by-play",
   "completedGames": 48,
   "note": "Completed regular-season games only. Passing attempts exclude sacks. Receiver statistics use recorded targets. Per-game averages use completed team games, not individual player appearances. Red-zone targets are passes from the opponent's 20 or closer; inside-10 targets are from the opponent's 10 or closer. Verify totals against official stats.",
@@ -183,7 +183,14 @@
           "inside10Targets": 0,
           "receivingTouchdowns": 0
         }
-      ]
+      ],
+      "defense": {
+        "games": 3,
+        "explosiveReceptionsAllowed": 8,
+        "explosiveReceptionsAllowedPerGame": 2.67,
+        "yardsAfterCatchAllowed": 264.0,
+        "yardsAfterCatchAllowedPerGame": 88.0
+      }
     },
     "ATL": {
       "games": 3,
@@ -403,7 +410,14 @@
           "inside10Targets": 0,
           "receivingTouchdowns": 0
         }
-      ]
+      ],
+      "defense": {
+        "games": 3,
+        "explosiveReceptionsAllowed": 12,
+        "explosiveReceptionsAllowedPerGame": 4.0,
+        "yardsAfterCatchAllowed": 343.0,
+        "yardsAfterCatchAllowedPerGame": 114.33
+      }
     },
     "BAL": {
       "games": 3,
@@ -637,7 +651,14 @@
           "inside10Targets": 0,
           "receivingTouchdowns": 0
         }
-      ]
+      ],
+      "defense": {
+        "games": 3,
+        "explosiveReceptionsAllowed": 8,
+        "explosiveReceptionsAllowedPerGame": 2.67,
+        "yardsAfterCatchAllowed": 307.0,
+        "yardsAfterCatchAllowedPerGame": 102.33
+      }
     },
     "BUF": {
       "games": 3,
@@ -835,7 +856,14 @@
           "inside10Targets": 0,
           "receivingTouchdowns": 0
         }
-      ]
+      ],
+      "defense": {
+        "games": 3,
+        "explosiveReceptionsAllowed": 14,
+        "explosiveReceptionsAllowedPerGame": 4.67,
+        "yardsAfterCatchAllowed": 351.0,
+        "yardsAfterCatchAllowedPerGame": 117.0
+      }
     },
     "CAR": {
       "games": 3,
@@ -1098,7 +1126,14 @@
           "inside10Targets": 0,
           "receivingTouchdowns": 0
         }
-      ]
+      ],
+      "defense": {
+        "games": 3,
+        "explosiveReceptionsAllowed": 5,
+        "explosiveReceptionsAllowedPerGame": 1.67,
+        "yardsAfterCatchAllowed": 273.0,
+        "yardsAfterCatchAllowedPerGame": 91.0
+      }
     },
     "CHI": {
       "games": 3,
@@ -1318,7 +1353,14 @@
           "inside10Targets": 0,
           "receivingTouchdowns": 0
         }
-      ]
+      ],
+      "defense": {
+        "games": 3,
+        "explosiveReceptionsAllowed": 8,
+        "explosiveReceptionsAllowedPerGame": 2.67,
+        "yardsAfterCatchAllowed": 309.0,
+        "yardsAfterCatchAllowedPerGame": 103.0
+      }
     },
     "CIN": {
       "games": 3,
@@ -1534,7 +1576,14 @@
           "inside10Targets": 0,
           "receivingTouchdowns": 0
         }
-      ]
+      ],
+      "defense": {
+        "games": 3,
+        "explosiveReceptionsAllowed": 12,
+        "explosiveReceptionsAllowedPerGame": 4.0,
+        "yardsAfterCatchAllowed": 464.0,
+        "yardsAfterCatchAllowedPerGame": 154.67
+      }
     },
     "CLE": {
       "games": 3,
@@ -1743,7 +1792,14 @@
           "inside10Targets": 0,
           "receivingTouchdowns": 0
         }
-      ]
+      ],
+      "defense": {
+        "games": 3,
+        "explosiveReceptionsAllowed": 10,
+        "explosiveReceptionsAllowedPerGame": 3.33,
+        "yardsAfterCatchAllowed": 278.0,
+        "yardsAfterCatchAllowedPerGame": 92.67
+      }
     },
     "DAL": {
       "games": 3,
@@ -1941,7 +1997,14 @@
           "inside10Targets": 0,
           "receivingTouchdowns": 0
         }
-      ]
+      ],
+      "defense": {
+        "games": 3,
+        "explosiveReceptionsAllowed": 7,
+        "explosiveReceptionsAllowedPerGame": 2.33,
+        "yardsAfterCatchAllowed": 266.0,
+        "yardsAfterCatchAllowedPerGame": 88.67
+      }
     },
     "DEN": {
       "games": 3,
@@ -2193,7 +2256,14 @@
           "inside10Targets": 0,
           "receivingTouchdowns": 0
         }
-      ]
+      ],
+      "defense": {
+        "games": 3,
+        "explosiveReceptionsAllowed": 11,
+        "explosiveReceptionsAllowedPerGame": 3.67,
+        "yardsAfterCatchAllowed": 352.0,
+        "yardsAfterCatchAllowedPerGame": 117.33
+      }
     },
     "DET": {
       "games": 3,
@@ -2355,7 +2425,14 @@
           "inside10Targets": 0,
           "receivingTouchdowns": 0
         }
-      ]
+      ],
+      "defense": {
+        "games": 3,
+        "explosiveReceptionsAllowed": 16,
+        "explosiveReceptionsAllowedPerGame": 5.33,
+        "yardsAfterCatchAllowed": 326.0,
+        "yardsAfterCatchAllowedPerGame": 108.67
+      }
     },
     "GB": {
       "games": 3,
@@ -2571,7 +2648,14 @@
           "inside10Targets": 0,
           "receivingTouchdowns": 0
         }
-      ]
+      ],
+      "defense": {
+        "games": 3,
+        "explosiveReceptionsAllowed": 5,
+        "explosiveReceptionsAllowedPerGame": 1.67,
+        "yardsAfterCatchAllowed": 373.0,
+        "yardsAfterCatchAllowedPerGame": 124.33
+      }
     },
     "HOU": {
       "games": 3,
@@ -2816,7 +2900,14 @@
           "inside10Targets": 0,
           "receivingTouchdowns": 0
         }
-      ]
+      ],
+      "defense": {
+        "games": 3,
+        "explosiveReceptionsAllowed": 13,
+        "explosiveReceptionsAllowedPerGame": 4.33,
+        "yardsAfterCatchAllowed": 285.0,
+        "yardsAfterCatchAllowedPerGame": 95.0
+      }
     },
     "IND": {
       "games": 3,
@@ -3014,7 +3105,14 @@
           "inside10Targets": 0,
           "receivingTouchdowns": 0
         }
-      ]
+      ],
+      "defense": {
+        "games": 3,
+        "explosiveReceptionsAllowed": 10,
+        "explosiveReceptionsAllowedPerGame": 3.33,
+        "yardsAfterCatchAllowed": 419.0,
+        "yardsAfterCatchAllowedPerGame": 139.67
+      }
     },
     "JAX": {
       "games": 3,
@@ -3230,7 +3328,14 @@
           "inside10Targets": 0,
           "receivingTouchdowns": 0
         }
-      ]
+      ],
+      "defense": {
+        "games": 3,
+        "explosiveReceptionsAllowed": 13,
+        "explosiveReceptionsAllowedPerGame": 4.33,
+        "yardsAfterCatchAllowed": 282.0,
+        "yardsAfterCatchAllowedPerGame": 94.0
+      }
     },
     "KC": {
       "games": 3,
@@ -3446,7 +3551,14 @@
           "inside10Targets": 0,
           "receivingTouchdowns": 0
         }
-      ]
+      ],
+      "defense": {
+        "games": 3,
+        "explosiveReceptionsAllowed": 5,
+        "explosiveReceptionsAllowedPerGame": 1.67,
+        "yardsAfterCatchAllowed": 316.0,
+        "yardsAfterCatchAllowedPerGame": 105.33
+      }
     },
     "LA": {
       "games": 3,
@@ -3709,7 +3821,14 @@
           "inside10Targets": 0,
           "receivingTouchdowns": 0
         }
-      ]
+      ],
+      "defense": {
+        "games": 3,
+        "explosiveReceptionsAllowed": 5,
+        "explosiveReceptionsAllowedPerGame": 1.67,
+        "yardsAfterCatchAllowed": 295.0,
+        "yardsAfterCatchAllowedPerGame": 98.33
+      }
     },
     "LAC": {
       "games": 3,
@@ -3961,7 +4080,14 @@
           "inside10Targets": 0,
           "receivingTouchdowns": 0
         }
-      ]
+      ],
+      "defense": {
+        "games": 3,
+        "explosiveReceptionsAllowed": 9,
+        "explosiveReceptionsAllowedPerGame": 3.0,
+        "yardsAfterCatchAllowed": 284.0,
+        "yardsAfterCatchAllowedPerGame": 94.67
+      }
     },
     "LV": {
       "games": 3,
@@ -4177,7 +4303,14 @@
           "inside10Targets": 0,
           "receivingTouchdowns": 0
         }
-      ]
+      ],
+      "defense": {
+        "games": 3,
+        "explosiveReceptionsAllowed": 7,
+        "explosiveReceptionsAllowedPerGame": 2.33,
+        "yardsAfterCatchAllowed": 323.0,
+        "yardsAfterCatchAllowedPerGame": 107.67
+      }
     },
     "MIA": {
       "games": 3,
@@ -4375,7 +4508,14 @@
           "inside10Targets": 0,
           "receivingTouchdowns": 0
         }
-      ]
+      ],
+      "defense": {
+        "games": 3,
+        "explosiveReceptionsAllowed": 9,
+        "explosiveReceptionsAllowedPerGame": 3.0,
+        "yardsAfterCatchAllowed": 313.0,
+        "yardsAfterCatchAllowedPerGame": 104.33
+      }
     },
     "MIN": {
       "games": 3,
@@ -4584,7 +4724,14 @@
           "inside10Targets": 0,
           "receivingTouchdowns": 0
         }
-      ]
+      ],
+      "defense": {
+        "games": 3,
+        "explosiveReceptionsAllowed": 12,
+        "explosiveReceptionsAllowedPerGame": 4.0,
+        "yardsAfterCatchAllowed": 412.0,
+        "yardsAfterCatchAllowedPerGame": 137.33
+      }
     },
     "NE": {
       "games": 3,
@@ -4858,7 +5005,14 @@
           "inside10Targets": 0,
           "receivingTouchdowns": 0
         }
-      ]
+      ],
+      "defense": {
+        "games": 3,
+        "explosiveReceptionsAllowed": 5,
+        "explosiveReceptionsAllowedPerGame": 1.67,
+        "yardsAfterCatchAllowed": 312.0,
+        "yardsAfterCatchAllowedPerGame": 104.0
+      }
     },
     "NO": {
       "games": 3,
@@ -5074,7 +5228,14 @@
           "inside10Targets": 0,
           "receivingTouchdowns": 0
         }
-      ]
+      ],
+      "defense": {
+        "games": 3,
+        "explosiveReceptionsAllowed": 6,
+        "explosiveReceptionsAllowedPerGame": 2.0,
+        "yardsAfterCatchAllowed": 263.0,
+        "yardsAfterCatchAllowedPerGame": 87.67
+      }
     },
     "NYG": {
       "games": 3,
@@ -5265,7 +5426,14 @@
           "inside10Targets": 0,
           "receivingTouchdowns": 0
         }
-      ]
+      ],
+      "defense": {
+        "games": 3,
+        "explosiveReceptionsAllowed": 6,
+        "explosiveReceptionsAllowedPerGame": 2.0,
+        "yardsAfterCatchAllowed": 308.0,
+        "yardsAfterCatchAllowedPerGame": 102.67
+      }
     },
     "NYJ": {
       "games": 3,
@@ -5499,7 +5667,14 @@
           "inside10Targets": 0,
           "receivingTouchdowns": 0
         }
-      ]
+      ],
+      "defense": {
+        "games": 3,
+        "explosiveReceptionsAllowed": 4,
+        "explosiveReceptionsAllowedPerGame": 1.33,
+        "yardsAfterCatchAllowed": 298.0,
+        "yardsAfterCatchAllowedPerGame": 99.33
+      }
     },
     "PHI": {
       "games": 3,
@@ -5708,7 +5883,14 @@
           "inside10Targets": 0,
           "receivingTouchdowns": 0
         }
-      ]
+      ],
+      "defense": {
+        "games": 3,
+        "explosiveReceptionsAllowed": 8,
+        "explosiveReceptionsAllowedPerGame": 2.67,
+        "yardsAfterCatchAllowed": 295.0,
+        "yardsAfterCatchAllowedPerGame": 98.33
+      }
     },
     "PIT": {
       "games": 3,
@@ -5928,7 +6110,14 @@
           "inside10Targets": 0,
           "receivingTouchdowns": 0
         }
-      ]
+      ],
+      "defense": {
+        "games": 3,
+        "explosiveReceptionsAllowed": 11,
+        "explosiveReceptionsAllowedPerGame": 3.67,
+        "yardsAfterCatchAllowed": 265.0,
+        "yardsAfterCatchAllowedPerGame": 88.33
+      }
     },
     "SEA": {
       "games": 3,
@@ -6166,7 +6355,14 @@
           "inside10Targets": 0,
           "receivingTouchdowns": 0
         }
-      ]
+      ],
+      "defense": {
+        "games": 3,
+        "explosiveReceptionsAllowed": 2,
+        "explosiveReceptionsAllowedPerGame": 0.67,
+        "yardsAfterCatchAllowed": 246.0,
+        "yardsAfterCatchAllowedPerGame": 82.0
+      }
     },
     "SF": {
       "games": 3,
@@ -6400,7 +6596,14 @@
           "inside10Targets": 0,
           "receivingTouchdowns": 0
         }
-      ]
+      ],
+      "defense": {
+        "games": 3,
+        "explosiveReceptionsAllowed": 4,
+        "explosiveReceptionsAllowedPerGame": 1.33,
+        "yardsAfterCatchAllowed": 316.0,
+        "yardsAfterCatchAllowedPerGame": 105.33
+      }
     },
     "TB": {
       "games": 3,
@@ -6591,7 +6794,14 @@
           "inside10Targets": 0,
           "receivingTouchdowns": 0
         }
-      ]
+      ],
+      "defense": {
+        "games": 3,
+        "explosiveReceptionsAllowed": 8,
+        "explosiveReceptionsAllowedPerGame": 2.67,
+        "yardsAfterCatchAllowed": 383.0,
+        "yardsAfterCatchAllowedPerGame": 127.67
+      }
     },
     "TEN": {
       "games": 3,
@@ -6771,7 +6981,14 @@
           "inside10Targets": 0,
           "receivingTouchdowns": 0
         }
-      ]
+      ],
+      "defense": {
+        "games": 3,
+        "explosiveReceptionsAllowed": 9,
+        "explosiveReceptionsAllowedPerGame": 3.0,
+        "yardsAfterCatchAllowed": 188.0,
+        "yardsAfterCatchAllowedPerGame": 62.67
+      }
     },
     "WAS": {
       "games": 3,
@@ -7038,7 +7255,14 @@
           "inside10Targets": 0,
           "receivingTouchdowns": 0
         }
-      ]
+      ],
+      "defense": {
+        "games": 3,
+        "explosiveReceptionsAllowed": 11,
+        "explosiveReceptionsAllowedPerGame": 3.67,
+        "yardsAfterCatchAllowed": 343.0,
+        "yardsAfterCatchAllowedPerGame": 114.33
+      }
     }
   }
 }
