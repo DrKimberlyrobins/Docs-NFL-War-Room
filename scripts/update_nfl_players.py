@@ -37,6 +37,7 @@ required = [
     "receiver_player_id",
     "receiver_player_name",
     "receiving_yards",
+    "yards_after_catch",
     "passing_yards",
     "pass_touchdown",
     "interception",
@@ -62,6 +63,7 @@ for col in [
     "pass_attempt",
     "complete_pass",
     "receiving_yards",
+    "yards_after_catch",
     "passing_yards",
     "pass_touchdown",
     "interception",
@@ -195,6 +197,19 @@ for (team, player_id, name), group in targets.groupby(
         .fillna(0)
         .sum()
     )
+        # Total yards gained after catching the ball
+    yac = float(
+        group.loc[
+            group["complete_pass"] == 1,
+            "yards_after_catch"
+        ].fillna(0).sum()
+    )
+
+    # Average yards after catch per reception
+    yac_per_reception = (
+        round(yac / catches, 2)
+        if catches else None
+    )
 
     red_zone = int(
         (group["yardline_100"] <= 20).sum()
@@ -231,6 +246,8 @@ for (team, player_id, name), group in targets.groupby(
         "receivingYards": round(
             yards, 1
         ),
+        "yardsAfterCatch": round(yac, 1),
+        "yacPerReception": yac_per_reception,
         "yardsPerGame": round(
             yards / games, 2
         ),
