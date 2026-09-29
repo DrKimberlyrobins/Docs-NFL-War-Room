@@ -104,6 +104,8 @@ function renderPlayers() {
   "yardsPerGame",
   "yardsAfterCatch",
   "yacPerReception",
+  "explosiveReceptions",
+  "explosiveRate",
   "catchRate",
   "redZoneTargets",
   "inside10Targets",
