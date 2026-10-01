@@ -103,7 +103,7 @@
 <tr>
   <th>Player / Market</th>
   <th>YES Ask</th>
-  <th>Break-even %</th>
+  <th>Our Projection</th>
   <th>Spread</th>
   <th>Volume</th>
 </tr>
@@ -295,7 +295,7 @@ const validPrices =
 const values = [
   market.title || "Unknown",
   validPrices ? (ask * 100).toFixed(1) + "¢" : "—",
-  validPrices ? (ask * 100).toFixed(1) + "%" : "—",
+  "Pending",
   validPrices ? ((ask - bid) * 100).toFixed(1) + "¢" : "—",
   market.volume ?? "—"
 ];
