@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-09-30T16:27:36.306436+00:00",
+  "updated": "2026-10-01T09:13:05.768679+00:00",
   "source": "nflverse play-by-play",
   "completedGames": 48,
   "note": "Completed regular-season games only. Passing attempts exclude sacks. Receiver statistics use recorded targets. Per-game averages use completed team games, not individual player appearances. Red-zone targets are passes from the opponent's 20 or closer; inside-10 targets are from the opponent's 10 or closer. Verify totals against official stats.",
@@ -182,6 +182,60 @@
           "redZoneTargets": 0,
           "inside10Targets": 0,
           "receivingTouchdowns": 0
+        }
+      ],
+      "rushers": [
+        {
+          "id": "00-0041027",
+          "name": "J.Love",
+          "games": 3,
+          "carries": 41,
+          "carriesPerGame": 13.67,
+          "rushingYards": 160.0,
+          "rushingYardsPerGame": 53.33,
+          "yardsPerCarry": 3.9,
+          "rushingTouchdowns": 1,
+          "redZoneCarries": 9,
+          "inside10Carries": 4
+        },
+        {
+          "id": "00-0037263",
+          "name": "T.Allgeier",
+          "games": 3,
+          "carries": 24,
+          "carriesPerGame": 8.0,
+          "rushingYards": 70.0,
+          "rushingYardsPerGame": 23.33,
+          "yardsPerCarry": 2.92,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 4,
+          "inside10Carries": 2
+        },
+        {
+          "id": "00-0033119",
+          "name": "J.Brissett",
+          "games": 3,
+          "carries": 11,
+          "carriesPerGame": 3.67,
+          "rushingYards": 25.0,
+          "rushingYardsPerGame": 8.33,
+          "yardsPerCarry": 2.27,
+          "rushingTouchdowns": 1,
+          "redZoneCarries": 3,
+          "inside10Carries": 3
+        },
+        {
+          "id": "00-0037157",
+          "name": "Z.Knight",
+          "games": 1,
+          "carries": 2,
+          "carriesPerGame": 2.0,
+          "rushingYards": 24.0,
+          "rushingYardsPerGame": 24.0,
+          "yardsPerCarry": 12.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
         }
       ],
       "defense": {
@@ -409,6 +463,86 @@
           "redZoneTargets": 0,
           "inside10Targets": 0,
           "receivingTouchdowns": 0
+        }
+      ],
+      "rushers": [
+        {
+          "id": "00-0038542",
+          "name": "Bi.Robinson",
+          "games": 3,
+          "carries": 66,
+          "carriesPerGame": 22.0,
+          "rushingYards": 349.0,
+          "rushingYardsPerGame": 116.33,
+          "yardsPerCarry": 5.29,
+          "rushingTouchdowns": 2,
+          "redZoneCarries": 11,
+          "inside10Carries": 7
+        },
+        {
+          "id": "00-0037746",
+          "name": "Br.Robinson",
+          "games": 3,
+          "carries": 30,
+          "carriesPerGame": 10.0,
+          "rushingYards": 132.0,
+          "rushingYardsPerGame": 44.0,
+          "yardsPerCarry": 4.4,
+          "rushingTouchdowns": 1,
+          "redZoneCarries": 1,
+          "inside10Carries": 1
+        },
+        {
+          "id": "00-0033662",
+          "name": "C.Rush",
+          "games": 1,
+          "carries": 2,
+          "carriesPerGame": 2.0,
+          "rushingYards": 20.0,
+          "rushingYardsPerGame": 20.0,
+          "yardsPerCarry": 10.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0037238",
+          "name": "D.London",
+          "games": 2,
+          "carries": 2,
+          "carriesPerGame": 1.0,
+          "rushingYards": 4.0,
+          "rushingYardsPerGame": 2.0,
+          "yardsPerCarry": 2.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0039917",
+          "name": "M.Penix",
+          "games": 1,
+          "carries": 2,
+          "carriesPerGame": 2.0,
+          "rushingYards": -2.0,
+          "rushingYardsPerGame": -2.0,
+          "yardsPerCarry": -1.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0041194",
+          "name": "J.Strand",
+          "games": 1,
+          "carries": 2,
+          "carriesPerGame": 2.0,
+          "rushingYards": 16.0,
+          "rushingYardsPerGame": 16.0,
+          "yardsPerCarry": 8.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
         }
       ],
       "defense": {
@@ -652,6 +786,60 @@
           "receivingTouchdowns": 0
         }
       ],
+      "rushers": [
+        {
+          "id": "00-0032764",
+          "name": "D.Henry",
+          "games": 3,
+          "carries": 66,
+          "carriesPerGame": 22.0,
+          "rushingYards": 301.0,
+          "rushingYardsPerGame": 100.33,
+          "yardsPerCarry": 4.56,
+          "rushingTouchdowns": 6,
+          "redZoneCarries": 20,
+          "inside10Carries": 14
+        },
+        {
+          "id": "00-0034796",
+          "name": "L.Jackson",
+          "games": 3,
+          "carries": 17,
+          "carriesPerGame": 5.67,
+          "rushingYards": 124.0,
+          "rushingYardsPerGame": 41.33,
+          "yardsPerCarry": 7.29,
+          "rushingTouchdowns": 1,
+          "redZoneCarries": 5,
+          "inside10Carries": 2
+        },
+        {
+          "id": "00-0034975",
+          "name": "J.Hill",
+          "games": 3,
+          "carries": 13,
+          "carriesPerGame": 4.33,
+          "rushingYards": 57.0,
+          "rushingYardsPerGame": 19.0,
+          "yardsPerCarry": 4.38,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0039064",
+          "name": "Z.Flowers",
+          "games": 1,
+          "carries": 1,
+          "carriesPerGame": 1.0,
+          "rushingYards": 20.0,
+          "rushingYardsPerGame": 20.0,
+          "yardsPerCarry": 20.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        }
+      ],
       "defense": {
         "games": 3,
         "explosiveReceptionsAllowed": 8,
@@ -855,6 +1043,86 @@
           "redZoneTargets": 0,
           "inside10Targets": 0,
           "receivingTouchdowns": 0
+        }
+      ],
+      "rushers": [
+        {
+          "id": "00-0037248",
+          "name": "J.Cook",
+          "games": 3,
+          "carries": 58,
+          "carriesPerGame": 19.33,
+          "rushingYards": 346.0,
+          "rushingYardsPerGame": 115.33,
+          "yardsPerCarry": 5.97,
+          "rushingTouchdowns": 2,
+          "redZoneCarries": 9,
+          "inside10Carries": 5
+        },
+        {
+          "id": "00-0034857",
+          "name": "J.Allen",
+          "games": 3,
+          "carries": 28,
+          "carriesPerGame": 9.33,
+          "rushingYards": 114.0,
+          "rushingYardsPerGame": 38.0,
+          "yardsPerCarry": 4.07,
+          "rushingTouchdowns": 6,
+          "redZoneCarries": 8,
+          "inside10Carries": 5
+        },
+        {
+          "id": "00-0034827",
+          "name": "D.Moore",
+          "games": 1,
+          "carries": 1,
+          "carriesPerGame": 1.0,
+          "rushingYards": -1.0,
+          "rushingYardsPerGame": -1.0,
+          "yardsPerCarry": -1.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0035689",
+          "name": "D.Knox",
+          "games": 1,
+          "carries": 1,
+          "carriesPerGame": 1.0,
+          "rushingYards": 0.0,
+          "rushingYardsPerGame": 0.0,
+          "yardsPerCarry": 0.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0039471",
+          "name": "F.Gore",
+          "games": 1,
+          "carries": 1,
+          "carriesPerGame": 1.0,
+          "rushingYards": 3.0,
+          "rushingYardsPerGame": 3.0,
+          "yardsPerCarry": 3.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0039875",
+          "name": "R.Davis",
+          "games": 1,
+          "carries": 1,
+          "carriesPerGame": 1.0,
+          "rushingYards": 3.0,
+          "rushingYardsPerGame": 3.0,
+          "yardsPerCarry": 3.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
         }
       ],
       "defense": {
@@ -1127,6 +1395,73 @@
           "receivingTouchdowns": 0
         }
       ],
+      "rushers": [
+        {
+          "id": "00-0036555",
+          "name": "C.Hubbard",
+          "games": 3,
+          "carries": 42,
+          "carriesPerGame": 14.0,
+          "rushingYards": 184.0,
+          "rushingYardsPerGame": 61.33,
+          "yardsPerCarry": 4.38,
+          "rushingTouchdowns": 1,
+          "redZoneCarries": 7,
+          "inside10Carries": 6
+        },
+        {
+          "id": "00-0036265",
+          "name": "A.Dillon",
+          "games": 3,
+          "carries": 12,
+          "carriesPerGame": 4.0,
+          "rushingYards": 41.0,
+          "rushingYardsPerGame": 13.67,
+          "yardsPerCarry": 3.42,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0039344",
+          "name": "J.Brooks",
+          "games": 2,
+          "carries": 9,
+          "carriesPerGame": 4.5,
+          "rushingYards": 30.0,
+          "rushingYardsPerGame": 15.0,
+          "yardsPerCarry": 3.33,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 3,
+          "inside10Carries": 1
+        },
+        {
+          "id": "00-0039150",
+          "name": "B.Young",
+          "games": 2,
+          "carries": 3,
+          "carriesPerGame": 1.5,
+          "rushingYards": 16.0,
+          "rushingYardsPerGame": 8.0,
+          "yardsPerCarry": 5.33,
+          "rushingTouchdowns": 1,
+          "redZoneCarries": 3,
+          "inside10Carries": 1
+        },
+        {
+          "id": "00-0038102",
+          "name": "K.Pickett",
+          "games": 2,
+          "carries": 2,
+          "carriesPerGame": 1.0,
+          "rushingYards": 20.0,
+          "rushingYardsPerGame": 10.0,
+          "yardsPerCarry": 10.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        }
+      ],
       "defense": {
         "games": 3,
         "explosiveReceptionsAllowed": 5,
@@ -1354,6 +1689,73 @@
           "receivingTouchdowns": 0
         }
       ],
+      "rushers": [
+        {
+          "id": "00-0036275",
+          "name": "D.Swift",
+          "games": 3,
+          "carries": 54,
+          "carriesPerGame": 18.0,
+          "rushingYards": 253.0,
+          "rushingYardsPerGame": 84.33,
+          "yardsPerCarry": 4.69,
+          "rushingTouchdowns": 3,
+          "redZoneCarries": 14,
+          "inside10Carries": 10
+        },
+        {
+          "id": "00-0040236",
+          "name": "K.Monangai",
+          "games": 3,
+          "carries": 30,
+          "carriesPerGame": 10.0,
+          "rushingYards": 178.0,
+          "rushingYardsPerGame": 59.33,
+          "yardsPerCarry": 5.93,
+          "rushingTouchdowns": 1,
+          "redZoneCarries": 6,
+          "inside10Carries": 4
+        },
+        {
+          "id": "00-0039918",
+          "name": "C.Williams",
+          "games": 2,
+          "carries": 15,
+          "carriesPerGame": 7.5,
+          "rushingYards": 107.0,
+          "rushingYardsPerGame": 53.5,
+          "yardsPerCarry": 7.13,
+          "rushingTouchdowns": 2,
+          "redZoneCarries": 4,
+          "inside10Carries": 3
+        },
+        {
+          "id": "00-0028986",
+          "name": "C.Keenum",
+          "games": 1,
+          "carries": 4,
+          "carriesPerGame": 4.0,
+          "rushingYards": 6.0,
+          "rushingYardsPerGame": 6.0,
+          "yardsPerCarry": 1.5,
+          "rushingTouchdowns": 1,
+          "redZoneCarries": 3,
+          "inside10Carries": 1
+        },
+        {
+          "id": "00-0040735",
+          "name": "L.Burden",
+          "games": 2,
+          "carries": 2,
+          "carriesPerGame": 1.0,
+          "rushingYards": 9.0,
+          "rushingYardsPerGame": 4.5,
+          "yardsPerCarry": 4.5,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 1,
+          "inside10Carries": 0
+        }
+      ],
       "defense": {
         "games": 3,
         "explosiveReceptionsAllowed": 8,
@@ -1577,6 +1979,60 @@
           "receivingTouchdowns": 0
         }
       ],
+      "rushers": [
+        {
+          "id": "00-0038597",
+          "name": "C.Brown",
+          "games": 3,
+          "carries": 49,
+          "carriesPerGame": 16.33,
+          "rushingYards": 197.0,
+          "rushingYardsPerGame": 65.67,
+          "yardsPerCarry": 4.02,
+          "rushingTouchdowns": 1,
+          "redZoneCarries": 6,
+          "inside10Carries": 3
+        },
+        {
+          "id": "00-0033526",
+          "name": "S.Perine",
+          "games": 3,
+          "carries": 10,
+          "carriesPerGame": 3.33,
+          "rushingYards": 35.0,
+          "rushingYardsPerGame": 11.67,
+          "yardsPerCarry": 3.5,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 2,
+          "inside10Carries": 1
+        },
+        {
+          "id": "00-0036442",
+          "name": "J.Burrow",
+          "games": 3,
+          "carries": 8,
+          "carriesPerGame": 2.67,
+          "rushingYards": 32.0,
+          "rushingYardsPerGame": 10.67,
+          "yardsPerCarry": 4.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 4,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0040785",
+          "name": "D.Meyers",
+          "games": 1,
+          "carries": 1,
+          "carriesPerGame": 1.0,
+          "rushingYards": 10.0,
+          "rushingYardsPerGame": 10.0,
+          "yardsPerCarry": 10.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        }
+      ],
       "defense": {
         "games": 3,
         "explosiveReceptionsAllowed": 12,
@@ -1793,6 +2249,73 @@
           "receivingTouchdowns": 0
         }
       ],
+      "rushers": [
+        {
+          "id": "00-0040784",
+          "name": "Q.Judkins",
+          "games": 3,
+          "carries": 42,
+          "carriesPerGame": 14.0,
+          "rushingYards": 124.0,
+          "rushingYardsPerGame": 41.33,
+          "yardsPerCarry": 2.95,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 6,
+          "inside10Carries": 2
+        },
+        {
+          "id": "00-0033537",
+          "name": "D.Watson",
+          "games": 3,
+          "carries": 24,
+          "carriesPerGame": 8.0,
+          "rushingYards": 105.0,
+          "rushingYardsPerGame": 35.0,
+          "yardsPerCarry": 4.38,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 5,
+          "inside10Carries": 2
+        },
+        {
+          "id": "00-0040466",
+          "name": "R.Sanders",
+          "games": 3,
+          "carries": 4,
+          "carriesPerGame": 1.33,
+          "rushingYards": 22.0,
+          "rushingYardsPerGame": 7.33,
+          "yardsPerCarry": 5.5,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0041547",
+          "name": "K.Concepcion",
+          "games": 2,
+          "carries": 4,
+          "carriesPerGame": 2.0,
+          "rushingYards": 9.0,
+          "rushingYardsPerGame": 4.5,
+          "yardsPerCarry": 2.25,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0038794",
+          "name": "J.McLaughlin",
+          "games": 1,
+          "carries": 1,
+          "carriesPerGame": 1.0,
+          "rushingYards": 3.0,
+          "rushingYardsPerGame": 3.0,
+          "yardsPerCarry": 3.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        }
+      ],
       "defense": {
         "games": 3,
         "explosiveReceptionsAllowed": 10,
@@ -1996,6 +2519,99 @@
           "redZoneTargets": 0,
           "inside10Targets": 0,
           "receivingTouchdowns": 0
+        }
+      ],
+      "rushers": [
+        {
+          "id": "00-0036997",
+          "name": "J.Williams",
+          "games": 3,
+          "carries": 43,
+          "carriesPerGame": 14.33,
+          "rushingYards": 169.0,
+          "rushingYardsPerGame": 56.33,
+          "yardsPerCarry": 3.93,
+          "rushingTouchdowns": 2,
+          "redZoneCarries": 11,
+          "inside10Carries": 7
+        },
+        {
+          "id": "00-0033077",
+          "name": "D.Prescott",
+          "games": 3,
+          "carries": 10,
+          "carriesPerGame": 3.33,
+          "rushingYards": 59.0,
+          "rushingYardsPerGame": 19.67,
+          "yardsPerCarry": 5.9,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 2,
+          "inside10Carries": 1
+        },
+        {
+          "id": "00-0037120",
+          "name": "T.Goodson",
+          "games": 1,
+          "carries": 6,
+          "carriesPerGame": 6.0,
+          "rushingYards": 22.0,
+          "rushingYardsPerGame": 22.0,
+          "yardsPerCarry": 3.67,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 1,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0038705",
+          "name": "E.Demercado",
+          "games": 2,
+          "carries": 5,
+          "carriesPerGame": 2.5,
+          "rushingYards": 15.0,
+          "rushingYardsPerGame": 7.5,
+          "yardsPerCarry": 3.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 1,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0037801",
+          "name": "K.Turpin",
+          "games": 2,
+          "carries": 2,
+          "carriesPerGame": 1.0,
+          "rushingYards": 10.0,
+          "rushingYardsPerGame": 5.0,
+          "yardsPerCarry": 5.0,
+          "rushingTouchdowns": 1,
+          "redZoneCarries": 2,
+          "inside10Carries": 1
+        },
+        {
+          "id": "00-0038738",
+          "name": "H.Luepke",
+          "games": 2,
+          "carries": 2,
+          "carriesPerGame": 1.0,
+          "rushingYards": 8.0,
+          "rushingYardsPerGame": 4.0,
+          "yardsPerCarry": 4.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0036358",
+          "name": "C.Lamb",
+          "games": 1,
+          "carries": 1,
+          "carriesPerGame": 1.0,
+          "rushingYards": 0.0,
+          "rushingYardsPerGame": 0.0,
+          "yardsPerCarry": 0.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
         }
       ],
       "defense": {
@@ -2257,6 +2873,125 @@
           "receivingTouchdowns": 0
         }
       ],
+      "rushers": [
+        {
+          "id": "00-0036158",
+          "name": "J.Dobbins",
+          "games": 3,
+          "carries": 35,
+          "carriesPerGame": 11.67,
+          "rushingYards": 121.0,
+          "rushingYardsPerGame": 40.33,
+          "yardsPerCarry": 3.46,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 6,
+          "inside10Carries": 5
+        },
+        {
+          "id": "00-0039732",
+          "name": "B.Nix",
+          "games": 3,
+          "carries": 12,
+          "carriesPerGame": 4.0,
+          "rushingYards": 15.0,
+          "rushingYardsPerGame": 5.0,
+          "yardsPerCarry": 1.25,
+          "rushingTouchdowns": 1,
+          "redZoneCarries": 6,
+          "inside10Carries": 2
+        },
+        {
+          "id": "00-0041496",
+          "name": "J.Coleman",
+          "games": 1,
+          "carries": 10,
+          "carriesPerGame": 10.0,
+          "rushingYards": 39.0,
+          "rushingYardsPerGame": 39.0,
+          "yardsPerCarry": 3.9,
+          "rushingTouchdowns": 1,
+          "redZoneCarries": 3,
+          "inside10Carries": 2
+        },
+        {
+          "id": "00-0040730",
+          "name": "R.Harvey",
+          "games": 2,
+          "carries": 5,
+          "carriesPerGame": 2.5,
+          "rushingYards": 24.0,
+          "rushingYardsPerGame": 12.0,
+          "yardsPerCarry": 4.8,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0037085",
+          "name": "T.Badie",
+          "games": 2,
+          "carries": 2,
+          "carriesPerGame": 1.0,
+          "rushingYards": 3.0,
+          "rushingYardsPerGame": 1.5,
+          "yardsPerCarry": 1.5,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0036613",
+          "name": "J.Waddle",
+          "games": 1,
+          "carries": 1,
+          "carriesPerGame": 1.0,
+          "rushingYards": 14.0,
+          "rushingYardsPerGame": 14.0,
+          "yardsPerCarry": 14.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0038783",
+          "name": "N.Adkins",
+          "games": 1,
+          "carries": 1,
+          "carriesPerGame": 1.0,
+          "rushingYards": 6.0,
+          "rushingYardsPerGame": 6.0,
+          "yardsPerCarry": 6.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0039868",
+          "name": "T.Franklin",
+          "games": 1,
+          "carries": 1,
+          "carriesPerGame": 1.0,
+          "rushingYards": 5.0,
+          "rushingYardsPerGame": 5.0,
+          "yardsPerCarry": 5.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0040134",
+          "name": "P.Bryant",
+          "games": 1,
+          "carries": 1,
+          "carriesPerGame": 1.0,
+          "rushingYards": 16.0,
+          "rushingYardsPerGame": 16.0,
+          "yardsPerCarry": 16.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        }
+      ],
       "defense": {
         "games": 3,
         "explosiveReceptionsAllowed": 11,
@@ -2424,6 +3159,47 @@
           "redZoneTargets": 0,
           "inside10Targets": 0,
           "receivingTouchdowns": 0
+        }
+      ],
+      "rushers": [
+        {
+          "id": "00-0039139",
+          "name": "J.Gibbs",
+          "games": 3,
+          "carries": 65,
+          "carriesPerGame": 21.67,
+          "rushingYards": 307.0,
+          "rushingYardsPerGame": 102.33,
+          "yardsPerCarry": 4.72,
+          "rushingTouchdowns": 4,
+          "redZoneCarries": 18,
+          "inside10Carries": 9
+        },
+        {
+          "id": "00-0033106",
+          "name": "J.Goff",
+          "games": 3,
+          "carries": 9,
+          "carriesPerGame": 3.0,
+          "rushingYards": 15.0,
+          "rushingYardsPerGame": 5.0,
+          "yardsPerCarry": 1.67,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 1,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0039364",
+          "name": "S.Vaki",
+          "games": 3,
+          "carries": 9,
+          "carriesPerGame": 3.0,
+          "rushingYards": 40.0,
+          "rushingYardsPerGame": 13.33,
+          "yardsPerCarry": 4.44,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 1,
+          "inside10Carries": 0
         }
       ],
       "defense": {
@@ -2647,6 +3423,60 @@
           "redZoneTargets": 0,
           "inside10Targets": 0,
           "receivingTouchdowns": 0
+        }
+      ],
+      "rushers": [
+        {
+          "id": "00-0039811",
+          "name": "M.Lloyd",
+          "games": 3,
+          "carries": 23,
+          "carriesPerGame": 7.67,
+          "rushingYards": 68.0,
+          "rushingYardsPerGame": 22.67,
+          "yardsPerCarry": 2.96,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 6,
+          "inside10Carries": 3
+        },
+        {
+          "id": "00-0040142",
+          "name": "K.Johnson",
+          "games": 2,
+          "carries": 12,
+          "carriesPerGame": 6.0,
+          "rushingYards": 38.0,
+          "rushingYardsPerGame": 19.0,
+          "yardsPerCarry": 3.17,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0038685",
+          "name": "C.Brooks",
+          "games": 2,
+          "carries": 11,
+          "carriesPerGame": 5.5,
+          "rushingYards": 40.0,
+          "rushingYardsPerGame": 20.0,
+          "yardsPerCarry": 3.64,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 4,
+          "inside10Carries": 2
+        },
+        {
+          "id": "00-0036264",
+          "name": "J.Love",
+          "games": 2,
+          "carries": 2,
+          "carriesPerGame": 1.0,
+          "rushingYards": 0.0,
+          "rushingYardsPerGame": 0.0,
+          "yardsPerCarry": 0.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 1,
+          "inside10Carries": 0
         }
       ],
       "defense": {
@@ -2901,6 +3731,86 @@
           "receivingTouchdowns": 0
         }
       ],
+      "rushers": [
+        {
+          "id": "00-0035685",
+          "name": "D.Montgomery",
+          "games": 3,
+          "carries": 37,
+          "carriesPerGame": 12.33,
+          "rushingYards": 103.0,
+          "rushingYardsPerGame": 34.33,
+          "yardsPerCarry": 2.78,
+          "rushingTouchdowns": 2,
+          "redZoneCarries": 7,
+          "inside10Carries": 4
+        },
+        {
+          "id": "00-0040583",
+          "name": "W.Marks",
+          "games": 3,
+          "carries": 22,
+          "carriesPerGame": 7.33,
+          "rushingYards": 65.0,
+          "rushingYardsPerGame": 21.67,
+          "yardsPerCarry": 2.95,
+          "rushingTouchdowns": 1,
+          "redZoneCarries": 3,
+          "inside10Carries": 2
+        },
+        {
+          "id": "00-0039163",
+          "name": "C.Stroud",
+          "games": 3,
+          "carries": 7,
+          "carriesPerGame": 2.33,
+          "rushingYards": 54.0,
+          "rushingYardsPerGame": 18.0,
+          "yardsPerCarry": 7.71,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0038618",
+          "name": "X.Hutchinson",
+          "games": 1,
+          "carries": 2,
+          "carriesPerGame": 2.0,
+          "rushingYards": 4.0,
+          "rushingYardsPerGame": 4.0,
+          "yardsPerCarry": 2.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0040138",
+          "name": "J.Noel",
+          "games": 2,
+          "carries": 2,
+          "carriesPerGame": 1.0,
+          "rushingYards": 21.0,
+          "rushingYardsPerGame": 10.5,
+          "yardsPerCarry": 10.5,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0036554",
+          "name": "N.Collins",
+          "games": 1,
+          "carries": 1,
+          "carriesPerGame": 1.0,
+          "rushingYards": 7.0,
+          "rushingYardsPerGame": 7.0,
+          "yardsPerCarry": 7.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        }
+      ],
       "defense": {
         "games": 3,
         "explosiveReceptionsAllowed": 13,
@@ -3104,6 +4014,73 @@
           "redZoneTargets": 0,
           "inside10Targets": 0,
           "receivingTouchdowns": 0
+        }
+      ],
+      "rushers": [
+        {
+          "id": "00-0036223",
+          "name": "J.Taylor",
+          "games": 3,
+          "carries": 66,
+          "carriesPerGame": 22.0,
+          "rushingYards": 258.0,
+          "rushingYardsPerGame": 86.0,
+          "yardsPerCarry": 3.91,
+          "rushingTouchdowns": 4,
+          "redZoneCarries": 12,
+          "inside10Carries": 6
+        },
+        {
+          "id": "00-0035710",
+          "name": "D.Jones",
+          "games": 3,
+          "carries": 7,
+          "carriesPerGame": 2.33,
+          "rushingYards": 19.0,
+          "rushingYardsPerGame": 6.33,
+          "yardsPerCarry": 2.71,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 2,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0041125",
+          "name": "S.McGowan",
+          "games": 2,
+          "carries": 6,
+          "carriesPerGame": 3.0,
+          "rushingYards": 14.0,
+          "rushingYardsPerGame": 7.0,
+          "yardsPerCarry": 2.33,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 1,
+          "inside10Carries": 1
+        },
+        {
+          "id": "00-0040128",
+          "name": "T.Warren",
+          "games": 2,
+          "carries": 2,
+          "carriesPerGame": 1.0,
+          "rushingYards": 5.0,
+          "rushingYardsPerGame": 2.5,
+          "yardsPerCarry": 2.5,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0041132",
+          "name": "D.Burks",
+          "games": 1,
+          "carries": 2,
+          "carriesPerGame": 2.0,
+          "rushingYards": 14.0,
+          "rushingYardsPerGame": 14.0,
+          "yardsPerCarry": 7.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
         }
       ],
       "defense": {
@@ -3329,6 +4306,99 @@
           "receivingTouchdowns": 0
         }
       ],
+      "rushers": [
+        {
+          "id": "00-0040719",
+          "name": "B.Tuten",
+          "games": 3,
+          "carries": 43,
+          "carriesPerGame": 14.33,
+          "rushingYards": 204.0,
+          "rushingYardsPerGame": 68.0,
+          "yardsPerCarry": 4.74,
+          "rushingTouchdowns": 2,
+          "redZoneCarries": 6,
+          "inside10Carries": 2
+        },
+        {
+          "id": "00-0038611",
+          "name": "C.Rodriguez",
+          "games": 3,
+          "carries": 20,
+          "carriesPerGame": 6.67,
+          "rushingYards": 73.0,
+          "rushingYardsPerGame": 24.33,
+          "yardsPerCarry": 3.65,
+          "rushingTouchdowns": 1,
+          "redZoneCarries": 5,
+          "inside10Carries": 3
+        },
+        {
+          "id": "00-0032104",
+          "name": "A.Abdullah",
+          "games": 3,
+          "carries": 10,
+          "carriesPerGame": 3.33,
+          "rushingYards": 45.0,
+          "rushingYardsPerGame": 15.0,
+          "yardsPerCarry": 4.5,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0036971",
+          "name": "T.Lawrence",
+          "games": 3,
+          "carries": 8,
+          "carriesPerGame": 2.67,
+          "rushingYards": 34.0,
+          "rushingYardsPerGame": 11.33,
+          "yardsPerCarry": 4.25,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 1,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0033319",
+          "name": "N.Mullens",
+          "games": 1,
+          "carries": 3,
+          "carriesPerGame": 3.0,
+          "rushingYards": -3.0,
+          "rushingYardsPerGame": -3.0,
+          "yardsPerCarry": -1.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0034960",
+          "name": "J.Meyers",
+          "games": 1,
+          "carries": 1,
+          "carriesPerGame": 1.0,
+          "rushingYards": 2.0,
+          "rushingYardsPerGame": 2.0,
+          "yardsPerCarry": 2.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0040718",
+          "name": "T.Hunter",
+          "games": 1,
+          "carries": 1,
+          "carriesPerGame": 1.0,
+          "rushingYards": 3.0,
+          "rushingYardsPerGame": 3.0,
+          "yardsPerCarry": 3.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        }
+      ],
       "defense": {
         "games": 3,
         "explosiveReceptionsAllowed": 13,
@@ -3550,6 +4620,60 @@
           "redZoneTargets": 0,
           "inside10Targets": 0,
           "receivingTouchdowns": 0
+        }
+      ],
+      "rushers": [
+        {
+          "id": "00-0038134",
+          "name": "K.Walker",
+          "games": 3,
+          "carries": 65,
+          "carriesPerGame": 21.67,
+          "rushingYards": 360.0,
+          "rushingYardsPerGame": 120.0,
+          "yardsPerCarry": 5.54,
+          "rushingTouchdowns": 2,
+          "redZoneCarries": 15,
+          "inside10Carries": 8
+        },
+        {
+          "id": "00-0041013",
+          "name": "E.Johnson",
+          "games": 3,
+          "carries": 16,
+          "carriesPerGame": 5.33,
+          "rushingYards": 56.0,
+          "rushingYardsPerGame": 18.67,
+          "yardsPerCarry": 3.5,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 1,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0033873",
+          "name": "P.Mahomes",
+          "games": 3,
+          "carries": 10,
+          "carriesPerGame": 3.33,
+          "rushingYards": 41.0,
+          "rushingYardsPerGame": 13.67,
+          "yardsPerCarry": 4.1,
+          "rushingTouchdowns": 1,
+          "redZoneCarries": 5,
+          "inside10Carries": 1
+        },
+        {
+          "id": "00-0036909",
+          "name": "K.Tonga",
+          "games": 1,
+          "carries": 1,
+          "carriesPerGame": 1.0,
+          "rushingYards": 3.0,
+          "rushingYardsPerGame": 3.0,
+          "yardsPerCarry": 3.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
         }
       ],
       "defense": {
@@ -3822,6 +4946,73 @@
           "receivingTouchdowns": 0
         }
       ],
+      "rushers": [
+        {
+          "id": "00-0037840",
+          "name": "K.Williams",
+          "games": 3,
+          "carries": 38,
+          "carriesPerGame": 12.67,
+          "rushingYards": 214.0,
+          "rushingYardsPerGame": 71.33,
+          "yardsPerCarry": 5.63,
+          "rushingTouchdowns": 1,
+          "redZoneCarries": 8,
+          "inside10Carries": 4
+        },
+        {
+          "id": "00-0039738",
+          "name": "B.Corum",
+          "games": 3,
+          "carries": 28,
+          "carriesPerGame": 9.33,
+          "rushingYards": 148.0,
+          "rushingYardsPerGame": 49.33,
+          "yardsPerCarry": 5.29,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0026498",
+          "name": "M.Stafford",
+          "games": 3,
+          "carries": 8,
+          "carriesPerGame": 2.67,
+          "rushingYards": 11.0,
+          "rushingYardsPerGame": 3.67,
+          "yardsPerCarry": 1.38,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 3,
+          "inside10Carries": 1
+        },
+        {
+          "id": "00-0037557",
+          "name": "R.Rivers",
+          "games": 1,
+          "carries": 5,
+          "carriesPerGame": 5.0,
+          "rushingYards": 19.0,
+          "rushingYardsPerGame": 19.0,
+          "yardsPerCarry": 3.8,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 2,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0039107",
+          "name": "S.Bennett",
+          "games": 1,
+          "carries": 1,
+          "carriesPerGame": 1.0,
+          "rushingYards": 9.0,
+          "rushingYardsPerGame": 9.0,
+          "yardsPerCarry": 9.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        }
+      ],
       "defense": {
         "games": 3,
         "explosiveReceptionsAllowed": 5,
@@ -4081,6 +5272,73 @@
           "receivingTouchdowns": 0
         }
       ],
+      "rushers": [
+        {
+          "id": "00-0040666",
+          "name": "O.Hampton",
+          "games": 3,
+          "carries": 50,
+          "carriesPerGame": 16.67,
+          "rushingYards": 193.0,
+          "rushingYardsPerGame": 64.33,
+          "yardsPerCarry": 3.86,
+          "rushingTouchdowns": 2,
+          "redZoneCarries": 10,
+          "inside10Carries": 5
+        },
+        {
+          "id": "00-0038454",
+          "name": "K.Mitchell",
+          "games": 3,
+          "carries": 17,
+          "carriesPerGame": 5.67,
+          "rushingYards": 85.0,
+          "rushingYardsPerGame": 28.33,
+          "yardsPerCarry": 5.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 3,
+          "inside10Carries": 1
+        },
+        {
+          "id": "00-0036355",
+          "name": "J.Herbert",
+          "games": 3,
+          "carries": 12,
+          "carriesPerGame": 4.0,
+          "rushingYards": 48.0,
+          "rushingYardsPerGame": 16.0,
+          "yardsPerCarry": 4.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 4,
+          "inside10Carries": 3
+        },
+        {
+          "id": "00-0038544",
+          "name": "Q.Johnston",
+          "games": 1,
+          "carries": 1,
+          "carriesPerGame": 1.0,
+          "rushingYards": 7.0,
+          "rushingYardsPerGame": 7.0,
+          "yardsPerCarry": 7.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0039391",
+          "name": "K.Vidal",
+          "games": 1,
+          "carries": 1,
+          "carriesPerGame": 1.0,
+          "rushingYards": 6.0,
+          "rushingYardsPerGame": 6.0,
+          "yardsPerCarry": 6.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 1,
+          "inside10Carries": 0
+        }
+      ],
       "defense": {
         "games": 3,
         "explosiveReceptionsAllowed": 9,
@@ -4304,6 +5562,73 @@
           "receivingTouchdowns": 0
         }
       ],
+      "rushers": [
+        {
+          "id": "00-0040122",
+          "name": "A.Jeanty",
+          "games": 3,
+          "carries": 63,
+          "carriesPerGame": 21.0,
+          "rushingYards": 206.0,
+          "rushingYardsPerGame": 68.67,
+          "yardsPerCarry": 3.27,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 15,
+          "inside10Carries": 7
+        },
+        {
+          "id": "00-0040878",
+          "name": "M.Washington",
+          "games": 3,
+          "carries": 15,
+          "carriesPerGame": 5.0,
+          "rushingYards": 102.0,
+          "rushingYardsPerGame": 34.0,
+          "yardsPerCarry": 6.8,
+          "rushingTouchdowns": 1,
+          "redZoneCarries": 2,
+          "inside10Carries": 1
+        },
+        {
+          "id": "00-0029604",
+          "name": "K.Cousins",
+          "games": 3,
+          "carries": 12,
+          "carriesPerGame": 4.0,
+          "rushingYards": -2.0,
+          "rushingYardsPerGame": -0.67,
+          "yardsPerCarry": -0.17,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0037304",
+          "name": "C.Heyward",
+          "games": 2,
+          "carries": 2,
+          "carriesPerGame": 1.0,
+          "rushingYards": 2.0,
+          "rushingYardsPerGame": 1.0,
+          "yardsPerCarry": 1.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0040894",
+          "name": "M.Benson",
+          "games": 1,
+          "carries": 1,
+          "carriesPerGame": 1.0,
+          "rushingYards": -8.0,
+          "rushingYardsPerGame": -8.0,
+          "yardsPerCarry": -8.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        }
+      ],
       "defense": {
         "games": 3,
         "explosiveReceptionsAllowed": 7,
@@ -4507,6 +5832,86 @@
           "redZoneTargets": 0,
           "inside10Targets": 0,
           "receivingTouchdowns": 0
+        }
+      ],
+      "rushers": [
+        {
+          "id": "00-0039040",
+          "name": "D.Achane",
+          "games": 3,
+          "carries": 34,
+          "carriesPerGame": 11.33,
+          "rushingYards": 127.0,
+          "rushingYardsPerGame": 42.33,
+          "yardsPerCarry": 3.74,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 7,
+          "inside10Carries": 3
+        },
+        {
+          "id": "00-0040198",
+          "name": "O.Gordon",
+          "games": 2,
+          "carries": 20,
+          "carriesPerGame": 10.0,
+          "rushingYards": 48.0,
+          "rushingYardsPerGame": 24.0,
+          "yardsPerCarry": 2.4,
+          "rushingTouchdowns": 1,
+          "redZoneCarries": 4,
+          "inside10Carries": 1
+        },
+        {
+          "id": "00-0038128",
+          "name": "M.Willis",
+          "games": 3,
+          "carries": 17,
+          "carriesPerGame": 5.67,
+          "rushingYards": 101.0,
+          "rushingYardsPerGame": 33.67,
+          "yardsPerCarry": 5.94,
+          "rushingTouchdowns": 1,
+          "redZoneCarries": 1,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0039874",
+          "name": "J.Wright",
+          "games": 2,
+          "carries": 3,
+          "carriesPerGame": 1.5,
+          "rushingYards": 10.0,
+          "rushingYardsPerGame": 5.0,
+          "yardsPerCarry": 3.33,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 2,
+          "inside10Carries": 1
+        },
+        {
+          "id": "00-0039880",
+          "name": "M.Washington",
+          "games": 2,
+          "carries": 3,
+          "carriesPerGame": 1.5,
+          "rushingYards": 9.0,
+          "rushingYardsPerGame": 4.5,
+          "yardsPerCarry": 3.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 1,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0032065",
+          "name": "B.Pinion",
+          "games": 1,
+          "carries": 1,
+          "carriesPerGame": 1.0,
+          "rushingYards": 0.0,
+          "rushingYardsPerGame": 0.0,
+          "yardsPerCarry": 0.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
         }
       ],
       "defense": {
@@ -4723,6 +6128,86 @@
           "redZoneTargets": 0,
           "inside10Targets": 0,
           "receivingTouchdowns": 0
+        }
+      ],
+      "rushers": [
+        {
+          "id": "00-0033293",
+          "name": "A.Jones",
+          "games": 3,
+          "carries": 52,
+          "carriesPerGame": 17.33,
+          "rushingYards": 203.0,
+          "rushingYardsPerGame": 67.67,
+          "yardsPerCarry": 3.9,
+          "rushingTouchdowns": 1,
+          "redZoneCarries": 4,
+          "inside10Carries": 1
+        },
+        {
+          "id": "00-0037525",
+          "name": "J.Mason",
+          "games": 1,
+          "carries": 15,
+          "carriesPerGame": 15.0,
+          "rushingYards": 59.0,
+          "rushingYardsPerGame": 59.0,
+          "yardsPerCarry": 3.93,
+          "rushingTouchdowns": 1,
+          "redZoneCarries": 4,
+          "inside10Carries": 2
+        },
+        {
+          "id": "00-0032950",
+          "name": "C.Wentz",
+          "games": 2,
+          "carries": 8,
+          "carriesPerGame": 4.0,
+          "rushingYards": 5.0,
+          "rushingYardsPerGame": 2.5,
+          "yardsPerCarry": 0.62,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0035228",
+          "name": "K.Murray",
+          "games": 2,
+          "carries": 4,
+          "carriesPerGame": 2.0,
+          "rushingYards": 26.0,
+          "rushingYardsPerGame": 13.0,
+          "yardsPerCarry": 6.5,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0036425",
+          "name": "D.Dallas",
+          "games": 2,
+          "carries": 3,
+          "carriesPerGame": 1.5,
+          "rushingYards": 10.0,
+          "rushingYardsPerGame": 5.0,
+          "yardsPerCarry": 3.33,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0041104",
+          "name": "D.Claiborne",
+          "games": 1,
+          "carries": 3,
+          "carriesPerGame": 3.0,
+          "rushingYards": 1.0,
+          "rushingYardsPerGame": 1.0,
+          "yardsPerCarry": 0.33,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
         }
       ],
       "defense": {
@@ -5006,6 +6491,73 @@
           "receivingTouchdowns": 0
         }
       ],
+      "rushers": [
+        {
+          "id": "00-0036875",
+          "name": "R.Stevenson",
+          "games": 3,
+          "carries": 31,
+          "carriesPerGame": 10.33,
+          "rushingYards": 116.0,
+          "rushingYardsPerGame": 38.67,
+          "yardsPerCarry": 3.74,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 1,
+          "inside10Carries": 1
+        },
+        {
+          "id": "00-0040734",
+          "name": "T.Henderson",
+          "games": 2,
+          "carries": 24,
+          "carriesPerGame": 12.0,
+          "rushingYards": 99.0,
+          "rushingYardsPerGame": 49.5,
+          "yardsPerCarry": 4.12,
+          "rushingTouchdowns": 1,
+          "redZoneCarries": 1,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0039851",
+          "name": "D.Maye",
+          "games": 3,
+          "carries": 15,
+          "carriesPerGame": 5.0,
+          "rushingYards": 82.0,
+          "rushingYardsPerGame": 27.33,
+          "yardsPerCarry": 5.47,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 2,
+          "inside10Carries": 1
+        },
+        {
+          "id": "00-0040556",
+          "name": "C.Kiner",
+          "games": 3,
+          "carries": 14,
+          "carriesPerGame": 4.67,
+          "rushingYards": 29.0,
+          "rushingYardsPerGame": 9.67,
+          "yardsPerCarry": 2.07,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0038476",
+          "name": "T.DeVito",
+          "games": 1,
+          "carries": 1,
+          "carriesPerGame": 1.0,
+          "rushingYards": 2.0,
+          "rushingYardsPerGame": 2.0,
+          "yardsPerCarry": 2.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        }
+      ],
       "defense": {
         "games": 3,
         "explosiveReceptionsAllowed": 5,
@@ -5229,6 +6781,86 @@
           "receivingTouchdowns": 0
         }
       ],
+      "rushers": [
+        {
+          "id": "00-0036973",
+          "name": "T.Etienne",
+          "games": 3,
+          "carries": 31,
+          "carriesPerGame": 10.33,
+          "rushingYards": 128.0,
+          "rushingYardsPerGame": 42.67,
+          "yardsPerCarry": 4.13,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 5,
+          "inside10Carries": 3
+        },
+        {
+          "id": "00-0033906",
+          "name": "A.Kamara",
+          "games": 2,
+          "carries": 18,
+          "carriesPerGame": 9.0,
+          "rushingYards": 51.0,
+          "rushingYardsPerGame": 25.5,
+          "yardsPerCarry": 2.83,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 2,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0040743",
+          "name": "T.Shough",
+          "games": 3,
+          "carries": 14,
+          "carriesPerGame": 4.67,
+          "rushingYards": 67.0,
+          "rushingYardsPerGame": 22.33,
+          "yardsPerCarry": 4.79,
+          "rushingTouchdowns": 1,
+          "redZoneCarries": 5,
+          "inside10Carries": 2
+        },
+        {
+          "id": "00-0038551",
+          "name": "K.Miller",
+          "games": 2,
+          "carries": 13,
+          "carriesPerGame": 6.5,
+          "rushingYards": 44.0,
+          "rushingYardsPerGame": 22.0,
+          "yardsPerCarry": 3.38,
+          "rushingTouchdowns": 1,
+          "redZoneCarries": 2,
+          "inside10Carries": 2
+        },
+        {
+          "id": "00-0041326",
+          "name": "C.Donaldson",
+          "games": 3,
+          "carries": 4,
+          "carriesPerGame": 1.33,
+          "rushingYards": 11.0,
+          "rushingYardsPerGame": 3.67,
+          "yardsPerCarry": 2.75,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 1,
+          "inside10Carries": 1
+        },
+        {
+          "id": "00-0041099",
+          "name": "B.Brown",
+          "games": 1,
+          "carries": 1,
+          "carriesPerGame": 1.0,
+          "rushingYards": 3.0,
+          "rushingYardsPerGame": 3.0,
+          "yardsPerCarry": 3.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        }
+      ],
       "defense": {
         "games": 3,
         "explosiveReceptionsAllowed": 6,
@@ -5425,6 +7057,99 @@
           "redZoneTargets": 0,
           "inside10Targets": 0,
           "receivingTouchdowns": 0
+        }
+      ],
+      "rushers": [
+        {
+          "id": "00-0040715",
+          "name": "C.Skattebo",
+          "games": 3,
+          "carries": 50,
+          "carriesPerGame": 16.67,
+          "rushingYards": 177.0,
+          "rushingYardsPerGame": 59.0,
+          "yardsPerCarry": 3.54,
+          "rushingTouchdowns": 1,
+          "redZoneCarries": 9,
+          "inside10Carries": 5
+        },
+        {
+          "id": "00-0036893",
+          "name": "N.Harris",
+          "games": 2,
+          "carries": 13,
+          "carriesPerGame": 6.5,
+          "rushingYards": 58.0,
+          "rushingYardsPerGame": 29.0,
+          "yardsPerCarry": 4.46,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 3,
+          "inside10Carries": 2
+        },
+        {
+          "id": "00-0040691",
+          "name": "J.Dart",
+          "games": 1,
+          "carries": 11,
+          "carriesPerGame": 11.0,
+          "rushingYards": 54.0,
+          "rushingYardsPerGame": 54.0,
+          "yardsPerCarry": 4.91,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 1,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0035250",
+          "name": "D.Singletary",
+          "games": 2,
+          "carries": 9,
+          "carriesPerGame": 4.5,
+          "rushingYards": 25.0,
+          "rushingYardsPerGame": 12.5,
+          "yardsPerCarry": 2.78,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 1,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0031503",
+          "name": "J.Winston",
+          "games": 2,
+          "carries": 4,
+          "carriesPerGame": 2.0,
+          "rushingYards": 15.0,
+          "rushingYardsPerGame": 7.5,
+          "yardsPerCarry": 3.75,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0039384",
+          "name": "T.Tracy",
+          "games": 2,
+          "carries": 3,
+          "carriesPerGame": 1.5,
+          "rushingYards": 17.0,
+          "rushingYardsPerGame": 8.5,
+          "yardsPerCarry": 5.67,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0036309",
+          "name": "D.Mooney",
+          "games": 1,
+          "carries": 1,
+          "carriesPerGame": 1.0,
+          "rushingYards": 9.0,
+          "rushingYardsPerGame": 9.0,
+          "yardsPerCarry": 9.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
         }
       ],
       "defense": {
@@ -5668,6 +7393,73 @@
           "receivingTouchdowns": 0
         }
       ],
+      "rushers": [
+        {
+          "id": "00-0038120",
+          "name": "B.Hall",
+          "games": 3,
+          "carries": 51,
+          "carriesPerGame": 17.0,
+          "rushingYards": 163.0,
+          "rushingYardsPerGame": 54.33,
+          "yardsPerCarry": 3.2,
+          "rushingTouchdowns": 1,
+          "redZoneCarries": 8,
+          "inside10Carries": 4
+        },
+        {
+          "id": "00-0039794",
+          "name": "B.Allen",
+          "games": 3,
+          "carries": 19,
+          "carriesPerGame": 6.33,
+          "rushingYards": 61.0,
+          "rushingYardsPerGame": 20.33,
+          "yardsPerCarry": 3.21,
+          "rushingTouchdowns": 1,
+          "redZoneCarries": 3,
+          "inside10Carries": 1
+        },
+        {
+          "id": "00-0030565",
+          "name": "G.Smith",
+          "games": 3,
+          "carries": 13,
+          "carriesPerGame": 4.33,
+          "rushingYards": 36.0,
+          "rushingYardsPerGame": 12.0,
+          "yardsPerCarry": 2.77,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 1,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0039451",
+          "name": "I.Williams",
+          "games": 1,
+          "carries": 1,
+          "carriesPerGame": 1.0,
+          "rushingYards": 14.0,
+          "rushingYardsPerGame": 14.0,
+          "yardsPerCarry": 14.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0041032",
+          "name": "K.Sadiq",
+          "games": 1,
+          "carries": 1,
+          "carriesPerGame": 1.0,
+          "rushingYards": 3.0,
+          "rushingYardsPerGame": 3.0,
+          "yardsPerCarry": 3.0,
+          "rushingTouchdowns": 1,
+          "redZoneCarries": 1,
+          "inside10Carries": 1
+        }
+      ],
       "defense": {
         "games": 3,
         "explosiveReceptionsAllowed": 4,
@@ -5882,6 +7674,86 @@
           "redZoneTargets": 1,
           "inside10Targets": 0,
           "receivingTouchdowns": 0
+        }
+      ],
+      "rushers": [
+        {
+          "id": "00-0034844",
+          "name": "S.Barkley",
+          "games": 3,
+          "carries": 34,
+          "carriesPerGame": 11.33,
+          "rushingYards": 174.0,
+          "rushingYardsPerGame": 58.0,
+          "yardsPerCarry": 5.12,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 5,
+          "inside10Carries": 2
+        },
+        {
+          "id": "00-0036389",
+          "name": "J.Hurts",
+          "games": 3,
+          "carries": 16,
+          "carriesPerGame": 5.33,
+          "rushingYards": 87.0,
+          "rushingYardsPerGame": 29.0,
+          "yardsPerCarry": 5.44,
+          "rushingTouchdowns": 1,
+          "redZoneCarries": 3,
+          "inside10Carries": 3
+        },
+        {
+          "id": "00-0038555",
+          "name": "T.Bigsby",
+          "games": 2,
+          "carries": 14,
+          "carriesPerGame": 7.0,
+          "rushingYards": 36.0,
+          "rushingYardsPerGame": 18.0,
+          "yardsPerCarry": 2.57,
+          "rushingTouchdowns": 1,
+          "redZoneCarries": 3,
+          "inside10Carries": 1
+        },
+        {
+          "id": "00-0039746",
+          "name": "W.Shipley",
+          "games": 2,
+          "carries": 9,
+          "carriesPerGame": 4.5,
+          "rushingYards": 28.0,
+          "rushingYardsPerGame": 14.0,
+          "yardsPerCarry": 3.11,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 4,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0035662",
+          "name": "M.Brown",
+          "games": 1,
+          "carries": 2,
+          "carriesPerGame": 2.0,
+          "rushingYards": 12.0,
+          "rushingYardsPerGame": 12.0,
+          "yardsPerCarry": 6.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0040867",
+          "name": "M.Lemon",
+          "games": 1,
+          "carries": 1,
+          "carriesPerGame": 1.0,
+          "rushingYards": -5.0,
+          "rushingYardsPerGame": -5.0,
+          "yardsPerCarry": -5.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
         }
       ],
       "defense": {
@@ -6109,6 +7981,99 @@
           "redZoneTargets": 1,
           "inside10Targets": 0,
           "receivingTouchdowns": 0
+        }
+      ],
+      "rushers": [
+        {
+          "id": "00-0037228",
+          "name": "J.Warren",
+          "games": 3,
+          "carries": 38,
+          "carriesPerGame": 12.67,
+          "rushingYards": 216.0,
+          "rushingYardsPerGame": 72.0,
+          "yardsPerCarry": 5.68,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 2,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0036139",
+          "name": "R.Dowdle",
+          "games": 2,
+          "carries": 15,
+          "carriesPerGame": 7.5,
+          "rushingYards": 37.0,
+          "rushingYardsPerGame": 18.5,
+          "yardsPerCarry": 2.47,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 1,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0023459",
+          "name": "A.Rodgers",
+          "games": 3,
+          "carries": 7,
+          "carriesPerGame": 2.33,
+          "rushingYards": 12.0,
+          "rushingYardsPerGame": 4.0,
+          "yardsPerCarry": 1.71,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0035594",
+          "name": "T.Homer",
+          "games": 2,
+          "carries": 3,
+          "carriesPerGame": 1.5,
+          "rushingYards": 16.0,
+          "rushingYardsPerGame": 8.0,
+          "yardsPerCarry": 5.33,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 1,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0036894",
+          "name": "P.Freiermuth",
+          "games": 2,
+          "carries": 2,
+          "carriesPerGame": 1.0,
+          "rushingYards": 3.0,
+          "rushingYardsPerGame": 1.5,
+          "yardsPerCarry": 1.5,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0034771",
+          "name": "M.Rudolph",
+          "games": 1,
+          "carries": 1,
+          "carriesPerGame": 1.0,
+          "rushingYards": 3.0,
+          "rushingYardsPerGame": 3.0,
+          "yardsPerCarry": 3.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0038409",
+          "name": "L.Nichols",
+          "games": 1,
+          "carries": 1,
+          "carriesPerGame": 1.0,
+          "rushingYards": 0.0,
+          "rushingYardsPerGame": 0.0,
+          "yardsPerCarry": 0.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 1,
+          "inside10Carries": 1
         }
       ],
       "defense": {
@@ -6356,6 +8321,99 @@
           "receivingTouchdowns": 0
         }
       ],
+      "rushers": [
+        {
+          "id": "00-0038797",
+          "name": "E.Wilson",
+          "games": 3,
+          "carries": 32,
+          "carriesPerGame": 10.67,
+          "rushingYards": 109.0,
+          "rushingYardsPerGame": 36.33,
+          "yardsPerCarry": 3.41,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 9,
+          "inside10Carries": 7
+        },
+        {
+          "id": "00-0041512",
+          "name": "J.Price",
+          "games": 3,
+          "carries": 28,
+          "carriesPerGame": 9.33,
+          "rushingYards": 119.0,
+          "rushingYardsPerGame": 39.67,
+          "yardsPerCarry": 4.25,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 3,
+          "inside10Carries": 2
+        },
+        {
+          "id": "00-0039299",
+          "name": "G.Holani",
+          "games": 3,
+          "carries": 15,
+          "carriesPerGame": 5.0,
+          "rushingYards": 52.0,
+          "rushingYardsPerGame": 17.33,
+          "yardsPerCarry": 3.47,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 6,
+          "inside10Carries": 3
+        },
+        {
+          "id": "00-0035704",
+          "name": "D.Lock",
+          "games": 1,
+          "carries": 2,
+          "carriesPerGame": 2.0,
+          "rushingYards": 13.0,
+          "rushingYardsPerGame": 13.0,
+          "yardsPerCarry": 6.5,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 1,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0034869",
+          "name": "S.Darnold",
+          "games": 1,
+          "carries": 1,
+          "carriesPerGame": 1.0,
+          "rushingYards": 5.0,
+          "rushingYardsPerGame": 5.0,
+          "yardsPerCarry": 5.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0037545",
+          "name": "R.Shaheed",
+          "games": 1,
+          "carries": 1,
+          "carriesPerGame": 1.0,
+          "rushingYards": 4.0,
+          "rushingYardsPerGame": 4.0,
+          "yardsPerCarry": 4.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 1,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0039793",
+          "name": "A.Barner",
+          "games": 1,
+          "carries": 1,
+          "carriesPerGame": 1.0,
+          "rushingYards": 1.0,
+          "rushingYardsPerGame": 1.0,
+          "yardsPerCarry": 1.0,
+          "rushingTouchdowns": 1,
+          "redZoneCarries": 1,
+          "inside10Carries": 1
+        }
+      ],
       "defense": {
         "games": 3,
         "explosiveReceptionsAllowed": 2,
@@ -6597,6 +8655,86 @@
           "receivingTouchdowns": 0
         }
       ],
+      "rushers": [
+        {
+          "id": "00-0033280",
+          "name": "C.McCaffrey",
+          "games": 3,
+          "carries": 35,
+          "carriesPerGame": 11.67,
+          "rushingYards": 166.0,
+          "rushingYardsPerGame": 55.33,
+          "yardsPerCarry": 4.74,
+          "rushingTouchdowns": 3,
+          "redZoneCarries": 8,
+          "inside10Carries": 6
+        },
+        {
+          "id": "00-0041052",
+          "name": "K.Black",
+          "games": 3,
+          "carries": 25,
+          "carriesPerGame": 8.33,
+          "rushingYards": 107.0,
+          "rushingYardsPerGame": 35.67,
+          "yardsPerCarry": 4.28,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 4,
+          "inside10Carries": 1
+        },
+        {
+          "id": "00-0037834",
+          "name": "B.Purdy",
+          "games": 3,
+          "carries": 10,
+          "carriesPerGame": 3.33,
+          "rushingYards": 93.0,
+          "rushingYardsPerGame": 31.0,
+          "yardsPerCarry": 9.3,
+          "rushingTouchdowns": 1,
+          "redZoneCarries": 1,
+          "inside10Carries": 1
+        },
+        {
+          "id": "00-0035719",
+          "name": "D.Samuel",
+          "games": 3,
+          "carries": 4,
+          "carriesPerGame": 1.33,
+          "rushingYards": 30.0,
+          "rushingYardsPerGame": 10.0,
+          "yardsPerCarry": 7.5,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0040177",
+          "name": "J.James",
+          "games": 1,
+          "carries": 4,
+          "carriesPerGame": 4.0,
+          "rushingYards": 15.0,
+          "rushingYardsPerGame": 15.0,
+          "yardsPerCarry": 3.75,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0036972",
+          "name": "M.Jones",
+          "games": 1,
+          "carries": 2,
+          "carriesPerGame": 2.0,
+          "rushingYards": -2.0,
+          "rushingYardsPerGame": -2.0,
+          "yardsPerCarry": -1.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        }
+      ],
       "defense": {
         "games": 3,
         "explosiveReceptionsAllowed": 4,
@@ -6795,6 +8933,99 @@
           "receivingTouchdowns": 0
         }
       ],
+      "rushers": [
+        {
+          "id": "00-0039361",
+          "name": "B.Irving",
+          "games": 3,
+          "carries": 40,
+          "carriesPerGame": 13.33,
+          "rushingYards": 180.0,
+          "rushingYardsPerGame": 60.0,
+          "yardsPerCarry": 4.5,
+          "rushingTouchdowns": 1,
+          "redZoneCarries": 3,
+          "inside10Carries": 1
+        },
+        {
+          "id": "00-0034855",
+          "name": "B.Mayfield",
+          "games": 3,
+          "carries": 11,
+          "carriesPerGame": 3.67,
+          "rushingYards": 65.0,
+          "rushingYardsPerGame": 21.67,
+          "yardsPerCarry": 5.91,
+          "rushingTouchdowns": 1,
+          "redZoneCarries": 5,
+          "inside10Carries": 1
+        },
+        {
+          "id": "00-0036919",
+          "name": "K.Gainwell",
+          "games": 3,
+          "carries": 10,
+          "carriesPerGame": 3.33,
+          "rushingYards": 21.0,
+          "rushingYardsPerGame": 7.0,
+          "yardsPerCarry": 2.1,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 1,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0033921",
+          "name": "C.Godwin",
+          "games": 2,
+          "carries": 2,
+          "carriesPerGame": 1.0,
+          "rushingYards": 15.0,
+          "rushingYardsPerGame": 7.5,
+          "yardsPerCarry": 7.5,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0040129",
+          "name": "E.Egbuka",
+          "games": 1,
+          "carries": 1,
+          "carriesPerGame": 1.0,
+          "rushingYards": -3.0,
+          "rushingYardsPerGame": -3.0,
+          "yardsPerCarry": -3.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0040237",
+          "name": "T.Johnson",
+          "games": 1,
+          "carries": 1,
+          "carriesPerGame": 1.0,
+          "rushingYards": -4.0,
+          "rushingYardsPerGame": -4.0,
+          "yardsPerCarry": -4.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0041251",
+          "name": "J.Daniels",
+          "games": 1,
+          "carries": 1,
+          "carriesPerGame": 1.0,
+          "rushingYards": 9.0,
+          "rushingYardsPerGame": 9.0,
+          "yardsPerCarry": 9.0,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 0,
+          "inside10Carries": 0
+        }
+      ],
       "defense": {
         "games": 3,
         "explosiveReceptionsAllowed": 8,
@@ -6980,6 +9211,60 @@
           "redZoneTargets": 0,
           "inside10Targets": 0,
           "receivingTouchdowns": 0
+        }
+      ],
+      "rushers": [
+        {
+          "id": "00-0035261",
+          "name": "T.Pollard",
+          "games": 3,
+          "carries": 38,
+          "carriesPerGame": 12.67,
+          "rushingYards": 173.0,
+          "rushingYardsPerGame": 57.67,
+          "yardsPerCarry": 4.55,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 8,
+          "inside10Carries": 5
+        },
+        {
+          "id": "00-0039032",
+          "name": "T.Spears",
+          "games": 3,
+          "carries": 13,
+          "carriesPerGame": 4.33,
+          "rushingYards": 58.0,
+          "rushingYardsPerGame": 19.33,
+          "yardsPerCarry": 4.46,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 1,
+          "inside10Carries": 0
+        },
+        {
+          "id": "00-0040676",
+          "name": "C.Ward",
+          "games": 3,
+          "carries": 9,
+          "carriesPerGame": 3.0,
+          "rushingYards": 30.0,
+          "rushingYardsPerGame": 10.0,
+          "yardsPerCarry": 3.33,
+          "rushingTouchdowns": 2,
+          "redZoneCarries": 4,
+          "inside10Carries": 4
+        },
+        {
+          "id": "00-0040886",
+          "name": "N.Singleton",
+          "games": 1,
+          "carries": 4,
+          "carriesPerGame": 4.0,
+          "rushingYards": 10.0,
+          "rushingYardsPerGame": 10.0,
+          "yardsPerCarry": 2.5,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 1,
+          "inside10Carries": 0
         }
       ],
       "defense": {
@@ -7254,6 +9539,73 @@
           "redZoneTargets": 0,
           "inside10Targets": 0,
           "receivingTouchdowns": 0
+        }
+      ],
+      "rushers": [
+        {
+          "id": "00-0040242",
+          "name": "J.Croskey-Merritt",
+          "games": 3,
+          "carries": 47,
+          "carriesPerGame": 15.67,
+          "rushingYards": 142.0,
+          "rushingYardsPerGame": 47.33,
+          "yardsPerCarry": 3.02,
+          "rushingTouchdowns": 1,
+          "redZoneCarries": 5,
+          "inside10Carries": 2
+        },
+        {
+          "id": "00-0037256",
+          "name": "R.White",
+          "games": 3,
+          "carries": 22,
+          "carriesPerGame": 7.33,
+          "rushingYards": 100.0,
+          "rushingYardsPerGame": 33.33,
+          "yardsPerCarry": 4.55,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 4,
+          "inside10Carries": 2
+        },
+        {
+          "id": "00-0039910",
+          "name": "J.Daniels",
+          "games": 2,
+          "carries": 12,
+          "carriesPerGame": 6.0,
+          "rushingYards": 100.0,
+          "rushingYardsPerGame": 50.0,
+          "yardsPerCarry": 8.33,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 4,
+          "inside10Carries": 1
+        },
+        {
+          "id": "00-0041096",
+          "name": "K.Allen",
+          "games": 2,
+          "carries": 9,
+          "carriesPerGame": 4.5,
+          "rushingYards": 40.0,
+          "rushingYardsPerGame": 20.0,
+          "yardsPerCarry": 4.44,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 3,
+          "inside10Carries": 1
+        },
+        {
+          "id": "00-0032268",
+          "name": "M.Mariota",
+          "games": 2,
+          "carries": 6,
+          "carriesPerGame": 3.0,
+          "rushingYards": 14.0,
+          "rushingYardsPerGame": 7.0,
+          "yardsPerCarry": 2.33,
+          "rushingTouchdowns": 0,
+          "redZoneCarries": 1,
+          "inside10Carries": 0
         }
       ],
       "defense": {
