@@ -258,7 +258,9 @@
           );
         });
 
-      return matchesPlayer || matchesTeam;
+      return matchesPlayer &&
+  !/rookie of the year|player of the year|fantasy|leader|season|award/i
+    .test(combined);
     }).filter(market => {
       if (!query) return true;
 
