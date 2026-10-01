@@ -42,6 +42,9 @@ jobs:
       - name: Update NFL player game logs
         run: python scripts/update_nfl_gamelogs.py
 
+      - name: Calculate NFL player statistics
+        run: python scripts/calculate_nfl_probabilities.py
+
       - name: Update Kalshi markets
         run: python scripts/update_kalshi.py
 
