@@ -253,3 +253,73 @@
 
   renderPlays();
 })();
+
+// DOC'S RUNNING BACK INTELLIGENCE
+
+function renderRushing() {
+  const body = document.getElementById("rushingBody");
+  const status = document.getElementById("rushingStatus");
+
+  if (!body || !status) return;
+
+  body.replaceChildren();
+
+  if (!playerData) {
+    status.textContent = "Waiting for rushing data...";
+    return;
+  }
+
+  const selectedTeams = [
+    document.getElementById("away").value,
+    document.getElementById("home").value
+  ];
+
+  let count = 0;
+
+  selectedTeams.forEach(teamName => {
+    const code = playerTeamCodes[teamName];
+    const team = playerData.teams[code];
+
+    if (!team?.rushers) return;
+
+    team.rushers.forEach(player => {
+      const row = document.createElement("tr");
+
+      const values = [
+        teamName,
+        player.name,
+        player.games,
+        player.carries,
+        player.carriesPerGame,
+        player.rushingYards,
+        player.rushingYardsPerGame,
+        player.yardsPerCarry,
+        player.rushingTouchdowns,
+        player.redZoneCarries,
+        player.inside10Carries
+      ];
+
+      values.forEach(value => {
+        const cell = document.createElement("td");
+        cell.textContent = value ?? "—";
+        row.appendChild(cell);
+      });
+
+      body.appendChild(row);
+      count++;
+    });
+  });
+
+  status.textContent = count
+    ? "Verified rushing statistics from completed games."
+    : "No rushing statistics available.";
+}
+
+// Include rushing whenever we analyze a matchup.
+
+const previousRenderPlayersForRushing = renderPlayers;
+
+renderPlayers = function () {
+  previousRenderPlayersForRushing();
+  renderRushing();
+};
