@@ -311,8 +311,7 @@ function findPlayerStats(market) {
         });
 
       return matchesPlayer &&
-  !/rookie of the year|player of the year|fantasy|leader|season|award/i
-    .test(combined);
+  !/rookie of the year|player of the year|fantasy|leader|season|award/i.test(combined);
     }).filter(market => {
       if (!query) return true;
 
