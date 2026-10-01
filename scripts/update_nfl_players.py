@@ -42,9 +42,16 @@ required = [
     "passing_yards",
     "pass_touchdown",
     "interception",
+    
     "yardline_100",
-    "touchdown"
+    "touchdown",
+    "rush_attempt",
+    "rusher_player_id",
+    "rusher_player_name",
+    "rushing_yards",
+    "rush_touchdown"
 ]
+
 
 missing = [
     col for col in required
@@ -68,9 +75,14 @@ for col in [
     "passing_yards",
     "pass_touchdown",
     "interception",
+    
     "yardline_100",
-    "touchdown"
+    "touchdown",
+    "rush_attempt",
+    "rushing_yards",
+    "rush_touchdown"
 ]:
+
     df[col] = pd.to_numeric(
         df[col],
         errors="coerce"
@@ -169,6 +181,63 @@ for (team, name), group in passes.groupby(
             ), 2
         )
     })
+
+# RUNNING BACK RUSHING STATISTICS
+
+rushes = df[
+    (df["rush_attempt"] == 1) &
+    df["rusher_player_id"].notna() &
+    df["rusher_player_name"].notna() &
+    df["posteam"].notna()
+].copy()
+
+rushers = {}
+
+for (team, player_id, name), group in rushes.groupby(
+    ["posteam", "rusher_player_id", "rusher_player_name"]
+):
+    carries = len(group)
+    yards = float(group["rushing_yards"].fillna(0).sum())
+
+    touchdowns = int(
+        (group["rush_touchdown"] == 1).sum()
+    )
+
+    red_zone = int(
+        (group["yardline_100"] <= 20).sum()
+    )
+
+    inside_ten = int(
+        (group["yardline_100"] <= 10).sum()
+    )
+
+    games_played = group["game_id"].nunique()
+
+    rushers.setdefault(str(team), []).append({
+        "id": str(player_id),
+        "name": str(name),
+        "games": int(games_played),
+        "carries": carries,
+        "carriesPerGame": round(
+            carries / games_played, 2
+        ),
+        "rushingYards": round(yards, 1),
+        "rushingYardsPerGame": round(
+            yards / games_played, 2
+        ),
+        "yardsPerCarry": round(
+            yards / carries, 2
+        ),
+        "rushingTouchdowns": touchdowns,
+        "redZoneCarries": red_zone,
+        "inside10Carries": inside_ten
+    })
+
+for team in rushers:
+    rushers[team].sort(
+        key=lambda player: player["carries"],
+        reverse=True
+    )
 
 # Defensive matchup statistics
 defensive_stats = {}
@@ -337,26 +406,31 @@ for team in receivers:
         reverse=True
     )
 
+
 all_teams = sorted(
     set(team_games) |
     set(quarterbacks) |
-    set(receivers)
+    set(receivers) |
+    set(rushers)
 )
 
-results = {}
 
-for team in all_teams:
-    results[team] = {
-        "games": len(
-            team_games.get(team, set())
-        ),
-        "quarterbacks": quarterbacks.get(
-            team, []
-        ),
-        "receivers": receivers.get(
-            team, []
-        )
-    }
+
+results[team] = {
+    "games": len(
+        team_games.get(team, set())
+    ),
+    "quarterbacks": quarterbacks.get(
+        team, []
+    ),
+    "receivers": receivers.get(
+        team, []
+    ),
+    "rushers": rushers.get(
+        team, []
+    )
+}
+
 
 # Attach defensive statistics to each team.
 for team in results:
