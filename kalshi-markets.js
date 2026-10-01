@@ -90,19 +90,23 @@
         font-size:13px;
       ">
         
+
 <colgroup>
   <col style="width:300px">
   <col style="width:75px">
-  <col style="width:95px">
+  <col style="width:140px">
+  <col style="width:110px">
   <col style="width:75px">
   <col style="width:95px">
 </colgroup>
+
 
         <thead>
           
 <tr>
   <th>Player / Market</th>
   <th>YES Ask</th>
+  <th>Player Average</th>
   <th>Our Projection</th>
   <th>Spread</th>
   <th>Volume</th>
@@ -133,6 +137,48 @@
   let markets = [];
   let playerData = null;
   let projectionData = null;
+  
+// Find player averages in our statistical database.
+function findPlayerStats(market) {
+  if (!projectionData?.players) return null;
+
+  const title = market.title || "";
+
+  const category =
+    /rushing and receiving|receiving and rushing/i.test(title)
+      ? "combinedRushingReceiving"
+      : /receiving/i.test(title)
+      ? "receiving"
+      : /rushing/i.test(title)
+      ? "rushing"
+      : /passing/i.test(title)
+      ? "passing"
+      : null;
+
+  if (!category) return null;
+
+  const matches = projectionData.players.filter(player => {
+    const surname = player.name
+      .replace(/^[A-Za-z]+\./, "")
+      .trim();
+
+    const escaped = surname.replace(
+      /[.*+?^${}()|[\]\\]/g,
+      "\\$&"
+    );
+
+    return new RegExp(
+      "\\b" + escaped + "\\b",
+      "i"
+    ).test(title);
+  });
+
+  // Never guess when multiple players match.
+  if (matches.length !== 1) return null;
+
+  return matches[0].categories?.[category] || null;
+}
+
   function selectedTeam(select) {
     return select.selectedOptions[0]?.text.trim() || "";
   }
@@ -292,13 +338,23 @@ const validPrices =
   ask > 0 &&
   ask >= bid;
 
+
+const stats = findPlayerStats(market);
+
+const statsText = stats
+  ? stats.averageYards + " yds / " +
+    stats.recordedGames + " games"
+  : "—";
+
 const values = [
   market.title || "Unknown",
   validPrices ? (ask * 100).toFixed(1) + "¢" : "—",
+  statsText,
   "Pending",
   validPrices ? ((ask - bid) * 100).toFixed(1) + "¢" : "—",
   market.volume ?? "—"
 ];
+
 
 
       values.forEach((value, index) => {
@@ -327,7 +383,7 @@ const values = [
     if (!matching.length) {
       const tr = document.createElement("tr");
       const td = document.createElement("td");
-      td.colSpan = 5;
+      td.colSpan = 6;
       td.textContent =
         "No matching contracts found. Check the " +
         "selected teams or try another search.";
