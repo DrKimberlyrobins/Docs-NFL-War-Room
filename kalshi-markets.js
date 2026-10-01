@@ -89,19 +89,25 @@
         border-collapse:collapse;
         font-size:13px;
       ">
-        <colgroup>
-          <col style="width:340px">
-          <col style="width:90px">
-          <col style="width:90px">
-          <col style="width:120px">
-        </colgroup>
+        
+<colgroup>
+  <col style="width:300px">
+  <col style="width:75px">
+  <col style="width:95px">
+  <col style="width:75px">
+  <col style="width:95px">
+</colgroup>
+
         <thead>
-          <tr>
-            <th>Player / Market</th>
-            <th>YES Bid</th>
-            <th>YES Ask</th>
-            <th>Volume</th>
-          </tr>
+          
+<tr>
+  <th>Player / Market</th>
+  <th>YES Ask</th>
+  <th>Break-even %</th>
+  <th>Spread</th>
+  <th>Volume</th>
+</tr>
+
         </thead>
         <tbody id="kalshiRows"></tbody>
       </table>
@@ -276,12 +282,24 @@
     matching.slice(0, 100).forEach(market => {
       const tr = document.createElement("tr");
 
-      const values = [
-        market.title || "Unknown",
-        market.yesBid ?? "—",
-        market.yesAsk ?? "—",
-        market.volume ?? "—"
-      ];
+      
+const bid = Number(market.yesBid);
+const ask = Number(market.yesAsk);
+
+const validPrices =
+  Number.isFinite(bid) &&
+  Number.isFinite(ask) &&
+  ask > 0 &&
+  ask >= bid;
+
+const values = [
+  market.title || "Unknown",
+  validPrices ? (ask * 100).toFixed(1) + "¢" : "—",
+  validPrices ? (ask * 100).toFixed(1) + "%" : "—",
+  validPrices ? ((ask - bid) * 100).toFixed(1) + "¢" : "—",
+  market.volume ?? "—"
+];
+
 
       values.forEach((value, index) => {
         const td = document.createElement("td");
@@ -309,7 +327,7 @@
     if (!matching.length) {
       const tr = document.createElement("tr");
       const td = document.createElement("td");
-      td.colSpan = 4;
+      td.colSpan = 5;
       td.textContent =
         "No matching contracts found. Check the " +
         "selected teams or try another search.";
