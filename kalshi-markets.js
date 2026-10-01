@@ -144,6 +144,14 @@ function findPlayerStats(market) {
 
   const title = market.title || "";
 
+// Prevent yardage averages from appearing
+// beside contracts measuring something else.
+if (
+  /attempts|receptions ladder|yards ladder|most rushing yards|most passing yards/i.test(title)
+) {
+  return null;
+}
+
   const category =
     /rushing and receiving|receiving and rushing/i.test(title)
       ? "combinedRushingReceiving"
