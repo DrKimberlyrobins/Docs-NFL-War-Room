@@ -29,7 +29,7 @@
       style="padding:12px;width:100%;box-sizing:border-box"
     >
     <div style="overflow-x:auto;margin-top:15px">
-      <table style="width:100%;text-align:left">
+      <table style="width:auto;max-width:100%;text-align:left">
         <thead>
           <tr>
             <th>Market</th>
