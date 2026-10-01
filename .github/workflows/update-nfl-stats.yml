@@ -38,6 +38,9 @@ jobs:
 
       - name: Calculate NFL players
         run: python scripts/update_nfl_players.py
+        
+      - name: Update Kalshi markets
+        run: python scripts/update_kalshi.py
 
       - name: Save updated statistics
         run: |
