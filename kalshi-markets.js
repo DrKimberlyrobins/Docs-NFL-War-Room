@@ -1,6 +1,7 @@
 
 // DOC'S NFL WAR ROOM
-// AUTOMATIC TWO-TEAM KALSHI MARKET FILTER
+// Kalshi Market Intelligence
+// Historical performance and automatic price comparison
 
 (async function () {
   "use strict";
@@ -50,76 +51,85 @@
   const home = document.getElementById("home");
 
   if (!away || !home) {
-    console.error("Kalshi: Team dropdowns not found.");
+    console.error("Team selectors were not found.");
     return;
   }
 
   const section = document.createElement("section");
+
   section.style.cssText = `
-    background:#172337;
-    color:white;
-    padding:16px;
-    margin:20px 0;
-    border:1px solid #299764;
+    margin:25px auto;
+    padding:20px;
+    max-width:1250px;
+    background:#14251f;
+    color:#ffffff;
+    border:2px solid #24854b;
     border-radius:12px;
     font-family:Arial,sans-serif;
   `;
 
   section.innerHTML = `
-    <h2 style="color:#41d98b">
+    <h2 style="color:#50df89">
       KALSHI NFL MARKET INTELLIGENCE
     </h2>
 
     <p id="kalshiMatchup"></p>
-    <p id="kalshiStatus">Loading data...</p>
+
+    <p id="kalshiStatus">
+      Loading market and player data...
+    </p>
+
+    <p style="font-size:12px;color:#c4dfce">
+      Historical results are not predictive probabilities.
+      Verify the game, player, contract rules and current
+      price before making any decision.
+    </p>
 
     <input
       id="kalshiSearch"
       type="search"
-      placeholder="Search player or market"
-      style="padding:10px;width:100%;box-sizing:border-box"
+      placeholder="Search player or contract..."
+      style="
+        width:100%;
+        max-width:450px;
+        padding:12px;
+        margin:12px 0;
+        border:1px solid #50df89;
+        border-radius:6px;
+        font-size:15px;
+      "
     >
 
-    <div style="overflow-x:auto;margin-top:12px">
+    <div style="overflow-x:auto">
       <table style="
-        width:640px;
-        max-width:100%;
-        table-layout:fixed;
-        text-align:left;
+        width:100%;
+        min-width:960px;
         border-collapse:collapse;
         font-size:13px;
+        text-align:left;
       ">
-        
-
-<colgroup>
-  <col style="width:300px">
-  <col style="width:75px">
-  <col style="width:140px">
-  <col style="width:110px">
-  <col style="width:75px">
-  <col style="width:95px">
-</colgroup>
-
-
         <thead>
-          
-<tr>
-  <th>Player / Market</th>
-  <th>YES Ask</th>
-  <th>Player Average</th>
-  <th>Our Projection</th>
-  <th>Spread</th>
-  <th>Volume</th>
-</tr>
-
+          <tr style="color:#50df89">
+            <th>Player / Market</th>
+            <th>YES Ask</th>
+            <th>Player Average</th>
+            <th>Historical Rate</th>
+            <th>Rate - Price</th>
+            <th>Spread</th>
+            <th>Volume</th>
+          </tr>
         </thead>
+
         <tbody id="kalshiRows"></tbody>
       </table>
     </div>
 
-    <p style="font-size:12px;color:#aab7c8">
-      Research display only. Player-name matching
-      requires verification. Prices may be delayed.
+    <p style="font-size:12px;color:#c4dfce">
+      Historical Rate = successful recorded games /
+      recorded games. Missing zero-opportunity games
+      may affect the results. Rate - Price is a
+      mathematical comparison, not a verified betting edge.
+      Market prices may be delayed.
     </p>
   `;
 
@@ -127,74 +137,31 @@
 
   const matchupLabel =
     document.getElementById("kalshiMatchup");
+
   const status =
     document.getElementById("kalshiStatus");
+
   const search =
     document.getElementById("kalshiSearch");
+
   const rows =
     document.getElementById("kalshiRows");
 
   let markets = [];
   let playerData = null;
   let projectionData = null;
-  
-// Find player averages in our statistical database.
-function findPlayerStats(market) {
-  if (!projectionData?.players) return null;
-
-  const title = market.title || "";
-
-// Prevent yardage averages from appearing
-// beside contracts measuring something else.
-if (
-  /attempts|receptions ladder|yards ladder|most rushing yards|most passing yards/i.test(title)
-) {
-  return null;
-}
-
-  const category =
-    /rushing and receiving|receiving and rushing/i.test(title)
-      ? "combinedRushingReceiving"
-      : /receiving/i.test(title)
-      ? "receiving"
-      : /rushing/i.test(title)
-      ? "rushing"
-      : /passing/i.test(title)
-      ? "passing"
-      : null;
-
-  if (!category) return null;
-
-  const matches = projectionData.players.filter(player => {
-    const surname = player.name
-      .replace(/^[A-Za-z]+\./, "")
-      .trim();
-
-    const escaped = surname.replace(
-      /[.*+?^${}()|[\]\\]/g,
-      "\\$&"
-    );
-
-    return new RegExp(
-      "\\b" + escaped + "\\b",
-      "i"
-    ).test(title);
-  });
-
-  // Never guess when multiple players match.
-  if (matches.length !== 1) return null;
-
-  return matches[0].categories?.[category] || null;
-}
-
-  function selectedTeam(select) {
-    return select.selectedOptions[0]?.text.trim() || "";
-  }
+  let gameLogData = null;
+  let updated = "Unknown";
 
   function normalize(value) {
     return String(value || "")
       .toLowerCase()
       .replace(/[^a-z0-9]/g, "");
+  }
+
+  function selectedTeam(select) {
+    return select.selectedOptions[0]
+      ?.text.trim() || "";
   }
 
   function getTeamCode(select) {
@@ -213,32 +180,41 @@ if (
     return null;
   }
 
-  function getTeamPlayers(code) {
-    if (!code || !playerData?.teams) return [];
+  function possibleCodes(code) {
+    return code
+      ? [code, ...(aliases[code] || [])]
+      : [];
+  }
 
-    const possibleCodes = [
-      code,
-      ...(aliases[code] || [])
+  function selectedCodes() {
+    return [
+      ...new Set([
+        ...possibleCodes(getTeamCode(away)),
+        ...possibleCodes(getTeamCode(home))
+      ])
     ];
+  }
 
-    const team = possibleCodes
+  function getTeamPlayers(code) {
+    if (!playerData?.teams) return [];
+
+    const team = possibleCodes(code)
       .map(c => playerData.teams[c])
       .find(Boolean);
 
     if (!team) return [];
 
-    return [
+    const players = [
       ...(team.quarterbacks || []),
       ...(team.receivers || []),
       ...(team.rushers || [])
-    ]
-      .map(player => player.name || "")
-      .filter(Boolean);
+    ];
+
+    return players.filter(p => p.name);
   }
 
-  function playerSurname(name) {
-    // Our NFL data uses names such as J.Warren.
-    return name
+  function surname(name) {
+    return String(name || "")
       .replace(/^[A-Za-z]+\./, "")
       .trim()
       .split(/\s+/)
@@ -246,134 +222,408 @@ if (
       .toLowerCase();
   }
 
-  function uniquePlayerSurnames(codes) {
-    const allNames = codes.flatMap(getTeamPlayers);
-    const counts = new Map();
+  function titleContainsSurname(title, name) {
+    const last = surname(name);
 
-    allNames.forEach(name => {
-      const surname = playerSurname(name);
-      if (!surname) return;
+    if (last.length < 4) return false;
 
-      // Count each distinct player only once.
-      const key = normalize(name);
-      if (!counts.has(surname)) {
-        counts.set(surname, new Set());
-      }
-      counts.get(surname).add(key);
+    const escaped = last.replace(
+      /[.*+?^${}()|[\]\\]/g,
+      "\\$&"
+    );
+
+    return new RegExp(
+      "\\b" + escaped + "\\b",
+      "i"
+    ).test(title);
+  }
+
+  function eligibleMarket(market) {
+    const title = String(market.title || "");
+    const combined = [
+      market.title,
+      market.subtitle
+    ].join(" ");
+
+    // Only explicit single-player yardage thresholds.
+    if (!/:\s*\d+\+\s*/.test(title)) {
+      return false;
+    }
+
+    if (
+      !/rushing yards|receiving yards|passing yards|rushing and receiving yards/i
+        .test(title)
+    ) {
+      return false;
+    }
+
+    // Exclude season-long and unrelated contract types.
+    if (
+      /fantasy|regular season|season leader|mvp|award|draft|playoff|most .* yards|ladder/i
+        .test(combined)
+    ) {
+      return false;
+    }
+
+    if (title.includes(",")) return false;
+
+    return true;
+  }
+
+  function getCategory(title) {
+    if (/rushing and receiving yards/i.test(title)) {
+      return "combinedRushingReceiving";
+    }
+
+    if (/receiving yards/i.test(title)) {
+      return "receiving";
+    }
+
+    if (/rushing yards/i.test(title)) {
+      return "rushing";
+    }
+
+    if (/passing yards/i.test(title)) {
+      return "passing";
+    }
+
+    return null;
+  }
+
+  function getThreshold(title) {
+    const match = title.match(
+      /:\s*(\d+)\+\s*/
+    );
+
+    return match
+      ? Number(match[1])
+      : null;
+  }
+
+  function matchingPlayers(market) {
+    const title = String(market.title || "");
+
+    if (!eligibleMarket(market)) return [];
+
+    const codes = selectedCodes();
+
+    const candidates = (
+      projectionData?.players || []
+    ).filter(player => {
+      return codes.includes(player.team) &&
+        titleContainsSurname(title, player.name);
     });
 
-    return [...counts.entries()]
-      .filter(([surname, names]) =>
-        surname.length >= 4 && names.size === 1
+    const category = getCategory(title);
+
+    // Prefer records containing the relevant category.
+    const relevant = candidates.filter(
+      player => player.categories?.[category]
+    );
+
+    // Remove duplicate records for the same player.
+    const unique = new Map();
+
+    relevant.forEach(player => {
+      const key = [
+        player.team,
+        player.playerId || player.name
+      ].join(":");
+
+      unique.set(key, player);
+    });
+
+    return [...unique.values()];
+  }
+
+  function findPlayer(market) {
+    const matches = matchingPlayers(market);
+
+    // Never guess between two matching players.
+    return matches.length === 1
+      ? matches[0]
+      : null;
+  }
+
+  function findPlayerStats(market) {
+    const player = findPlayer(market);
+
+    if (!player) return null;
+
+    const category = getCategory(
+      market.title || ""
+    );
+
+    return player.categories?.[category] || null;
+  }
+
+  function samePlayer(log, player) {
+    if (log.team !== player.team) return false;
+
+    if (player.playerId && log.playerId) {
+      return player.playerId === log.playerId;
+    }
+
+    return normalize(log.player) ===
+      normalize(player.name);
+  }
+
+  function getRecordedYards(player, category) {
+    const logs = gameLogData?.logs || [];
+
+    const playerLogs = logs.filter(
+      log => samePlayer(log, player)
+    );
+
+    if (category !== "combinedRushingReceiving") {
+      return playerLogs
+        .filter(log =>
+          log.category === category &&
+          Number.isFinite(Number(log.yards))
+        )
+        .map(log => ({
+          gameId: log.gameId,
+          yards: Number(log.yards)
+        }));
+    }
+
+    // Combined yardage requires both category
+    // records from the same game.
+    const games = new Map();
+
+    playerLogs.forEach(log => {
+      if (
+        !["rushing", "receiving"]
+          .includes(log.category)
+      ) {
+        return;
+      }
+
+      if (!Number.isFinite(Number(log.yards))) {
+        return;
+      }
+
+      if (!games.has(log.gameId)) {
+        games.set(log.gameId, {});
+      }
+
+      games.get(log.gameId)[log.category] =
+        Number(log.yards);
+    });
+
+    return [...games.entries()]
+      .filter(([, values]) =>
+        Number.isFinite(values.rushing) &&
+        Number.isFinite(values.receiving)
       )
-      .map(([surname]) => surname);
+      .map(([gameId, values]) => ({
+        gameId,
+        yards: values.rushing +
+          values.receiving
+      }));
+  }
+
+  function calculateHistoricalRate(market) {
+    const player = findPlayer(market);
+
+    if (!player) return null;
+
+    const category = getCategory(
+      market.title || ""
+    );
+
+    const threshold = getThreshold(
+      market.title || ""
+    );
+
+    if (
+      !category ||
+      threshold === null
+    ) {
+      return null;
+    }
+
+    const results = getRecordedYards(
+      player,
+      category
+    );
+
+    // We require at least two recorded games
+    // even to display a descriptive rate.
+    if (results.length < 2) {
+      return null;
+    }
+
+    const hits = results.filter(
+      game => game.yards >= threshold
+    ).length;
+
+    return {
+      hits,
+      games: results.length,
+      rate: hits / results.length
+    };
+  }
+
+  function validPrice(value) {
+    if (
+      value === null ||
+      value === undefined ||
+      value === ""
+    ) {
+      return null;
+    }
+
+    const number = Number(value);
+
+    return Number.isFinite(number)
+      ? number
+      : null;
+  }
+
+  function makeCell(value, index) {
+    const td = document.createElement("td");
+
+    td.textContent = String(value);
+
+    td.style.cssText = `
+      padding:10px 8px;
+      border-bottom:1px solid #35445b;
+      vertical-align:top;
+      overflow-wrap:anywhere;
+      ${index ? "text-align:right;" : ""}
+    `;
+
+    return td;
   }
 
   function render() {
     const awayName = selectedTeam(away);
     const homeName = selectedTeam(home);
-    const codes = [
-      getTeamCode(away),
-      getTeamCode(home)
-    ];
 
     matchupLabel.textContent =
       awayName + " vs. " + homeName;
 
-    const surnames = uniquePlayerSurnames(codes);
-    const query = search.value.trim().toLowerCase();
+    const codes = selectedCodes();
 
-    const matching = markets.filter(market => {
-      const title = String(market.title || "");
-      const subtitle = String(market.subtitle || "");
-      const combined = (title + " " + subtitle)
-        .toLowerCase();
+    const query = search.value
+      .trim()
+      .toLowerCase();
 
-      // Exclude obvious season-long and fantasy markets.
-      if (
-        /fantasy|regular season|season leader|mvp|award/i
-          .test(combined)
-      ) return false;
+    const matching = markets
+      .filter(market => {
+        if (!eligibleMarket(market)) {
+          return false;
+        }
 
-      // Exclude obvious multi-outcome combinations.
-      if (title.includes(",")) return false;
+        const title = market.title || "";
 
-      // Match a player from either selected team.
-      const matchesPlayer = surnames.some(surname => {
-        const escaped = surname.replace(
-          /[.*+?^${}()|[\]\\]/g, "\\$&"
+        const players = codes.flatMap(
+          code => getTeamPlayers(code)
         );
-        return new RegExp(
-          "\\b" + escaped + "\\b", "i"
-        ).test(combined);
-      });
 
-      // Match team names for game-level markets.
-      const matchesTeam = [awayName, homeName]
-        .filter(Boolean)
-        .some(name => {
-          const nickname = name.split(" ").pop();
-          return combined.includes(
-            nickname.toLowerCase()
+        const matchesSelectedPlayer =
+          players.some(player =>
+            titleContainsSurname(
+              title,
+              player.name
+            )
           );
-        });
 
-      return matchesPlayer &&
-  !/rookie of the year|player of the year|fantasy|leader|season|award/i.test(combined);
-    }).filter(market => {
-      if (!query) return true;
+        if (!matchesSelectedPlayer) {
+          return false;
+        }
 
-      return [
-        market.title,
-        market.subtitle,
-        market.ticker
-      ].join(" ").toLowerCase().includes(query);
-    });
+        if (!query) return true;
+
+        return [
+          market.title,
+          market.subtitle,
+          market.ticker
+        ].join(" ")
+          .toLowerCase()
+          .includes(query);
+      });
 
     rows.replaceChildren();
 
     matching.slice(0, 100).forEach(market => {
       const tr = document.createElement("tr");
 
-      
-const bid = Number(market.yesBid);
-const ask = Number(market.yesAsk);
+      const bid = validPrice(market.yesBid);
+      const ask = validPrice(market.yesAsk);
 
-const validPrices =
-  Number.isFinite(bid) &&
-  Number.isFinite(ask) &&
-  ask > 0 &&
-  ask >= bid;
+      const pricesOK =
+        bid !== null &&
+        ask !== null &&
+        ask > 0 &&
+        ask <= 1 &&
+        bid >= 0 &&
+        ask >= bid;
 
+      const stats = findPlayerStats(market);
 
-const stats = findPlayerStats(market);
+      const average = stats
+        ? stats.averageYards +
+          " yds / " +
+          stats.recordedGames +
+          " games"
+        : "—";
 
-const statsText = stats
-  ? stats.averageYards + " yds / " +
-    stats.recordedGames + " games"
-  : "—";
+      const historical =
+        calculateHistoricalRate(market);
 
-const values = [
-  market.title || "Unknown",
-  validPrices ? (ask * 100).toFixed(1) + "¢" : "—",
-  statsText,
-  "Pending",
-  validPrices ? ((ask - bid) * 100).toFixed(1) + "¢" : "—",
-  market.volume ?? "—"
-];
+      const rateText = historical
+        ? (historical.rate * 100)
+            .toFixed(1) +
+          "% (" +
+          historical.hits +
+          "/" +
+          historical.games +
+          ")"
+        : "Insufficient data";
 
+      let comparison = "—";
 
+      if (historical && pricesOK) {
+        const difference =
+          (historical.rate - ask) * 100;
+
+        comparison =
+          (difference > 0 ? "+" : "") +
+          difference.toFixed(1) +
+          " pp";
+      }
+
+      const spread = pricesOK
+        ? ((ask - bid) * 100)
+            .toFixed(1) + "¢"
+        : "—";
+
+      const values = [
+        market.title || "Unknown",
+        pricesOK
+          ? (ask * 100).toFixed(1) + "¢"
+          : "—",
+        average,
+        rateText,
+        comparison,
+        spread,
+        market.volume ?? "—"
+      ];
 
       values.forEach((value, index) => {
-        const td = document.createElement("td");
-        td.textContent = String(value);
-        td.style.cssText = `
-          padding:7px 8px;
-          border-bottom:1px solid #35445b;
-          overflow-wrap:anywhere;
-          vertical-align:top;
-          ${index ? "text-align:right;" : ""}
-        `;
+        const td = makeCell(value, index);
+
+        // Green only for verified data display.
+        // No green betting recommendation signals.
+        if (
+          index === 3 &&
+          historical
+        ) {
+          td.style.color = "#50df89";
+        }
+
         tr.appendChild(td);
       });
 
@@ -385,48 +635,78 @@ const values = [
       " matching contracts | " +
       Math.min(matching.length, 100) +
       " displayed | Updated: " +
-      (window.kalshiUpdated || "Unknown");
+      updated;
 
     if (!matching.length) {
       const tr = document.createElement("tr");
       const td = document.createElement("td");
-      td.colSpan = 6;
+
+      td.colSpan = 7;
+
       td.textContent =
-        "No matching contracts found. Check the " +
-        "selected teams or try another search.";
+        "No matching yardage contracts found. " +
+        "Try another player or selected teams.";
+
       td.style.padding = "15px";
+
       tr.appendChild(td);
       rows.appendChild(tr);
     }
   }
 
   try {
-    
-const [marketResponse, playerResponse, projectionResponse] =
-  await Promise.all([
-    fetch("data/kalshi-markets.json?t=" + Date.now()),
-    fetch("data/players-2026.json?t=" + Date.now()),
-    fetch("data/player-projections-2026.json?t=" + Date.now())
-  ]);
+    const cache = "?t=" + Date.now();
 
-    if (!marketResponse.ok || !playerResponse.ok) {
-      throw new Error("Could not load data files.");
+    const responses = await Promise.all([
+      fetch("data/kalshi-markets.json" + cache),
+      fetch("data/players-2026.json" + cache),
+      fetch("data/player-projections-2026.json" + cache),
+      fetch("data/player-gamelogs-2026.json" + cache)
+    ]);
+
+    if (responses.some(response => !response.ok)) {
+      throw new Error(
+        "One or more required data files could not load."
+      );
     }
 
-    const marketData = await marketResponse.json();
-    playerData = await playerResponse.json();
-if (!projectionResponse.ok) {
-  throw new Error("Could not load player projections.");
-}
+    const [
+      marketResponse,
+      playerResponse,
+      projectionResponse,
+      logResponse
+    ] = responses;
 
-projectionData = await projectionResponse.json();
+    const marketData =
+      await marketResponse.json();
 
-console.log(
-  "Player statistics loaded:",
-  projectionData.players.length
-);
+    playerData =
+      await playerResponse.json();
+
+    projectionData =
+      await projectionResponse.json();
+
+    gameLogData =
+      await logResponse.json();
+
     markets = marketData.markets || [];
-    window.kalshiUpdated = marketData.updated;
+
+    updated = marketData.updated || "Unknown";
+
+    console.log(
+      "Kalshi contracts loaded:",
+      markets.length
+    );
+
+    console.log(
+      "Player summaries loaded:",
+      projectionData.players?.length || 0
+    );
+
+    console.log(
+      "Individual game records loaded:",
+      gameLogData.logs?.length || 0
+    );
 
     away.addEventListener("change", render);
     home.addEventListener("change", render);
@@ -436,7 +716,9 @@ console.log(
 
   } catch (error) {
     status.textContent =
-      "Kalshi loading error: " + error.message;
+      "Data loading error: " + error.message;
+
     console.error(error);
   }
+
 })();
