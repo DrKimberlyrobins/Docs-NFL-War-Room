@@ -132,7 +132,7 @@
 
   let markets = [];
   let playerData = null;
-
+  let projectionData = null;
   function selectedTeam(select) {
     return select.selectedOptions[0]?.text.trim() || "";
   }
@@ -338,15 +338,13 @@ const values = [
   }
 
   try {
-    const [marketResponse, playerResponse] =
-      await Promise.all([
-        fetch(
-          "data/kalshi-markets.json?t=" + Date.now()
-        ),
-        fetch(
-          "data/players-2026.json?t=" + Date.now()
-        )
-      ]);
+    
+const [marketResponse, playerResponse, projectionResponse] =
+  await Promise.all([
+    fetch("data/kalshi-markets.json?t=" + Date.now()),
+    fetch("data/players-2026.json?t=" + Date.now()),
+    fetch("data/player-projections-2026.json?t=" + Date.now())
+  ]);
 
     if (!marketResponse.ok || !playerResponse.ok) {
       throw new Error("Could not load data files.");
@@ -354,7 +352,16 @@ const values = [
 
     const marketData = await marketResponse.json();
     playerData = await playerResponse.json();
+if (!projectionResponse.ok) {
+  throw new Error("Could not load player projections.");
+}
 
+projectionData = await projectionResponse.json();
+
+console.log(
+  "Player statistics loaded:",
+  projectionData.players.length
+);
     markets = marketData.markets || [];
     window.kalshiUpdated = marketData.updated;
 
