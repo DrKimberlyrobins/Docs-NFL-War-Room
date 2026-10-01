@@ -407,6 +407,7 @@ for team in receivers:
     )
 
 
+
 all_teams = sorted(
     set(team_games) |
     set(quarterbacks) |
@@ -414,22 +415,23 @@ all_teams = sorted(
     set(rushers)
 )
 
+results = {}
 
-
-results[team] = {
-    "games": len(
-        team_games.get(team, set())
-    ),
-    "quarterbacks": quarterbacks.get(
-        team, []
-    ),
-    "receivers": receivers.get(
-        team, []
-    ),
-    "rushers": rushers.get(
-        team, []
-    )
-}
+for team in all_teams:
+    results[team] = {
+        "games": len(
+            team_games.get(team, set())
+        ),
+        "quarterbacks": quarterbacks.get(
+            team, []
+        ),
+        "receivers": receivers.get(
+            team, []
+        ),
+        "rushers": rushers.get(
+            team, []
+        )
+    }
 
 
 # Attach defensive statistics to each team.
