@@ -329,4 +329,118 @@ renderPlayers = function () {
   renderDefense();
 };
 
+// DOC'S RUNNING BACK INTELLIGENCE
+
+function renderRushing() {
+  const body = document.getElementById("rushingBody");
+  const status = document.getElementById("rushingStatus");
+
+  if (!body || !status) return;
+
+  body.replaceChildren();
+
+  if (!playerData) {
+    status.textContent = "Waiting for rushing data...";
+    return;
+  }
+
+  const selectedTeams = [
+    document.getElementById("away").value,
+    document.getElementById("home").value
+  ];
+
+  const rushers = [];
+
+  selectedTeams.forEach(teamName => {
+    const code = playerTeamCodes[teamName];
+    const team = playerData.teams[code];
+
+    (team?.rushers || []).forEach(player => {
+      rushers.push({ teamName, player });
+    });
+  });
+
+  if (!rushers.length) {
+    status.textContent = "No rushing data available.";
+    return;
+  }
+
+  // Identify the highest value in each statistical category.
+  const columns = [
+    "games",
+    "carries",
+    "carriesPerGame",
+    "rushingYards",
+    "rushingYardsPerGame",
+    "yardsPerCarry",
+    "rushingTouchdowns",
+    "redZoneCarries",
+    "inside10Carries"
+  ];
+
+  const leaders = {};
+
+  columns.forEach(key => {
+    leaders[key] = Math.max(
+      ...rushers.map(item =>
+        Number(item.player[key]) || 0
+      )
+    );
+  });
+
+  rushers.sort(
+    (a, b) => b.player.carries - a.player.carries
+  );
+
+  rushers.forEach(item => {
+    const row = document.createElement("tr");
+
+    const values = [
+      item.teamName,
+      item.player.name,
+      ...columns.map(key => item.player[key])
+    ];
+
+    values.forEach((value, index) => {
+      const cell = document.createElement("td");
+      cell.textContent = value ?? "—";
+
+      if (index >= 2) {
+        const key = columns[index - 2];
+
+        if (
+          Number.isFinite(value) &&
+          value > 0 &&
+          value === leaders[key]
+        ) {
+          cell.style.color = "#35df93";
+          cell.style.fontWeight = "bold";
+        }
+      }
+
+      row.appendChild(cell);
+    });
+
+    body.appendChild(row);
+  });
+
+  status.textContent =
+    "Rushing statistics from completed games. " +
+    "Green identifies the highest recorded value " +
+    "in each column, not a betting recommendation.";
+}
+
+// Connect rushing to our existing matchup analysis.
+const previousRenderPlayersForRushing = renderPlayers;
+
+renderPlayers = function () {
+  previousRenderPlayersForRushing();
+  renderRushing();
+};
+
+// Display rushing data immediately if already loaded.
+if (playerData) {
+  renderRushing();
+}
+
 
