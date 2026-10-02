@@ -1,8 +1,8 @@
 {
   "season": 2026,
-  "updated": "2026-10-01T17:04:36.859747+00:00",
+  "updated": "2026-10-02T16:19:01.398045+00:00",
   "source": "nflverse play-by-play",
-  "completedGames": 48,
+  "completedGames": 49,
   "note": "Completed regular-season games only. One record per observed player, game and statistical category. Players with no recorded opportunities in a category are not included for that game. Missing records must not automatically be treated as zero. Verify against official game logs.",
   "logs": [
     {
@@ -2454,6 +2454,15 @@
       "opportunities": 5
     },
     {
+      "gameId": "2026_04_PIT_CLE",
+      "team": "CLE",
+      "playerId": "00-0041037",
+      "player": "D.Boston",
+      "category": "receiving",
+      "yards": 89.0,
+      "opportunities": 7
+    },
+    {
       "gameId": "2026_01_CLE_JAX",
       "team": "CLE",
       "playerId": null,
@@ -2479,6 +2488,15 @@
       "category": "passing",
       "yards": 144.0,
       "opportunities": 33
+    },
+    {
+      "gameId": "2026_04_PIT_CLE",
+      "team": "CLE",
+      "playerId": null,
+      "player": "D.Watson",
+      "category": "passing",
+      "yards": 268.0,
+      "opportunities": 35
     },
     {
       "gameId": "2026_01_CLE_JAX",
@@ -2508,6 +2526,15 @@
       "opportunities": 11
     },
     {
+      "gameId": "2026_04_PIT_CLE",
+      "team": "CLE",
+      "playerId": "00-0033537",
+      "player": "D.Watson",
+      "category": "rushing",
+      "yards": 22.0,
+      "opportunities": 7
+    },
+    {
       "gameId": "2026_01_CLE_JAX",
       "team": "CLE",
       "playerId": "00-0040663",
@@ -2535,12 +2562,30 @@
       "opportunities": 9
     },
     {
+      "gameId": "2026_04_PIT_CLE",
+      "team": "CLE",
+      "playerId": "00-0040663",
+      "player": "H.Fannin",
+      "category": "receiving",
+      "yards": 27.0,
+      "opportunities": 5
+    },
+    {
       "gameId": "2026_02_CLE_TB",
       "team": "CLE",
       "playerId": "00-0040782",
       "player": "I.Bond",
       "category": "receiving",
       "yards": 10.0,
+      "opportunities": 1
+    },
+    {
+      "gameId": "2026_04_PIT_CLE",
+      "team": "CLE",
+      "playerId": "00-0040782",
+      "player": "I.Bond",
+      "category": "receiving",
+      "yards": 2.0,
       "opportunities": 1
     },
     {
@@ -2562,6 +2607,15 @@
       "opportunities": 1
     },
     {
+      "gameId": "2026_04_PIT_CLE",
+      "team": "CLE",
+      "playerId": "00-0036407",
+      "player": "J.Jeudy",
+      "category": "receiving",
+      "yards": 36.0,
+      "opportunities": 3
+    },
+    {
       "gameId": "2026_02_CLE_TB",
       "team": "CLE",
       "playerId": "00-0038794",
@@ -2577,6 +2631,15 @@
       "player": "J.McLaughlin",
       "category": "rushing",
       "yards": 3.0,
+      "opportunities": 1
+    },
+    {
+      "gameId": "2026_04_PIT_CLE",
+      "team": "CLE",
+      "playerId": "00-0038794",
+      "player": "J.McLaughlin",
+      "category": "rushing",
+      "yards": 28.0,
       "opportunities": 1
     },
     {
@@ -2605,6 +2668,15 @@
       "category": "receiving",
       "yards": 9.0,
       "opportunities": 9
+    },
+    {
+      "gameId": "2026_04_PIT_CLE",
+      "team": "CLE",
+      "playerId": "00-0041547",
+      "player": "K.Concepcion",
+      "category": "receiving",
+      "yards": 64.0,
+      "opportunities": 8
     },
     {
       "gameId": "2026_01_CLE_JAX",
@@ -2661,6 +2733,15 @@
       "opportunities": 2
     },
     {
+      "gameId": "2026_04_PIT_CLE",
+      "team": "CLE",
+      "playerId": "00-0040784",
+      "player": "Q.Judkins",
+      "category": "receiving",
+      "yards": 43.0,
+      "opportunities": 7
+    },
+    {
       "gameId": "2026_01_CLE_JAX",
       "team": "CLE",
       "playerId": "00-0040784",
@@ -2686,6 +2767,15 @@
       "category": "rushing",
       "yards": 70.0,
       "opportunities": 18
+    },
+    {
+      "gameId": "2026_04_PIT_CLE",
+      "team": "CLE",
+      "playerId": "00-0040784",
+      "player": "Q.Judkins",
+      "category": "rushing",
+      "yards": 53.0,
+      "opportunities": 17
     },
     {
       "gameId": "2026_01_CLE_JAX",
@@ -2715,6 +2805,15 @@
       "opportunities": 5
     },
     {
+      "gameId": "2026_04_PIT_CLE",
+      "team": "CLE",
+      "playerId": "00-0040466",
+      "player": "R.Sanders",
+      "category": "receiving",
+      "yards": 7.0,
+      "opportunities": 2
+    },
+    {
       "gameId": "2026_01_CLE_JAX",
       "team": "CLE",
       "playerId": "00-0040466",
@@ -2740,6 +2839,15 @@
       "category": "rushing",
       "yards": 17.0,
       "opportunities": 1
+    },
+    {
+      "gameId": "2026_04_PIT_CLE",
+      "team": "CLE",
+      "playerId": "00-0040466",
+      "player": "R.Sanders",
+      "category": "rushing",
+      "yards": 9.0,
+      "opportunities": 2
     },
     {
       "gameId": "2026_03_CAR_CLE",
@@ -9186,6 +9294,15 @@
       "opportunities": 36
     },
     {
+      "gameId": "2026_04_PIT_CLE",
+      "team": "PIT",
+      "playerId": null,
+      "player": "A.Rodgers",
+      "category": "passing",
+      "yards": 299.0,
+      "opportunities": 46
+    },
+    {
       "gameId": "2026_01_ATL_PIT",
       "team": "PIT",
       "playerId": "00-0023459",
@@ -9213,6 +9330,15 @@
       "opportunities": 3
     },
     {
+      "gameId": "2026_04_PIT_CLE",
+      "team": "PIT",
+      "playerId": "00-0023459",
+      "player": "A.Rodgers",
+      "category": "rushing",
+      "yards": 0.0,
+      "opportunities": 1
+    },
+    {
       "gameId": "2026_02_PIT_NE",
       "team": "PIT",
       "playerId": "00-0036862",
@@ -9229,6 +9355,15 @@
       "category": "receiving",
       "yards": 23.0,
       "opportunities": 1
+    },
+    {
+      "gameId": "2026_04_PIT_CLE",
+      "team": "PIT",
+      "playerId": "00-0036862",
+      "player": "B.Skowronek",
+      "category": "receiving",
+      "yards": 7.0,
+      "opportunities": 2
     },
     {
       "gameId": "2026_01_ATL_PIT",
@@ -9267,6 +9402,15 @@
       "opportunities": 5
     },
     {
+      "gameId": "2026_04_PIT_CLE",
+      "team": "PIT",
+      "playerId": "00-0035640",
+      "player": "D.Metcalf",
+      "category": "receiving",
+      "yards": 115.0,
+      "opportunities": 9
+    },
+    {
       "gameId": "2026_01_ATL_PIT",
       "team": "PIT",
       "playerId": "00-0038558",
@@ -9294,6 +9438,15 @@
       "opportunities": 4
     },
     {
+      "gameId": "2026_04_PIT_CLE",
+      "team": "PIT",
+      "playerId": "00-0038558",
+      "player": "D.Washington",
+      "category": "receiving",
+      "yards": 27.0,
+      "opportunities": 5
+    },
+    {
       "gameId": "2026_02_PIT_NE",
       "team": "PIT",
       "playerId": "00-0041489",
@@ -9310,6 +9463,15 @@
       "category": "receiving",
       "yards": 14.0,
       "opportunities": 1
+    },
+    {
+      "gameId": "2026_04_PIT_CLE",
+      "team": "PIT",
+      "playerId": "00-0041489",
+      "player": "G.Bernard",
+      "category": "receiving",
+      "yards": 11.0,
+      "opportunities": 2
     },
     {
       "gameId": "2026_01_ATL_PIT",
@@ -9339,6 +9501,15 @@
       "opportunities": 4
     },
     {
+      "gameId": "2026_04_PIT_CLE",
+      "team": "PIT",
+      "playerId": "00-0037228",
+      "player": "J.Warren",
+      "category": "receiving",
+      "yards": 33.0,
+      "opportunities": 7
+    },
+    {
       "gameId": "2026_01_ATL_PIT",
       "team": "PIT",
       "playerId": "00-0037228",
@@ -9363,6 +9534,15 @@
       "player": "J.Warren",
       "category": "rushing",
       "yards": 127.0,
+      "opportunities": 17
+    },
+    {
+      "gameId": "2026_04_PIT_CLE",
+      "team": "PIT",
+      "playerId": "00-0037228",
+      "player": "J.Warren",
+      "category": "rushing",
+      "yards": 93.0,
       "opportunities": 17
     },
     {
@@ -9391,6 +9571,15 @@
       "category": "receiving",
       "yards": 16.0,
       "opportunities": 5
+    },
+    {
+      "gameId": "2026_04_PIT_CLE",
+      "team": "PIT",
+      "playerId": "00-0036252",
+      "player": "M.Pittman",
+      "category": "receiving",
+      "yards": 15.0,
+      "opportunities": 4
     },
     {
       "gameId": "2026_02_PIT_NE",
@@ -9436,6 +9625,15 @@
       "category": "receiving",
       "yards": 30.0,
       "opportunities": 4
+    },
+    {
+      "gameId": "2026_04_PIT_CLE",
+      "team": "PIT",
+      "playerId": "00-0036894",
+      "player": "P.Freiermuth",
+      "category": "receiving",
+      "yards": 17.0,
+      "opportunities": 5
     },
     {
       "gameId": "2026_02_PIT_NE",
@@ -9528,6 +9726,15 @@
       "opportunities": 6
     },
     {
+      "gameId": "2026_04_PIT_CLE",
+      "team": "PIT",
+      "playerId": "00-0039739",
+      "player": "R.Wilson",
+      "category": "receiving",
+      "yards": 74.0,
+      "opportunities": 6
+    },
+    {
       "gameId": "2026_02_PIT_NE",
       "team": "PIT",
       "playerId": "00-0035594",
@@ -9544,6 +9751,15 @@
       "category": "rushing",
       "yards": 0.0,
       "opportunities": 1
+    },
+    {
+      "gameId": "2026_04_PIT_CLE",
+      "team": "PIT",
+      "playerId": "00-0035594",
+      "player": "T.Homer",
+      "category": "rushing",
+      "yards": -1.0,
+      "opportunities": 2
     },
     {
       "gameId": "2026_01_NE_SEA",
