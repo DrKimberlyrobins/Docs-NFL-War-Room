@@ -1,16 +1,6 @@
 // ============================================================
 // DOC'S NFL WAR ROOM
-// PLAYER PROP RECEIPT — KAMBI CONNECTED
-//
-// PURPOSE:
-// 1. Find strongest player opportunities from War Room
-// 2. Match those players to the selected Kambi NFL event
-// 3. Show VERIFIED Kambi prop markets + American prices
-// 4. Never invent a player, market, threshold, or price
-//
-// DESTINATION:
-// Google Sheet tab: Player Receipt
-// type: playerReceipt
+// PLAYER PROPS RECEIPT — KAMBI CONNECTED
 // ============================================================
 
 (() => {
@@ -24,7 +14,7 @@
 
 
   // ============================================================
-  // TEAM INFORMATION
+  // TEAM DATA
   // ============================================================
 
   const TEAM_NAMES = {
@@ -63,226 +53,39 @@
   };
 
 
-  const KAMBI_TEAM_ALIASES = {
-    ARI: [
-      "ARI",
-      "Arizona",
-      "Arizona Cardinals",
-      "ARI Cardinals"
-    ],
-
-    ATL: [
-      "ATL",
-      "Atlanta",
-      "Atlanta Falcons",
-      "ATL Falcons"
-    ],
-
-    BAL: [
-      "BAL",
-      "Baltimore",
-      "Baltimore Ravens",
-      "BAL Ravens"
-    ],
-
-    BUF: [
-      "BUF",
-      "Buffalo",
-      "Buffalo Bills",
-      "BUF Bills"
-    ],
-
-    CAR: [
-      "CAR",
-      "Carolina",
-      "Carolina Panthers",
-      "CAR Panthers"
-    ],
-
-    CHI: [
-      "CHI",
-      "Chicago",
-      "Chicago Bears",
-      "CHI Bears"
-    ],
-
-    CIN: [
-      "CIN",
-      "Cincinnati",
-      "Cincinnati Bengals",
-      "CIN Bengals"
-    ],
-
-    CLE: [
-      "CLE",
-      "Cleveland",
-      "Cleveland Browns",
-      "CLE Browns"
-    ],
-
-    DAL: [
-      "DAL",
-      "Dallas",
-      "Dallas Cowboys",
-      "DAL Cowboys"
-    ],
-
-    DEN: [
-      "DEN",
-      "Denver",
-      "Denver Broncos",
-      "DEN Broncos"
-    ],
-
-    DET: [
-      "DET",
-      "Detroit",
-      "Detroit Lions",
-      "DET Lions"
-    ],
-
-    GB: [
-      "GB",
-      "Green Bay",
-      "Green Bay Packers",
-      "GB Packers"
-    ],
-
-    HOU: [
-      "HOU",
-      "Houston",
-      "Houston Texans",
-      "HOU Texans"
-    ],
-
-    IND: [
-      "IND",
-      "Indianapolis",
-      "Indianapolis Colts",
-      "IND Colts"
-    ],
-
-    JAX: [
-      "JAX",
-      "Jacksonville",
-      "Jacksonville Jaguars",
-      "JAX Jaguars"
-    ],
-
-    KC: [
-      "KC",
-      "Kansas City",
-      "Kansas City Chiefs",
-      "KC Chiefs"
-    ],
-
-    LV: [
-      "LV",
-      "Las Vegas",
-      "Las Vegas Raiders",
-      "LV Raiders"
-    ],
-
-    LAC: [
-      "LAC",
-      "LA Chargers",
-      "Los Angeles Chargers"
-    ],
-
-    LAR: [
-      "LAR",
-      "LA Rams",
-      "Los Angeles Rams"
-    ],
-
-    MIA: [
-      "MIA",
-      "Miami",
-      "Miami Dolphins",
-      "MIA Dolphins"
-    ],
-
-    MIN: [
-      "MIN",
-      "Minnesota",
-      "Minnesota Vikings",
-      "MIN Vikings"
-    ],
-
-    NE: [
-      "NE",
-      "New England",
-      "New England Patriots",
-      "NE Patriots"
-    ],
-
-    NO: [
-      "NO",
-      "New Orleans",
-      "New Orleans Saints",
-      "NO Saints"
-    ],
-
-    NYG: [
-      "NYG",
-      "NY Giants",
-      "New York Giants"
-    ],
-
-    NYJ: [
-      "NYJ",
-      "NY Jets",
-      "New York Jets"
-    ],
-
-    PHI: [
-      "PHI",
-      "Philadelphia",
-      "Philadelphia Eagles",
-      "PHI Eagles"
-    ],
-
-    PIT: [
-      "PIT",
-      "Pittsburgh",
-      "Pittsburgh Steelers",
-      "PIT Steelers"
-    ],
-
-    SEA: [
-      "SEA",
-      "Seattle",
-      "Seattle Seahawks",
-      "SEA Seahawks"
-    ],
-
-    SF: [
-      "SF",
-      "San Francisco",
-      "San Francisco 49ers",
-      "SF 49ers"
-    ],
-
-    TB: [
-      "TB",
-      "Tampa Bay",
-      "Tampa Bay Buccaneers",
-      "TB Buccaneers"
-    ],
-
-    TEN: [
-      "TEN",
-      "Tennessee",
-      "Tennessee Titans",
-      "TEN Titans"
-    ],
-
-    WAS: [
-      "WAS",
-      "Washington",
-      "Washington Commanders",
-      "WAS Commanders"
-    ]
+  const KAMBI_NAMES = {
+    ARI: ["ARI Cardinals", "Arizona Cardinals"],
+    ATL: ["ATL Falcons", "Atlanta Falcons"],
+    BAL: ["BAL Ravens", "Baltimore Ravens"],
+    BUF: ["BUF Bills", "Buffalo Bills"],
+    CAR: ["CAR Panthers", "Carolina Panthers"],
+    CHI: ["CHI Bears", "Chicago Bears"],
+    CIN: ["CIN Bengals", "Cincinnati Bengals"],
+    CLE: ["CLE Browns", "Cleveland Browns"],
+    DAL: ["DAL Cowboys", "Dallas Cowboys"],
+    DEN: ["DEN Broncos", "Denver Broncos"],
+    DET: ["DET Lions", "Detroit Lions"],
+    GB: ["GB Packers", "Green Bay Packers"],
+    HOU: ["HOU Texans", "Houston Texans"],
+    IND: ["IND Colts", "Indianapolis Colts"],
+    JAX: ["JAX Jaguars", "Jacksonville Jaguars"],
+    KC: ["KC Chiefs", "Kansas City Chiefs"],
+    LV: ["LV Raiders", "Las Vegas Raiders"],
+    LAC: ["LA Chargers", "Los Angeles Chargers"],
+    LAR: ["LA Rams", "Los Angeles Rams"],
+    MIA: ["MIA Dolphins", "Miami Dolphins"],
+    MIN: ["MIN Vikings", "Minnesota Vikings"],
+    NE: ["NE Patriots", "New England Patriots"],
+    NO: ["NO Saints", "New Orleans Saints"],
+    NYG: ["NY Giants", "New York Giants"],
+    NYJ: ["NY Jets", "New York Jets"],
+    PHI: ["PHI Eagles", "Philadelphia Eagles"],
+    PIT: ["PIT Steelers", "Pittsburgh Steelers"],
+    SEA: ["SEA Seahawks", "Seattle Seahawks"],
+    SF: ["SF 49ers", "San Francisco 49ers"],
+    TB: ["TB Buccaneers", "Tampa Bay Buccaneers"],
+    TEN: ["TEN Titans", "Tennessee Titans"],
+    WAS: ["WAS Commanders", "Washington Commanders"]
   };
 
 
@@ -291,8 +94,8 @@
   // ============================================================
 
   let kambiData = null;
-  let kambiError = "";
-  let kambiPromise = null;
+  let kambiLoadError = "";
+  let kambiLoading = null;
 
 
   // ============================================================
@@ -328,6 +131,13 @@
   }
 
 
+  function normalize(value) {
+    return clean(value)
+      .toLowerCase()
+      .replace(/[^a-z0-9]/g, "");
+  }
+
+
   function getRows(bodyId) {
     const body =
       document.getElementById(bodyId);
@@ -349,10 +159,11 @@
 
 
   function fullTeamName(code) {
-    const team =
-      clean(code).toUpperCase();
-
-    return TEAM_NAMES[team] || team;
+    return (
+      TEAM_NAMES[
+        clean(code).toUpperCase()
+      ] || clean(code)
+    );
   }
 
 
@@ -360,199 +171,155 @@
     const team =
       clean(code).toUpperCase();
 
-    const name =
-      fullTeamName(team);
-
     if (!team) {
       return "";
     }
 
-    if (name === team) {
-      return team;
-    }
+    const name =
+      fullTeamName(team);
 
-    return `${team} — ${name}`;
+    return name === team
+      ? team
+      : `${team} — ${name}`;
   }
 
 
-  function normalizeText(value) {
-    return clean(value)
-      .toLowerCase()
-      .replace(/[^a-z0-9]/g, "");
-  }
+  // ============================================================
+  // TEAM NORMALIZATION
+  // ============================================================
 
+  function teamCodeFromValue(value) {
 
-  function normalizePlayerName(value) {
-    return clean(value)
-      .toLowerCase()
-      .replace(/\b(jr|sr|ii|iii|iv)\b\.?/g, "")
-      .replace(/[^a-z0-9 ]/g, " ")
-      .replace(/\s+/g, " ")
-      .trim();
-  }
-
-
-  function splitName(value) {
-    const normalized =
-      normalizePlayerName(value);
-
-    const pieces =
-      normalized
-        .split(" ")
-        .filter(Boolean);
-
-    return {
-      normalized,
-      first:
-        pieces[0] || "",
-      last:
-        pieces.length
-          ? pieces[pieces.length - 1]
-          : ""
-    };
-  }
-
-
-  function samePlayer(
-    warRoomName,
-    kambiName
-  ) {
-    const war =
-      splitName(warRoomName);
-
-    const kambi =
-      splitName(kambiName);
-
-    if (
-      !war.normalized ||
-      !kambi.normalized
-    ) {
-      return false;
-    }
-
-    if (
-      war.normalized ===
-      kambi.normalized
-    ) {
-      return true;
-    }
-
-    if (
-      !war.last ||
-      war.last !== kambi.last
-    ) {
-      return false;
-    }
-
-    /*
-      War Room sometimes uses:
-      J.Taylor
-
-      Kambi may use:
-      Jonathan Taylor
-
-      Require same last name AND
-      matching first initial.
-    */
-
-    if (
-      war.first &&
-      kambi.first &&
-      war.first[0] ===
-      kambi.first[0]
-    ) {
-      return true;
-    }
-
-    return false;
-  }
-
-
-  function formatOdds(value) {
-    const text =
+    const raw =
       clean(value);
 
-    if (!text) {
+    if (!raw) {
       return "";
     }
 
-    if (
-      text.startsWith("+") ||
-      text.startsWith("-")
+    const upper =
+      raw.toUpperCase();
+
+
+    // Already a team code.
+    if (TEAM_NAMES[upper]) {
+      return upper;
+    }
+
+
+    // Exact full-name match.
+    for (
+      const [code, fullName]
+      of Object.entries(TEAM_NAMES)
     ) {
-      return text;
+
+      if (
+        normalize(raw) ===
+        normalize(fullName)
+      ) {
+        return code;
+      }
     }
 
-    const number =
-      Number(text);
 
-    if (!Number.isFinite(number)) {
-      return text;
+    // Kambi-style team-name match.
+    for (
+      const [code, aliases]
+      of Object.entries(KAMBI_NAMES)
+    ) {
+
+      if (
+        aliases.some(alias =>
+          normalize(alias) ===
+          normalize(raw)
+        )
+      ) {
+        return code;
+      }
     }
 
-    return number > 0
-      ? `+${number}`
-      : String(number);
+
+    return "";
   }
 
-
-  // ============================================================
-  // CURRENT MATCHUP
-  // ============================================================
 
   function getSelectedTeam(id) {
 
-  const select =
-    document.getElementById(id);
+    const select =
+      document.getElementById(id);
 
-  if (!select) {
-    return "";
-  }
+    if (!select) {
+      return "";
+    }
 
-  const raw =
-    clean(select.value);
 
-  if (!raw) {
-    return "";
-  }
+    /*
+      First try the actual select value.
+    */
 
-  const upper =
-    raw.toUpperCase();
-
-  if (TEAM_NAMES[upper]) {
-    return upper;
-  }
-
-  const match =
-    Object.entries(TEAM_NAMES)
-      .find(
-        ([code, fullName]) =>
-          fullName.toUpperCase() === upper
+    let code =
+      teamCodeFromValue(
+        select.value
       );
 
-  if (match) {
-    return match[0];
+    if (code) {
+      return code;
+    }
+
+
+    /*
+      If the HTML option value and visible
+      text differ, try the visible text too.
+    */
+
+    const selectedOption =
+      select.options &&
+      select.selectedIndex >= 0
+        ? select.options[
+            select.selectedIndex
+          ]
+        : null;
+
+
+    if (selectedOption) {
+
+      code =
+        teamCodeFromValue(
+          selectedOption.textContent
+        );
+
+      if (code) {
+        return code;
+      }
+    }
+
+
+    console.warn(
+      "Could not identify selected NFL team:",
+      select.value,
+      selectedOption
+        ? selectedOption.textContent
+        : ""
+    );
+
+
+    return "";
   }
 
-  console.warn(
-    "Unknown War Room team:",
-    raw
-  );
-
-  return "";
-}
-
-
-function getMatchup() {
 
   function getMatchup() {
+
     const away =
       getSelectedTeam("away");
 
     const home =
       getSelectedTeam("home");
 
-    if (!away || !home) {
+    if (
+      !away ||
+      !home ||
+      away === home
+    ) {
       return "";
     }
 
@@ -564,6 +331,7 @@ function getMatchup() {
 
 
   function opponentFor(team) {
+
     const away =
       getSelectedTeam("away");
 
@@ -571,7 +339,9 @@ function getMatchup() {
       getSelectedTeam("home");
 
     const code =
+      teamCodeFromValue(team) ||
       clean(team).toUpperCase();
+
 
     if (code === away) {
       return home;
@@ -586,7 +356,7 @@ function getMatchup() {
 
 
   // ============================================================
-  // KAMBI DATA
+  // KAMBI LOADER
   // ============================================================
 
   async function loadKambiData() {
@@ -595,19 +365,23 @@ function getMatchup() {
       return kambiData;
     }
 
-    if (kambiPromise) {
-      return kambiPromise;
+    if (kambiLoading) {
+      return kambiLoading;
     }
 
-    kambiPromise =
-      fetch(KAMBI_URL, {
-        cache: "no-store"
-      })
+
+    kambiLoading =
+      fetch(
+        KAMBI_URL,
+        {
+          cache: "no-store"
+        }
+      )
         .then(response => {
 
           if (!response.ok) {
             throw new Error(
-              `Kambi data returned ${response.status}.`
+              `Kambi file returned ${response.status}`
             );
           }
 
@@ -615,75 +389,96 @@ function getMatchup() {
         })
         .then(data => {
 
-          if (
-            !data ||
-            !Array.isArray(data.events) ||
-            !Array.isArray(data.props)
-          ) {
+          if (!data) {
             throw new Error(
-              "Kambi file structure is not valid."
+              "Kambi file was empty."
             );
           }
 
+
+          if (
+            !Array.isArray(data.events)
+          ) {
+            throw new Error(
+              "Kambi events list is missing."
+            );
+          }
+
+
+          if (
+            !Array.isArray(data.props)
+          ) {
+            throw new Error(
+              "Kambi props list is missing."
+            );
+          }
+
+
           kambiData = data;
-          kambiError = "";
+          kambiLoadError = "";
+
 
           console.log(
-            "PLAYER RECEIPT KAMBI DATA:",
+            "PLAYER RECEIPT KAMBI LOADED",
             data.counts
           );
+
 
           return data;
         })
         .catch(error => {
 
-          kambiError =
-            error.message;
-
           console.error(
-            "Player Receipt Kambi error:",
+            "PLAYER RECEIPT KAMBI ERROR",
             error
           );
+
+          kambiLoadError =
+            error.message;
+
+          kambiData = null;
 
           return null;
         });
 
-    return kambiPromise;
+
+    return kambiLoading;
   }
 
 
-  function eventContainsTeam(
+  // ============================================================
+  // KAMBI EVENT MATCHING
+  // ============================================================
+
+  function eventHasTeam(
     eventName,
     teamCode
   ) {
+
     const aliases =
-      KAMBI_TEAM_ALIASES[
-        clean(teamCode).toUpperCase()
-      ] || [];
+      KAMBI_NAMES[teamCode] || [];
 
     const eventNormalized =
-      normalizeText(eventName);
+      normalize(eventName);
 
-    return aliases.some(alias => {
 
-      const aliasNormalized =
-        normalizeText(alias);
-
-      return (
-        aliasNormalized &&
-        eventNormalized.includes(
-          aliasNormalized
-        )
-      );
-    });
+    return aliases.some(alias =>
+      eventNormalized.includes(
+        normalize(alias)
+      )
+    );
   }
 
 
   function findSelectedKambiEvent() {
 
-    if (!kambiData) {
+    if (
+      !kambiData ||
+      !Array.isArray(kambiData.events)
+    ) {
       return null;
     }
+
 
     const away =
       getSelectedTeam("away");
@@ -691,9 +486,11 @@ function getMatchup() {
     const home =
       getSelectedTeam("home");
 
+
     if (!away || !home) {
       return null;
     }
+
 
     const matches =
       kambiData.events.filter(event => {
@@ -702,80 +499,97 @@ function getMatchup() {
           clean(event.name);
 
         return (
-          eventContainsTeam(
+          eventHasTeam(
             name,
             away
           ) &&
-          eventContainsTeam(
+          eventHasTeam(
             name,
             home
           )
         );
       });
 
-    if (matches.length !== 1) {
 
-      if (matches.length > 1) {
-        console.warn(
-          "More than one Kambi event matched:",
-          matches
-        );
-      }
+    if (matches.length === 1) {
 
-      return null;
+      console.log(
+        "KAMBI EVENT MATCH:",
+        matches[0]
+      );
+
+      return matches[0];
     }
 
-    return matches[0];
+
+    console.warn(
+      "KAMBI EVENT MATCH COUNT:",
+      matches.length,
+      {
+        away,
+        home,
+        matches
+      }
+    );
+
+
+    return null;
   }
 
 
-  function propsForSelectedEvent() {
+  function propsForEvent(event) {
 
-    const event =
-      findSelectedKambiEvent();
-
-    if (!event) {
-      return {
-        event: null,
-        props: []
-      };
+    if (
+      !event ||
+      !kambiData
+    ) {
+      return [];
     }
 
-    const props =
-      kambiData.props.filter(prop =>
-        String(prop.eventId) ===
+
+    return kambiData.props.filter(prop => {
+
+      const propEventId =
+        prop.eventId ??
+        prop.event_id ??
+        prop.eventID;
+
+      return (
+        String(propEventId) ===
         String(event.id)
       );
-
-    return {
-      event,
-      props
-    };
+    });
   }
 
 
   // ============================================================
-  // DEFENSIVE MATCHUP DATA
+  // DEFENSIVE DATA
   // ============================================================
 
   function getDefense(team) {
+
     const code =
       clean(team).toUpperCase();
 
     const rows =
       getRows("defenseBody");
 
+
     const row =
       rows.find(r =>
-        clean(r[0]).toUpperCase() === code
+        clean(r[0]).toUpperCase() ===
+        code
       );
+
 
     if (!row) {
       return null;
     }
 
+
     return {
       team: code,
+
       games:
         numberFrom(row[1]),
 
@@ -795,13 +609,14 @@ function getMatchup() {
 
 
   // ============================================================
-  // QB DATA
+  // QUARTERBACK DATA
   // ============================================================
 
   function collectQuarterbacks() {
 
     const rows =
       getRows("qbPassingBody");
+
 
     return rows
       .map(row => {
@@ -811,12 +626,6 @@ function getMatchup() {
 
         const attempts =
           numberFrom(row[2]);
-
-        const completions =
-          numberFrom(row[3]);
-
-        const completionPct =
-          numberFrom(row[4]);
 
         const attemptsPerGame =
           numberFrom(row[5]);
@@ -833,26 +642,33 @@ function getMatchup() {
         const interceptions =
           numberFrom(row[9]);
 
+
         let estimatedGames = 0;
 
+
         if (
-          attemptsPerGame > 0 &&
-          attempts > 0
+          attempts > 0 &&
+          attemptsPerGame > 0
         ) {
+
           estimatedGames =
             attempts /
             attemptsPerGame;
         }
 
-        const passingYardsPerGame =
+
+        const yardsPerGame =
           estimatedGames > 0
             ? passingYards /
               estimatedGames
             : 0;
 
+
         return {
           category: "QB",
+
           team,
+
           opponent:
             opponentFor(team),
 
@@ -860,13 +676,23 @@ function getMatchup() {
             clean(row[1]),
 
           attempts,
-          completions,
-          completionPct,
+
+          completions:
+            numberFrom(row[3]),
+
+          completionPct:
+            numberFrom(row[4]),
+
           attemptsPerGame,
+
           passingYards,
-          passingYardsPerGame,
+
+          yardsPerGame,
+
           yardsPerAttempt,
+
           passingTDs,
+
           interceptions
         };
       })
@@ -890,6 +716,7 @@ function getMatchup() {
     const rows =
       getRows("targetBody");
 
+
     return rows
       .map(row => {
 
@@ -902,9 +729,13 @@ function getMatchup() {
         const defense =
           getDefense(opponent);
 
+
         return {
-          category: "RECEIVING",
+          category:
+            "RECEIVING",
+
           team,
+
           opponent,
 
           player:
@@ -951,12 +782,14 @@ function getMatchup() {
 
           opponentExplosiveAllowedPerGame:
             defense
-              ? defense.explosiveAllowedPerGame
+              ? defense
+                  .explosiveAllowedPerGame
               : 0,
 
           opponentYacAllowedPerGame:
             defense
-              ? defense.yacAllowedPerGame
+              ? defense
+                  .yacAllowedPerGame
               : 0
         };
       })
@@ -977,14 +810,18 @@ function getMatchup() {
     const rows =
       getRows("rushingBody");
 
+
     return rows
       .map(row => {
 
         const team =
           clean(row[0]).toUpperCase();
 
+
         return {
-          category: "RUSHING",
+          category:
+            "RUSHING",
+
           team,
 
           opponent:
@@ -1005,7 +842,7 @@ function getMatchup() {
           rushingYards:
             numberFrom(row[5]),
 
-          rushingYardsPerGame:
+          yardsPerGame:
             numberFrom(row[6]),
 
           yardsPerCarry:
@@ -1039,47 +876,51 @@ function getMatchup() {
       return null;
     }
 
-    const sorted =
-      [...qbs].sort((a, b) => {
-
-        if (
-          b.attemptsPerGame !==
-          a.attemptsPerGame
-        ) {
-          return (
-            b.attemptsPerGame -
-            a.attemptsPerGame
-          );
-        }
-
-        if (
-          b.passingYardsPerGame !==
-          a.passingYardsPerGame
-        ) {
-          return (
-            b.passingYardsPerGame -
-            a.passingYardsPerGame
-          );
-        }
-
-        return (
-          b.yardsPerAttempt -
-          a.yardsPerAttempt
-        );
-      });
 
     const player =
-      sorted[0];
+      [...qbs]
+        .sort((a, b) => {
+
+          if (
+            b.attemptsPerGame !==
+            a.attemptsPerGame
+          ) {
+
+            return (
+              b.attemptsPerGame -
+              a.attemptsPerGame
+            );
+          }
+
+
+          if (
+            b.yardsPerGame !==
+            a.yardsPerGame
+          ) {
+
+            return (
+              b.yardsPerGame -
+              a.yardsPerGame
+            );
+          }
+
+
+          return (
+            b.yardsPerAttempt -
+            a.yardsPerAttempt
+          );
+        })[0];
+
 
     return {
-      market:
-        "QB Passing Target",
-
-      kambiType:
-        "PASSING",
+      type:
+        "PASSING_YARDS",
 
       label:
         "TOP QB VOLUME TARGET",
+
+      originalMarket:
+        "QB Passing Target",
 
       player:
         player.player,
@@ -1090,15 +931,15 @@ function getMatchup() {
       opponent:
         player.opponent,
 
-      comparisonValue:
-        player.passingYardsPerGame,
+      average:
+        player.yardsPerGame,
 
-      comparisonLabel:
+      averageLabel:
         "Passing yards/game",
 
       evidence:
         `${player.attemptsPerGame.toFixed(2)} attempts/game, ` +
-        `${player.passingYardsPerGame.toFixed(1)} passing yards/game, ` +
+        `${player.yardsPerGame.toFixed(1)} passing yards/game, ` +
         `${player.yardsPerAttempt.toFixed(2)} yards/attempt, ` +
         `${player.passingTDs} passing TD, ` +
         `${player.interceptions} INT.`,
@@ -1117,47 +958,51 @@ function getMatchup() {
       return null;
     }
 
-    const sorted =
-      [...receivers].sort((a, b) => {
-
-        if (
-          b.targetsPerGame !==
-          a.targetsPerGame
-        ) {
-          return (
-            b.targetsPerGame -
-            a.targetsPerGame
-          );
-        }
-
-        if (
-          b.yardsPerGame !==
-          a.yardsPerGame
-        ) {
-          return (
-            b.yardsPerGame -
-            a.yardsPerGame
-          );
-        }
-
-        return (
-          b.receptions -
-          a.receptions
-        );
-      });
 
     const player =
-      sorted[0];
+      [...receivers]
+        .sort((a, b) => {
+
+          if (
+            b.targetsPerGame !==
+            a.targetsPerGame
+          ) {
+
+            return (
+              b.targetsPerGame -
+              a.targetsPerGame
+            );
+          }
+
+
+          if (
+            b.yardsPerGame !==
+            a.yardsPerGame
+          ) {
+
+            return (
+              b.yardsPerGame -
+              a.yardsPerGame
+            );
+          }
+
+
+          return (
+            b.receptions -
+            a.receptions
+          );
+        })[0];
+
 
     return {
-      market:
-        "Receiving Volume Target",
-
-      kambiType:
-        "RECEIVING",
+      type:
+        "RECEIVING_YARDS",
 
       label:
         "TOP RECEIVING VOLUME TARGET",
+
+      originalMarket:
+        "Receiving Volume Target",
 
       player:
         player.player,
@@ -1168,10 +1013,10 @@ function getMatchup() {
       opponent:
         player.opponent,
 
-      comparisonValue:
+      average:
         player.yardsPerGame,
 
-      comparisonLabel:
+      averageLabel:
         "Receiving yards/game",
 
       evidence:
@@ -1193,57 +1038,63 @@ function getMatchup() {
       return null;
     }
 
-    const sorted =
-      [...receivers].sort((a, b) => {
-
-        if (
-          b.inside10Targets !==
-          a.inside10Targets
-        ) {
-          return (
-            b.inside10Targets -
-            a.inside10Targets
-          );
-        }
-
-        if (
-          b.redZoneTargets !==
-          a.redZoneTargets
-        ) {
-          return (
-            b.redZoneTargets -
-            a.redZoneTargets
-          );
-        }
-
-        if (
-          b.touchdowns !==
-          a.touchdowns
-        ) {
-          return (
-            b.touchdowns -
-            a.touchdowns
-          );
-        }
-
-        return (
-          b.targetsPerGame -
-          a.targetsPerGame
-        );
-      });
 
     const player =
-      sorted[0];
+      [...receivers]
+        .sort((a, b) => {
+
+          if (
+            b.inside10Targets !==
+            a.inside10Targets
+          ) {
+
+            return (
+              b.inside10Targets -
+              a.inside10Targets
+            );
+          }
+
+
+          if (
+            b.redZoneTargets !==
+            a.redZoneTargets
+          ) {
+
+            return (
+              b.redZoneTargets -
+              a.redZoneTargets
+            );
+          }
+
+
+          if (
+            b.touchdowns !==
+            a.touchdowns
+          ) {
+
+            return (
+              b.touchdowns -
+              a.touchdowns
+            );
+          }
+
+
+          return (
+            b.targetsPerGame -
+            a.targetsPerGame
+          );
+        })[0];
+
 
     return {
-      market:
-        "Receiving TD / Red Zone Target",
-
-      kambiType:
+      type:
         "TOUCHDOWN",
 
       label:
         "TOP RECEIVING SCORING TARGET",
+
+      originalMarket:
+        "Receiving TD / Red Zone Target",
 
       player:
         player.player,
@@ -1254,9 +1105,9 @@ function getMatchup() {
       opponent:
         player.opponent,
 
-      comparisonValue: null,
+      average: null,
 
-      comparisonLabel: "",
+      averageLabel: "",
 
       evidence:
         `${player.redZoneTargets} red-zone targets, ` +
@@ -1274,60 +1125,61 @@ function getMatchup() {
     receivers
   ) {
 
-    if (!receivers.length) {
-      return null;
-    }
-
     const eligible =
       receivers.filter(player =>
         player.explosiveCatches > 0
       );
 
+
     if (!eligible.length) {
       return null;
     }
 
-    const sorted =
-      [...eligible].sort((a, b) => {
-
-        if (
-          b.explosiveRate !==
-          a.explosiveRate
-        ) {
-          return (
-            b.explosiveRate -
-            a.explosiveRate
-          );
-        }
-
-        if (
-          b.explosiveCatches !==
-          a.explosiveCatches
-        ) {
-          return (
-            b.explosiveCatches -
-            a.explosiveCatches
-          );
-        }
-
-        return (
-          b.yardsPerGame -
-          a.yardsPerGame
-        );
-      });
 
     const player =
-      sorted[0];
+      [...eligible]
+        .sort((a, b) => {
+
+          if (
+            b.explosiveRate !==
+            a.explosiveRate
+          ) {
+
+            return (
+              b.explosiveRate -
+              a.explosiveRate
+            );
+          }
+
+
+          if (
+            b.explosiveCatches !==
+            a.explosiveCatches
+          ) {
+
+            return (
+              b.explosiveCatches -
+              a.explosiveCatches
+            );
+          }
+
+
+          return (
+            b.yardsPerGame -
+            a.yardsPerGame
+          );
+        })[0];
+
 
     return {
-      market:
-        "Explosive Receiving Target",
-
-      kambiType:
-        "RECEIVING",
+      type:
+        "RECEIVING_YARDS",
 
       label:
         "TOP EXPLOSIVE RECEIVING TARGET",
+
+      originalMarket:
+        "Explosive Receiving Target",
 
       player:
         player.player,
@@ -1338,10 +1190,10 @@ function getMatchup() {
       opponent:
         player.opponent,
 
-      comparisonValue:
+      average:
         player.yardsPerGame,
 
-      comparisonLabel:
+      averageLabel:
         "Receiving yards/game",
 
       evidence:
@@ -1365,47 +1217,51 @@ function getMatchup() {
       return null;
     }
 
-    const sorted =
-      [...rushers].sort((a, b) => {
-
-        if (
-          b.carriesPerGame !==
-          a.carriesPerGame
-        ) {
-          return (
-            b.carriesPerGame -
-            a.carriesPerGame
-          );
-        }
-
-        if (
-          b.rushingYardsPerGame !==
-          a.rushingYardsPerGame
-        ) {
-          return (
-            b.rushingYardsPerGame -
-            a.rushingYardsPerGame
-          );
-        }
-
-        return (
-          b.yardsPerCarry -
-          a.yardsPerCarry
-        );
-      });
 
     const player =
-      sorted[0];
+      [...rushers]
+        .sort((a, b) => {
+
+          if (
+            b.carriesPerGame !==
+            a.carriesPerGame
+          ) {
+
+            return (
+              b.carriesPerGame -
+              a.carriesPerGame
+            );
+          }
+
+
+          if (
+            b.yardsPerGame !==
+            a.yardsPerGame
+          ) {
+
+            return (
+              b.yardsPerGame -
+              a.yardsPerGame
+            );
+          }
+
+
+          return (
+            b.yardsPerCarry -
+            a.yardsPerCarry
+          );
+        })[0];
+
 
     return {
-      market:
-        "Rushing Volume Target",
-
-      kambiType:
-        "RUSHING",
+      type:
+        "RUSHING_YARDS",
 
       label:
         "TOP RUSHING WORKLOAD TARGET",
+
+      originalMarket:
+        "Rushing Volume Target",
 
       player:
         player.player,
@@ -1416,15 +1272,15 @@ function getMatchup() {
       opponent:
         player.opponent,
 
-      comparisonValue:
-        player.rushingYardsPerGame,
+      average:
+        player.yardsPerGame,
 
-      comparisonLabel:
+      averageLabel:
         "Rushing yards/game",
 
       evidence:
         `${player.carriesPerGame.toFixed(2)} carries/game, ` +
-        `${player.rushingYardsPerGame.toFixed(2)} rushing yards/game, ` +
+        `${player.yardsPerGame.toFixed(2)} rushing yards/game, ` +
         `${player.yardsPerCarry.toFixed(2)} yards/carry.`,
 
       reason:
@@ -1441,57 +1297,63 @@ function getMatchup() {
       return null;
     }
 
-    const sorted =
-      [...rushers].sort((a, b) => {
-
-        if (
-          b.inside10Carries !==
-          a.inside10Carries
-        ) {
-          return (
-            b.inside10Carries -
-            a.inside10Carries
-          );
-        }
-
-        if (
-          b.redZoneCarries !==
-          a.redZoneCarries
-        ) {
-          return (
-            b.redZoneCarries -
-            a.redZoneCarries
-          );
-        }
-
-        if (
-          b.rushingTDs !==
-          a.rushingTDs
-        ) {
-          return (
-            b.rushingTDs -
-            a.rushingTDs
-          );
-        }
-
-        return (
-          b.carriesPerGame -
-          a.carriesPerGame
-        );
-      });
 
     const player =
-      sorted[0];
+      [...rushers]
+        .sort((a, b) => {
+
+          if (
+            b.inside10Carries !==
+            a.inside10Carries
+          ) {
+
+            return (
+              b.inside10Carries -
+              a.inside10Carries
+            );
+          }
+
+
+          if (
+            b.redZoneCarries !==
+            a.redZoneCarries
+          ) {
+
+            return (
+              b.redZoneCarries -
+              a.redZoneCarries
+            );
+          }
+
+
+          if (
+            b.rushingTDs !==
+            a.rushingTDs
+          ) {
+
+            return (
+              b.rushingTDs -
+              a.rushingTDs
+            );
+          }
+
+
+          return (
+            b.carriesPerGame -
+            a.carriesPerGame
+          );
+        })[0];
+
 
     return {
-      market:
-        "Rushing TD / Red Zone Target",
-
-      kambiType:
+      type:
         "TOUCHDOWN",
 
       label:
         "TOP RUSHING SCORING TARGET",
+
+      originalMarket:
+        "Rushing TD / Red Zone Target",
 
       player:
         player.player,
@@ -1502,9 +1364,9 @@ function getMatchup() {
       opponent:
         player.opponent,
 
-      comparisonValue: null,
+      average: null,
 
-      comparisonLabel: "",
+      averageLabel: "",
 
       evidence:
         `${player.redZoneCarries} red-zone carries, ` +
@@ -1515,33 +1377,6 @@ function getMatchup() {
       reason:
         "Strongest rushing scoring-opportunity profile based on current red-zone and inside-10 workload."
     };
-  }
-
-
-  function uniqueTargets(targets) {
-
-    const seen =
-      new Set();
-
-    return targets.filter(target => {
-
-      if (!target) {
-        return false;
-      }
-
-      const key =
-        `${target.market}|` +
-        `${target.team}|` +
-        `${target.player}`;
-
-      if (seen.has(key)) {
-        return false;
-      }
-
-      seen.add(key);
-
-      return true;
-    });
   }
 
 
@@ -1556,7 +1391,8 @@ function getMatchup() {
     const rushers =
       collectRushers();
 
-    return uniqueTargets([
+
+    return [
       bestQBVolumeTarget(qbs),
 
       bestReceiverVolumeTarget(
@@ -1578,22 +1414,150 @@ function getMatchup() {
       bestRushingScoringTarget(
         rushers
       )
-    ]);
+    ].filter(Boolean);
   }
 
 
   // ============================================================
-  // KAMBI MARKET MATCHING
+  // PLAYER NAME MATCHING
   // ============================================================
 
-  function propSearchText(prop) {
+  function nameParts(value) {
+
+    const text =
+      clean(value)
+        .toLowerCase()
+        .replace(
+          /\b(jr|sr|ii|iii|iv)\b\.?/g,
+          ""
+        )
+        .replace(
+          /[^a-z0-9 ]/g,
+          " "
+        )
+        .replace(
+          /\s+/g,
+          " "
+        )
+        .trim();
+
+
+    const pieces =
+      text
+        .split(" ")
+        .filter(Boolean);
+
+
+    return {
+      full: text,
+
+      first:
+        pieces[0] || "",
+
+      last:
+        pieces.length
+          ? pieces[
+              pieces.length - 1
+            ]
+          : ""
+    };
+  }
+
+
+  function samePlayer(
+    warRoomPlayer,
+    kambiPlayer
+  ) {
+
+    const a =
+      nameParts(warRoomPlayer);
+
+    const b =
+      nameParts(kambiPlayer);
+
+
+    if (
+      !a.full ||
+      !b.full
+    ) {
+      return false;
+    }
+
+
+    if (a.full === b.full) {
+      return true;
+    }
+
+
+    if (
+      !a.last ||
+      a.last !== b.last
+    ) {
+      return false;
+    }
+
+
+    if (
+      a.first &&
+      b.first &&
+      a.first[0] === b.first[0]
+    ) {
+      return true;
+    }
+
+
+    return false;
+  }
+
+
+  // ============================================================
+  // KAMBI PROP HELPERS
+  // ============================================================
+
+  function propPlayer(prop) {
+
+    return clean(
+      prop.player ??
+      prop.playerName ??
+      prop.participant ??
+      prop.participantName
+    );
+  }
+
+
+  function propStatus(prop) {
+
+    return clean(
+      prop.status ??
+      prop.outcomeStatus ??
+      "OPEN"
+    ).toUpperCase();
+  }
+
+
+  function propResolution(prop) {
+
+    return clean(
+      prop.resolution ??
+      prop.matchType ??
+      prop.joinStatus
+    ).toUpperCase();
+  }
+
+
+  function propText(prop) {
+
     return [
       prop.category,
-      prop.displayMarket,
+      prop.categoryName,
+      prop.market,
+      prop.marketName,
       prop.marketLabel,
-      prop.shortMarketLabel,
-      prop.betOfferType,
-      prop.outcomeLabel
+      prop.displayMarket,
+      prop.outcome,
+      prop.outcomeLabel,
+      prop.label,
+      prop.milestone
     ]
       .map(clean)
       .join(" ")
@@ -1601,9 +1565,99 @@ function getMatchup() {
   }
 
 
-  function isFirstHalfProp(prop) {
+  function propOdds(prop) {
+
+    const value =
+      prop.oddsAmerican ??
+      prop.americanOdds ??
+      prop.priceAmerican ??
+      prop.price ??
+      "";
+
+
+    if (
+      value === "" ||
+      value === null ||
+      value === undefined
+    ) {
+      return "";
+    }
+
+
+    const number =
+      Number(value);
+
+
+    if (Number.isFinite(number)) {
+
+      return number > 0
+        ? `+${number}`
+        : String(number);
+    }
+
+
+    return clean(value);
+  }
+
+
+  function propThreshold(prop) {
+
+    const possibleValues = [
+      prop.milestone,
+      prop.line,
+      prop.threshold,
+      prop.outcomeLabel,
+      prop.displayMarket,
+      prop.marketLabel
+    ];
+
+
+    for (
+      const value
+      of possibleValues
+    ) {
+
+      const text =
+        clean(value);
+
+
+      const plusMatch =
+        text.match(
+          /(\d+(?:\.\d+)?)\s*\+/
+        );
+
+
+      if (plusMatch) {
+
+        return Number(
+          plusMatch[1]
+        );
+      }
+    }
+
+
+    return null;
+  }
+
+
+  function propMarketDisplay(prop) {
+
+    return (
+      clean(prop.displayMarket) ||
+      clean(prop.marketLabel) ||
+      clean(prop.marketName) ||
+      clean(prop.categoryName) ||
+      clean(prop.category) ||
+      clean(prop.outcomeLabel) ||
+      "Kambi Player Prop"
+    );
+  }
+
+
+  function isFirstHalf(prop) {
+
     const text =
-      propSearchText(prop);
+      propText(prop);
 
     return (
       text.includes("first half") ||
@@ -1612,152 +1666,79 @@ function getMatchup() {
   }
 
 
-  function isPassingYardsProp(prop) {
-    const text =
-      propSearchText(prop);
-
-    return (
-      text.includes("passing yards") &&
-      !isFirstHalfProp(prop)
-    );
-  }
-
-
-  function isReceivingYardsProp(prop) {
-    const text =
-      propSearchText(prop);
-
-    return (
-      text.includes("receiving yards") &&
-      !isFirstHalfProp(prop)
-    );
-  }
-
-
-  function isRushingYardsProp(prop) {
-    const text =
-      propSearchText(prop);
-
-    return (
-      text.includes("rushing yards") &&
-      !isFirstHalfProp(prop)
-    );
-  }
-
-
-  function isTouchdownProp(prop) {
-    const text =
-      propSearchText(prop);
-
-    return (
-      text.includes("touchdown") ||
-      text.includes("td scorer") ||
-      text.includes("to score")
-    );
-  }
-
-
-  function marketMatchesTarget(
+  function marketMatches(
     prop,
     target
   ) {
 
-    if (
-      target.kambiType ===
-      "PASSING"
-    ) {
-      return isPassingYardsProp(prop);
-    }
+    const text =
+      propText(prop);
+
 
     if (
-      target.kambiType ===
-      "RECEIVING"
+      target.type ===
+      "PASSING_YARDS"
     ) {
-      return isReceivingYardsProp(prop);
+
+      return (
+        text.includes(
+          "passing yards"
+        ) &&
+        !isFirstHalf(prop)
+      );
     }
 
-    if (
-      target.kambiType ===
-      "RUSHING"
-    ) {
-      return isRushingYardsProp(prop);
-    }
 
     if (
-      target.kambiType ===
+      target.type ===
+      "RECEIVING_YARDS"
+    ) {
+
+      return (
+        text.includes(
+          "receiving yards"
+        ) &&
+        !isFirstHalf(prop)
+      );
+    }
+
+
+    if (
+      target.type ===
+      "RUSHING_YARDS"
+    ) {
+
+      return (
+        text.includes(
+          "rushing yards"
+        ) &&
+        !isFirstHalf(prop)
+      );
+    }
+
+
+    if (
+      target.type ===
       "TOUCHDOWN"
     ) {
-      return isTouchdownProp(prop);
+
+      return (
+        text.includes("touchdown") ||
+        text.includes("td scorer") ||
+        text.includes("to score")
+      );
     }
+
 
     return false;
   }
 
 
-  function getThreshold(prop) {
+  // ============================================================
+  // FIND PLAYER'S VERIFIED KAMBI PROPS
+  // ============================================================
 
-    const milestone =
-      clean(prop.milestone);
-
-    const milestoneMatch =
-      milestone.match(
-        /(\d+(?:\.\d+)?)\+/
-      );
-
-    if (milestoneMatch) {
-      return Number(
-        milestoneMatch[1]
-      );
-    }
-
-    const display =
-      clean(prop.displayMarket);
-
-    const displayMatch =
-      display.match(
-        /(\d+(?:\.\d+)?)\+/
-      );
-
-    if (displayMatch) {
-      return Number(
-        displayMatch[1]
-      );
-    }
-
-    return null;
-  }
-
-
-  function getMarketDisplay(prop) {
-
-    const display =
-      clean(prop.displayMarket);
-
-    if (display) {
-      return display;
-    }
-
-    const label =
-      clean(prop.marketLabel);
-
-    if (label) {
-      return label;
-    }
-
-    const shortLabel =
-      clean(prop.shortMarketLabel);
-
-    if (shortLabel) {
-      return shortLabel;
-    }
-
-    return clean(
-      prop.outcomeLabel
-    );
-  }
-
-
-  function getPlayerKambiProps(
+  function findPlayerProps(
     target,
     eventProps
   ) {
@@ -1765,61 +1746,75 @@ function getMatchup() {
     const matches =
       eventProps.filter(prop => {
 
-        if (
-          prop.resolution !==
-          "EXACT_ID_MATCH"
-        ) {
-          return false;
-        }
+        const player =
+          propPlayer(prop);
 
-        if (
-          clean(prop.status)
-            .toUpperCase() !==
-          "OPEN"
-        ) {
-          return false;
-        }
 
         if (
           !samePlayer(
             target.player,
-            prop.player
+            player
           )
         ) {
           return false;
         }
 
-        return marketMatchesTarget(
+
+        const status =
+          propStatus(prop);
+
+
+        if (
+          status &&
+          status !== "OPEN"
+        ) {
+          return false;
+        }
+
+
+        const resolution =
+          propResolution(prop);
+
+
+        if (
+          resolution &&
+          resolution !==
+            "EXACT_ID_MATCH"
+        ) {
+          return false;
+        }
+
+
+        return marketMatches(
           prop,
           target
         );
       });
 
-    /*
-      Protection against ambiguous abbreviated names.
 
-      If J.Taylor somehow matches two different
-      Kambi full names inside the same event,
-      we refuse the match.
-    */
-
-    const names =
+    const playerNames =
       [
         ...new Set(
-          matches.map(prop =>
-            normalizePlayerName(
-              prop.player
+          matches
+            .map(prop =>
+              propPlayer(prop)
             )
-          )
+            .filter(Boolean)
+            .map(name =>
+              nameParts(name).full
+            )
         )
       ];
 
-    if (names.length > 1) {
+
+    if (playerNames.length > 1) {
+
       return {
         ambiguous: true,
         props: []
       };
     }
+
 
     return {
       ambiguous: false,
@@ -1828,7 +1823,11 @@ function getMatchup() {
   }
 
 
-  function chooseBestVolumeMarket(
+  // ============================================================
+  // SELECT KAMBI MARKET
+  // ============================================================
+
+  function chooseVolumeProp(
     target,
     props
   ) {
@@ -1837,8 +1836,9 @@ function getMatchup() {
       props
         .map(prop => ({
           prop,
+
           threshold:
-            getThreshold(prop)
+            propThreshold(prop)
         }))
         .filter(item =>
           Number.isFinite(
@@ -1846,50 +1846,46 @@ function getMatchup() {
           )
         );
 
+
     if (!ladder.length) {
       return null;
     }
 
-    const comparison =
-      Number(
-        target.comparisonValue
-      );
 
-    if (!Number.isFinite(comparison)) {
-      return ladder[0].prop;
-    }
+    const average =
+      Number(target.average);
 
-    /*
-      Choose the available Kambi milestone
-      nearest the player's War Room average.
-
-      This is a comparison point.
-      It is NOT being called a projected probability.
-    */
 
     ladder.sort((a, b) => {
 
-      const aDistance =
-        Math.abs(
-          comparison -
-          a.threshold
-        );
+      const distanceA =
+        Number.isFinite(average)
+          ? Math.abs(
+              average -
+              a.threshold
+            )
+          : a.threshold;
 
-      const bDistance =
-        Math.abs(
-          comparison -
-          b.threshold
-        );
+
+      const distanceB =
+        Number.isFinite(average)
+          ? Math.abs(
+              average -
+              b.threshold
+            )
+          : b.threshold;
+
 
       if (
-        aDistance !==
-        bDistance
+        distanceA !== distanceB
       ) {
+
         return (
-          aDistance -
-          bDistance
+          distanceA -
+          distanceB
         );
       }
+
 
       return (
         a.threshold -
@@ -1897,11 +1893,12 @@ function getMatchup() {
       );
     });
 
+
     return ladder[0].prop;
   }
 
 
-  function chooseTouchdownMarket(
+  function chooseTouchdownProp(
     props
   ) {
 
@@ -1909,166 +1906,133 @@ function getMatchup() {
       return null;
     }
 
-    /*
-      Prefer a simple touchdown scorer
-      market over specialized multi-TD
-      or period-specific markets.
-    */
 
     const ranked =
-      [...props].sort((a, b) => {
+      [...props]
+        .map(prop => {
 
-        const aText =
-          propSearchText(a);
+          const text =
+            propText(prop);
 
-        const bText =
-          propSearchText(b);
+          let score = 0;
 
-        function score(text) {
-
-          let value = 0;
 
           if (
-            text.includes(
-              "anytime"
-            )
+            text.includes("anytime")
           ) {
-            value += 10;
+            score += 20;
           }
+
 
           if (
             text.includes(
               "touchdown scorer"
             )
           ) {
-            value += 8;
+            score += 15;
           }
 
+
           if (
-            text.includes(
-              "to score"
-            )
+            text.includes("to score")
           ) {
-            value += 5;
+            score += 10;
           }
+
 
           if (
             text.includes(
               "first touchdown"
             )
           ) {
-            value -= 10;
+            score -= 30;
           }
+
 
           if (
             text.includes(
               "last touchdown"
             )
           ) {
-            value -= 10;
+            score -= 30;
           }
+
 
           if (
-            text.includes(
-              "2+"
-            ) ||
-            text.includes(
-              "3+"
-            )
+            text.includes("2+") ||
+            text.includes("3+")
           ) {
-            value -= 8;
+            score -= 20;
           }
 
-          if (
-            text.includes(
-              "first half"
-            )
-          ) {
-            value -= 8;
+
+          if (isFirstHalf(prop)) {
+            score -= 20;
           }
 
-          return value;
-        }
 
-        return (
-          score(bText) -
-          score(aText)
+          return {
+            prop,
+            score
+          };
+        })
+        .sort(
+          (a, b) =>
+            b.score - a.score
         );
-      });
 
-    return ranked[0];
+
+    return ranked[0].prop;
   }
 
 
-  function attachKambiMarket(
+  function connectTargetToKambi(
     target,
     eventProps
   ) {
 
     const lookup =
-      getPlayerKambiProps(
+      findPlayerProps(
         target,
         eventProps
       );
+
 
     if (lookup.ambiguous) {
 
       return {
         ...target,
 
-        kambiStatus:
-          "AMBIGUOUS PLAYER MATCH",
+        verified: false,
 
-        kambiVerified: false,
-
-        kambiMarket: "",
-
-        kambiLine: "",
-
-        kambiPrice: "",
-
-        kambiPlayer: ""
+        status:
+          "AMBIGUOUS PLAYER MATCH"
       };
     }
+
 
     if (!lookup.props.length) {
 
       return {
         ...target,
 
-        kambiStatus:
-          "NO VERIFIED KAMBI MARKET",
+        verified: false,
 
-        kambiVerified: false,
-
-        kambiMarket: "",
-
-        kambiLine: "",
-
-        kambiPrice: "",
-
-        kambiPlayer: ""
+        status:
+          "NO VERIFIED KAMBI MARKET"
       };
     }
 
 
-    let selected = null;
-
-    if (
-      target.kambiType ===
-      "TOUCHDOWN"
-    ) {
-      selected =
-        chooseTouchdownMarket(
-          lookup.props
-        );
-    } else {
-      selected =
-        chooseBestVolumeMarket(
-          target,
-          lookup.props
-        );
-    }
+    const selected =
+      target.type === "TOUCHDOWN"
+        ? chooseTouchdownProp(
+            lookup.props
+          )
+        : chooseVolumeProp(
+            target,
+            lookup.props
+          );
 
 
     if (!selected) {
@@ -2076,39 +2040,59 @@ function getMatchup() {
       return {
         ...target,
 
-        kambiStatus:
-          "NO COMPARABLE KAMBI LINE",
+        verified: false,
 
-        kambiVerified: false,
-
-        kambiMarket: "",
-
-        kambiLine: "",
-
-        kambiPrice: "",
-
-        kambiPlayer: ""
+        status:
+          "NO COMPARABLE KAMBI LINE"
       };
     }
 
 
     const threshold =
-      getThreshold(selected);
+      propThreshold(selected);
 
-    const marketDisplay =
-      getMarketDisplay(selected);
 
     const price =
-      formatOdds(
-        selected.americanOdds
-      );
+      propOdds(selected);
 
 
-    let comparisonText = "";
+    const player =
+      propPlayer(selected);
+
+
+    const market =
+      propMarketDisplay(selected);
+
+
+    let line = "";
+
+
+    if (
+      Number.isFinite(threshold)
+    ) {
+
+      line =
+        `${threshold}+`;
+
+    } else {
+
+      line =
+        clean(
+          selected.milestone
+        ) ||
+        clean(
+          selected.outcomeLabel
+        ) ||
+        market;
+    }
+
+
+    let comparison = "";
+
 
     if (
       Number.isFinite(
-        target.comparisonValue
+        target.average
       ) &&
       Number.isFinite(
         threshold
@@ -2116,13 +2100,14 @@ function getMatchup() {
     ) {
 
       const difference =
-        target.comparisonValue -
+        target.average -
         threshold;
 
-      comparisonText =
-        `${target.comparisonLabel}: ` +
-        `${target.comparisonValue.toFixed(1)} | ` +
-        `Kambi milestone: ${threshold}+ | ` +
+
+      comparison =
+        `${target.averageLabel}: ` +
+        `${target.average.toFixed(1)} | ` +
+        `Kambi: ${threshold}+ | ` +
         `Difference: ` +
         `${difference >= 0 ? "+" : ""}` +
         `${difference.toFixed(1)}`;
@@ -2132,37 +2117,42 @@ function getMatchup() {
     return {
       ...target,
 
-      kambiStatus:
+      verified: true,
+
+      status:
         "VERIFIED KAMBI MARKET",
 
-      kambiVerified: true,
+      kambiPlayer:
+        player,
 
       kambiMarket:
-        marketDisplay,
+        market,
 
       kambiLine:
-        clean(selected.milestone) ||
-        marketDisplay,
+        line,
 
       kambiPrice:
         price,
 
-      kambiPlayer:
-        clean(selected.player),
+      comparison,
 
-      kambiMarketId:
-        clean(selected.marketId),
+      marketId:
+        clean(
+          selected.marketId ??
+          selected.market_id
+        ),
 
-      kambiOutcomeId:
-        clean(selected.outcomeId),
-
-      comparisonText
+      outcomeId:
+        clean(
+          selected.outcomeId ??
+          selected.outcome_id
+        )
     };
   }
 
 
   // ============================================================
-  // BUILD KAMBI-CONNECTED TARGETS
+  // CONNECT ALL TARGETS
   // ============================================================
 
   function buildConnectedTargets() {
@@ -2170,23 +2160,22 @@ function getMatchup() {
     const targets =
       buildTargets();
 
+
     if (!kambiData) {
+
       return targets.map(target => ({
         ...target,
 
-        kambiStatus:
-          "KAMBI DATA NOT LOADED",
+        verified: false,
 
-        kambiVerified: false
+        status:
+          "KAMBI DATA NOT LOADED"
       }));
     }
 
 
-    const {
-      event,
-      props
-    } =
-      propsForSelectedEvent();
+    const event =
+      findSelectedKambiEvent();
 
 
     if (!event) {
@@ -2194,25 +2183,29 @@ function getMatchup() {
       return targets.map(target => ({
         ...target,
 
-        kambiStatus:
-          "NO KAMBI EVENT FOR MATCHUP",
+        verified: false,
 
-        kambiVerified: false
+        status:
+          "NO KAMBI EVENT FOR MATCHUP"
       }));
     }
 
 
+    const eventProps =
+      propsForEvent(event);
+
+
     return targets.map(target =>
-      attachKambiMarket(
+      connectTargetToKambi(
         target,
-        props
+        eventProps
       )
     );
   }
 
 
   // ============================================================
-  // SAVE PLAYER TARGET
+  // SAVE VERIFIED PLAYER MARKET
   // ============================================================
 
   async function saveTarget(
@@ -2220,23 +2213,24 @@ function getMatchup() {
     button
   ) {
 
-    const matchup =
-      getMatchup();
-
-    if (!matchup) {
+    if (!target.verified) {
 
       alert(
-        "Choose both teams before saving a Player Receipt target."
+        "This target does not have a verified Kambi market."
       );
 
       return;
     }
 
 
-    if (!target.kambiVerified) {
+    const matchup =
+      getMatchup();
+
+
+    if (!matchup) {
 
       alert(
-        "This player does not have a verified Kambi market attached. It will not be saved as a sportsbook selection."
+        "Choose both teams first."
       );
 
       return;
@@ -2254,12 +2248,10 @@ function getMatchup() {
       matchup,
 
       market:
-        target.kambiMarket ||
-        target.market,
+        target.kambiMarket,
 
       selection:
-        `${target.kambiPlayer || target.player} — ` +
-        `${target.kambiLine}`,
+        `${target.kambiPlayer || target.player} — ${target.kambiLine}`,
 
       sportsbookLine:
         target.kambiLine,
@@ -2268,21 +2260,20 @@ function getMatchup() {
         target.kambiPrice,
 
       /*
-        IMPORTANT:
-        This remains a historical average/profile,
-        NOT a predictive player projection.
+        This is deliberately labeled as
+        a historical War Room average,
+        not a predictive projection.
       */
 
       warRoomProjection:
         Number.isFinite(
-          target.comparisonValue
+          target.average
         )
-          ? `${target.comparisonLabel}: ` +
-            `${target.comparisonValue.toFixed(1)}`
+          ? `${target.averageLabel}: ${target.average.toFixed(1)}`
           : "Scoring opportunity profile",
 
       calculatedEdge:
-        target.comparisonText || "",
+        target.comparison || "",
 
       status:
         "KAMBI VERIFIED — REVIEW",
@@ -2290,8 +2281,8 @@ function getMatchup() {
       reason:
         `${target.reason} ${target.evidence}` +
         (
-          target.comparisonText
-            ? ` ${target.comparisonText}`
+          target.comparison
+            ? ` ${target.comparison}`
             : ""
         ),
 
@@ -2325,9 +2316,7 @@ function getMatchup() {
             method: "POST",
 
             body:
-              JSON.stringify(
-                record
-              )
+              JSON.stringify(record)
           }
         );
 
@@ -2351,10 +2340,6 @@ function getMatchup() {
       button.textContent =
         "SAVED ✓";
 
-      button.classList.add(
-        "player-receipt-saved"
-      );
-
 
     } catch (error) {
 
@@ -2363,10 +2348,12 @@ function getMatchup() {
         error
       );
 
+
       button.disabled = false;
 
       button.textContent =
         oldText;
+
 
       alert(
         "Player Receipt did not save. " +
@@ -2377,7 +2364,7 @@ function getMatchup() {
 
 
   // ============================================================
-  // CARD HTML
+  // CARD
   // ============================================================
 
   function targetCard(
@@ -2385,48 +2372,36 @@ function getMatchup() {
     index
   ) {
 
-    const verified =
-      target.kambiVerified;
-
-
-    const statusText =
-      verified
+    const status =
+      target.verified
         ? "🟢 VERIFIED KAMBI MARKET"
-        : `🟨 ${target.kambiStatus || "NO VERIFIED MARKET"}`;
+        : `🟨 ${target.status}`;
 
 
-    const marketSection =
-      verified
+    const kambiSection =
+      target.verified
         ? `
           <div class="player-receipt-kambi">
 
-            <strong>
-              Kambi Player:
-            </strong>
+            <strong>Kambi Player:</strong>
             ${escapeHtml(
               target.kambiPlayer
             )}
             <br>
 
-            <strong>
-              Kambi Market:
-            </strong>
+            <strong>Kambi Market:</strong>
             ${escapeHtml(
               target.kambiMarket
             )}
             <br>
 
-            <strong>
-              Kambi Line:
-            </strong>
+            <strong>Kambi Line:</strong>
             ${escapeHtml(
               target.kambiLine
             )}
             <br>
 
-            <strong>
-              American Price:
-            </strong>
+            <strong>American Price:</strong>
             ${escapeHtml(
               target.kambiPrice || "—"
             )}
@@ -2434,32 +2409,24 @@ function getMatchup() {
           </div>
 
           ${
-            target.comparisonText
+            target.comparison
               ? `
                 <div class="player-receipt-comparison">
+
                   <strong>
                     War Room Comparison:
                   </strong>
                   <br>
+
                   ${escapeHtml(
-                    target.comparisonText
+                    target.comparison
                   )}
+
                 </div>
               `
               : ""
           }
-        `
-        : `
-          <div class="player-receipt-line">
-            No verified Kambi market was attached.
-            The War Room will not invent one.
-          </div>
-        `;
 
-
-    const buttonSection =
-      verified
-        ? `
           <button
             type="button"
             class="player-receipt-save"
@@ -2468,64 +2435,95 @@ function getMatchup() {
             SAVE VERIFIED MARKET TO PLAYER RECEIPT
           </button>
         `
-        : "";
+        : `
+          <div class="player-receipt-no-market">
+
+            No sportsbook market is being
+            invented for this target.
+
+          </div>
+        `;
 
 
     return `
-      <div class="
-        player-receipt-card
-        ${
-          verified
-            ? "player-receipt-verified"
-            : ""
-        }
-      ">
+      <div
+        class="
+          player-receipt-card
+          ${
+            target.verified
+              ? "player-receipt-verified"
+              : ""
+          }
+        "
+      >
 
         <div class="player-receipt-status">
-          ${escapeHtml(statusText)}
+          ${escapeHtml(status)}
         </div>
 
         <div class="player-receipt-label">
-          ${escapeHtml(target.label)}
+          ${escapeHtml(
+            target.label
+          )}
         </div>
 
         <div class="player-receipt-player">
-          ${escapeHtml(target.player)}
+          ${escapeHtml(
+            target.player
+          )}
         </div>
 
         <div class="player-receipt-team">
+
           ${escapeHtml(
             displayTeam(target.team)
           )}
+
           vs
+
           ${escapeHtml(
-            displayTeam(target.opponent)
+            displayTeam(
+              target.opponent
+            )
           )}
+
         </div>
 
         <div class="player-receipt-market">
-          ${escapeHtml(target.market)}
+          ${escapeHtml(
+            target.originalMarket
+          )}
         </div>
 
         <div class="player-receipt-evidence">
+
           <strong>
             War Room Evidence:
           </strong>
+
           <br>
-          ${escapeHtml(target.evidence)}
+
+          ${escapeHtml(
+            target.evidence
+          )}
+
         </div>
 
         <div class="player-receipt-reason">
+
           <strong>
             Why it made the Receipt:
           </strong>
+
           <br>
-          ${escapeHtml(target.reason)}
+
+          ${escapeHtml(
+            target.reason
+          )}
+
         </div>
 
-        ${marketSection}
-
-        ${buttonSection}
+        ${kambiSection}
 
       </div>
     `;
@@ -2533,7 +2531,7 @@ function getMatchup() {
 
 
   // ============================================================
-  // RENDER PLAYER RECEIPT
+  // RENDER
   // ============================================================
 
   async function renderPlayerReceipt() {
@@ -2542,6 +2540,7 @@ function getMatchup() {
       document.getElementById(
         "playerReceiptContent"
       );
+
 
     if (!content) {
       return;
@@ -2556,7 +2555,10 @@ function getMatchup() {
 
       content.innerHTML = `
         <div class="player-receipt-empty">
-          Choose both teams to build the Player Props Receipt.
+
+          Choose two different teams to
+          build the Player Props Receipt.
+
         </div>
       `;
 
@@ -2566,7 +2568,10 @@ function getMatchup() {
 
     content.innerHTML = `
       <div class="player-receipt-empty">
-        Loading verified Kambi markets...
+
+        Loading War Room targets and
+        verified Kambi markets...
+
       </div>
     `;
 
@@ -2582,7 +2587,9 @@ function getMatchup() {
 
       content.innerHTML = `
         <div class="player-receipt-empty">
-          Player data has not loaded yet.
+
+          Player tables have not loaded yet.
+
         </div>
       `;
 
@@ -2590,39 +2597,51 @@ function getMatchup() {
     }
 
 
-    const selectedEvent =
+    const event =
       kambiData
         ? findSelectedKambiEvent()
         : null;
 
 
-    const eventMessage =
-      selectedEvent
-        ? `
-          <div class="player-receipt-kambi-event">
-            Kambi event:
-            <strong>
-              ${escapeHtml(
-                selectedEvent.name
-              )}
-            </strong>
-          </div>
-        `
-        : `
-          <div class="player-receipt-kambi-warning">
-            ${
-              kambiError
-                ? `Kambi data error: ${escapeHtml(kambiError)}`
-                : "No exact Kambi event was found for this selected matchup."
-            }
-          </div>
-        `;
+    let eventHtml = "";
+
+
+    if (event) {
+
+      eventHtml = `
+        <div class="player-receipt-event">
+
+          Kambi event:
+
+          <strong>
+            ${escapeHtml(
+              event.name
+            )}
+          </strong>
+
+        </div>
+      `;
+
+    } else {
+
+      eventHtml = `
+        <div class="player-receipt-warning">
+
+          ${
+            kambiLoadError
+              ? `Kambi data error: ${escapeHtml(kambiLoadError)}`
+              : "No exact Kambi event was found for this selected matchup."
+          }
+
+        </div>
+      `;
+    }
 
 
     const verifiedCount =
       targets.filter(
         target =>
-          target.kambiVerified
+          target.verified
       ).length;
 
 
@@ -2632,30 +2651,33 @@ function getMatchup() {
         ${escapeHtml(matchup)}
       </div>
 
-      ${eventMessage}
+      ${eventHtml}
 
       <div class="player-receipt-note">
 
-        War Room identifies the player opportunity.
-        Kambi supplies the sportsbook market and price.
+        War Room identifies the player
+        opportunity. Kambi supplies the
+        sportsbook market and price.
 
         <br><br>
 
         <strong>
           ${verifiedCount}
         </strong>
+
         of
+
         <strong>
           ${targets.length}
         </strong>
-        War Room targets currently have a verified
-        Kambi market attached.
+
+        War Room targets currently have
+        a verified Kambi market attached.
 
         <br><br>
 
-        A green card means the Kambi market and price
-        were matched to the player using the exact
-        event data. It does <strong>not</strong>
+        Green means the player and Kambi
+        market were matched. It does not
         automatically mean the prop is a bet.
 
       </div>
@@ -2692,12 +2714,15 @@ function getMatchup() {
                   .targetIndex
               );
 
+
             const target =
               targets[index];
+
 
             if (!target) {
               return;
             }
+
 
             saveTarget(
               target,
@@ -2710,7 +2735,7 @@ function getMatchup() {
 
 
   // ============================================================
-  // CREATE PLAYER RECEIPT PANEL
+  // PANEL
   // ============================================================
 
   function createPlayerReceiptPanel() {
@@ -2727,8 +2752,10 @@ function getMatchup() {
     const panel =
       document.createElement("div");
 
+
     panel.id =
       "playerReceiptPanel";
+
 
     panel.className =
       "panel";
@@ -2741,8 +2768,8 @@ function getMatchup() {
       </h2>
 
       <p>
-        War Room player opportunities matched
-        against verified Kambi NFL player markets.
+        Strongest War Room player opportunities
+        matched against verified Kambi markets.
       </p>
 
       <button
@@ -2771,24 +2798,6 @@ function getMatchup() {
       );
 
 
-    const postgamePanel =
-      Array.from(
-        document.querySelectorAll(
-          ".panel"
-        )
-      ).find(panelElement =>
-        clean(
-          panelElement
-            .querySelector("h2")
-            ?.textContent
-        )
-          .toLowerCase()
-          .includes(
-            "postgame evaluation"
-          )
-      );
-
-
     if (
       gameReceipt &&
       gameReceipt.parentNode
@@ -2809,16 +2818,6 @@ function getMatchup() {
         panel
       );
 
-    } else if (
-      postgamePanel &&
-      postgamePanel.parentNode
-    ) {
-
-      postgamePanel.insertAdjacentElement(
-        "beforebegin",
-        panel
-      );
-
     } else {
 
       const container =
@@ -2827,28 +2826,32 @@ function getMatchup() {
         ) ||
         document.body;
 
+
       container.appendChild(
         panel
       );
     }
 
 
-    addPlayerReceiptStyles();
+    addStyles();
 
 
-    const buildButton =
+    const button =
       document.getElementById(
         "buildPlayerReceipt"
       );
 
 
-    if (buildButton) {
+    if (button) {
 
-      buildButton.addEventListener(
+      button.addEventListener(
         "click",
         renderPlayerReceipt
       );
     }
+
+
+    renderPlayerReceipt();
   }
 
 
@@ -2856,7 +2859,7 @@ function getMatchup() {
   // STYLES
   // ============================================================
 
-  function addPlayerReceiptStyles() {
+  function addStyles() {
 
     if (
       document.getElementById(
@@ -2868,9 +2871,7 @@ function getMatchup() {
 
 
     const style =
-      document.createElement(
-        "style"
-      );
+      document.createElement("style");
 
 
     style.id =
@@ -2881,10 +2882,6 @@ function getMatchup() {
 
       #playerReceiptPanel {
         margin-top: 22px;
-      }
-
-      #playerReceiptPanel h2 {
-        margin-bottom: 8px;
       }
 
       .player-receipt-build {
@@ -2898,30 +2895,29 @@ function getMatchup() {
 
       .player-receipt-matchup {
         font-size: 18px;
-        font-weight: 800;
+        font-weight: 900;
         margin-bottom: 10px;
+      }
+
+      .player-receipt-event {
+        padding: 10px 12px;
+        border-radius: 8px;
+        margin-bottom: 12px;
+        background:
+          rgba(53,223,147,.12);
+      }
+
+      .player-receipt-warning {
+        padding: 10px 12px;
+        border-radius: 8px;
+        margin-bottom: 12px;
+        background:
+          rgba(255,210,70,.12);
       }
 
       .player-receipt-note {
         line-height: 1.5;
         margin-bottom: 16px;
-        opacity: 0.92;
-      }
-
-      .player-receipt-kambi-event {
-        margin-bottom: 12px;
-        padding: 10px 12px;
-        border-radius: 8px;
-        background:
-          rgba(53, 223, 147, 0.10);
-      }
-
-      .player-receipt-kambi-warning {
-        margin-bottom: 12px;
-        padding: 10px 12px;
-        border-radius: 8px;
-        background:
-          rgba(255, 210, 70, 0.10);
       }
 
       .player-receipt-grid {
@@ -2929,7 +2925,7 @@ function getMatchup() {
         grid-template-columns:
           repeat(
             auto-fit,
-            minmax(280px, 1fr)
+            minmax(280px,1fr)
           );
         gap: 14px;
       }
@@ -2937,18 +2933,18 @@ function getMatchup() {
       .player-receipt-card {
         border:
           2px solid
-          rgba(255, 210, 70, 0.75);
+          rgba(255,210,70,.75);
         border-radius: 12px;
         padding: 16px;
         background:
-          rgba(255, 210, 70, 0.08);
+          rgba(255,210,70,.07);
       }
 
-      .player-receipt-card.player-receipt-verified {
+      .player-receipt-verified {
         border-color:
-          rgba(53, 223, 147, 0.85);
+          rgba(53,223,147,.85);
         background:
-          rgba(53, 223, 147, 0.07);
+          rgba(53,223,147,.07);
       }
 
       .player-receipt-status {
@@ -2959,19 +2955,18 @@ function getMatchup() {
         font-weight: 900;
         margin-bottom: 10px;
         background:
-          rgba(255, 210, 70, 0.20);
+          rgba(255,210,70,.20);
       }
 
       .player-receipt-verified
       .player-receipt-status {
         background:
-          rgba(53, 223, 147, 0.20);
+          rgba(53,223,147,.20);
       }
 
       .player-receipt-label {
         font-size: 13px;
         font-weight: 900;
-        letter-spacing: 0.4px;
         margin-bottom: 5px;
       }
 
@@ -2983,7 +2978,7 @@ function getMatchup() {
 
       .player-receipt-team {
         font-size: 13px;
-        opacity: 0.85;
+        opacity: .85;
         margin-bottom: 10px;
       }
 
@@ -2995,9 +2990,9 @@ function getMatchup() {
 
       .player-receipt-evidence,
       .player-receipt-reason,
-      .player-receipt-line,
       .player-receipt-kambi,
-      .player-receipt-comparison {
+      .player-receipt-comparison,
+      .player-receipt-no-market {
         line-height: 1.5;
         margin-top: 12px;
       }
@@ -3006,14 +3001,14 @@ function getMatchup() {
         padding: 12px;
         border-radius: 8px;
         background:
-          rgba(53, 223, 147, 0.10);
+          rgba(53,223,147,.10);
       }
 
       .player-receipt-comparison {
         padding: 10px;
         border-radius: 8px;
         background:
-          rgba(255, 255, 255, 0.05);
+          rgba(255,255,255,.05);
       }
 
       .player-receipt-save {
@@ -3027,18 +3022,14 @@ function getMatchup() {
       }
 
       .player-receipt-save:disabled {
+        opacity: .75;
         cursor: default;
-        opacity: 0.75;
-      }
-
-      .player-receipt-saved {
-        font-weight: 900;
       }
 
       .player-receipt-empty {
         padding: 16px;
         border-radius: 10px;
-        opacity: 0.85;
+        opacity: .88;
       }
 
     `;
@@ -3051,13 +3042,14 @@ function getMatchup() {
 
 
   // ============================================================
-  // WATCH WAR ROOM TABLES
+  // WATCH TABLES
   // ============================================================
 
   function watchTable(bodyId) {
 
     const body =
       document.getElementById(bodyId);
+
 
     if (!body) {
       return;
@@ -3075,7 +3067,7 @@ function getMatchup() {
         body._playerReceiptTimer =
           window.setTimeout(
             renderPlayerReceipt,
-            200
+            250
           );
       });
 
@@ -3091,30 +3083,27 @@ function getMatchup() {
   }
 
 
-  // ============================================================
-  // TEAM SELECTOR WATCHERS
-  // ============================================================
-
   function watchTeamSelectors() {
 
     ["away", "home"]
       .forEach(id => {
 
-        const element =
+        const select =
           document.getElementById(id);
 
-        if (!element) {
+
+        if (!select) {
           return;
         }
 
 
-        element.addEventListener(
+        select.addEventListener(
           "change",
           () => {
 
             window.setTimeout(
               renderPlayerReceipt,
-              250
+              300
             );
           }
         );
@@ -3129,6 +3118,7 @@ function getMatchup() {
   function init() {
 
     createPlayerReceiptPanel();
+
 
     watchTable(
       "qbPassingBody"
@@ -3146,21 +3136,18 @@ function getMatchup() {
       "defenseBody"
     );
 
+
     watchTeamSelectors();
 
-
-    /*
-      Begin loading Kambi in the background.
-      Do not block the rest of the War Room.
-    */
 
     loadKambiData();
 
 
     window.setTimeout(
       renderPlayerReceipt,
-      600
+      700
     );
+
 
     window.setTimeout(
       renderPlayerReceipt,
