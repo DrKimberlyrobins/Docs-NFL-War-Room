@@ -154,6 +154,16 @@ td:first-child {
 #epaTable td:nth-child(3) {
   width: 33%;
 }
+/* =========================================
+   EPA PROJECTION CALCULATOR GREEN HIGHLIGHT
+   ========================================= */
+
+#epaCalcBody td.epa-winner {
+  background: rgba(53, 223, 147, 0.22);
+  color: #7cf5ba;
+  font-weight: 900;
+  box-shadow: inset 0 0 0 2px #35df93;
+}  
 </style>
 </head>
 
@@ -627,6 +637,116 @@ analyze();
 <script src="nfl-scoring.js"></script>
 <script src="nfl-players.js"></script>
 <script src="kalshi-markets.js"></script>
+<script>
+/* =========================================
+   EPA PROJECTION CALCULATOR
+   AUTOMATIC GREEN HIGHLIGHT
+   ========================================= */
+
+function highlightEPAProjectionCalculator() {
+
+  const body = document.getElementById("epaCalcBody");
+
+  if (!body) return;
+
+  const rows = body.querySelectorAll("tr");
+
+  rows.forEach(row => {
+
+    const cells = row.querySelectorAll("td");
+
+    if (cells.length !== 3) return;
+
+    const awayCell = cells[1];
+    const homeCell = cells[2];
+
+    /* Remove old highlighting first */
+    awayCell.classList.remove("epa-winner");
+    homeCell.classList.remove("epa-winner");
+
+    /* Convert displayed values to numbers */
+    const awayValue =
+      parseFloat(
+        awayCell.textContent
+          .replace("%", "")
+          .trim()
+      );
+
+    const homeValue =
+      parseFloat(
+        homeCell.textContent
+          .replace("%", "")
+          .trim()
+      );
+
+    /* Skip rows that do not contain numbers */
+    if (
+      !Number.isFinite(awayValue) ||
+      !Number.isFinite(homeValue)
+    ) {
+      return;
+    }
+
+    /* No green when values are tied */
+    if (awayValue === homeValue) {
+      return;
+    }
+
+    /*
+       EPA Projection Calculator:
+
+       Higher Offensive EPA = stronger
+       Higher opponent EPA allowed = better matchup
+       Higher Matchup EPA = stronger
+       Higher projected plays = more opportunity
+       Higher total EPA = stronger projection
+    */
+
+    if (awayValue > homeValue) {
+      awayCell.classList.add("epa-winner");
+    }
+
+    if (homeValue > awayValue) {
+      homeCell.classList.add("epa-winner");
+    }
+
+  });
+
+}
+
+
+/* =========================================
+   WATCH CALCULATOR FOR NEW MATCHUPS
+   ========================================= */
+
+const epaCalcBody =
+  document.getElementById("epaCalcBody");
+
+if (epaCalcBody) {
+
+  const epaHighlightObserver =
+    new MutationObserver(() => {
+
+      highlightEPAProjectionCalculator();
+
+    });
+
+  epaHighlightObserver.observe(
+    epaCalcBody,
+    {
+      childList: true,
+      subtree: true,
+      characterData: true
+    }
+  );
+
+}
+
+
+/* Run once when page opens */
+highlightEPAProjectionCalculator();
+
+</script>  
   
 </body>
 </html>
