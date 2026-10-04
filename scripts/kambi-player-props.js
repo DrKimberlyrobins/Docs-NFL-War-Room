@@ -2,16 +2,16 @@
 // DOC'S NFL WAR ROOM
 // KAMBI PLAYER PROPS COLLECTOR
 //
-// TEST PHASE
+// VERIFIED:
+// - Player Props endpoint works
+// - Bet Offers endpoint works
+// - Exact market_id/outcome_id joining works
+// - 617/617 exact matches in first test
+// - American odds verified against live Kambi board
 //
-// Uses the exact Kambi endpoint structures verified
-// in the browser.
-//
-// IMPORTANT:
-// This file is completely separate from:
-// - CBS Sports collector
-// - Kalshi collector
-// - War Room display
+// THIS VERSION:
+// Adds exact market / milestone labels from the bet offer
+// itself, while preserving locked/unavailable ladder rungs.
 // ============================================================
 
 const fs = require("fs");
@@ -26,26 +26,16 @@ const OFFERING = "pivusmsrl-bil";
 const MARKET = "US-MS";
 const LANGUAGE = "en_US";
 
-
-// ============================================================
-// TEST EVENT
-//
-// We are intentionally testing the same event we inspected
-// manually before attempting automatic event discovery.
-// ============================================================
-
 const EVENT_ID = "1028812630";
 
 
 // ============================================================
-// VERIFIED ENDPOINT BASES
+// VERIFIED ENDPOINTS
 // ============================================================
 
-// Player-prop structure
 const PLAYER_PROPS_BASE =
   "https://offering.sbo.fra-hub.workload.shapegamescloud.com";
 
-// Bet offers / prices
 const KAMBI_OFFERING_BASE =
   "https://eu.offering-api.kambicdn.com/offering/v2018";
 
@@ -63,7 +53,7 @@ const OUTPUT_FILE =
 
 
 // ============================================================
-// FETCH JSON
+// FETCH
 // ============================================================
 
 async function fetchJson(name, url) {
@@ -113,7 +103,7 @@ async function fetchJson(name, url) {
 
 
 // ============================================================
-// RECURSIVE WALKER
+// WALK NESTED DATA
 // ============================================================
 
 function walk(value, callback) {
@@ -152,13 +142,13 @@ function walk(value, callback) {
 
 function findCategoryName(category) {
 
-  let categoryName = "";
+  let name = "";
 
   walk(
     category,
     object => {
 
-      if (categoryName) {
+      if (name) {
         return;
       }
 
@@ -167,18 +157,18 @@ function findCategoryName(category) {
         object.name
       ) {
 
-        categoryName =
+        name =
           String(object.name).trim();
       }
     }
   );
 
-  return categoryName;
+  return name;
 }
 
 
 // ============================================================
-// FIND PLAYER OFFERING BLOCKS
+// PLAYER OFFERING BLOCKS
 // ============================================================
 
 function findPlayerOfferingBlocks(category) {
@@ -206,14 +196,7 @@ function findPlayerOfferingBlocks(category) {
 
 
 // ============================================================
-// BUILD EXACT KAMBI LOOKUPS
-//
-// We use exact IDs.
-//
-// market_id  -> betOffer.id
-// outcome_id -> outcome.id
-//
-// No array-position guessing.
+// OFFER MAPS
 // ============================================================
 
 function buildOfferMaps(eventData) {
@@ -271,7 +254,158 @@ function buildOfferMaps(eventData) {
 
 
 // ============================================================
-// NORMALIZE ONE PROP
+// CLEAN MARKET LABEL
+// ============================================================
+
+function getMarketLabel(offer) {
+
+  return String(
+    offer?.criterion?.label ??
+    offer?.criterion?.englishLabel ??
+    offer?.criterion?.shortLabel ??
+    offer?.criterion?.shortEnglishLabel ??
+    ""
+  ).trim();
+}
+
+
+// ============================================================
+// SHORT MARKET LABEL
+// ============================================================
+
+function getShortMarketLabel(offer) {
+
+  return String(
+    offer?.criterion?.shortLabel ??
+    offer?.criterion?.shortEnglishLabel ??
+    offer?.criterion?.label ??
+    offer?.criterion?.englishLabel ??
+    ""
+  ).trim();
+}
+
+
+// ============================================================
+// EXTRACT LADDER THRESHOLD
+//
+// Examples:
+//
+// "150+ Passing Yards By The Player - Including Overtime"
+//      -> 150+
+//
+// "Player 150+ Passing Yards + OT"
+//      -> 150+
+//
+// If the market is not a ladder market, this returns "".
+// ============================================================
+
+function extractMilestone(
+  offer,
+  fallbackLabel = ""
+) {
+
+  const labels = [
+    offer?.criterion?.label,
+    offer?.criterion?.englishLabel,
+    offer?.criterion?.shortLabel,
+    offer?.criterion?.shortEnglishLabel
+  ]
+    .filter(Boolean)
+    .map(value =>
+      String(value).trim()
+    );
+
+
+  for (const label of labels) {
+
+    const match =
+      label.match(
+        /(?:^|\s)(\d+(?:\.\d+)?\+)(?:\s|$)/
+      );
+
+    if (match) {
+      return match[1];
+    }
+  }
+
+
+  if (
+    fallbackLabel &&
+    String(fallbackLabel)
+      .trim()
+  ) {
+
+    return String(
+      fallbackLabel
+    ).trim();
+  }
+
+
+  return "";
+}
+
+
+// ============================================================
+// MARKET DESCRIPTION
+//
+// Gives us a human-readable description such as:
+//
+// 150+ Passing Yards
+// 200+ Passing Yards
+// Over 46.5 Passing Yards
+//
+// We preserve Kambi's own wording rather than inventing one.
+// ============================================================
+
+function getDisplayMarket(
+  offer,
+  outcome,
+  fallbackLabel
+) {
+
+  const shortLabel =
+    getShortMarketLabel(offer);
+
+  if (shortLabel) {
+    return shortLabel;
+  }
+
+
+  const fullLabel =
+    getMarketLabel(offer);
+
+  if (fullLabel) {
+    return fullLabel;
+  }
+
+
+  const milestone =
+    extractMilestone(
+      offer,
+      fallbackLabel
+    );
+
+
+  if (milestone) {
+    return milestone;
+  }
+
+
+  if (
+    outcome?.label
+  ) {
+    return String(
+      outcome.label
+    ).trim();
+  }
+
+
+  return "";
+}
+
+
+// ============================================================
+// ONE PROP RECORD
 // ============================================================
 
 function makePropRecord({
@@ -279,14 +413,14 @@ function makePropRecord({
   eventName,
   categoryName,
   player,
-  milestone,
+  fallbackMilestone,
   reference,
   marketMap,
   outcomeMap
 }) {
 
-  // Kambi sometimes sends an empty reference when
-  // a particular milestone is unavailable.
+  // Locked/unavailable Kambi ladder positions can contain
+  // empty references. We do not invent an outcome for them.
 
   if (
     !reference ||
@@ -295,15 +429,18 @@ function makePropRecord({
     return null;
   }
 
+
   const marketId =
     String(
       reference.market_id ?? ""
     );
 
+
   const outcomeId =
     String(
       reference.outcome_id ?? ""
     );
+
 
   if (
     !marketId ||
@@ -312,30 +449,27 @@ function makePropRecord({
     return null;
   }
 
+
   const offer =
     marketMap.get(marketId);
+
 
   const outcomeLookup =
     outcomeMap.get(outcomeId);
 
+
   const outcome =
-    outcomeLookup?.outcome ?? null;
+    outcomeLookup?.outcome ??
+    null;
 
-
-  // ----------------------------------------------------------
-  // IMPORTANT VALIDATION
-  //
-  // Even if the outcome ID exists somewhere else,
-  // it must belong to the exact market referenced by
-  // player_props.
-  // ----------------------------------------------------------
 
   const exactMatch =
     Boolean(
       offer &&
       outcome &&
       String(
-        outcome.betOfferId ?? offer.id
+        outcome.betOfferId ??
+        offer.id
       ) === marketId
     );
 
@@ -359,21 +493,24 @@ function makePropRecord({
         player.team_participant_id ?? "",
 
       milestone:
-        milestone ?? "",
+        fallbackMilestone ?? "",
+
+      displayMarket: "",
 
       marketId,
       outcomeId,
 
       marketLabel: "",
+      shortMarketLabel: "",
 
       participant: "",
-
       participantId: "",
 
       americanOdds: "",
-
       rawOdds: "",
+      line: "",
 
+      outcomeLabel: "",
       outcomeType: "",
 
       status:
@@ -385,9 +522,12 @@ function makePropRecord({
   }
 
 
-  // ----------------------------------------------------------
-  // VERIFIED EXACT MATCH
-  // ----------------------------------------------------------
+  const milestone =
+    extractMilestone(
+      offer,
+      fallbackMilestone
+    );
+
 
   return {
     eventId,
@@ -405,21 +545,23 @@ function makePropRecord({
     teamParticipantId:
       player.team_participant_id ?? "",
 
-    milestone:
-      milestone ?? "",
+    milestone,
+
+    displayMarket:
+      getDisplayMarket(
+        offer,
+        outcome,
+        fallbackMilestone
+      ),
 
     marketId,
     outcomeId,
 
     marketLabel:
-      offer.criterion?.label ??
-      offer.criterion?.englishLabel ??
-      "",
+      getMarketLabel(offer),
 
     shortMarketLabel:
-      offer.criterion?.shortLabel ??
-      offer.criterion?.shortEnglishLabel ??
-      "",
+      getShortMarketLabel(offer),
 
     betOfferType:
       offer.betOfferType?.name ??
@@ -443,6 +585,10 @@ function makePropRecord({
 
     line:
       outcome.line ??
+      "",
+
+    outcomeLabel:
+      outcome.label ??
       "",
 
     outcomeType:
@@ -477,14 +623,19 @@ function parsePlayerProps(
       ? eventData.events[0]
       : null;
 
+
   const eventName =
     event?.name ?? "";
+
 
   const {
     marketMap,
     outcomeMap
   } =
-    buildOfferMaps(eventData);
+    buildOfferMaps(
+      eventData
+    );
+
 
   const categories =
     Array.isArray(
@@ -493,13 +644,20 @@ function parsePlayerProps(
       ? propsData.player_props
       : [];
 
+
   const records = [];
 
 
-  for (const category of categories) {
+  for (
+    const category
+    of categories
+  ) {
 
     const categoryName =
-      findCategoryName(category);
+      findCategoryName(
+        category
+      );
+
 
     const blocks =
       findPlayerOfferingBlocks(
@@ -507,14 +665,20 @@ function parsePlayerProps(
       );
 
 
-    for (const block of blocks) {
+    for (
+      const block
+      of blocks
+    ) {
 
       const labels =
         Array.isArray(
-          block.header?.offering_labels
+          block.header
+            ?.offering_labels
         )
-          ? block.header.offering_labels
+          ? block.header
+              .offering_labels
           : [];
+
 
       const players =
         Array.isArray(
@@ -524,18 +688,25 @@ function parsePlayerProps(
           : [];
 
 
-      for (const player of players) {
+      for (
+        const player
+        of players
+      ) {
 
         const references =
           Array.isArray(
             player.outcome_references
           )
-            ? player.outcome_references
+            ? player
+                .outcome_references
             : [];
 
 
         references.forEach(
-          (reference, index) => {
+          (
+            reference,
+            index
+          ) => {
 
             const record =
               makePropRecord({
@@ -548,7 +719,7 @@ function parsePlayerProps(
 
                 player,
 
-                milestone:
+                fallbackMilestone:
                   labels[index] ?? "",
 
                 reference,
@@ -558,6 +729,7 @@ function parsePlayerProps(
                 outcomeMap
               });
 
+
             if (record) {
               records.push(record);
             }
@@ -566,6 +738,7 @@ function parsePlayerProps(
       }
     }
   }
+
 
   return records;
 }
@@ -589,16 +762,6 @@ async function main() {
     "========================================"
   );
 
-  console.log(
-    "Test Event:",
-    EVENT_ID
-  );
-
-
-  // ----------------------------------------------------------
-  // EXACT PLAYER-PROPS ENDPOINT STRUCTURE
-  // CAPTURED FROM THE KAMBI PAGE
-  // ----------------------------------------------------------
 
   const playerPropsUrl =
     `${PLAYER_PROPS_BASE}` +
@@ -608,13 +771,6 @@ async function main() {
     `?market=${MARKET}` +
     `&lang=${LANGUAGE}`;
 
-
-  // ----------------------------------------------------------
-  // EXACT BET-OFFER ENDPOINT STRUCTURE
-  // CAPTURED FROM THE KAMBI PAGE
-  //
-  // We intentionally do NOT depend on the ncid value.
-  // ----------------------------------------------------------
 
   const eventUrl =
     `${KAMBI_OFFERING_BASE}` +
@@ -644,15 +800,13 @@ async function main() {
     ]);
 
 
-  // ----------------------------------------------------------
-  // BASIC SOURCE COUNTS
-  // ----------------------------------------------------------
-
   const categoryCount =
     Array.isArray(
       propsData.player_props
     )
-      ? propsData.player_props.length
+      ? propsData
+          .player_props
+          .length
       : 0;
 
 
@@ -660,25 +814,11 @@ async function main() {
     Array.isArray(
       eventData.betOffers
     )
-      ? eventData.betOffers.length
+      ? eventData
+          .betOffers
+          .length
       : 0;
 
-
-  console.log("");
-  console.log(
-    "Player prop categories:",
-    categoryCount
-  );
-
-  console.log(
-    "Event bet offers:",
-    betOfferCount
-  );
-
-
-  // ----------------------------------------------------------
-  // PARSE + EXACT-ID JOIN
-  // ----------------------------------------------------------
 
   const props =
     parsePlayerProps(
@@ -705,6 +845,16 @@ async function main() {
 
   console.log("");
   console.log(
+    "Player prop categories:",
+    categoryCount
+  );
+
+  console.log(
+    "Event bet offers:",
+    betOfferCount
+  );
+
+  console.log(
     "Total referenced props:",
     props.length
   );
@@ -720,10 +870,6 @@ async function main() {
   );
 
 
-  // ----------------------------------------------------------
-  // SORT FOR EASY INSPECTION
-  // ----------------------------------------------------------
-
   props.sort(
     (a, b) =>
       String(a.category)
@@ -736,16 +882,12 @@ async function main() {
           String(b.player)
         ) ||
 
-      String(a.milestone)
+      String(a.displayMarket)
         .localeCompare(
-          String(b.milestone)
+          String(b.displayMarket)
         )
   );
 
-
-  // ----------------------------------------------------------
-  // FINAL OUTPUT
-  // ----------------------------------------------------------
 
   const output = {
 
@@ -759,7 +901,8 @@ async function main() {
       MARKET,
 
     collectedAt:
-      new Date().toISOString(),
+      new Date()
+        .toISOString(),
 
     event: {
       id:
@@ -769,7 +912,9 @@ async function main() {
         Array.isArray(
           eventData.events
         )
-          ? eventData.events[0]?.name ?? ""
+          ? eventData
+              .events[0]
+              ?.name ?? ""
           : ""
     },
 
@@ -784,7 +929,10 @@ async function main() {
         "Exact market_id + outcome_id",
 
       usesAmericanOddsFromSource:
-        true
+        true,
+
+      lockedMarkets:
+        "Skipped when Kambi provides no outcome_reference"
     },
 
     counts: {
@@ -808,10 +956,6 @@ async function main() {
   };
 
 
-  // ----------------------------------------------------------
-  // WRITE FILE
-  // ----------------------------------------------------------
-
   fs.mkdirSync(
     path.dirname(
       OUTPUT_FILE
@@ -834,63 +978,39 @@ async function main() {
 
   console.log("");
   console.log(
-    "Saved:"
-  );
-
-  console.log(
+    "Saved:",
     OUTPUT_FILE
   );
 
 
-  // ----------------------------------------------------------
-  // SHOW VERIFIED SAMPLES IN ACTION LOG
-  // ----------------------------------------------------------
+  // ==========================================================
+  // KYLER MURRAY PASSING-YARD SPOT CHECK
+  // ==========================================================
 
-  console.log("");
-  console.log(
-    "========================================"
-  );
-
-  console.log(
-    "SAMPLE EXACT MATCHES"
-  );
-
-  console.log(
-    "========================================"
-  );
-
-
-  resolved
-    .slice(0, 15)
-    .forEach(prop => {
-
-      console.log(
-        [
-          prop.player,
-          prop.category,
-          prop.milestone,
-          prop.americanOdds,
-          prop.status
-        ].join(" | ")
-      );
-    });
-
-
-  // ----------------------------------------------------------
-  // SPECIFIC KYLER CHECK
-  //
-  // This gives us an easy way to verify the exact player
-  // we manually inspected in DevTools.
-  // ----------------------------------------------------------
-
-  const kyler =
+  const kylerPassing =
     resolved.filter(
       prop =>
         String(prop.player)
-          .toLowerCase()
-          .includes(
-            "kyler murray"
+          .toLowerCase() ===
+          "kyler murray" &&
+
+        (
+          String(
+            prop.marketLabel
           )
+            .toLowerCase()
+            .includes(
+              "passing yard"
+            ) ||
+
+          String(
+            prop.shortMarketLabel
+          )
+            .toLowerCase()
+            .includes(
+              "passing yard"
+            )
+        )
     );
 
 
@@ -900,7 +1020,7 @@ async function main() {
   );
 
   console.log(
-    "KYLER MURRAY CHECK"
+    "KYLER MURRAY PASSING YARDS"
   );
 
   console.log(
@@ -908,27 +1028,50 @@ async function main() {
   );
 
 
-  if (kyler.length === 0) {
+  if (
+    kylerPassing.length === 0
+  ) {
 
     console.log(
-      "No resolved Kyler Murray props found."
+      "No Kyler Murray passing-yard props found."
     );
 
   } else {
 
-    kyler.forEach(prop => {
+    kylerPassing
+      .sort(
+        (a, b) => {
 
-      console.log(
-        [
-          prop.category,
-          prop.milestone,
-          prop.marketId,
-          prop.outcomeId,
-          prop.americanOdds,
-          prop.status
-        ].join(" | ")
-      );
-    });
+          const aNumber =
+            parseFloat(
+              a.milestone
+            ) || 0;
+
+          const bNumber =
+            parseFloat(
+              b.milestone
+            ) || 0;
+
+          return (
+            aNumber -
+            bNumber
+          );
+        }
+      )
+      .forEach(prop => {
+
+        console.log(
+          [
+            prop.player,
+            prop.displayMarket,
+            prop.milestone,
+            prop.americanOdds,
+            prop.status,
+            prop.marketId,
+            prop.outcomeId
+          ].join(" | ")
+        );
+      });
   }
 
 
