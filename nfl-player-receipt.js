@@ -501,17 +501,49 @@
   // ============================================================
 
   function getSelectedTeam(id) {
-    const select =
-      document.getElementById(id);
 
-    if (!select) {
-      return "";
-    }
+  const select =
+    document.getElementById(id);
 
-    return clean(select.value)
-      .toUpperCase();
+  if (!select) {
+    return "";
   }
 
+  const raw =
+    clean(select.value);
+
+  if (!raw) {
+    return "";
+  }
+
+  const upper =
+    raw.toUpperCase();
+
+  if (TEAM_NAMES[upper]) {
+    return upper;
+  }
+
+  const match =
+    Object.entries(TEAM_NAMES)
+      .find(
+        ([code, fullName]) =>
+          fullName.toUpperCase() === upper
+      );
+
+  if (match) {
+    return match[0];
+  }
+
+  console.warn(
+    "Unknown War Room team:",
+    raw
+  );
+
+  return "";
+}
+
+
+function getMatchup() {
 
   function getMatchup() {
     const away =
