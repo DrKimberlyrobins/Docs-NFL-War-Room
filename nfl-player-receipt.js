@@ -1,14 +1,12 @@
 // ============================================================
 // DOC'S NFL WAR ROOM
-// PLAYER PROP RECEIPT
+// PLAYER PROP RECEIPT — KAMBI CONNECTED
 //
 // PURPOSE:
-// Pull the strongest player opportunities from the War Room.
-//
-// IMPORTANT:
-// This file DOES NOT invent sportsbook prop lines.
-// Until a real player prop line is connected, every candidate
-// is a RESEARCH TARGET / CHECK LINE.
+// 1. Find strongest player opportunities from War Room
+// 2. Match those players to the selected Kambi NFL event
+// 3. Show VERIFIED Kambi prop markets + American prices
+// 4. Never invent a player, market, threshold, or price
 //
 // DESTINATION:
 // Google Sheet tab: Player Receipt
@@ -21,9 +19,12 @@
   const RECORDS_URL =
     "https://script.google.com/macros/s/AKfycbxovg8I9EhY3QNZ5Bl81jJDJiQ_Ddr4NwNIyO3lXiNmr0qq5w06hj7dA1DBjuuDUfHI/exec";
 
+  const KAMBI_URL =
+    "data/kambi-player-props-2026.json";
+
 
   // ============================================================
-  // TEAM NAMES
+  // TEAM INFORMATION
   // ============================================================
 
   const TEAM_NAMES = {
@@ -62,12 +63,246 @@
   };
 
 
+  const KAMBI_TEAM_ALIASES = {
+    ARI: [
+      "ARI",
+      "Arizona",
+      "Arizona Cardinals",
+      "ARI Cardinals"
+    ],
+
+    ATL: [
+      "ATL",
+      "Atlanta",
+      "Atlanta Falcons",
+      "ATL Falcons"
+    ],
+
+    BAL: [
+      "BAL",
+      "Baltimore",
+      "Baltimore Ravens",
+      "BAL Ravens"
+    ],
+
+    BUF: [
+      "BUF",
+      "Buffalo",
+      "Buffalo Bills",
+      "BUF Bills"
+    ],
+
+    CAR: [
+      "CAR",
+      "Carolina",
+      "Carolina Panthers",
+      "CAR Panthers"
+    ],
+
+    CHI: [
+      "CHI",
+      "Chicago",
+      "Chicago Bears",
+      "CHI Bears"
+    ],
+
+    CIN: [
+      "CIN",
+      "Cincinnati",
+      "Cincinnati Bengals",
+      "CIN Bengals"
+    ],
+
+    CLE: [
+      "CLE",
+      "Cleveland",
+      "Cleveland Browns",
+      "CLE Browns"
+    ],
+
+    DAL: [
+      "DAL",
+      "Dallas",
+      "Dallas Cowboys",
+      "DAL Cowboys"
+    ],
+
+    DEN: [
+      "DEN",
+      "Denver",
+      "Denver Broncos",
+      "DEN Broncos"
+    ],
+
+    DET: [
+      "DET",
+      "Detroit",
+      "Detroit Lions",
+      "DET Lions"
+    ],
+
+    GB: [
+      "GB",
+      "Green Bay",
+      "Green Bay Packers",
+      "GB Packers"
+    ],
+
+    HOU: [
+      "HOU",
+      "Houston",
+      "Houston Texans",
+      "HOU Texans"
+    ],
+
+    IND: [
+      "IND",
+      "Indianapolis",
+      "Indianapolis Colts",
+      "IND Colts"
+    ],
+
+    JAX: [
+      "JAX",
+      "Jacksonville",
+      "Jacksonville Jaguars",
+      "JAX Jaguars"
+    ],
+
+    KC: [
+      "KC",
+      "Kansas City",
+      "Kansas City Chiefs",
+      "KC Chiefs"
+    ],
+
+    LV: [
+      "LV",
+      "Las Vegas",
+      "Las Vegas Raiders",
+      "LV Raiders"
+    ],
+
+    LAC: [
+      "LAC",
+      "LA Chargers",
+      "Los Angeles Chargers"
+    ],
+
+    LAR: [
+      "LAR",
+      "LA Rams",
+      "Los Angeles Rams"
+    ],
+
+    MIA: [
+      "MIA",
+      "Miami",
+      "Miami Dolphins",
+      "MIA Dolphins"
+    ],
+
+    MIN: [
+      "MIN",
+      "Minnesota",
+      "Minnesota Vikings",
+      "MIN Vikings"
+    ],
+
+    NE: [
+      "NE",
+      "New England",
+      "New England Patriots",
+      "NE Patriots"
+    ],
+
+    NO: [
+      "NO",
+      "New Orleans",
+      "New Orleans Saints",
+      "NO Saints"
+    ],
+
+    NYG: [
+      "NYG",
+      "NY Giants",
+      "New York Giants"
+    ],
+
+    NYJ: [
+      "NYJ",
+      "NY Jets",
+      "New York Jets"
+    ],
+
+    PHI: [
+      "PHI",
+      "Philadelphia",
+      "Philadelphia Eagles",
+      "PHI Eagles"
+    ],
+
+    PIT: [
+      "PIT",
+      "Pittsburgh",
+      "Pittsburgh Steelers",
+      "PIT Steelers"
+    ],
+
+    SEA: [
+      "SEA",
+      "Seattle",
+      "Seattle Seahawks",
+      "SEA Seahawks"
+    ],
+
+    SF: [
+      "SF",
+      "San Francisco",
+      "San Francisco 49ers",
+      "SF 49ers"
+    ],
+
+    TB: [
+      "TB",
+      "Tampa Bay",
+      "Tampa Bay Buccaneers",
+      "TB Buccaneers"
+    ],
+
+    TEN: [
+      "TEN",
+      "Tennessee",
+      "Tennessee Titans",
+      "TEN Titans"
+    ],
+
+    WAS: [
+      "WAS",
+      "Washington",
+      "Washington Commanders",
+      "WAS Commanders"
+    ]
+  };
+
+
+  // ============================================================
+  // STATE
+  // ============================================================
+
+  let kambiData = null;
+  let kambiError = "";
+  let kambiPromise = null;
+
+
   // ============================================================
   // BASIC HELPERS
   // ============================================================
 
   function clean(value) {
-    return String(value ?? "").trim();
+    return String(value ?? "")
+      .replace(/\s+/g, " ")
+      .trim();
   }
 
 
@@ -75,7 +310,7 @@
     const match =
       clean(value)
         .replace(/,/g, "")
-        .match(/-?\d+(\.\d+)?/);
+        .match(/-?\d+(?:\.\d+)?/);
 
     return match
       ? Number(match[0])
@@ -140,6 +375,127 @@
   }
 
 
+  function normalizeText(value) {
+    return clean(value)
+      .toLowerCase()
+      .replace(/[^a-z0-9]/g, "");
+  }
+
+
+  function normalizePlayerName(value) {
+    return clean(value)
+      .toLowerCase()
+      .replace(/\b(jr|sr|ii|iii|iv)\b\.?/g, "")
+      .replace(/[^a-z0-9 ]/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+
+  function splitName(value) {
+    const normalized =
+      normalizePlayerName(value);
+
+    const pieces =
+      normalized
+        .split(" ")
+        .filter(Boolean);
+
+    return {
+      normalized,
+      first:
+        pieces[0] || "",
+      last:
+        pieces.length
+          ? pieces[pieces.length - 1]
+          : ""
+    };
+  }
+
+
+  function samePlayer(
+    warRoomName,
+    kambiName
+  ) {
+    const war =
+      splitName(warRoomName);
+
+    const kambi =
+      splitName(kambiName);
+
+    if (
+      !war.normalized ||
+      !kambi.normalized
+    ) {
+      return false;
+    }
+
+    if (
+      war.normalized ===
+      kambi.normalized
+    ) {
+      return true;
+    }
+
+    if (
+      !war.last ||
+      war.last !== kambi.last
+    ) {
+      return false;
+    }
+
+    /*
+      War Room sometimes uses:
+      J.Taylor
+
+      Kambi may use:
+      Jonathan Taylor
+
+      Require same last name AND
+      matching first initial.
+    */
+
+    if (
+      war.first &&
+      kambi.first &&
+      war.first[0] ===
+      kambi.first[0]
+    ) {
+      return true;
+    }
+
+    return false;
+  }
+
+
+  function formatOdds(value) {
+    const text =
+      clean(value);
+
+    if (!text) {
+      return "";
+    }
+
+    if (
+      text.startsWith("+") ||
+      text.startsWith("-")
+    ) {
+      return text;
+    }
+
+    const number =
+      Number(text);
+
+    if (!Number.isFinite(number)) {
+      return text;
+    }
+
+    return number > 0
+      ? `+${number}`
+      : String(number);
+  }
+
+
   // ============================================================
   // CURRENT MATCHUP
   // ============================================================
@@ -198,6 +554,175 @@
 
 
   // ============================================================
+  // KAMBI DATA
+  // ============================================================
+
+  async function loadKambiData() {
+
+    if (kambiData) {
+      return kambiData;
+    }
+
+    if (kambiPromise) {
+      return kambiPromise;
+    }
+
+    kambiPromise =
+      fetch(KAMBI_URL, {
+        cache: "no-store"
+      })
+        .then(response => {
+
+          if (!response.ok) {
+            throw new Error(
+              `Kambi data returned ${response.status}.`
+            );
+          }
+
+          return response.json();
+        })
+        .then(data => {
+
+          if (
+            !data ||
+            !Array.isArray(data.events) ||
+            !Array.isArray(data.props)
+          ) {
+            throw new Error(
+              "Kambi file structure is not valid."
+            );
+          }
+
+          kambiData = data;
+          kambiError = "";
+
+          console.log(
+            "PLAYER RECEIPT KAMBI DATA:",
+            data.counts
+          );
+
+          return data;
+        })
+        .catch(error => {
+
+          kambiError =
+            error.message;
+
+          console.error(
+            "Player Receipt Kambi error:",
+            error
+          );
+
+          return null;
+        });
+
+    return kambiPromise;
+  }
+
+
+  function eventContainsTeam(
+    eventName,
+    teamCode
+  ) {
+    const aliases =
+      KAMBI_TEAM_ALIASES[
+        clean(teamCode).toUpperCase()
+      ] || [];
+
+    const eventNormalized =
+      normalizeText(eventName);
+
+    return aliases.some(alias => {
+
+      const aliasNormalized =
+        normalizeText(alias);
+
+      return (
+        aliasNormalized &&
+        eventNormalized.includes(
+          aliasNormalized
+        )
+      );
+    });
+  }
+
+
+  function findSelectedKambiEvent() {
+
+    if (!kambiData) {
+      return null;
+    }
+
+    const away =
+      getSelectedTeam("away");
+
+    const home =
+      getSelectedTeam("home");
+
+    if (!away || !home) {
+      return null;
+    }
+
+    const matches =
+      kambiData.events.filter(event => {
+
+        const name =
+          clean(event.name);
+
+        return (
+          eventContainsTeam(
+            name,
+            away
+          ) &&
+          eventContainsTeam(
+            name,
+            home
+          )
+        );
+      });
+
+    if (matches.length !== 1) {
+
+      if (matches.length > 1) {
+        console.warn(
+          "More than one Kambi event matched:",
+          matches
+        );
+      }
+
+      return null;
+    }
+
+    return matches[0];
+  }
+
+
+  function propsForSelectedEvent() {
+
+    const event =
+      findSelectedKambiEvent();
+
+    if (!event) {
+      return {
+        event: null,
+        props: []
+      };
+    }
+
+    const props =
+      kambiData.props.filter(prop =>
+        String(prop.eventId) ===
+        String(event.id)
+      );
+
+    return {
+      event,
+      props
+    };
+  }
+
+
+  // ============================================================
   // DEFENSIVE MATCHUP DATA
   // ============================================================
 
@@ -219,13 +744,18 @@
 
     return {
       team: code,
-      games: numberFrom(row[1]),
+      games:
+        numberFrom(row[1]),
+
       explosiveAllowed:
         numberFrom(row[2]),
+
       explosiveAllowedPerGame:
         numberFrom(row[3]),
+
       yacAllowed:
         numberFrom(row[4]),
+
       yacAllowedPerGame:
         numberFrom(row[5])
     };
@@ -237,6 +767,7 @@
   // ============================================================
 
   function collectQuarterbacks() {
+
     const rows =
       getRows("qbPassingBody");
 
@@ -292,7 +823,10 @@
           team,
           opponent:
             opponentFor(team),
-          player: clean(row[1]),
+
+          player:
+            clean(row[1]),
+
           attempts,
           completions,
           completionPct,
@@ -320,6 +854,7 @@
   // ============================================================
 
   function collectReceivers() {
+
     const rows =
       getRows("targetBody");
 
@@ -339,7 +874,9 @@
           category: "RECEIVING",
           team,
           opponent,
-          player: clean(row[1]),
+
+          player:
+            clean(row[1]),
 
           targets:
             numberFrom(row[2]),
@@ -404,6 +941,7 @@
   // ============================================================
 
   function collectRushers() {
+
     const rows =
       getRows("rushingBody");
 
@@ -416,6 +954,7 @@
         return {
           category: "RUSHING",
           team,
+
           opponent:
             opponentFor(team),
 
@@ -459,14 +998,11 @@
 
 
   // ============================================================
-  // PLAYER TARGET SELECTION
-  //
-  // We intentionally use transparent football categories
-  // instead of inventing a fake "edge" percentage.
+  // WAR ROOM TARGET SELECTION
   // ============================================================
 
-
   function bestQBVolumeTarget(qbs) {
+
     if (!qbs.length) {
       return null;
     }
@@ -507,6 +1043,9 @@
       market:
         "QB Passing Target",
 
+      kambiType:
+        "PASSING",
+
       label:
         "TOP QB VOLUME TARGET",
 
@@ -518,6 +1057,12 @@
 
       opponent:
         player.opponent,
+
+      comparisonValue:
+        player.passingYardsPerGame,
+
+      comparisonLabel:
+        "Passing yards/game",
 
       evidence:
         `${player.attemptsPerGame.toFixed(2)} attempts/game, ` +
@@ -532,7 +1077,10 @@
   }
 
 
-  function bestReceiverVolumeTarget(receivers) {
+  function bestReceiverVolumeTarget(
+    receivers
+  ) {
+
     if (!receivers.length) {
       return null;
     }
@@ -573,6 +1121,9 @@
       market:
         "Receiving Volume Target",
 
+      kambiType:
+        "RECEIVING",
+
       label:
         "TOP RECEIVING VOLUME TARGET",
 
@@ -584,6 +1135,12 @@
 
       opponent:
         player.opponent,
+
+      comparisonValue:
+        player.yardsPerGame,
+
+      comparisonLabel:
+        "Receiving yards/game",
 
       evidence:
         `${player.targetsPerGame.toFixed(2)} targets/game, ` +
@@ -599,6 +1156,7 @@
   function bestReceiverScoringTarget(
     receivers
   ) {
+
     if (!receivers.length) {
       return null;
     }
@@ -649,6 +1207,9 @@
       market:
         "Receiving TD / Red Zone Target",
 
+      kambiType:
+        "TOUCHDOWN",
+
       label:
         "TOP RECEIVING SCORING TARGET",
 
@@ -660,6 +1221,10 @@
 
       opponent:
         player.opponent,
+
+      comparisonValue: null,
+
+      comparisonLabel: "",
 
       evidence:
         `${player.redZoneTargets} red-zone targets, ` +
@@ -676,6 +1241,7 @@
   function bestExplosiveReceiverTarget(
     receivers
   ) {
+
     if (!receivers.length) {
       return null;
     }
@@ -725,6 +1291,9 @@
       market:
         "Explosive Receiving Target",
 
+      kambiType:
+        "RECEIVING",
+
       label:
         "TOP EXPLOSIVE RECEIVING TARGET",
 
@@ -736,6 +1305,12 @@
 
       opponent:
         player.opponent,
+
+      comparisonValue:
+        player.yardsPerGame,
+
+      comparisonLabel:
+        "Receiving yards/game",
 
       evidence:
         `${player.explosiveCatches} catches of 20+ yards, ` +
@@ -753,6 +1328,7 @@
   function bestRushingVolumeTarget(
     rushers
   ) {
+
     if (!rushers.length) {
       return null;
     }
@@ -793,6 +1369,9 @@
       market:
         "Rushing Volume Target",
 
+      kambiType:
+        "RUSHING",
+
       label:
         "TOP RUSHING WORKLOAD TARGET",
 
@@ -804,6 +1383,12 @@
 
       opponent:
         player.opponent,
+
+      comparisonValue:
+        player.rushingYardsPerGame,
+
+      comparisonLabel:
+        "Rushing yards/game",
 
       evidence:
         `${player.carriesPerGame.toFixed(2)} carries/game, ` +
@@ -819,6 +1404,7 @@
   function bestRushingScoringTarget(
     rushers
   ) {
+
     if (!rushers.length) {
       return null;
     }
@@ -869,6 +1455,9 @@
       market:
         "Rushing TD / Red Zone Target",
 
+      kambiType:
+        "TOUCHDOWN",
+
       label:
         "TOP RUSHING SCORING TARGET",
 
@@ -880,6 +1469,10 @@
 
       opponent:
         player.opponent,
+
+      comparisonValue: null,
+
+      comparisonLabel: "",
 
       evidence:
         `${player.redZoneCarries} red-zone carries, ` +
@@ -893,11 +1486,8 @@
   }
 
 
-  // ============================================================
-  // REMOVE DUPLICATE PLAYER/MARKET TARGETS
-  // ============================================================
-
   function uniqueTargets(targets) {
+
     const seen =
       new Set();
 
@@ -923,11 +1513,8 @@
   }
 
 
-  // ============================================================
-  // BUILD TARGET LIST
-  // ============================================================
-
   function buildTargets() {
+
     const qbs =
       collectQuarterbacks();
 
@@ -964,6 +1551,635 @@
 
 
   // ============================================================
+  // KAMBI MARKET MATCHING
+  // ============================================================
+
+  function propSearchText(prop) {
+    return [
+      prop.category,
+      prop.displayMarket,
+      prop.marketLabel,
+      prop.shortMarketLabel,
+      prop.betOfferType,
+      prop.outcomeLabel
+    ]
+      .map(clean)
+      .join(" ")
+      .toLowerCase();
+  }
+
+
+  function isFirstHalfProp(prop) {
+    const text =
+      propSearchText(prop);
+
+    return (
+      text.includes("first half") ||
+      text.includes("1st half")
+    );
+  }
+
+
+  function isPassingYardsProp(prop) {
+    const text =
+      propSearchText(prop);
+
+    return (
+      text.includes("passing yards") &&
+      !isFirstHalfProp(prop)
+    );
+  }
+
+
+  function isReceivingYardsProp(prop) {
+    const text =
+      propSearchText(prop);
+
+    return (
+      text.includes("receiving yards") &&
+      !isFirstHalfProp(prop)
+    );
+  }
+
+
+  function isRushingYardsProp(prop) {
+    const text =
+      propSearchText(prop);
+
+    return (
+      text.includes("rushing yards") &&
+      !isFirstHalfProp(prop)
+    );
+  }
+
+
+  function isTouchdownProp(prop) {
+    const text =
+      propSearchText(prop);
+
+    return (
+      text.includes("touchdown") ||
+      text.includes("td scorer") ||
+      text.includes("to score")
+    );
+  }
+
+
+  function marketMatchesTarget(
+    prop,
+    target
+  ) {
+
+    if (
+      target.kambiType ===
+      "PASSING"
+    ) {
+      return isPassingYardsProp(prop);
+    }
+
+    if (
+      target.kambiType ===
+      "RECEIVING"
+    ) {
+      return isReceivingYardsProp(prop);
+    }
+
+    if (
+      target.kambiType ===
+      "RUSHING"
+    ) {
+      return isRushingYardsProp(prop);
+    }
+
+    if (
+      target.kambiType ===
+      "TOUCHDOWN"
+    ) {
+      return isTouchdownProp(prop);
+    }
+
+    return false;
+  }
+
+
+  function getThreshold(prop) {
+
+    const milestone =
+      clean(prop.milestone);
+
+    const milestoneMatch =
+      milestone.match(
+        /(\d+(?:\.\d+)?)\+/
+      );
+
+    if (milestoneMatch) {
+      return Number(
+        milestoneMatch[1]
+      );
+    }
+
+    const display =
+      clean(prop.displayMarket);
+
+    const displayMatch =
+      display.match(
+        /(\d+(?:\.\d+)?)\+/
+      );
+
+    if (displayMatch) {
+      return Number(
+        displayMatch[1]
+      );
+    }
+
+    return null;
+  }
+
+
+  function getMarketDisplay(prop) {
+
+    const display =
+      clean(prop.displayMarket);
+
+    if (display) {
+      return display;
+    }
+
+    const label =
+      clean(prop.marketLabel);
+
+    if (label) {
+      return label;
+    }
+
+    const shortLabel =
+      clean(prop.shortMarketLabel);
+
+    if (shortLabel) {
+      return shortLabel;
+    }
+
+    return clean(
+      prop.outcomeLabel
+    );
+  }
+
+
+  function getPlayerKambiProps(
+    target,
+    eventProps
+  ) {
+
+    const matches =
+      eventProps.filter(prop => {
+
+        if (
+          prop.resolution !==
+          "EXACT_ID_MATCH"
+        ) {
+          return false;
+        }
+
+        if (
+          clean(prop.status)
+            .toUpperCase() !==
+          "OPEN"
+        ) {
+          return false;
+        }
+
+        if (
+          !samePlayer(
+            target.player,
+            prop.player
+          )
+        ) {
+          return false;
+        }
+
+        return marketMatchesTarget(
+          prop,
+          target
+        );
+      });
+
+    /*
+      Protection against ambiguous abbreviated names.
+
+      If J.Taylor somehow matches two different
+      Kambi full names inside the same event,
+      we refuse the match.
+    */
+
+    const names =
+      [
+        ...new Set(
+          matches.map(prop =>
+            normalizePlayerName(
+              prop.player
+            )
+          )
+        )
+      ];
+
+    if (names.length > 1) {
+      return {
+        ambiguous: true,
+        props: []
+      };
+    }
+
+    return {
+      ambiguous: false,
+      props: matches
+    };
+  }
+
+
+  function chooseBestVolumeMarket(
+    target,
+    props
+  ) {
+
+    const ladder =
+      props
+        .map(prop => ({
+          prop,
+          threshold:
+            getThreshold(prop)
+        }))
+        .filter(item =>
+          Number.isFinite(
+            item.threshold
+          )
+        );
+
+    if (!ladder.length) {
+      return null;
+    }
+
+    const comparison =
+      Number(
+        target.comparisonValue
+      );
+
+    if (!Number.isFinite(comparison)) {
+      return ladder[0].prop;
+    }
+
+    /*
+      Choose the available Kambi milestone
+      nearest the player's War Room average.
+
+      This is a comparison point.
+      It is NOT being called a projected probability.
+    */
+
+    ladder.sort((a, b) => {
+
+      const aDistance =
+        Math.abs(
+          comparison -
+          a.threshold
+        );
+
+      const bDistance =
+        Math.abs(
+          comparison -
+          b.threshold
+        );
+
+      if (
+        aDistance !==
+        bDistance
+      ) {
+        return (
+          aDistance -
+          bDistance
+        );
+      }
+
+      return (
+        a.threshold -
+        b.threshold
+      );
+    });
+
+    return ladder[0].prop;
+  }
+
+
+  function chooseTouchdownMarket(
+    props
+  ) {
+
+    if (!props.length) {
+      return null;
+    }
+
+    /*
+      Prefer a simple touchdown scorer
+      market over specialized multi-TD
+      or period-specific markets.
+    */
+
+    const ranked =
+      [...props].sort((a, b) => {
+
+        const aText =
+          propSearchText(a);
+
+        const bText =
+          propSearchText(b);
+
+        function score(text) {
+
+          let value = 0;
+
+          if (
+            text.includes(
+              "anytime"
+            )
+          ) {
+            value += 10;
+          }
+
+          if (
+            text.includes(
+              "touchdown scorer"
+            )
+          ) {
+            value += 8;
+          }
+
+          if (
+            text.includes(
+              "to score"
+            )
+          ) {
+            value += 5;
+          }
+
+          if (
+            text.includes(
+              "first touchdown"
+            )
+          ) {
+            value -= 10;
+          }
+
+          if (
+            text.includes(
+              "last touchdown"
+            )
+          ) {
+            value -= 10;
+          }
+
+          if (
+            text.includes(
+              "2+"
+            ) ||
+            text.includes(
+              "3+"
+            )
+          ) {
+            value -= 8;
+          }
+
+          if (
+            text.includes(
+              "first half"
+            )
+          ) {
+            value -= 8;
+          }
+
+          return value;
+        }
+
+        return (
+          score(bText) -
+          score(aText)
+        );
+      });
+
+    return ranked[0];
+  }
+
+
+  function attachKambiMarket(
+    target,
+    eventProps
+  ) {
+
+    const lookup =
+      getPlayerKambiProps(
+        target,
+        eventProps
+      );
+
+    if (lookup.ambiguous) {
+
+      return {
+        ...target,
+
+        kambiStatus:
+          "AMBIGUOUS PLAYER MATCH",
+
+        kambiVerified: false,
+
+        kambiMarket: "",
+
+        kambiLine: "",
+
+        kambiPrice: "",
+
+        kambiPlayer: ""
+      };
+    }
+
+    if (!lookup.props.length) {
+
+      return {
+        ...target,
+
+        kambiStatus:
+          "NO VERIFIED KAMBI MARKET",
+
+        kambiVerified: false,
+
+        kambiMarket: "",
+
+        kambiLine: "",
+
+        kambiPrice: "",
+
+        kambiPlayer: ""
+      };
+    }
+
+
+    let selected = null;
+
+    if (
+      target.kambiType ===
+      "TOUCHDOWN"
+    ) {
+      selected =
+        chooseTouchdownMarket(
+          lookup.props
+        );
+    } else {
+      selected =
+        chooseBestVolumeMarket(
+          target,
+          lookup.props
+        );
+    }
+
+
+    if (!selected) {
+
+      return {
+        ...target,
+
+        kambiStatus:
+          "NO COMPARABLE KAMBI LINE",
+
+        kambiVerified: false,
+
+        kambiMarket: "",
+
+        kambiLine: "",
+
+        kambiPrice: "",
+
+        kambiPlayer: ""
+      };
+    }
+
+
+    const threshold =
+      getThreshold(selected);
+
+    const marketDisplay =
+      getMarketDisplay(selected);
+
+    const price =
+      formatOdds(
+        selected.americanOdds
+      );
+
+
+    let comparisonText = "";
+
+    if (
+      Number.isFinite(
+        target.comparisonValue
+      ) &&
+      Number.isFinite(
+        threshold
+      )
+    ) {
+
+      const difference =
+        target.comparisonValue -
+        threshold;
+
+      comparisonText =
+        `${target.comparisonLabel}: ` +
+        `${target.comparisonValue.toFixed(1)} | ` +
+        `Kambi milestone: ${threshold}+ | ` +
+        `Difference: ` +
+        `${difference >= 0 ? "+" : ""}` +
+        `${difference.toFixed(1)}`;
+    }
+
+
+    return {
+      ...target,
+
+      kambiStatus:
+        "VERIFIED KAMBI MARKET",
+
+      kambiVerified: true,
+
+      kambiMarket:
+        marketDisplay,
+
+      kambiLine:
+        clean(selected.milestone) ||
+        marketDisplay,
+
+      kambiPrice:
+        price,
+
+      kambiPlayer:
+        clean(selected.player),
+
+      kambiMarketId:
+        clean(selected.marketId),
+
+      kambiOutcomeId:
+        clean(selected.outcomeId),
+
+      comparisonText
+    };
+  }
+
+
+  // ============================================================
+  // BUILD KAMBI-CONNECTED TARGETS
+  // ============================================================
+
+  function buildConnectedTargets() {
+
+    const targets =
+      buildTargets();
+
+    if (!kambiData) {
+      return targets.map(target => ({
+        ...target,
+
+        kambiStatus:
+          "KAMBI DATA NOT LOADED",
+
+        kambiVerified: false
+      }));
+    }
+
+
+    const {
+      event,
+      props
+    } =
+      propsForSelectedEvent();
+
+
+    if (!event) {
+
+      return targets.map(target => ({
+        ...target,
+
+        kambiStatus:
+          "NO KAMBI EVENT FOR MATCHUP",
+
+        kambiVerified: false
+      }));
+    }
+
+
+    return targets.map(target =>
+      attachKambiMarket(
+        target,
+        props
+      )
+    );
+  }
+
+
+  // ============================================================
   // SAVE PLAYER TARGET
   // ============================================================
 
@@ -985,6 +2201,16 @@
     }
 
 
+    if (!target.kambiVerified) {
+
+      alert(
+        "This player does not have a verified Kambi market attached. It will not be saved as a sportsbook selection."
+      );
+
+      return;
+    }
+
+
     const record = {
 
       type:
@@ -996,28 +2222,46 @@
       matchup,
 
       market:
+        target.kambiMarket ||
         target.market,
 
       selection:
-        `${target.player} — ${target.team}`,
+        `${target.kambiPlayer || target.player} — ` +
+        `${target.kambiLine}`,
 
       sportsbookLine:
-        "CHECK LINE",
+        target.kambiLine,
 
       price:
-        "",
+        target.kambiPrice,
+
+      /*
+        IMPORTANT:
+        This remains a historical average/profile,
+        NOT a predictive player projection.
+      */
 
       warRoomProjection:
-        "",
+        Number.isFinite(
+          target.comparisonValue
+        )
+          ? `${target.comparisonLabel}: ` +
+            `${target.comparisonValue.toFixed(1)}`
+          : "Scoring opportunity profile",
 
       calculatedEdge:
-        "",
+        target.comparisonText || "",
 
       status:
-        "PROP TARGET — CHECK LINE",
+        "KAMBI VERIFIED — REVIEW",
 
       reason:
-        `${target.reason} ${target.evidence}`,
+        `${target.reason} ${target.evidence}` +
+        (
+          target.comparisonText
+            ? ` ${target.comparisonText}`
+            : ""
+        ),
 
       actualResult:
         "",
@@ -1109,11 +2353,104 @@
     index
   ) {
 
+    const verified =
+      target.kambiVerified;
+
+
+    const statusText =
+      verified
+        ? "🟢 VERIFIED KAMBI MARKET"
+        : `🟨 ${target.kambiStatus || "NO VERIFIED MARKET"}`;
+
+
+    const marketSection =
+      verified
+        ? `
+          <div class="player-receipt-kambi">
+
+            <strong>
+              Kambi Player:
+            </strong>
+            ${escapeHtml(
+              target.kambiPlayer
+            )}
+            <br>
+
+            <strong>
+              Kambi Market:
+            </strong>
+            ${escapeHtml(
+              target.kambiMarket
+            )}
+            <br>
+
+            <strong>
+              Kambi Line:
+            </strong>
+            ${escapeHtml(
+              target.kambiLine
+            )}
+            <br>
+
+            <strong>
+              American Price:
+            </strong>
+            ${escapeHtml(
+              target.kambiPrice || "—"
+            )}
+
+          </div>
+
+          ${
+            target.comparisonText
+              ? `
+                <div class="player-receipt-comparison">
+                  <strong>
+                    War Room Comparison:
+                  </strong>
+                  <br>
+                  ${escapeHtml(
+                    target.comparisonText
+                  )}
+                </div>
+              `
+              : ""
+          }
+        `
+        : `
+          <div class="player-receipt-line">
+            No verified Kambi market was attached.
+            The War Room will not invent one.
+          </div>
+        `;
+
+
+    const buttonSection =
+      verified
+        ? `
+          <button
+            type="button"
+            class="player-receipt-save"
+            data-target-index="${index}"
+          >
+            SAVE VERIFIED MARKET TO PLAYER RECEIPT
+          </button>
+        `
+        : "";
+
+
     return `
-      <div class="player-receipt-card">
+      <div class="
+        player-receipt-card
+        ${
+          verified
+            ? "player-receipt-verified"
+            : ""
+        }
+      ">
 
         <div class="player-receipt-status">
-          🟨 PROP TARGET — CHECK LINE
+          ${escapeHtml(statusText)}
         </div>
 
         <div class="player-receipt-label">
@@ -1125,9 +2462,13 @@
         </div>
 
         <div class="player-receipt-team">
-          ${escapeHtml(displayTeam(target.team))}
+          ${escapeHtml(
+            displayTeam(target.team)
+          )}
           vs
-          ${escapeHtml(displayTeam(target.opponent))}
+          ${escapeHtml(
+            displayTeam(target.opponent)
+          )}
         </div>
 
         <div class="player-receipt-market">
@@ -1135,27 +2476,24 @@
         </div>
 
         <div class="player-receipt-evidence">
-          <strong>War Room Evidence:</strong><br>
+          <strong>
+            War Room Evidence:
+          </strong>
+          <br>
           ${escapeHtml(target.evidence)}
         </div>
 
         <div class="player-receipt-reason">
-          <strong>Why it made the Receipt:</strong><br>
+          <strong>
+            Why it made the Receipt:
+          </strong>
+          <br>
           ${escapeHtml(target.reason)}
         </div>
 
-        <div class="player-receipt-line">
-          Sportsbook Prop Line:
-          <strong>CHECK LINE</strong>
-        </div>
+        ${marketSection}
 
-        <button
-          type="button"
-          class="player-receipt-save"
-          data-target-index="${index}"
-        >
-          SAVE TARGET TO PLAYER RECEIPT
-        </button>
+        ${buttonSection}
 
       </div>
     `;
@@ -1166,7 +2504,8 @@
   // RENDER PLAYER RECEIPT
   // ============================================================
 
-  function renderPlayerReceipt() {
+  async function renderPlayerReceipt() {
+
     const content =
       document.getElementById(
         "playerReceiptContent"
@@ -1193,8 +2532,18 @@
     }
 
 
+    content.innerHTML = `
+      <div class="player-receipt-empty">
+        Loading verified Kambi markets...
+      </div>
+    `;
+
+
+    await loadKambiData();
+
+
     const targets =
-      buildTargets();
+      buildConnectedTargets();
 
 
     if (!targets.length) {
@@ -1202,13 +2551,47 @@
       content.innerHTML = `
         <div class="player-receipt-empty">
           Player data has not loaded yet.
-          The Player Receipt will build automatically
-          when the QB, receiver, and rushing tables are ready.
         </div>
       `;
 
       return;
     }
+
+
+    const selectedEvent =
+      kambiData
+        ? findSelectedKambiEvent()
+        : null;
+
+
+    const eventMessage =
+      selectedEvent
+        ? `
+          <div class="player-receipt-kambi-event">
+            Kambi event:
+            <strong>
+              ${escapeHtml(
+                selectedEvent.name
+              )}
+            </strong>
+          </div>
+        `
+        : `
+          <div class="player-receipt-kambi-warning">
+            ${
+              kambiError
+                ? `Kambi data error: ${escapeHtml(kambiError)}`
+                : "No exact Kambi event was found for this selected matchup."
+            }
+          </div>
+        `;
+
+
+    const verifiedCount =
+      targets.filter(
+        target =>
+          target.kambiVerified
+      ).length;
 
 
     content.innerHTML = `
@@ -1217,11 +2600,32 @@
         ${escapeHtml(matchup)}
       </div>
 
+      ${eventMessage}
+
       <div class="player-receipt-note">
-        These are the strongest player opportunities
-        found in the current War Room data.
-        They are <strong>not official bets yet</strong>.
-        We still need the actual sportsbook prop line.
+
+        War Room identifies the player opportunity.
+        Kambi supplies the sportsbook market and price.
+
+        <br><br>
+
+        <strong>
+          ${verifiedCount}
+        </strong>
+        of
+        <strong>
+          ${targets.length}
+        </strong>
+        War Room targets currently have a verified
+        Kambi market attached.
+
+        <br><br>
+
+        A green card means the Kambi market and price
+        were matched to the player using the exact
+        event data. It does <strong>not</strong>
+        automatically mean the prop is a bet.
+
       </div>
 
       <div class="player-receipt-grid">
@@ -1284,7 +2688,6 @@
         "playerReceiptPanel"
       )
     ) {
-
       return;
     }
 
@@ -1306,9 +2709,8 @@
       </h2>
 
       <p>
-        The strongest QB, receiving, rushing,
-        and scoring-opportunity targets found
-        by Doc's NFL War Room.
+        War Room player opportunities matched
+        against verified Kambi NFL player markets.
       </p>
 
       <button
@@ -1324,11 +2726,6 @@
       ></div>
     `;
 
-
-    /*
-      Put Player Props Receipt directly
-      after the existing Game Receipt.
-    */
 
     const gameReceipt =
       document.getElementById(
@@ -1420,9 +2817,6 @@
         renderPlayerReceipt
       );
     }
-
-
-    renderPlayerReceipt();
   }
 
 
@@ -1437,7 +2831,6 @@
         "playerReceiptStyles"
       )
     ) {
-
       return;
     }
 
@@ -1480,7 +2873,23 @@
       .player-receipt-note {
         line-height: 1.5;
         margin-bottom: 16px;
-        opacity: 0.9;
+        opacity: 0.92;
+      }
+
+      .player-receipt-kambi-event {
+        margin-bottom: 12px;
+        padding: 10px 12px;
+        border-radius: 8px;
+        background:
+          rgba(53, 223, 147, 0.10);
+      }
+
+      .player-receipt-kambi-warning {
+        margin-bottom: 12px;
+        padding: 10px 12px;
+        border-radius: 8px;
+        background:
+          rgba(255, 210, 70, 0.10);
       }
 
       .player-receipt-grid {
@@ -1488,7 +2897,7 @@
         grid-template-columns:
           repeat(
             auto-fit,
-            minmax(260px, 1fr)
+            minmax(280px, 1fr)
           );
         gap: 14px;
       }
@@ -1503,6 +2912,13 @@
           rgba(255, 210, 70, 0.08);
       }
 
+      .player-receipt-card.player-receipt-verified {
+        border-color:
+          rgba(53, 223, 147, 0.85);
+        background:
+          rgba(53, 223, 147, 0.07);
+      }
+
       .player-receipt-status {
         display: inline-block;
         padding: 5px 9px;
@@ -1512,6 +2928,12 @@
         margin-bottom: 10px;
         background:
           rgba(255, 210, 70, 0.20);
+      }
+
+      .player-receipt-verified
+      .player-receipt-status {
+        background:
+          rgba(53, 223, 147, 0.20);
       }
 
       .player-receipt-label {
@@ -1541,9 +2963,25 @@
 
       .player-receipt-evidence,
       .player-receipt-reason,
-      .player-receipt-line {
-        line-height: 1.45;
-        margin-top: 10px;
+      .player-receipt-line,
+      .player-receipt-kambi,
+      .player-receipt-comparison {
+        line-height: 1.5;
+        margin-top: 12px;
+      }
+
+      .player-receipt-kambi {
+        padding: 12px;
+        border-radius: 8px;
+        background:
+          rgba(53, 223, 147, 0.10);
+      }
+
+      .player-receipt-comparison {
+        padding: 10px;
+        border-radius: 8px;
+        background:
+          rgba(255, 255, 255, 0.05);
       }
 
       .player-receipt-save {
@@ -1605,7 +3043,7 @@
         body._playerReceiptTimer =
           window.setTimeout(
             renderPlayerReceipt,
-            150
+            200
           );
       });
 
@@ -1637,13 +3075,14 @@
           return;
         }
 
+
         element.addEventListener(
           "change",
           () => {
 
             window.setTimeout(
               renderPlayerReceipt,
-              200
+              250
             );
           }
         );
@@ -1678,14 +3117,22 @@
     watchTeamSelectors();
 
 
+    /*
+      Begin loading Kambi in the background.
+      Do not block the rest of the War Room.
+    */
+
+    loadKambiData();
+
+
     window.setTimeout(
       renderPlayerReceipt,
-      500
+      600
     );
 
     window.setTimeout(
       renderPlayerReceipt,
-      1500
+      1800
     );
   }
 
