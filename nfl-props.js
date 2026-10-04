@@ -1,6 +1,6 @@
 /* =========================================================
    DOC'S NFL WAR ROOM
-   PLAYER PROP RESEARCH & RECORDS
+   PLAYER PROPS RECORDS — COMPLETE PREGAME SNAPSHOT
    ========================================================= */
 
 (() => {
@@ -45,18 +45,25 @@
   };
 
   function clean(value) {
-    return String(value ?? "").replace(/\s+/g, " ").trim();
+    return String(value ?? "")
+      .replace(/\s+/g, " ")
+      .trim();
   }
 
-  function getRows(bodyId) {
+  function rows(bodyId) {
     const body = document.getElementById(bodyId);
+
     if (!body) return [];
 
-    return Array.from(body.querySelectorAll("tr")).map(row =>
-      Array.from(row.querySelectorAll("td")).map(cell =>
-        clean(cell.textContent)
+    return Array.from(body.querySelectorAll("tr"))
+      .map(row =>
+        Array.from(row.querySelectorAll("td"))
+          .map(cell => clean(cell.textContent))
       )
-    );
+      .filter(row =>
+        row.length > 1 &&
+        !row[0].toLowerCase().includes("waiting")
+      );
   }
 
   function getMatchup() {
@@ -74,97 +81,35 @@
     };
   }
 
-  function receiverPlayers() {
-    return getRows("targetBody")
-      .filter(row => row.length >= 15)
-      .map(row => ({
-        team: row[0],
-        player: row[1],
-        positionGroup: "Receiver",
-        targets: row[2],
-        targetsPerGame: row[3],
-        receptions: row[4],
-        yards: row[5],
-        yardsPerGame: row[6],
-        yac: row[7],
-        yacPerReception: row[8],
-        twentyPlus: row[9],
-        explosiveRate: row[10],
-        catchRate: row[11],
-        redZone: row[12],
-        inside10: row[13],
-        touchdowns: row[14]
-      }));
+  function opponentFor(team, matchup) {
+    if (team === matchup.away) {
+      return matchup.home;
+    }
+
+    if (team === matchup.home) {
+      return matchup.away;
+    }
+
+    return "";
   }
 
-  function runningBackPlayers() {
-    return getRows("rushingBody")
-      .filter(row => row.length >= 11)
-      .map(row => ({
-        team: row[0],
-        player: row[1],
-        positionGroup: "Rusher",
-        games: row[2],
-        carries: row[3],
-        carriesPerGame: row[4],
-        rushingYards: row[5],
-        rushingYardsPerGame: row[6],
-        yardsPerCarry: row[7],
-        rushingTDs: row[8],
-        redZoneCarries: row[9],
-        inside10Carries: row[10]
-      }));
-  }
+  function getDefense(team) {
+    const row =
+      rows("defenseBody")
+        .find(r => r[0] === team);
 
-  function quarterbackPlayers() {
-    return getRows("qbPassingBody")
-      .filter(row => row.length >= 10)
-      .map(row => ({
-        team: row[0],
-        player: row[1],
-        positionGroup: "Quarterback",
-        attempts: row[2],
-        completions: row[3],
-        completionRate: row[4],
-        attemptsPerGame: row[5],
-        passingYards: row[6],
-        yardsPerAttempt: row[7],
-        passingTDs: row[8],
-        interceptions: row[9]
-      }));
-  }
-
-  function allPlayers() {
-    const map = new Map();
-
-    [
-      ...receiverPlayers(),
-      ...runningBackPlayers(),
-      ...quarterbackPlayers()
-    ].forEach(player => {
-      const key = `${player.team}|${player.player}`;
-
-      if (!map.has(key)) {
-        map.set(key, {
-          team: player.team,
-          player: player.player
-        });
-      }
-
-      Object.assign(map.get(key), player);
-    });
-
-    return Array.from(map.values());
-  }
-
-  function findDefense(team) {
-    const row = getRows("defenseBody")
-      .find(r => r[0] === team);
-
-    if (!row) return {};
+    if (!row) {
+      return {
+        games: "",
+        twentyPlusAllowed: "",
+        twentyPlusAllowedPerGame: "",
+        yacAllowed: "",
+        yacAllowedPerGame: ""
+      };
+    }
 
     return {
-      defenseGames: row[1] || "",
+      games: row[1] || "",
       twentyPlusAllowed: row[2] || "",
       twentyPlusAllowedPerGame: row[3] || "",
       yacAllowed: row[4] || "",
@@ -172,438 +117,422 @@
     };
   }
 
-  function selectedPlayer() {
-    const select =
-      document.getElementById("propPlayer");
+  function collectReceivers(matchup) {
+    return rows("targetBody")
+      .filter(row => row.length >= 15)
+      .map(row => {
+        const team = row[0];
+        const opponent =
+          opponentFor(team, matchup);
+        const defense =
+          getDefense(opponent);
 
-    if (!select) return null;
+        return {
+          type: "prop",
+          timestamp: "",
 
-    const [team, player] =
-      select.value.split("|||");
+          matchup:
+            `${matchup.awayCode} — ${matchup.away} @ ` +
+            `${matchup.homeCode} — ${matchup.home}`,
 
-    return allPlayers().find(
-      p => p.team === team && p.player === player
-    ) || null;
-  }
+          recordCategory: "Receiver",
 
-  function populatePropPlayers() {
-    const select =
-      document.getElementById("propPlayer");
+          team: team,
+          teamCode: teamCodes[team] || team,
 
-    if (!select) return;
+          opponent: opponent,
+          opponentCode:
+            teamCodes[opponent] || opponent,
 
-    const previous = select.value;
+          homeAway:
+            team === matchup.away
+              ? "Away"
+              : "Home",
 
-    select.innerHTML =
-      `<option value="">Select player</option>`;
+          player: row[1],
 
-    allPlayers()
-      .sort((a, b) => {
-        const teamCompare =
-          a.team.localeCompare(b.team);
+          targets: row[2],
+          targetsPerGame: row[3],
+          receptions: row[4],
+          receivingYards: row[5],
+          receivingYardsPerGame: row[6],
+          yac: row[7],
+          yacPerReception: row[8],
+          twentyPlusCatches: row[9],
+          explosiveRate: row[10],
+          catchRate: row[11],
+          redZoneTargets: row[12],
+          inside10Targets: row[13],
+          receivingTDs: row[14],
 
-        if (teamCompare !== 0) return teamCompare;
+          games: "",
+          carries: "",
+          carriesPerGame: "",
+          rushingYards: "",
+          rushingYardsPerGame: "",
+          yardsPerCarry: "",
+          rushingTDs: "",
+          redZoneCarries: "",
+          inside10Carries: "",
 
-        return a.player.localeCompare(b.player);
-      })
-      .forEach(p => {
-        const option =
-          document.createElement("option");
+          passAttempts: "",
+          completions: "",
+          completionRate: "",
+          passAttemptsPerGame: "",
+          passingYards: "",
+          yardsPerAttempt: "",
+          passingTDs: "",
+          interceptions: "",
 
-        option.value =
-          `${p.team}|||${p.player}`;
+          opponentDefenseGames:
+            defense.games,
 
-        option.textContent =
-          `${teamCodes[p.team] || p.team} — ${p.player}`;
+          opponent20PlusAllowed:
+            defense.twentyPlusAllowed,
 
-        select.appendChild(option);
+          opponent20PlusAllowedPerGame:
+            defense.twentyPlusAllowedPerGame,
+
+          opponentYACAllowed:
+            defense.yacAllowed,
+
+          opponentYACAllowedPerGame:
+            defense.yacAllowedPerGame,
+
+          propMarket: "",
+          sportsbookLine: "",
+          price: "",
+          warRoomProjection: "",
+          calculatedEdge: "",
+          verdict: "",
+          reason: "",
+
+          actualResult: "",
+          finalOutcome: "",
+          postgameNotes: ""
+        };
       });
-
-    if (
-      previous &&
-      Array.from(select.options)
-        .some(option => option.value === previous)
-    ) {
-      select.value = previous;
-    }
-
-    showPlayerResearch();
   }
 
-  function showPlayerResearch() {
-    const box =
-      document.getElementById("propResearch");
+  function collectRushers(matchup) {
+    return rows("rushingBody")
+      .filter(row => row.length >= 11)
+      .map(row => {
+        const team = row[0];
+        const opponent =
+          opponentFor(team, matchup);
+        const defense =
+          getDefense(opponent);
 
-    if (!box) return;
+        return {
+          type: "prop",
+          timestamp: "",
 
-    const p = selectedPlayer();
+          matchup:
+            `${matchup.awayCode} — ${matchup.away} @ ` +
+            `${matchup.homeCode} — ${matchup.home}`,
 
-    if (!p) {
-      box.innerHTML =
-        "Select a player to view War Room research.";
-      return;
-    }
+          recordCategory: "Rusher",
 
-    const matchup = getMatchup();
+          team: team,
+          teamCode: teamCodes[team] || team,
 
-    const opponent =
-      p.team === matchup.away
-        ? matchup.home
-        : matchup.away;
+          opponent: opponent,
+          opponentCode:
+            teamCodes[opponent] || opponent,
 
-    const defense = findDefense(opponent);
+          homeAway:
+            team === matchup.away
+              ? "Away"
+              : "Home",
 
-    const items = [];
+          player: row[1],
 
-    if (p.attempts)
-      items.push(`Pass Attempts: ${p.attempts}`);
+          targets: "",
+          targetsPerGame: "",
+          receptions: "",
+          receivingYards: "",
+          receivingYardsPerGame: "",
+          yac: "",
+          yacPerReception: "",
+          twentyPlusCatches: "",
+          explosiveRate: "",
+          catchRate: "",
+          redZoneTargets: "",
+          inside10Targets: "",
+          receivingTDs: "",
 
-    if (p.attemptsPerGame)
-      items.push(
-        `Pass Attempts/Game: ${p.attemptsPerGame}`
-      );
+          games: row[2],
+          carries: row[3],
+          carriesPerGame: row[4],
+          rushingYards: row[5],
+          rushingYardsPerGame: row[6],
+          yardsPerCarry: row[7],
+          rushingTDs: row[8],
+          redZoneCarries: row[9],
+          inside10Carries: row[10],
 
-    if (p.passingYards)
-      items.push(`Passing Yards: ${p.passingYards}`);
+          passAttempts: "",
+          completions: "",
+          completionRate: "",
+          passAttemptsPerGame: "",
+          passingYards: "",
+          yardsPerAttempt: "",
+          passingTDs: "",
+          interceptions: "",
 
-    if (p.yardsPerAttempt)
-      items.push(`Yards/Attempt: ${p.yardsPerAttempt}`);
+          opponentDefenseGames:
+            defense.games,
 
-    if (p.passingTDs)
-      items.push(`Passing TDs: ${p.passingTDs}`);
+          opponent20PlusAllowed:
+            defense.twentyPlusAllowed,
 
-    if (p.targets)
-      items.push(`Targets: ${p.targets}`);
+          opponent20PlusAllowedPerGame:
+            defense.twentyPlusAllowedPerGame,
 
-    if (p.targetsPerGame)
-      items.push(
-        `Targets/Game: ${p.targetsPerGame}`
-      );
+          opponentYACAllowed:
+            defense.yacAllowed,
 
-    if (p.receptions)
-      items.push(`Receptions: ${p.receptions}`);
+          opponentYACAllowedPerGame:
+            defense.yacAllowedPerGame,
 
-    if (p.yards)
-      items.push(`Receiving Yards: ${p.yards}`);
+          propMarket: "",
+          sportsbookLine: "",
+          price: "",
+          warRoomProjection: "",
+          calculatedEdge: "",
+          verdict: "",
+          reason: "",
 
-    if (p.yardsPerGame)
-      items.push(
-        `Receiving Yards/Game: ${p.yardsPerGame}`
-      );
-
-    if (p.twentyPlus)
-      items.push(`20+ Catches: ${p.twentyPlus}`);
-
-    if (p.redZone)
-      items.push(`Red Zone Targets: ${p.redZone}`);
-
-    if (p.inside10)
-      items.push(`Inside 10 Targets: ${p.inside10}`);
-
-    if (p.touchdowns)
-      items.push(`Receiving TDs: ${p.touchdowns}`);
-
-    if (p.carries)
-      items.push(`Carries: ${p.carries}`);
-
-    if (p.carriesPerGame)
-      items.push(
-        `Carries/Game: ${p.carriesPerGame}`
-      );
-
-    if (p.rushingYards)
-      items.push(
-        `Rushing Yards: ${p.rushingYards}`
-      );
-
-    if (p.rushingYardsPerGame)
-      items.push(
-        `Rushing Yards/Game: ${p.rushingYardsPerGame}`
-      );
-
-    if (p.yardsPerCarry)
-      items.push(
-        `Yards/Carry: ${p.yardsPerCarry}`
-      );
-
-    if (p.rushingTDs)
-      items.push(`Rushing TDs: ${p.rushingTDs}`);
-
-    if (p.redZoneCarries)
-      items.push(
-        `Red Zone Carries: ${p.redZoneCarries}`
-      );
-
-    if (p.inside10Carries)
-      items.push(
-        `Inside 10 Carries: ${p.inside10Carries}`
-      );
-
-    items.push(`Opponent: ${opponent}`);
-
-    if (defense.twentyPlusAllowedPerGame)
-      items.push(
-        `Opponent 20+ Allowed/Game: ` +
-        defense.twentyPlusAllowedPerGame
-      );
-
-    if (defense.yacAllowedPerGame)
-      items.push(
-        `Opponent YAC Allowed/Game: ` +
-        defense.yacAllowedPerGame
-      );
-
-    box.innerHTML = items
-      .map(item => `<div>${item}</div>`)
-      .join("");
+          actualResult: "",
+          finalOutcome: "",
+          postgameNotes: ""
+        };
+      });
   }
 
-  function buildPropRecord() {
-    const p = selectedPlayer();
+  function collectQuarterbacks(matchup) {
+    return rows("qbPassingBody")
+      .filter(row => row.length >= 10)
+      .map(row => {
+        const team = row[0];
+        const opponent =
+          opponentFor(team, matchup);
 
-    if (!p) {
-      throw new Error("Select a player.");
-    }
+        return {
+          type: "prop",
+          timestamp: "",
 
-    const matchup = getMatchup();
+          matchup:
+            `${matchup.awayCode} — ${matchup.away} @ ` +
+            `${matchup.homeCode} — ${matchup.home}`,
 
-    const opponent =
-      p.team === matchup.away
-        ? matchup.home
-        : matchup.away;
+          recordCategory: "Quarterback",
 
-    const defense = findDefense(opponent);
+          team: team,
+          teamCode: teamCodes[team] || team,
 
-    const market =
-      clean(
-        document.getElementById("propMarket")?.value
-      );
+          opponent: opponent,
+          opponentCode:
+            teamCodes[opponent] || opponent,
 
-    const line =
-      clean(
-        document.getElementById("propLine")?.value
-      );
+          homeAway:
+            team === matchup.away
+              ? "Away"
+              : "Home",
 
-    const price =
-      clean(
-        document.getElementById("propPrice")?.value
-      );
+          player: row[1],
 
-    const projection =
-      clean(
-        document.getElementById("propProjection")?.value
-      );
+          targets: "",
+          targetsPerGame: "",
+          receptions: "",
+          receivingYards: "",
+          receivingYardsPerGame: "",
+          yac: "",
+          yacPerReception: "",
+          twentyPlusCatches: "",
+          explosiveRate: "",
+          catchRate: "",
+          redZoneTargets: "",
+          inside10Targets: "",
+          receivingTDs: "",
 
-    const edge =
-      clean(
-        document.getElementById("propEdge")?.value
-      );
+          games: "",
+          carries: "",
+          carriesPerGame: "",
+          rushingYards: "",
+          rushingYardsPerGame: "",
+          yardsPerCarry: "",
+          rushingTDs: "",
+          redZoneCarries: "",
+          inside10Carries: "",
 
-    const verdict =
-      clean(
-        document.getElementById("propVerdict")?.value
-      );
+          passAttempts: row[2],
+          completions: row[3],
+          completionRate: row[4],
+          passAttemptsPerGame: row[5],
+          passingYards: row[6],
+          yardsPerAttempt: row[7],
+          passingTDs: row[8],
+          interceptions: row[9],
 
-    const reason =
-      clean(
-        document.getElementById("propReason")?.value
-      );
+          opponentDefenseGames: "",
+          opponent20PlusAllowed: "",
+          opponent20PlusAllowedPerGame: "",
+          opponentYACAllowed: "",
+          opponentYACAllowedPerGame: "",
 
-    if (!market)
-      throw new Error("Select a prop market.");
+          propMarket: "",
+          sportsbookLine: "",
+          price: "",
+          warRoomProjection: "",
+          calculatedEdge: "",
+          verdict: "",
+          reason: "",
 
-    if (!line)
-      throw new Error("Enter the sportsbook line.");
-
-    if (!verdict)
-      throw new Error("Select QUALIFY, LEAN, or PASS.");
-
-    return {
-      type: "prop",
-      timestamp: "",
-
-      matchup:
-        `${matchup.awayCode} — ${matchup.away} @ ` +
-        `${matchup.homeCode} — ${matchup.home}`,
-
-      team: p.team,
-      teamCode: teamCodes[p.team] || p.team,
-
-      opponent: opponent,
-      opponentCode:
-        teamCodes[opponent] || opponent,
-
-      homeAway:
-        p.team === matchup.away ? "Away" : "Home",
-
-      player: p.player,
-      positionGroup: p.positionGroup || "",
-
-      market: market,
-      sportsbookLine: line,
-      price: price,
-
-      warRoomProjection: projection,
-      calculatedEdge: edge,
-
-      games: p.games || "",
-
-      passAttempts: p.attempts || "",
-      completions: p.completions || "",
-      completionRate: p.completionRate || "",
-      passAttemptsPerGame:
-        p.attemptsPerGame || "",
-      passingYards: p.passingYards || "",
-      yardsPerAttempt: p.yardsPerAttempt || "",
-      passingTDs: p.passingTDs || "",
-      interceptions: p.interceptions || "",
-
-      targets: p.targets || "",
-      targetsPerGame: p.targetsPerGame || "",
-      receptions: p.receptions || "",
-      receivingYards: p.yards || "",
-      receivingYardsPerGame:
-        p.yardsPerGame || "",
-      yac: p.yac || "",
-      yacPerReception:
-        p.yacPerReception || "",
-      twentyPlusCatches: p.twentyPlus || "",
-      explosiveRate: p.explosiveRate || "",
-      catchRate: p.catchRate || "",
-      redZoneTargets: p.redZone || "",
-      inside10Targets: p.inside10 || "",
-      receivingTDs: p.touchdowns || "",
-
-      carries: p.carries || "",
-      carriesPerGame: p.carriesPerGame || "",
-      rushingYards: p.rushingYards || "",
-      rushingYardsPerGame:
-        p.rushingYardsPerGame || "",
-      yardsPerCarry: p.yardsPerCarry || "",
-      rushingTDs: p.rushingTDs || "",
-      redZoneCarries: p.redZoneCarries || "",
-      inside10Carries:
-        p.inside10Carries || "",
-
-      opponentDefenseGames:
-        defense.defenseGames || "",
-
-      opponent20PlusAllowed:
-        defense.twentyPlusAllowed || "",
-
-      opponent20PlusAllowedPerGame:
-        defense.twentyPlusAllowedPerGame || "",
-
-      opponentYACAllowed:
-        defense.yacAllowed || "",
-
-      opponentYACAllowedPerGame:
-        defense.yacAllowedPerGame || "",
-
-      verdict: verdict,
-      reason: reason,
-
-      actualResult: "",
-      finalOutcome: "",
-      postgameNotes: ""
-    };
+          actualResult: "",
+          finalOutcome: "",
+          postgameNotes: ""
+        };
+      });
   }
 
-  async function saveProp() {
-    const button =
-      document.getElementById("savePropRecord");
-
-    const status =
-      document.getElementById("propSaveStatus");
-
-    try {
-      button.disabled = true;
-      button.textContent = "SAVING PROP...";
-
-      const record = buildPropRecord();
-
-      status.textContent =
-        "Saving player prop research...";
-
-      const response = await fetch(RECORDS_URL, {
+  async function postRecord(record) {
+    const response =
+      await fetch(RECORDS_URL, {
         method: "POST",
+
         headers: {
           "Content-Type":
             "text/plain;charset=utf-8"
         },
+
         body: JSON.stringify(record)
       });
 
-      const result = await response.json();
+    const result =
+      await response.json();
 
-      if (result.status !== "success") {
+    if (result.status !== "success") {
+      throw new Error(
+        result.message ||
+        "Player Props save was not confirmed."
+      );
+    }
+
+    return result;
+  }
+
+  async function savePlayerSnapshot() {
+    const button =
+      document.getElementById(
+        "savePlayerSnapshot"
+      );
+
+    const status =
+      document.getElementById(
+        "playerSnapshotStatus"
+      );
+
+    try {
+      const matchup = getMatchup();
+
+      if (
+        !matchup.away ||
+        !matchup.home ||
+        matchup.away === matchup.home
+      ) {
         throw new Error(
-          result.message ||
-          "Player Props did not confirm save."
+          "Analyze two different teams first."
         );
       }
 
-      status.textContent =
-        `SAVED: ${record.player} — ` +
-        `${record.market} ${record.sportsbookLine}`;
+      const receivers =
+        collectReceivers(matchup);
 
-      button.textContent = "PROP SAVED";
+      const rushers =
+        collectRushers(matchup);
+
+      const quarterbacks =
+        collectQuarterbacks(matchup);
+
+      const records = [
+        ...quarterbacks,
+        ...receivers,
+        ...rushers
+      ];
+
+      if (!records.length) {
+        throw new Error(
+          "No player statistics are loaded."
+        );
+      }
+
+      button.disabled = true;
+      button.textContent =
+        "SAVING PLAYER SNAPSHOT...";
+
+      status.textContent =
+        `Saving ${records.length} pregame ` +
+        `player records...`;
+
+      let saved = 0;
+
+      for (const record of records) {
+        await postRecord(record);
+
+        saved += 1;
+
+        status.textContent =
+          `Saving player records: ` +
+          `${saved} of ${records.length}`;
+      }
+
+      status.textContent =
+        `SAVED ${saved} PLAYER RECORDS — ` +
+        `${matchup.awayCode} @ ` +
+        `${matchup.homeCode}`;
+
+      button.textContent =
+        "PLAYER SNAPSHOT SAVED";
 
     } catch (error) {
-      console.error("Player Props error:", error);
+      console.error(
+        "Player snapshot error:",
+        error
+      );
 
       status.textContent =
         "SAVE FAILED: " + error.message;
 
       button.textContent =
-        "SAVE PLAYER PROP";
+        "SAVE PLAYER SNAPSHOT";
 
     } finally {
       button.disabled = false;
     }
   }
 
-  function clearPropForm() {
-    [
-      "propLine",
-      "propPrice",
-      "propProjection",
-      "propEdge",
-      "propReason"
-    ].forEach(id => {
-      const element =
-        document.getElementById(id);
-
-      if (element) element.value = "";
-    });
-
-    const market =
-      document.getElementById("propMarket");
-
-    const verdict =
-      document.getElementById("propVerdict");
-
-    if (market) market.value = "";
-    if (verdict) verdict.value = "";
-
-    const status =
-      document.getElementById("propSaveStatus");
-
-    if (status)
-      status.textContent =
-        "Ready for another prop.";
-  }
-
-  function createPropsPanel() {
-    if (document.getElementById("playerPropsPanel")) {
+  function createPlayerRecordsPanel() {
+    if (
+      document.getElementById(
+        "playerRecordsPanel"
+      )
+    ) {
       return;
     }
 
     const recordsPanel =
-      document.getElementById("recordsBookPanel");
+      document.getElementById(
+        "recordsBookPanel"
+      );
 
     if (!recordsPanel) {
-      setTimeout(createPropsPanel, 250);
+      setTimeout(
+        createPlayerRecordsPanel,
+        250
+      );
+
       return;
     }
 
@@ -611,185 +540,29 @@
       document.createElement("div");
 
     panel.className = "panel";
-    panel.id = "playerPropsPanel";
+    panel.id = "playerRecordsPanel";
 
     panel.innerHTML = `
-      <h2>Player Props Research</h2>
+      <h2>Player Records Snapshot</h2>
 
       <p class="note">
-        Research and record one player market at a time.
-        Saving research does not automatically place a
-        play on Doc's Receipt.
+        Save the complete pregame quarterback,
+        receiver and rushing statistics currently
+        displayed in Doc's NFL War Room.
       </p>
 
-      <label for="propPlayer">Player</label>
-      <select id="propPlayer">
-        <option value="">Select player</option>
-      </select>
-
-      <div
-        id="propResearch"
-        class="note"
-        style="margin-top:15px; line-height:1.8;"
-      >
-        Select a player to view War Room research.
-      </div>
-
-      <label for="propMarket">Prop Market</label>
-      <select id="propMarket">
-        <option value="">Select market</option>
-
-        <option value="Passing Yards">
-          Passing Yards
-        </option>
-
-        <option value="Passing Attempts">
-          Passing Attempts
-        </option>
-
-        <option value="Passing TDs">
-          Passing TDs
-        </option>
-
-        <option value="Interceptions">
-          Interceptions
-        </option>
-
-        <option value="Rushing Yards">
-          Rushing Yards
-        </option>
-
-        <option value="Rushing Attempts">
-          Rushing Attempts
-        </option>
-
-        <option value="Receiving Yards">
-          Receiving Yards
-        </option>
-
-        <option value="Receptions">
-          Receptions
-        </option>
-
-        <option value="Longest Reception">
-          Longest Reception
-        </option>
-
-        <option value="Anytime TD">
-          Anytime TD
-        </option>
-
-        <option value="Other">
-          Other
-        </option>
-      </select>
-
-      <label for="propLine">
-        Sportsbook Line / Target
-      </label>
-      <input
-        id="propLine"
-        type="text"
-        placeholder="Example: Over 72.5"
-        style="
-          width:100%;
-          padding:12px;
-          border-radius:7px;
-          font-size:16px;
-        "
-      >
-
-      <label for="propPrice">
-        Price / Odds
-      </label>
-      <input
-        id="propPrice"
-        type="text"
-        placeholder="Example: -110"
-        style="
-          width:100%;
-          padding:12px;
-          border-radius:7px;
-          font-size:16px;
-        "
-      >
-
-      <label for="propProjection">
-        War Room Projection / Target
-      </label>
-      <input
-        id="propProjection"
-        type="text"
-        placeholder="Enter only when supported"
-        style="
-          width:100%;
-          padding:12px;
-          border-radius:7px;
-          font-size:16px;
-        "
-      >
-
-      <label for="propEdge">
-        Calculated Edge
-      </label>
-      <input
-        id="propEdge"
-        type="text"
-        placeholder="Example: +8.4 yards"
-        style="
-          width:100%;
-          padding:12px;
-          border-radius:7px;
-          font-size:16px;
-        "
-      >
-
-      <label for="propVerdict">
-        War Room Verdict
-      </label>
-      <select id="propVerdict">
-        <option value="">Select verdict</option>
-        <option value="QUALIFY">QUALIFY</option>
-        <option value="LEAN">LEAN</option>
-        <option value="PASS">PASS</option>
-      </select>
-
-      <label for="propReason">
-        Reason / Supporting Signals
-      </label>
-
-      <textarea
-        id="propReason"
-        rows="4"
-        placeholder="Why does this qualify, lean, or pass?"
-        style="
-          width:100%;
-          padding:12px;
-          border-radius:7px;
-          font-size:16px;
-          resize:vertical;
-        "
-      ></textarea>
-
       <button
-        id="savePropRecord"
+        id="savePlayerSnapshot"
         type="button"
       >
-        SAVE PLAYER PROP
-      </button>
-
-      <button
-        id="clearPropForm"
-        type="button"
-      >
-        CLEAR FOR NEXT PROP
+        SAVE PLAYER SNAPSHOT
       </button>
 
       <p
-        id="propSaveStatus"
+        id="playerSnapshotStatus"
         class="status"
       >
-        No player prop saved yet.
+        No player snapshot saved yet.
       </p>
     `;
 
@@ -799,57 +572,22 @@
     );
 
     document
-      .getElementById("propPlayer")
-      .addEventListener(
-        "change",
-        showPlayerResearch
-      );
-
-    document
-      .getElementById("savePropRecord")
+      .getElementById(
+        "savePlayerSnapshot"
+      )
       .addEventListener(
         "click",
-        saveProp
+        savePlayerSnapshot
       );
-
-    document
-      .getElementById("clearPropForm")
-      .addEventListener(
-        "click",
-        clearPropForm
-      );
-
-    populatePropPlayers();
-
-    const observer =
-      new MutationObserver(() => {
-        populatePropPlayers();
-      });
-
-    [
-      "targetBody",
-      "rushingBody",
-      "qbPassingBody"
-    ].forEach(id => {
-      const element =
-        document.getElementById(id);
-
-      if (element) {
-        observer.observe(element, {
-          childList: true,
-          subtree: true
-        });
-      }
-    });
   }
 
   if (document.readyState === "loading") {
     document.addEventListener(
       "DOMContentLoaded",
-      createPropsPanel
+      createPlayerRecordsPanel
     );
   } else {
-    createPropsPanel();
+    createPlayerRecordsPanel();
   }
 
 })();
