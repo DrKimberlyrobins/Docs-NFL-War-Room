@@ -10,45 +10,16 @@ CBS_URL = "https://www.cbssports.com/nfl/odds/"
 OUTPUT_FILE = Path("data/sportsbook-2026.json")
 
 
-# ---------------------------------------------------------
-# TEAM INFORMATION
-# ---------------------------------------------------------
-
 TEAM_CODES = {
-    "ARI": "ARI",
-    "ATL": "ATL",
-    "BAL": "BAL",
-    "BUF": "BUF",
-    "CAR": "CAR",
-    "CHI": "CHI",
-    "CIN": "CIN",
-    "CLE": "CLE",
-    "DAL": "DAL",
-    "DEN": "DEN",
-    "DET": "DET",
-    "GB": "GB",
-    "HOU": "HOU",
-    "IND": "IND",
-    "JAX": "JAX",
-    "JAC": "JAX",
-    "KC": "KC",
-    "LV": "LV",
-    "LAC": "LAC",
-    "LAR": "LA",
-    "LA": "LA",
-    "MIA": "MIA",
-    "MIN": "MIN",
-    "NE": "NE",
-    "NO": "NO",
-    "NYG": "NYG",
-    "NYJ": "NYJ",
-    "PHI": "PHI",
-    "PIT": "PIT",
-    "SF": "SF",
-    "SEA": "SEA",
-    "TB": "TB",
-    "TEN": "TEN",
-    "WAS": "WAS"
+    "ARI": "ARI", "ATL": "ATL", "BAL": "BAL", "BUF": "BUF",
+    "CAR": "CAR", "CHI": "CHI", "CIN": "CIN", "CLE": "CLE",
+    "DAL": "DAL", "DEN": "DEN", "DET": "DET", "GB": "GB",
+    "HOU": "HOU", "IND": "IND", "JAX": "JAX", "JAC": "JAX",
+    "KC": "KC", "LV": "LV", "LAC": "LAC", "LAR": "LA",
+    "LA": "LA", "MIA": "MIA", "MIN": "MIN", "NE": "NE",
+    "NO": "NO", "NYG": "NYG", "NYJ": "NYJ", "PHI": "PHI",
+    "PIT": "PIT", "SF": "SF", "SEA": "SEA", "TB": "TB",
+    "TEN": "TEN", "WAS": "WAS"
 }
 
 
@@ -88,15 +59,6 @@ TEAM_NAMES = {
 }
 
 
-def team_label(code):
-    name = TEAM_NAMES.get(code, code)
-    return f"{code} — {name}"
-
-
-# ---------------------------------------------------------
-# TEXT / NUMBER HELPERS
-# ---------------------------------------------------------
-
 def clean_text(value):
     return " ".join(str(value).split())
 
@@ -121,73 +83,8 @@ def parse_number(value):
         return None
 
 
-def first_number(text):
-    if text is None:
-        return None
-
-    text = clean_text(text)
-
-    match = re.search(
-        r"(?<!\w)([+-]?\d+(?:\.\d+)?)",
-        text
-    )
-
-    if not match:
-        return None
-
-    return parse_number(match.group(1))
-
-
-def split_line_price(text):
-    """
-    Examples:
-        +4.5 -110
-        -4.5 -106
-        o46.5 -108
-        u46.5 -110
-    """
-
-    if text is None:
-        return None, None
-
-    text = clean_text(text)
-
-    match = re.search(
-        r"([ou]?[+-]?\d+(?:\.\d+)?)\s+([+-]\d+)",
-        text,
-        re.IGNORECASE
-    )
-
-    if match:
-        line_text = re.sub(
-            r"^[ou]",
-            "",
-            match.group(1),
-            flags=re.IGNORECASE
-        )
-
-        return (
-            parse_number(line_text),
-            parse_number(match.group(2))
-        )
-
-    line_match = re.search(
-        r"([ou]?[+-]?\d+(?:\.\d+)?)",
-        text,
-        re.IGNORECASE
-    )
-
-    if not line_match:
-        return None, None
-
-    line_text = re.sub(
-        r"^[ou]",
-        "",
-        line_match.group(1),
-        flags=re.IGNORECASE
-    )
-
-    return parse_number(line_text), None
+def team_label(code):
+    return f"{code} — {TEAM_NAMES.get(code, code)}"
 
 
 def find_team_code(text):
@@ -201,22 +98,13 @@ def find_team_code(text):
     return TEAM_CODES.get(first_word)
 
 
-# ---------------------------------------------------------
-# CBS OPEN COLUMN
-# ---------------------------------------------------------
-
-def classify_open_value(text):
+def split_line_price(text):
     """
-    CBS places two kinds of information in the Open column.
-
-    Examples:
-
-        o47.5  -> opening total
-        u47.5  -> opening total
-
-        +3.5   -> opening spread
-        -3.5   -> opening spread
-        PK     -> opening spread of 0
+    Handles:
+      -3.5 -122
+      +4.5 -114
+      o47.5 -105
+      u47.5 -112
     """
 
     if text is None:
@@ -224,11 +112,46 @@ def classify_open_value(text):
 
     text = clean_text(text)
 
-    if not text:
+    match = re.search(
+        r"([ou]?[+-]?\d+(?:\.\d+)?)\s+([+-]\d+)",
+        text,
+        re.IGNORECASE
+    )
+
+    if not match:
         return None, None
 
+    line_text = re.sub(
+        r"^[ou]",
+        "",
+        match.group(1),
+        flags=re.IGNORECASE
+    )
+
+    line = parse_number(line_text)
+    price = parse_number(match.group(2))
+
+    return line, price
+
+
+def classify_open(text):
+    """
+    CBS Open column examples:
+
+      o47.5 -106
+      +3.5 -108
+
+    Returns:
+      type, line, price
+    """
+
+    if text is None:
+        return None, None, None
+
+    text = clean_text(text)
+
     total_match = re.search(
-        r"\b[ou]\s*([0-9]+(?:\.[0-9]+)?)",
+        r"\b[ou]\s*([0-9]+(?:\.[0-9]+)?)\s+([+-]\d+)",
         text,
         re.IGNORECASE
     )
@@ -236,36 +159,58 @@ def classify_open_value(text):
     if total_match:
         return (
             "total",
-            parse_number(total_match.group(1))
+            parse_number(total_match.group(1)),
+            parse_number(total_match.group(2))
         )
 
-    if re.search(
-        r"\b(?:PK|PICK)\b",
-        text,
-        re.IGNORECASE
-    ):
-        return "spread", 0.0
-
     spread_match = re.search(
-        r"(?<!\w)([+-]\d+(?:\.\d+)?)",
+        r"(?<!\w)([+-]\d+(?:\.\d+)?)\s+([+-]\d+)",
         text
     )
 
     if spread_match:
         return (
             "spread",
-            parse_number(spread_match.group(1))
+            parse_number(spread_match.group(1)),
+            parse_number(spread_match.group(2))
         )
 
-    return None, None
+    pk_match = re.search(
+        r"\b(?:PK|PICK)\b(?:\s+([+-]\d+))?",
+        text,
+        re.IGNORECASE
+    )
+
+    if pk_match:
+        price = (
+            parse_number(pk_match.group(1))
+            if pk_match.group(1)
+            else None
+        )
+
+        return "spread", 0.0, price
+
+    return None, None, None
 
 
-# ---------------------------------------------------------
-# DOWNLOAD CBS
-# ---------------------------------------------------------
+def first_number(text):
+    if text is None:
+        return None
+
+    text = clean_text(text)
+
+    match = re.search(
+        r"(?<!\w)([+-]\d+)",
+        text
+    )
+
+    if not match:
+        return None
+
+    return parse_number(match.group(1))
+
 
 def fetch_cbs():
-
     headers = {
         "User-Agent": (
             "Mozilla/5.0 "
@@ -287,16 +232,10 @@ def fetch_cbs():
     return response.text
 
 
-# ---------------------------------------------------------
-# EXTRACT TEAM ROWS
-# ---------------------------------------------------------
-
 def extract_rows(table):
-
     rows = []
 
     for row in table.find_all("tr"):
-
         cells = row.find_all(["td", "th"])
 
         values = [
@@ -322,12 +261,7 @@ def extract_rows(table):
     return rows
 
 
-# ---------------------------------------------------------
-# BUILD GAME DATA
-# ---------------------------------------------------------
-
 def collect_games(html):
-
     soup = BeautifulSoup(
         html,
         "html.parser"
@@ -343,11 +277,7 @@ def collect_games(html):
         if len(team_rows) < 2:
             continue
 
-        for i in range(
-            0,
-            len(team_rows) - 1,
-            2
-        ):
+        for i in range(0, len(team_rows) - 1, 2):
 
             away_row = team_rows[i]
             home_row = team_rows[i + 1]
@@ -372,80 +302,81 @@ def collect_games(html):
             ):
                 continue
 
-
-            # -------------------------------------------------
-            # CBS TABLE STRUCTURE
-            #
+            # CBS:
             # Team | Final | Open | Spread | ML | Total
-            #
-            # -4 = Open
-            # -3 = Current Spread
-            # -2 = Current Moneyline
-            # -1 = Current Total
-            # -------------------------------------------------
 
             away_open_text = away_values[-4]
             home_open_text = home_values[-4]
 
             (
                 away_open_type,
-                away_open_value
-            ) = classify_open_value(
-                away_open_text
-            )
+                away_open_value,
+                away_open_price
+            ) = classify_open(away_open_text)
 
             (
                 home_open_type,
-                home_open_value
-            ) = classify_open_value(
-                home_open_text
-            )
+                home_open_value,
+                home_open_price
+            ) = classify_open(home_open_text)
 
 
-            # -------------------------------------------------
-            # OPENING TOTAL / SPREAD
-            # -------------------------------------------------
-
-            opening_total = None
+            # ---------------------------------------------
+            # OPENING SPREAD
+            # ---------------------------------------------
 
             opening_spread_away = None
             opening_spread_home = None
 
-
-            if away_open_type == "total":
-                opening_total = away_open_value
-
-            if home_open_type == "total":
-                opening_total = home_open_value
+            opening_spread_price_away = None
+            opening_spread_price_home = None
 
 
             if away_open_type == "spread":
 
-                opening_spread_away = (
-                    away_open_value
-                )
+                opening_spread_away = away_open_value
+                opening_spread_price_away = away_open_price
 
                 if away_open_value is not None:
-                    opening_spread_home = (
-                        -away_open_value
-                    )
+                    opening_spread_home = -away_open_value
 
 
             if home_open_type == "spread":
 
-                opening_spread_home = (
-                    home_open_value
-                )
+                opening_spread_home = home_open_value
+                opening_spread_price_home = home_open_price
 
                 if home_open_value is not None:
-                    opening_spread_away = (
-                        -home_open_value
-                    )
+                    opening_spread_away = -home_open_value
 
 
-            # -------------------------------------------------
+            # IMPORTANT:
+            # CBS may only display the opening spread price
+            # on the row containing the displayed opener.
+            # We do NOT invent the opposite side's juice.
+
+
+            # ---------------------------------------------
+            # OPENING TOTAL
+            # ---------------------------------------------
+
+            opening_total = None
+            opening_total_price = None
+
+
+            if away_open_type == "total":
+                opening_total = away_open_value
+                opening_total_price = away_open_price
+
+
+            if home_open_type == "total":
+                opening_total = home_open_value
+                opening_total_price = home_open_price
+
+
+            # ---------------------------------------------
             # CURRENT SPREAD
-            # -------------------------------------------------
+            # ---------------------------------------------
 
             (
                 away_spread,
@@ -462,9 +393,9 @@ def collect_games(html):
             )
 
 
-            # -------------------------------------------------
+            # ---------------------------------------------
             # CURRENT MONEYLINE
-            # -------------------------------------------------
+            # ---------------------------------------------
 
             away_ml = first_number(
                 away_values[-2]
@@ -475,9 +406,9 @@ def collect_games(html):
             )
 
 
-            # -------------------------------------------------
+            # ---------------------------------------------
             # CURRENT TOTAL
-            # -------------------------------------------------
+            # ---------------------------------------------
 
             (
                 away_total,
@@ -494,32 +425,22 @@ def collect_games(html):
             )
 
 
-            # -------------------------------------------------
-            # VALIDATION
-            # -------------------------------------------------
-
             if (
-                away_spread is None and
-                home_spread is None and
-                away_ml is None and
-                home_ml is None and
-                away_total is None and
-                home_total is None
+                away_spread is None
+                and home_spread is None
+                and away_ml is None
+                and home_ml is None
+                and away_total is None
+                and home_total is None
             ):
                 continue
 
 
-            # -------------------------------------------------
-            # GAME RECORD
-            # -------------------------------------------------
-
             game = {
 
-                # Short codes remain available to the JavaScript.
                 "away": away,
                 "home": home,
 
-                # Full names for human-readable displays.
                 "awayName": TEAM_NAMES.get(
                     away,
                     away
@@ -530,7 +451,6 @@ def collect_games(html):
                     home
                 ),
 
-                # Combined labels for Records Book / future use.
                 "awayLabel": team_label(away),
                 "homeLabel": team_label(home),
 
@@ -543,7 +463,7 @@ def collect_games(html):
 
                     "away": {
                         "open": opening_spread_away,
-                        "openPrice": None,
+                        "openPrice": opening_spread_price_away,
                         "current": away_spread,
                         "currentPrice": away_spread_price,
                         "publicBet": None
@@ -551,7 +471,7 @@ def collect_games(html):
 
                     "home": {
                         "open": opening_spread_home,
-                        "openPrice": None,
+                        "openPrice": opening_spread_price_home,
                         "current": home_spread,
                         "currentPrice": home_spread_price,
                         "publicBet": None
@@ -562,13 +482,17 @@ def collect_games(html):
 
                     "away": {
                         "open": None,
+                        "openPrice": None,
                         "current": away_ml,
+                        "currentPrice": away_ml,
                         "publicBet": None
                     },
 
                     "home": {
                         "open": None,
+                        "openPrice": None,
                         "current": home_ml,
+                        "currentPrice": home_ml,
                         "publicBet": None
                     }
                 },
@@ -577,7 +501,7 @@ def collect_games(html):
 
                     "over": {
                         "open": opening_total,
-                        "openPrice": None,
+                        "openPrice": opening_total_price,
                         "current": away_total,
                         "currentPrice": away_total_price,
                         "publicBet": None
@@ -594,38 +518,26 @@ def collect_games(html):
             }
 
             games.append(game)
-
             seen_games.add(game_key)
 
     return games
 
 
-# ---------------------------------------------------------
-# MAIN
-# ---------------------------------------------------------
-
 def main():
 
-    print(
-        "Downloading CBS NFL odds..."
-    )
+    print("Downloading CBS NFL odds...")
 
     html = fetch_cbs()
 
-    print(
-        "Parsing CBS sportsbook data..."
-    )
+    print("Parsing CBS sportsbook data...")
 
     games = collect_games(html)
 
     if not games:
-
         raise RuntimeError(
-            "No NFL games were found on the "
-            "CBS odds page. Existing sportsbook "
-            "data was NOT overwritten."
+            "No NFL games were found. "
+            "Existing sportsbook data was NOT overwritten."
         )
-
 
     output = {
         "source": "CBS Sports",
@@ -633,12 +545,10 @@ def main():
         "games": games
     }
 
-
     OUTPUT_FILE.parent.mkdir(
         parents=True,
         exist_ok=True
     )
-
 
     OUTPUT_FILE.write_text(
         json.dumps(
@@ -648,50 +558,27 @@ def main():
         encoding="utf-8"
     )
 
-
     print(
         f"Saved {len(games)} games "
         f"to {OUTPUT_FILE}"
     )
 
-
-    # -----------------------------------------------------
-    # FIRST WAR ROOM TEST GAME
-    #
-    # IND — Indianapolis Colts
-    # @
-    # WAS — Washington Commanders
-    # -----------------------------------------------------
-
-    found_test_game = False
+    # ---------------------------------------------
+    # DOC'S FIRST LIVE WAR ROOM EXAMPLE
+    # ---------------------------------------------
 
     for game in games:
 
         if (
             game["away"] == "IND"
-            and
-            game["home"] == "WAS"
+            and game["home"] == "WAS"
         ):
 
-            found_test_game = True
-
             print()
-            print(
-                "======================================"
-            )
-
-            print(
-                "FIRST WAR ROOM TEST GAME"
-            )
-
-            print(
-                "======================================"
-            )
-
-            print(
-                game["matchup"]
-            )
-
+            print("======================================")
+            print("DOC'S FIRST WAR ROOM EXAMPLE")
+            print("======================================")
+            print(game["matchup"])
             print()
             print(
                 json.dumps(
@@ -699,20 +586,13 @@ def main():
                     indent=2
                 )
             )
+            print("======================================")
+            return
 
-            print(
-                "======================================"
-            )
-
-
-    if not found_test_game:
-
-        print()
-        print(
-            "WARNING: IND — Indianapolis Colts @ "
-            "WAS — Washington Commanders was not "
-            "found in the CBS data."
-        )
+    print(
+        "WARNING: IND — Indianapolis Colts @ "
+        "WAS — Washington Commanders not found."
+    )
 
 
 if __name__ == "__main__":
