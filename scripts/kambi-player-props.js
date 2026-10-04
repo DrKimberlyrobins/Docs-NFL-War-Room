@@ -2,13 +2,13 @@
 // DOC'S NFL WAR ROOM
 // KAMBI PLAYER PROPS COLLECTOR
 //
-// PHASE 1:
-// 1. Fetch Kambi player-prop structure
-// 2. Fetch the event's bet offers
-// 3. Join market/outcome IDs
-// 4. Produce clean player-prop records
+// TEST PHASE
 //
-// This collector is completely separate from:
+// Uses the exact Kambi endpoint structures verified
+// in the browser.
+//
+// IMPORTANT:
+// This file is completely separate from:
 // - CBS Sports collector
 // - Kalshi collector
 // - War Room display
@@ -19,35 +19,35 @@ const path = require("path");
 
 
 // ============================================================
-// KAMBI SETTINGS
+// SETTINGS
 // ============================================================
 
-const OFFERING =
-  "pivusmsrl-bil";
-
-const MARKET =
-  "US-MS";
-
-const LANGUAGE =
-  "en_US";
-
-const API_VERSION =
-  "v2018";
-
-const BASE_URL =
-  `https://eu-offering-api.kambicdn.com/offering/${API_VERSION}/${OFFERING}`;
+const OFFERING = "pivusmsrl-bil";
+const MARKET = "US-MS";
+const LANGUAGE = "en_US";
 
 
 // ============================================================
 // TEST EVENT
 //
-// We are deliberately starting with the event we inspected
-// manually in Chrome so we can verify the collector against
-// known Kambi data before automating NFL event discovery.
+// We are intentionally testing the same event we inspected
+// manually before attempting automatic event discovery.
 // ============================================================
 
-const EVENT_ID =
-  "1028812630";
+const EVENT_ID = "1028812630";
+
+
+// ============================================================
+// VERIFIED ENDPOINT BASES
+// ============================================================
+
+// Player-prop structure
+const PLAYER_PROPS_BASE =
+  "https://offering.sbo.fra-hub.workload.shapegamescloud.com";
+
+// Bet offers / prices
+const KAMBI_OFFERING_BASE =
+  "https://eu.offering-api.kambicdn.com/offering/v2018";
 
 
 // ============================================================
@@ -66,35 +66,29 @@ const OUTPUT_FILE =
 // FETCH JSON
 // ============================================================
 
-async function fetchJson(url) {
+async function fetchJson(name, url) {
 
-  console.log(
-    "\nFetching:"
-  );
-
+  console.log("");
+  console.log("========================================");
+  console.log(name);
+  console.log("========================================");
   console.log(url);
-
 
   const response =
     await fetch(
       url,
       {
         headers: {
-          "Accept":
-            "application/json",
-
-          "User-Agent":
-            "Mozilla/5.0"
+          "Accept": "application/json",
+          "User-Agent": "Mozilla/5.0"
         }
       }
     );
-
 
   console.log(
     "Status:",
     response.status
   );
-
 
   if (!response.ok) {
 
@@ -102,107 +96,84 @@ async function fetchJson(url) {
       await response.text();
 
     throw new Error(
-      `Kambi request failed: ` +
-      `${response.status}\n` +
-      body.slice(0, 500)
+      `${name} failed: ${response.status}\n` +
+      body.slice(0, 1000)
     );
   }
 
+  const data =
+    await response.json();
 
-  return response.json();
+  console.log(
+    `${name} JSON received.`
+  );
+
+  return data;
 }
 
 
 // ============================================================
-// WALK ANY OBJECT
-//
-// Kambi's player-props response is nested.
-// This helper lets us find objects without depending on
-// one fragile nesting depth.
+// RECURSIVE WALKER
 // ============================================================
 
-function walk(
-  value,
-  callback
-) {
+function walk(value, callback) {
 
   if (
     value === null ||
-    value === undefined
-  ) {
-    return;
-  }
-
-
-  if (
+    value === undefined ||
     typeof value !== "object"
   ) {
     return;
   }
 
-
   callback(value);
-
 
   if (Array.isArray(value)) {
 
-    value.forEach(item =>
-      walk(
-        item,
-        callback
-      )
-    );
+    for (const item of value) {
+      walk(item, callback);
+    }
 
     return;
   }
 
-
-  Object.values(value)
-    .forEach(item =>
-      walk(
-        item,
-        callback
-      )
-    );
+  for (
+    const item
+    of Object.values(value)
+  ) {
+    walk(item, callback);
+  }
 }
 
 
 // ============================================================
-// GET MARKET CATEGORY NAME
+// CATEGORY NAME
 // ============================================================
 
-function findCategoryName(
-  category
-) {
+function findCategoryName(category) {
 
-  let name = "";
-
+  let categoryName = "";
 
   walk(
     category,
     object => {
 
-      if (name) {
+      if (categoryName) {
         return;
       }
 
-
       if (
-        object.type ===
-          "offering_name_header" &&
+        object.type === "offering_name_header" &&
         object.name
       ) {
 
-        name =
-          String(
-            object.name
-          ).trim();
+        categoryName =
+          String(object.name).trim();
       }
     }
   );
 
-
-  return name;
+  return categoryName;
 }
 
 
@@ -210,70 +181,56 @@ function findCategoryName(
 // FIND PLAYER OFFERING BLOCKS
 // ============================================================
 
-function findPlayerOfferings(
-  category
-) {
+function findPlayerOfferingBlocks(category) {
 
-  const offerings = [];
-
+  const blocks = [];
 
   walk(
     category,
     object => {
 
       if (
-        object.type ===
-          "player_offering" &&
+        object.type === "player_offering" &&
         Array.isArray(
           object.player_offerings
         )
       ) {
 
-        offerings.push(
-          object
-        );
+        blocks.push(object);
       }
     }
   );
 
-
-  return offerings;
+  return blocks;
 }
 
 
 // ============================================================
-// CREATE BET OFFER LOOKUPS
+// BUILD EXACT KAMBI LOOKUPS
+//
+// We use exact IDs.
+//
+// market_id  -> betOffer.id
+// outcome_id -> outcome.id
+//
+// No array-position guessing.
 // ============================================================
 
-function buildBetOfferMaps(
-  eventData
-) {
+function buildOfferMaps(eventData) {
 
-  const marketMap =
-    new Map();
+  const marketMap = new Map();
+  const outcomeMap = new Map();
 
-  const outcomeMap =
-    new Map();
-
-
-  const offers =
-    Array.isArray(
-      eventData.betOffers
-    )
+  const betOffers =
+    Array.isArray(eventData.betOffers)
       ? eventData.betOffers
       : [];
 
-
-  for (const offer of offers) {
-
-    if (!offer) {
-      continue;
-    }
-
+  for (const offer of betOffers) {
 
     if (
-      offer.id !== undefined &&
-      offer.id !== null
+      offer?.id !== undefined &&
+      offer?.id !== null
     ) {
 
       marketMap.set(
@@ -282,28 +239,19 @@ function buildBetOfferMaps(
       );
     }
 
-
     const outcomes =
-      Array.isArray(
-        offer.outcomes
-      )
+      Array.isArray(offer?.outcomes)
         ? offer.outcomes
         : [];
 
-
-    for (
-      const outcome of outcomes
-    ) {
+    for (const outcome of outcomes) {
 
       if (
-        outcome?.id ===
-          undefined ||
-        outcome?.id ===
-          null
+        outcome?.id === undefined ||
+        outcome?.id === null
       ) {
         continue;
       }
-
 
       outcomeMap.set(
         String(outcome.id),
@@ -315,7 +263,6 @@ function buildBetOfferMaps(
     }
   }
 
-
   return {
     marketMap,
     outcomeMap
@@ -324,7 +271,7 @@ function buildBetOfferMaps(
 
 
 // ============================================================
-// NORMALIZE ONE PLAYER PROP
+// NORMALIZE ONE PROP
 // ============================================================
 
 function makePropRecord({
@@ -332,69 +279,68 @@ function makePropRecord({
   eventName,
   categoryName,
   player,
-  label,
+  milestone,
   reference,
   marketMap,
   outcomeMap
 }) {
 
+  // Kambi sometimes sends an empty reference when
+  // a particular milestone is unavailable.
+
   if (
     !reference ||
-    reference.type !==
-      "outcome_reference"
+    reference.type !== "outcome_reference"
   ) {
-
     return null;
   }
 
-
   const marketId =
     String(
-      reference.market_id || ""
+      reference.market_id ?? ""
     );
-
 
   const outcomeId =
     String(
-      reference.outcome_id || ""
+      reference.outcome_id ?? ""
     );
-
 
   if (
     !marketId ||
     !outcomeId
   ) {
-
     return null;
   }
 
-
   const offer =
-    marketMap.get(
-      marketId
-    );
-
+    marketMap.get(marketId);
 
   const outcomeLookup =
-    outcomeMap.get(
-      outcomeId
+    outcomeMap.get(outcomeId);
+
+  const outcome =
+    outcomeLookup?.outcome ?? null;
+
+
+  // ----------------------------------------------------------
+  // IMPORTANT VALIDATION
+  //
+  // Even if the outcome ID exists somewhere else,
+  // it must belong to the exact market referenced by
+  // player_props.
+  // ----------------------------------------------------------
+
+  const exactMatch =
+    Boolean(
+      offer &&
+      outcome &&
+      String(
+        outcome.betOfferId ?? offer.id
+      ) === marketId
     );
 
 
-  const outcome =
-    outcomeLookup?.outcome ||
-    null;
-
-
-  /*
-    Do not guess if Kambi gave us a reference
-    that we cannot resolve.
-  */
-
-  if (
-    !offer ||
-    !outcome
-  ) {
+  if (!exactMatch) {
 
     return {
       eventId,
@@ -404,43 +350,44 @@ function makePropRecord({
         categoryName,
 
       player:
-        player.player_name || "",
+        player.player_name ?? "",
 
       playerParticipantId:
-        player.player_participant_id || "",
+        player.player_participant_id ?? "",
 
       teamParticipantId:
-        player.team_participant_id || "",
+        player.team_participant_id ?? "",
 
       milestone:
-        label || "",
+        milestone ?? "",
 
       marketId,
       outcomeId,
 
-      marketLabel:
-        "",
+      marketLabel: "",
 
-      americanOdds:
-        "",
+      participant: "",
 
-      decimalOdds:
-        "",
+      participantId: "",
 
-      rawOdds:
-        "",
+      americanOdds: "",
+
+      rawOdds: "",
+
+      outcomeType: "",
 
       status:
         "UNRESOLVED",
 
-      participant:
-        "",
-
-      outcomeType:
-        ""
+      resolution:
+        "Exact market/outcome ID match not found"
     };
   }
 
+
+  // ----------------------------------------------------------
+  // VERIFIED EXACT MATCH
+  // ----------------------------------------------------------
 
   return {
     eventId,
@@ -450,51 +397,68 @@ function makePropRecord({
       categoryName,
 
     player:
-      player.player_name || "",
+      player.player_name ?? "",
 
     playerParticipantId:
-      player.player_participant_id || "",
+      player.player_participant_id ?? "",
 
     teamParticipantId:
-      player.team_participant_id || "",
+      player.team_participant_id ?? "",
 
     milestone:
-      label || "",
+      milestone ?? "",
 
     marketId,
     outcomeId,
 
     marketLabel:
-      offer.criterion?.label ||
-      offer.criterion?.englishLabel ||
+      offer.criterion?.label ??
+      offer.criterion?.englishLabel ??
       "",
 
-    americanOdds:
-      outcome.oddsAmerican ||
+    shortMarketLabel:
+      offer.criterion?.shortLabel ??
+      offer.criterion?.shortEnglishLabel ??
       "",
 
-    decimalOdds:
-      outcome.oddsDecimal ||
-      "",
-
-    rawOdds:
-      outcome.odds ?? "",
-
-    status:
-      outcome.status ||
+    betOfferType:
+      offer.betOfferType?.name ??
       "",
 
     participant:
-      outcome.participant ||
+      outcome.participant ??
       "",
 
     participantId:
-      outcome.participantId ||
+      outcome.participantId ??
+      "",
+
+    americanOdds:
+      outcome.oddsAmerican ??
+      "",
+
+    rawOdds:
+      outcome.odds ??
+      "",
+
+    line:
+      outcome.line ??
       "",
 
     outcomeType:
-      outcome.type ||
-      ""
+      outcome.type ??
+      "",
+
+    status:
+      outcome.status ??
+      "",
+
+    cashOutStatus:
+      outcome.cashOutStatus ??
+      "",
+
+    resolution:
+      "EXACT_ID_MATCH"
   };
 }
 
@@ -509,25 +473,18 @@ function parsePlayerProps(
 ) {
 
   const event =
-    Array.isArray(
-      eventData.events
-    )
+    Array.isArray(eventData.events)
       ? eventData.events[0]
       : null;
 
-
   const eventName =
-    event?.name || "";
-
+    event?.name ?? "";
 
   const {
     marketMap,
     outcomeMap
   } =
-    buildBetOfferMaps(
-      eventData
-    );
-
+    buildOfferMaps(eventData);
 
   const categories =
     Array.isArray(
@@ -536,41 +493,28 @@ function parsePlayerProps(
       ? propsData.player_props
       : [];
 
-
   const records = [];
 
 
-  for (
-    const category
-    of categories
-  ) {
+  for (const category of categories) {
 
     const categoryName =
-      findCategoryName(
-        category
-      );
-
+      findCategoryName(category);
 
     const blocks =
-      findPlayerOfferings(
+      findPlayerOfferingBlocks(
         category
       );
 
 
-    for (
-      const block
-      of blocks
-    ) {
+    for (const block of blocks) {
 
       const labels =
         Array.isArray(
-          block.header
-            ?.offering_labels
+          block.header?.offering_labels
         )
-          ? block.header
-              .offering_labels
+          ? block.header.offering_labels
           : [];
-
 
       const players =
         Array.isArray(
@@ -580,26 +524,18 @@ function parsePlayerProps(
           : [];
 
 
-      for (
-        const player
-        of players
-      ) {
+      for (const player of players) {
 
         const references =
           Array.isArray(
-            player
-              .outcome_references
+            player.outcome_references
           )
-            ? player
-                .outcome_references
+            ? player.outcome_references
             : [];
 
 
         references.forEach(
-          (
-            reference,
-            index
-          ) => {
+          (reference, index) => {
 
             const record =
               makePropRecord({
@@ -612,9 +548,8 @@ function parsePlayerProps(
 
                 player,
 
-                label:
-                  labels[index] ||
-                  "",
+                milestone:
+                  labels[index] ?? "",
 
                 reference,
 
@@ -623,19 +558,14 @@ function parsePlayerProps(
                 outcomeMap
               });
 
-
             if (record) {
-
-              records.push(
-                record
-              );
+              records.push(record);
             }
           }
         );
       }
     }
   }
-
 
   return records;
 }
@@ -659,31 +589,42 @@ async function main() {
     "========================================"
   );
 
+  console.log(
+    "Test Event:",
+    EVENT_ID
+  );
 
-  /*
-    This is the event-specific player-props
-    request we discovered in Chrome.
-  */
 
-  const propsUrl =
-    `${BASE_URL}` +
-    `/event/${EVENT_ID}` +
+  // ----------------------------------------------------------
+  // EXACT PLAYER-PROPS ENDPOINT STRUCTURE
+  // CAPTURED FROM THE KAMBI PAGE
+  // ----------------------------------------------------------
+
+  const playerPropsUrl =
+    `${PLAYER_PROPS_BASE}` +
+    `/${OFFERING}` +
+    `/api/events/${EVENT_ID}` +
     `/player_props` +
     `?market=${MARKET}` +
     `&lang=${LANGUAGE}`;
 
 
-  /*
-    This is the event JSON request we verified
-    in Chrome. It contains the betOffers and
-    outcome prices.
-  */
+  // ----------------------------------------------------------
+  // EXACT BET-OFFER ENDPOINT STRUCTURE
+  // CAPTURED FROM THE KAMBI PAGE
+  //
+  // We intentionally do NOT depend on the ncid value.
+  // ----------------------------------------------------------
 
   const eventUrl =
-    `${BASE_URL}` +
+    `${KAMBI_OFFERING_BASE}` +
+    `/${OFFERING}` +
     `/betoffer/event/${EVENT_ID}.json` +
     `?lang=${LANGUAGE}` +
-    `&market=${MARKET}`;
+    `&market=${MARKET}` +
+    `&client_id=200` +
+    `&channel_id=7` +
+    `&includeParticipants=true`;
 
 
   const [
@@ -692,38 +633,52 @@ async function main() {
   ] =
     await Promise.all([
       fetchJson(
-        propsUrl
+        "PLAYER PROPS",
+        playerPropsUrl
       ),
 
       fetchJson(
+        "BET OFFERS",
         eventUrl
       )
     ]);
 
 
-  console.log(
-    "\nPlayer prop categories:",
+  // ----------------------------------------------------------
+  // BASIC SOURCE COUNTS
+  // ----------------------------------------------------------
+
+  const categoryCount =
     Array.isArray(
       propsData.player_props
     )
-      ? propsData
-          .player_props
-          .length
-      : 0
-  );
+      ? propsData.player_props.length
+      : 0;
 
 
-  console.log(
-    "Event bet offers:",
+  const betOfferCount =
     Array.isArray(
       eventData.betOffers
     )
-      ? eventData
-          .betOffers
-          .length
-      : 0
+      ? eventData.betOffers.length
+      : 0;
+
+
+  console.log("");
+  console.log(
+    "Player prop categories:",
+    categoryCount
   );
 
+  console.log(
+    "Event bet offers:",
+    betOfferCount
+  );
+
+
+  // ----------------------------------------------------------
+  // PARSE + EXACT-ID JOIN
+  // ----------------------------------------------------------
 
   const props =
     parsePlayerProps(
@@ -735,55 +690,62 @@ async function main() {
   const resolved =
     props.filter(
       prop =>
-        prop.status !==
-        "UNRESOLVED"
+        prop.resolution ===
+        "EXACT_ID_MATCH"
     );
 
 
   const unresolved =
     props.filter(
       prop =>
-        prop.status ===
-        "UNRESOLVED"
+        prop.resolution !==
+        "EXACT_ID_MATCH"
     );
 
 
+  console.log("");
   console.log(
-    "\nResolved player props:",
+    "Total referenced props:",
+    props.length
+  );
+
+  console.log(
+    "Exact ID matches:",
     resolved.length
   );
 
-
   console.log(
-    "Unresolved references:",
+    "Unresolved:",
     unresolved.length
   );
 
 
-  /*
-    Sort the output so it is easy for us
-    to inspect in GitHub.
-  */
+  // ----------------------------------------------------------
+  // SORT FOR EASY INSPECTION
+  // ----------------------------------------------------------
 
   props.sort(
-    (a, b) => {
-
-      return (
-        a.category.localeCompare(
-          b.category
+    (a, b) =>
+      String(a.category)
+        .localeCompare(
+          String(b.category)
         ) ||
 
-        a.player.localeCompare(
-          b.player
+      String(a.player)
+        .localeCompare(
+          String(b.player)
         ) ||
 
-        a.milestone.localeCompare(
-          b.milestone
+      String(a.milestone)
+        .localeCompare(
+          String(b.milestone)
         )
-      );
-    }
   );
 
+
+  // ----------------------------------------------------------
+  // FINAL OUTPUT
+  // ----------------------------------------------------------
 
   const output = {
 
@@ -797,8 +759,7 @@ async function main() {
       MARKET,
 
     collectedAt:
-      new Date()
-        .toISOString(),
+      new Date().toISOString(),
 
     event: {
       id:
@@ -808,35 +769,35 @@ async function main() {
         Array.isArray(
           eventData.events
         )
-          ? eventData
-              .events[0]
-              ?.name || ""
+          ? eventData.events[0]?.name ?? ""
           : ""
+    },
+
+    verification: {
+      playerPropsEndpoint:
+        "Shape Games/Kambi",
+
+      betOffersEndpoint:
+        "Kambi Offering API",
+
+      joinMethod:
+        "Exact market_id + outcome_id",
+
+      usesAmericanOddsFromSource:
+        true
     },
 
     counts: {
       categories:
-        Array.isArray(
-          propsData.player_props
-        )
-          ? propsData
-              .player_props
-              .length
-          : 0,
+        categoryCount,
 
       betOffers:
-        Array.isArray(
-          eventData.betOffers
-        )
-          ? eventData
-              .betOffers
-              .length
-          : 0,
+        betOfferCount,
 
-      playerProps:
+      referencedProps:
         props.length,
 
-      resolved:
+      exactMatches:
         resolved.length,
 
       unresolved:
@@ -846,6 +807,10 @@ async function main() {
     props
   };
 
+
+  // ----------------------------------------------------------
+  // WRITE FILE
+  // ----------------------------------------------------------
 
   fs.mkdirSync(
     path.dirname(
@@ -867,8 +832,9 @@ async function main() {
   );
 
 
+  console.log("");
   console.log(
-    "\nSaved:"
+    "Saved:"
   );
 
   console.log(
@@ -876,36 +842,99 @@ async function main() {
   );
 
 
-  /*
-    Print a few resolved examples so the
-    GitHub Action log can be checked without
-    opening the entire JSON file.
-  */
+  // ----------------------------------------------------------
+  // SHOW VERIFIED SAMPLES IN ACTION LOG
+  // ----------------------------------------------------------
 
+  console.log("");
   console.log(
-    "\nSAMPLE RESOLVED PROPS"
+    "========================================"
   );
 
   console.log(
-    "----------------------------------------"
+    "SAMPLE EXACT MATCHES"
+  );
+
+  console.log(
+    "========================================"
   );
 
 
   resolved
-    .slice(0, 10)
+    .slice(0, 15)
     .forEach(prop => {
 
       console.log(
-        `${prop.player} | ` +
-        `${prop.category} | ` +
-        `${prop.milestone} | ` +
-        `${prop.americanOdds}`
+        [
+          prop.player,
+          prop.category,
+          prop.milestone,
+          prop.americanOdds,
+          prop.status
+        ].join(" | ")
       );
     });
 
 
+  // ----------------------------------------------------------
+  // SPECIFIC KYLER CHECK
+  //
+  // This gives us an easy way to verify the exact player
+  // we manually inspected in DevTools.
+  // ----------------------------------------------------------
+
+  const kyler =
+    resolved.filter(
+      prop =>
+        String(prop.player)
+          .toLowerCase()
+          .includes(
+            "kyler murray"
+          )
+    );
+
+
+  console.log("");
   console.log(
-    "\nCollector finished."
+    "========================================"
+  );
+
+  console.log(
+    "KYLER MURRAY CHECK"
+  );
+
+  console.log(
+    "========================================"
+  );
+
+
+  if (kyler.length === 0) {
+
+    console.log(
+      "No resolved Kyler Murray props found."
+    );
+
+  } else {
+
+    kyler.forEach(prop => {
+
+      console.log(
+        [
+          prop.category,
+          prop.milestone,
+          prop.marketId,
+          prop.outcomeId,
+          prop.americanOdds,
+          prop.status
+        ].join(" | ")
+      );
+    });
+  }
+
+
+  console.log("");
+  console.log(
+    "Collector finished successfully."
   );
 }
 
@@ -917,8 +946,9 @@ async function main() {
 main()
   .catch(error => {
 
+    console.error("");
     console.error(
-      "\nKAMBI COLLECTOR FAILED"
+      "KAMBI COLLECTOR FAILED"
     );
 
     console.error(
