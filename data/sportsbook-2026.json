@@ -1,0 +1,54 @@
+{
+  "source": "CBS Sports",
+  "season": 2026,
+  "games": [
+    {
+      "away": "DAL",
+      "home": "HOU",
+      "spread": {
+        "away": {
+          "open": 2.5,
+          "openPrice": -105,
+          "current": 3,
+          "currentPrice": -113,
+          "publicBet": 0
+        },
+        "home": {
+          "open": -2.5,
+          "openPrice": -114,
+          "current": -3,
+          "currentPrice": -107,
+          "publicBet": 19
+        }
+      },
+      "moneyline": {
+        "away": {
+          "open": 120,
+          "current": 130,
+          "publicBet": 54
+        },
+        "home": {
+          "open": -143,
+          "current": -155,
+          "publicBet": 46
+        }
+      },
+      "total": {
+        "over": {
+          "open": 47.5,
+          "openPrice": -115,
+          "current": 48.5,
+          "currentPrice": -108,
+          "publicBet": 51
+        },
+        "under": {
+          "open": 47.5,
+          "openPrice": -105,
+          "current": 48.5,
+          "currentPrice": -111,
+          "publicBet": 49
+        }
+      }
+    }
+  ]
+}
