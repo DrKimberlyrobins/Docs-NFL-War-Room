@@ -1,13 +1,12 @@
 // DOC'S NFL WAR ROOM
 // CBS SPORTSBOOK RESEARCH DISPLAY
 //
-// This file controls the Sportsbook Research section.
-// Verified sportsbook data will be loaded from:
+// Loads verified CBS sportsbook data from:
 // data/sportsbook-2026.json
 //
 // IMPORTANT:
-// This file does NOT scrape CBS directly from the browser.
-// Our GitHub data collector will create the JSON file.
+// Movement is interpreted as FOOTBALL MARKET MOVEMENT,
+// not simply positive/negative mathematical movement.
 
 let sportsbookData = null;
 
@@ -115,11 +114,23 @@ function formatPublicBet(value) {
 
 
 // =========================================
-// CALCULATE MOVEMENT
+// SPREAD MOVEMENT
+//
+// IMPORTANT:
+// Spread movement should tell us which TEAM
+// the market moved toward.
+//
+// Example:
+//
+// DAL +2.5 -> +3
+// HOU -2.5 -> -3
+//
+// The market moved 0.5 TOWARD HOU.
 // =========================================
 
-function getSportsbookMovement(
-  market,
+function getSpreadMovement(
+  side,
+  opponent,
   openLine,
   currentLine
 ) {
@@ -140,43 +151,137 @@ function getSportsbookMovement(
     return "No move";
   }
 
+  const amount =
+    Math.abs(difference).toFixed(1);
 
-  // TOTAL
-  if (market === "Total") {
 
-    if (difference > 0) {
-      return "↑ " +
-        Math.abs(difference).toFixed(1);
-    }
+  // If this team's spread becomes MORE negative,
+  // market moved toward this team.
+  //
+  // Example:
+  // HOU -2.5 -> -3
 
-    return "↓ " +
-      Math.abs(difference).toFixed(1);
+  if (current < open) {
+    return "↑ " + amount + " toward " + side;
   }
 
 
-  // SPREAD
-  if (market === "Spread") {
+  // If this team's spread becomes MORE positive,
+  // market moved toward the opponent.
+  //
+  // Example:
+  // DAL +2.5 -> +3
 
-    if (difference > 0) {
-      return "↑ " +
-        Math.abs(difference).toFixed(1);
-    }
-
-    return "↓ " +
-      Math.abs(difference).toFixed(1);
+  if (current > open) {
+    return "↑ " + amount + " toward " + opponent;
   }
 
 
-  // MONEYLINE
-  if (market === "Moneyline") {
+  return "No move";
+}
 
-    if (difference > 0) {
-      return "↑ " +
-        Math.abs(difference).toFixed(0);
+
+// =========================================
+// TOTAL MOVEMENT
+// =========================================
+
+function getTotalMovement(
+  openLine,
+  currentLine
+) {
+
+  const open = Number(openLine);
+  const current = Number(currentLine);
+
+  if (
+    !Number.isFinite(open) ||
+    !Number.isFinite(current)
+  ) {
+    return "—";
+  }
+
+  const difference = current - open;
+
+  if (Math.abs(difference) < 0.001) {
+    return "No move";
+  }
+
+  const amount =
+    Math.abs(difference).toFixed(1);
+
+  if (current > open) {
+    return "↑ " + amount;
+  }
+
+  return "↓ " + amount;
+}
+
+
+// =========================================
+// MONEYLINE MOVEMENT
+//
+// Rather than showing a confusing raw arrow,
+// describe whether the price became stronger
+// or weaker for that team.
+// =========================================
+
+function getMoneylineMovement(
+  openLine,
+  currentLine
+) {
+
+  const open = Number(openLine);
+  const current = Number(currentLine);
+
+  if (
+    !Number.isFinite(open) ||
+    !Number.isFinite(current)
+  ) {
+    return "—";
+  }
+
+  if (open === current) {
+    return "No move";
+  }
+
+
+  // Both negative:
+  // -143 -> -155 = stronger favorite
+
+  if (open < 0 && current < 0) {
+
+    if (current < open) {
+      return "Stronger";
     }
 
-    return "↓ " +
-      Math.abs(difference).toFixed(0);
+    return "Weaker";
+  }
+
+
+  // Both positive:
+  // +120 -> +130 = weaker market position
+
+  if (open > 0 && current > 0) {
+
+    if (current < open) {
+      return "Stronger";
+    }
+
+    return "Weaker";
+  }
+
+
+  // Crossing from underdog to favorite
+
+  if (open > 0 && current < 0) {
+    return "Stronger";
+  }
+
+
+  // Crossing from favorite to underdog
+
+  if (open < 0 && current > 0) {
+    return "Weaker";
   }
 
 
@@ -352,8 +457,9 @@ function renderSportsbook() {
         awaySpread.publicBet
       ),
 
-      getSportsbookMovement(
-        "Spread",
+      getSpreadMovement(
+        awayCode,
+        homeCode,
         awaySpread.open,
         awaySpread.current
       )
@@ -378,8 +484,9 @@ function renderSportsbook() {
         homeSpread.publicBet
       ),
 
-      getSportsbookMovement(
-        "Spread",
+      getSpreadMovement(
+        homeCode,
+        awayCode,
         homeSpread.open,
         homeSpread.current
       )
@@ -419,8 +526,7 @@ function renderSportsbook() {
         awayMoneyline.publicBet
       ),
 
-      getSportsbookMovement(
-        "Moneyline",
+      getMoneylineMovement(
         awayMoneyline.open,
         awayMoneyline.current
       )
@@ -445,8 +551,7 @@ function renderSportsbook() {
         homeMoneyline.publicBet
       ),
 
-      getSportsbookMovement(
-        "Moneyline",
+      getMoneylineMovement(
         homeMoneyline.open,
         homeMoneyline.current
       )
@@ -486,8 +591,7 @@ function renderSportsbook() {
         over.publicBet
       ),
 
-      getSportsbookMovement(
-        "Total",
+      getTotalMovement(
         over.open,
         over.current
       )
@@ -512,8 +616,7 @@ function renderSportsbook() {
         under.publicBet
       ),
 
-      getSportsbookMovement(
-        "Total",
+      getTotalMovement(
         under.open,
         under.current
       )
