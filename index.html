@@ -515,12 +515,116 @@ Lines and public betting percentages may change.
 Movement is calculated by Doc's NFL War Room.
 </p>
 
-<div class="panel">
-<h2>Postgame Evaluation</h2>
-<p class="note">
-We'll use this section to compare our
-pregame research against actual game results.
-</p>
+<!-- POSTGAME EVALUATION -->
+
+<div class="panel" id="postgamePanel">
+
+  <h2>Postgame Evaluation</h2>
+
+  <p class="note">
+    Grade saved War Room receipts against verified
+    final game and player results.
+  </p>
+
+  <div id="postgameStatus" class="status">
+    Waiting for a completed game...
+  </div>
+
+  <h3>Game Results</h3>
+
+  <div class="table-wrap">
+    <table id="postgameScoreTable">
+      <thead>
+        <tr>
+          <th>Team</th>
+          <th>1Q</th>
+          <th>2Q</th>
+          <th>1H</th>
+          <th>3Q</th>
+          <th>4Q</th>
+          <th>Final</th>
+        </tr>
+      </thead>
+
+      <tbody id="postgameScoreBody">
+        <tr>
+          <td colspan="7">
+            Waiting for verified game results...
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <h3>Receipt Evaluation</h3>
+
+  <div class="table-wrap">
+    <table id="postgameReceiptTable">
+      <thead>
+        <tr>
+          <th>Player / Market</th>
+          <th>Pregame Projection</th>
+          <th>Kambi Line</th>
+          <th>Price</th>
+          <th>Actual</th>
+          <th>Result</th>
+        </tr>
+      </thead>
+
+      <tbody id="postgameReceiptBody">
+        <tr>
+          <td colspan="6">
+            Waiting for saved Receipt...
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <h3>War Room Results</h3>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Wins</th>
+          <th>Losses</th>
+          <th>Pushes</th>
+          <th>Win Rate</th>
+        </tr>
+      </thead>
+
+      <tbody id="postgameSummaryBody">
+        <tr>
+          <td>Game Markets</td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+        </tr>
+
+        <tr>
+          <td>Player Props</td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+        </tr>
+
+        <tr>
+          <td>Overall</td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
 </div>
 
 </div>
@@ -645,6 +749,7 @@ analyze();
 <script src="nfl-receipt.js"></script>
 <script src="nfl-player-receipt.js"></script>
 <script src="nfl-kambi.js"></script>
+<script src="nfl-postgame.js"></script>
 <script>
   
 /* =========================================
