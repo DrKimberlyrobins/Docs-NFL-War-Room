@@ -15,14 +15,14 @@
           "open": 1.5,
           "openPrice": null,
           "current": 1.5,
-          "currentPrice": -102.0,
+          "currentPrice": -110.0,
           "publicBet": null
         },
         "home": {
           "open": -1.5,
           "openPrice": -113.0,
-          "current": -1.5,
-          "currentPrice": -111.0,
+          "current": -1.0,
+          "currentPrice": -108.0,
           "publicBet": null
         }
       },
@@ -30,15 +30,15 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": 112.0,
-          "currentPrice": 112.0,
+          "current": 102.0,
+          "currentPrice": 102.0,
           "publicBet": null
         },
         "home": {
           "open": null,
           "openPrice": null,
-          "current": -125.0,
-          "currentPrice": -125.0,
+          "current": -118.0,
+          "currentPrice": -118.0,
           "publicBet": null
         }
       },
