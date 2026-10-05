@@ -105,7 +105,7 @@
 
     "Amon-Ra St. Brown": {
       receivingYards: 75,
-      secondHalfTD: null
+      secondHalfTD: false
     },
 
     "Jahmyr Gibbs": {
@@ -226,23 +226,45 @@
 
     if (typeof receipt.line === "number") {
 
-      if (actual >= receipt.line) {
-        return {
-          actual: actual,
-          grade: "WIN"
-        };
-      }
-
-      return {
-        actual: actual,
-        grade: "LOSS"
-      };
-    }
-
+  if (actual >= receipt.line) {
     return {
-      actual: String(actual),
-      grade: "REVIEW"
+      actual: actual,
+      grade: "WIN"
     };
+  }
+
+  return {
+    actual: actual,
+    grade: "LOSS"
+  };
+}
+
+
+/* YES / NO PROP GRADING */
+
+if (receipt.line === "Yes") {
+
+  if (actual === true) {
+    return {
+      actual: "Yes",
+      grade: "WIN"
+    };
+  }
+
+  if (actual === false) {
+    return {
+      actual: "No",
+      grade: "LOSS"
+    };
+  }
+
+}
+
+
+return {
+  actual: String(actual),
+  grade: "REVIEW"
+};
   }
 
 
