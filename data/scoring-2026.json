@@ -1,27 +1,27 @@
 {
   "season": 2026,
-  "updated": "2026-10-04T15:26:57.138069+00:00",
+  "updated": "2026-10-05T19:20:22.911943+00:00",
   "source": "nflverse",
-  "completedGames": 49,
+  "completedGames": 63,
   "note": "Completed regular-season games only. First-quarter scores use the first second-quarter scoring state. Halftime scores use the first third-quarter scoring state. Verify results against official scores.",
   "teams": {
     "LAC": {
-      "games": 3,
-      "firstQuarterPointsScored": 5.67,
-      "firstQuarterPointsAllowed": 2.33,
-      "firstHalfPointsScored": 8.0,
-      "firstHalfPointsAllowed": 11.0,
-      "finalPointsScored": 14.67,
-      "finalPointsAllowed": 25.33
+      "games": 4,
+      "firstQuarterPointsScored": 5.0,
+      "firstQuarterPointsAllowed": 3.5,
+      "firstHalfPointsScored": 7.5,
+      "firstHalfPointsAllowed": 13.25,
+      "finalPointsScored": 16.75,
+      "finalPointsAllowed": 26.5
     },
     "ARI": {
-      "games": 3,
-      "firstQuarterPointsScored": 4.33,
-      "firstQuarterPointsAllowed": 9.0,
-      "firstHalfPointsScored": 8.67,
-      "firstHalfPointsAllowed": 10.33,
-      "finalPointsScored": 21.0,
-      "finalPointsAllowed": 27.0
+      "games": 4,
+      "firstQuarterPointsScored": 6.75,
+      "firstQuarterPointsAllowed": 8.25,
+      "firstHalfPointsScored": 10.75,
+      "firstHalfPointsAllowed": 12.5,
+      "finalPointsScored": 21.75,
+      "finalPointsAllowed": 29.25
     },
     "PIT": {
       "games": 4,
@@ -42,67 +42,67 @@
       "finalPointsAllowed": 22.67
     },
     "IND": {
-      "games": 3,
-      "firstQuarterPointsScored": 5.33,
-      "firstQuarterPointsAllowed": 8.0,
-      "firstHalfPointsScored": 15.33,
-      "firstHalfPointsAllowed": 18.33,
-      "finalPointsScored": 24.0,
-      "finalPointsAllowed": 30.33
+      "games": 4,
+      "firstQuarterPointsScored": 4.0,
+      "firstQuarterPointsAllowed": 7.5,
+      "firstHalfPointsScored": 14.0,
+      "firstHalfPointsAllowed": 15.25,
+      "finalPointsScored": 25.5,
+      "finalPointsAllowed": 26.0
     },
     "BAL": {
-      "games": 3,
-      "firstQuarterPointsScored": 9.33,
-      "firstQuarterPointsAllowed": 5.33,
-      "firstHalfPointsScored": 20.67,
-      "firstHalfPointsAllowed": 10.67,
-      "finalPointsScored": 30.67,
-      "finalPointsAllowed": 26.0
+      "games": 4,
+      "firstQuarterPointsScored": 8.75,
+      "firstQuarterPointsAllowed": 5.75,
+      "firstHalfPointsScored": 21.5,
+      "firstHalfPointsAllowed": 9.75,
+      "finalPointsScored": 29.0,
+      "finalPointsAllowed": 24.0
     },
     "HOU": {
-      "games": 3,
-      "firstQuarterPointsScored": 2.33,
-      "firstQuarterPointsAllowed": 2.0,
-      "firstHalfPointsScored": 10.33,
-      "firstHalfPointsAllowed": 14.67,
-      "finalPointsScored": 18.0,
-      "finalPointsAllowed": 25.0
+      "games": 4,
+      "firstQuarterPointsScored": 4.25,
+      "firstQuarterPointsAllowed": 2.25,
+      "firstHalfPointsScored": 11.75,
+      "firstHalfPointsAllowed": 12.5,
+      "finalPointsScored": 21.0,
+      "finalPointsAllowed": 27.25
     },
     "BUF": {
-      "games": 3,
-      "firstQuarterPointsScored": 5.67,
-      "firstQuarterPointsAllowed": 5.67,
-      "firstHalfPointsScored": 20.33,
-      "firstHalfPointsAllowed": 13.67,
-      "finalPointsScored": 33.67,
-      "finalPointsAllowed": 26.0
+      "games": 4,
+      "firstQuarterPointsScored": 4.25,
+      "firstQuarterPointsAllowed": 6.0,
+      "firstHalfPointsScored": 19.5,
+      "firstHalfPointsAllowed": 13.75,
+      "finalPointsScored": 31.75,
+      "finalPointsAllowed": 26.75
     },
     "CAR": {
-      "games": 3,
-      "firstQuarterPointsScored": 5.67,
-      "firstQuarterPointsAllowed": 4.67,
-      "firstHalfPointsScored": 15.67,
-      "firstHalfPointsAllowed": 14.67,
-      "finalPointsScored": 29.67,
-      "finalPointsAllowed": 27.67
+      "games": 4,
+      "firstQuarterPointsScored": 6.0,
+      "firstQuarterPointsAllowed": 4.25,
+      "firstHalfPointsScored": 15.75,
+      "firstHalfPointsAllowed": 15.0,
+      "finalPointsScored": 30.25,
+      "finalPointsAllowed": 27.25
     },
     "CHI": {
-      "games": 3,
-      "firstQuarterPointsScored": 8.0,
-      "firstQuarterPointsAllowed": 3.33,
-      "firstHalfPointsScored": 14.67,
-      "firstHalfPointsAllowed": 12.33,
-      "finalPointsScored": 29.67,
-      "finalPointsAllowed": 17.67
+      "games": 4,
+      "firstQuarterPointsScored": 7.75,
+      "firstQuarterPointsAllowed": 2.5,
+      "firstHalfPointsScored": 14.25,
+      "firstHalfPointsAllowed": 10.0,
+      "finalPointsScored": 28.0,
+      "finalPointsAllowed": 16.25
     },
     "JAX": {
-      "games": 3,
-      "firstQuarterPointsScored": 4.67,
+      "games": 4,
+      "firstQuarterPointsScored": 4.25,
       "firstQuarterPointsAllowed": 0.0,
-      "firstHalfPointsScored": 16.0,
-      "firstHalfPointsAllowed": 2.0,
-      "finalPointsScored": 27.33,
-      "finalPointsAllowed": 12.0
+      "firstHalfPointsScored": 15.25,
+      "firstHalfPointsAllowed": 2.25,
+      "finalPointsScored": 26.0,
+      "finalPointsAllowed": 13.25
     },
     "CLE": {
       "games": 4,
@@ -114,103 +114,103 @@
       "finalPointsAllowed": 23.75
     },
     "NYG": {
-      "games": 3,
-      "firstQuarterPointsScored": 3.33,
-      "firstQuarterPointsAllowed": 2.33,
-      "firstHalfPointsScored": 8.67,
-      "firstHalfPointsAllowed": 7.0,
-      "finalPointsScored": 15.33,
-      "finalPointsAllowed": 18.33
+      "games": 4,
+      "firstQuarterPointsScored": 4.0,
+      "firstQuarterPointsAllowed": 5.25,
+      "firstHalfPointsScored": 11.25,
+      "firstHalfPointsAllowed": 9.5,
+      "finalPointsScored": 20.5,
+      "finalPointsAllowed": 19.75
     },
     "DAL": {
-      "games": 3,
-      "firstQuarterPointsScored": 6.67,
-      "firstQuarterPointsAllowed": 4.67,
-      "firstHalfPointsScored": 12.33,
-      "firstHalfPointsAllowed": 13.67,
-      "finalPointsScored": 29.33,
-      "finalPointsAllowed": 27.33
+      "games": 4,
+      "firstQuarterPointsScored": 5.75,
+      "firstQuarterPointsAllowed": 6.0,
+      "firstHalfPointsScored": 10.75,
+      "firstHalfPointsAllowed": 14.25,
+      "finalPointsScored": 30.5,
+      "finalPointsAllowed": 28.0
     },
     "KC": {
-      "games": 3,
-      "firstQuarterPointsScored": 8.0,
+      "games": 4,
+      "firstQuarterPointsScored": 7.75,
       "firstQuarterPointsAllowed": 7.0,
-      "firstHalfPointsScored": 15.0,
-      "firstHalfPointsAllowed": 11.33,
-      "finalPointsScored": 29.33,
-      "finalPointsAllowed": 16.67
+      "firstHalfPointsScored": 13.75,
+      "firstHalfPointsAllowed": 11.75,
+      "finalPointsScored": 29.5,
+      "finalPointsAllowed": 19.25
     },
     "DEN": {
-      "games": 3,
-      "firstQuarterPointsScored": 2.33,
-      "firstQuarterPointsAllowed": 4.67,
-      "firstHalfPointsScored": 3.33,
-      "firstHalfPointsAllowed": 13.33,
-      "finalPointsScored": 20.0,
-      "finalPointsAllowed": 23.33
+      "games": 4,
+      "firstQuarterPointsScored": 2.5,
+      "firstQuarterPointsAllowed": 3.5,
+      "firstHalfPointsScored": 3.25,
+      "firstHalfPointsAllowed": 10.75,
+      "finalPointsScored": 18.5,
+      "finalPointsAllowed": 23.5
     },
     "MIN": {
-      "games": 3,
-      "firstQuarterPointsScored": 5.33,
-      "firstQuarterPointsAllowed": 6.33,
-      "firstHalfPointsScored": 11.0,
-      "firstHalfPointsAllowed": 10.67,
-      "finalPointsScored": 23.67,
-      "finalPointsAllowed": 13.67
+      "games": 4,
+      "firstQuarterPointsScored": 4.75,
+      "firstQuarterPointsAllowed": 4.75,
+      "firstHalfPointsScored": 10.5,
+      "firstHalfPointsAllowed": 8.0,
+      "finalPointsScored": 21.5,
+      "finalPointsAllowed": 12.75
     },
     "GB": {
-      "games": 3,
-      "firstQuarterPointsScored": 5.33,
-      "firstQuarterPointsAllowed": 3.33,
-      "firstHalfPointsScored": 11.0,
-      "firstHalfPointsAllowed": 11.33,
-      "finalPointsScored": 18.67,
-      "finalPointsAllowed": 30.33
+      "games": 4,
+      "firstQuarterPointsScored": 4.0,
+      "firstQuarterPointsAllowed": 2.5,
+      "firstHalfPointsScored": 10.75,
+      "firstHalfPointsAllowed": 10.25,
+      "finalPointsScored": 18.25,
+      "finalPointsAllowed": 26.25
     },
     "LV": {
-      "games": 3,
-      "firstQuarterPointsScored": 3.33,
-      "firstQuarterPointsAllowed": 2.0,
-      "firstHalfPointsScored": 14.33,
-      "firstHalfPointsAllowed": 8.67,
-      "finalPointsScored": 29.33,
-      "finalPointsAllowed": 18.0
+      "games": 4,
+      "firstQuarterPointsScored": 4.25,
+      "firstQuarterPointsAllowed": 3.25,
+      "firstHalfPointsScored": 14.0,
+      "firstHalfPointsAllowed": 9.0,
+      "finalPointsScored": 28.75,
+      "finalPointsAllowed": 21.0
     },
     "MIA": {
-      "games": 3,
-      "firstQuarterPointsScored": 2.33,
-      "firstQuarterPointsAllowed": 7.0,
-      "firstHalfPointsScored": 6.33,
-      "firstHalfPointsAllowed": 15.0,
-      "finalPointsScored": 12.0,
-      "finalPointsAllowed": 28.67
+      "games": 4,
+      "firstQuarterPointsScored": 1.75,
+      "firstQuarterPointsAllowed": 6.0,
+      "firstHalfPointsScored": 4.75,
+      "firstHalfPointsAllowed": 13.5,
+      "finalPointsScored": 11.5,
+      "finalPointsAllowed": 25.25
     },
     "SEA": {
-      "games": 3,
-      "firstQuarterPointsScored": 2.33,
-      "firstQuarterPointsAllowed": 4.33,
-      "firstHalfPointsScored": 5.67,
-      "firstHalfPointsAllowed": 10.33,
-      "finalPointsScored": 25.0,
-      "finalPointsAllowed": 16.67
+      "games": 4,
+      "firstQuarterPointsScored": 3.5,
+      "firstQuarterPointsAllowed": 4.0,
+      "firstHalfPointsScored": 9.25,
+      "firstHalfPointsAllowed": 9.25,
+      "finalPointsScored": 26.25,
+      "finalPointsAllowed": 18.25
     },
     "NE": {
-      "games": 3,
-      "firstQuarterPointsScored": 2.33,
+      "games": 4,
+      "firstQuarterPointsScored": 3.5,
       "firstQuarterPointsAllowed": 0.0,
-      "firstHalfPointsScored": 6.67,
-      "firstHalfPointsAllowed": 5.67,
-      "finalPointsScored": 12.0,
-      "finalPointsAllowed": 17.0
+      "firstHalfPointsScored": 8.5,
+      "firstHalfPointsAllowed": 8.5,
+      "finalPointsScored": 16.25,
+      "finalPointsAllowed": 19.25
     },
     "DET": {
-      "games": 3,
-      "firstQuarterPointsScored": 2.33,
-      "firstQuarterPointsAllowed": 4.67,
-      "firstHalfPointsScored": 9.0,
-      "firstHalfPointsAllowed": 11.33,
-      "finalPointsScored": 31.0,
-      "finalPointsAllowed": 31.67
+      "games": 4,
+      "firstQuarterPointsScored": 2.5,
+      "firstQuarterPointsAllowed": 5.25,
+      "firstHalfPointsScored": 10.75,
+      "firstHalfPointsAllowed": 12.5,
+      "finalPointsScored": 29.75,
+      "finalPointsAllowed": 31.75
     },
     "NO": {
       "games": 3,
@@ -222,76 +222,76 @@
       "finalPointsAllowed": 27.67
     },
     "TEN": {
-      "games": 3,
-      "firstQuarterPointsScored": 3.33,
-      "firstQuarterPointsAllowed": 3.33,
-      "firstHalfPointsScored": 4.33,
-      "firstHalfPointsAllowed": 11.0,
-      "finalPointsScored": 12.33,
-      "finalPointsAllowed": 19.67
+      "games": 4,
+      "firstQuarterPointsScored": 4.25,
+      "firstQuarterPointsAllowed": 4.25,
+      "firstHalfPointsScored": 5.0,
+      "firstHalfPointsAllowed": 14.25,
+      "finalPointsScored": 13.75,
+      "finalPointsAllowed": 20.75
     },
     "NYJ": {
-      "games": 3,
-      "firstQuarterPointsScored": 2.33,
-      "firstQuarterPointsAllowed": 1.0,
-      "firstHalfPointsScored": 8.0,
-      "firstHalfPointsAllowed": 6.67,
-      "finalPointsScored": 21.33,
-      "finalPointsAllowed": 20.33
+      "games": 4,
+      "firstQuarterPointsScored": 1.75,
+      "firstQuarterPointsAllowed": 2.5,
+      "firstHalfPointsScored": 6.75,
+      "firstHalfPointsAllowed": 8.25,
+      "finalPointsScored": 19.0,
+      "finalPointsAllowed": 21.0
     },
     "LA": {
-      "games": 3,
-      "firstQuarterPointsScored": 6.67,
-      "firstQuarterPointsAllowed": 1.0,
-      "firstHalfPointsScored": 12.33,
-      "firstHalfPointsAllowed": 4.33,
-      "finalPointsScored": 20.33,
-      "finalPointsAllowed": 21.0
+      "games": 4,
+      "firstQuarterPointsScored": 5.75,
+      "firstQuarterPointsAllowed": 1.5,
+      "firstHalfPointsScored": 11.75,
+      "firstHalfPointsAllowed": 8.25,
+      "finalPointsScored": 21.25,
+      "finalPointsAllowed": 20.75
     },
     "SF": {
-      "games": 3,
-      "firstQuarterPointsScored": 7.67,
-      "firstQuarterPointsAllowed": 2.0,
-      "firstHalfPointsScored": 13.67,
-      "firstHalfPointsAllowed": 6.33,
-      "finalPointsScored": 32.67,
-      "finalPointsAllowed": 16.67
+      "games": 4,
+      "firstQuarterPointsScored": 5.75,
+      "firstQuarterPointsAllowed": 2.25,
+      "firstHalfPointsScored": 11.0,
+      "firstHalfPointsAllowed": 5.5,
+      "finalPointsScored": 30.5,
+      "finalPointsAllowed": 16.0
     },
     "CIN": {
-      "games": 3,
-      "firstQuarterPointsScored": 7.0,
-      "firstQuarterPointsAllowed": 5.67,
-      "firstHalfPointsScored": 16.0,
-      "firstHalfPointsAllowed": 10.0,
-      "finalPointsScored": 26.67,
-      "finalPointsAllowed": 21.0
+      "games": 4,
+      "firstQuarterPointsScored": 5.25,
+      "firstQuarterPointsAllowed": 5.0,
+      "firstHalfPointsScored": 12.75,
+      "firstHalfPointsAllowed": 10.75,
+      "finalPointsScored": 24.25,
+      "finalPointsAllowed": 21.25
     },
     "TB": {
-      "games": 3,
-      "firstQuarterPointsScored": 5.33,
-      "firstQuarterPointsAllowed": 9.0,
-      "firstHalfPointsScored": 9.67,
-      "firstHalfPointsAllowed": 15.67,
-      "finalPointsScored": 20.67,
-      "finalPointsAllowed": 26.33
+      "games": 4,
+      "firstQuarterPointsScored": 4.0,
+      "firstQuarterPointsAllowed": 6.75,
+      "firstHalfPointsScored": 9.0,
+      "firstHalfPointsAllowed": 14.25,
+      "finalPointsScored": 19.0,
+      "finalPointsAllowed": 24.0
     },
     "PHI": {
-      "games": 3,
-      "firstQuarterPointsScored": 0.0,
-      "firstQuarterPointsAllowed": 5.67,
-      "firstHalfPointsScored": 11.67,
-      "firstHalfPointsAllowed": 9.67,
-      "finalPointsScored": 18.33,
-      "finalPointsAllowed": 23.0
+      "games": 4,
+      "firstQuarterPointsScored": 0.75,
+      "firstQuarterPointsAllowed": 5.0,
+      "firstHalfPointsScored": 13.75,
+      "firstHalfPointsAllowed": 9.75,
+      "finalPointsScored": 18.75,
+      "finalPointsAllowed": 23.25
     },
     "WAS": {
-      "games": 3,
-      "firstQuarterPointsScored": 3.33,
-      "firstQuarterPointsAllowed": 3.33,
-      "firstHalfPointsScored": 12.0,
-      "firstHalfPointsAllowed": 13.67,
-      "finalPointsScored": 25.0,
-      "finalPointsAllowed": 30.67
+      "games": 4,
+      "firstQuarterPointsScored": 4.0,
+      "firstQuarterPointsAllowed": 2.5,
+      "firstHalfPointsScored": 10.5,
+      "firstHalfPointsAllowed": 12.75,
+      "finalPointsScored": 22.0,
+      "finalPointsAllowed": 30.5
     }
   }
 }
