@@ -1,23 +1,18 @@
 /* =========================================================
    DOC'S NFL WAR ROOM
    POSTGAME EVALUATION ENGINE
-   Phase 1: Verified Game Results Test
+   Phase 2: Receipt Grader Test
    ========================================================= */
 
 (() => {
   "use strict";
 
-  /*
-    TEST GAME:
-    Detroit Lions @ Carolina Panthers
-    October 4, 2026
+  /* ---------------------------------------------------------
+     VERIFIED COMPLETED GAME
+     Detroit Lions @ Carolina Panthers — Oct. 4, 2026
+     --------------------------------------------------------- */
 
-    We are deliberately starting with ONE completed game.
-    Once the display works correctly, this will be replaced
-    by the automatic results feed.
-  */
-
-  const postgameTest = {
+  const completedGame = {
     away: "Detroit Lions",
     home: "Carolina Panthers",
 
@@ -39,18 +34,100 @@
   };
 
 
-  /* =========================================================
-     CALCULATE FIRST-HALF SCORE
-     ========================================================= */
+  /* ---------------------------------------------------------
+     ORIGINAL SAVED PREGAME RECEIPT
+     These are the lines we saved BEFORE the game.
+     --------------------------------------------------------- */
 
-  function firstHalf(teamScore) {
-    return teamScore.q1 + teamScore.q2;
+  const savedReceipt = [
+
+    {
+      player: "Bryce Young",
+      market: "300+ Passing Yards",
+      projection: 313.0,
+      line: 300,
+      price: "+350",
+      stat: "passingYards"
+    },
+
+    {
+      player: "Amon-Ra St. Brown",
+      market: "80+ Receiving Yards",
+      projection: 76.0,
+      line: 80,
+      price: "-106",
+      stat: "receivingYards"
+    },
+
+    {
+      player: "Amon-Ra St. Brown",
+      market: "TD in 2nd Half",
+      projection: "Scoring profile",
+      line: "Yes",
+      price: "+205",
+      stat: "secondHalfTD"
+    },
+
+    {
+      player: "Jahmyr Gibbs",
+      market: "100+ Rushing Yards",
+      projection: 102.3,
+      line: 100,
+      price: "+102",
+      stat: "rushingYards"
+    },
+
+    {
+      player: "Jahmyr Gibbs",
+      market: "TD in 2nd Half",
+      projection: "Scoring profile",
+      line: "Yes",
+      price: "-115",
+      stat: "secondHalfTD"
+    }
+
+  ];
+
+
+  /* ---------------------------------------------------------
+     VERIFIED ACTUAL PLAYER RESULTS
+
+     IMPORTANT:
+     TD timing is intentionally left unresolved until
+     scoring-play timing is verified separately.
+     --------------------------------------------------------- */
+
+  const actualPlayerResults = {
+
+    "Bryce Young": {
+      passingYards: 329
+    },
+
+    "Amon-Ra St. Brown": {
+      receivingYards: 75,
+      secondHalfTD: null
+    },
+
+    "Jahmyr Gibbs": {
+      rushingYards: 46,
+      secondHalfTD: null
+    }
+
+  };
+
+
+  /* ---------------------------------------------------------
+     FIRST HALF
+     --------------------------------------------------------- */
+
+  function firstHalf(score) {
+    return score.q1 + score.q2;
   }
 
 
-  /* =========================================================
-     CREATE SCORE ROW
-     ========================================================= */
+  /* ---------------------------------------------------------
+     GAME SCORE ROW
+     --------------------------------------------------------- */
 
   function createScoreRow(team, score) {
 
@@ -67,10 +144,157 @@
     ];
 
     values.forEach(value => {
-
       const cell = document.createElement("td");
+      cell.textContent = value;
+      row.appendChild(cell);
+    });
+
+    return row;
+  }
+
+
+  /* ---------------------------------------------------------
+     LOAD GAME RESULT
+     --------------------------------------------------------- */
+
+  function loadGameResult() {
+
+    const body =
+      document.getElementById("postgameScoreBody");
+
+    const status =
+      document.getElementById("postgameStatus");
+
+    if (!body || !status) return;
+
+    body.replaceChildren();
+
+    body.appendChild(
+      createScoreRow(
+        completedGame.away,
+        completedGame.awayScore
+      )
+    );
+
+    body.appendChild(
+      createScoreRow(
+        completedGame.home,
+        completedGame.homeScore
+      )
+    );
+
+    status.textContent =
+      "VERIFIED FINAL — Detroit Lions 26 at Carolina Panthers 32";
+  }
+
+
+  /* ---------------------------------------------------------
+     GRADE ONE RECEIPT
+     --------------------------------------------------------- */
+
+  function gradeReceipt(receipt) {
+
+    const playerResult =
+      actualPlayerResults[receipt.player];
+
+    if (!playerResult) {
+      return {
+        actual: "Not found",
+        grade: "REVIEW"
+      };
+    }
+
+    const actual =
+      playerResult[receipt.stat];
+
+    /*
+       null means we do NOT yet have enough verified
+       information to settle that exact market.
+    */
+
+    if (actual === null || actual === undefined) {
+      return {
+        actual: "Awaiting verification",
+        grade: "REVIEW"
+      };
+    }
+
+    /*
+       Numeric PLUS markets:
+       300+ passing, 80+ receiving, 100+ rushing, etc.
+    */
+
+    if (typeof receipt.line === "number") {
+
+      if (actual >= receipt.line) {
+        return {
+          actual: actual,
+          grade: "WIN"
+        };
+      }
+
+      return {
+        actual: actual,
+        grade: "LOSS"
+      };
+    }
+
+    return {
+      actual: String(actual),
+      grade: "REVIEW"
+    };
+  }
+
+
+  /* ---------------------------------------------------------
+     RECEIPT ROW
+     --------------------------------------------------------- */
+
+  function createReceiptRow(receipt) {
+
+    const evaluation =
+      gradeReceipt(receipt);
+
+    const row =
+      document.createElement("tr");
+
+    const playerMarket =
+      receipt.player + " — " + receipt.market;
+
+    const values = [
+      playerMarket,
+      receipt.projection,
+      receipt.line,
+      receipt.price,
+      evaluation.actual,
+      evaluation.grade
+    ];
+
+    values.forEach((value, index) => {
+
+      const cell =
+        document.createElement("td");
 
       cell.textContent = value;
+
+      /*
+        ONLY confirmed wins receive green.
+        Losses and REVIEW stay neutral.
+      */
+
+      if (
+        index === 5 &&
+        evaluation.grade === "WIN"
+      ) {
+        cell.style.background =
+          "rgba(53, 223, 147, 0.22)";
+
+        cell.style.color =
+          "#7cf5ba";
+
+        cell.style.fontWeight =
+          "900";
+      }
 
       row.appendChild(cell);
 
@@ -80,58 +304,117 @@
   }
 
 
-  /* =========================================================
-     DISPLAY VERIFIED GAME RESULT
-     ========================================================= */
+  /* ---------------------------------------------------------
+     LOAD RECEIPT
+     --------------------------------------------------------- */
 
-  function loadPostgameTest() {
+  function loadReceiptEvaluation() {
 
     const body =
-      document.getElementById("postgameScoreBody");
+      document.getElementById(
+        "postgameReceiptBody"
+      );
 
-    const status =
-      document.getElementById("postgameStatus");
-
-    if (!body || !status) {
-      return;
-    }
+    if (!body) return;
 
     body.replaceChildren();
 
-    body.appendChild(
-      createScoreRow(
-        postgameTest.away,
-        postgameTest.awayScore
-      )
-    );
+    savedReceipt.forEach(receipt => {
 
-    body.appendChild(
-      createScoreRow(
-        postgameTest.home,
-        postgameTest.homeScore
-      )
-    );
+      body.appendChild(
+        createReceiptRow(receipt)
+      );
 
-    status.textContent =
-      "VERIFIED FINAL — Detroit Lions 26 at Carolina Panthers 32";
+    });
 
   }
 
 
-  /* =========================================================
+  /* ---------------------------------------------------------
+     SUMMARY
+     REVIEW items do NOT count as wins or losses.
+     --------------------------------------------------------- */
+
+  function loadSummary() {
+
+    const body =
+      document.getElementById(
+        "postgameSummaryBody"
+      );
+
+    if (!body) return;
+
+    let wins = 0;
+    let losses = 0;
+    let pushes = 0;
+
+    savedReceipt.forEach(receipt => {
+
+      const result =
+        gradeReceipt(receipt).grade;
+
+      if (result === "WIN") wins++;
+      if (result === "LOSS") losses++;
+      if (result === "PUSH") pushes++;
+
+    });
+
+    const graded =
+      wins + losses;
+
+    const winRate =
+      graded > 0
+        ? ((wins / graded) * 100).toFixed(1) + "%"
+        : "—";
+
+    body.innerHTML = `
+      <tr>
+        <td>Game Markets</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+
+      <tr>
+        <td>Player Props</td>
+        <td>${wins}</td>
+        <td>${losses}</td>
+        <td>${pushes}</td>
+        <td>${winRate}</td>
+      </tr>
+
+      <tr>
+        <td>Overall</td>
+        <td>${wins}</td>
+        <td>${losses}</td>
+        <td>${pushes}</td>
+        <td>${winRate}</td>
+      </tr>
+    `;
+  }
+
+
+  /* ---------------------------------------------------------
      START POSTGAME ENGINE
-     ========================================================= */
+     --------------------------------------------------------- */
+
+  function startPostgame() {
+    loadGameResult();
+    loadReceiptEvaluation();
+    loadSummary();
+  }
 
   if (document.readyState === "loading") {
 
     document.addEventListener(
       "DOMContentLoaded",
-      loadPostgameTest
+      startPostgame
     );
 
   } else {
 
-    loadPostgameTest();
+    startPostgame();
 
   }
 
