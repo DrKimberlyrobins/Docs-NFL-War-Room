@@ -3,6 +3,63 @@
   "season": 2026,
   "games": [
     {
+      "away": "ATL",
+      "home": "NO",
+      "awayName": "Atlanta Falcons",
+      "homeName": "New Orleans Saints",
+      "awayLabel": "ATL \u2014 Atlanta Falcons",
+      "homeLabel": "NO \u2014 New Orleans Saints",
+      "matchup": "ATL \u2014 Atlanta Falcons @ NO \u2014 New Orleans Saints",
+      "spread": {
+        "away": {
+          "open": 1.5,
+          "openPrice": null,
+          "current": 1.5,
+          "currentPrice": -102.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": -1.5,
+          "openPrice": -113.0,
+          "current": -1.5,
+          "currentPrice": -111.0,
+          "publicBet": null
+        }
+      },
+      "moneyline": {
+        "away": {
+          "open": null,
+          "openPrice": null,
+          "current": 112.0,
+          "currentPrice": 112.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": null,
+          "openPrice": null,
+          "current": -125.0,
+          "currentPrice": -125.0,
+          "publicBet": null
+        }
+      },
+      "total": {
+        "over": {
+          "open": 47.5,
+          "openPrice": -112.0,
+          "current": 47.5,
+          "currentPrice": -110.0,
+          "publicBet": null
+        },
+        "under": {
+          "open": 47.5,
+          "openPrice": null,
+          "current": 47.5,
+          "currentPrice": -105.0,
+          "publicBet": null
+        }
+      }
+    },
+    {
       "away": "DET",
       "home": "CAR",
       "awayName": "Detroit Lions",
@@ -55,63 +112,6 @@
           "openPrice": null,
           "current": 52.5,
           "currentPrice": -108.0,
-          "publicBet": null
-        }
-      }
-    },
-    {
-      "away": "ATL",
-      "home": "NO",
-      "awayName": "Atlanta Falcons",
-      "homeName": "New Orleans Saints",
-      "awayLabel": "ATL \u2014 Atlanta Falcons",
-      "homeLabel": "NO \u2014 New Orleans Saints",
-      "matchup": "ATL \u2014 Atlanta Falcons @ NO \u2014 New Orleans Saints",
-      "spread": {
-        "away": {
-          "open": 1.5,
-          "openPrice": null,
-          "current": 1.5,
-          "currentPrice": -105.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": -1.5,
-          "openPrice": -113.0,
-          "current": -1.5,
-          "currentPrice": -111.0,
-          "publicBet": null
-        }
-      },
-      "moneyline": {
-        "away": {
-          "open": null,
-          "openPrice": null,
-          "current": 110.0,
-          "currentPrice": 110.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": null,
-          "openPrice": null,
-          "current": -126.0,
-          "currentPrice": -126.0,
-          "publicBet": null
-        }
-      },
-      "total": {
-        "over": {
-          "open": 47.5,
-          "openPrice": -112.0,
-          "current": 47.5,
-          "currentPrice": -110.0,
-          "publicBet": null
-        },
-        "under": {
-          "open": 47.5,
-          "openPrice": null,
-          "current": 47.5,
-          "currentPrice": -105.0,
           "publicBet": null
         }
       }
