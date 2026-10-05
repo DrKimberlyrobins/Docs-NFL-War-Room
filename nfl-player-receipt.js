@@ -1667,71 +1667,121 @@
 
 
   function marketMatches(
-    prop,
-    target
+  prop,
+  target
+) {
+
+  const text =
+    propText(prop);
+
+
+  if (
+    target.type ===
+    "PASSING_YARDS"
   ) {
 
-    const text =
-      propText(prop);
-
-
-    if (
-      target.type ===
-      "PASSING_YARDS"
-    ) {
-
-      return (
-        text.includes(
-          "passing yards"
-        ) &&
-        !isFirstHalf(prop)
-      );
-    }
-
-
-    if (
-      target.type ===
-      "RECEIVING_YARDS"
-    ) {
-
-      return (
-        text.includes(
-          "receiving yards"
-        ) &&
-        !isFirstHalf(prop)
-      );
-    }
-
-
-    if (
-      target.type ===
-      "RUSHING_YARDS"
-    ) {
-
-      return (
-        text.includes(
-          "rushing yards"
-        ) &&
-        !isFirstHalf(prop)
-      );
-    }
-
-
-    if (
-      target.type ===
-      "TOUCHDOWN"
-    ) {
-
-      return (
-        text.includes("touchdown") ||
-        text.includes("td scorer") ||
-        text.includes("to score")
-      );
-    }
-
-
-    return false;
+    return (
+      text.includes(
+        "passing yards"
+      ) &&
+      !isFirstHalf(prop)
+    );
   }
+
+
+  if (
+    target.type ===
+    "RECEIVING_YARDS"
+  ) {
+
+    return (
+      text.includes(
+        "receiving yards"
+      ) &&
+      !isFirstHalf(prop)
+    );
+  }
+
+
+  if (
+    target.type ===
+    "RUSHING_YARDS"
+  ) {
+
+    return (
+      text.includes(
+        "rushing yards"
+      ) &&
+      !isFirstHalf(prop)
+    );
+  }
+
+
+  if (
+    target.type ===
+    "TOUCHDOWN"
+  ) {
+
+    const isAnytime =
+      text.includes("anytime");
+
+    const isFirstGameTD =
+      text.includes("first touchdown") ||
+      text.includes("first td scorer") ||
+      text.includes("1st touchdown") ||
+      text.includes("1st td scorer");
+
+    const isHalfMarket =
+      text.includes("first half") ||
+      text.includes("1st half") ||
+      text.includes("second half") ||
+      text.includes("2nd half");
+
+    const isQuarterMarket =
+      text.includes("1st quarter") ||
+      text.includes("2nd quarter") ||
+      text.includes("3rd quarter") ||
+      text.includes("4th quarter") ||
+      text.includes("q1") ||
+      text.includes("q2") ||
+      text.includes("q3") ||
+      text.includes("q4");
+
+    const isNextTD =
+      text.includes("next touchdown") ||
+      text.includes("next td");
+
+    const isLastTD =
+      text.includes("last touchdown") ||
+      text.includes("last td");
+
+    const isMultiTD =
+      text.includes("2+") ||
+      text.includes("3+") ||
+      text.includes("two or more") ||
+      text.includes("three or more");
+
+
+    if (
+      isHalfMarket ||
+      isQuarterMarket ||
+      isNextTD ||
+      isLastTD ||
+      isMultiTD
+    ) {
+      return false;
+    }
+
+
+    return (
+      isAnytime ||
+      isFirstGameTD
+    );
+  }
+
+
+  return false;
+}
 
 
   // ============================================================
@@ -1899,92 +1949,72 @@
 
 
   function chooseTouchdownProp(
-    props
-  ) {
+  props
+) {
 
-    if (!props.length) {
-      return null;
-    }
-
-
-    const ranked =
-      [...props]
-        .map(prop => {
-
-          const text =
-            propText(prop);
-
-          let score = 0;
-
-
-          if (
-            text.includes("anytime")
-          ) {
-            score += 20;
-          }
-
-
-          if (
-            text.includes(
-              "touchdown scorer"
-            )
-          ) {
-            score += 15;
-          }
-
-
-          if (
-            text.includes("to score")
-          ) {
-            score += 10;
-          }
-
-
-          if (
-            text.includes(
-              "first touchdown"
-            )
-          ) {
-            score -= 30;
-          }
-
-
-          if (
-            text.includes(
-              "last touchdown"
-            )
-          ) {
-            score -= 30;
-          }
-
-
-          if (
-            text.includes("2+") ||
-            text.includes("3+")
-          ) {
-            score -= 20;
-          }
-
-
-          if (isFirstHalf(prop)) {
-            score -= 20;
-          }
-
-
-          return {
-            prop,
-            score
-          };
-        })
-        .sort(
-          (a, b) =>
-            b.score - a.score
-        );
-
-
-    return ranked[0].prop;
+  if (!props.length) {
+    return null;
   }
 
+
+  /*
+    DOC'S TD MARKET PRIORITY:
+
+    1. Anytime TD scorer
+    2. First TD scorer of the GAME
+
+    All other TD market types were already
+    rejected by marketMatches().
+  */
+
+  const ranked =
+    [...props]
+      .map(prop => {
+
+        const text =
+          propText(prop);
+
+        let score = 0;
+
+
+        // Preferred TD market.
+        if (
+          text.includes("anytime")
+        ) {
+          score = 100;
+        }
+
+
+        // Allowed, but separate from Anytime TD.
+        if (
+          text.includes("first touchdown") ||
+          text.includes("first td scorer") ||
+          text.includes("1st touchdown") ||
+          text.includes("1st td scorer")
+        ) {
+          score = 50;
+        }
+
+
+        return {
+          prop,
+          score
+        };
+
+      })
+      .filter(item =>
+        item.score > 0
+      )
+      .sort(
+        (a, b) =>
+          b.score - a.score
+      );
+
+
+  return ranked.length
+    ? ranked[0].prop
+    : null;
+}
 
   function connectTargetToKambi(
     target,
