@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-10-05T19:20:22.085768+00:00",
+  "updated": "2026-10-06T16:52:28.759127+00:00",
   "source": "nflverse",
   "definition": "Regular-season passing and rushing plays with valid EPA. Excludes nullified plays when identified. First half includes quarters 1 and 2. These are EPA-eligible play counts, not every official offensive snap. Early-season samples are small.",
   "teams": {
@@ -14,13 +14,13 @@
       "totalOpponentPlays": 245
     },
     "ATL": {
-      "games": 3,
-      "offensivePlaysPerGame": 66.0,
-      "opponentPlaysPerGame": 65.33,
-      "firstHalfOffensivePlays": 35.33,
-      "firstHalfOpponentPlays": 34.67,
-      "totalOffensivePlays": 198,
-      "totalOpponentPlays": 196
+      "games": 4,
+      "offensivePlaysPerGame": 63.25,
+      "opponentPlaysPerGame": 67.5,
+      "firstHalfOffensivePlays": 36.0,
+      "firstHalfOpponentPlays": 32.75,
+      "totalOffensivePlays": 253,
+      "totalOpponentPlays": 270
     },
     "BAL": {
       "games": 4,
@@ -203,13 +203,13 @@
       "totalOpponentPlays": 239
     },
     "NO": {
-      "games": 3,
-      "offensivePlaysPerGame": 76.67,
-      "opponentPlaysPerGame": 67.33,
-      "firstHalfOffensivePlays": 31.33,
-      "firstHalfOpponentPlays": 37.0,
-      "totalOffensivePlays": 230,
-      "totalOpponentPlays": 202
+      "games": 4,
+      "offensivePlaysPerGame": 76.0,
+      "opponentPlaysPerGame": 64.25,
+      "firstHalfOffensivePlays": 30.25,
+      "firstHalfOpponentPlays": 37.25,
+      "totalOffensivePlays": 304,
+      "totalOpponentPlays": 257
     },
     "NYG": {
       "games": 4,

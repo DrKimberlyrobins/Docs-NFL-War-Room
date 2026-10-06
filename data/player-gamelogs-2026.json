@@ -1,8 +1,8 @@
 {
   "season": 2026,
-  "updated": "2026-10-05T19:20:28.573314+00:00",
+  "updated": "2026-10-06T16:52:33.871234+00:00",
   "source": "nflverse play-by-play",
-  "completedGames": 63,
+  "completedGames": 64,
   "note": "Completed regular-season games only. One record per observed player, game and statistical category. Players with no recorded opportunities in a category are not included for that game. Missing records must not automatically be treated as zero. Verify against official game logs.",
   "logs": [
     {
@@ -429,6 +429,15 @@
       "opportunities": 2
     },
     {
+      "gameId": "2026_04_ATL_NO",
+      "team": "ATL",
+      "playerId": "00-0032392",
+      "player": "A.Hooper",
+      "category": "receiving",
+      "yards": 9.0,
+      "opportunities": 1
+    },
+    {
       "gameId": "2026_01_ATL_PIT",
       "team": "ATL",
       "playerId": "00-0038542",
@@ -453,6 +462,15 @@
       "player": "Bi.Robinson",
       "category": "receiving",
       "yards": 19.0,
+      "opportunities": 2
+    },
+    {
+      "gameId": "2026_04_ATL_NO",
+      "team": "ATL",
+      "playerId": "00-0038542",
+      "player": "Bi.Robinson",
+      "category": "receiving",
+      "yards": 2.0,
       "opportunities": 2
     },
     {
@@ -483,6 +501,15 @@
       "opportunities": 29
     },
     {
+      "gameId": "2026_04_ATL_NO",
+      "team": "ATL",
+      "playerId": "00-0038542",
+      "player": "Bi.Robinson",
+      "category": "rushing",
+      "yards": 145.0,
+      "opportunities": 19
+    },
+    {
       "gameId": "2026_02_CAR_ATL",
       "team": "ATL",
       "playerId": "00-0037746",
@@ -490,6 +517,15 @@
       "category": "receiving",
       "yards": 16.0,
       "opportunities": 2
+    },
+    {
+      "gameId": "2026_04_ATL_NO",
+      "team": "ATL",
+      "playerId": "00-0037746",
+      "player": "Br.Robinson",
+      "category": "receiving",
+      "yards": 5.0,
+      "opportunities": 1
     },
     {
       "gameId": "2026_01_ATL_PIT",
@@ -517,6 +553,15 @@
       "category": "rushing",
       "yards": 50.0,
       "opportunities": 10
+    },
+    {
+      "gameId": "2026_04_ATL_NO",
+      "team": "ATL",
+      "playerId": "00-0037746",
+      "player": "Br.Robinson",
+      "category": "rushing",
+      "yards": 62.0,
+      "opportunities": 14
     },
     {
       "gameId": "2026_02_CAR_ATL",
@@ -573,6 +618,15 @@
       "opportunities": 1
     },
     {
+      "gameId": "2026_04_ATL_NO",
+      "team": "ATL",
+      "playerId": "00-0036429",
+      "player": "C.Woerner",
+      "category": "receiving",
+      "yards": 0.0,
+      "opportunities": 1
+    },
+    {
       "gameId": "2026_01_ATL_PIT",
       "team": "ATL",
       "playerId": "00-0037238",
@@ -598,6 +652,15 @@
       "category": "receiving",
       "yards": 194.0,
       "opportunities": 10
+    },
+    {
+      "gameId": "2026_04_ATL_NO",
+      "team": "ATL",
+      "playerId": "00-0037238",
+      "player": "D.London",
+      "category": "receiving",
+      "yards": 96.0,
+      "opportunities": 6
     },
     {
       "gameId": "2026_01_ATL_PIT",
@@ -642,6 +705,15 @@
       "player": "J.Dotson",
       "category": "receiving",
       "yards": 11.0,
+      "opportunities": 3
+    },
+    {
+      "gameId": "2026_04_ATL_NO",
+      "team": "ATL",
+      "playerId": "00-0037741",
+      "player": "J.Dotson",
+      "category": "receiving",
+      "yards": 54.0,
       "opportunities": 3
     },
     {
@@ -690,6 +762,15 @@
       "opportunities": 2
     },
     {
+      "gameId": "2026_04_ATL_NO",
+      "team": "ATL",
+      "playerId": "00-0036970",
+      "player": "K.Pitts",
+      "category": "receiving",
+      "yards": 47.0,
+      "opportunities": 3
+    },
+    {
       "gameId": "2026_03_ATL_GB",
       "team": "ATL",
       "playerId": null,
@@ -699,7 +780,25 @@
       "opportunities": 26
     },
     {
+      "gameId": "2026_04_ATL_NO",
+      "team": "ATL",
+      "playerId": null,
+      "player": "M.Penix",
+      "category": "passing",
+      "yards": 223.0,
+      "opportunities": 21
+    },
+    {
       "gameId": "2026_03_ATL_GB",
+      "team": "ATL",
+      "playerId": "00-0039917",
+      "player": "M.Penix",
+      "category": "rushing",
+      "yards": -2.0,
+      "opportunities": 2
+    },
+    {
+      "gameId": "2026_04_ATL_NO",
       "team": "ATL",
       "playerId": "00-0039917",
       "player": "M.Penix",
@@ -735,6 +834,15 @@
       "opportunities": 2
     },
     {
+      "gameId": "2026_04_ATL_NO",
+      "team": "ATL",
+      "playerId": "00-0035208",
+      "player": "O.Zaccheaus",
+      "category": "receiving",
+      "yards": 0.0,
+      "opportunities": 1
+    },
+    {
       "gameId": "2026_02_CAR_ATL",
       "team": "ATL",
       "playerId": "00-0041044",
@@ -750,6 +858,15 @@
       "player": "Z.Branch",
       "category": "receiving",
       "yards": 7.0,
+      "opportunities": 2
+    },
+    {
+      "gameId": "2026_04_ATL_NO",
+      "team": "ATL",
+      "playerId": "00-0041044",
+      "player": "Z.Branch",
+      "category": "receiving",
+      "yards": 10.0,
       "opportunities": 2
     },
     {
@@ -10293,6 +10410,15 @@
       "opportunities": 1
     },
     {
+      "gameId": "2026_04_ATL_NO",
+      "team": "NO",
+      "playerId": "00-0033906",
+      "player": "A.Kamara",
+      "category": "receiving",
+      "yards": 35.0,
+      "opportunities": 7
+    },
+    {
       "gameId": "2026_02_NO_BAL",
       "team": "NO",
       "playerId": "00-0033906",
@@ -10311,12 +10437,30 @@
       "opportunities": 9
     },
     {
+      "gameId": "2026_04_ATL_NO",
+      "team": "NO",
+      "playerId": "00-0033906",
+      "player": "A.Kamara",
+      "category": "rushing",
+      "yards": 23.0,
+      "opportunities": 7
+    },
+    {
       "gameId": "2026_01_NO_DET",
       "team": "NO",
       "playerId": "00-0041099",
       "player": "B.Brown",
       "category": "rushing",
       "yards": 3.0,
+      "opportunities": 1
+    },
+    {
+      "gameId": "2026_04_ATL_NO",
+      "team": "NO",
+      "playerId": "00-0041099",
+      "player": "B.Brown",
+      "category": "rushing",
+      "yards": -5.0,
       "opportunities": 1
     },
     {
@@ -10347,12 +10491,30 @@
       "opportunities": 3
     },
     {
+      "gameId": "2026_04_ATL_NO",
+      "team": "NO",
+      "playerId": "00-0041067",
+      "player": "B.Lance",
+      "category": "receiving",
+      "yards": 7.0,
+      "opportunities": 5
+    },
+    {
       "gameId": "2026_01_NO_DET",
       "team": "NO",
       "playerId": "00-0041326",
       "player": "C.Donaldson",
       "category": "receiving",
       "yards": -2.0,
+      "opportunities": 2
+    },
+    {
+      "gameId": "2026_04_ATL_NO",
+      "team": "NO",
+      "playerId": "00-0041326",
+      "player": "C.Donaldson",
+      "category": "receiving",
+      "yards": 5.0,
       "opportunities": 2
     },
     {
@@ -10383,6 +10545,15 @@
       "opportunities": 1
     },
     {
+      "gameId": "2026_04_ATL_NO",
+      "team": "NO",
+      "playerId": "00-0041326",
+      "player": "C.Donaldson",
+      "category": "rushing",
+      "yards": 18.0,
+      "opportunities": 3
+    },
+    {
       "gameId": "2026_01_NO_DET",
       "team": "NO",
       "playerId": "00-0037239",
@@ -10408,6 +10579,15 @@
       "category": "receiving",
       "yards": 107.0,
       "opportunities": 13
+    },
+    {
+      "gameId": "2026_04_ATL_NO",
+      "team": "NO",
+      "playerId": "00-0037239",
+      "player": "C.Olave",
+      "category": "receiving",
+      "yards": 116.0,
+      "opportunities": 12
     },
     {
       "gameId": "2026_01_NO_DET",
@@ -10437,6 +10617,15 @@
       "opportunities": 6
     },
     {
+      "gameId": "2026_04_ATL_NO",
+      "team": "NO",
+      "playerId": "00-0039424",
+      "player": "D.Vele",
+      "category": "receiving",
+      "yards": 54.0,
+      "opportunities": 9
+    },
+    {
       "gameId": "2026_01_NO_DET",
       "team": "NO",
       "playerId": "00-0036040",
@@ -10464,6 +10653,15 @@
       "opportunities": 8
     },
     {
+      "gameId": "2026_04_ATL_NO",
+      "team": "NO",
+      "playerId": "00-0036040",
+      "player": "J.Johnson",
+      "category": "receiving",
+      "yards": 59.0,
+      "opportunities": 8
+    },
+    {
       "gameId": "2026_02_NO_BAL",
       "team": "NO",
       "playerId": "00-0037231",
@@ -10479,6 +10677,15 @@
       "player": "K.Miller",
       "category": "receiving",
       "yards": 5.0,
+      "opportunities": 3
+    },
+    {
+      "gameId": "2026_04_ATL_NO",
+      "team": "NO",
+      "playerId": "00-0038551",
+      "player": "K.Miller",
+      "category": "receiving",
+      "yards": 10.0,
       "opportunities": 3
     },
     {
@@ -10498,6 +10705,15 @@
       "category": "rushing",
       "yards": 14.0,
       "opportunities": 4
+    },
+    {
+      "gameId": "2026_04_ATL_NO",
+      "team": "NO",
+      "playerId": "00-0038551",
+      "player": "K.Miller",
+      "category": "rushing",
+      "yards": 9.0,
+      "opportunities": 6
     },
     {
       "gameId": "2026_01_NO_DET",
@@ -10608,6 +10824,15 @@
       "opportunities": 44
     },
     {
+      "gameId": "2026_04_ATL_NO",
+      "team": "NO",
+      "playerId": null,
+      "player": "T.Shough",
+      "category": "passing",
+      "yards": 286.0,
+      "opportunities": 50
+    },
+    {
       "gameId": "2026_01_NO_DET",
       "team": "NO",
       "playerId": "00-0040743",
@@ -10632,6 +10857,24 @@
       "player": "T.Shough",
       "category": "rushing",
       "yards": 36.0,
+      "opportunities": 1
+    },
+    {
+      "gameId": "2026_04_ATL_NO",
+      "team": "NO",
+      "playerId": "00-0040743",
+      "player": "T.Shough",
+      "category": "rushing",
+      "yards": 5.0,
+      "opportunities": 2
+    },
+    {
+      "gameId": "2026_04_ATL_NO",
+      "team": "NO",
+      "playerId": "00-0039518",
+      "player": "T.Welch",
+      "category": "receiving",
+      "yards": 0.0,
       "opportunities": 1
     },
     {
