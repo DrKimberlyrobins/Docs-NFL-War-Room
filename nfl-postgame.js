@@ -8,29 +8,22 @@
   "use strict";
 
   /* ---------------------------------------------------------
-     VERIFIED COMPLETED GAME
-     Detroit Lions @ Carolina Panthers — Oct. 4, 2026
+     POSTGAME GAME STATE
+
+     No completed game is hard-coded here anymore.
+
+     The automatic results feed will populate this object
+     only after the selected game is confirmed FINAL.
      --------------------------------------------------------- */
 
-  const completedGame = {
-    away: "Detroit Lions",
-    home: "Carolina Panthers",
+  let completedGame = null;
 
-    awayScore: {
-      q1: 3,
-      q2: 13,
-      q3: 3,
-      q4: 7,
-      final: 26
-    },
-
-    homeScore: {
-      q1: 7,
-      q2: 9,
-      q3: 13,
-      q4: 3,
-      final: 32
-    }
+  const postgameState = {
+    gameId: null,
+    status: "WAITING",
+    receiptLocked: true,
+    resultsLoaded: false,
+    graded: false
   };
 
 
@@ -157,7 +150,7 @@
      LOAD GAME RESULT
      --------------------------------------------------------- */
 
-  function loadGameResult() {
+    function loadGameResult() {
 
     const body =
       document.getElementById("postgameScoreBody");
@@ -168,6 +161,27 @@
     if (!body || !status) return;
 
     body.replaceChildren();
+
+
+    /*
+      PROVE IT RULE:
+
+      Do not display or grade a game unless the
+      results feed has supplied a completed game
+      AND confirmed that its status is FINAL.
+    */
+
+    if (
+      !completedGame ||
+      postgameState.status !== "FINAL"
+    ) {
+
+      status.textContent =
+        "WAITING FOR VERIFIED FINAL RESULTS";
+
+      return;
+    }
+
 
     body.appendChild(
       createScoreRow(
@@ -183,8 +197,17 @@
       )
     );
 
+
     status.textContent =
-      "VERIFIED FINAL — Detroit Lions 26 at Carolina Panthers 32";
+      "VERIFIED FINAL — " +
+      completedGame.away +
+      " " +
+      completedGame.awayScore.final +
+      " at " +
+      completedGame.home +
+      " " +
+      completedGame.homeScore.final;
+
   }
 
 
