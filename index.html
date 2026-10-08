@@ -5,168 +5,88 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Doc's NFL War Room</title>
-
 <style>
-* { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  padding: 20px;
-  background: #081525;
-  color: white;
-  font-family: Arial, sans-serif;
-}
-
-.container {
-  max-width: 1100px;
-  margin: auto;
-}
-
-h1 {
-  text-align: center;
-  color: #35df93;
-  margin-bottom: 5px;
-}
-
-.subtitle {
-  text-align: center;
-  color: #aabbd0;
-}
-
-.panel {
-  background: #13263c;
-  border: 1px solid #304c67;
-  border-radius: 12px;
-  padding: 20px;
-  margin: 20px 0;
-}
-
-h2 { color: #35df93; }
-
-label {
-  display: block;
-  margin-top: 15px;
-  margin-bottom: 7px;
-}
-
-select, button {
-  width: 100%;
-  padding: 12px;
-  border-radius: 7px;
-  font-size: 16px;
-}
-
-select {
-  background: #edf3fa;
-  color: #111;
-}
-
-button {
-  margin-top: 20px;
-  background: #35df93;
-  color: #081525;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-button:hover { background: #7cf5ba; }
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 15px;
-}
-
-th, td {
-  padding: 12px;
-  border: 1px solid #304c67;
-  text-align: center;
-}
-
-th { background: #203c57; }
-
-td:first-child {
-  text-align: left;
-  font-weight: bold;
-}
-
-.table-wrap { overflow-x: auto; }
-
-.note {
-  color: #b5c6d6;
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-.status {
-  color: #35df93;
-  margin-top: 15px;
-}
- 
-/* FREEZE TEAM AND RECEIVER COLUMNS */
-
-#receiverTable {
-  --team-width: 110px;
-  --receiver-width: 110px;
-}
-
+*{box-sizing:border-box}
+body{margin:0;padding:20px;background:#081525;color:white;font-family:Arial,sans-serif}
+.container{max-width:1100px;margin:auto}
+h1{text-align:center;color:#35df93;margin-bottom:5px}
+.subtitle{text-align:center;color:#aabbd0}
+.panel{background:#13263c;border:1px solid #304c67;border-radius:12px;padding:20px;margin:20px 0}
+h2{color:#35df93}
+label{display:block;margin:15px 0 7px}
+select,button{width:100%;padding:12px;border-radius:7px;font-size:16px}
+select{background:#edf3fa;color:#111}
+button{margin-top:20px;background:#35df93;color:#081525;border:0;font-weight:bold;cursor:pointer}
+button:hover{background:#7cf5ba}
+table{width:100%;border-collapse:collapse;margin-top:15px}
+th,td{padding:12px;border:1px solid #304c67;text-align:center}
+th{background:#203c57}
+td:first-child{text-align:left;font-weight:bold}
+.table-wrap{overflow-x:auto}
+.note{color:#b5c6d6;font-size:14px;line-height:1.6}
+.status{color:#35df93;margin-top:15px}
+#receiverTable{--team-width:110px;--receiver-width:110px}
 #receiverTable th:nth-child(1),
-#receiverTable td:nth-child(1) {
-  position: sticky;
-  left: 0;
-  min-width: var(--team-width);
-  width: var(--team-width);
-  background: #213e58;
-  z-index: 2;
-}
-
+#receiverTable td:nth-child(1){
+position:sticky;left:0;min-width:110px;width:110px;
+background:#213e58;z-index:2}
 #receiverTable th:nth-child(2),
-#receiverTable td:nth-child(2) {
-  position: sticky;
-  left: var(--team-width);
-  min-width: var(--receiver-width);
-  width: var(--receiver-width);
-  background: #213e58;
-  z-index: 2;
-}
-
+#receiverTable td:nth-child(2){
+position:sticky;left:110px;min-width:110px;width:110px;
+background:#213e58;z-index:2}
 #receiverTable th:nth-child(1),
-#receiverTable th:nth-child(2) {
-  z-index: 3;
-}
- 
-/* EPA TABLE COLUMN WIDTHS */
+#receiverTable th:nth-child(2){z-index:3}
+#epaTable{width:100%;table-layout:fixed}
+#epaTable th:first-child,#epaTable td:first-child{width:34%}
+#epaTable th:nth-child(2),#epaTable td:nth-child(2),
+#epaTable th:nth-child(3),#epaTable td:nth-child(3){width:33%}
+#epaCalcBody td.epa-winner{
+background:rgba(53,223,147,.22);
+color:#7cf5ba;font-weight:900;
+box-shadow:inset 0 0 0 2px #35df93}
 
-#epaTable {
-  width: 100%;
-  table-layout: fixed;
-}
-
-#epaTable th:first-child,
-#epaTable td:first-child {
-  width: 34%;
-}
-
-#epaTable th:nth-child(2),
-#epaTable td:nth-child(2),
-#epaTable th:nth-child(3),
-#epaTable td:nth-child(3) {
-  width: 33%;
-}
-/* =========================================
-   EPA PROJECTION CALCULATOR GREEN HIGHLIGHT
-   ========================================= */
-
-#epaCalcBody td.epa-winner {
-  background: rgba(53, 223, 147, 0.22);
-  color: #7cf5ba;
-  font-weight: 900;
-  box-shadow: inset 0 0 0 2px #35df93;
-}  
+/* PLAYER INTELLIGENCE UPGRADE */
+.player-intel-link{
+width:auto;margin:0;padding:6px 8px;
+background:transparent;color:#b8ffe0;
+border:1px solid #35df93;
+font:inherit;font-weight:bold;
+text-decoration:underline;cursor:pointer}
+.player-intel-link:hover{background:#244c48;color:white}
+#playerIntelOverlay[hidden]{display:none!important}
+#playerIntelOverlay{
+position:fixed;inset:0;z-index:10000;
+background:rgba(1,8,19,.8);
+display:flex;align-items:center;justify-content:center;
+padding:14px}
+#playerIntelDialog{
+width:min(760px,100%);max-height:90vh;
+overflow:auto;background:#13263c;
+border:2px solid #35df93;border-radius:14px;
+padding:18px}
+.player-intel-top{
+display:flex;justify-content:space-between;
+align-items:flex-start;gap:12px}
+.player-intel-close{width:auto;margin:0;padding:8px 14px}
+.player-intel-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(145px,1fr));
+gap:10px;margin-top:16px}
+.player-intel-stat{
+padding:12px;border:1px solid #304c67;
+border-radius:8px;background:#1c344c}
+.player-intel-stat small{
+display:block;color:#b5c6d6;margin-bottom:7px}
+.player-intel-stat strong{font-size:18px}
+.player-intel-qualified{
+background:rgba(53,223,147,.2);
+color:#7cf5ba;border:2px solid #35df93}
+.player-intel-status{
+margin-top:16px;border-top:1px solid #304c67;
+padding-top:14px}
+.player-intel-status ul{padding-left:20px}
 </style>
 </head>
-
 <body>
 <div class="container">
 
@@ -177,116 +97,83 @@ EPA • SOS • QB Intelligence • Red Zone • Betting Lines
 
 <div class="panel">
 <h2>Team Matchup</h2>
-
 <label for="away">Away Team</label>
 <select id="away"></select>
-
 <label for="home">Home Team</label>
 <select id="home"></select>
-
-<button onclick="analyze()">
-Analyze Matchup
-</button>
-
+<button onclick="analyze()">Analyze Matchup</button>
 <p id="matchup" class="status"></p>
 </div>
 
 <div class="panel">
 <h2>EPA & Strength of Schedule</h2>
-
 <div class="table-wrap">
 <table id="epaTable">
-<thead>
-<tr>
+<thead><tr>
 <th>Statistic</th>
 <th id="awayHeader">Away</th>
 <th id="homeHeader">Home</th>
-</tr>
-</thead>
-
+</tr></thead>
 <tbody id="epaBody"></tbody>
 </table>
- <h3>Projected Offensive Plays</h3>
 
+<h3>Projected Offensive Plays</h3>
 <table>
-  <thead>
-    <tr>
-      <th>Statistic</th>
-      <th id="playsAwayHeader">Away</th>
-      <th id="playsHomeHeader">Home</th>
-    </tr>
-  </thead>
-
-  <tbody id="playsBody">
-    <tr>
-      <td colspan="3">Loading play statistics...</td>
-    </tr>
-  </tbody>
+<thead><tr>
+<th>Statistic</th>
+<th id="playsAwayHeader">Away</th>
+<th id="playsHomeHeader">Home</th>
+</tr></thead>
+<tbody id="playsBody">
+<tr><td colspan="3">Loading play statistics...</td></tr>
+</tbody>
 </table>
-
 <p id="playsStatus" class="note"></p>
- <h3>EPA Projection Calculator</h3>
 
+<h3>EPA Projection Calculator</h3>
 <table>
-  <thead>
-    <tr>
-      <th>Calculation</th>
-      <th id="calcAwayHeader">Away</th>
-      <th id="calcHomeHeader">Home</th>
-    </tr>
-  </thead>
-  <tbody id="epaCalcBody">
-    <tr>
-      <td colspan="3">Loading calculator...</td>
-    </tr>
-  </tbody>
+<thead><tr>
+<th>Calculation</th>
+<th id="calcAwayHeader">Away</th>
+<th id="calcHomeHeader">Home</th>
+</tr></thead>
+<tbody id="epaCalcBody">
+<tr><td colspan="3">Loading calculator...</td></tr>
+</tbody>
 </table>
-
-<p id="epaCalcStatus" class="note"></p> 
+<p id="epaCalcStatus" class="note"></p>
 </div>
-
 <p class="note">
-Statistics will appear once verified NFL data
-is connected. Missing data will never be
-replaced with invented numbers.
+Statistics will appear once verified NFL data is connected.
+Missing data will never be replaced with invented numbers.
 </p>
 </div>
-  
+
 <div class="panel">
-  <h2>Scoring Prediction Engine</h2>
-
-  <div class="table-wrap">
-    <table>
-      <thead>
-        <tr>
-          <th>Prediction</th>
-          <th id="scoreAwayHeader">Away</th>
-          <th id="scoreHomeHeader">Home</th>
-        </tr>
-      </thead>
-      <tbody id="scoringBody">
-        <tr>
-          <td colspan="3">
-            Waiting for scoring predictions...
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <p id="scoringStatus" class="note"></p>
+<h2>Scoring Prediction Engine</h2>
+<div class="table-wrap">
+<table>
+<thead><tr>
+<th>Prediction</th>
+<th id="scoreAwayHeader">Away</th>
+<th id="scoreHomeHeader">Home</th>
+</tr></thead>
+<tbody id="scoringBody">
+<tr><td colspan="3">Waiting for scoring predictions...</td></tr>
+</tbody>
+</table>
 </div>
+<p id="scoringStatus" class="note"></p>
+</div>
+
 <div class="panel">
 
-<!-- QB AND RECEIVER INTELLIGENCE -->
-
 <div class="panel">
-
 <h2>QB & Receiver Intelligence</h2>
-
 <p class="note">
 Automatic quarterback and receiver statistics
 from completed NFL games.
+Click a player's name for details.
 </p>
 
 <h3 id="qbAwayHeader">Away Team QB</h3>
@@ -300,11 +187,9 @@ Waiting for quarterback data...
 </div>
 
 <h3>Receiver Comparison</h3>
-
 <div class="table-wrap">
 <table id="receiverTable">
-<thead>
-<tr>
+<thead><tr>
 <th>Team</th>
 <th>Receiver</th>
 <th>Targets</th>
@@ -320,42 +205,26 @@ Waiting for quarterback data...
 <th>Red Zone</th>
 <th>Inside 10</th>
 <th>TDs</th>
-</tr>
-</thead>
-
+</tr></thead>
 <tbody id="targetBody">
-<tr>
-<td colspan="15">
+<tr><td colspan="15">
 Waiting for verified player statistics...
-</td>
-</tr>
+</td></tr>
 </tbody>
-
 </table>
 </div>
-
 <p id="playerStatus" class="note"></p>
-
 </div>
 
- 
-<!-- QB PASSING INTELLIGENCE -->
-
 <div class="panel">
-
 <h2>QB Passing Intelligence</h2>
-
 <p class="note">
-Compare quarterback passing performance
-using verified NFL game statistics.
+Compare verified quarterback passing statistics.
+Click a quarterback's name for details.
 </p>
-
 <div class="table-wrap">
-
 <table>
-
-<thead>
-<tr>
+<thead><tr>
 <th>Team</th>
 <th>Quarterback</th>
 <th>Attempts</th>
@@ -365,48 +234,30 @@ using verified NFL game statistics.
 <th>Passing Yards</th>
 <th>Yards/Attempt</th>
 <th>Passing TDs</th>
-<th>Interceptions</th>  
-</tr>
-</thead>
-
+<th>Interceptions</th>
+</tr></thead>
 <tbody id="qbPassingBody">
-
-<tr>
-<td colspan="10">
+<tr><td colspan="10">
 Waiting for quarterback statistics...
-</td>
-</tr>
-
+</td></tr>
 </tbody>
-
 </table>
-
 </div>
-
 <p id="qbPassingStatus" class="note">
 QB passing comparison coming soon.
 </p>
-
 </div>
 
-
-<!-- RUNNING BACK INTELLIGENCE -->
-
 <div class="panel">
-
 <h2>Running Back Intelligence</h2>
-
 <p class="note">
-Compare rushing production, workload,
-touchdowns and red-zone opportunities
-using verified NFL statistics.
+Compare rushing production, workload, touchdowns
+and red-zone opportunities.
+Click a player's name for details.
 </p>
-
 <div class="table-wrap">
-
 <table id="rushingTable">
-<thead>
-<tr>
+<thead><tr>
 <th>Team</th>
 <th>Player</th>
 <th>Games</th>
@@ -418,254 +269,174 @@ using verified NFL statistics.
 <th>Rushing TDs</th>
 <th>Red-Zone Carries</th>
 <th>Inside 10 Carries</th>
-</tr>
-</thead>
-
+</tr></thead>
 <tbody id="rushingBody">
-<tr>
-<td colspan="11">
+<tr><td colspan="11">
 Waiting for verified rushing statistics...
-</td>
-</tr>
+</td></tr>
 </tbody>
-
 </table>
 </div>
-
 <p id="rushingStatus" class="note">
 Rushing statistics awaiting connection.
 </p>
-
 </div>
 
-<!-- DEFENSIVE MATCHUP INTELLIGENCE -->
-
 <div class="panel">
-
 <h2>Defensive Matchup Intelligence</h2>
-
 <p class="note">
-Compare how each defense performs against
-opposing receivers.
+Compare how each defense performs against opposing receivers.
 </p>
-
 <div class="table-wrap">
-
 <table>
-
-<thead>
-<tr>
+<thead><tr>
 <th>Defensive Team</th>
 <th>Games</th>
 <th>20+ Yard Catches Allowed</th>
 <th>20+ Allowed/Game</th>
 <th>YAC Allowed</th>
 <th>YAC Allowed/Game</th>
-</tr>
-</thead>
-
+</tr></thead>
 <tbody id="defenseBody">
-
-<tr>
-<td colspan="6">
+<tr><td colspan="6">
 Waiting for defensive statistics...
-</td>
-</tr>
-
+</td></tr>
 </tbody>
-
 </table>
-
 </div>
-
 <p id="defenseStatus" class="note">
 Defensive comparison coming soon.
 </p>
-
 </div>
-  
-<h2>Sportsbook Research — CBS Sports</h2>
 
+<h2>Sportsbook Research — CBS Sports</h2>
 <div class="table-wrap">
 <table>
-<thead>
-<tr>
+<thead><tr>
 <th>Market</th>
 <th>Side</th>
 <th>Open</th>
 <th>Current</th>
 <th>Public Bet</th>
 <th>Movement</th>
-</tr>
-</thead>
-
+</tr></thead>
 <tbody id="oddsBody">
-<tr>
-<td colspan="6">
+<tr><td colspan="6">
 Awaiting verified CBS sportsbook data
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 </div>
-
 <p class="note">
 CBS Sports opening and recorded market information.
 Lines and public betting percentages may change.
 Movement is calculated by Doc's NFL War Room.
 </p>
 
-<!-- POSTGAME EVALUATION -->
-
 <div class="panel" id="postgamePanel">
-
-  <h2>Postgame Evaluation</h2>
-
-  <p class="note">
-    Grade saved War Room receipts against verified
-    final game and player results.
-  </p>
-
-  <div id="postgameStatus" class="status">
-    Waiting for a completed game...
-  </div>
-
-  <h3>Game Results</h3>
-
-  <div class="table-wrap">
-    <table id="postgameScoreTable">
-      <thead>
-        <tr>
-          <th>Team</th>
-          <th>1Q</th>
-          <th>2Q</th>
-          <th>1H</th>
-          <th>3Q</th>
-          <th>4Q</th>
-          <th>Final</th>
-        </tr>
-      </thead>
-
-      <tbody id="postgameScoreBody">
-        <tr>
-          <td colspan="7">
-            Waiting for verified game results...
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-
-  <h3>Receipt Evaluation</h3>
-
-  <div class="table-wrap">
-    <table id="postgameReceiptTable">
-      <thead>
-        <tr>
-          <th>Player / Market</th>
-          <th>Pregame Projection</th>
-          <th>Kambi Line</th>
-          <th>Price</th>
-          <th>Actual</th>
-          <th>Result</th>
-        </tr>
-      </thead>
-
-      <tbody id="postgameReceiptBody">
-        <tr>
-          <td colspan="6">
-            Waiting for saved Receipt...
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-
-  <h3>War Room Results</h3>
-
-  <div class="table-wrap">
-    <table>
-      <thead>
-        <tr>
-          <th>Category</th>
-          <th>Wins</th>
-          <th>Losses</th>
-          <th>Pushes</th>
-          <th>Win Rate</th>
-        </tr>
-      </thead>
-
-      <tbody id="postgameSummaryBody">
-        <tr>
-          <td>Game Markets</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-        </tr>
-
-        <tr>
-          <td>Player Props</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-        </tr>
-
-        <tr>
-          <td>Overall</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
+<h2>Postgame Evaluation</h2>
+<p class="note">
+Grade saved War Room receipts against verified
+final game and player results.
+</p>
+<div id="postgameStatus" class="status">
+Waiting for a completed game...
 </div>
 
+<h3>Game Results</h3>
+<div class="table-wrap">
+<table id="postgameScoreTable">
+<thead><tr>
+<th>Team</th><th>1Q</th><th>2Q</th>
+<th>1H</th><th>3Q</th><th>4Q</th><th>Final</th>
+</tr></thead>
+<tbody id="postgameScoreBody">
+<tr><td colspan="7">
+Waiting for verified game results...
+</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Receipt Evaluation</h3>
+<div class="table-wrap">
+<table id="postgameReceiptTable">
+<thead><tr>
+<th>Player / Market</th>
+<th>Pregame Projection</th>
+<th>Kambi Line</th>
+<th>Price</th>
+<th>Actual</th>
+<th>Result</th>
+</tr></thead>
+<tbody id="postgameReceiptBody">
+<tr><td colspan="6">
+Waiting for saved Receipt...
+</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>War Room Results</h3>
+<div class="table-wrap">
+<table>
+<thead><tr>
+<th>Category</th><th>Wins</th><th>Losses</th>
+<th>Pushes</th><th>Win Rate</th>
+</tr></thead>
+<tbody id="postgameSummaryBody">
+<tr><td>Game Markets</td>
+<td>—</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>Player Props</td>
+<td>—</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>Overall</td>
+<td>—</td><td>—</td><td>—</td><td>—</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+<!-- PLAYER INTELLIGENCE POPOUT -->
+<div id="playerIntelOverlay" hidden>
+<section id="playerIntelDialog"
+role="dialog" aria-modal="true"
+aria-labelledby="playerIntelTitle">
+<div class="player-intel-top">
+<div>
+<h2 id="playerIntelTitle"></h2>
+<div id="playerIntelSubtitle" class="note"></div>
+</div>
+<button type="button" class="player-intel-close"
+id="playerIntelClose">Close ×</button>
+</div>
+<div id="playerIntelStats" class="player-intel-grid"></div>
+<div id="playerIntelStatus" class="player-intel-status"></div>
+</section>
 </div>
 
 <script>
-const teams = [
-"Arizona Cardinals",
-"Atlanta Falcons",
-"Baltimore Ravens",
-"Buffalo Bills",
-"Carolina Panthers",
-"Chicago Bears",
-"Cincinnati Bengals",
-"Cleveland Browns",
-"Dallas Cowboys",
-"Denver Broncos",
-"Detroit Lions",
-"Green Bay Packers",
-"Houston Texans",
-"Indianapolis Colts",
-"Jacksonville Jaguars",
-"Kansas City Chiefs",
-"Las Vegas Raiders",
-"Los Angeles Chargers",
-"Los Angeles Rams",
-"Miami Dolphins",
-"Minnesota Vikings",
-"New England Patriots",
-"New Orleans Saints",
-"New York Giants",
-"New York Jets",
-"Philadelphia Eagles",
-"Pittsburgh Steelers",
-"San Francisco 49ers",
-"Seattle Seahawks",
-"Tampa Bay Buccaneers",
-"Tennessee Titans",
-"Washington Commanders"
+const teams=[
+"Arizona Cardinals","Atlanta Falcons",
+"Baltimore Ravens","Buffalo Bills",
+"Carolina Panthers","Chicago Bears",
+"Cincinnati Bengals","Cleveland Browns",
+"Dallas Cowboys","Denver Broncos",
+"Detroit Lions","Green Bay Packers",
+"Houston Texans","Indianapolis Colts",
+"Jacksonville Jaguars","Kansas City Chiefs",
+"Las Vegas Raiders","Los Angeles Chargers",
+"Los Angeles Rams","Miami Dolphins",
+"Minnesota Vikings","New England Patriots",
+"New Orleans Saints","New York Giants",
+"New York Jets","Philadelphia Eagles",
+"Pittsburgh Steelers","San Francisco 49ers",
+"Seattle Seahawks","Tampa Bay Buccaneers",
+"Tennessee Titans","Washington Commanders"
 ];
 
-const metrics = [
+const metrics=[
 "Offensive EPA / Play",
 "Defensive EPA / Play Allowed",
 "Passing EPA / Play",
@@ -677,66 +448,45 @@ const metrics = [
 "Defensive Success Rate"
 ];
 
-function populateTeams() {
-  const away = document.getElementById("away");
-  const home = document.getElementById("home");
-
-  teams.forEach(team => {
-    away.add(new Option(team, team));
-    home.add(new Option(team, team));
-  });
-
-  away.value = "Kansas City Chiefs";
-  home.value = "Miami Dolphins";
+function populateTeams(){
+const away=document.getElementById("away");
+const home=document.getElementById("home");
+teams.forEach(team=>{
+away.add(new Option(team,team));
+home.add(new Option(team,team));
+});
+away.value="Kansas City Chiefs";
+home.value="Miami Dolphins";
 }
 
-function analyze() {
-  const away =
-    document.getElementById("away").value;
-
-  const home =
-    document.getElementById("home").value;
-
-  const matchup =
-    document.getElementById("matchup");
-
-  if (away === home) {
-    matchup.textContent =
-      "Please select two different teams.";
-    return;
-  }
-
-  matchup.textContent =
-    away + " at " + home;
-
-  document.getElementById("awayHeader")
-    .textContent = away;
-
-  document.getElementById("homeHeader")
-    .textContent = home;
-
-  const body =
-    document.getElementById("epaBody");
-
-  body.replaceChildren();
-
-  metrics.forEach(metric => {
-    const row = document.createElement("tr");
-
-    [metric, "—", "—"].forEach(value => {
-      const cell = document.createElement("td");
-      cell.textContent = value;
-      row.appendChild(cell);
-    });
-
-    body.appendChild(row);
-  });
+function analyze(){
+const away=document.getElementById("away").value;
+const home=document.getElementById("home").value;
+const matchup=document.getElementById("matchup");
+if(away===home){
+matchup.textContent="Please select two different teams.";
+return;
 }
-
+matchup.textContent=away+" at "+home;
+document.getElementById("awayHeader").textContent=away;
+document.getElementById("homeHeader").textContent=home;
+const body=document.getElementById("epaBody");
+body.replaceChildren();
+metrics.forEach(metric=>{
+const row=document.createElement("tr");
+[metric,"—","—"].forEach(value=>{
+const cell=document.createElement("td");
+cell.textContent=value;
+row.appendChild(cell);
+});
+body.appendChild(row);
+});
+}
 populateTeams();
 analyze();
 </script>
-  
+
+<!-- ORIGINAL DATA CONNECTIONS PRESERVED -->
 <script src="nfl-stats.js"></script>
 <script src="nfl-plays.js"></script>
 <script src="nfl-calculator.js"></script>
@@ -750,117 +500,228 @@ analyze();
 <script src="nfl-player-receipt.js"></script>
 <script src="nfl-kambi.js"></script>
 <script src="nfl-postgame.js"></script>
+
 <script>
-  
-/* =========================================
-   EPA PROJECTION CALCULATOR
-   AUTOMATIC GREEN HIGHLIGHT
-   ========================================= */
-
-function highlightEPAProjectionCalculator() {
-
-  const body = document.getElementById("epaCalcBody");
-
-  if (!body) return;
-
-  const rows = body.querySelectorAll("tr");
-
-  rows.forEach(row => {
-
-    const cells = row.querySelectorAll("td");
-
-    if (cells.length !== 3) return;
-
-    const awayCell = cells[1];
-    const homeCell = cells[2];
-
-    /* Remove old highlighting first */
-    awayCell.classList.remove("epa-winner");
-    homeCell.classList.remove("epa-winner");
-
-    /* Convert displayed values to numbers */
-    const awayValue =
-      parseFloat(
-        awayCell.textContent
-          .replace("%", "")
-          .trim()
-      );
-
-    const homeValue =
-      parseFloat(
-        homeCell.textContent
-          .replace("%", "")
-          .trim()
-      );
-
-    /* Skip rows that do not contain numbers */
-    if (
-      !Number.isFinite(awayValue) ||
-      !Number.isFinite(homeValue)
-    ) {
-      return;
-    }
-
-    /* No green when values are tied */
-    if (awayValue === homeValue) {
-      return;
-    }
-
-    /*
-       EPA Projection Calculator:
-
-       Higher Offensive EPA = stronger
-       Higher opponent EPA allowed = better matchup
-       Higher Matchup EPA = stronger
-       Higher projected plays = more opportunity
-       Higher total EPA = stronger projection
-    */
-
-    if (awayValue > homeValue) {
-      awayCell.classList.add("epa-winner");
-    }
-
-    if (homeValue > awayValue) {
-      homeCell.classList.add("epa-winner");
-    }
-
-  });
-
+/* ORIGINAL EPA CALCULATOR HIGHLIGHT */
+function highlightEPAProjectionCalculator(){
+const body=document.getElementById("epaCalcBody");
+if(!body)return;
+body.querySelectorAll("tr").forEach(row=>{
+const cells=row.querySelectorAll("td");
+if(cells.length!==3)return;
+const away=cells[1],home=cells[2];
+away.classList.remove("epa-winner");
+home.classList.remove("epa-winner");
+const a=parseFloat(away.textContent.replace("%","").trim());
+const h=parseFloat(home.textContent.replace("%","").trim());
+if(!Number.isFinite(a)||!Number.isFinite(h)||a===h)return;
+if(a>h)away.classList.add("epa-winner");
+if(h>a)home.classList.add("epa-winner");
+});
 }
-
-
-/* =========================================
-   WATCH CALCULATOR FOR NEW MATCHUPS
-   ========================================= */
-
-const epaCalcBody =
-  document.getElementById("epaCalcBody");
-
-if (epaCalcBody) {
-
-  const epaHighlightObserver =
-    new MutationObserver(() => {
-
-      highlightEPAProjectionCalculator();
-
-    });
-
-  epaHighlightObserver.observe(
-    epaCalcBody,
-    {
-      childList: true,
-      subtree: true,
-      characterData: true
-    }
-  );
-
+const epaCalcBody=document.getElementById("epaCalcBody");
+if(epaCalcBody){
+new MutationObserver(highlightEPAProjectionCalculator)
+.observe(epaCalcBody,{
+childList:true,subtree:true,characterData:true
+});
 }
-
-
-/* Run once when page opens */
 highlightEPAProjectionCalculator();
+</script>
 
-</script>  
-  
+<script>
+/* ==========================================
+   PLAYER INTELLIGENCE
+   CLICK NAME -> OPEN
+   CLICK SAME NAME -> CLOSE
+   ONLY VERIFIED QUALIFICATIONS TURN GREEN
+   ========================================== */
+(function(){
+"use strict";
+
+const sources=[
+{body:"targetBody",table:"receiverTable",
+nameColumn:1,title:"Receiver Intelligence"},
+{body:"qbPassingBody",
+nameColumn:1,title:"QB Passing Intelligence"},
+{body:"rushingBody",table:"rushingTable",
+nameColumn:1,title:"Running Back Intelligence"}
+];
+
+const overlay=document.getElementById("playerIntelOverlay");
+const closeButton=document.getElementById("playerIntelClose");
+let activeKey=null;
+let lastButton=null;
+
+function plain(value){
+return String(value||"").replace(/\s+/g," ").trim();
+}
+
+function closePlayer(){
+overlay.hidden=true;
+activeKey=null;
+document.querySelectorAll(
+'.player-intel-link[aria-expanded="true"]'
+).forEach(button=>{
+button.setAttribute("aria-expanded","false");
+});
+if(lastButton&&document.contains(lastButton)){
+lastButton.focus();
+}
+}
+
+closeButton.addEventListener("click",closePlayer);
+overlay.addEventListener("click",event=>{
+if(event.target===overlay)closePlayer();
+});
+document.addEventListener("keydown",event=>{
+if(event.key==="Escape"&&!overlay.hidden)closePlayer();
+});
+
+/* Read explicit qualifications, not guessed edges. */
+function receiptQualifications(name){
+const found=[];
+const ids=[
+"receiptBody","playerReceiptBody",
+"warRoomReceiptBody","qualifiedPlaysBody",
+"propsReceiptBody"
+];
+for(const id of ids){
+const body=document.getElementById(id);
+if(!body)continue;
+for(const row of body.querySelectorAll("tr")){
+const line=plain(row.textContent);
+if(!line.toLowerCase().includes(name.toLowerCase()))continue;
+if(!/\bQUALIFIED\b/i.test(line))continue;
+if(/\bNOT QUALIFIED\b/i.test(line))continue;
+if(/\b(REVIEW|LEAN|PASS)\b/i.test(line))continue;
+found.push(line);
+}
+}
+return [...new Set(found)];
+}
+
+function openPlayer(source,row,button){
+const name=plain(button.dataset.playerName);
+const team=plain(row.cells[0]?.textContent);
+const key=source.body+"|"+team+"|"+name;
+
+if(!overlay.hidden&&activeKey===key){
+closePlayer();
+return;
+}
+
+document.querySelectorAll(
+'.player-intel-link[aria-expanded="true"]'
+).forEach(b=>b.setAttribute("aria-expanded","false"));
+
+activeKey=key;
+lastButton=button;
+button.setAttribute("aria-expanded","true");
+
+document.getElementById("playerIntelTitle").textContent=name;
+document.getElementById("playerIntelSubtitle").textContent=
+team+" • "+source.title;
+
+const table=source.table
+?document.getElementById(source.table)
+:row.closest("table");
+
+const headers=[
+...(table?.querySelectorAll("thead th")||[])
+].map(x=>plain(x.textContent));
+
+const grid=document.getElementById("playerIntelStats");
+grid.replaceChildren();
+
+[...row.cells].forEach((cell,index)=>{
+if(index===source.nameColumn)return;
+const stat=document.createElement("div");
+stat.className="player-intel-stat";
+const label=document.createElement("small");
+label.textContent=headers[index]||"Statistic";
+const value=document.createElement("strong");
+value.textContent=plain(cell.textContent)||"—";
+stat.append(label,value);
+grid.appendChild(stat);
+});
+
+const status=document.getElementById("playerIntelStatus");
+status.replaceChildren();
+const heading=document.createElement("strong");
+heading.textContent="Qualified markets";
+status.appendChild(heading);
+
+const explicit=plain(row.dataset.qualifiedMarkets||"");
+const qualified=[...new Set([
+...(explicit?explicit.split("|").map(plain).filter(Boolean):[]),
+...receiptQualifications(name)
+])];
+
+if(qualified.length){
+const list=document.createElement("ul");
+qualified.forEach(market=>{
+const item=document.createElement("li");
+item.className="player-intel-stat player-intel-qualified";
+item.textContent=market;
+list.appendChild(item);
+});
+status.appendChild(list);
+}else{
+const message=document.createElement("p");
+message.textContent=
+"No verified qualification found — PASS / REVIEW.";
+status.appendChild(message);
+}
+
+overlay.hidden=false;
+closeButton.focus();
+}
+
+function enhance(source){
+const body=document.getElementById(source.body);
+if(!body)return;
+
+for(const row of body.querySelectorAll(":scope > tr")){
+const cell=row.cells[source.nameColumn];
+if(!cell||row.cells.length<=source.nameColumn+1)continue;
+if(cell.querySelector(".player-intel-link"))continue;
+
+const name=plain(cell.textContent);
+if(!name||/waiting|loading|no data|unavailable/i.test(name)){
+continue;
+}
+
+const button=document.createElement("button");
+button.type="button";
+button.className="player-intel-link";
+button.dataset.playerName=name;
+button.textContent=name;
+button.setAttribute("aria-expanded","false");
+button.setAttribute("aria-label",
+"Show or hide statistics for "+name);
+cell.replaceChildren(button);
+}
+}
+
+sources.forEach(source=>{
+const body=document.getElementById(source.body);
+if(!body)return;
+
+body.addEventListener("click",event=>{
+const button=event.target.closest(".player-intel-link");
+if(!button||!body.contains(button))return;
+openPlayer(source,button.closest("tr"),button);
+});
+
+const observer=new MutationObserver(()=>{
+enhance(source);
+});
+observer.observe(body,{childList:true,subtree:true});
+enhance(source);
+});
+})();
+</script>
+
 </body>
 </html>
