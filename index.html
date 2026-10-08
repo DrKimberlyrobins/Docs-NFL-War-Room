@@ -640,8 +640,14 @@ const stat=document.createElement("div");
 stat.className="player-intel-stat";
 const label=document.createElement("small");
 label.textContent=headers[index]||"Statistic";
-const value=document.createElement("strong");
-value.textContent=plain(cell.textContent)||"—";
+
+const value=document.createElement('strong');
+value.textContent=plain(cell.textContent)||'—';
+
+const originalText=cell.querySelector('span, strong, b')||cell;
+const originalColor=getComputedStyle(originalText).color;
+value.style.color=originalColor;
+
 stat.append(label,value);
 grid.appendChild(stat);
 });
