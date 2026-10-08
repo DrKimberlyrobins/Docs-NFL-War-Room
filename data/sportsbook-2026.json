@@ -22,7 +22,7 @@
           "open": -9.5,
           "openPrice": -111.0,
           "current": -8.5,
-          "currentPrice": -108.0,
+          "currentPrice": -105.0,
           "publicBet": null
         }
       },
@@ -30,15 +30,15 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": 370.0,
-          "currentPrice": 370.0,
+          "current": 360.0,
+          "currentPrice": 360.0,
           "publicBet": null
         },
         "home": {
           "open": null,
           "openPrice": null,
-          "current": -455.0,
-          "currentPrice": -455.0,
+          "current": -450.0,
+          "currentPrice": -450.0,
           "publicBet": null
         }
       },
@@ -47,14 +47,14 @@
           "open": 46.5,
           "openPrice": -116.0,
           "current": 47.5,
-          "currentPrice": -110.0,
+          "currentPrice": -115.0,
           "publicBet": null
         },
         "under": {
           "open": 46.5,
           "openPrice": null,
-          "current": 47.5,
-          "currentPrice": -105.0,
+          "current": 48.5,
+          "currentPrice": -115.0,
           "publicBet": null
         }
       }
@@ -94,8 +94,8 @@
         "home": {
           "open": null,
           "openPrice": null,
-          "current": -355.0,
-          "currentPrice": -355.0,
+          "current": -360.0,
+          "currentPrice": -360.0,
           "publicBet": null
         }
       },
@@ -126,15 +126,15 @@
       "matchup": "CIN \u2014 Cincinnati Bengals @ MIA \u2014 Miami Dolphins",
       "spread": {
         "away": {
-          "open": -7.5,
+          "open": -6.5,
           "openPrice": null,
           "current": -6.5,
           "currentPrice": -115.0,
           "publicBet": null
         },
         "home": {
-          "open": 7.5,
-          "openPrice": -116.0,
+          "open": 6.5,
+          "openPrice": -103.0,
           "current": 7.0,
           "currentPrice": -115.0,
           "publicBet": null
@@ -151,8 +151,8 @@
         "home": {
           "open": null,
           "openPrice": null,
-          "current": 260.0,
-          "currentPrice": 260.0,
+          "current": 250.0,
+          "currentPrice": 250.0,
           "publicBet": null
         }
       },
@@ -193,7 +193,7 @@
           "open": -3.5,
           "openPrice": -113.0,
           "current": -3.5,
-          "currentPrice": -111.0,
+          "currentPrice": -108.0,
           "publicBet": null
         }
       },
@@ -250,7 +250,7 @@
           "open": 2.0,
           "openPrice": -110.0,
           "current": 2.0,
-          "currentPrice": -108.0,
+          "currentPrice": -111.0,
           "publicBet": null
         }
       },
@@ -275,7 +275,7 @@
           "open": 42.0,
           "openPrice": -112.0,
           "current": 42.0,
-          "currentPrice": -108.0,
+          "currentPrice": -111.0,
           "publicBet": null
         },
         "under": {
@@ -372,15 +372,15 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": 124.0,
-          "currentPrice": 124.0,
+          "current": 120.0,
+          "currentPrice": 120.0,
           "publicBet": null
         },
         "home": {
           "open": null,
           "openPrice": null,
-          "current": -134.0,
-          "currentPrice": -134.0,
+          "current": -132.0,
+          "currentPrice": -132.0,
           "publicBet": null
         }
       },
@@ -389,7 +389,7 @@
           "open": 43.5,
           "openPrice": -115.0,
           "current": 44.5,
-          "currentPrice": -102.0,
+          "currentPrice": -104.0,
           "publicBet": null
         },
         "under": {
@@ -411,15 +411,15 @@
       "matchup": "HOU \u2014 Houston Texans @ TEN \u2014 Tennessee Titans",
       "spread": {
         "away": {
-          "open": -6.5,
+          "open": -7.5,
           "openPrice": null,
           "current": -7.5,
           "currentPrice": -104.0,
           "publicBet": null
         },
         "home": {
-          "open": 6.5,
-          "openPrice": -108.0,
+          "open": 7.5,
+          "openPrice": -113.0,
           "current": 7.5,
           "currentPrice": -110.0,
           "publicBet": null
@@ -443,14 +443,14 @@
       },
       "total": {
         "over": {
-          "open": 39.5,
-          "openPrice": -111.0,
+          "open": 37.5,
+          "openPrice": -110.0,
           "current": 37.5,
           "currentPrice": -108.0,
           "publicBet": null
         },
         "under": {
-          "open": 39.5,
+          "open": 37.5,
           "openPrice": null,
           "current": 37.5,
           "currentPrice": -105.0,
@@ -476,9 +476,9 @@
         },
         "home": {
           "open": -3.5,
-          "openPrice": -108.0,
+          "openPrice": -110.0,
           "current": -3.5,
-          "currentPrice": -108.0,
+          "currentPrice": -112.0,
           "publicBet": null
         }
       },
@@ -493,21 +493,21 @@
         "home": {
           "open": null,
           "openPrice": null,
-          "current": -175.0,
-          "currentPrice": -175.0,
+          "current": -180.0,
+          "currentPrice": -180.0,
           "publicBet": null
         }
       },
       "total": {
         "over": {
-          "open": 43.5,
-          "openPrice": -112.0,
-          "current": 42.5,
-          "currentPrice": -108.0,
+          "open": 42.5,
+          "openPrice": -113.0,
+          "current": 42.0,
+          "currentPrice": -111.0,
           "publicBet": null
         },
         "under": {
-          "open": 43.5,
+          "open": 42.5,
           "openPrice": null,
           "current": 42.5,
           "currentPrice": -105.0,
@@ -527,15 +527,15 @@
         "away": {
           "open": 2.5,
           "openPrice": null,
-          "current": -2.0,
-          "currentPrice": -111.0,
+          "current": -1.5,
+          "currentPrice": -112.0,
           "publicBet": null
         },
         "home": {
           "open": -2.5,
           "openPrice": -110.0,
           "current": 2.5,
-          "currentPrice": -110.0,
+          "currentPrice": -115.0,
           "publicBet": null
         }
       },
@@ -543,8 +543,8 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": -133.0,
-          "currentPrice": -133.0,
+          "current": -125.0,
+          "currentPrice": -125.0,
           "publicBet": null
         },
         "home": {
@@ -566,8 +566,8 @@
         "under": {
           "open": 45.5,
           "openPrice": null,
-          "current": 46.0,
-          "currentPrice": -111.0,
+          "current": 45.5,
+          "currentPrice": -108.0,
           "publicBet": null
         }
       }
@@ -582,15 +582,15 @@
       "matchup": "DEN \u2014 Denver Broncos @ LAC \u2014 Los Angeles Chargers",
       "spread": {
         "away": {
-          "open": -2.5,
+          "open": -3.5,
           "openPrice": null,
           "current": -3.5,
           "currentPrice": -102.0,
           "publicBet": null
         },
         "home": {
-          "open": 2.5,
-          "openPrice": -108.0,
+          "open": 3.5,
+          "openPrice": -116.0,
           "current": 3.5,
           "currentPrice": -110.0,
           "publicBet": null
@@ -600,8 +600,8 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": -172.0,
-          "currentPrice": -172.0,
+          "current": -175.0,
+          "currentPrice": -175.0,
           "publicBet": null
         },
         "home": {
@@ -614,14 +614,14 @@
       },
       "total": {
         "over": {
-          "open": 43.5,
-          "openPrice": -102.0,
+          "open": 41.5,
+          "openPrice": -113.0,
           "current": 41.5,
           "currentPrice": -111.0,
           "publicBet": null
         },
         "under": {
-          "open": 43.5,
+          "open": 41.5,
           "openPrice": null,
           "current": 42.5,
           "currentPrice": -114.0,
@@ -664,8 +664,8 @@
         "home": {
           "open": null,
           "openPrice": null,
-          "current": 205.0,
-          "currentPrice": 205.0,
+          "current": 210.0,
+          "currentPrice": 210.0,
           "publicBet": null
         }
       },
@@ -699,12 +699,12 @@
           "open": 3.0,
           "openPrice": null,
           "current": 3.0,
-          "currentPrice": -108.0,
+          "currentPrice": -105.0,
           "publicBet": null
         },
         "home": {
           "open": -3.0,
-          "openPrice": -105.0,
+          "openPrice": -113.0,
           "current": -2.5,
           "currentPrice": -122.0,
           "publicBet": null
@@ -714,8 +714,8 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": 137.0,
-          "currentPrice": 137.0,
+          "current": 140.0,
+          "currentPrice": 140.0,
           "publicBet": null
         },
         "home": {
@@ -728,17 +728,17 @@
       },
       "total": {
         "over": {
-          "open": 47.5,
-          "openPrice": -110.0,
+          "open": 45.5,
+          "openPrice": -115.0,
           "current": 45.5,
           "currentPrice": -115.0,
           "publicBet": null
         },
         "under": {
-          "open": 47.5,
+          "open": 45.5,
           "openPrice": null,
           "current": 46.0,
-          "currentPrice": -111.0,
+          "currentPrice": -108.0,
           "publicBet": null
         }
       }
@@ -771,15 +771,15 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": 145.0,
-          "currentPrice": 145.0,
+          "current": 150.0,
+          "currentPrice": 150.0,
           "publicBet": null
         },
         "home": {
           "open": null,
           "openPrice": null,
-          "current": -170.0,
-          "currentPrice": -170.0,
+          "current": -172.0,
+          "currentPrice": -172.0,
           "publicBet": null
         }
       },
@@ -813,7 +813,7 @@
           "open": 2.5,
           "openPrice": null,
           "current": 3.0,
-          "currentPrice": -110.0,
+          "currentPrice": -108.0,
           "publicBet": null
         },
         "home": {
@@ -828,15 +828,15 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": 138.0,
-          "currentPrice": 138.0,
+          "current": 140.0,
+          "currentPrice": 140.0,
           "publicBet": null
         },
         "home": {
           "open": null,
           "openPrice": null,
-          "current": -161.0,
-          "currentPrice": -161.0,
+          "current": -162.0,
+          "currentPrice": -162.0,
           "publicBet": null
         }
       },
@@ -845,7 +845,7 @@
           "open": 54.5,
           "openPrice": -109.0,
           "current": 54.5,
-          "currentPrice": -110.0,
+          "currentPrice": -108.0,
           "publicBet": null
         },
         "under": {
