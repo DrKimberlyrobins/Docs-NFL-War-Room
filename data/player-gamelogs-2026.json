@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-10-07T17:29:14.909794+00:00",
+  "updated": "2026-10-08T13:16:36.330587+00:00",
   "source": "nflverse play-by-play",
   "completedGames": 64,
   "note": "Completed regular-season games only. One record per observed player, game and statistical category. Players with no recorded opportunities in a category are not included for that game. Missing records must not automatically be treated as zero. Verify against official game logs.",
