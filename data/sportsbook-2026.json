@@ -12,15 +12,15 @@
       "matchup": "PHI \u2014 Philadelphia Eagles @ JAX \u2014 Jacksonville Jaguars",
       "spread": {
         "away": {
-          "open": 7.0,
+          "open": 7.5,
           "openPrice": null,
           "current": 7.5,
           "currentPrice": -108.0,
           "publicBet": null
         },
         "home": {
-          "open": -7.0,
-          "openPrice": -106.0,
+          "open": -7.5,
+          "openPrice": -108.0,
           "current": -7.5,
           "currentPrice": -108.0,
           "publicBet": null
@@ -30,28 +30,28 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": 310.0,
-          "currentPrice": 310.0,
+          "current": 315.0,
+          "currentPrice": 315.0,
           "publicBet": null
         },
         "home": {
           "open": null,
           "openPrice": null,
-          "current": -380.0,
-          "currentPrice": -380.0,
+          "current": -385.0,
+          "currentPrice": -385.0,
           "publicBet": null
         }
       },
       "total": {
         "over": {
-          "open": 42.5,
-          "openPrice": -115.0,
+          "open": 41.5,
+          "openPrice": -111.0,
           "current": 41.5,
-          "currentPrice": -108.0,
+          "currentPrice": -111.0,
           "publicBet": null
         },
         "under": {
-          "open": 42.5,
+          "open": 41.5,
           "openPrice": null,
           "current": 41.5,
           "currentPrice": -105.0,
@@ -87,15 +87,15 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": -319.0,
-          "currentPrice": -319.0,
+          "current": -300.0,
+          "currentPrice": -300.0,
           "publicBet": null
         },
         "home": {
           "open": null,
           "openPrice": null,
-          "current": 260.0,
-          "currentPrice": 260.0,
+          "current": 270.0,
+          "currentPrice": 270.0,
           "publicBet": null
         }
       },
@@ -144,8 +144,8 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": 166.0,
-          "currentPrice": 166.0,
+          "current": 164.0,
+          "currentPrice": 164.0,
           "publicBet": null
         },
         "home": {
@@ -201,8 +201,8 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": -136.0,
-          "currentPrice": -136.0,
+          "current": -134.0,
+          "currentPrice": -134.0,
           "publicBet": null
         },
         "home": {
@@ -218,7 +218,7 @@
           "open": 42.0,
           "openPrice": -112.0,
           "current": 41.5,
-          "currentPrice": -111.0,
+          "currentPrice": -108.0,
           "publicBet": null
         },
         "under": {
@@ -275,7 +275,7 @@
           "open": 39.5,
           "openPrice": -110.0,
           "current": 39.5,
-          "currentPrice": -111.0,
+          "currentPrice": -112.0,
           "publicBet": null
         },
         "under": {
@@ -493,8 +493,8 @@
         "home": {
           "open": null,
           "openPrice": null,
-          "current": 106.0,
-          "currentPrice": 106.0,
+          "current": 105.0,
+          "currentPrice": 105.0,
           "publicBet": null
         }
       },
@@ -509,8 +509,8 @@
         "under": {
           "open": 45.5,
           "openPrice": null,
-          "current": 46.0,
-          "currentPrice": -111.0,
+          "current": 45.5,
+          "currentPrice": -102.0,
           "publicBet": null
         }
       }
@@ -535,7 +535,7 @@
           "open": 3.5,
           "openPrice": -116.0,
           "current": 3.5,
-          "currentPrice": -114.0,
+          "currentPrice": -115.0,
           "publicBet": null
         }
       },
@@ -600,15 +600,15 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": -235.0,
-          "currentPrice": -235.0,
+          "current": -230.0,
+          "currentPrice": -230.0,
           "publicBet": null
         },
         "home": {
           "open": null,
           "openPrice": null,
-          "current": 210.0,
-          "currentPrice": 210.0,
+          "current": 215.0,
+          "currentPrice": 215.0,
           "publicBet": null
         }
       },
@@ -647,7 +647,7 @@
         },
         "home": {
           "open": -3.0,
-          "openPrice": -113.0,
+          "openPrice": -114.0,
           "current": -3.0,
           "currentPrice": -110.0,
           "publicBet": null
@@ -696,17 +696,17 @@
       "matchup": "BAL \u2014 Baltimore Ravens @ ATL \u2014 Atlanta Falcons",
       "spread": {
         "away": {
-          "open": -3.5,
+          "open": 3.0,
           "openPrice": null,
           "current": 3.5,
           "currentPrice": -122.0,
           "publicBet": null
         },
         "home": {
-          "open": 3.5,
-          "openPrice": -115.0,
+          "open": -3.0,
+          "openPrice": -117.0,
           "current": -3.0,
-          "currentPrice": -115.0,
+          "currentPrice": -118.0,
           "publicBet": null
         }
       },
@@ -728,14 +728,14 @@
       },
       "total": {
         "over": {
-          "open": 46.5,
-          "openPrice": -110.0,
+          "open": 43.5,
+          "openPrice": -114.0,
           "current": 43.5,
           "currentPrice": -114.0,
           "publicBet": null
         },
         "under": {
-          "open": 46.5,
+          "open": 43.5,
           "openPrice": null,
           "current": 43.5,
           "currentPrice": -105.0,
@@ -771,8 +771,8 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": 148.0,
-          "currentPrice": 148.0,
+          "current": 150.0,
+          "currentPrice": 150.0,
           "publicBet": null
         },
         "home": {
@@ -786,7 +786,7 @@
       "total": {
         "over": {
           "open": 54.5,
-          "openPrice": -109.0,
+          "openPrice": -112.0,
           "current": 54.5,
           "currentPrice": -108.0,
           "publicBet": null
