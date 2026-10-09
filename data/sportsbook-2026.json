@@ -3,63 +3,6 @@
   "season": 2026,
   "games": [
     {
-      "away": "TB",
-      "home": "DAL",
-      "awayName": "Tampa Bay Buccaneers",
-      "homeName": "Dallas Cowboys",
-      "awayLabel": "TB \u2014 Tampa Bay Buccaneers",
-      "homeLabel": "DAL \u2014 Dallas Cowboys",
-      "matchup": "TB \u2014 Tampa Bay Buccaneers @ DAL \u2014 Dallas Cowboys",
-      "spread": {
-        "away": {
-          "open": 9.5,
-          "openPrice": null,
-          "current": 9.5,
-          "currentPrice": -105.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": -9.5,
-          "openPrice": -111.0,
-          "current": -8.5,
-          "currentPrice": -118.0,
-          "publicBet": null
-        }
-      },
-      "moneyline": {
-        "away": {
-          "open": null,
-          "openPrice": null,
-          "current": 400.0,
-          "currentPrice": 400.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": null,
-          "openPrice": null,
-          "current": -500.0,
-          "currentPrice": -500.0,
-          "publicBet": null
-        }
-      },
-      "total": {
-        "over": {
-          "open": 46.5,
-          "openPrice": -116.0,
-          "current": 48.5,
-          "currentPrice": -118.0,
-          "publicBet": null
-        },
-        "under": {
-          "open": 46.5,
-          "openPrice": null,
-          "current": 49.5,
-          "currentPrice": -110.0,
-          "publicBet": null
-        }
-      }
-    },
-    {
       "away": "PHI",
       "home": "JAX",
       "awayName": "Philadelphia Eagles",
@@ -161,7 +104,7 @@
           "open": 42.5,
           "openPrice": -110.0,
           "current": 42.5,
-          "currentPrice": -110.0,
+          "currentPrice": -115.0,
           "publicBet": null
         },
         "under": {
@@ -258,8 +201,8 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": -132.0,
-          "currentPrice": -132.0,
+          "current": -136.0,
+          "currentPrice": -136.0,
           "publicBet": null
         },
         "home": {
@@ -282,7 +225,7 @@
           "open": 42.0,
           "openPrice": null,
           "current": 42.5,
-          "currentPrice": -115.0,
+          "currentPrice": -118.0,
           "publicBet": null
         }
       }
@@ -525,14 +468,14 @@
       "matchup": "CHI \u2014 Chicago Bears @ GB \u2014 Green Bay Packers",
       "spread": {
         "away": {
-          "open": 2.5,
+          "open": -1.5,
           "openPrice": null,
           "current": -1.5,
           "currentPrice": -108.0,
           "publicBet": null
         },
         "home": {
-          "open": -2.5,
+          "open": 1.5,
           "openPrice": -110.0,
           "current": 1.5,
           "currentPrice": -110.0,
@@ -558,7 +501,7 @@
       "total": {
         "over": {
           "open": 45.5,
-          "openPrice": -110.0,
+          "openPrice": -113.0,
           "current": 45.5,
           "currentPrice": -110.0,
           "publicBet": null
@@ -585,14 +528,14 @@
           "open": -3.5,
           "openPrice": null,
           "current": -3.5,
-          "currentPrice": -104.0,
+          "currentPrice": -102.0,
           "publicBet": null
         },
         "home": {
           "open": 3.5,
           "openPrice": -116.0,
           "current": 3.5,
-          "currentPrice": -112.0,
+          "currentPrice": -114.0,
           "publicBet": null
         }
       },
@@ -607,8 +550,8 @@
         "home": {
           "open": null,
           "openPrice": null,
-          "current": 154.0,
-          "currentPrice": 154.0,
+          "current": 152.0,
+          "currentPrice": 152.0,
           "publicBet": null
         }
       },
@@ -617,7 +560,7 @@
           "open": 41.5,
           "openPrice": -113.0,
           "current": 41.5,
-          "currentPrice": -111.0,
+          "currentPrice": -115.0,
           "publicBet": null
         },
         "under": {
@@ -853,6 +796,63 @@
           "openPrice": null,
           "current": 54.5,
           "currentPrice": -102.0,
+          "publicBet": null
+        }
+      }
+    },
+    {
+      "away": "TB",
+      "home": "DAL",
+      "awayName": "Tampa Bay Buccaneers",
+      "homeName": "Dallas Cowboys",
+      "awayLabel": "TB \u2014 Tampa Bay Buccaneers",
+      "homeLabel": "DAL \u2014 Dallas Cowboys",
+      "matchup": "TB \u2014 Tampa Bay Buccaneers @ DAL \u2014 Dallas Cowboys",
+      "spread": {
+        "away": {
+          "open": 9.5,
+          "openPrice": null,
+          "current": 9.5,
+          "currentPrice": -105.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": -9.5,
+          "openPrice": -111.0,
+          "current": -8.5,
+          "currentPrice": -118.0,
+          "publicBet": null
+        }
+      },
+      "moneyline": {
+        "away": {
+          "open": null,
+          "openPrice": null,
+          "current": 400.0,
+          "currentPrice": 400.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": null,
+          "openPrice": null,
+          "current": -500.0,
+          "currentPrice": -500.0,
+          "publicBet": null
+        }
+      },
+      "total": {
+        "over": {
+          "open": 46.5,
+          "openPrice": -116.0,
+          "current": 48.5,
+          "currentPrice": -118.0,
+          "publicBet": null
+        },
+        "under": {
+          "open": 46.5,
+          "openPrice": null,
+          "current": 49.5,
+          "currentPrice": -110.0,
           "publicBet": null
         }
       }
