@@ -1,8 +1,8 @@
 {
   "season": 2026,
-  "updated": "2026-10-08T22:29:06.565685+00:00",
+  "updated": "2026-10-09T17:06:06.566985+00:00",
   "source": "nflverse play-by-play",
-  "completedGames": 64,
+  "completedGames": 65,
   "note": "Completed regular-season games only. One record per observed player, game and statistical category. Players with no recorded opportunities in a category are not included for that game. Missing records must not automatically be treated as zero. Verify against official game logs.",
   "logs": [
     {
@@ -3723,6 +3723,15 @@
       "opportunities": 1
     },
     {
+      "gameId": "2026_05_TB_DAL",
+      "team": "DAL",
+      "playerId": "00-0039530",
+      "player": "B.Spann-Ford",
+      "category": "receiving",
+      "yards": 0.0,
+      "opportunities": 2
+    },
+    {
       "gameId": "2026_01_DAL_NYG",
       "team": "DAL",
       "playerId": "00-0036358",
@@ -3757,6 +3766,15 @@
       "category": "receiving",
       "yards": 189.0,
       "opportunities": 21
+    },
+    {
+      "gameId": "2026_05_TB_DAL",
+      "team": "DAL",
+      "playerId": "00-0036358",
+      "player": "C.Lamb",
+      "category": "receiving",
+      "yards": 9.0,
+      "opportunities": 5
     },
     {
       "gameId": "2026_01_DAL_NYG",
@@ -3811,6 +3829,15 @@
       "category": "passing",
       "yards": 335.0,
       "opportunities": 48
+    },
+    {
+      "gameId": "2026_05_TB_DAL",
+      "team": "DAL",
+      "playerId": null,
+      "player": "D.Prescott",
+      "category": "passing",
+      "yards": 316.0,
+      "opportunities": 43
     },
     {
       "gameId": "2026_01_DAL_NYG",
@@ -3903,6 +3930,15 @@
       "opportunities": 3
     },
     {
+      "gameId": "2026_05_TB_DAL",
+      "team": "DAL",
+      "playerId": "00-0037247",
+      "player": "G.Pickens",
+      "category": "receiving",
+      "yards": 130.0,
+      "opportunities": 13
+    },
+    {
       "gameId": "2026_04_DAL_HOU",
       "team": "DAL",
       "playerId": "00-0038738",
@@ -3927,6 +3963,15 @@
       "player": "H.Luepke",
       "category": "rushing",
       "yards": 1.0,
+      "opportunities": 1
+    },
+    {
+      "gameId": "2026_05_TB_DAL",
+      "team": "DAL",
+      "playerId": "00-0038738",
+      "player": "H.Luepke",
+      "category": "rushing",
+      "yards": 5.0,
       "opportunities": 1
     },
     {
@@ -3966,6 +4011,15 @@
       "opportunities": 4
     },
     {
+      "gameId": "2026_05_TB_DAL",
+      "team": "DAL",
+      "playerId": "00-0038041",
+      "player": "J.Ferguson",
+      "category": "receiving",
+      "yards": 19.0,
+      "opportunities": 6
+    },
+    {
       "gameId": "2026_01_DAL_NYG",
       "team": "DAL",
       "playerId": "00-0039062",
@@ -3982,6 +4036,15 @@
       "category": "receiving",
       "yards": 0.0,
       "opportunities": 2
+    },
+    {
+      "gameId": "2026_05_TB_DAL",
+      "team": "DAL",
+      "playerId": "00-0039062",
+      "player": "J.Mingo",
+      "category": "receiving",
+      "yards": 20.0,
+      "opportunities": 4
     },
     {
       "gameId": "2026_01_DAL_NYG",
@@ -4020,6 +4083,15 @@
       "opportunities": 5
     },
     {
+      "gameId": "2026_05_TB_DAL",
+      "team": "DAL",
+      "playerId": "00-0036997",
+      "player": "J.Williams",
+      "category": "receiving",
+      "yards": 17.0,
+      "opportunities": 3
+    },
+    {
       "gameId": "2026_01_DAL_NYG",
       "team": "DAL",
       "playerId": "00-0036997",
@@ -4056,6 +4128,15 @@
       "opportunities": 19
     },
     {
+      "gameId": "2026_05_TB_DAL",
+      "team": "DAL",
+      "playerId": "00-0036997",
+      "player": "J.Williams",
+      "category": "rushing",
+      "yards": 45.0,
+      "opportunities": 12
+    },
+    {
       "gameId": "2026_01_DAL_NYG",
       "team": "DAL",
       "playerId": "00-0037801",
@@ -4072,6 +4153,15 @@
       "category": "receiving",
       "yards": 9.0,
       "opportunities": 2
+    },
+    {
+      "gameId": "2026_05_TB_DAL",
+      "team": "DAL",
+      "playerId": "00-0037801",
+      "player": "K.Turpin",
+      "category": "receiving",
+      "yards": 22.0,
+      "opportunities": 4
     },
     {
       "gameId": "2026_02_WAS_DAL",
@@ -4102,6 +4192,15 @@
     },
     {
       "gameId": "2026_03_BAL_DAL",
+      "team": "DAL",
+      "playerId": "00-0038547",
+      "player": "L.Schoonmaker",
+      "category": "receiving",
+      "yards": 9.0,
+      "opportunities": 1
+    },
+    {
+      "gameId": "2026_05_TB_DAL",
       "team": "DAL",
       "playerId": "00-0038547",
       "player": "L.Schoonmaker",
@@ -4143,6 +4242,15 @@
       "player": "R.Flournoy",
       "category": "receiving",
       "yards": 37.0,
+      "opportunities": 5
+    },
+    {
+      "gameId": "2026_05_TB_DAL",
+      "team": "DAL",
+      "playerId": "00-0039410",
+      "player": "R.Flournoy",
+      "category": "receiving",
+      "yards": 90.0,
       "opportunities": 5
     },
     {
@@ -13704,6 +13812,15 @@
       "opportunities": 4
     },
     {
+      "gameId": "2026_05_TB_DAL",
+      "team": "TB",
+      "playerId": "00-0039361",
+      "player": "B.Irving",
+      "category": "receiving",
+      "yards": 10.0,
+      "opportunities": 3
+    },
+    {
       "gameId": "2026_01_TB_CIN",
       "team": "TB",
       "playerId": "00-0039361",
@@ -13738,6 +13855,15 @@
       "category": "rushing",
       "yards": 61.0,
       "opportunities": 16
+    },
+    {
+      "gameId": "2026_05_TB_DAL",
+      "team": "TB",
+      "playerId": "00-0039361",
+      "player": "B.Irving",
+      "category": "rushing",
+      "yards": 165.0,
+      "opportunities": 21
     },
     {
       "gameId": "2026_01_TB_CIN",
@@ -13830,6 +13956,15 @@
       "opportunities": 7
     },
     {
+      "gameId": "2026_05_TB_DAL",
+      "team": "TB",
+      "playerId": "00-0033921",
+      "player": "C.Godwin",
+      "category": "receiving",
+      "yards": 37.0,
+      "opportunities": 3
+    },
+    {
       "gameId": "2026_01_TB_CIN",
       "team": "TB",
       "playerId": "00-0033921",
@@ -13845,6 +13980,15 @@
       "player": "C.Godwin",
       "category": "rushing",
       "yards": 12.0,
+      "opportunities": 1
+    },
+    {
+      "gameId": "2026_05_TB_DAL",
+      "team": "TB",
+      "playerId": "00-0033921",
+      "player": "C.Godwin",
+      "category": "rushing",
+      "yards": 3.0,
       "opportunities": 1
     },
     {
@@ -13884,6 +14028,15 @@
       "opportunities": 6
     },
     {
+      "gameId": "2026_05_TB_DAL",
+      "team": "TB",
+      "playerId": "00-0038129",
+      "player": "C.Otton",
+      "category": "receiving",
+      "yards": 25.0,
+      "opportunities": 4
+    },
+    {
       "gameId": "2026_01_TB_CIN",
       "team": "TB",
       "playerId": "00-0040129",
@@ -13920,12 +14073,30 @@
       "opportunities": 4
     },
     {
+      "gameId": "2026_05_TB_DAL",
+      "team": "TB",
+      "playerId": "00-0040129",
+      "player": "E.Egbuka",
+      "category": "receiving",
+      "yards": 38.0,
+      "opportunities": 9
+    },
+    {
       "gameId": "2026_02_CLE_TB",
       "team": "TB",
       "playerId": "00-0040129",
       "player": "E.Egbuka",
       "category": "rushing",
       "yards": -3.0,
+      "opportunities": 1
+    },
+    {
+      "gameId": "2026_05_TB_DAL",
+      "team": "TB",
+      "playerId": "00-0040129",
+      "player": "E.Egbuka",
+      "category": "rushing",
+      "yards": 14.0,
       "opportunities": 1
     },
     {
@@ -13947,6 +14118,15 @@
       "opportunities": 30
     },
     {
+      "gameId": "2026_05_TB_DAL",
+      "team": "TB",
+      "playerId": null,
+      "player": "J.Daniels",
+      "category": "passing",
+      "yards": 189.0,
+      "opportunities": 26
+    },
+    {
       "gameId": "2026_03_MIN_TB",
       "team": "TB",
       "playerId": "00-0041251",
@@ -13963,6 +14143,15 @@
       "category": "rushing",
       "yards": 55.0,
       "opportunities": 8
+    },
+    {
+      "gameId": "2026_05_TB_DAL",
+      "team": "TB",
+      "playerId": "00-0041251",
+      "player": "J.Daniels",
+      "category": "rushing",
+      "yards": 23.0,
+      "opportunities": 7
     },
     {
       "gameId": "2026_03_MIN_TB",
@@ -14010,6 +14199,15 @@
       "opportunities": 2
     },
     {
+      "gameId": "2026_05_TB_DAL",
+      "team": "TB",
+      "playerId": "00-0036919",
+      "player": "K.Gainwell",
+      "category": "receiving",
+      "yards": 10.0,
+      "opportunities": 4
+    },
+    {
       "gameId": "2026_01_TB_CIN",
       "team": "TB",
       "playerId": "00-0036919",
@@ -14046,6 +14244,15 @@
       "opportunities": 3
     },
     {
+      "gameId": "2026_05_TB_DAL",
+      "team": "TB",
+      "playerId": "00-0036919",
+      "player": "K.Gainwell",
+      "category": "rushing",
+      "yards": 18.0,
+      "opportunities": 4
+    },
+    {
       "gameId": "2026_04_GB_TB",
       "team": "TB",
       "playerId": "00-0039589",
@@ -14064,6 +14271,15 @@
       "opportunities": 1
     },
     {
+      "gameId": "2026_05_TB_DAL",
+      "team": "TB",
+      "playerId": "00-0039050",
+      "player": "P.Durham",
+      "category": "receiving",
+      "yards": 5.0,
+      "opportunities": 1
+    },
+    {
       "gameId": "2026_04_GB_TB",
       "team": "TB",
       "playerId": "00-0038951",
@@ -14071,6 +14287,15 @@
       "category": "rushing",
       "yards": 10.0,
       "opportunities": 3
+    },
+    {
+      "gameId": "2026_05_TB_DAL",
+      "team": "TB",
+      "playerId": "00-0038951",
+      "player": "S.Tucker",
+      "category": "rushing",
+      "yards": 18.0,
+      "opportunities": 5
     },
     {
       "gameId": "2026_01_TB_CIN",
@@ -14143,6 +14368,15 @@
       "category": "receiving",
       "yards": 17.0,
       "opportunities": 2
+    },
+    {
+      "gameId": "2026_05_TB_DAL",
+      "team": "TB",
+      "playerId": "00-0040237",
+      "player": "T.Johnson",
+      "category": "receiving",
+      "yards": 64.0,
+      "opportunities": 1
     },
     {
       "gameId": "2026_01_TB_CIN",
