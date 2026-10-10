@@ -315,8 +315,8 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": 125.0,
-          "currentPrice": 125.0,
+          "current": 124.0,
+          "currentPrice": 124.0,
           "publicBet": null
         },
         "home": {
@@ -357,7 +357,7 @@
           "open": -7.5,
           "openPrice": null,
           "current": -7.0,
-          "currentPrice": -112.0,
+          "currentPrice": -110.0,
           "publicBet": null
         },
         "home": {
@@ -372,8 +372,8 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": -357.0,
-          "currentPrice": -357.0,
+          "current": -355.0,
+          "currentPrice": -355.0,
           "publicBet": null
         },
         "home": {
@@ -452,8 +452,8 @@
         "under": {
           "open": 42.5,
           "openPrice": null,
-          "current": 42.5,
-          "currentPrice": -115.0,
+          "current": 42.0,
+          "currentPrice": -111.0,
           "publicBet": null
         }
       }
@@ -493,8 +493,8 @@
         "home": {
           "open": null,
           "openPrice": null,
-          "current": 106.0,
-          "currentPrice": 106.0,
+          "current": 105.0,
+          "currentPrice": 105.0,
           "publicBet": null
         }
       },
@@ -503,14 +503,14 @@
           "open": 45.5,
           "openPrice": -113.0,
           "current": 45.5,
-          "currentPrice": -110.0,
+          "currentPrice": -111.0,
           "publicBet": null
         },
         "under": {
           "open": 45.5,
           "openPrice": null,
-          "current": 45.5,
-          "currentPrice": -102.0,
+          "current": 46.5,
+          "currentPrice": -108.0,
           "publicBet": null
         }
       }
@@ -721,8 +721,8 @@
         "home": {
           "open": null,
           "openPrice": null,
-          "current": -174.0,
-          "currentPrice": -174.0,
+          "current": -168.0,
+          "currentPrice": -168.0,
           "publicBet": null
         }
       },
@@ -753,15 +753,15 @@
       "matchup": "BUF \u2014 Buffalo Bills @ LA \u2014 Los Angeles Rams",
       "spread": {
         "away": {
-          "open": 2.5,
+          "open": 3.5,
           "openPrice": null,
           "current": 3.5,
           "currentPrice": -118.0,
           "publicBet": null
         },
         "home": {
-          "open": -2.5,
-          "openPrice": -119.0,
+          "open": -3.5,
+          "openPrice": -103.0,
           "current": -3.0,
           "currentPrice": -120.0,
           "publicBet": null
@@ -788,7 +788,7 @@
           "open": 54.5,
           "openPrice": -112.0,
           "current": 54.5,
-          "currentPrice": -108.0,
+          "currentPrice": -110.0,
           "publicBet": null
         },
         "under": {
