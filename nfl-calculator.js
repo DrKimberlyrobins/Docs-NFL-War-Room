@@ -474,47 +474,142 @@
       );
     }
 
+    
+    // STEP 5 — NUMERICAL INTERPRETATION
     addHeading(
       panel,
       "STEP 5 — WHAT THE NUMBERS MEAN"
     );
 
-    const offensiveLeader =
+    const awayOffense = awayOffensiveTotal;
+    const homeOffense = homeOffensiveTotal;
+    const awayDefense = awayDefensiveTotal;
+    const homeDefense = homeDefensiveTotal;
+
+    addCalculation(
+      panel,
+      "1. OFFENSIVE EPA ADVANTAGE",
+      awayCode + " " + signed(awayOffense) +
+      " − " + homeCode + " (" +
+      signed(homeOffense) + ")",
+      signed(offensiveDifference) + " EPA",
       advantageDescription(
         offensiveDifference,
         awayName,
         homeName
-      );
+      )
+    );
 
-    const defensiveLeader =
+    addCalculation(
+      panel,
+      "2. DEFENSIVE EPA ADVANTAGE",
+      homeCode + " allowed " +
+      signed(homeDefense) +
+      " − " + awayCode + " allowed (" +
+      signed(awayDefense) + ")",
+      signed(defensiveAdvantage) + " EPA",
       advantageDescription(
         defensiveAdvantage,
         awayName,
         homeName
-      );
-
-    addText(
-      panel,
-      "p",
-      "Offense: " + offensiveLeader + "."
+      )
     );
 
-    addText(
+    addCalculation(
       panel,
-      "p",
-      "Defense: " + defensiveLeader + "."
-    );
-
-    addText(
-      panel,
-      "p",
-      "Experimental result: " +
+      "3. DOC'S EXPERIMENTAL SUBTRACTION",
+      "(" + signed(offensiveDifference) +
+      ") − (" +
+      signed(defensiveAdvantage) + ")",
+      signed(experimentalDifference) + " EPA",
       advantageDescription(
         experimentalDifference,
         awayName,
         homeName
-      ) + "."
+      )
     );
+
+    if (
+      number(a.fullEPA) &&
+      number(h.fullEPA)
+    ) {
+      const adjustedDifference =
+        a.fullEPA - h.fullEPA;
+
+      addCalculation(
+        panel,
+        "4. OPPONENT-ADJUSTED EPA DIFFERENCE",
+        "(" + signed(a.fullEPA) +
+        ") − (" + signed(h.fullEPA) + ")",
+        signed(adjustedDifference) + " EPA",
+        advantageDescription(
+          adjustedDifference,
+          awayName,
+          homeName
+        )
+      );
+    }
+
+    const interpretation = document.createElement("div");
+
+    interpretation.style.padding = "14px";
+    interpretation.style.marginTop = "12px";
+    interpretation.style.border =
+      "1px solid #36516b";
+    interpretation.style.borderRadius = "8px";
+    interpretation.style.background = "#20374c";
+
+    const line = (label, value) => {
+      const p = document.createElement("p");
+      const strong = document.createElement("strong");
+      strong.textContent = label + ": ";
+      p.appendChild(strong);
+      p.appendChild(document.createTextNode(value));
+      interpretation.appendChild(p);
+    };
+
+    line(
+      "Offensive EPA difference",
+      signed(offensiveDifference) +
+      " — " +
+      advantageDescription(
+        offensiveDifference,
+        awayName,
+        homeName
+      )
+    );
+
+    line(
+      "Defensive EPA difference",
+      signed(defensiveAdvantage) +
+      " — " +
+      advantageDescription(
+        defensiveAdvantage,
+        awayName,
+        homeName
+      )
+    );
+
+    line(
+      "Experimental subtraction",
+      signed(offensiveDifference) +
+      " − (" +
+      signed(defensiveAdvantage) +
+      ") = " +
+      signed(experimentalDifference)
+    );
+
+    line(
+      "Experimental direction",
+      advantageDescription(
+        experimentalDifference,
+        awayName,
+        homeName
+      )
+    );
+
+    panel.appendChild(interpretation);
+
 
     const note = addText(
       panel,
