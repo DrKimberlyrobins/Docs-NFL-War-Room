@@ -761,5 +761,115 @@ enhance(source);
 })();
 </script>
 
+<script>
+/* DOC'S NFL WAR ROOM
+   QB COMPLETIONS PER GAME UPGRADE
+   Adds Completions/Game to the QB table.
+   Existing player popouts automatically
+   display the new column.
+*/
+(function () {
+  "use strict";
+
+  const body = document.getElementById("qbPassingBody");
+  if (!body) return;
+
+  const table = body.closest("table");
+  const headerRow = table?.querySelector("thead tr");
+
+  if (!headerRow) return;
+
+  function upgradeQBTable() {
+    const headers = [...headerRow.cells].map(cell =>
+      cell.textContent.trim()
+    );
+
+    let columnIndex = headers.indexOf("Completions/Game");
+
+    if (columnIndex === -1) {
+      const attemptsIndex = headers.indexOf("Attempts/Game");
+
+      if (attemptsIndex === -1) return;
+
+      const header = document.createElement("th");
+      header.textContent = "Completions/Game";
+
+      headerRow.cells[attemptsIndex].insertAdjacentElement(
+        "afterend",
+        header
+      );
+
+      columnIndex = attemptsIndex + 1;
+    }
+
+    for (const row of body.rows) {
+      if (row.cells.length < 10) continue;
+
+      // Skip rows that already contain the new statistic.
+      if (row.cells.length >= headerRow.cells.length) continue;
+
+      const attempts = Number(row.cells[2]?.textContent);
+      const completions = Number(row.cells[3]?.textContent);
+      const attemptsPerGame = Number(
+        row.cells[5]?.textContent
+      );
+
+      let games = null;
+
+      if (
+        Number.isFinite(attempts) &&
+        Number.isFinite(attemptsPerGame) &&
+        attemptsPerGame > 0
+      ) {
+        games = attempts / attemptsPerGame;
+      }
+
+      // Historical team-game average,
+      // not a betting projection.
+      const completionsPerGame =
+        Number.isFinite(completions) &&
+        Number.isFinite(games) &&
+        games > 0
+          ? (completions / games).toFixed(2)
+          : "—";
+
+      const cell = document.createElement("td");
+      cell.textContent = completionsPerGame;
+      cell.title =
+        "Historical completions per team game; not a betting edge.";
+
+      row.cells[columnIndex - 1]?.insertAdjacentElement(
+        "afterend",
+        cell
+      );
+    }
+  }
+
+  let updating = false;
+
+  const observer = new MutationObserver(() => {
+    if (updating) return;
+
+    updating = true;
+    observer.disconnect();
+
+    upgradeQBTable();
+
+    observer.observe(body, {
+      childList: true,
+      subtree: true
+    });
+
+    updating = false;
+  });
+
+  observer.observe(body, {
+    childList: true,
+    subtree: true
+  });
+
+  upgradeQBTable();
+})();
+</script>     
 </body>
 </html>
