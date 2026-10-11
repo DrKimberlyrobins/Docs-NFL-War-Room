@@ -870,6 +870,181 @@ enhance(source);
 
   upgradeQBTable();
 })();
-</script>     
+</script>
+<script>
+/*
+  DOC'S NFL WAR ROOM
+  QB PASSING YARDS PER GAME UPGRADE
+
+  Adds Passing Yards/Game to the existing
+  QB Passing Intelligence table.
+
+  Existing clickable player popouts
+  automatically display the new statistic.
+
+  Uses verified team game counts from
+  the loaded QB Intelligence summaries.
+*/
+
+(function () {
+  "use strict";
+
+  const body = document.getElementById("qbPassingBody");
+
+  if (!body) return;
+
+  const table = body.closest("table");
+  const headerRow = table?.querySelector("thead tr");
+
+  if (!headerRow) return;
+
+  function readNumber(value) {
+    const text = String(value ?? "")
+      .replace(/,/g, "")
+      .trim();
+
+    if (!text) return null;
+
+    const number = Number(text);
+
+    return Number.isFinite(number)
+      ? number
+      : null;
+  }
+
+  function getTeamGames(teamName) {
+    const away = document.getElementById("away")?.value;
+    const home = document.getElementById("home")?.value;
+
+    const status = document.getElementById("playerStatus");
+
+    if (!status) return null;
+
+    const text = status.textContent;
+
+    let match = null;
+
+    if (teamName === away) {
+      match = text.match(/Away team games:\s*(\d+)/i);
+    } else if (teamName === home) {
+      match = text.match(/Home team games:\s*(\d+)/i);
+    }
+
+    const games = match ? Number(match[1]) : null;
+
+    return Number.isFinite(games) && games > 0
+      ? games
+      : null;
+  }
+
+  function upgradeQBTable() {
+    const headers = [...headerRow.cells].map(cell =>
+      cell.textContent.trim()
+    );
+
+    let columnIndex = headers.indexOf("Yards/Game");
+
+    if (columnIndex === -1) {
+      const passingYardsIndex =
+        headers.indexOf("Passing Yards");
+
+      if (passingYardsIndex === -1) return;
+
+      const header = document.createElement("th");
+      header.textContent = "Yards/Game";
+
+      headerRow.cells[
+        passingYardsIndex
+      ].insertAdjacentElement("afterend", header);
+
+      columnIndex = passingYardsIndex + 1;
+    }
+
+    const updatedHeaders = [...headerRow.cells].map(
+      cell => cell.textContent.trim()
+    );
+
+    const yardsIndex =
+      updatedHeaders.indexOf("Passing Yards");
+
+    const expectedColumns = headerRow.cells.length;
+
+    for (const row of body.rows) {
+      if (row.cells.length < 10) continue;
+
+      const teamName = row.cells[0]?.textContent.trim();
+
+      const yards = readNumber(
+        row.cells[yardsIndex]?.textContent
+      );
+
+      const games = getTeamGames(teamName);
+
+      const yardsPerGame =
+        yards !== null && games !== null
+          ? (yards / games).toFixed(2)
+          : "—";
+
+      if (row.cells.length < expectedColumns) {
+        const cell = document.createElement("td");
+
+        cell.textContent = yardsPerGame;
+        cell.title =
+          "Historical passing yards per team game.";
+
+        row.cells[yardsIndex].insertAdjacentElement(
+          "afterend",
+          cell
+        );
+      } else {
+        const cell = row.cells[columnIndex];
+
+        if (cell) {
+          cell.textContent = yardsPerGame;
+        }
+      }
+    }
+  }
+
+  let updating = false;
+
+  const observer = new MutationObserver(() => {
+    if (updating) return;
+
+    updating = true;
+    observer.disconnect();
+
+    upgradeQBTable();
+
+    observer.observe(body, {
+      childList: true,
+      subtree: true
+    });
+
+    updating = false;
+  });
+
+  observer.observe(body, {
+    childList: true,
+    subtree: true
+  });
+
+  upgradeQBTable();
+
+  const status = document.getElementById("playerStatus");
+
+  if (status) {
+    new MutationObserver(upgradeQBTable).observe(
+      status,
+      {
+        childList: true,
+        characterData: true,
+        subtree: true
+      }
+    );
+  }
+})();
+</script>
+     
 </body>
 </html>
