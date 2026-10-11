@@ -1,6 +1,7 @@
 
-// DOC'S NFL WAR ROOM
-// QB & RECEIVER INTELLIGENCE
+ // DOC'S NFL WAR ROOM
+ // QB, RECEIVER, DEFENSE & RUNNING BACK INTELLIGENCE
+ // UPGRADE: QB PASSING COMPLETIONS INTELLIGENCE
 
 let playerData = null;
 
@@ -39,78 +40,191 @@ const playerTeamCodes = {
   "Washington Commanders": "WAS"
 };
 
+function validNumber(value) {
+  return typeof value === "number" &&
+    Number.isFinite(value);
+}
+
+function fixedNumber(value, digits = 2) {
+  return validNumber(value)
+    ? value.toFixed(digits)
+    : "N/A";
+}
+
+// Uses team games as the denominator.
+// These are team-game averages, not necessarily
+// games personally played by the quarterback.
+function calculateQBCompletions(qb, team) {
+  const attempts = Number(qb?.attempts);
+  const completions = Number(qb?.completions);
+  const games = Number(team?.games);
+
+  const validAttempts =
+    Number.isFinite(attempts) && attempts >= 0;
+
+  const validCompletions =
+    Number.isFinite(completions) &&
+    completions >= 0;
+
+  const validGames =
+    Number.isFinite(games) && games > 0;
+
+  const attemptsPerGame =
+    validAttempts && validGames
+      ? attempts / games
+      : null;
+
+  const completionsPerGame =
+    validCompletions && validGames
+      ? completions / games
+      : null;
+
+  const completionRate =
+    validAttempts &&
+    validCompletions &&
+    attempts > 0 &&
+    completions <= attempts
+      ? completions / attempts
+      : null;
+
+  const estimatedCompletions =
+    validNumber(attemptsPerGame) &&
+    validNumber(completionRate)
+      ? attemptsPerGame * completionRate
+      : null;
+
+  return {
+    attempts: validAttempts ? attempts : null,
+    completions:
+      validCompletions ? completions : null,
+    games: validGames ? games : null,
+    attemptsPerGame,
+    completionsPerGame,
+    completionRate,
+    estimatedCompletions
+  };
+}
+
+// Available for our separate player-popout upgrade.
+window.docsCalculateQBCompletions =
+  calculateQBCompletions;
+
 function displayQuarterbacks(team, elementId) {
   const element = document.getElementById(elementId);
+  if (!element) return;
+
   element.replaceChildren();
 
   if (!team || !team.quarterbacks?.length) {
-    element.textContent = "No quarterback data available.";
+    element.textContent =
+      "No quarterback data available.";
     return;
   }
 
   team.quarterbacks.forEach(qb => {
+    const stats = calculateQBCompletions(qb, team);
     const line = document.createElement("p");
 
     line.textContent =
       qb.name +
       " | Attempts: " + qb.attempts +
       " | Completions: " + qb.completions +
-      " | Completion: " + qb.completionRate + "%" +
-      " | Attempts/Game: " + qb.attemptsPerTeamGame;
+      " | Completion: " +
+        (validNumber(stats.completionRate)
+          ? fixedNumber(
+              stats.completionRate * 100,
+              1
+            ) + "%"
+          : "N/A") +
+      " | Attempts/Game: " +
+        fixedNumber(stats.attemptsPerGame) +
+      " | Completions/Game: " +
+        fixedNumber(stats.completionsPerGame);
 
     element.appendChild(line);
   });
 }
 
 function renderPlayers() {
-  const awayName = document.getElementById("away").value;
-  const homeName = document.getElementById("home").value;
+  const awayName =
+    document.getElementById("away")?.value;
 
-  const body = document.getElementById("targetBody");
-  const status = document.getElementById("playerStatus");
+  const homeName =
+    document.getElementById("home")?.value;
+
+  const body =
+    document.getElementById("targetBody");
+
+  const status =
+    document.getElementById("playerStatus");
+
+  if (!body || !status) return;
 
   body.replaceChildren();
 
-  document.getElementById("qbAwayHeader")
-    .textContent = awayName + " Quarterbacks";
+  const awayHeader =
+    document.getElementById("qbAwayHeader");
 
-  document.getElementById("qbHomeHeader")
-    .textContent = homeName + " Quarterbacks";
+  const homeHeader =
+    document.getElementById("qbHomeHeader");
+
+  if (awayHeader) {
+    awayHeader.textContent =
+      awayName + " Quarterbacks";
+  }
+
+  if (homeHeader) {
+    homeHeader.textContent =
+      homeName + " Quarterbacks";
+  }
 
   if (awayName === homeName) {
-    status.textContent = "Select two different teams.";
+    status.textContent =
+      "Select two different teams.";
     return;
   }
 
   if (!playerData) {
-    status.textContent = "Loading player statistics...";
+    status.textContent =
+      "Loading player statistics...";
     return;
   }
 
   const away =
-    playerData.teams[playerTeamCodes[awayName]];
+    playerData.teams?.[
+      playerTeamCodes[awayName]
+    ];
 
   const home =
-    playerData.teams[playerTeamCodes[homeName]];
+    playerData.teams?.[
+      playerTeamCodes[homeName]
+    ];
 
-  displayQuarterbacks(away, "qbAwayInfo");
-  displayQuarterbacks(home, "qbHomeInfo");
+  displayQuarterbacks(
+    away,
+    "qbAwayInfo"
+  );
+
+  displayQuarterbacks(
+    home,
+    "qbHomeInfo"
+  );
 
   const columns = [
-  "targets",
-  "targetsPerGame",
-  "receptions",
-  "receivingYards",
-  "yardsPerGame",
-  "yardsAfterCatch",
-  "yacPerReception",
-  "explosiveReceptions",
-  "explosiveRate",
-  "catchRate",
-  "redZoneTargets",
-  "inside10Targets",
-  "receivingTouchdowns"
-];
+    "targets",
+    "targetsPerGame",
+    "receptions",
+    "receivingYards",
+    "yardsPerGame",
+    "yardsAfterCatch",
+    "yacPerReception",
+    "explosiveReceptions",
+    "explosiveRate",
+    "catchRate",
+    "redZoneTargets",
+    "inside10Targets",
+    "receivingTouchdowns"
+  ];
 
   const receivers = [
     ...(away?.receivers || []).map(player => ({
@@ -124,7 +238,8 @@ function renderPlayers() {
   ];
 
   if (!receivers.length) {
-    status.textContent = "No receiver data available.";
+    status.textContent =
+      "No receiver data available.";
     return;
   }
 
@@ -139,7 +254,9 @@ function renderPlayers() {
   });
 
   receivers.sort(
-    (a, b) => b.player.targets - a.player.targets
+    (a, b) =>
+      (b.player.targets || 0) -
+      (a.player.targets || 0)
   );
 
   receivers.forEach(item => {
@@ -148,11 +265,14 @@ function renderPlayers() {
     const values = [
       item.team,
       item.player.name,
-      ...columns.map(key => item.player[key])
+      ...columns.map(
+        key => item.player[key]
+      )
     ];
 
     values.forEach((value, index) => {
       const cell = document.createElement("td");
+
       cell.textContent = value ?? "—";
 
       if (index >= 2) {
@@ -175,82 +295,215 @@ function renderPlayers() {
   });
 
   status.textContent =
-    "Away team games: " + (away?.games ?? 0) +
-    " | Home team games: " + (home?.games ?? 0) +
+    "Away team games: " +
+    (away?.games ?? 0) +
+    " | Home team games: " +
+    (home?.games ?? 0) +
     ". Green highlights the highest recorded " +
     "number in each column, not a betting edge.";
 }
 
-async function loadPlayers() {
-  try {
-    const response = await fetch(
-      "data/players-2026.json"
-    );
-
-    if (!response.ok) {
-      throw new Error("HTTP " + response.status);
-    }
-
-    playerData = await response.json();
-    renderPlayers();
-
-  } catch (error) {
-    document.getElementById("playerStatus")
-      .textContent =
-      "Unable to load player data: " +
-      error.message;
-  }
-}
-
-// Connect to our existing Analyze Matchup button.
-const previousPlayerAnalyze = analyze;
-
-analyze = function () {
-  previousPlayerAnalyze();
-  renderPlayers();
-};
-
-loadPlayers();
-
-
 // QB PASSING INTELLIGENCE
 
+function getQBCompletionPanel() {
+  let panel = document.getElementById(
+    "docsQBCompletionAnalysis"
+  );
+
+  if (panel) return panel;
+
+  const anchor = document.getElementById(
+    "qbPassingStatus"
+  );
+
+  if (!anchor) return null;
+
+  panel = document.createElement("div");
+  panel.id = "docsQBCompletionAnalysis";
+
+  Object.assign(panel.style, {
+    marginTop: "18px",
+    padding: "16px",
+    background: "#14283c",
+    color: "#f1f5f9",
+    border: "1px solid #36516b",
+    borderRadius: "10px"
+  });
+
+  anchor.insertAdjacentElement(
+    "afterend",
+    panel
+  );
+
+  return panel;
+}
+
+function renderQBCompletionAnalysis(selectedTeams) {
+  const panel = getQBCompletionPanel();
+  if (!panel) return;
+
+  panel.replaceChildren();
+
+  const heading = document.createElement("h3");
+  heading.textContent =
+    "QB PASSING COMPLETIONS INTELLIGENCE";
+  panel.appendChild(heading);
+
+  selectedTeams.forEach(teamName => {
+    const code = playerTeamCodes[teamName];
+    const team = playerData?.teams?.[code];
+
+    if (!team?.quarterbacks?.length) return;
+
+    team.quarterbacks.forEach(qb => {
+      const stats =
+        calculateQBCompletions(qb, team);
+
+      const card = document.createElement("div");
+
+      Object.assign(card.style, {
+        padding: "14px",
+        marginTop: "12px",
+        borderRadius: "8px",
+        background: "#20374c"
+      });
+
+      const name = document.createElement("h4");
+      name.textContent =
+        qb.name + " — " + teamName;
+      card.appendChild(name);
+
+      const addLine = (label, value) => {
+        const p = document.createElement("p");
+        p.style.margin = "6px 0";
+
+        const strong =
+          document.createElement("strong");
+
+        strong.textContent = label + ": ";
+
+        p.appendChild(strong);
+        p.appendChild(
+          document.createTextNode(value)
+        );
+
+        card.appendChild(p);
+      };
+
+      addLine(
+        "Total passing attempts",
+        String(stats.attempts ?? "N/A")
+      );
+
+      addLine(
+        "Total passing completions",
+        String(stats.completions ?? "N/A")
+      );
+
+      addLine(
+        "Team games",
+        String(stats.games ?? "N/A")
+      );
+
+      addLine(
+        "Attempts per game",
+        stats.games
+          ? stats.attempts + " ÷ " +
+            stats.games + " = " +
+            fixedNumber(stats.attemptsPerGame)
+          : "N/A"
+      );
+
+      addLine(
+        "Completions per game",
+        stats.games
+          ? stats.completions + " ÷ " +
+            stats.games + " = " +
+            fixedNumber(stats.completionsPerGame)
+          : "N/A"
+      );
+
+      addLine(
+        "Completion percentage",
+        stats.attempts > 0
+          ? stats.completions + " ÷ " +
+            stats.attempts + " × 100 = " +
+            fixedNumber(
+              stats.completionRate * 100,
+              2
+            ) + "%"
+          : "N/A"
+      );
+
+      addLine(
+        "Estimated completions at current rate",
+        validNumber(stats.estimatedCompletions)
+          ? fixedNumber(stats.attemptsPerGame) +
+            " × " +
+            fixedNumber(
+              stats.completionRate * 100,
+              2
+            ) + "% = " +
+            fixedNumber(stats.estimatedCompletions)
+          : "N/A"
+      );
+
+      const note = document.createElement("p");
+      note.style.fontSize = "12px";
+      note.style.color = "#cbd5e1";
+      note.textContent =
+        "These are historical team-game averages. " +
+        "The estimated completions figure uses " +
+        "the same historical attempts and completion " +
+        "rate, so it equals the historical completions " +
+        "per game. It is not an independent matchup " +
+        "projection or a qualified betting edge.";
+
+      card.appendChild(note);
+      panel.appendChild(card);
+    });
+  });
+}
+
 function renderQBPassing() {
-  const body = document.getElementById("qbPassingBody");
-  const status = document.getElementById("qbPassingStatus");
+  const body =
+    document.getElementById("qbPassingBody");
+
+  const status =
+    document.getElementById("qbPassingStatus");
 
   if (!body || !status || !playerData) return;
 
   body.replaceChildren();
 
   const selectedTeams = [
-    document.getElementById("away").value,
-    document.getElementById("home").value
+    document.getElementById("away")?.value,
+    document.getElementById("home")?.value
   ];
 
   selectedTeams.forEach(teamName => {
     const code = playerTeamCodes[teamName];
-    const team = playerData.teams[code];
+    const team = playerData.teams?.[code];
 
-    if (!team) return;
+    if (!team?.quarterbacks) return;
 
     team.quarterbacks.forEach(qb => {
       const row = document.createElement("tr");
 
       [
-  teamName,
-  qb.name,
-  qb.attempts,
-  qb.completions,
-  qb.completionRate + "%",
-  qb.attemptsPerTeamGame,
-  qb.passingYards,
-  qb.yardsPerAttempt,
-  qb.passingTDs,
-  qb.interceptions
-].forEach(value => {
+        teamName,
+        qb.name,
+        qb.attempts,
+        qb.completions,
+        qb.completionRate + "%",
+        qb.attemptsPerTeamGame,
+        qb.passingYards,
+        qb.yardsPerAttempt,
+        qb.passingTDs,
+        qb.interceptions
+      ].forEach(value => {
         const cell = document.createElement("td");
-        cell.textContent = value;
+        cell.textContent = value ?? "—";
         row.appendChild(cell);
       });
 
@@ -260,37 +513,33 @@ function renderQBPassing() {
 
   status.textContent =
     "Verified passing statistics from completed games.";
+
+  renderQBCompletionAnalysis(selectedTeams);
 }
 
-// Connect the new table to the existing functions.
-const previousRenderPlayers = renderPlayers;
-
-renderPlayers = function () {
-  previousRenderPlayers();
-  renderQBPassing();
-};
-
-
-// DOC'S DEFENSIVE MATCHUP INTELLIGENCE
+// DEFENSIVE MATCHUP INTELLIGENCE
 
 function renderDefense() {
+  const body =
+    document.getElementById("defenseBody");
 
-  const body = document.getElementById("defenseBody");
-  const status = document.getElementById("defenseStatus");
+  const status =
+    document.getElementById("defenseStatus");
 
   if (!body || !status || !playerData) return;
 
   body.replaceChildren();
 
   const selectedTeams = [
-    document.getElementById("away").value,
-    document.getElementById("home").value
+    document.getElementById("away")?.value,
+    document.getElementById("home")?.value
   ];
 
   selectedTeams.forEach(teamName => {
-
     const code = playerTeamCodes[teamName];
-    const defense = playerData.teams[code]?.defense;
+
+    const defense =
+      playerData.teams?.[code]?.defense;
 
     if (!defense || !defense.games) return;
 
@@ -312,7 +561,6 @@ function renderDefense() {
     });
 
     body.appendChild(row);
-
   });
 
   status.textContent = body.children.length
@@ -320,52 +568,50 @@ function renderDefense() {
     : "No defensive statistics available.";
 }
 
-// Update defense whenever we analyze a matchup.
-
-const previousRenderPlayersForDefense = renderPlayers;
-
-renderPlayers = function () {
-  previousRenderPlayersForDefense();
-  renderDefense();
-};
-
-// DOC'S RUNNING BACK INTELLIGENCE
+// RUNNING BACK INTELLIGENCE
 
 function renderRushing() {
-  const body = document.getElementById("rushingBody");
-  const status = document.getElementById("rushingStatus");
+  const body =
+    document.getElementById("rushingBody");
+
+  const status =
+    document.getElementById("rushingStatus");
 
   if (!body || !status) return;
 
   body.replaceChildren();
 
   if (!playerData) {
-    status.textContent = "Waiting for rushing data...";
+    status.textContent =
+      "Waiting for rushing data...";
     return;
   }
 
   const selectedTeams = [
-    document.getElementById("away").value,
-    document.getElementById("home").value
+    document.getElementById("away")?.value,
+    document.getElementById("home")?.value
   ];
 
   const rushers = [];
 
   selectedTeams.forEach(teamName => {
     const code = playerTeamCodes[teamName];
-    const team = playerData.teams[code];
+    const team = playerData.teams?.[code];
 
     (team?.rushers || []).forEach(player => {
-      rushers.push({ teamName, player });
+      rushers.push({
+        teamName,
+        player
+      });
     });
   });
 
   if (!rushers.length) {
-    status.textContent = "No rushing data available.";
+    status.textContent =
+      "No rushing data available.";
     return;
   }
 
-  // Identify the highest value in each statistical category.
   const columns = [
     "games",
     "carries",
@@ -389,7 +635,9 @@ function renderRushing() {
   });
 
   rushers.sort(
-    (a, b) => b.player.carries - a.player.carries
+    (a, b) =>
+      (b.player.carries || 0) -
+      (a.player.carries || 0)
   );
 
   rushers.forEach(item => {
@@ -398,7 +646,9 @@ function renderRushing() {
     const values = [
       item.teamName,
       item.player.name,
-      ...columns.map(key => item.player[key])
+      ...columns.map(
+        key => item.player[key]
+      )
     ];
 
     values.forEach((value, index) => {
@@ -430,17 +680,56 @@ function renderRushing() {
     "in each column, not a betting recommendation.";
 }
 
-// Connect rushing to our existing matchup analysis.
-const previousRenderPlayersForRushing = renderPlayers;
+// PRESERVE EXISTING MATCHUP ANALYSIS CHAIN
 
-renderPlayers = function () {
-  previousRenderPlayersForRushing();
+const previousPlayerAnalyze =
+  window.analyze;
+
+window.analyze = function (...args) {
+  if (typeof previousPlayerAnalyze === "function") {
+    previousPlayerAnalyze.apply(this, args);
+  }
+
+  renderPlayers();
+  renderQBPassing();
+  renderDefense();
   renderRushing();
 };
 
-// Display rushing data immediately if already loaded.
-if (playerData) {
-  renderRushing();
+// LOAD VERIFIED PLAYER DATA
+
+async function loadPlayers() {
+  try {
+    const response = await fetch(
+      "data/players-2026.json",
+      { cache: "no-store" }
+    );
+
+    if (!response.ok) {
+      throw new Error(
+        "HTTP " + response.status
+      );
+    }
+
+    playerData = await response.json();
+
+    renderPlayers();
+    renderQBPassing();
+    renderDefense();
+    renderRushing();
+
+  } catch (error) {
+    console.error(error);
+
+    const status =
+      document.getElementById("playerStatus");
+
+    if (status) {
+      status.textContent =
+        "Unable to load player data: " +
+        error.message;
+    }
+  }
 }
 
-
+loadPlayers();
