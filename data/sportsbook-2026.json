@@ -3,6 +3,120 @@
   "season": 2026,
   "games": [
     {
+      "away": "BAL",
+      "home": "ATL",
+      "awayName": "Baltimore Ravens",
+      "homeName": "Atlanta Falcons",
+      "awayLabel": "BAL \u2014 Baltimore Ravens",
+      "homeLabel": "ATL \u2014 Atlanta Falcons",
+      "matchup": "BAL \u2014 Baltimore Ravens @ ATL \u2014 Atlanta Falcons",
+      "spread": {
+        "away": {
+          "open": 3.0,
+          "openPrice": null,
+          "current": 3.5,
+          "currentPrice": -122.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": -3.0,
+          "openPrice": -117.0,
+          "current": -3.0,
+          "currentPrice": -118.0,
+          "publicBet": null
+        }
+      },
+      "moneyline": {
+        "away": {
+          "open": null,
+          "openPrice": null,
+          "current": 150.0,
+          "currentPrice": 150.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": null,
+          "openPrice": null,
+          "current": -170.0,
+          "currentPrice": -170.0,
+          "publicBet": null
+        }
+      },
+      "total": {
+        "over": {
+          "open": 43.5,
+          "openPrice": -114.0,
+          "current": 43.5,
+          "currentPrice": -118.0,
+          "publicBet": null
+        },
+        "under": {
+          "open": 43.5,
+          "openPrice": null,
+          "current": 44.5,
+          "currentPrice": -110.0,
+          "publicBet": null
+        }
+      }
+    },
+    {
+      "away": "BUF",
+      "home": "LA",
+      "awayName": "Buffalo Bills",
+      "homeName": "Los Angeles Rams",
+      "awayLabel": "BUF \u2014 Buffalo Bills",
+      "homeLabel": "LA \u2014 Los Angeles Rams",
+      "matchup": "BUF \u2014 Buffalo Bills @ LA \u2014 Los Angeles Rams",
+      "spread": {
+        "away": {
+          "open": 3.5,
+          "openPrice": null,
+          "current": 3.5,
+          "currentPrice": -115.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": -3.5,
+          "openPrice": -103.0,
+          "current": -3.5,
+          "currentPrice": -102.0,
+          "publicBet": null
+        }
+      },
+      "moneyline": {
+        "away": {
+          "open": null,
+          "openPrice": null,
+          "current": 150.0,
+          "currentPrice": 150.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": null,
+          "openPrice": null,
+          "current": -176.0,
+          "currentPrice": -176.0,
+          "publicBet": null
+        }
+      },
+      "total": {
+        "over": {
+          "open": 54.5,
+          "openPrice": -112.0,
+          "current": 54.5,
+          "currentPrice": -110.0,
+          "publicBet": null
+        },
+        "under": {
+          "open": 54.5,
+          "openPrice": null,
+          "current": 54.5,
+          "currentPrice": -105.0,
+          "publicBet": null
+        }
+      }
+    },
+    {
       "away": "SF",
       "home": "SEA",
       "awayName": "San Francisco 49ers",
@@ -112,120 +226,6 @@
           "openPrice": null,
           "current": 55.5,
           "currentPrice": -110.0,
-          "publicBet": null
-        }
-      }
-    },
-    {
-      "away": "BAL",
-      "home": "ATL",
-      "awayName": "Baltimore Ravens",
-      "homeName": "Atlanta Falcons",
-      "awayLabel": "BAL \u2014 Baltimore Ravens",
-      "homeLabel": "ATL \u2014 Atlanta Falcons",
-      "matchup": "BAL \u2014 Baltimore Ravens @ ATL \u2014 Atlanta Falcons",
-      "spread": {
-        "away": {
-          "open": 3.0,
-          "openPrice": null,
-          "current": 3.5,
-          "currentPrice": -122.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": -3.0,
-          "openPrice": -117.0,
-          "current": -3.0,
-          "currentPrice": -118.0,
-          "publicBet": null
-        }
-      },
-      "moneyline": {
-        "away": {
-          "open": null,
-          "openPrice": null,
-          "current": 145.0,
-          "currentPrice": 145.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": null,
-          "openPrice": null,
-          "current": -170.0,
-          "currentPrice": -170.0,
-          "publicBet": null
-        }
-      },
-      "total": {
-        "over": {
-          "open": 43.5,
-          "openPrice": -114.0,
-          "current": 43.5,
-          "currentPrice": -114.0,
-          "publicBet": null
-        },
-        "under": {
-          "open": 43.5,
-          "openPrice": null,
-          "current": 44.0,
-          "currentPrice": -111.0,
-          "publicBet": null
-        }
-      }
-    },
-    {
-      "away": "BUF",
-      "home": "LA",
-      "awayName": "Buffalo Bills",
-      "homeName": "Los Angeles Rams",
-      "awayLabel": "BUF \u2014 Buffalo Bills",
-      "homeLabel": "LA \u2014 Los Angeles Rams",
-      "matchup": "BUF \u2014 Buffalo Bills @ LA \u2014 Los Angeles Rams",
-      "spread": {
-        "away": {
-          "open": 3.5,
-          "openPrice": null,
-          "current": 3.5,
-          "currentPrice": -115.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": -3.5,
-          "openPrice": -103.0,
-          "current": -3.5,
-          "currentPrice": -102.0,
-          "publicBet": null
-        }
-      },
-      "moneyline": {
-        "away": {
-          "open": null,
-          "openPrice": null,
-          "current": 150.0,
-          "currentPrice": 150.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": null,
-          "openPrice": null,
-          "current": -176.0,
-          "currentPrice": -176.0,
-          "publicBet": null
-        }
-      },
-      "total": {
-        "over": {
-          "open": 54.5,
-          "openPrice": -112.0,
-          "current": 54.5,
-          "currentPrice": -110.0,
-          "publicBet": null
-        },
-        "under": {
-          "open": 54.5,
-          "openPrice": null,
-          "current": 54.5,
-          "currentPrice": -105.0,
           "publicBet": null
         }
       }
