@@ -1,8 +1,8 @@
 {
   "season": 2026,
-  "updated": "2026-10-12T19:54:12.744078+00:00",
+  "updated": "2026-10-13T17:41:26.146261+00:00",
   "source": "nflverse",
-  "completedGames": 78,
+  "completedGames": 79,
   "note": "Completed regular-season games only. First-quarter scores use the first second-quarter scoring state. Halftime scores use the first third-quarter scoring state. Verify results against official scores.",
   "teams": {
     "LAC": {
@@ -69,13 +69,13 @@
       "finalPointsAllowed": 22.4
     },
     "BUF": {
-      "games": 4,
-      "firstQuarterPointsScored": 4.25,
-      "firstQuarterPointsAllowed": 6.0,
-      "firstHalfPointsScored": 19.5,
-      "firstHalfPointsAllowed": 13.75,
-      "finalPointsScored": 31.75,
-      "finalPointsAllowed": 26.75
+      "games": 5,
+      "firstQuarterPointsScored": 4.6,
+      "firstQuarterPointsAllowed": 4.8,
+      "firstHalfPointsScored": 18.2,
+      "firstHalfPointsAllowed": 12.4,
+      "finalPointsScored": 32.8,
+      "finalPointsAllowed": 28.2
     },
     "CAR": {
       "games": 4,
@@ -240,13 +240,13 @@
       "finalPointsAllowed": 19.2
     },
     "LA": {
-      "games": 4,
-      "firstQuarterPointsScored": 5.75,
-      "firstQuarterPointsAllowed": 1.5,
-      "firstHalfPointsScored": 11.75,
-      "firstHalfPointsAllowed": 8.25,
-      "finalPointsScored": 21.25,
-      "finalPointsAllowed": 20.75
+      "games": 5,
+      "firstQuarterPointsScored": 4.6,
+      "firstQuarterPointsAllowed": 2.4,
+      "firstHalfPointsScored": 10.8,
+      "firstHalfPointsAllowed": 9.2,
+      "finalPointsScored": 23.8,
+      "finalPointsAllowed": 24.0
     },
     "SF": {
       "games": 5,
