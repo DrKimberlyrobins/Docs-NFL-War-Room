@@ -15,7 +15,7 @@
           "open": 2.5,
           "openPrice": null,
           "current": 2.5,
-          "currentPrice": -105.0,
+          "currentPrice": 100.0,
           "publicBet": null
         },
         "home": {
@@ -30,8 +30,8 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": 120.0,
-          "currentPrice": 120.0,
+          "current": 124.0,
+          "currentPrice": 124.0,
           "publicBet": null
         },
         "home": {
@@ -87,8 +87,8 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": -114.0,
-          "currentPrice": -114.0,
+          "current": -115.0,
+          "currentPrice": -115.0,
           "publicBet": null
         },
         "home": {
@@ -110,8 +110,8 @@
         "under": {
           "open": 51.0,
           "openPrice": null,
-          "current": 51.5,
-          "currentPrice": -108.0,
+          "current": 52.0,
+          "currentPrice": -111.0,
           "publicBet": null
         }
       }
@@ -486,8 +486,8 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": 600.0,
-          "currentPrice": 600.0,
+          "current": 575.0,
+          "currentPrice": 575.0,
           "publicBet": null
         },
         "home": {
@@ -503,14 +503,14 @@
           "open": 51.5,
           "openPrice": -115.0,
           "current": 51.5,
-          "currentPrice": -112.0,
+          "currentPrice": -111.0,
           "publicBet": null
         },
         "under": {
           "open": 51.5,
           "openPrice": null,
-          "current": 52.0,
-          "currentPrice": -111.0,
+          "current": 51.5,
+          "currentPrice": -105.0,
           "publicBet": null
         }
       }
@@ -525,15 +525,15 @@
       "matchup": "LAC \u2014 Los Angeles Chargers @ KC \u2014 Kansas City Chiefs",
       "spread": {
         "away": {
-          "open": 8.5,
+          "open": 7.5,
           "openPrice": null,
           "current": 8.5,
           "currentPrice": -120.0,
           "publicBet": null
         },
         "home": {
-          "open": -8.5,
-          "openPrice": -104.0,
+          "open": -7.5,
+          "openPrice": -115.0,
           "current": -7.5,
           "currentPrice": -114.0,
           "publicBet": null
@@ -557,14 +557,14 @@
       },
       "total": {
         "over": {
-          "open": 42.5,
-          "openPrice": -109.0,
+          "open": 41.5,
+          "openPrice": -107.0,
           "current": 41.5,
           "currentPrice": -105.0,
           "publicBet": null
         },
         "under": {
-          "open": 42.5,
+          "open": 41.5,
           "openPrice": null,
           "current": 41.5,
           "currentPrice": -110.0,
