@@ -1,13 +1,13 @@
 {
   "season": 2026,
-  "completedGames": 79,
-  "updated": "2026-10-15T15:09:59.781816+00:00",
+  "completedGames": 80,
+  "updated": "2026-10-16T14:56:42.073260+00:00",
   "source": "nflverse",
   "note": "Regular-season EPA per passing or rushing play. Defensive EPA is EPA allowed; lower is better. Offensive SOS is the average offensive EPA of unique opponents faced. EPA figures are not adjusted for SOS.",
   "teams": {
     "ARI": {
       "offensiveEPA": -0.0126,
-      "offensiveSOS": 0.019,
+      "offensiveSOS": 0.0181,
       "defensiveEPAAllowed": 0.1331,
       "passingEPA": 0.0406,
       "rushingEPA": -0.115,
@@ -105,15 +105,15 @@
       "defensivePlays": 324
     },
     "DEN": {
-      "offensiveEPA": -0.0544,
-      "offensiveSOS": 0.0645,
-      "defensiveEPAAllowed": -0.0354,
-      "passingEPA": -0.0331,
-      "rushingEPA": -0.0882,
-      "passingEPAAllowed": -0.037,
-      "rushingEPAAllowed": -0.033,
-      "offensivePlays": 305,
-      "defensivePlays": 339
+      "offensiveEPA": -0.0639,
+      "offensiveSOS": 0.0414,
+      "defensiveEPAAllowed": -0.046,
+      "passingEPA": -0.0502,
+      "rushingEPA": -0.0848,
+      "passingEPAAllowed": -0.0461,
+      "rushingEPAAllowed": -0.0458,
+      "offensivePlays": 364,
+      "defensivePlays": 422
     },
     "DET": {
       "offensiveEPA": 0.1761,
@@ -161,7 +161,7 @@
     },
     "JAX": {
       "offensiveEPA": 0.105,
-      "offensiveSOS": -0.0225,
+      "offensiveSOS": -0.0244,
       "defensiveEPAAllowed": -0.0732,
       "passingEPA": 0.2095,
       "rushingEPA": -0.0291,
@@ -172,7 +172,7 @@
     },
     "KC": {
       "offensiveEPA": 0.1566,
-      "offensiveSOS": -0.0478,
+      "offensiveSOS": -0.0502,
       "defensiveEPAAllowed": -0.0314,
       "passingEPA": 0.1981,
       "rushingEPA": 0.0989,
@@ -183,7 +183,7 @@
     },
     "LA": {
       "offensiveEPA": 0.0652,
-      "offensiveSOS": 0.0452,
+      "offensiveSOS": 0.0433,
       "defensiveEPAAllowed": -0.0233,
       "passingEPA": 0.1345,
       "rushingEPA": -0.0725,
@@ -194,7 +194,7 @@
     },
     "LAC": {
       "offensiveEPA": -0.1916,
-      "offensiveSOS": 0.0185,
+      "offensiveSOS": 0.0158,
       "defensiveEPAAllowed": -0.053,
       "passingEPA": -0.1666,
       "rushingEPA": -0.2265,
@@ -238,7 +238,7 @@
     },
     "NE": {
       "offensiveEPA": 0.0483,
-      "offensiveSOS": 0.0483,
+      "offensiveSOS": 0.0474,
       "defensiveEPAAllowed": -0.0153,
       "passingEPA": 0.1893,
       "rushingEPA": -0.1718,
@@ -303,19 +303,19 @@
       "defensivePlays": 303
     },
     "SEA": {
-      "offensiveEPA": -0.0697,
-      "offensiveSOS": 0.0046,
-      "defensiveEPAAllowed": -0.1126,
-      "passingEPA": 0.0978,
-      "rushingEPA": -0.2748,
-      "passingEPAAllowed": -0.0391,
-      "rushingEPAAllowed": -0.2316,
-      "offensivePlays": 307,
-      "defensivePlays": 317
+      "offensiveEPA": -0.0739,
+      "offensiveSOS": -0.0068,
+      "defensiveEPAAllowed": -0.1127,
+      "passingEPA": 0.0532,
+      "rushingEPA": -0.2508,
+      "passingEPAAllowed": -0.0547,
+      "rushingEPAAllowed": -0.2029,
+      "offensivePlays": 390,
+      "defensivePlays": 376
     },
     "SF": {
       "offensiveEPA": 0.1874,
-      "offensiveSOS": -0.0379,
+      "offensiveSOS": -0.0406,
       "defensiveEPAAllowed": -0.0723,
       "passingEPA": 0.3889,
       "rushingEPA": -0.0807,
@@ -348,7 +348,7 @@
     },
     "WAS": {
       "offensiveEPA": -0.0085,
-      "offensiveSOS": -0.0136,
+      "offensiveSOS": -0.0145,
       "defensiveEPAAllowed": 0.0498,
       "passingEPA": 0.0732,
       "rushingEPA": -0.1445,

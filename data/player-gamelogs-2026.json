@@ -1,8 +1,8 @@
 {
   "season": 2026,
-  "updated": "2026-10-15T15:10:10.516801+00:00",
+  "updated": "2026-10-16T14:56:48.321583+00:00",
   "source": "nflverse play-by-play",
-  "completedGames": 79,
+  "completedGames": 80,
   "note": "Completed regular-season games only. One record per observed player, game and statistical category. Players with no recorded opportunities in a category are not included for that game. Missing records must not automatically be treated as zero. Verify against official game logs.",
   "logs": [
     {
@@ -5253,6 +5253,15 @@
       "opportunities": 28
     },
     {
+      "gameId": "2026_06_SEA_DEN",
+      "team": "DEN",
+      "playerId": null,
+      "player": "B.Nix",
+      "category": "passing",
+      "yards": 107.0,
+      "opportunities": 29
+    },
+    {
       "gameId": "2026_01_DEN_KC",
       "team": "DEN",
       "playerId": "00-0039732",
@@ -5295,6 +5304,15 @@
       "player": "B.Nix",
       "category": "rushing",
       "yards": 10.0,
+      "opportunities": 4
+    },
+    {
+      "gameId": "2026_06_SEA_DEN",
+      "team": "DEN",
+      "playerId": "00-0039732",
+      "player": "B.Nix",
+      "category": "rushing",
+      "yards": 2.0,
       "opportunities": 4
     },
     {
@@ -5343,6 +5361,15 @@
       "opportunities": 3
     },
     {
+      "gameId": "2026_06_SEA_DEN",
+      "team": "DEN",
+      "playerId": "00-0034348",
+      "player": "C.Sutton",
+      "category": "receiving",
+      "yards": 19.0,
+      "opportunities": 3
+    },
+    {
       "gameId": "2026_01_DEN_KC",
       "team": "DEN",
       "playerId": "00-0033881",
@@ -5386,6 +5413,15 @@
       "category": "receiving",
       "yards": 55.0,
       "opportunities": 4
+    },
+    {
+      "gameId": "2026_06_SEA_DEN",
+      "team": "DEN",
+      "playerId": "00-0033881",
+      "player": "E.Engram",
+      "category": "receiving",
+      "yards": 13.0,
+      "opportunities": 2
     },
     {
       "gameId": "2026_02_JAX_DEN",
@@ -5433,6 +5469,15 @@
       "opportunities": 2
     },
     {
+      "gameId": "2026_06_SEA_DEN",
+      "team": "DEN",
+      "playerId": "00-0036158",
+      "player": "J.Dobbins",
+      "category": "receiving",
+      "yards": 5.0,
+      "opportunities": 3
+    },
+    {
       "gameId": "2026_01_DEN_KC",
       "team": "DEN",
       "playerId": "00-0036158",
@@ -5478,6 +5523,15 @@
       "opportunities": 18
     },
     {
+      "gameId": "2026_06_SEA_DEN",
+      "team": "DEN",
+      "playerId": "00-0036158",
+      "player": "J.Dobbins",
+      "category": "rushing",
+      "yards": 41.0,
+      "opportunities": 17
+    },
+    {
       "gameId": "2026_01_DEN_KC",
       "team": "DEN",
       "playerId": "00-0036613",
@@ -5521,6 +5575,15 @@
       "category": "receiving",
       "yards": 19.0,
       "opportunities": 5
+    },
+    {
+      "gameId": "2026_06_SEA_DEN",
+      "team": "DEN",
+      "playerId": "00-0036613",
+      "player": "J.Waddle",
+      "category": "receiving",
+      "yards": 24.0,
+      "opportunities": 7
     },
     {
       "gameId": "2026_03_LA_DEN",
@@ -5575,6 +5638,15 @@
       "category": "receiving",
       "yards": 6.0,
       "opportunities": 2
+    },
+    {
+      "gameId": "2026_06_SEA_DEN",
+      "team": "DEN",
+      "playerId": "00-0038976",
+      "player": "M.Mims",
+      "category": "receiving",
+      "yards": 13.0,
+      "opportunities": 4
     },
     {
       "gameId": "2026_05_DEN_LAC",
@@ -5694,6 +5766,15 @@
       "opportunities": 1
     },
     {
+      "gameId": "2026_06_SEA_DEN",
+      "team": "DEN",
+      "playerId": "00-0040730",
+      "player": "R.Harvey",
+      "category": "receiving",
+      "yards": 31.0,
+      "opportunities": 4
+    },
+    {
       "gameId": "2026_01_DEN_KC",
       "team": "DEN",
       "playerId": "00-0040730",
@@ -5728,6 +5809,15 @@
       "category": "rushing",
       "yards": 7.0,
       "opportunities": 3
+    },
+    {
+      "gameId": "2026_06_SEA_DEN",
+      "team": "DEN",
+      "playerId": "00-0040730",
+      "player": "R.Harvey",
+      "category": "rushing",
+      "yards": 25.0,
+      "opportunities": 6
     },
     {
       "gameId": "2026_02_JAX_DEN",
@@ -5802,6 +5892,15 @@
       "opportunities": 1
     },
     {
+      "gameId": "2026_06_SEA_DEN",
+      "team": "DEN",
+      "playerId": "00-0037085",
+      "player": "T.Badie",
+      "category": "rushing",
+      "yards": 6.0,
+      "opportunities": 1
+    },
+    {
       "gameId": "2026_01_DEN_KC",
       "team": "DEN",
       "playerId": "00-0039868",
@@ -5836,6 +5935,15 @@
       "category": "receiving",
       "yards": 16.0,
       "opportunities": 2
+    },
+    {
+      "gameId": "2026_06_SEA_DEN",
+      "team": "DEN",
+      "playerId": "00-0039868",
+      "player": "T.Franklin",
+      "category": "receiving",
+      "yards": 2.0,
+      "opportunities": 1
     },
     {
       "gameId": "2026_01_DEN_KC",
@@ -15819,6 +15927,15 @@
       "opportunities": 5
     },
     {
+      "gameId": "2026_06_SEA_DEN",
+      "team": "SEA",
+      "playerId": "00-0039793",
+      "player": "A.Barner",
+      "category": "receiving",
+      "yards": 16.0,
+      "opportunities": 4
+    },
+    {
       "gameId": "2026_02_SEA_ARI",
       "team": "SEA",
       "playerId": "00-0039793",
@@ -15891,6 +16008,15 @@
       "opportunities": 3
     },
     {
+      "gameId": "2026_06_SEA_DEN",
+      "team": "SEA",
+      "playerId": "00-0033908",
+      "player": "C.Kupp",
+      "category": "receiving",
+      "yards": 50.0,
+      "opportunities": 10
+    },
+    {
       "gameId": "2026_01_NE_SEA",
       "team": "SEA",
       "playerId": null,
@@ -15954,6 +16080,15 @@
       "opportunities": 2
     },
     {
+      "gameId": "2026_06_SEA_DEN",
+      "team": "SEA",
+      "playerId": "00-0033576",
+      "player": "E.Saubert",
+      "category": "receiving",
+      "yards": 0.0,
+      "opportunities": 1
+    },
+    {
       "gameId": "2026_02_SEA_ARI",
       "team": "SEA",
       "playerId": "00-0038797",
@@ -15979,6 +16114,15 @@
       "category": "receiving",
       "yards": 11.0,
       "opportunities": 2
+    },
+    {
+      "gameId": "2026_06_SEA_DEN",
+      "team": "SEA",
+      "playerId": "00-0038797",
+      "player": "E.Wilson",
+      "category": "receiving",
+      "yards": 0.0,
+      "opportunities": 1
     },
     {
       "gameId": "2026_01_NE_SEA",
@@ -16024,6 +16168,15 @@
       "category": "rushing",
       "yards": 61.0,
       "opportunities": 20
+    },
+    {
+      "gameId": "2026_06_SEA_DEN",
+      "team": "SEA",
+      "playerId": "00-0038797",
+      "player": "E.Wilson",
+      "category": "rushing",
+      "yards": 52.0,
+      "opportunities": 14
     },
     {
       "gameId": "2026_01_NE_SEA",
@@ -16114,6 +16267,15 @@
       "category": "rushing",
       "yards": 7.0,
       "opportunities": 4
+    },
+    {
+      "gameId": "2026_06_SEA_DEN",
+      "team": "SEA",
+      "playerId": "00-0039299",
+      "player": "G.Holani",
+      "category": "rushing",
+      "yards": 20.0,
+      "opportunities": 5
     },
     {
       "gameId": "2026_01_NE_SEA",
@@ -16224,6 +16386,15 @@
       "opportunities": 8
     },
     {
+      "gameId": "2026_06_SEA_DEN",
+      "team": "SEA",
+      "playerId": "00-0038543",
+      "player": "J.Smith-Njigba",
+      "category": "receiving",
+      "yards": 134.0,
+      "opportunities": 16
+    },
+    {
       "gameId": "2026_05_SF_SEA",
       "team": "SEA",
       "playerId": "00-0038543",
@@ -16278,6 +16449,15 @@
       "opportunities": 4
     },
     {
+      "gameId": "2026_06_SEA_DEN",
+      "team": "SEA",
+      "playerId": "00-0037545",
+      "player": "R.Shaheed",
+      "category": "receiving",
+      "yards": 66.0,
+      "opportunities": 9
+    },
+    {
       "gameId": "2026_02_SEA_ARI",
       "team": "SEA",
       "playerId": "00-0037545",
@@ -16294,6 +16474,15 @@
       "category": "rushing",
       "yards": 33.0,
       "opportunities": 2
+    },
+    {
+      "gameId": "2026_06_SEA_DEN",
+      "team": "SEA",
+      "playerId": "00-0037545",
+      "player": "R.Shaheed",
+      "category": "rushing",
+      "yards": 2.0,
+      "opportunities": 1
     },
     {
       "gameId": "2026_01_NE_SEA",
@@ -16332,6 +16521,15 @@
       "opportunities": 34
     },
     {
+      "gameId": "2026_06_SEA_DEN",
+      "team": "SEA",
+      "playerId": null,
+      "player": "S.Darnold",
+      "category": "passing",
+      "yards": 278.0,
+      "opportunities": 57
+    },
+    {
       "gameId": "2026_03_SEA_WAS",
       "team": "SEA",
       "playerId": "00-0034869",
@@ -16359,6 +16557,15 @@
       "opportunities": 1
     },
     {
+      "gameId": "2026_06_SEA_DEN",
+      "team": "SEA",
+      "playerId": "00-0034869",
+      "player": "S.Darnold",
+      "category": "rushing",
+      "yards": 19.0,
+      "opportunities": 2
+    },
+    {
       "gameId": "2026_03_SEA_WAS",
       "team": "SEA",
       "playerId": "00-0040648",
@@ -16375,6 +16582,33 @@
       "category": "receiving",
       "yards": 6.0,
       "opportunities": 1
+    },
+    {
+      "gameId": "2026_06_SEA_DEN",
+      "team": "SEA",
+      "playerId": "00-0040648",
+      "player": "T.Horton",
+      "category": "receiving",
+      "yards": 13.0,
+      "opportunities": 5
+    },
+    {
+      "gameId": "2026_06_SEA_DEN",
+      "team": "SEA",
+      "playerId": "00-0037745",
+      "player": "V.Jones",
+      "category": "receiving",
+      "yards": -1.0,
+      "opportunities": 1
+    },
+    {
+      "gameId": "2026_06_SEA_DEN",
+      "team": "SEA",
+      "playerId": "00-0037745",
+      "player": "V.Jones",
+      "category": "rushing",
+      "yards": 20.0,
+      "opportunities": 4
     },
     {
       "gameId": "2026_04_DEN_SF",
