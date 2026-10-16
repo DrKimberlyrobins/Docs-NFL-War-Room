@@ -3,63 +3,6 @@
   "season": 2026,
   "games": [
     {
-      "away": "SEA",
-      "home": "DEN",
-      "awayName": "Seattle Seahawks",
-      "homeName": "Denver Broncos",
-      "awayLabel": "SEA \u2014 Seattle Seahawks",
-      "homeLabel": "DEN \u2014 Denver Broncos",
-      "matchup": "SEA \u2014 Seattle Seahawks @ DEN \u2014 Denver Broncos",
-      "spread": {
-        "away": {
-          "open": -2.5,
-          "openPrice": null,
-          "current": -2.5,
-          "currentPrice": -111.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": 2.5,
-          "openPrice": -105.0,
-          "current": 3.0,
-          "currentPrice": -120.0,
-          "publicBet": null
-        }
-      },
-      "moneyline": {
-        "away": {
-          "open": null,
-          "openPrice": null,
-          "current": -146.0,
-          "currentPrice": -146.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": null,
-          "openPrice": null,
-          "current": 130.0,
-          "currentPrice": 130.0,
-          "publicBet": null
-        }
-      },
-      "total": {
-        "over": {
-          "open": 40.5,
-          "openPrice": -112.0,
-          "current": 40.5,
-          "currentPrice": -111.0,
-          "publicBet": null
-        },
-        "under": {
-          "open": 40.5,
-          "openPrice": null,
-          "current": 40.5,
-          "currentPrice": -105.0,
-          "publicBet": null
-        }
-      }
-    },
-    {
       "away": "HOU",
       "home": "JAX",
       "awayName": "Houston Texans",
@@ -201,8 +144,8 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": -205.0,
-          "currentPrice": -205.0,
+          "current": -204.0,
+          "currentPrice": -204.0,
           "publicBet": null
         },
         "home": {
@@ -322,8 +265,8 @@
         "home": {
           "open": null,
           "openPrice": null,
-          "current": -325.0,
-          "currentPrice": -325.0,
+          "current": -340.0,
+          "currentPrice": -340.0,
           "publicBet": null
         }
       },
@@ -339,7 +282,7 @@
           "open": 43.5,
           "openPrice": null,
           "current": 43.5,
-          "currentPrice": -108.0,
+          "currentPrice": -105.0,
           "publicBet": null
         }
       }
@@ -585,14 +528,14 @@
           "open": 8.5,
           "openPrice": null,
           "current": 8.5,
-          "currentPrice": -115.0,
+          "currentPrice": -120.0,
           "publicBet": null
         },
         "home": {
           "open": -8.5,
           "openPrice": -104.0,
-          "current": -8.0,
-          "currentPrice": -108.0,
+          "current": -7.5,
+          "currentPrice": -114.0,
           "publicBet": null
         }
       },
@@ -600,8 +543,8 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": 370.0,
-          "currentPrice": 370.0,
+          "current": 360.0,
+          "currentPrice": 360.0,
           "publicBet": null
         },
         "home": {
@@ -617,14 +560,14 @@
           "open": 42.5,
           "openPrice": -109.0,
           "current": 41.5,
-          "currentPrice": -108.0,
+          "currentPrice": -105.0,
           "publicBet": null
         },
         "under": {
           "open": 42.5,
           "openPrice": null,
           "current": 41.5,
-          "currentPrice": -105.0,
+          "currentPrice": -110.0,
           "publicBet": null
         }
       }
@@ -771,15 +714,15 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": 340.0,
-          "currentPrice": 340.0,
+          "current": 330.0,
+          "currentPrice": 330.0,
           "publicBet": null
         },
         "home": {
           "open": null,
           "openPrice": null,
-          "current": -417.0,
-          "currentPrice": -417.0,
+          "current": -400.0,
+          "currentPrice": -400.0,
           "publicBet": null
         }
       },
@@ -796,6 +739,63 @@
           "openPrice": null,
           "current": 51.5,
           "currentPrice": -108.0,
+          "publicBet": null
+        }
+      }
+    },
+    {
+      "away": "SEA",
+      "home": "DEN",
+      "awayName": "Seattle Seahawks",
+      "homeName": "Denver Broncos",
+      "awayLabel": "SEA \u2014 Seattle Seahawks",
+      "homeLabel": "DEN \u2014 Denver Broncos",
+      "matchup": "SEA \u2014 Seattle Seahawks @ DEN \u2014 Denver Broncos",
+      "spread": {
+        "away": {
+          "open": -2.5,
+          "openPrice": null,
+          "current": -2.5,
+          "currentPrice": -111.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": 2.5,
+          "openPrice": -105.0,
+          "current": 3.0,
+          "currentPrice": -120.0,
+          "publicBet": null
+        }
+      },
+      "moneyline": {
+        "away": {
+          "open": null,
+          "openPrice": null,
+          "current": -146.0,
+          "currentPrice": -146.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": null,
+          "openPrice": null,
+          "current": 130.0,
+          "currentPrice": 130.0,
+          "publicBet": null
+        }
+      },
+      "total": {
+        "over": {
+          "open": 40.5,
+          "openPrice": -112.0,
+          "current": 40.5,
+          "currentPrice": -111.0,
+          "publicBet": null
+        },
+        "under": {
+          "open": 40.5,
+          "openPrice": null,
+          "current": 40.5,
+          "currentPrice": -105.0,
           "publicBet": null
         }
       }
