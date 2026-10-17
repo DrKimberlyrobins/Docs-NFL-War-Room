@@ -54,7 +54,7 @@
           "open": 42.5,
           "openPrice": null,
           "current": 42.5,
-          "currentPrice": -108.0,
+          "currentPrice": -110.0,
           "publicBet": null
         }
       }
@@ -72,7 +72,7 @@
           "open": -1.5,
           "openPrice": null,
           "current": -1.0,
-          "currentPrice": -105.0,
+          "currentPrice": -108.0,
           "publicBet": null
         },
         "home": {
@@ -87,8 +87,8 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": -114.0,
-          "currentPrice": -114.0,
+          "current": -115.0,
+          "currentPrice": -115.0,
           "publicBet": null
         },
         "home": {
@@ -126,14 +126,14 @@
       "matchup": "BAL \u2014 Baltimore Ravens @ CLE \u2014 Cleveland Browns",
       "spread": {
         "away": {
-          "open": -3.5,
+          "open": -3.0,
           "openPrice": null,
           "current": -3.0,
           "currentPrice": -108.0,
           "publicBet": null
         },
         "home": {
-          "open": 3.5,
+          "open": 3.0,
           "openPrice": -108.0,
           "current": 3.0,
           "currentPrice": -105.0,
@@ -158,14 +158,14 @@
       },
       "total": {
         "over": {
-          "open": 41.5,
+          "open": 39.5,
           "openPrice": -110.0,
           "current": 39.5,
           "currentPrice": -105.0,
           "publicBet": null
         },
         "under": {
-          "open": 41.5,
+          "open": 39.5,
           "openPrice": null,
           "current": 39.5,
           "currentPrice": -108.0,
@@ -550,8 +550,8 @@
         "home": {
           "open": null,
           "openPrice": null,
-          "current": -391.0,
-          "currentPrice": -391.0,
+          "current": -385.0,
+          "currentPrice": -385.0,
           "publicBet": null
         }
       },
@@ -728,14 +728,14 @@
       },
       "total": {
         "over": {
-          "open": 51.5,
-          "openPrice": -108.0,
+          "open": 52.0,
+          "openPrice": -111.0,
           "current": 51.5,
           "currentPrice": -112.0,
           "publicBet": null
         },
         "under": {
-          "open": 51.5,
+          "open": 52.0,
           "openPrice": null,
           "current": 52.5,
           "currentPrice": -115.0,
