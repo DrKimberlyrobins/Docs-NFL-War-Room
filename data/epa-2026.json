@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "completedGames": 80,
-  "updated": "2026-10-16T14:56:42.073260+00:00",
+  "updated": "2026-10-17T13:49:18.241432+00:00",
   "source": "nflverse",
   "note": "Regular-season EPA per passing or rushing play. Defensive EPA is EPA allowed; lower is better. Offensive SOS is the average offensive EPA of unique opponents faced. EPA figures are not adjusted for SOS.",
   "teams": {
