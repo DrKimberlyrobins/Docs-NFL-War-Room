@@ -37,8 +37,8 @@
         "home": {
           "open": null,
           "openPrice": null,
-          "current": -420.0,
-          "currentPrice": -420.0,
+          "current": -426.0,
+          "currentPrice": -426.0,
           "publicBet": null
         }
       },
@@ -53,8 +53,8 @@
         "under": {
           "open": 52.0,
           "openPrice": null,
-          "current": 52.5,
-          "currentPrice": -115.0,
+          "current": 52.0,
+          "currentPrice": -111.0,
           "publicBet": null
         }
       }
