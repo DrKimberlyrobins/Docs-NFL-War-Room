@@ -3,6 +3,63 @@
   "season": 2026,
   "games": [
     {
+      "away": "WAS",
+      "home": "SF",
+      "awayName": "Washington Commanders",
+      "homeName": "San Francisco 49ers",
+      "awayLabel": "WAS \u2014 Washington Commanders",
+      "homeLabel": "SF \u2014 San Francisco 49ers",
+      "matchup": "WAS \u2014 Washington Commanders @ SF \u2014 San Francisco 49ers",
+      "spread": {
+        "away": {
+          "open": 7.5,
+          "openPrice": null,
+          "current": 7.5,
+          "currentPrice": -110.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": -7.5,
+          "openPrice": -108.0,
+          "current": -7.5,
+          "currentPrice": -105.0,
+          "publicBet": null
+        }
+      },
+      "moneyline": {
+        "away": {
+          "open": null,
+          "openPrice": null,
+          "current": 350.0,
+          "currentPrice": 350.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": null,
+          "openPrice": null,
+          "current": -420.0,
+          "currentPrice": -420.0,
+          "publicBet": null
+        }
+      },
+      "total": {
+        "over": {
+          "open": 52.0,
+          "openPrice": -111.0,
+          "current": 51.5,
+          "currentPrice": -112.0,
+          "publicBet": null
+        },
+        "under": {
+          "open": 52.0,
+          "openPrice": null,
+          "current": 52.5,
+          "currentPrice": -115.0,
+          "publicBet": null
+        }
+      }
+    },
+    {
       "away": "DAL",
       "home": "GB",
       "awayName": "Dallas Cowboys",
@@ -55,63 +112,6 @@
           "openPrice": null,
           "current": 54.5,
           "currentPrice": -110.0,
-          "publicBet": null
-        }
-      }
-    },
-    {
-      "away": "WAS",
-      "home": "SF",
-      "awayName": "Washington Commanders",
-      "homeName": "San Francisco 49ers",
-      "awayLabel": "WAS \u2014 Washington Commanders",
-      "homeLabel": "SF \u2014 San Francisco 49ers",
-      "matchup": "WAS \u2014 Washington Commanders @ SF \u2014 San Francisco 49ers",
-      "spread": {
-        "away": {
-          "open": 7.5,
-          "openPrice": null,
-          "current": 7.5,
-          "currentPrice": -110.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": -7.5,
-          "openPrice": -108.0,
-          "current": -7.5,
-          "currentPrice": -105.0,
-          "publicBet": null
-        }
-      },
-      "moneyline": {
-        "away": {
-          "open": null,
-          "openPrice": null,
-          "current": 350.0,
-          "currentPrice": 350.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": null,
-          "openPrice": null,
-          "current": -417.0,
-          "currentPrice": -417.0,
-          "publicBet": null
-        }
-      },
-      "total": {
-        "over": {
-          "open": 52.0,
-          "openPrice": -111.0,
-          "current": 51.5,
-          "currentPrice": -112.0,
-          "publicBet": null
-        },
-        "under": {
-          "open": 52.0,
-          "openPrice": null,
-          "current": 52.5,
-          "currentPrice": -115.0,
           "publicBet": null
         }
       }
@@ -183,15 +183,15 @@
       "matchup": "BUF \u2014 Buffalo Bills @ LV \u2014 Las Vegas Raiders",
       "spread": {
         "away": {
-          "open": -6.5,
+          "open": -4.5,
           "openPrice": null,
           "current": -5.0,
           "currentPrice": -108.0,
           "publicBet": null
         },
         "home": {
-          "open": 6.5,
-          "openPrice": -110.0,
+          "open": 4.5,
+          "openPrice": -106.0,
           "current": 5.5,
           "currentPrice": -114.0,
           "publicBet": null
@@ -215,14 +215,14 @@
       },
       "total": {
         "over": {
-          "open": 48.5,
-          "openPrice": -115.0,
+          "open": 51.5,
+          "openPrice": -109.0,
           "current": 53.5,
           "currentPrice": -112.0,
           "publicBet": null
         },
         "under": {
-          "open": 48.5,
+          "open": 51.5,
           "openPrice": null,
           "current": 54.5,
           "currentPrice": -115.0,
