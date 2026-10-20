@@ -1,8 +1,8 @@
 {
   "season": 2026,
-  "updated": "2026-10-19T17:03:44.515843+00:00",
+  "updated": "2026-10-20T15:14:31.368637+00:00",
   "source": "nflverse play-by-play",
-  "completedGames": 92,
+  "completedGames": 93,
   "note": "Completed regular-season games only. One record per observed player, game and statistical category. Players with no recorded opportunities in a category are not included for that game. Missing records must not automatically be treated as zero. Verify against official game logs.",
   "logs": [
     {
@@ -19176,6 +19176,15 @@
       "opportunities": 2
     },
     {
+      "gameId": "2026_06_WAS_SF",
+      "team": "SF",
+      "playerId": "00-0031236",
+      "player": "B.Cooks",
+      "category": "receiving",
+      "yards": 13.0,
+      "opportunities": 2
+    },
+    {
       "gameId": "2026_01_SF_LA",
       "team": "SF",
       "playerId": null,
@@ -19221,6 +19230,15 @@
       "opportunities": 33
     },
     {
+      "gameId": "2026_06_WAS_SF",
+      "team": "SF",
+      "playerId": null,
+      "player": "B.Purdy",
+      "category": "passing",
+      "yards": 264.0,
+      "opportunities": 31
+    },
+    {
       "gameId": "2026_01_SF_LA",
       "team": "SF",
       "playerId": "00-0037834",
@@ -19263,6 +19281,15 @@
       "player": "B.Purdy",
       "category": "rushing",
       "yards": 6.0,
+      "opportunities": 5
+    },
+    {
+      "gameId": "2026_06_WAS_SF",
+      "team": "SF",
+      "playerId": "00-0037834",
+      "player": "B.Purdy",
+      "category": "rushing",
+      "yards": 28.0,
       "opportunities": 5
     },
     {
@@ -19311,6 +19338,15 @@
       "opportunities": 3
     },
     {
+      "gameId": "2026_06_WAS_SF",
+      "team": "SF",
+      "playerId": "00-0033280",
+      "player": "C.McCaffrey",
+      "category": "receiving",
+      "yards": 53.0,
+      "opportunities": 10
+    },
+    {
       "gameId": "2026_01_SF_LA",
       "team": "SF",
       "playerId": "00-0033280",
@@ -19354,6 +19390,15 @@
       "category": "rushing",
       "yards": 68.0,
       "opportunities": 11
+    },
+    {
+      "gameId": "2026_06_WAS_SF",
+      "team": "SF",
+      "playerId": "00-0033280",
+      "player": "C.McCaffrey",
+      "category": "rushing",
+      "yards": 64.0,
+      "opportunities": 16
     },
     {
       "gameId": "2026_01_SF_LA",
@@ -19500,6 +19545,15 @@
       "opportunities": 6
     },
     {
+      "gameId": "2026_06_WAS_SF",
+      "team": "SF",
+      "playerId": "00-0033288",
+      "player": "G.Kittle",
+      "category": "receiving",
+      "yards": 69.0,
+      "opportunities": 8
+    },
+    {
       "gameId": "2026_01_SF_LA",
       "team": "SF",
       "playerId": "00-0032701",
@@ -19563,6 +19617,15 @@
       "opportunities": 2
     },
     {
+      "gameId": "2026_06_WAS_SF",
+      "team": "SF",
+      "playerId": "00-0040172",
+      "player": "J.Watkins",
+      "category": "receiving",
+      "yards": 22.0,
+      "opportunities": 1
+    },
+    {
       "gameId": "2026_01_SF_LA",
       "team": "SF",
       "playerId": "00-0041052",
@@ -19578,6 +19641,15 @@
       "player": "K.Black",
       "category": "receiving",
       "yards": 0.0,
+      "opportunities": 1
+    },
+    {
+      "gameId": "2026_06_WAS_SF",
+      "team": "SF",
+      "playerId": "00-0041052",
+      "player": "K.Black",
+      "category": "receiving",
+      "yards": 3.0,
       "opportunities": 1
     },
     {
@@ -19626,6 +19698,15 @@
       "opportunities": 6
     },
     {
+      "gameId": "2026_06_WAS_SF",
+      "team": "SF",
+      "playerId": "00-0041052",
+      "player": "K.Black",
+      "category": "rushing",
+      "yards": 34.0,
+      "opportunities": 8
+    },
+    {
       "gameId": "2026_02_MIA_SF",
       "team": "SF",
       "playerId": "00-0034854",
@@ -19659,6 +19740,15 @@
       "player": "K.Juszczyk",
       "category": "receiving",
       "yards": 28.0,
+      "opportunities": 2
+    },
+    {
+      "gameId": "2026_06_WAS_SF",
+      "team": "SF",
+      "playerId": "00-0029892",
+      "player": "K.Juszczyk",
+      "category": "receiving",
+      "yards": 10.0,
       "opportunities": 2
     },
     {
@@ -19732,6 +19822,15 @@
       "category": "receiving",
       "yards": 113.0,
       "opportunities": 11
+    },
+    {
+      "gameId": "2026_06_WAS_SF",
+      "team": "SF",
+      "playerId": "00-0031408",
+      "player": "M.Evans",
+      "category": "receiving",
+      "yards": 94.0,
+      "opportunities": 5
     },
     {
       "gameId": "2026_02_MIA_SF",
@@ -21192,6 +21291,15 @@
       "opportunities": 1
     },
     {
+      "gameId": "2026_06_WAS_SF",
+      "team": "WAS",
+      "playerId": "00-0033699",
+      "player": "A.Ekeler",
+      "category": "receiving",
+      "yards": 4.0,
+      "opportunities": 2
+    },
+    {
       "gameId": "2026_04_IND_WAS",
       "team": "WAS",
       "playerId": "00-0033699",
@@ -21208,6 +21316,15 @@
       "category": "rushing",
       "yards": -1.0,
       "opportunities": 3
+    },
+    {
+      "gameId": "2026_06_WAS_SF",
+      "team": "WAS",
+      "playerId": "00-0033699",
+      "player": "A.Ekeler",
+      "category": "rushing",
+      "yards": 3.0,
+      "opportunities": 1
     },
     {
       "gameId": "2026_04_IND_WAS",
@@ -21282,6 +21399,15 @@
       "opportunities": 3
     },
     {
+      "gameId": "2026_06_WAS_SF",
+      "team": "WAS",
+      "playerId": "00-0041040",
+      "player": "A.Williams",
+      "category": "receiving",
+      "yards": 50.0,
+      "opportunities": 4
+    },
+    {
       "gameId": "2026_04_IND_WAS",
       "team": "WAS",
       "playerId": "00-0039913",
@@ -21334,6 +21460,15 @@
       "category": "receiving",
       "yards": 60.0,
       "opportunities": 6
+    },
+    {
+      "gameId": "2026_06_WAS_SF",
+      "team": "WAS",
+      "playerId": "00-0037809",
+      "player": "C.Okonkwo",
+      "category": "receiving",
+      "yards": 69.0,
+      "opportunities": 7
     },
     {
       "gameId": "2026_04_IND_WAS",
@@ -21426,6 +21561,15 @@
       "opportunities": 2
     },
     {
+      "gameId": "2026_06_WAS_SF",
+      "team": "WAS",
+      "playerId": "00-0036626",
+      "player": "D.Brown",
+      "category": "receiving",
+      "yards": 6.0,
+      "opportunities": 1
+    },
+    {
       "gameId": "2026_01_WAS_PHI",
       "team": "WAS",
       "playerId": "00-0036628",
@@ -21450,6 +21594,15 @@
       "player": "J.Bates",
       "category": "receiving",
       "yards": 1.0,
+      "opportunities": 1
+    },
+    {
+      "gameId": "2026_06_WAS_SF",
+      "team": "WAS",
+      "playerId": "00-0036628",
+      "player": "J.Bates",
+      "category": "receiving",
+      "yards": 4.0,
       "opportunities": 1
     },
     {
@@ -21561,6 +21714,15 @@
       "opportunities": 31
     },
     {
+      "gameId": "2026_06_WAS_SF",
+      "team": "WAS",
+      "playerId": null,
+      "player": "J.Daniels",
+      "category": "passing",
+      "yards": 300.0,
+      "opportunities": 44
+    },
+    {
       "gameId": "2026_01_WAS_PHI",
       "team": "WAS",
       "playerId": "00-0039910",
@@ -21588,6 +21750,15 @@
       "opportunities": 9
     },
     {
+      "gameId": "2026_06_WAS_SF",
+      "team": "WAS",
+      "playerId": "00-0039910",
+      "player": "J.Daniels",
+      "category": "rushing",
+      "yards": 10.0,
+      "opportunities": 4
+    },
+    {
       "gameId": "2026_01_WAS_PHI",
       "team": "WAS",
       "playerId": "00-0040164",
@@ -21604,6 +21775,15 @@
       "category": "receiving",
       "yards": 21.0,
       "opportunities": 1
+    },
+    {
+      "gameId": "2026_06_WAS_SF",
+      "team": "WAS",
+      "playerId": "00-0033955",
+      "player": "J.McNichols",
+      "category": "rushing",
+      "yards": 13.0,
+      "opportunities": 5
     },
     {
       "gameId": "2026_01_WAS_PHI",
@@ -21631,6 +21811,15 @@
       "category": "rushing",
       "yards": 1.0,
       "opportunities": 3
+    },
+    {
+      "gameId": "2026_06_WAS_SF",
+      "team": "WAS",
+      "playerId": "00-0039355",
+      "player": "L.McCaffrey",
+      "category": "receiving",
+      "yards": 0.0,
+      "opportunities": 1
     },
     {
       "gameId": "2026_02_WAS_DAL",
@@ -21723,6 +21912,15 @@
       "opportunities": 1
     },
     {
+      "gameId": "2026_06_WAS_SF",
+      "team": "WAS",
+      "playerId": "00-0037256",
+      "player": "R.White",
+      "category": "receiving",
+      "yards": 30.0,
+      "opportunities": 5
+    },
+    {
       "gameId": "2026_01_WAS_PHI",
       "team": "WAS",
       "playerId": "00-0037256",
@@ -21756,6 +21954,15 @@
       "player": "R.White",
       "category": "rushing",
       "yards": 18.0,
+      "opportunities": 7
+    },
+    {
+      "gameId": "2026_06_WAS_SF",
+      "team": "WAS",
+      "playerId": "00-0037256",
+      "player": "R.White",
+      "category": "rushing",
+      "yards": 27.0,
       "opportunities": 7
     },
     {
@@ -21795,6 +22002,15 @@
       "opportunities": 9
     },
     {
+      "gameId": "2026_06_WAS_SF",
+      "team": "WAS",
+      "playerId": "00-0031588",
+      "player": "S.Diggs",
+      "category": "receiving",
+      "yards": 44.0,
+      "opportunities": 7
+    },
+    {
       "gameId": "2026_02_WAS_DAL",
       "team": "WAS",
       "playerId": "00-0037742",
@@ -21831,6 +22047,15 @@
       "opportunities": 5
     },
     {
+      "gameId": "2026_06_WAS_SF",
+      "team": "WAS",
+      "playerId": "00-0037742",
+      "player": "T.Burks",
+      "category": "receiving",
+      "yards": 66.0,
+      "opportunities": 6
+    },
+    {
       "gameId": "2026_01_WAS_PHI",
       "team": "WAS",
       "playerId": "00-0035659",
@@ -21865,6 +22090,15 @@
       "category": "receiving",
       "yards": 62.0,
       "opportunities": 5
+    },
+    {
+      "gameId": "2026_06_WAS_SF",
+      "team": "WAS",
+      "playerId": "00-0035659",
+      "player": "T.McLaurin",
+      "category": "receiving",
+      "yards": 27.0,
+      "opportunities": 1
     }
   ]
 }
