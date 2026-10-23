@@ -1,8 +1,8 @@
 {
   "season": 2026,
-  "updated": "2026-10-22T15:25:38.087319+00:00",
+  "updated": "2026-10-23T15:15:24.358441+00:00",
   "source": "nflverse play-by-play",
-  "completedGames": 93,
+  "completedGames": 94,
   "note": "Completed regular-season games only. One record per observed player, game and statistical category. Players with no recorded opportunities in a category are not included for that game. Missing records must not automatically be treated as zero. Verify against official game logs.",
   "logs": [
     {
@@ -3435,6 +3435,15 @@
       "opportunities": 2
     },
     {
+      "gameId": "2026_07_NE_CHI",
+      "team": "CHI",
+      "playerId": "00-0036290",
+      "player": "C.Kmet",
+      "category": "receiving",
+      "yards": 28.0,
+      "opportunities": 3
+    },
+    {
       "gameId": "2026_01_CHI_CAR",
       "team": "CHI",
       "playerId": "00-0040126",
@@ -3489,6 +3498,15 @@
       "opportunities": 7
     },
     {
+      "gameId": "2026_07_NE_CHI",
+      "team": "CHI",
+      "playerId": "00-0040126",
+      "player": "C.Loveland",
+      "category": "receiving",
+      "yards": 69.0,
+      "opportunities": 12
+    },
+    {
       "gameId": "2026_01_CHI_CAR",
       "team": "CHI",
       "playerId": null,
@@ -3516,6 +3534,15 @@
       "opportunities": 40
     },
     {
+      "gameId": "2026_07_NE_CHI",
+      "team": "CHI",
+      "playerId": null,
+      "player": "C.Williams",
+      "category": "passing",
+      "yards": 308.0,
+      "opportunities": 36
+    },
+    {
       "gameId": "2026_01_CHI_CAR",
       "team": "CHI",
       "playerId": "00-0039918",
@@ -3541,6 +3568,15 @@
       "category": "rushing",
       "yards": 3.0,
       "opportunities": 4
+    },
+    {
+      "gameId": "2026_07_NE_CHI",
+      "team": "CHI",
+      "playerId": "00-0039918",
+      "player": "C.Williams",
+      "category": "rushing",
+      "yards": 18.0,
+      "opportunities": 5
     },
     {
       "gameId": "2026_01_CHI_CAR",
@@ -3597,6 +3633,15 @@
       "opportunities": 5
     },
     {
+      "gameId": "2026_07_NE_CHI",
+      "team": "CHI",
+      "playerId": "00-0036275",
+      "player": "D.Swift",
+      "category": "receiving",
+      "yards": 12.0,
+      "opportunities": 4
+    },
+    {
       "gameId": "2026_01_CHI_CAR",
       "team": "CHI",
       "playerId": "00-0036275",
@@ -3649,6 +3694,15 @@
       "category": "rushing",
       "yards": 44.0,
       "opportunities": 16
+    },
+    {
+      "gameId": "2026_07_NE_CHI",
+      "team": "CHI",
+      "playerId": "00-0036275",
+      "player": "D.Swift",
+      "category": "rushing",
+      "yards": 78.0,
+      "opportunities": 22
     },
     {
       "gameId": "2026_01_CHI_CAR",
@@ -3786,6 +3840,15 @@
       "opportunities": 2
     },
     {
+      "gameId": "2026_07_NE_CHI",
+      "team": "CHI",
+      "playerId": "00-0032464",
+      "player": "K.Raymond",
+      "category": "receiving",
+      "yards": 0.0,
+      "opportunities": 2
+    },
+    {
       "gameId": "2026_05_CHI_GB",
       "team": "CHI",
       "playerId": "00-0032464",
@@ -3849,6 +3912,15 @@
       "opportunities": 8
     },
     {
+      "gameId": "2026_07_NE_CHI",
+      "team": "CHI",
+      "playerId": "00-0040735",
+      "player": "L.Burden",
+      "category": "receiving",
+      "yards": 130.0,
+      "opportunities": 4
+    },
+    {
       "gameId": "2026_01_CHI_CAR",
       "team": "CHI",
       "playerId": "00-0040735",
@@ -3883,6 +3955,15 @@
       "category": "rushing",
       "yards": 2.0,
       "opportunities": 4
+    },
+    {
+      "gameId": "2026_07_NE_CHI",
+      "team": "CHI",
+      "playerId": "00-0040735",
+      "player": "L.Burden",
+      "category": "rushing",
+      "yards": 7.0,
+      "opportunities": 1
     },
     {
       "gameId": "2026_04_NYJ_CHI",
@@ -3939,6 +4020,15 @@
       "opportunities": 13
     },
     {
+      "gameId": "2026_07_NE_CHI",
+      "team": "CHI",
+      "playerId": "00-0039021",
+      "player": "R.Johnson",
+      "category": "rushing",
+      "yards": 13.0,
+      "opportunities": 2
+    },
+    {
       "gameId": "2026_01_CHI_CAR",
       "team": "CHI",
       "playerId": "00-0039919",
@@ -3991,6 +4081,15 @@
       "category": "receiving",
       "yards": 39.0,
       "opportunities": 4
+    },
+    {
+      "gameId": "2026_07_NE_CHI",
+      "team": "CHI",
+      "playerId": "00-0039919",
+      "player": "R.Odunze",
+      "category": "receiving",
+      "yards": 69.0,
+      "opportunities": 5
     },
     {
       "gameId": "2026_02_MIN_CHI",
@@ -14217,6 +14316,15 @@
       "opportunities": 10
     },
     {
+      "gameId": "2026_07_NE_CHI",
+      "team": "NE",
+      "playerId": "00-0035676",
+      "player": "A.Brown",
+      "category": "receiving",
+      "yards": 48.0,
+      "opportunities": 6
+    },
+    {
       "gameId": "2026_03_NE_JAX",
       "team": "NE",
       "playerId": "00-0040556",
@@ -14280,6 +14388,15 @@
       "opportunities": 11
     },
     {
+      "gameId": "2026_07_NE_CHI",
+      "team": "NE",
+      "playerId": "00-0040556",
+      "player": "C.Kiner",
+      "category": "rushing",
+      "yards": 13.0,
+      "opportunities": 4
+    },
+    {
       "gameId": "2026_01_NE_SEA",
       "team": "NE",
       "playerId": "00-0038621",
@@ -14332,6 +14449,15 @@
       "category": "receiving",
       "yards": 86.0,
       "opportunities": 8
+    },
+    {
+      "gameId": "2026_07_NE_CHI",
+      "team": "NE",
+      "playerId": "00-0038621",
+      "player": "D.Douglas",
+      "category": "receiving",
+      "yards": 23.0,
+      "opportunities": 4
     },
     {
       "gameId": "2026_01_NE_SEA",
@@ -14388,6 +14514,15 @@
       "opportunities": 32
     },
     {
+      "gameId": "2026_07_NE_CHI",
+      "team": "NE",
+      "playerId": null,
+      "player": "D.Maye",
+      "category": "passing",
+      "yards": 321.0,
+      "opportunities": 33
+    },
+    {
       "gameId": "2026_01_NE_SEA",
       "team": "NE",
       "playerId": "00-0039851",
@@ -14439,6 +14574,15 @@
       "player": "D.Maye",
       "category": "rushing",
       "yards": 24.0,
+      "opportunities": 4
+    },
+    {
+      "gameId": "2026_07_NE_CHI",
+      "team": "NE",
+      "playerId": "00-0039851",
+      "player": "D.Maye",
+      "category": "rushing",
+      "yards": 26.0,
       "opportunities": 4
     },
     {
@@ -14496,6 +14640,15 @@
       "opportunities": 1
     },
     {
+      "gameId": "2026_07_NE_CHI",
+      "team": "NE",
+      "playerId": "00-0040563",
+      "player": "E.Chism",
+      "category": "receiving",
+      "yards": 16.0,
+      "opportunities": 1
+    },
+    {
       "gameId": "2026_05_LV_NE",
       "team": "NE",
       "playerId": "00-0040563",
@@ -14548,6 +14701,15 @@
       "category": "receiving",
       "yards": 11.0,
       "opportunities": 3
+    },
+    {
+      "gameId": "2026_07_NE_CHI",
+      "team": "NE",
+      "playerId": "00-0041395",
+      "player": "E.Raridon",
+      "category": "receiving",
+      "yards": 56.0,
+      "opportunities": 4
     },
     {
       "gameId": "2026_01_NE_SEA",
@@ -14604,6 +14766,15 @@
       "opportunities": 5
     },
     {
+      "gameId": "2026_07_NE_CHI",
+      "team": "NE",
+      "playerId": "00-0033090",
+      "player": "H.Henry",
+      "category": "receiving",
+      "yards": 71.0,
+      "opportunities": 7
+    },
+    {
       "gameId": "2026_02_PIT_NE",
       "team": "NE",
       "playerId": "00-0040131",
@@ -14646,6 +14817,15 @@
       "player": "K.Williams",
       "category": "receiving",
       "yards": 12.0,
+      "opportunities": 1
+    },
+    {
+      "gameId": "2026_07_NE_CHI",
+      "team": "NE",
+      "playerId": "00-0040131",
+      "player": "K.Williams",
+      "category": "receiving",
+      "yards": 0.0,
       "opportunities": 1
     },
     {
@@ -14802,6 +14982,15 @@
       "opportunities": 3
     },
     {
+      "gameId": "2026_07_NE_CHI",
+      "team": "NE",
+      "playerId": "00-0036875",
+      "player": "R.Stevenson",
+      "category": "receiving",
+      "yards": 93.0,
+      "opportunities": 5
+    },
+    {
       "gameId": "2026_01_NE_SEA",
       "team": "NE",
       "playerId": "00-0036875",
@@ -14854,6 +15043,15 @@
       "category": "rushing",
       "yards": 36.0,
       "opportunities": 14
+    },
+    {
+      "gameId": "2026_07_NE_CHI",
+      "team": "NE",
+      "playerId": "00-0036875",
+      "player": "R.Stevenson",
+      "category": "rushing",
+      "yards": 22.0,
+      "opportunities": 6
     },
     {
       "gameId": "2026_03_NE_JAX",
@@ -14910,6 +15108,15 @@
       "opportunities": 1
     },
     {
+      "gameId": "2026_07_NE_CHI",
+      "team": "NE",
+      "playerId": "00-0040734",
+      "player": "T.Henderson",
+      "category": "receiving",
+      "yards": 14.0,
+      "opportunities": 2
+    },
+    {
       "gameId": "2026_02_PIT_NE",
       "team": "NE",
       "playerId": "00-0040734",
@@ -14953,6 +15160,15 @@
       "category": "rushing",
       "yards": 31.0,
       "opportunities": 7
+    },
+    {
+      "gameId": "2026_07_NE_CHI",
+      "team": "NE",
+      "playerId": "00-0040734",
+      "player": "T.Henderson",
+      "category": "rushing",
+      "yards": 9.0,
+      "opportunities": 3
     },
     {
       "gameId": "2026_02_NO_BAL",
