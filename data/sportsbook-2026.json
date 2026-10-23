@@ -3,63 +3,6 @@
   "season": 2026,
   "games": [
     {
-      "away": "NE",
-      "home": "CHI",
-      "awayName": "New England Patriots",
-      "homeName": "Chicago Bears",
-      "awayLabel": "NE \u2014 New England Patriots",
-      "homeLabel": "CHI \u2014 Chicago Bears",
-      "matchup": "NE \u2014 New England Patriots @ CHI \u2014 Chicago Bears",
-      "spread": {
-        "away": {
-          "open": 2.5,
-          "openPrice": null,
-          "current": 3.0,
-          "currentPrice": -112.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": -2.5,
-          "openPrice": -107.0,
-          "current": -3.0,
-          "currentPrice": 105.0,
-          "publicBet": null
-        }
-      },
-      "moneyline": {
-        "away": {
-          "open": null,
-          "openPrice": null,
-          "current": 132.0,
-          "currentPrice": 132.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": null,
-          "openPrice": null,
-          "current": -154.0,
-          "currentPrice": -154.0,
-          "publicBet": null
-        }
-      },
-      "total": {
-        "over": {
-          "open": 49.5,
-          "openPrice": -111.0,
-          "current": 50.5,
-          "currentPrice": -111.0,
-          "publicBet": null
-        },
-        "under": {
-          "open": 49.5,
-          "openPrice": null,
-          "current": 50.5,
-          "currentPrice": 102.0,
-          "publicBet": null
-        }
-      }
-    },
-    {
       "away": "PIT",
       "home": "NO",
       "awayName": "Pittsburgh Steelers",
@@ -78,8 +21,8 @@
         "home": {
           "open": 1.5,
           "openPrice": -108.0,
-          "current": 3.5,
-          "currentPrice": -118.0,
+          "current": 3.0,
+          "currentPrice": 100.0,
           "publicBet": null
         }
       },
@@ -87,15 +30,15 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": -174.0,
-          "currentPrice": -174.0,
+          "current": -168.0,
+          "currentPrice": -168.0,
           "publicBet": null
         },
         "home": {
           "open": null,
           "openPrice": null,
-          "current": 145.0,
-          "currentPrice": 145.0,
+          "current": 150.0,
+          "currentPrice": 150.0,
           "publicBet": null
         }
       },
@@ -104,7 +47,7 @@
           "open": 44.5,
           "openPrice": -106.0,
           "current": 44.5,
-          "currentPrice": -108.0,
+          "currentPrice": -110.0,
           "publicBet": null
         },
         "under": {
@@ -186,7 +129,7 @@
           "open": 3.5,
           "openPrice": null,
           "current": 1.5,
-          "currentPrice": -108.0,
+          "currentPrice": -110.0,
           "publicBet": null
         },
         "home": {
@@ -243,7 +186,7 @@
           "open": 3.5,
           "openPrice": null,
           "current": 3.0,
-          "currentPrice": 100.0,
+          "currentPrice": -105.0,
           "publicBet": null
         },
         "home": {
@@ -265,8 +208,8 @@
         "home": {
           "open": null,
           "openPrice": null,
-          "current": -148.0,
-          "currentPrice": -148.0,
+          "current": -154.0,
+          "currentPrice": -154.0,
           "publicBet": null
         }
       },
@@ -502,15 +445,15 @@
         "over": {
           "open": 37.5,
           "openPrice": -108.0,
-          "current": 37.5,
-          "currentPrice": -102.0,
+          "current": 37.0,
+          "currentPrice": -114.0,
           "publicBet": null
         },
         "under": {
           "open": 37.5,
           "openPrice": null,
           "current": 37.5,
-          "currentPrice": -114.0,
+          "currentPrice": -115.0,
           "publicBet": null
         }
       }
@@ -550,8 +493,8 @@
         "home": {
           "open": null,
           "openPrice": null,
-          "current": 195.0,
-          "currentPrice": 195.0,
+          "current": 190.0,
+          "currentPrice": 190.0,
           "publicBet": null
         }
       },
@@ -714,8 +657,8 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": 125.0,
-          "currentPrice": 125.0,
+          "current": 124.0,
+          "currentPrice": 124.0,
           "publicBet": null
         },
         "home": {
@@ -731,7 +674,7 @@
           "open": 42.5,
           "openPrice": -106.0,
           "current": 42.5,
-          "currentPrice": -110.0,
+          "currentPrice": -108.0,
           "publicBet": null
         },
         "under": {
@@ -796,6 +739,63 @@
           "openPrice": null,
           "current": 44.5,
           "currentPrice": -110.0,
+          "publicBet": null
+        }
+      }
+    },
+    {
+      "away": "NE",
+      "home": "CHI",
+      "awayName": "New England Patriots",
+      "homeName": "Chicago Bears",
+      "awayLabel": "NE \u2014 New England Patriots",
+      "homeLabel": "CHI \u2014 Chicago Bears",
+      "matchup": "NE \u2014 New England Patriots @ CHI \u2014 Chicago Bears",
+      "spread": {
+        "away": {
+          "open": 2.5,
+          "openPrice": null,
+          "current": 3.0,
+          "currentPrice": -112.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": -2.5,
+          "openPrice": -107.0,
+          "current": -3.0,
+          "currentPrice": 105.0,
+          "publicBet": null
+        }
+      },
+      "moneyline": {
+        "away": {
+          "open": null,
+          "openPrice": null,
+          "current": 132.0,
+          "currentPrice": 132.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": null,
+          "openPrice": null,
+          "current": -154.0,
+          "currentPrice": -154.0,
+          "publicBet": null
+        }
+      },
+      "total": {
+        "over": {
+          "open": 49.5,
+          "openPrice": -111.0,
+          "current": 50.5,
+          "currentPrice": -111.0,
+          "publicBet": null
+        },
+        "under": {
+          "open": 49.5,
+          "openPrice": null,
+          "current": 50.5,
+          "currentPrice": 102.0,
           "publicBet": null
         }
       }
