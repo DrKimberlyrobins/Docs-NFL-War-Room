@@ -3,6 +3,63 @@
   "season": 2026,
   "games": [
     {
+      "away": "DAL",
+      "home": "PHI",
+      "awayName": "Dallas Cowboys",
+      "homeName": "Philadelphia Eagles",
+      "awayLabel": "DAL \u2014 Dallas Cowboys",
+      "homeLabel": "PHI \u2014 Philadelphia Eagles",
+      "matchup": "DAL \u2014 Dallas Cowboys @ PHI \u2014 Philadelphia Eagles",
+      "spread": {
+        "away": {
+          "open": -4.5,
+          "openPrice": null,
+          "current": -4.5,
+          "currentPrice": -108.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": 4.5,
+          "openPrice": -109.0,
+          "current": 4.5,
+          "currentPrice": -106.0,
+          "publicBet": null
+        }
+      },
+      "moneyline": {
+        "away": {
+          "open": null,
+          "openPrice": null,
+          "current": -218.0,
+          "currentPrice": -218.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": null,
+          "openPrice": null,
+          "current": 185.0,
+          "currentPrice": 185.0,
+          "publicBet": null
+        }
+      },
+      "total": {
+        "over": {
+          "open": 44.5,
+          "openPrice": -109.0,
+          "current": 43.5,
+          "currentPrice": -111.0,
+          "publicBet": null
+        },
+        "under": {
+          "open": 44.5,
+          "openPrice": null,
+          "current": 44.5,
+          "currentPrice": -120.0,
+          "publicBet": null
+        }
+      }
+    },
+    {
       "away": "KC",
       "home": "SEA",
       "awayName": "Kansas City Chiefs",
@@ -55,63 +112,6 @@
           "openPrice": null,
           "current": 43.5,
           "currentPrice": -115.0,
-          "publicBet": null
-        }
-      }
-    },
-    {
-      "away": "DAL",
-      "home": "PHI",
-      "awayName": "Dallas Cowboys",
-      "homeName": "Philadelphia Eagles",
-      "awayLabel": "DAL \u2014 Dallas Cowboys",
-      "homeLabel": "PHI \u2014 Philadelphia Eagles",
-      "matchup": "DAL \u2014 Dallas Cowboys @ PHI \u2014 Philadelphia Eagles",
-      "spread": {
-        "away": {
-          "open": -4.5,
-          "openPrice": null,
-          "current": -4.5,
-          "currentPrice": -108.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": 4.5,
-          "openPrice": -109.0,
-          "current": 4.5,
-          "currentPrice": -105.0,
-          "publicBet": null
-        }
-      },
-      "moneyline": {
-        "away": {
-          "open": null,
-          "openPrice": null,
-          "current": -225.0,
-          "currentPrice": -225.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": null,
-          "openPrice": null,
-          "current": 190.0,
-          "currentPrice": 190.0,
-          "publicBet": null
-        }
-      },
-      "total": {
-        "over": {
-          "open": 44.5,
-          "openPrice": -109.0,
-          "current": 43.5,
-          "currentPrice": -118.0,
-          "publicBet": null
-        },
-        "under": {
-          "open": 44.5,
-          "openPrice": null,
-          "current": 44.5,
-          "currentPrice": -120.0,
           "publicBet": null
         }
       }
