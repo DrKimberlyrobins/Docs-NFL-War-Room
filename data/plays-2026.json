@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-10-26T16:51:04.577880+00:00",
+  "updated": "2026-10-27T15:55:57.622723+00:00",
   "source": "nflverse",
   "definition": "Regular-season passing and rushing plays with valid EPA. Excludes nullified plays when identified. First half includes quarters 1 and 2. These are EPA-eligible play counts, not every official offensive snap. Early-season samples are small.",
   "teams": {
@@ -77,13 +77,13 @@
       "totalOpponentPlays": 454
     },
     "DAL": {
-      "games": 6,
-      "offensivePlaysPerGame": 67.17,
-      "opponentPlaysPerGame": 66.17,
-      "firstHalfOffensivePlays": 31.17,
-      "firstHalfOpponentPlays": 34.83,
-      "totalOffensivePlays": 403,
-      "totalOpponentPlays": 397
+      "games": 7,
+      "offensivePlaysPerGame": 67.29,
+      "opponentPlaysPerGame": 66.14,
+      "firstHalfOffensivePlays": 32.29,
+      "firstHalfOpponentPlays": 34.0,
+      "totalOffensivePlays": 471,
+      "totalOpponentPlays": 463
     },
     "DEN": {
       "games": 7,
@@ -230,13 +230,13 @@
       "totalOpponentPlays": 461
     },
     "PHI": {
-      "games": 6,
-      "offensivePlaysPerGame": 61.0,
-      "opponentPlaysPerGame": 70.83,
-      "firstHalfOffensivePlays": 32.83,
-      "firstHalfOpponentPlays": 32.33,
-      "totalOffensivePlays": 366,
-      "totalOpponentPlays": 425
+      "games": 7,
+      "offensivePlaysPerGame": 61.71,
+      "opponentPlaysPerGame": 70.43,
+      "firstHalfOffensivePlays": 32.29,
+      "firstHalfOpponentPlays": 33.29,
+      "totalOffensivePlays": 432,
+      "totalOpponentPlays": 493
     },
     "PIT": {
       "games": 7,

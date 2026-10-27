@@ -1,8 +1,8 @@
 {
   "season": 2026,
-  "updated": "2026-10-26T16:51:11.099585+00:00",
+  "updated": "2026-10-27T15:56:02.059765+00:00",
   "source": "nflverse play-by-play",
-  "completedGames": 106,
+  "completedGames": 107,
   "note": "Completed regular-season games only. One record per observed player, game and statistical category. Players with no recorded opportunities in a category are not included for that game. Missing records must not automatically be treated as zero. Verify against official game logs.",
   "logs": [
     {
@@ -6252,6 +6252,15 @@
       "opportunities": 5
     },
     {
+      "gameId": "2026_07_DAL_PHI",
+      "team": "DAL",
+      "playerId": "00-0039530",
+      "player": "B.Spann-Ford",
+      "category": "receiving",
+      "yards": 11.0,
+      "opportunities": 2
+    },
+    {
       "gameId": "2026_01_DAL_NYG",
       "team": "DAL",
       "playerId": "00-0036358",
@@ -6304,6 +6313,15 @@
       "category": "receiving",
       "yards": 70.0,
       "opportunities": 19
+    },
+    {
+      "gameId": "2026_07_DAL_PHI",
+      "team": "DAL",
+      "playerId": "00-0036358",
+      "player": "C.Lamb",
+      "category": "receiving",
+      "yards": 74.0,
+      "opportunities": 12
     },
     {
       "gameId": "2026_01_DAL_NYG",
@@ -6378,6 +6396,15 @@
       "opportunities": 56
     },
     {
+      "gameId": "2026_07_DAL_PHI",
+      "team": "DAL",
+      "playerId": null,
+      "player": "D.Prescott",
+      "category": "passing",
+      "yards": 212.0,
+      "opportunities": 27
+    },
+    {
       "gameId": "2026_01_DAL_NYG",
       "team": "DAL",
       "playerId": "00-0033077",
@@ -6421,6 +6448,15 @@
       "category": "rushing",
       "yards": 7.0,
       "opportunities": 2
+    },
+    {
+      "gameId": "2026_07_DAL_PHI",
+      "team": "DAL",
+      "playerId": "00-0033077",
+      "player": "D.Prescott",
+      "category": "rushing",
+      "yards": 8.0,
+      "opportunities": 3
     },
     {
       "gameId": "2026_01_DAL_NYG",
@@ -6495,6 +6531,15 @@
       "opportunities": 11
     },
     {
+      "gameId": "2026_07_DAL_PHI",
+      "team": "DAL",
+      "playerId": "00-0037247",
+      "player": "G.Pickens",
+      "category": "receiving",
+      "yards": 57.0,
+      "opportunities": 6
+    },
+    {
       "gameId": "2026_04_DAL_HOU",
       "team": "DAL",
       "playerId": "00-0038738",
@@ -6537,6 +6582,15 @@
       "player": "H.Luepke",
       "category": "rushing",
       "yards": 5.0,
+      "opportunities": 1
+    },
+    {
+      "gameId": "2026_07_DAL_PHI",
+      "team": "DAL",
+      "playerId": "00-0038738",
+      "player": "H.Luepke",
+      "category": "rushing",
+      "yards": 3.0,
       "opportunities": 1
     },
     {
@@ -6594,6 +6648,15 @@
       "opportunities": 3
     },
     {
+      "gameId": "2026_07_DAL_PHI",
+      "team": "DAL",
+      "playerId": "00-0038041",
+      "player": "J.Ferguson",
+      "category": "receiving",
+      "yards": 0.0,
+      "opportunities": 1
+    },
+    {
       "gameId": "2026_01_DAL_NYG",
       "team": "DAL",
       "playerId": "00-0039062",
@@ -6619,6 +6682,15 @@
       "category": "receiving",
       "yards": 20.0,
       "opportunities": 4
+    },
+    {
+      "gameId": "2026_07_DAL_PHI",
+      "team": "DAL",
+      "playerId": "00-0039062",
+      "player": "J.Mingo",
+      "category": "receiving",
+      "yards": 0.0,
+      "opportunities": 1
     },
     {
       "gameId": "2026_01_DAL_NYG",
@@ -6727,6 +6799,15 @@
       "category": "rushing",
       "yards": 41.0,
       "opportunities": 11
+    },
+    {
+      "gameId": "2026_07_DAL_PHI",
+      "team": "DAL",
+      "playerId": "00-0036997",
+      "player": "J.Williams",
+      "category": "rushing",
+      "yards": 155.0,
+      "opportunities": 25
     },
     {
       "gameId": "2026_01_DAL_NYG",
@@ -6855,6 +6936,15 @@
       "opportunities": 9
     },
     {
+      "gameId": "2026_07_DAL_PHI",
+      "team": "DAL",
+      "playerId": "00-0039410",
+      "player": "R.Flournoy",
+      "category": "receiving",
+      "yards": 70.0,
+      "opportunities": 4
+    },
+    {
       "gameId": "2026_03_BAL_DAL",
       "team": "DAL",
       "playerId": "00-0037120",
@@ -6907,6 +6997,15 @@
       "category": "rushing",
       "yards": 0.0,
       "opportunities": 2
+    },
+    {
+      "gameId": "2026_07_DAL_PHI",
+      "team": "DAL",
+      "playerId": "00-0037120",
+      "player": "T.Goodson",
+      "category": "rushing",
+      "yards": 38.0,
+      "opportunities": 10
     },
     {
       "gameId": "2026_02_JAX_DEN",
@@ -19617,6 +19716,15 @@
       "opportunities": 2
     },
     {
+      "gameId": "2026_07_DAL_PHI",
+      "team": "PHI",
+      "playerId": "00-0040024",
+      "player": "D.Cooper",
+      "category": "receiving",
+      "yards": 17.0,
+      "opportunities": 3
+    },
+    {
       "gameId": "2026_01_WAS_PHI",
       "team": "PHI",
       "playerId": "00-0034351",
@@ -19653,6 +19761,15 @@
       "opportunities": 8
     },
     {
+      "gameId": "2026_07_DAL_PHI",
+      "team": "PHI",
+      "playerId": "00-0034351",
+      "player": "D.Goedert",
+      "category": "receiving",
+      "yards": 48.0,
+      "opportunities": 7
+    },
+    {
       "gameId": "2026_05_PHI_JAX",
       "team": "PHI",
       "playerId": "00-0037258",
@@ -19671,6 +19788,15 @@
       "opportunities": 5
     },
     {
+      "gameId": "2026_07_DAL_PHI",
+      "team": "PHI",
+      "playerId": "00-0037258",
+      "player": "D.Pierce",
+      "category": "receiving",
+      "yards": 1.0,
+      "opportunities": 1
+    },
+    {
       "gameId": "2026_05_PHI_JAX",
       "team": "PHI",
       "playerId": "00-0037258",
@@ -19687,6 +19813,15 @@
       "category": "rushing",
       "yards": 35.0,
       "opportunities": 12
+    },
+    {
+      "gameId": "2026_07_DAL_PHI",
+      "team": "PHI",
+      "playerId": "00-0037258",
+      "player": "D.Pierce",
+      "category": "rushing",
+      "yards": 47.0,
+      "opportunities": 14
     },
     {
       "gameId": "2026_01_WAS_PHI",
@@ -19779,6 +19914,24 @@
       "opportunities": 4
     },
     {
+      "gameId": "2026_07_DAL_PHI",
+      "team": "PHI",
+      "playerId": "00-0036567",
+      "player": "E.Mitchell",
+      "category": "receiving",
+      "yards": 23.0,
+      "opportunities": 4
+    },
+    {
+      "gameId": "2026_07_DAL_PHI",
+      "team": "PHI",
+      "playerId": "00-0036567",
+      "player": "E.Mitchell",
+      "category": "rushing",
+      "yards": 11.0,
+      "opportunities": 3
+    },
+    {
       "gameId": "2026_06_CAR_PHI",
       "team": "PHI",
       "playerId": "00-0036980",
@@ -19786,6 +19939,24 @@
       "category": "receiving",
       "yards": 4.0,
       "opportunities": 2
+    },
+    {
+      "gameId": "2026_07_DAL_PHI",
+      "team": "PHI",
+      "playerId": "00-0036980",
+      "player": "E.Moore",
+      "category": "receiving",
+      "yards": 16.0,
+      "opportunities": 2
+    },
+    {
+      "gameId": "2026_07_DAL_PHI",
+      "team": "PHI",
+      "playerId": "00-0041483",
+      "player": "E.Stowers",
+      "category": "receiving",
+      "yards": 0.0,
+      "opportunities": 1
     },
     {
       "gameId": "2026_01_WAS_PHI",
@@ -19914,6 +20085,15 @@
       "opportunities": 1
     },
     {
+      "gameId": "2026_07_DAL_PHI",
+      "team": "PHI",
+      "playerId": "00-0035662",
+      "player": "M.Brown",
+      "category": "receiving",
+      "yards": 30.0,
+      "opportunities": 5
+    },
+    {
       "gameId": "2026_02_PHI_TEN",
       "team": "PHI",
       "playerId": "00-0035662",
@@ -19977,6 +20157,15 @@
       "opportunities": 6
     },
     {
+      "gameId": "2026_07_DAL_PHI",
+      "team": "PHI",
+      "playerId": "00-0040867",
+      "player": "M.Lemon",
+      "category": "receiving",
+      "yards": 67.0,
+      "opportunities": 8
+    },
+    {
       "gameId": "2026_02_PHI_TEN",
       "team": "PHI",
       "playerId": "00-0040867",
@@ -20022,6 +20211,15 @@
       "opportunities": 1
     },
     {
+      "gameId": "2026_07_DAL_PHI",
+      "team": "PHI",
+      "playerId": "00-0034844",
+      "player": "S.Barkley",
+      "category": "receiving",
+      "yards": 9.0,
+      "opportunities": 2
+    },
+    {
       "gameId": "2026_01_WAS_PHI",
       "team": "PHI",
       "playerId": "00-0034844",
@@ -20056,6 +20254,15 @@
       "category": "rushing",
       "yards": 8.0,
       "opportunities": 2
+    },
+    {
+      "gameId": "2026_07_DAL_PHI",
+      "team": "PHI",
+      "playerId": "00-0034844",
+      "player": "S.Barkley",
+      "category": "rushing",
+      "yards": 62.0,
+      "opportunities": 7
     },
     {
       "gameId": "2026_02_PHI_TEN",
@@ -20121,12 +20328,30 @@
       "opportunities": 48
     },
     {
+      "gameId": "2026_07_DAL_PHI",
+      "team": "PHI",
+      "playerId": null,
+      "player": "T.McKee",
+      "category": "passing",
+      "yards": 211.0,
+      "opportunities": 37
+    },
+    {
       "gameId": "2026_06_CAR_PHI",
       "team": "PHI",
       "playerId": "00-0038400",
       "player": "T.McKee",
       "category": "rushing",
       "yards": 0.0,
+      "opportunities": 1
+    },
+    {
+      "gameId": "2026_07_DAL_PHI",
+      "team": "PHI",
+      "playerId": "00-0038400",
+      "player": "T.McKee",
+      "category": "rushing",
+      "yards": 1.0,
       "opportunities": 1
     },
     {
