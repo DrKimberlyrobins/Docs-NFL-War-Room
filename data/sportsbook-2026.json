@@ -15,7 +15,7 @@
           "open": 3.0,
           "openPrice": null,
           "current": 4.0,
-          "currentPrice": -108.0,
+          "currentPrice": -111.0,
           "publicBet": null
         },
         "home": {
@@ -30,8 +30,8 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": 165.0,
-          "currentPrice": 165.0,
+          "current": 160.0,
+          "currentPrice": 160.0,
           "publicBet": null
         },
         "home": {
@@ -54,7 +54,7 @@
           "open": 46.5,
           "openPrice": null,
           "current": 47.5,
-          "currentPrice": -110.0,
+          "currentPrice": -112.0,
           "publicBet": null
         }
       }
@@ -94,8 +94,8 @@
         "home": {
           "open": null,
           "openPrice": null,
-          "current": -167.0,
-          "currentPrice": -167.0,
+          "current": -175.0,
+          "currentPrice": -175.0,
           "publicBet": null
         }
       },
@@ -111,7 +111,7 @@
           "open": 52.5,
           "openPrice": null,
           "current": 54.5,
-          "currentPrice": -112.0,
+          "currentPrice": -110.0,
           "publicBet": null
         }
       }
@@ -135,8 +135,8 @@
         "home": {
           "open": -10.0,
           "openPrice": -110.0,
-          "current": -10.5,
-          "currentPrice": -105.0,
+          "current": -10.0,
+          "currentPrice": -118.0,
           "publicBet": null
         }
       },
@@ -151,8 +151,8 @@
         "home": {
           "open": null,
           "openPrice": null,
-          "current": -500.0,
-          "currentPrice": -500.0,
+          "current": -521.0,
+          "currentPrice": -521.0,
           "publicBet": null
         }
       },
@@ -160,8 +160,8 @@
         "over": {
           "open": 46.5,
           "openPrice": -110.0,
-          "current": 46.0,
-          "currentPrice": -111.0,
+          "current": 46.5,
+          "currentPrice": -108.0,
           "publicBet": null
         },
         "under": {
@@ -201,15 +201,15 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": 280.0,
-          "currentPrice": 280.0,
+          "current": 275.0,
+          "currentPrice": 275.0,
           "publicBet": null
         },
         "home": {
           "open": null,
           "openPrice": null,
-          "current": -333.0,
-          "currentPrice": -333.0,
+          "current": -323.0,
+          "currentPrice": -323.0,
           "publicBet": null
         }
       },
@@ -225,7 +225,7 @@
           "open": 51.5,
           "openPrice": null,
           "current": 54.5,
-          "currentPrice": -110.0,
+          "currentPrice": -108.0,
           "publicBet": null
         }
       }
@@ -265,8 +265,8 @@
         "home": {
           "open": null,
           "openPrice": null,
-          "current": -168.0,
-          "currentPrice": -168.0,
+          "current": -170.0,
+          "currentPrice": -170.0,
           "publicBet": null
         }
       },
@@ -274,8 +274,8 @@
         "over": {
           "open": 46.5,
           "openPrice": -115.0,
-          "current": 46.0,
-          "currentPrice": -108.0,
+          "current": 45.5,
+          "currentPrice": -111.0,
           "publicBet": null
         },
         "under": {
@@ -300,7 +300,7 @@
           "open": 7.5,
           "openPrice": null,
           "current": 10.0,
-          "currentPrice": -108.0,
+          "currentPrice": -112.0,
           "publicBet": null
         },
         "home": {
@@ -315,15 +315,15 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": 400.0,
-          "currentPrice": 400.0,
+          "current": 385.0,
+          "currentPrice": 385.0,
           "publicBet": null
         },
         "home": {
           "open": null,
           "openPrice": null,
-          "current": -500.0,
-          "currentPrice": -500.0,
+          "current": -485.0,
+          "currentPrice": -485.0,
           "publicBet": null
         }
       },
@@ -379,8 +379,8 @@
         "home": {
           "open": null,
           "openPrice": null,
-          "current": -120.0,
-          "currentPrice": -120.0,
+          "current": -122.0,
+          "currentPrice": -122.0,
           "publicBet": null
         }
       },
@@ -510,7 +510,7 @@
           "open": 44.5,
           "openPrice": null,
           "current": 45.5,
-          "currentPrice": -115.0,
+          "currentPrice": -111.0,
           "publicBet": null
         }
       }
@@ -543,15 +543,15 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": 245.0,
-          "currentPrice": 245.0,
+          "current": 240.0,
+          "currentPrice": 240.0,
           "publicBet": null
         },
         "home": {
           "open": null,
           "openPrice": null,
-          "current": -294.0,
-          "currentPrice": -294.0,
+          "current": -278.0,
+          "currentPrice": -278.0,
           "publicBet": null
         }
       },
@@ -698,8 +698,8 @@
         "away": {
           "open": 3.5,
           "openPrice": null,
-          "current": 5.5,
-          "currentPrice": -108.0,
+          "current": 6.0,
+          "currentPrice": -112.0,
           "publicBet": null
         },
         "home": {
@@ -714,15 +714,15 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": 200.0,
-          "currentPrice": 200.0,
+          "current": 220.0,
+          "currentPrice": 220.0,
           "publicBet": null
         },
         "home": {
           "open": null,
           "openPrice": null,
-          "current": -238.0,
-          "currentPrice": -238.0,
+          "current": -230.0,
+          "currentPrice": -230.0,
           "publicBet": null
         }
       },
@@ -731,7 +731,7 @@
           "open": 40.5,
           "openPrice": -105.0,
           "current": 40.0,
-          "currentPrice": -111.0,
+          "currentPrice": -114.0,
           "publicBet": null
         },
         "under": {
@@ -755,8 +755,8 @@
         "away": {
           "open": 3.0,
           "openPrice": null,
-          "current": 3.5,
-          "currentPrice": -125.0,
+          "current": 3.0,
+          "currentPrice": -102.0,
           "publicBet": null
         },
         "home": {
