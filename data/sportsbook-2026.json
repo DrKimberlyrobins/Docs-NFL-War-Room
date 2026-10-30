@@ -3,63 +3,6 @@
   "season": 2026,
   "games": [
     {
-      "away": "CAR",
-      "home": "GB",
-      "awayName": "Carolina Panthers",
-      "homeName": "Green Bay Packers",
-      "awayLabel": "CAR \u2014 Carolina Panthers",
-      "homeLabel": "GB \u2014 Green Bay Packers",
-      "matchup": "CAR \u2014 Carolina Panthers @ GB \u2014 Green Bay Packers",
-      "spread": {
-        "away": {
-          "open": 3.0,
-          "openPrice": null,
-          "current": 3.5,
-          "currentPrice": -105.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": -3.0,
-          "openPrice": -108.0,
-          "current": -3.5,
-          "currentPrice": -105.0,
-          "publicBet": null
-        }
-      },
-      "moneyline": {
-        "away": {
-          "open": null,
-          "openPrice": null,
-          "current": 164.0,
-          "currentPrice": 164.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": null,
-          "openPrice": null,
-          "current": -185.0,
-          "currentPrice": -185.0,
-          "publicBet": null
-        }
-      },
-      "total": {
-        "over": {
-          "open": 46.5,
-          "openPrice": -109.0,
-          "current": 47.5,
-          "currentPrice": -110.0,
-          "publicBet": null
-        },
-        "under": {
-          "open": 46.5,
-          "openPrice": null,
-          "current": 47.5,
-          "currentPrice": -108.0,
-          "publicBet": null
-        }
-      }
-    },
-    {
       "away": "BAL",
       "home": "BUF",
       "awayName": "Baltimore Ravens",
@@ -128,15 +71,15 @@
         "away": {
           "open": 10.0,
           "openPrice": null,
-          "current": 11.5,
-          "currentPrice": -110.0,
+          "current": 12.5,
+          "currentPrice": -111.0,
           "publicBet": null
         },
         "home": {
           "open": -10.0,
           "openPrice": -110.0,
           "current": -11.5,
-          "currentPrice": -108.0,
+          "currentPrice": -118.0,
           "publicBet": null
         }
       },
@@ -144,15 +87,15 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": 500.0,
-          "currentPrice": 500.0,
+          "current": 525.0,
+          "currentPrice": 525.0,
           "publicBet": null
         },
         "home": {
           "open": null,
           "openPrice": null,
-          "current": -599.0,
-          "currentPrice": -599.0,
+          "current": -676.0,
+          "currentPrice": -676.0,
           "publicBet": null
         }
       },
@@ -186,14 +129,14 @@
           "open": 6.5,
           "openPrice": null,
           "current": 7.0,
-          "currentPrice": -112.0,
+          "currentPrice": -111.0,
           "publicBet": null
         },
         "home": {
           "open": -6.5,
           "openPrice": -110.0,
           "current": -7.0,
-          "currentPrice": -105.0,
+          "currentPrice": -108.0,
           "publicBet": null
         }
       },
@@ -372,8 +315,8 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": 108.0,
-          "currentPrice": 108.0,
+          "current": 104.0,
+          "currentPrice": 104.0,
           "publicBet": null
         },
         "home": {
@@ -471,7 +414,7 @@
           "open": 1.5,
           "openPrice": null,
           "current": 2.5,
-          "currentPrice": -110.0,
+          "currentPrice": -108.0,
           "publicBet": null
         },
         "home": {
@@ -502,15 +445,15 @@
         "over": {
           "open": 44.5,
           "openPrice": -110.0,
-          "current": 43.5,
-          "currentPrice": -115.0,
+          "current": 44.0,
+          "currentPrice": -108.0,
           "publicBet": null
         },
         "under": {
           "open": 44.5,
           "openPrice": null,
           "current": 44.5,
-          "currentPrice": -118.0,
+          "currentPrice": -115.0,
           "publicBet": null
         }
       }
@@ -698,8 +641,8 @@
         "away": {
           "open": 3.5,
           "openPrice": null,
-          "current": 6.0,
-          "currentPrice": -108.0,
+          "current": 6.5,
+          "currentPrice": -114.0,
           "publicBet": null
         },
         "home": {
@@ -721,8 +664,8 @@
         "home": {
           "open": null,
           "openPrice": null,
-          "current": -250.0,
-          "currentPrice": -250.0,
+          "current": -258.0,
+          "currentPrice": -258.0,
           "publicBet": null
         }
       },
@@ -795,6 +738,63 @@
           "open": 46.5,
           "openPrice": null,
           "current": 46.5,
+          "currentPrice": -108.0,
+          "publicBet": null
+        }
+      }
+    },
+    {
+      "away": "CAR",
+      "home": "GB",
+      "awayName": "Carolina Panthers",
+      "homeName": "Green Bay Packers",
+      "awayLabel": "CAR \u2014 Carolina Panthers",
+      "homeLabel": "GB \u2014 Green Bay Packers",
+      "matchup": "CAR \u2014 Carolina Panthers @ GB \u2014 Green Bay Packers",
+      "spread": {
+        "away": {
+          "open": 3.0,
+          "openPrice": null,
+          "current": 3.5,
+          "currentPrice": -105.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": -3.0,
+          "openPrice": -108.0,
+          "current": -3.5,
+          "currentPrice": -105.0,
+          "publicBet": null
+        }
+      },
+      "moneyline": {
+        "away": {
+          "open": null,
+          "openPrice": null,
+          "current": 164.0,
+          "currentPrice": 164.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": null,
+          "openPrice": null,
+          "current": -185.0,
+          "currentPrice": -185.0,
+          "publicBet": null
+        }
+      },
+      "total": {
+        "over": {
+          "open": 46.5,
+          "openPrice": -109.0,
+          "current": 47.5,
+          "currentPrice": -110.0,
+          "publicBet": null
+        },
+        "under": {
+          "open": 46.5,
+          "openPrice": null,
+          "current": 47.5,
           "currentPrice": -108.0,
           "publicBet": null
         }
