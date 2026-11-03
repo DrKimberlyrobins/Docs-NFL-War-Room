@@ -1,8 +1,8 @@
 {
   "season": 2026,
-  "updated": "2026-11-02T20:25:58.557687+00:00",
+  "updated": "2026-11-03T17:56:35.835111+00:00",
   "source": "nflverse",
-  "completedGames": 120,
+  "completedGames": 121,
   "note": "Completed regular-season games only. First-quarter scores use the first second-quarter scoring state. Halftime scores use the first third-quarter scoring state. Verify results against official scores.",
   "teams": {
     "LAC": {
@@ -87,13 +87,13 @@
       "finalPointsAllowed": 27.57
     },
     "CHI": {
-      "games": 7,
-      "firstQuarterPointsScored": 7.86,
-      "firstQuarterPointsAllowed": 3.29,
-      "firstHalfPointsScored": 15.0,
-      "firstHalfPointsAllowed": 10.71,
-      "finalPointsScored": 25.71,
-      "finalPointsAllowed": 20.43
+      "games": 8,
+      "firstQuarterPointsScored": 7.75,
+      "firstQuarterPointsAllowed": 2.88,
+      "firstHalfPointsScored": 14.75,
+      "firstHalfPointsAllowed": 10.5,
+      "finalPointsScored": 26.75,
+      "finalPointsAllowed": 20.0
     },
     "JAX": {
       "games": 7,
@@ -186,13 +186,13 @@
       "finalPointsAllowed": 25.86
     },
     "SEA": {
-      "games": 7,
-      "firstQuarterPointsScored": 3.43,
-      "firstQuarterPointsAllowed": 3.29,
+      "games": 8,
+      "firstQuarterPointsScored": 3.0,
+      "firstQuarterPointsAllowed": 3.75,
       "firstHalfPointsScored": 9.0,
-      "firstHalfPointsAllowed": 10.29,
-      "finalPointsScored": 24.0,
-      "finalPointsAllowed": 17.86
+      "firstHalfPointsAllowed": 10.62,
+      "finalPointsScored": 23.12,
+      "finalPointsAllowed": 19.88
     },
     "NE": {
       "games": 8,

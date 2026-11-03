@@ -1,8 +1,8 @@
 {
   "season": 2026,
-  "updated": "2026-11-02T20:26:02.732739+00:00",
+  "updated": "2026-11-03T17:56:40.083179+00:00",
   "source": "nflverse play-by-play",
-  "completedGames": 120,
+  "completedGames": 121,
   "note": "Completed regular-season games only. One record per observed player, game and statistical category. Players with no recorded opportunities in a category are not included for that game. Missing records must not automatically be treated as zero. Verify against official game logs.",
   "logs": [
     {
@@ -4659,6 +4659,15 @@
       "opportunities": 12
     },
     {
+      "gameId": "2026_08_CHI_SEA",
+      "team": "CHI",
+      "playerId": "00-0040126",
+      "player": "C.Loveland",
+      "category": "receiving",
+      "yards": 65.0,
+      "opportunities": 9
+    },
+    {
       "gameId": "2026_01_CHI_CAR",
       "team": "CHI",
       "playerId": null,
@@ -4695,6 +4704,15 @@
       "opportunities": 36
     },
     {
+      "gameId": "2026_08_CHI_SEA",
+      "team": "CHI",
+      "playerId": null,
+      "player": "C.Williams",
+      "category": "passing",
+      "yards": 247.0,
+      "opportunities": 35
+    },
+    {
       "gameId": "2026_01_CHI_CAR",
       "team": "CHI",
       "playerId": "00-0039918",
@@ -4729,6 +4747,15 @@
       "category": "rushing",
       "yards": 18.0,
       "opportunities": 5
+    },
+    {
+      "gameId": "2026_08_CHI_SEA",
+      "team": "CHI",
+      "playerId": "00-0039918",
+      "player": "C.Williams",
+      "category": "rushing",
+      "yards": 1.0,
+      "opportunities": 2
     },
     {
       "gameId": "2026_01_CHI_CAR",
@@ -4794,6 +4821,15 @@
       "opportunities": 4
     },
     {
+      "gameId": "2026_08_CHI_SEA",
+      "team": "CHI",
+      "playerId": "00-0036275",
+      "player": "D.Swift",
+      "category": "receiving",
+      "yards": 10.0,
+      "opportunities": 3
+    },
+    {
       "gameId": "2026_01_CHI_CAR",
       "team": "CHI",
       "playerId": "00-0036275",
@@ -4855,6 +4891,15 @@
       "category": "rushing",
       "yards": 78.0,
       "opportunities": 22
+    },
+    {
+      "gameId": "2026_08_CHI_SEA",
+      "team": "CHI",
+      "playerId": "00-0036275",
+      "player": "D.Swift",
+      "category": "rushing",
+      "yards": 69.0,
+      "opportunities": 27
     },
     {
       "gameId": "2026_01_CHI_CAR",
@@ -5001,12 +5046,30 @@
       "opportunities": 2
     },
     {
+      "gameId": "2026_08_CHI_SEA",
+      "team": "CHI",
+      "playerId": "00-0032464",
+      "player": "K.Raymond",
+      "category": "receiving",
+      "yards": 14.0,
+      "opportunities": 3
+    },
+    {
       "gameId": "2026_05_CHI_GB",
       "team": "CHI",
       "playerId": "00-0032464",
       "player": "K.Raymond",
       "category": "rushing",
       "yards": -2.0,
+      "opportunities": 1
+    },
+    {
+      "gameId": "2026_08_CHI_SEA",
+      "team": "CHI",
+      "playerId": "00-0032464",
+      "player": "K.Raymond",
+      "category": "rushing",
+      "yards": 39.0,
       "opportunities": 1
     },
     {
@@ -5071,6 +5134,15 @@
       "category": "receiving",
       "yards": 130.0,
       "opportunities": 4
+    },
+    {
+      "gameId": "2026_08_CHI_SEA",
+      "team": "CHI",
+      "playerId": "00-0040735",
+      "player": "L.Burden",
+      "category": "receiving",
+      "yards": 56.0,
+      "opportunities": 9
     },
     {
       "gameId": "2026_01_CHI_CAR",
@@ -5145,6 +5217,15 @@
       "opportunities": 2
     },
     {
+      "gameId": "2026_08_CHI_SEA",
+      "team": "CHI",
+      "playerId": "00-0039021",
+      "player": "R.Johnson",
+      "category": "receiving",
+      "yards": 11.0,
+      "opportunities": 1
+    },
+    {
       "gameId": "2026_04_NYJ_CHI",
       "team": "CHI",
       "playerId": "00-0039021",
@@ -5179,6 +5260,15 @@
       "category": "rushing",
       "yards": 13.0,
       "opportunities": 2
+    },
+    {
+      "gameId": "2026_08_CHI_SEA",
+      "team": "CHI",
+      "playerId": "00-0039021",
+      "player": "R.Johnson",
+      "category": "rushing",
+      "yards": 17.0,
+      "opportunities": 5
     },
     {
       "gameId": "2026_01_CHI_CAR",
@@ -5242,6 +5332,15 @@
       "category": "receiving",
       "yards": 69.0,
       "opportunities": 5
+    },
+    {
+      "gameId": "2026_08_CHI_SEA",
+      "team": "CHI",
+      "playerId": "00-0039919",
+      "player": "R.Odunze",
+      "category": "receiving",
+      "yards": 87.0,
+      "opportunities": 6
     },
     {
       "gameId": "2026_02_MIN_CHI",
@@ -5340,6 +5439,15 @@
       "player": "Z.Thomas",
       "category": "receiving",
       "yards": 25.0,
+      "opportunities": 3
+    },
+    {
+      "gameId": "2026_08_CHI_SEA",
+      "team": "CHI",
+      "playerId": "00-0041051",
+      "player": "Z.Thomas",
+      "category": "receiving",
+      "yards": 4.0,
       "opportunities": 3
     },
     {
@@ -23982,6 +24090,15 @@
       "opportunities": 5
     },
     {
+      "gameId": "2026_08_CHI_SEA",
+      "team": "SEA",
+      "playerId": "00-0039793",
+      "player": "A.Barner",
+      "category": "receiving",
+      "yards": 23.0,
+      "opportunities": 5
+    },
+    {
       "gameId": "2026_02_SEA_ARI",
       "team": "SEA",
       "playerId": "00-0039793",
@@ -24079,6 +24196,15 @@
       "category": "receiving",
       "yards": 20.0,
       "opportunities": 2
+    },
+    {
+      "gameId": "2026_08_CHI_SEA",
+      "team": "SEA",
+      "playerId": "00-0033908",
+      "player": "C.Kupp",
+      "category": "receiving",
+      "yards": 7.0,
+      "opportunities": 3
     },
     {
       "gameId": "2026_01_NE_SEA",
@@ -24324,6 +24450,15 @@
       "opportunities": 2
     },
     {
+      "gameId": "2026_08_CHI_SEA",
+      "team": "SEA",
+      "playerId": "00-0039299",
+      "player": "G.Holani",
+      "category": "receiving",
+      "yards": 0.0,
+      "opportunities": 1
+    },
+    {
       "gameId": "2026_01_NE_SEA",
       "team": "SEA",
       "playerId": "00-0039299",
@@ -24387,6 +24522,15 @@
       "opportunities": 5
     },
     {
+      "gameId": "2026_08_CHI_SEA",
+      "team": "SEA",
+      "playerId": "00-0039299",
+      "player": "G.Holani",
+      "category": "rushing",
+      "yards": 9.0,
+      "opportunities": 1
+    },
+    {
       "gameId": "2026_01_NE_SEA",
       "team": "SEA",
       "playerId": "00-0041512",
@@ -24414,6 +24558,15 @@
       "opportunities": 3
     },
     {
+      "gameId": "2026_08_CHI_SEA",
+      "team": "SEA",
+      "playerId": "00-0041512",
+      "player": "J.Price",
+      "category": "receiving",
+      "yards": 8.0,
+      "opportunities": 4
+    },
+    {
       "gameId": "2026_01_NE_SEA",
       "team": "SEA",
       "playerId": "00-0041512",
@@ -24439,6 +24592,15 @@
       "category": "rushing",
       "yards": 15.0,
       "opportunities": 5
+    },
+    {
+      "gameId": "2026_08_CHI_SEA",
+      "team": "SEA",
+      "playerId": "00-0041512",
+      "player": "J.Price",
+      "category": "rushing",
+      "yards": 29.0,
+      "opportunities": 10
     },
     {
       "gameId": "2026_03_SEA_WAS",
@@ -24511,6 +24673,15 @@
       "category": "receiving",
       "yards": 150.0,
       "opportunities": 12
+    },
+    {
+      "gameId": "2026_08_CHI_SEA",
+      "team": "SEA",
+      "playerId": "00-0038543",
+      "player": "J.Smith-Njigba",
+      "category": "receiving",
+      "yards": 118.0,
+      "opportunities": 11
     },
     {
       "gameId": "2026_05_SF_SEA",
@@ -24675,6 +24846,15 @@
       "opportunities": 28
     },
     {
+      "gameId": "2026_08_CHI_SEA",
+      "team": "SEA",
+      "playerId": null,
+      "player": "S.Darnold",
+      "category": "passing",
+      "yards": 188.0,
+      "opportunities": 38
+    },
+    {
       "gameId": "2026_03_SEA_WAS",
       "team": "SEA",
       "playerId": "00-0034869",
@@ -24720,6 +24900,15 @@
       "opportunities": 2
     },
     {
+      "gameId": "2026_08_CHI_SEA",
+      "team": "SEA",
+      "playerId": "00-0034869",
+      "player": "S.Darnold",
+      "category": "rushing",
+      "yards": 20.0,
+      "opportunities": 2
+    },
+    {
       "gameId": "2026_03_SEA_WAS",
       "team": "SEA",
       "playerId": "00-0040648",
@@ -24756,6 +24945,15 @@
       "opportunities": 1
     },
     {
+      "gameId": "2026_08_CHI_SEA",
+      "team": "SEA",
+      "playerId": "00-0040648",
+      "player": "T.Horton",
+      "category": "receiving",
+      "yards": 26.0,
+      "opportunities": 7
+    },
+    {
       "gameId": "2026_06_SEA_DEN",
       "team": "SEA",
       "playerId": "00-0037745",
@@ -24781,6 +24979,24 @@
       "category": "rushing",
       "yards": 8.0,
       "opportunities": 5
+    },
+    {
+      "gameId": "2026_08_CHI_SEA",
+      "team": "SEA",
+      "playerId": "00-0039165",
+      "player": "Z.Charbonnet",
+      "category": "receiving",
+      "yards": 6.0,
+      "opportunities": 4
+    },
+    {
+      "gameId": "2026_08_CHI_SEA",
+      "team": "SEA",
+      "playerId": "00-0039165",
+      "player": "Z.Charbonnet",
+      "category": "rushing",
+      "yards": 23.0,
+      "opportunities": 6
     },
     {
       "gameId": "2026_04_DEN_SF",
