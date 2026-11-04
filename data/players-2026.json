@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-11-03T17:56:37.521753+00:00",
+  "updated": "2026-11-04T18:07:11.033482+00:00",
   "source": "nflverse play-by-play",
   "completedGames": 121,
   "note": "Completed regular-season games only. Passing attempts exclude sacks. Receiver statistics use recorded targets. Per-game averages use completed team games, not individual player appearances. Red-zone targets are passes from the opponent's 20 or closer; inside-10 targets are from the opponent's 10 or closer. Verify totals against official stats.",
@@ -5998,8 +5998,8 @@
         "games": 7,
         "explosiveReceptionsAllowed": 20,
         "explosiveReceptionsAllowedPerGame": 2.86,
-        "yardsAfterCatchAllowed": 842.0,
-        "yardsAfterCatchAllowedPerGame": 120.29
+        "yardsAfterCatchAllowed": 846.0,
+        "yardsAfterCatchAllowedPerGame": 120.86
       }
     },
     "LA": {
@@ -10545,8 +10545,8 @@
           "receptions": 6,
           "receptionsPerGame": 0.75,
           "receivingYards": 65.0,
-          "yardsAfterCatch": 75.0,
-          "yacPerReception": 12.5,
+          "yardsAfterCatch": 79.0,
+          "yacPerReception": 13.17,
           "explosiveReceptions": 1,
           "explosiveRate": 16.7,
           "yardsPerGame": 8.12,
