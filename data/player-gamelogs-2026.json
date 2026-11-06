@@ -1,8 +1,8 @@
 {
   "season": 2026,
-  "updated": "2026-11-05T18:09:25.754139+00:00",
+  "updated": "2026-11-06T17:36:27.097418+00:00",
   "source": "nflverse play-by-play",
-  "completedGames": 121,
+  "completedGames": 122,
   "note": "Completed regular-season games only. One record per observed player, game and statistical category. Players with no recorded opportunities in a category are not included for that game. Missing records must not automatically be treated as zero. Verify against official game logs.",
   "logs": [
     {
@@ -1869,6 +1869,15 @@
       "opportunities": 1
     },
     {
+      "gameId": "2026_09_JAX_BAL",
+      "team": "BAL",
+      "playerId": null,
+      "player": "D.Henry",
+      "category": "passing",
+      "yards": -3.0,
+      "opportunities": 1
+    },
+    {
       "gameId": "2026_01_BAL_IND",
       "team": "BAL",
       "playerId": "00-0032764",
@@ -2013,6 +2022,15 @@
       "opportunities": 11
     },
     {
+      "gameId": "2026_09_JAX_BAL",
+      "team": "BAL",
+      "playerId": "00-0032764",
+      "player": "D.Henry",
+      "category": "rushing",
+      "yards": 57.0,
+      "opportunities": 17
+    },
+    {
       "gameId": "2026_01_BAL_IND",
       "team": "BAL",
       "playerId": "00-0034798",
@@ -2139,12 +2157,30 @@
       "opportunities": 24
     },
     {
+      "gameId": "2026_09_JAX_BAL",
+      "team": "BAL",
+      "playerId": null,
+      "player": "J.Fagnano",
+      "category": "passing",
+      "yards": 60.0,
+      "opportunities": 19
+    },
+    {
       "gameId": "2026_08_BAL_BUF",
       "team": "BAL",
       "playerId": "00-0040981",
       "player": "J.Fagnano",
       "category": "rushing",
       "yards": 3.0,
+      "opportunities": 3
+    },
+    {
+      "gameId": "2026_09_JAX_BAL",
+      "team": "BAL",
+      "playerId": "00-0040981",
+      "player": "J.Fagnano",
+      "category": "rushing",
+      "yards": 13.0,
       "opportunities": 3
     },
     {
@@ -2211,6 +2247,15 @@
       "opportunities": 8
     },
     {
+      "gameId": "2026_09_JAX_BAL",
+      "team": "BAL",
+      "playerId": "00-0034975",
+      "player": "J.Hill",
+      "category": "receiving",
+      "yards": 7.0,
+      "opportunities": 3
+    },
+    {
       "gameId": "2026_01_BAL_IND",
       "team": "BAL",
       "playerId": "00-0034975",
@@ -2272,6 +2317,15 @@
       "category": "rushing",
       "yards": 15.0,
       "opportunities": 3
+    },
+    {
+      "gameId": "2026_09_JAX_BAL",
+      "team": "BAL",
+      "playerId": "00-0034975",
+      "player": "J.Hill",
+      "category": "rushing",
+      "yards": 85.0,
+      "opportunities": 9
     },
     {
       "gameId": "2026_01_BAL_IND",
@@ -2418,6 +2472,15 @@
       "opportunities": 1
     },
     {
+      "gameId": "2026_09_JAX_BAL",
+      "team": "BAL",
+      "playerId": "00-0040075",
+      "player": "L.Wester",
+      "category": "receiving",
+      "yards": 14.0,
+      "opportunities": 1
+    },
+    {
       "gameId": "2026_01_BAL_IND",
       "team": "BAL",
       "playerId": "00-0034753",
@@ -2490,6 +2553,24 @@
       "opportunities": 4
     },
     {
+      "gameId": "2026_09_JAX_BAL",
+      "team": "BAL",
+      "playerId": "00-0034753",
+      "player": "M.Andrews",
+      "category": "receiving",
+      "yards": 19.0,
+      "opportunities": 2
+    },
+    {
+      "gameId": "2026_09_JAX_BAL",
+      "team": "BAL",
+      "playerId": "00-0034753",
+      "player": "M.Andrews",
+      "category": "rushing",
+      "yards": 0.0,
+      "opportunities": 2
+    },
+    {
       "gameId": "2026_01_BAL_IND",
       "team": "BAL",
       "playerId": "00-0040879",
@@ -2524,6 +2605,15 @@
       "category": "receiving",
       "yards": 0.0,
       "opportunities": 1
+    },
+    {
+      "gameId": "2026_09_JAX_BAL",
+      "team": "BAL",
+      "playerId": "00-0040879",
+      "player": "M.Hibner",
+      "category": "receiving",
+      "yards": 5.0,
+      "opportunities": 2
     },
     {
       "gameId": "2026_07_CIN_BAL",
@@ -2614,6 +2704,15 @@
       "category": "receiving",
       "yards": 22.0,
       "opportunities": 3
+    },
+    {
+      "gameId": "2026_09_JAX_BAL",
+      "team": "BAL",
+      "playerId": "00-0036550",
+      "player": "R.Bateman",
+      "category": "receiving",
+      "yards": 6.0,
+      "opportunities": 2
     },
     {
       "gameId": "2026_04_TEN_BAL",
@@ -2769,6 +2868,15 @@
       "opportunities": 5
     },
     {
+      "gameId": "2026_09_JAX_BAL",
+      "team": "BAL",
+      "playerId": "00-0039064",
+      "player": "Z.Flowers",
+      "category": "receiving",
+      "yards": 6.0,
+      "opportunities": 6
+    },
+    {
       "gameId": "2026_03_BAL_DAL",
       "team": "BAL",
       "playerId": "00-0039064",
@@ -2794,6 +2902,15 @@
       "category": "rushing",
       "yards": 1.0,
       "opportunities": 1
+    },
+    {
+      "gameId": "2026_09_JAX_BAL",
+      "team": "BAL",
+      "playerId": "00-0039064",
+      "player": "Z.Flowers",
+      "category": "rushing",
+      "yards": 17.0,
+      "opportunities": 3
     },
     {
       "gameId": "2026_01_BUF_HOU",
@@ -12660,6 +12777,15 @@
       "opportunities": 6
     },
     {
+      "gameId": "2026_09_JAX_BAL",
+      "team": "JAX",
+      "playerId": "00-0032104",
+      "player": "A.Abdullah",
+      "category": "rushing",
+      "yards": 30.0,
+      "opportunities": 7
+    },
+    {
       "gameId": "2026_01_CLE_JAX",
       "team": "JAX",
       "playerId": "00-0038935",
@@ -12720,6 +12846,15 @@
       "player": "B.Strange",
       "category": "receiving",
       "yards": 55.0,
+      "opportunities": 2
+    },
+    {
+      "gameId": "2026_09_JAX_BAL",
+      "team": "JAX",
+      "playerId": "00-0038935",
+      "player": "B.Strange",
+      "category": "receiving",
+      "yards": 22.0,
       "opportunities": 2
     },
     {
@@ -12849,6 +12984,15 @@
       "opportunities": 16
     },
     {
+      "gameId": "2026_09_JAX_BAL",
+      "team": "JAX",
+      "playerId": "00-0040719",
+      "player": "B.Tuten",
+      "category": "rushing",
+      "yards": 29.0,
+      "opportunities": 12
+    },
+    {
       "gameId": "2026_01_CLE_JAX",
       "team": "JAX",
       "playerId": "00-0039893",
@@ -12939,6 +13083,15 @@
       "opportunities": 1
     },
     {
+      "gameId": "2026_09_JAX_BAL",
+      "team": "JAX",
+      "playerId": "00-0038611",
+      "player": "C.Rodriguez",
+      "category": "receiving",
+      "yards": 13.0,
+      "opportunities": 2
+    },
+    {
       "gameId": "2026_01_CLE_JAX",
       "team": "JAX",
       "playerId": "00-0038611",
@@ -13002,6 +13155,15 @@
       "opportunities": 6
     },
     {
+      "gameId": "2026_09_JAX_BAL",
+      "team": "JAX",
+      "playerId": "00-0038611",
+      "player": "C.Rodriguez",
+      "category": "rushing",
+      "yards": 19.0,
+      "opportunities": 10
+    },
+    {
       "gameId": "2026_01_CLE_JAX",
       "team": "JAX",
       "playerId": "00-0041100",
@@ -13044,6 +13206,15 @@
       "player": "J.Cameron",
       "category": "receiving",
       "yards": 0.0,
+      "opportunities": 1
+    },
+    {
+      "gameId": "2026_09_JAX_BAL",
+      "team": "JAX",
+      "playerId": "00-0041100",
+      "player": "J.Cameron",
+      "category": "receiving",
+      "yards": 6.0,
       "opportunities": 1
     },
     {
@@ -13110,6 +13281,15 @@
       "opportunities": 3
     },
     {
+      "gameId": "2026_09_JAX_BAL",
+      "team": "JAX",
+      "playerId": "00-0034960",
+      "player": "J.Meyers",
+      "category": "receiving",
+      "yards": 65.0,
+      "opportunities": 6
+    },
+    {
       "gameId": "2026_01_CLE_JAX",
       "team": "JAX",
       "playerId": "00-0034960",
@@ -13153,6 +13333,15 @@
       "category": "receiving",
       "yards": 0.0,
       "opportunities": 1
+    },
+    {
+      "gameId": "2026_09_JAX_BAL",
+      "team": "JAX",
+      "playerId": "00-0040238",
+      "player": "L.Allen",
+      "category": "receiving",
+      "yards": 0.0,
+      "opportunities": 2
     },
     {
       "gameId": "2026_06_HOU_JAX",
@@ -13216,6 +13405,15 @@
       "category": "receiving",
       "yards": 31.0,
       "opportunities": 1
+    },
+    {
+      "gameId": "2026_09_JAX_BAL",
+      "team": "JAX",
+      "playerId": "00-0041503",
+      "player": "N.Boerkircher",
+      "category": "receiving",
+      "yards": 61.0,
+      "opportunities": 3
     },
     {
       "gameId": "2026_01_CLE_JAX",
@@ -13288,6 +13486,15 @@
       "category": "receiving",
       "yards": 16.0,
       "opportunities": 2
+    },
+    {
+      "gameId": "2026_09_JAX_BAL",
+      "team": "JAX",
+      "playerId": "00-0038606",
+      "player": "P.Washington",
+      "category": "receiving",
+      "yards": 61.0,
+      "opportunities": 7
     },
     {
       "gameId": "2026_04_JAX_CIN",
@@ -13371,6 +13578,15 @@
       "opportunities": 1
     },
     {
+      "gameId": "2026_09_JAX_BAL",
+      "team": "JAX",
+      "playerId": "00-0040718",
+      "player": "T.Hunter",
+      "category": "receiving",
+      "yards": -1.0,
+      "opportunities": 1
+    },
+    {
       "gameId": "2026_01_CLE_JAX",
       "team": "JAX",
       "playerId": "00-0040718",
@@ -13396,6 +13612,15 @@
       "category": "receiving",
       "yards": 8.0,
       "opportunities": 1
+    },
+    {
+      "gameId": "2026_09_JAX_BAL",
+      "team": "JAX",
+      "playerId": "00-0041084",
+      "player": "T.Koziol",
+      "category": "receiving",
+      "yards": 15.0,
+      "opportunities": 2
     },
     {
       "gameId": "2026_01_CLE_JAX",
@@ -13461,6 +13686,15 @@
       "opportunities": 17
     },
     {
+      "gameId": "2026_09_JAX_BAL",
+      "team": "JAX",
+      "playerId": null,
+      "player": "T.Lawrence",
+      "category": "passing",
+      "yards": 242.0,
+      "opportunities": 26
+    },
+    {
       "gameId": "2026_01_CLE_JAX",
       "team": "JAX",
       "playerId": "00-0036971",
@@ -13522,6 +13756,15 @@
       "category": "rushing",
       "yards": 10.0,
       "opportunities": 3
+    },
+    {
+      "gameId": "2026_09_JAX_BAL",
+      "team": "JAX",
+      "playerId": "00-0036971",
+      "player": "T.Lawrence",
+      "category": "rushing",
+      "yards": -1.0,
+      "opportunities": 1
     },
     {
       "gameId": "2026_06_LAC_KC",

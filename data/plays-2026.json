@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-11-05T18:09:18.691796+00:00",
+  "updated": "2026-11-06T17:36:20.223271+00:00",
   "source": "nflverse",
   "definition": "Regular-season passing and rushing plays with valid EPA. Excludes nullified plays when identified. First half includes quarters 1 and 2. These are EPA-eligible play counts, not every official offensive snap. Early-season samples are small.",
   "teams": {
@@ -23,13 +23,13 @@
       "totalOpponentPlays": 545
     },
     "BAL": {
-      "games": 8,
-      "offensivePlaysPerGame": 62.0,
-      "opponentPlaysPerGame": 64.75,
-      "firstHalfOffensivePlays": 34.75,
-      "firstHalfOpponentPlays": 29.25,
-      "totalOffensivePlays": 496,
-      "totalOpponentPlays": 518
+      "games": 9,
+      "offensivePlaysPerGame": 61.33,
+      "opponentPlaysPerGame": 63.67,
+      "firstHalfOffensivePlays": 34.33,
+      "firstHalfOpponentPlays": 28.89,
+      "totalOffensivePlays": 552,
+      "totalOpponentPlays": 573
     },
     "BUF": {
       "games": 7,
@@ -131,13 +131,13 @@
       "totalOpponentPlays": 476
     },
     "JAX": {
-      "games": 7,
-      "offensivePlaysPerGame": 61.29,
-      "opponentPlaysPerGame": 61.86,
-      "firstHalfOffensivePlays": 34.86,
-      "firstHalfOpponentPlays": 28.0,
-      "totalOffensivePlays": 429,
-      "totalOpponentPlays": 433
+      "games": 8,
+      "offensivePlaysPerGame": 60.5,
+      "opponentPlaysPerGame": 61.12,
+      "firstHalfOffensivePlays": 33.75,
+      "firstHalfOpponentPlays": 28.38,
+      "totalOffensivePlays": 484,
+      "totalOpponentPlays": 489
     },
     "KC": {
       "games": 7,
