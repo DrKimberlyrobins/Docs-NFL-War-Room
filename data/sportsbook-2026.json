@@ -3,6 +3,348 @@
   "season": 2026,
   "games": [
     {
+      "away": "HOU",
+      "home": "LAC",
+      "awayName": "Houston Texans",
+      "homeName": "Los Angeles Chargers",
+      "awayLabel": "HOU \u2014 Houston Texans",
+      "homeLabel": "LAC \u2014 Los Angeles Chargers",
+      "matchup": "HOU \u2014 Houston Texans @ LAC \u2014 Los Angeles Chargers",
+      "spread": {
+        "away": {
+          "open": -3.5,
+          "openPrice": null,
+          "current": -4.5,
+          "currentPrice": -112.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": 3.5,
+          "openPrice": -106.0,
+          "current": 5.5,
+          "currentPrice": -108.0,
+          "publicBet": null
+        }
+      },
+      "moneyline": {
+        "away": {
+          "open": null,
+          "openPrice": null,
+          "current": -220.0,
+          "currentPrice": -220.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": null,
+          "openPrice": null,
+          "current": 195.0,
+          "currentPrice": 195.0,
+          "publicBet": null
+        }
+      },
+      "total": {
+        "over": {
+          "open": 42.5,
+          "openPrice": -107.0,
+          "current": 40.5,
+          "currentPrice": -105.0,
+          "publicBet": null
+        },
+        "under": {
+          "open": 42.5,
+          "openPrice": null,
+          "current": 40.5,
+          "currentPrice": -108.0,
+          "publicBet": null
+        }
+      }
+    },
+    {
+      "away": "LV",
+      "home": "SF",
+      "awayName": "Las Vegas Raiders",
+      "homeName": "San Francisco 49ers",
+      "awayLabel": "LV \u2014 Las Vegas Raiders",
+      "homeLabel": "SF \u2014 San Francisco 49ers",
+      "matchup": "LV \u2014 Las Vegas Raiders @ SF \u2014 San Francisco 49ers",
+      "spread": {
+        "away": {
+          "open": 8.5,
+          "openPrice": null,
+          "current": 9.5,
+          "currentPrice": -108.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": -8.5,
+          "openPrice": -110.0,
+          "current": -8.5,
+          "currentPrice": -108.0,
+          "publicBet": null
+        }
+      },
+      "moneyline": {
+        "away": {
+          "open": null,
+          "openPrice": null,
+          "current": 360.0,
+          "currentPrice": 360.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": null,
+          "openPrice": null,
+          "current": -410.0,
+          "currentPrice": -410.0,
+          "publicBet": null
+        }
+      },
+      "total": {
+        "over": {
+          "open": 48.5,
+          "openPrice": -115.0,
+          "current": 51.5,
+          "currentPrice": -108.0,
+          "publicBet": null
+        },
+        "under": {
+          "open": 48.5,
+          "openPrice": null,
+          "current": 51.5,
+          "currentPrice": -102.0,
+          "publicBet": null
+        }
+      }
+    },
+    {
+      "away": "GB",
+      "home": "NE",
+      "awayName": "Green Bay Packers",
+      "homeName": "New England Patriots",
+      "awayLabel": "GB \u2014 Green Bay Packers",
+      "homeLabel": "NE \u2014 New England Patriots",
+      "matchup": "GB \u2014 Green Bay Packers @ NE \u2014 New England Patriots",
+      "spread": {
+        "away": {
+          "open": 2.5,
+          "openPrice": null,
+          "current": 3.5,
+          "currentPrice": -115.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": -2.5,
+          "openPrice": -114.0,
+          "current": -3.0,
+          "currentPrice": -120.0,
+          "publicBet": null
+        }
+      },
+      "moneyline": {
+        "away": {
+          "open": null,
+          "openPrice": null,
+          "current": 165.0,
+          "currentPrice": 165.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": null,
+          "openPrice": null,
+          "current": -176.0,
+          "currentPrice": -176.0,
+          "publicBet": null
+        }
+      },
+      "total": {
+        "over": {
+          "open": 47.5,
+          "openPrice": -110.0,
+          "current": 44.5,
+          "currentPrice": -112.0,
+          "publicBet": null
+        },
+        "under": {
+          "open": 47.5,
+          "openPrice": null,
+          "current": 45.0,
+          "currentPrice": -111.0,
+          "publicBet": null
+        }
+      }
+    },
+    {
+      "away": "ARI",
+      "home": "SEA",
+      "awayName": "Arizona Cardinals",
+      "homeName": "Seattle Seahawks",
+      "awayLabel": "ARI \u2014 Arizona Cardinals",
+      "homeLabel": "SEA \u2014 Seattle Seahawks",
+      "matchup": "ARI \u2014 Arizona Cardinals @ SEA \u2014 Seattle Seahawks",
+      "spread": {
+        "away": {
+          "open": 11.5,
+          "openPrice": null,
+          "current": 9.5,
+          "currentPrice": -108.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": -11.5,
+          "openPrice": -112.0,
+          "current": -8.5,
+          "currentPrice": -115.0,
+          "publicBet": null
+        }
+      },
+      "moneyline": {
+        "away": {
+          "open": null,
+          "openPrice": null,
+          "current": 400.0,
+          "currentPrice": 400.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": null,
+          "openPrice": null,
+          "current": -450.0,
+          "currentPrice": -450.0,
+          "publicBet": null
+        }
+      },
+      "total": {
+        "over": {
+          "open": 44.5,
+          "openPrice": -107.0,
+          "current": 39.5,
+          "currentPrice": -110.0,
+          "publicBet": null
+        },
+        "under": {
+          "open": 44.5,
+          "openPrice": null,
+          "current": 40.5,
+          "currentPrice": -118.0,
+          "publicBet": null
+        }
+      }
+    },
+    {
+      "away": "TB",
+      "home": "CHI",
+      "awayName": "Tampa Bay Buccaneers",
+      "homeName": "Chicago Bears",
+      "awayLabel": "TB \u2014 Tampa Bay Buccaneers",
+      "homeLabel": "CHI \u2014 Chicago Bears",
+      "matchup": "TB \u2014 Tampa Bay Buccaneers @ CHI \u2014 Chicago Bears",
+      "spread": {
+        "away": {
+          "open": 6.0,
+          "openPrice": null,
+          "current": 6.5,
+          "currentPrice": -120.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": -6.0,
+          "openPrice": -110.0,
+          "current": -6.0,
+          "currentPrice": -111.0,
+          "publicBet": null
+        }
+      },
+      "moneyline": {
+        "away": {
+          "open": null,
+          "openPrice": null,
+          "current": 230.0,
+          "currentPrice": 230.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": null,
+          "openPrice": null,
+          "current": -260.0,
+          "currentPrice": -260.0,
+          "publicBet": null
+        }
+      },
+      "total": {
+        "over": {
+          "open": 47.0,
+          "openPrice": -109.0,
+          "current": 47.5,
+          "currentPrice": -102.0,
+          "publicBet": null
+        },
+        "under": {
+          "open": 47.0,
+          "openPrice": null,
+          "current": 47.5,
+          "currentPrice": -110.0,
+          "publicBet": null
+        }
+      }
+    },
+    {
+      "away": "BUF",
+      "home": "MIN",
+      "awayName": "Buffalo Bills",
+      "homeName": "Minnesota Vikings",
+      "awayLabel": "BUF \u2014 Buffalo Bills",
+      "homeLabel": "MIN \u2014 Minnesota Vikings",
+      "matchup": "BUF \u2014 Buffalo Bills @ MIN \u2014 Minnesota Vikings",
+      "spread": {
+        "away": {
+          "open": -3.5,
+          "openPrice": null,
+          "current": -3.0,
+          "currentPrice": -115.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": 3.5,
+          "openPrice": -118.0,
+          "current": 3.0,
+          "currentPrice": -102.0,
+          "publicBet": null
+        }
+      },
+      "moneyline": {
+        "away": {
+          "open": null,
+          "openPrice": null,
+          "current": -174.0,
+          "currentPrice": -174.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": null,
+          "openPrice": null,
+          "current": 146.0,
+          "currentPrice": 146.0,
+          "publicBet": null
+        }
+      },
+      "total": {
+        "over": {
+          "open": 46.5,
+          "openPrice": -104.0,
+          "current": 43.5,
+          "currentPrice": -118.0,
+          "publicBet": null
+        },
+        "under": {
+          "open": 46.5,
+          "openPrice": null,
+          "current": 44.5,
+          "currentPrice": -110.0,
+          "publicBet": null
+        }
+      }
+    },
+    {
       "away": "DEN",
       "home": "CAR",
       "awayName": "Denver Broncos",
@@ -397,348 +739,6 @@
           "openPrice": null,
           "current": 48.0,
           "currentPrice": -111.0,
-          "publicBet": null
-        }
-      }
-    },
-    {
-      "away": "HOU",
-      "home": "LAC",
-      "awayName": "Houston Texans",
-      "homeName": "Los Angeles Chargers",
-      "awayLabel": "HOU \u2014 Houston Texans",
-      "homeLabel": "LAC \u2014 Los Angeles Chargers",
-      "matchup": "HOU \u2014 Houston Texans @ LAC \u2014 Los Angeles Chargers",
-      "spread": {
-        "away": {
-          "open": -3.5,
-          "openPrice": null,
-          "current": -5.0,
-          "currentPrice": -105.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": 3.5,
-          "openPrice": -106.0,
-          "current": 5.5,
-          "currentPrice": -110.0,
-          "publicBet": null
-        }
-      },
-      "moneyline": {
-        "away": {
-          "open": null,
-          "openPrice": null,
-          "current": -230.0,
-          "currentPrice": -230.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": null,
-          "openPrice": null,
-          "current": 200.0,
-          "currentPrice": 200.0,
-          "publicBet": null
-        }
-      },
-      "total": {
-        "over": {
-          "open": 42.5,
-          "openPrice": -107.0,
-          "current": 40.5,
-          "currentPrice": -110.0,
-          "publicBet": null
-        },
-        "under": {
-          "open": 42.5,
-          "openPrice": null,
-          "current": 40.5,
-          "currentPrice": -105.0,
-          "publicBet": null
-        }
-      }
-    },
-    {
-      "away": "LV",
-      "home": "SF",
-      "awayName": "Las Vegas Raiders",
-      "homeName": "San Francisco 49ers",
-      "awayLabel": "LV \u2014 Las Vegas Raiders",
-      "homeLabel": "SF \u2014 San Francisco 49ers",
-      "matchup": "LV \u2014 Las Vegas Raiders @ SF \u2014 San Francisco 49ers",
-      "spread": {
-        "away": {
-          "open": 8.5,
-          "openPrice": null,
-          "current": 9.5,
-          "currentPrice": -110.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": -8.5,
-          "openPrice": -110.0,
-          "current": -8.5,
-          "currentPrice": -112.0,
-          "publicBet": null
-        }
-      },
-      "moneyline": {
-        "away": {
-          "open": null,
-          "openPrice": null,
-          "current": 380.0,
-          "currentPrice": 380.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": null,
-          "openPrice": null,
-          "current": -441.0,
-          "currentPrice": -441.0,
-          "publicBet": null
-        }
-      },
-      "total": {
-        "over": {
-          "open": 48.5,
-          "openPrice": -115.0,
-          "current": 51.5,
-          "currentPrice": -115.0,
-          "publicBet": null
-        },
-        "under": {
-          "open": 48.5,
-          "openPrice": null,
-          "current": 52.0,
-          "currentPrice": -111.0,
-          "publicBet": null
-        }
-      }
-    },
-    {
-      "away": "GB",
-      "home": "NE",
-      "awayName": "Green Bay Packers",
-      "homeName": "New England Patriots",
-      "awayLabel": "GB \u2014 Green Bay Packers",
-      "homeLabel": "NE \u2014 New England Patriots",
-      "matchup": "GB \u2014 Green Bay Packers @ NE \u2014 New England Patriots",
-      "spread": {
-        "away": {
-          "open": 2.5,
-          "openPrice": null,
-          "current": 3.0,
-          "currentPrice": -102.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": -2.5,
-          "openPrice": -114.0,
-          "current": -3.0,
-          "currentPrice": -115.0,
-          "publicBet": null
-        }
-      },
-      "moneyline": {
-        "away": {
-          "open": null,
-          "openPrice": null,
-          "current": 146.0,
-          "currentPrice": 146.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": null,
-          "openPrice": null,
-          "current": -170.0,
-          "currentPrice": -170.0,
-          "publicBet": null
-        }
-      },
-      "total": {
-        "over": {
-          "open": 47.5,
-          "openPrice": -110.0,
-          "current": 44.5,
-          "currentPrice": -110.0,
-          "publicBet": null
-        },
-        "under": {
-          "open": 47.5,
-          "openPrice": null,
-          "current": 44.5,
-          "currentPrice": -108.0,
-          "publicBet": null
-        }
-      }
-    },
-    {
-      "away": "ARI",
-      "home": "SEA",
-      "awayName": "Arizona Cardinals",
-      "homeName": "Seattle Seahawks",
-      "awayLabel": "ARI \u2014 Arizona Cardinals",
-      "homeLabel": "SEA \u2014 Seattle Seahawks",
-      "matchup": "ARI \u2014 Arizona Cardinals @ SEA \u2014 Seattle Seahawks",
-      "spread": {
-        "away": {
-          "open": 11.5,
-          "openPrice": null,
-          "current": 8.5,
-          "currentPrice": -105.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": -11.5,
-          "openPrice": -112.0,
-          "current": -8.5,
-          "currentPrice": -110.0,
-          "publicBet": null
-        }
-      },
-      "moneyline": {
-        "away": {
-          "open": null,
-          "openPrice": null,
-          "current": 350.0,
-          "currentPrice": 350.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": null,
-          "openPrice": null,
-          "current": -417.0,
-          "currentPrice": -417.0,
-          "publicBet": null
-        }
-      },
-      "total": {
-        "over": {
-          "open": 44.5,
-          "openPrice": -107.0,
-          "current": 39.5,
-          "currentPrice": -110.0,
-          "publicBet": null
-        },
-        "under": {
-          "open": 44.5,
-          "openPrice": null,
-          "current": 40.0,
-          "currentPrice": -114.0,
-          "publicBet": null
-        }
-      }
-    },
-    {
-      "away": "TB",
-      "home": "CHI",
-      "awayName": "Tampa Bay Buccaneers",
-      "homeName": "Chicago Bears",
-      "awayLabel": "TB \u2014 Tampa Bay Buccaneers",
-      "homeLabel": "CHI \u2014 Chicago Bears",
-      "matchup": "TB \u2014 Tampa Bay Buccaneers @ CHI \u2014 Chicago Bears",
-      "spread": {
-        "away": {
-          "open": 6.0,
-          "openPrice": null,
-          "current": 6.5,
-          "currentPrice": -120.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": -6.0,
-          "openPrice": -110.0,
-          "current": -6.0,
-          "currentPrice": -108.0,
-          "publicBet": null
-        }
-      },
-      "moneyline": {
-        "away": {
-          "open": null,
-          "openPrice": null,
-          "current": 225.0,
-          "currentPrice": 225.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": null,
-          "openPrice": null,
-          "current": -270.0,
-          "currentPrice": -270.0,
-          "publicBet": null
-        }
-      },
-      "total": {
-        "over": {
-          "open": 47.0,
-          "openPrice": -109.0,
-          "current": 47.5,
-          "currentPrice": -108.0,
-          "publicBet": null
-        },
-        "under": {
-          "open": 47.0,
-          "openPrice": null,
-          "current": 47.5,
-          "currentPrice": -110.0,
-          "publicBet": null
-        }
-      }
-    },
-    {
-      "away": "BUF",
-      "home": "MIN",
-      "awayName": "Buffalo Bills",
-      "homeName": "Minnesota Vikings",
-      "awayLabel": "BUF \u2014 Buffalo Bills",
-      "homeLabel": "MIN \u2014 Minnesota Vikings",
-      "matchup": "BUF \u2014 Buffalo Bills @ MIN \u2014 Minnesota Vikings",
-      "spread": {
-        "away": {
-          "open": -3.5,
-          "openPrice": null,
-          "current": -3.0,
-          "currentPrice": -115.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": 3.5,
-          "openPrice": -118.0,
-          "current": 3.0,
-          "currentPrice": -102.0,
-          "publicBet": null
-        }
-      },
-      "moneyline": {
-        "away": {
-          "open": null,
-          "openPrice": null,
-          "current": -174.0,
-          "currentPrice": -174.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": null,
-          "openPrice": null,
-          "current": 146.0,
-          "currentPrice": 146.0,
-          "publicBet": null
-        }
-      },
-      "total": {
-        "over": {
-          "open": 46.5,
-          "openPrice": -104.0,
-          "current": 43.5,
-          "currentPrice": -118.0,
-          "publicBet": null
-        },
-        "under": {
-          "open": 46.5,
-          "openPrice": null,
-          "current": 44.5,
-          "currentPrice": -110.0,
           "publicBet": null
         }
       }
