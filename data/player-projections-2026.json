@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-11-08T16:44:55.232094+00:00",
+  "updated": "2026-11-09T20:53:37.472037+00:00",
   "source": "NFL player game logs",
   "note": "Descriptive statistics only. Missing games are not assumed to be zero. Combined yards include only games with observations in both categories. No projected probabilities are published until participation and model validation requirements are satisfied.",
   "players": [
@@ -10,10 +10,10 @@
       "name": "D.Duvernay",
       "categories": {
         "receiving": {
-          "recordedGames": 1,
-          "averageYards": 14.0,
-          "standardDeviation": null,
-          "lowestYards": 14.0,
+          "recordedGames": 2,
+          "averageYards": 11.0,
+          "standardDeviation": 4.24,
+          "lowestYards": 8.0,
           "highestYards": 14.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
@@ -26,12 +26,28 @@
       "name": "E.Higgins",
       "categories": {
         "receiving": {
-          "recordedGames": 6,
-          "averageYards": 25.17,
-          "standardDeviation": 16.63,
+          "recordedGames": 7,
+          "averageYards": 23.14,
+          "standardDeviation": 16.1,
           "lowestYards": 10.0,
           "highestYards": 57.0,
           "probabilityStatus": "Requires model validation",
+          "projectedProbability": null
+        }
+      }
+    },
+    {
+      "team": "ARI",
+      "playerId": "00-0038397",
+      "name": "E.Hull",
+      "categories": {
+        "receiving": {
+          "recordedGames": 1,
+          "averageYards": 0.0,
+          "standardDeviation": null,
+          "lowestYards": 0.0,
+          "highestYards": 0.0,
+          "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
       }
@@ -42,11 +58,27 @@
       "name": "G.Minshew",
       "categories": {
         "passing": {
-          "recordedGames": 1,
-          "averageYards": 188.0,
-          "standardDeviation": null,
-          "lowestYards": 188.0,
+          "recordedGames": 2,
+          "averageYards": 177.0,
+          "standardDeviation": 15.56,
+          "lowestYards": 166.0,
           "highestYards": 188.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        }
+      }
+    },
+    {
+      "team": "ARI",
+      "playerId": "00-0035289",
+      "name": "G.Minshew",
+      "categories": {
+        "rushing": {
+          "recordedGames": 1,
+          "averageYards": 4.0,
+          "standardDeviation": null,
+          "lowestYards": 4.0,
+          "highestYards": 4.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
@@ -222,9 +254,9 @@
       "name": "Mi.Wilson",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 60.75,
-          "standardDeviation": 34.12,
+          "recordedGames": 9,
+          "averageYards": 60.67,
+          "standardDeviation": 31.92,
           "lowestYards": 18.0,
           "highestYards": 111.0,
           "probabilityStatus": "Requires model validation",
@@ -256,9 +288,9 @@
       "name": "R.Virgil",
       "categories": {
         "receiving": {
-          "recordedGames": 2,
-          "averageYards": 14.5,
-          "standardDeviation": 20.51,
+          "recordedGames": 3,
+          "averageYards": 18.0,
+          "standardDeviation": 15.72,
           "lowestYards": 0.0,
           "highestYards": 29.0,
           "probabilityStatus": "Insufficient verified games",
@@ -272,10 +304,10 @@
       "name": "S.Fehoko",
       "categories": {
         "receiving": {
-          "recordedGames": 1,
-          "averageYards": 17.0,
-          "standardDeviation": null,
-          "lowestYards": 17.0,
+          "recordedGames": 2,
+          "averageYards": 8.5,
+          "standardDeviation": 12.02,
+          "lowestYards": 0.0,
           "highestYards": 17.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
@@ -288,27 +320,27 @@
       "name": "T.Allgeier",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 16.0,
-          "standardDeviation": 13.52,
-          "lowestYards": 7.0,
+          "recordedGames": 9,
+          "averageYards": 14.22,
+          "standardDeviation": 13.73,
+          "lowestYards": 0.0,
           "highestYards": 44.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 8,
-          "averageYards": 40.38,
-          "standardDeviation": 47.82,
+          "recordedGames": 9,
+          "averageYards": 41.0,
+          "standardDeviation": 44.77,
           "lowestYards": -1.0,
           "highestYards": 147.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 8,
-          "averageYards": 56.38,
-          "standardDeviation": 58.26,
+          "recordedGames": 9,
+          "averageYards": 55.22,
+          "standardDeviation": 54.61,
           "lowestYards": 9.0,
           "highestYards": 191.0,
           "probabilityStatus": "Requires model validation",
@@ -322,9 +354,9 @@
       "name": "T.McBride",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 68.0,
-          "standardDeviation": 26.65,
+          "recordedGames": 9,
+          "averageYards": 66.44,
+          "standardDeviation": 25.36,
           "lowestYards": 31.0,
           "highestYards": 111.0,
           "probabilityStatus": "Requires model validation",
@@ -338,10 +370,10 @@
       "name": "T.Quitoriano",
       "categories": {
         "receiving": {
-          "recordedGames": 1,
-          "averageYards": 15.0,
-          "standardDeviation": null,
-          "lowestYards": 15.0,
+          "recordedGames": 2,
+          "averageYards": 11.5,
+          "standardDeviation": 4.95,
+          "lowestYards": 8.0,
           "highestYards": 15.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
@@ -401,30 +433,30 @@
     {
       "team": "ATL",
       "playerId": "00-0038542",
-      "name": "Bi.Robinson",
+      "name": "B.Robinson",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 23.62,
-          "standardDeviation": 32.06,
+          "recordedGames": 9,
+          "averageYards": 26.22,
+          "standardDeviation": 30.98,
           "lowestYards": -8.0,
           "highestYards": 90.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 8,
-          "averageYards": 97.5,
-          "standardDeviation": 47.13,
+          "recordedGames": 9,
+          "averageYards": 97.78,
+          "standardDeviation": 44.09,
           "lowestYards": 61.0,
           "highestYards": 194.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 8,
-          "averageYards": 121.12,
-          "standardDeviation": 53.81,
+          "recordedGames": 9,
+          "averageYards": 124.0,
+          "standardDeviation": 51.07,
           "lowestYards": 53.0,
           "highestYards": 213.0,
           "probabilityStatus": "Requires model validation",
@@ -472,9 +504,9 @@
       "name": "C.Blair",
       "categories": {
         "receiving": {
-          "recordedGames": 3,
-          "averageYards": 2.0,
-          "standardDeviation": 3.46,
+          "recordedGames": 4,
+          "averageYards": 1.5,
+          "standardDeviation": 3.0,
           "lowestYards": 0.0,
           "highestYards": 6.0,
           "probabilityStatus": "Insufficient verified games",
@@ -520,28 +552,28 @@
       "name": "C.Woerner",
       "categories": {
         "receiving": {
-          "recordedGames": 5,
-          "averageYards": 4.4,
-          "standardDeviation": 6.19,
+          "recordedGames": 6,
+          "averageYards": 3.83,
+          "standardDeviation": 5.71,
           "lowestYards": 0.0,
           "highestYards": 13.0,
-          "probabilityStatus": "Insufficient verified games",
+          "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 1,
-          "averageYards": 3.0,
-          "standardDeviation": null,
-          "lowestYards": 3.0,
+          "recordedGames": 2,
+          "averageYards": 1.5,
+          "standardDeviation": 2.12,
+          "lowestYards": 0.0,
           "highestYards": 3.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 1,
-          "averageYards": 12.0,
-          "standardDeviation": null,
-          "lowestYards": 12.0,
+          "recordedGames": 2,
+          "averageYards": 6.5,
+          "standardDeviation": 7.78,
+          "lowestYards": 1.0,
           "highestYards": 12.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
@@ -554,9 +586,9 @@
       "name": "D.London",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 78.0,
-          "standardDeviation": 58.32,
+          "recordedGames": 9,
+          "averageYards": 76.89,
+          "standardDeviation": 54.66,
           "lowestYards": 8.0,
           "highestYards": 194.0,
           "probabilityStatus": "Requires model validation",
@@ -588,9 +620,9 @@
       "name": "J.Dotson",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 42.12,
-          "standardDeviation": 35.59,
+          "recordedGames": 9,
+          "averageYards": 39.22,
+          "standardDeviation": 34.42,
           "lowestYards": 6.0,
           "highestYards": 95.0,
           "probabilityStatus": "Requires model validation",
@@ -652,28 +684,28 @@
       "name": "K.Herbert",
       "categories": {
         "receiving": {
-          "recordedGames": 2,
-          "averageYards": 11.0,
-          "standardDeviation": 11.31,
-          "lowestYards": 3.0,
+          "recordedGames": 3,
+          "averageYards": 8.0,
+          "standardDeviation": 9.54,
+          "lowestYards": 2.0,
           "highestYards": 19.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 2,
-          "averageYards": 10.5,
-          "standardDeviation": 2.12,
-          "lowestYards": 9.0,
+          "recordedGames": 3,
+          "averageYards": 9.33,
+          "standardDeviation": 2.52,
+          "lowestYards": 7.0,
           "highestYards": 12.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 2,
-          "averageYards": 21.5,
-          "standardDeviation": 9.19,
-          "lowestYards": 15.0,
+          "recordedGames": 3,
+          "averageYards": 17.33,
+          "standardDeviation": 9.71,
+          "lowestYards": 9.0,
           "highestYards": 28.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
@@ -686,9 +718,9 @@
       "name": "K.Pitts",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 24.62,
-          "standardDeviation": 22.33,
+          "recordedGames": 9,
+          "averageYards": 24.44,
+          "standardDeviation": 20.9,
           "lowestYards": 0.0,
           "highestYards": 60.0,
           "probabilityStatus": "Requires model validation",
@@ -702,9 +734,9 @@
       "name": "M.Penix",
       "categories": {
         "passing": {
-          "recordedGames": 6,
-          "averageYards": 213.67,
-          "standardDeviation": 45.96,
+          "recordedGames": 7,
+          "averageYards": 206.29,
+          "standardDeviation": 46.28,
           "lowestYards": 125.0,
           "highestYards": 256.0,
           "probabilityStatus": "Requires model validation",
@@ -718,11 +750,11 @@
       "name": "M.Penix",
       "categories": {
         "rushing": {
-          "recordedGames": 6,
-          "averageYards": 2.5,
-          "standardDeviation": 5.61,
+          "recordedGames": 7,
+          "averageYards": 9.29,
+          "standardDeviation": 18.67,
           "lowestYards": -2.0,
-          "highestYards": 11.0,
+          "highestYards": 50.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         }
@@ -750,9 +782,9 @@
       "name": "O.Zaccheaus",
       "categories": {
         "receiving": {
-          "recordedGames": 6,
-          "averageYards": 3.5,
-          "standardDeviation": 3.39,
+          "recordedGames": 7,
+          "averageYards": 3.71,
+          "standardDeviation": 3.15,
           "lowestYards": 0.0,
           "highestYards": 9.0,
           "probabilityStatus": "Requires model validation",
@@ -1638,9 +1670,9 @@
       "name": "B.Tremayne",
       "categories": {
         "receiving": {
-          "recordedGames": 4,
-          "averageYards": 31.5,
-          "standardDeviation": 36.81,
+          "recordedGames": 5,
+          "averageYards": 25.2,
+          "standardDeviation": 34.85,
           "lowestYards": 0.0,
           "highestYards": 83.0,
           "probabilityStatus": "Insufficient verified games",
@@ -1654,9 +1686,9 @@
       "name": "B.Young",
       "categories": {
         "passing": {
-          "recordedGames": 7,
-          "averageYards": 274.43,
-          "standardDeviation": 67.88,
+          "recordedGames": 8,
+          "averageYards": 274.62,
+          "standardDeviation": 62.85,
           "lowestYards": 163.0,
           "highestYards": 361.0,
           "probabilityStatus": "Requires model validation",
@@ -1670,12 +1702,12 @@
       "name": "B.Young",
       "categories": {
         "rushing": {
-          "recordedGames": 5,
-          "averageYards": 6.8,
-          "standardDeviation": 2.77,
+          "recordedGames": 6,
+          "averageYards": 7.83,
+          "standardDeviation": 3.54,
           "lowestYards": 3.0,
-          "highestYards": 10.0,
-          "probabilityStatus": "Insufficient verified games",
+          "highestYards": 13.0,
+          "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         }
       }
@@ -1686,27 +1718,27 @@
       "name": "C.Hubbard",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 21.43,
-          "standardDeviation": 15.04,
+          "recordedGames": 8,
+          "averageYards": 20.88,
+          "standardDeviation": 14.01,
           "lowestYards": 1.0,
           "highestYards": 38.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 7,
-          "averageYards": 77.14,
-          "standardDeviation": 34.67,
+          "recordedGames": 8,
+          "averageYards": 77.38,
+          "standardDeviation": 32.1,
           "lowestYards": 33.0,
           "highestYards": 122.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 7,
-          "averageYards": 98.57,
-          "standardDeviation": 28.27,
+          "recordedGames": 8,
+          "averageYards": 98.25,
+          "standardDeviation": 26.18,
           "lowestYards": 60.0,
           "highestYards": 129.0,
           "probabilityStatus": "Requires model validation",
@@ -1736,11 +1768,11 @@
       "name": "D.Waller",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 29.86,
-          "standardDeviation": 18.93,
+          "recordedGames": 8,
+          "averageYards": 37.38,
+          "standardDeviation": 27.56,
           "lowestYards": 0.0,
-          "highestYards": 51.0,
+          "highestYards": 90.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         }
@@ -1786,12 +1818,30 @@
       "name": "J.Coker",
       "categories": {
         "receiving": {
-          "recordedGames": 6,
-          "averageYards": 60.5,
-          "standardDeviation": 49.95,
+          "recordedGames": 7,
+          "averageYards": 56.0,
+          "standardDeviation": 47.13,
           "lowestYards": 9.0,
           "highestYards": 138.0,
           "probabilityStatus": "Requires model validation",
+          "projectedProbability": null
+        },
+        "rushing": {
+          "recordedGames": 1,
+          "averageYards": -3.0,
+          "standardDeviation": null,
+          "lowestYards": -3.0,
+          "highestYards": -3.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        },
+        "combinedRushingReceiving": {
+          "recordedGames": 1,
+          "averageYards": 26.0,
+          "standardDeviation": null,
+          "lowestYards": 26.0,
+          "highestYards": 26.0,
+          "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
       }
@@ -1802,12 +1852,12 @@
       "name": "J.Metchie",
       "categories": {
         "receiving": {
-          "recordedGames": 5,
-          "averageYards": 22.8,
-          "standardDeviation": 8.7,
+          "recordedGames": 6,
+          "averageYards": 25.67,
+          "standardDeviation": 10.48,
           "lowestYards": 14.0,
-          "highestYards": 37.0,
-          "probabilityStatus": "Insufficient verified games",
+          "highestYards": 40.0,
+          "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         }
       }
@@ -1882,9 +1932,9 @@
       "name": "M.Evans",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 18.14,
-          "standardDeviation": 14.78,
+          "recordedGames": 8,
+          "averageYards": 18.38,
+          "standardDeviation": 13.7,
           "lowestYards": 0.0,
           "highestYards": 39.0,
           "probabilityStatus": "Requires model validation",
@@ -1925,9 +1975,9 @@
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 3,
-          "averageYards": 2.67,
-          "standardDeviation": 4.73,
+          "recordedGames": 4,
+          "averageYards": 3.75,
+          "standardDeviation": 4.43,
           "lowestYards": -1.0,
           "highestYards": 8.0,
           "probabilityStatus": "Insufficient verified games",
@@ -1950,9 +2000,9 @@
       "name": "T.McMillan",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 81.29,
-          "standardDeviation": 56.4,
+          "recordedGames": 8,
+          "averageYards": 78.12,
+          "standardDeviation": 52.98,
           "lowestYards": 17.0,
           "highestYards": 192.0,
           "probabilityStatus": "Requires model validation",
@@ -1966,9 +2016,9 @@
       "name": "T.Tremble",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 22.14,
-          "standardDeviation": 16.2,
+          "recordedGames": 8,
+          "averageYards": 22.38,
+          "standardDeviation": 15.01,
           "lowestYards": 4.0,
           "highestYards": 46.0,
           "probabilityStatus": "Requires model validation",
@@ -2046,9 +2096,9 @@
       "name": "C.Loveland",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 38.62,
-          "standardDeviation": 28.92,
+          "recordedGames": 9,
+          "averageYards": 40.33,
+          "standardDeviation": 27.54,
           "lowestYards": 0.0,
           "highestYards": 69.0,
           "probabilityStatus": "Requires model validation",
@@ -2062,12 +2112,12 @@
       "name": "C.Williams",
       "categories": {
         "passing": {
-          "recordedGames": 5,
-          "averageYards": 253.4,
-          "standardDeviation": 69.36,
+          "recordedGames": 6,
+          "averageYards": 257.67,
+          "standardDeviation": 62.91,
           "lowestYards": 138.0,
           "highestYards": 308.0,
-          "probabilityStatus": "Insufficient verified games",
+          "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         }
       }
@@ -2078,12 +2128,12 @@
       "name": "C.Williams",
       "categories": {
         "rushing": {
-          "recordedGames": 5,
-          "averageYards": 25.8,
-          "standardDeviation": 27.36,
+          "recordedGames": 6,
+          "averageYards": 24.17,
+          "standardDeviation": 24.8,
           "lowestYards": 1.0,
           "highestYards": 65.0,
-          "probabilityStatus": "Insufficient verified games",
+          "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         }
       }
@@ -2094,28 +2144,28 @@
       "name": "D.Swift",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 20.25,
-          "standardDeviation": 16.16,
-          "lowestYards": 4.0,
+          "recordedGames": 9,
+          "averageYards": 18.0,
+          "standardDeviation": 16.55,
+          "lowestYards": 0.0,
           "highestYards": 54.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 8,
-          "averageYards": 68.12,
-          "standardDeviation": 27.58,
-          "lowestYards": 43.0,
+          "recordedGames": 9,
+          "averageYards": 64.0,
+          "standardDeviation": 28.61,
+          "lowestYards": 31.0,
           "highestYards": 124.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 8,
-          "averageYards": 88.38,
-          "standardDeviation": 20.93,
-          "lowestYards": 70.0,
+          "recordedGames": 9,
+          "averageYards": 82.0,
+          "standardDeviation": 27.37,
+          "lowestYards": 31.0,
           "highestYards": 134.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
@@ -2178,9 +2228,9 @@
       "name": "K.Raymond",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 32.25,
-          "standardDeviation": 35.91,
+          "recordedGames": 9,
+          "averageYards": 32.22,
+          "standardDeviation": 33.59,
           "lowestYards": 0.0,
           "highestYards": 90.0,
           "probabilityStatus": "Requires model validation",
@@ -2212,9 +2262,9 @@
       "name": "L.Burden",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 68.38,
-          "standardDeviation": 30.59,
+          "recordedGames": 9,
+          "averageYards": 71.56,
+          "standardDeviation": 30.17,
           "lowestYards": 32.0,
           "highestYards": 130.0,
           "probabilityStatus": "Requires model validation",
@@ -2280,12 +2330,28 @@
       "name": "R.Odunze",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 58.5,
-          "standardDeviation": 22.03,
+          "recordedGames": 9,
+          "averageYards": 58.67,
+          "standardDeviation": 20.62,
           "lowestYards": 39.0,
           "highestYards": 94.0,
           "probabilityStatus": "Requires model validation",
+          "projectedProbability": null
+        }
+      }
+    },
+    {
+      "team": "CHI",
+      "playerId": "00-0036020",
+      "name": "S.Ahmed",
+      "categories": {
+        "rushing": {
+          "recordedGames": 1,
+          "averageYards": 25.0,
+          "standardDeviation": null,
+          "lowestYards": 25.0,
+          "highestYards": 25.0,
+          "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
       }
@@ -2296,11 +2362,11 @@
       "name": "S.Roush",
       "categories": {
         "receiving": {
-          "recordedGames": 3,
-          "averageYards": 11.0,
-          "standardDeviation": 4.36,
+          "recordedGames": 4,
+          "averageYards": 14.0,
+          "standardDeviation": 6.98,
           "lowestYards": 8.0,
-          "highestYards": 16.0,
+          "highestYards": 23.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
@@ -2344,9 +2410,9 @@
       "name": "Z.Thomas",
       "categories": {
         "receiving": {
-          "recordedGames": 4,
-          "averageYards": 10.25,
-          "standardDeviation": 10.69,
+          "recordedGames": 5,
+          "averageYards": 10.8,
+          "standardDeviation": 9.34,
           "lowestYards": 1.0,
           "highestYards": 25.0,
           "probabilityStatus": "Insufficient verified games",
@@ -2394,27 +2460,27 @@
       "name": "C.Brown",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 27.0,
-          "standardDeviation": 23.83,
+          "recordedGames": 8,
+          "averageYards": 25.88,
+          "standardDeviation": 22.29,
           "lowestYards": 2.0,
           "highestYards": 71.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 7,
-          "averageYards": 48.57,
-          "standardDeviation": 22.02,
+          "recordedGames": 8,
+          "averageYards": 49.62,
+          "standardDeviation": 20.6,
           "lowestYards": 10.0,
           "highestYards": 80.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 7,
-          "averageYards": 75.57,
-          "standardDeviation": 14.82,
+          "recordedGames": 8,
+          "averageYards": 75.5,
+          "standardDeviation": 13.72,
           "lowestYards": 58.0,
           "highestYards": 101.0,
           "probabilityStatus": "Requires model validation",
@@ -2444,29 +2510,29 @@
       "name": "D.Meyers",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 25.0,
-          "standardDeviation": 28.33,
+          "recordedGames": 8,
+          "averageYards": 27.75,
+          "standardDeviation": 27.35,
           "lowestYards": 0.0,
           "highestYards": 82.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 1,
-          "averageYards": 10.0,
-          "standardDeviation": null,
+          "recordedGames": 2,
+          "averageYards": 13.0,
+          "standardDeviation": 4.24,
           "lowestYards": 10.0,
-          "highestYards": 10.0,
+          "highestYards": 16.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 1,
-          "averageYards": 28.0,
-          "standardDeviation": null,
+          "recordedGames": 2,
+          "averageYards": 45.5,
+          "standardDeviation": 24.75,
           "lowestYards": 28.0,
-          "highestYards": 28.0,
+          "highestYards": 63.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
@@ -2510,9 +2576,9 @@
       "name": "J.Burrow",
       "categories": {
         "passing": {
-          "recordedGames": 7,
-          "averageYards": 302.14,
-          "standardDeviation": 104.76,
+          "recordedGames": 8,
+          "averageYards": 298.25,
+          "standardDeviation": 97.61,
           "lowestYards": 190.0,
           "highestYards": 462.0,
           "probabilityStatus": "Requires model validation",
@@ -2526,9 +2592,9 @@
       "name": "J.Burrow",
       "categories": {
         "rushing": {
-          "recordedGames": 7,
-          "averageYards": 10.0,
-          "standardDeviation": 6.45,
+          "recordedGames": 8,
+          "averageYards": 9.62,
+          "standardDeviation": 6.07,
           "lowestYards": -1.0,
           "highestYards": 20.0,
           "probabilityStatus": "Requires model validation",
@@ -2542,11 +2608,11 @@
       "name": "J.Chase",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 70.29,
-          "standardDeviation": 43.16,
+          "recordedGames": 8,
+          "averageYards": 80.88,
+          "standardDeviation": 49.94,
           "lowestYards": 12.0,
-          "highestYards": 141.0,
+          "highestYards": 155.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         }
@@ -2558,11 +2624,11 @@
       "name": "J.Endries",
       "categories": {
         "receiving": {
-          "recordedGames": 1,
-          "averageYards": 1.0,
-          "standardDeviation": null,
+          "recordedGames": 2,
+          "averageYards": 2.5,
+          "standardDeviation": 2.12,
           "lowestYards": 1.0,
-          "highestYards": 1.0,
+          "highestYards": 4.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
@@ -2574,9 +2640,9 @@
       "name": "M.Gesicki",
       "categories": {
         "receiving": {
-          "recordedGames": 6,
-          "averageYards": 40.17,
-          "standardDeviation": 32.25,
+          "recordedGames": 7,
+          "averageYards": 36.0,
+          "standardDeviation": 31.44,
           "lowestYards": 4.0,
           "highestYards": 78.0,
           "probabilityStatus": "Requires model validation",
@@ -2590,10 +2656,10 @@
       "name": "M.Tinsley",
       "categories": {
         "receiving": {
-          "recordedGames": 2,
-          "averageYards": 28.0,
-          "standardDeviation": 29.7,
-          "lowestYards": 7.0,
+          "recordedGames": 3,
+          "averageYards": 20.0,
+          "standardDeviation": 25.16,
+          "lowestYards": 4.0,
           "highestYards": 49.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
@@ -2615,9 +2681,9 @@
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 7,
-          "averageYards": 19.43,
-          "standardDeviation": 22.0,
+          "recordedGames": 8,
+          "averageYards": 22.38,
+          "standardDeviation": 22.01,
           "lowestYards": 6.0,
           "highestYards": 68.0,
           "probabilityStatus": "Requires model validation",
@@ -2656,9 +2722,9 @@
       "name": "T.Higgins",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 103.71,
-          "standardDeviation": 52.24,
+          "recordedGames": 8,
+          "averageYards": 94.75,
+          "standardDeviation": 54.6,
           "lowestYards": 22.0,
           "highestYards": 157.0,
           "probabilityStatus": "Requires model validation",
@@ -2704,10 +2770,10 @@
       "name": "B.Whiteheart",
       "categories": {
         "receiving": {
-          "recordedGames": 4,
-          "averageYards": 12.0,
-          "standardDeviation": 4.24,
-          "lowestYards": 8.0,
+          "recordedGames": 5,
+          "averageYards": 9.6,
+          "standardDeviation": 6.5,
+          "lowestYards": 0.0,
           "highestYards": 17.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
@@ -2736,11 +2802,11 @@
       "name": "D.Boston",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 51.12,
-          "standardDeviation": 28.38,
+          "recordedGames": 9,
+          "averageYards": 56.33,
+          "standardDeviation": 30.8,
           "lowestYards": 15.0,
-          "highestYards": 95.0,
+          "highestYards": 98.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         }
@@ -2752,28 +2818,28 @@
       "name": "D.Sampson",
       "categories": {
         "receiving": {
-          "recordedGames": 2,
-          "averageYards": 47.0,
-          "standardDeviation": 21.21,
-          "lowestYards": 32.0,
+          "recordedGames": 3,
+          "averageYards": 40.33,
+          "standardDeviation": 18.93,
+          "lowestYards": 27.0,
           "highestYards": 62.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 2,
-          "averageYards": 26.0,
-          "standardDeviation": 26.87,
+          "recordedGames": 3,
+          "averageYards": 24.33,
+          "standardDeviation": 19.22,
           "lowestYards": 7.0,
           "highestYards": 45.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 2,
-          "averageYards": 73.0,
-          "standardDeviation": 5.66,
-          "lowestYards": 69.0,
+          "recordedGames": 3,
+          "averageYards": 64.67,
+          "standardDeviation": 14.98,
+          "lowestYards": 48.0,
           "highestYards": 77.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
@@ -2818,9 +2884,9 @@
       "name": "H.Fannin",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 51.38,
-          "standardDeviation": 50.24,
+          "recordedGames": 9,
+          "averageYards": 50.33,
+          "standardDeviation": 47.1,
           "lowestYards": 4.0,
           "highestYards": 154.0,
           "probabilityStatus": "Requires model validation",
@@ -2850,9 +2916,9 @@
       "name": "J.Jeudy",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 24.43,
-          "standardDeviation": 23.66,
+          "recordedGames": 8,
+          "averageYards": 26.0,
+          "standardDeviation": 22.35,
           "lowestYards": 0.0,
           "highestYards": 69.0,
           "probabilityStatus": "Requires model validation",
@@ -2900,27 +2966,27 @@
       "name": "K.Concepcion",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 44.0,
-          "standardDeviation": 39.14,
+          "recordedGames": 9,
+          "averageYards": 48.56,
+          "standardDeviation": 39.08,
           "lowestYards": 5.0,
           "highestYards": 129.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 4,
-          "averageYards": 8.5,
-          "standardDeviation": 12.97,
+          "recordedGames": 5,
+          "averageYards": 7.4,
+          "standardDeviation": 11.5,
           "lowestYards": -6.0,
           "highestYards": 23.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 4,
-          "averageYards": 67.75,
-          "standardDeviation": 58.06,
+          "recordedGames": 5,
+          "averageYards": 71.8,
+          "standardDeviation": 51.09,
           "lowestYards": 22.0,
           "highestYards": 152.0,
           "probabilityStatus": "Insufficient verified games",
@@ -2964,32 +3030,48 @@
     },
     {
       "team": "CLE",
+      "playerId": "00-0039920",
+      "name": "M.Corley",
+      "categories": {
+        "receiving": {
+          "recordedGames": 1,
+          "averageYards": 0.0,
+          "standardDeviation": null,
+          "lowestYards": 0.0,
+          "highestYards": 0.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        }
+      }
+    },
+    {
+      "team": "CLE",
       "playerId": "00-0040784",
       "name": "Q.Judkins",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 19.14,
-          "standardDeviation": 13.28,
-          "lowestYards": 6.0,
+          "recordedGames": 8,
+          "averageYards": 17.0,
+          "standardDeviation": 13.71,
+          "lowestYards": 2.0,
           "highestYards": 43.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 7,
-          "averageYards": 48.86,
-          "standardDeviation": 26.79,
+          "recordedGames": 8,
+          "averageYards": 48.12,
+          "standardDeviation": 24.89,
           "lowestYards": 21.0,
           "highestYards": 96.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 7,
-          "averageYards": 68.0,
-          "standardDeviation": 24.53,
-          "lowestYards": 48.0,
+          "recordedGames": 8,
+          "averageYards": 65.12,
+          "standardDeviation": 24.12,
+          "lowestYards": 45.0,
           "highestYards": 104.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
@@ -3036,11 +3118,27 @@
       "name": "S.Sanders",
       "categories": {
         "passing": {
-          "recordedGames": 2,
-          "averageYards": 1.0,
-          "standardDeviation": 1.41,
+          "recordedGames": 3,
+          "averageYards": 99.67,
+          "standardDeviation": 170.9,
           "lowestYards": 0.0,
-          "highestYards": 2.0,
+          "highestYards": 297.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        }
+      }
+    },
+    {
+      "team": "CLE",
+      "playerId": "00-0040668",
+      "name": "S.Sanders",
+      "categories": {
+        "rushing": {
+          "recordedGames": 1,
+          "averageYards": 28.0,
+          "standardDeviation": null,
+          "lowestYards": 28.0,
+          "highestYards": 28.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
@@ -3052,9 +3150,9 @@
       "name": "T.Wallace",
       "categories": {
         "receiving": {
-          "recordedGames": 2,
-          "averageYards": 7.5,
-          "standardDeviation": 6.36,
+          "recordedGames": 3,
+          "averageYards": 7.0,
+          "standardDeviation": 4.58,
           "lowestYards": 3.0,
           "highestYards": 12.0,
           "probabilityStatus": "Insufficient verified games",
@@ -3068,9 +3166,9 @@
       "name": "B.Spann-Ford",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 15.71,
-          "standardDeviation": 13.76,
+          "recordedGames": 8,
+          "averageYards": 16.25,
+          "standardDeviation": 12.83,
           "lowestYards": 0.0,
           "highestYards": 35.0,
           "probabilityStatus": "Requires model validation",
@@ -3084,11 +3182,11 @@
       "name": "C.Lamb",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 88.62,
-          "standardDeviation": 59.28,
+          "recordedGames": 9,
+          "averageYards": 100.44,
+          "standardDeviation": 65.82,
           "lowestYards": 9.0,
-          "highestYards": 189.0,
+          "highestYards": 195.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
@@ -3118,9 +3216,9 @@
       "name": "D.Prescott",
       "categories": {
         "passing": {
-          "recordedGames": 8,
-          "averageYards": 255.75,
-          "standardDeviation": 57.31,
+          "recordedGames": 9,
+          "averageYards": 264.56,
+          "standardDeviation": 59.76,
           "lowestYards": 175.0,
           "highestYards": 335.0,
           "probabilityStatus": "Requires model validation",
@@ -3134,10 +3232,10 @@
       "name": "D.Prescott",
       "categories": {
         "rushing": {
-          "recordedGames": 7,
-          "averageYards": 14.43,
-          "standardDeviation": 7.5,
-          "lowestYards": 7.0,
+          "recordedGames": 8,
+          "averageYards": 12.75,
+          "standardDeviation": 8.41,
+          "lowestYards": 1.0,
           "highestYards": 26.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
@@ -3207,12 +3305,28 @@
       "name": "J.Ferguson",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 16.43,
-          "standardDeviation": 14.0,
+          "recordedGames": 8,
+          "averageYards": 17.0,
+          "standardDeviation": 13.06,
           "lowestYards": 0.0,
           "highestYards": 43.0,
           "probabilityStatus": "Requires model validation",
+          "projectedProbability": null
+        }
+      }
+    },
+    {
+      "team": "DAL",
+      "playerId": "00-0040934",
+      "name": "J.Hudson",
+      "categories": {
+        "receiving": {
+          "recordedGames": 1,
+          "averageYards": 0.0,
+          "standardDeviation": null,
+          "lowestYards": 0.0,
+          "highestYards": 0.0,
+          "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
       }
@@ -3223,11 +3337,11 @@
       "name": "J.Mingo",
       "categories": {
         "receiving": {
-          "recordedGames": 4,
-          "averageYards": 7.5,
-          "standardDeviation": 9.57,
+          "recordedGames": 5,
+          "averageYards": 10.6,
+          "standardDeviation": 10.81,
           "lowestYards": 0.0,
-          "highestYards": 20.0,
+          "highestYards": 23.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
@@ -3239,29 +3353,29 @@
       "name": "J.Williams",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 14.86,
-          "standardDeviation": 10.43,
+          "recordedGames": 8,
+          "averageYards": 15.88,
+          "standardDeviation": 10.08,
           "lowestYards": 1.0,
           "highestYards": 31.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 8,
-          "averageYards": 66.0,
-          "standardDeviation": 41.49,
+          "recordedGames": 9,
+          "averageYards": 69.89,
+          "standardDeviation": 40.52,
           "lowestYards": 30.0,
           "highestYards": 155.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 7,
-          "averageYards": 68.14,
-          "standardDeviation": 19.45,
+          "recordedGames": 8,
+          "averageYards": 75.12,
+          "standardDeviation": 26.73,
           "lowestYards": 50.0,
-          "highestYards": 103.0,
+          "highestYards": 124.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         }
@@ -3323,9 +3437,9 @@
       "name": "R.Flournoy",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 42.75,
-          "standardDeviation": 24.75,
+          "recordedGames": 9,
+          "averageYards": 43.89,
+          "standardDeviation": 23.41,
           "lowestYards": 22.0,
           "highestYards": 90.0,
           "probabilityStatus": "Requires model validation",
@@ -3357,29 +3471,29 @@
       "name": "T.Goodson",
       "categories": {
         "receiving": {
-          "recordedGames": 4,
-          "averageYards": 5.75,
-          "standardDeviation": 10.56,
+          "recordedGames": 5,
+          "averageYards": 4.6,
+          "standardDeviation": 9.5,
           "lowestYards": -5.0,
           "highestYards": 19.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 5,
-          "averageYards": 17.2,
-          "standardDeviation": 14.04,
+          "recordedGames": 6,
+          "averageYards": 27.17,
+          "standardDeviation": 27.45,
           "lowestYards": 0.0,
-          "highestYards": 38.0,
-          "probabilityStatus": "Insufficient verified games",
+          "highestYards": 77.0,
+          "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 4,
-          "averageYards": 17.75,
-          "standardDeviation": 10.69,
+          "recordedGames": 5,
+          "averageYards": 29.6,
+          "standardDeviation": 28.07,
           "lowestYards": 9.0,
-          "highestYards": 33.0,
+          "highestYards": 77.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
@@ -3416,9 +3530,9 @@
       "name": "A.Trautman",
       "categories": {
         "receiving": {
-          "recordedGames": 4,
-          "averageYards": 10.0,
-          "standardDeviation": 14.14,
+          "recordedGames": 5,
+          "averageYards": 11.0,
+          "standardDeviation": 12.45,
           "lowestYards": 0.0,
           "highestYards": 30.0,
           "probabilityStatus": "Insufficient verified games",
@@ -3432,9 +3546,9 @@
       "name": "B.Nix",
       "categories": {
         "passing": {
-          "recordedGames": 8,
-          "averageYards": 186.62,
-          "standardDeviation": 62.12,
+          "recordedGames": 9,
+          "averageYards": 192.22,
+          "standardDeviation": 60.49,
           "lowestYards": 107.0,
           "highestYards": 288.0,
           "probabilityStatus": "Requires model validation",
@@ -3448,9 +3562,9 @@
       "name": "B.Nix",
       "categories": {
         "rushing": {
-          "recordedGames": 8,
-          "averageYards": 14.25,
-          "standardDeviation": 23.94,
+          "recordedGames": 9,
+          "averageYards": 12.89,
+          "standardDeviation": 22.77,
           "lowestYards": 2.0,
           "highestYards": 73.0,
           "probabilityStatus": "Requires model validation",
@@ -3464,9 +3578,9 @@
       "name": "C.Sutton",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 27.62,
-          "standardDeviation": 18.09,
+          "recordedGames": 9,
+          "averageYards": 29.56,
+          "standardDeviation": 17.89,
           "lowestYards": 4.0,
           "highestYards": 53.0,
           "probabilityStatus": "Requires model validation",
@@ -3480,9 +3594,9 @@
       "name": "E.Engram",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 17.0,
-          "standardDeviation": 20.91,
+          "recordedGames": 9,
+          "averageYards": 18.78,
+          "standardDeviation": 20.27,
           "lowestYards": 0.0,
           "highestYards": 55.0,
           "probabilityStatus": "Requires model validation",
@@ -3496,27 +3610,27 @@
       "name": "J.Coleman",
       "categories": {
         "receiving": {
-          "recordedGames": 3,
-          "averageYards": 32.33,
-          "standardDeviation": 26.63,
+          "recordedGames": 4,
+          "averageYards": 32.0,
+          "standardDeviation": 21.76,
           "lowestYards": 15.0,
           "highestYards": 63.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 3,
-          "averageYards": 44.67,
-          "standardDeviation": 8.14,
+          "recordedGames": 4,
+          "averageYards": 47.75,
+          "standardDeviation": 9.07,
           "lowestYards": 39.0,
-          "highestYards": 54.0,
+          "highestYards": 57.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 3,
-          "averageYards": 77.0,
-          "standardDeviation": 24.02,
+          "recordedGames": 4,
+          "averageYards": 79.75,
+          "standardDeviation": 20.37,
           "lowestYards": 58.0,
           "highestYards": 104.0,
           "probabilityStatus": "Insufficient verified games",
@@ -3530,28 +3644,28 @@
       "name": "J.Dobbins",
       "categories": {
         "receiving": {
-          "recordedGames": 4,
-          "averageYards": 6.75,
-          "standardDeviation": 3.59,
+          "recordedGames": 5,
+          "averageYards": 6.2,
+          "standardDeviation": 3.35,
           "lowestYards": 4.0,
           "highestYards": 12.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 8,
-          "averageYards": 38.25,
-          "standardDeviation": 16.44,
+          "recordedGames": 9,
+          "averageYards": 36.0,
+          "standardDeviation": 16.79,
           "lowestYards": 13.0,
           "highestYards": 68.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 4,
-          "averageYards": 56.25,
-          "standardDeviation": 12.23,
-          "lowestYards": 46.0,
+          "recordedGames": 5,
+          "averageYards": 49.4,
+          "standardDeviation": 18.62,
+          "lowestYards": 22.0,
           "highestYards": 74.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
@@ -3564,9 +3678,9 @@
       "name": "J.Waddle",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 39.38,
-          "standardDeviation": 42.65,
+          "recordedGames": 9,
+          "averageYards": 37.44,
+          "standardDeviation": 40.31,
           "lowestYards": 2.0,
           "highestYards": 138.0,
           "probabilityStatus": "Requires model validation",
@@ -3614,28 +3728,28 @@
       "name": "M.Mims",
       "categories": {
         "receiving": {
-          "recordedGames": 5,
-          "averageYards": 18.4,
-          "standardDeviation": 19.5,
-          "lowestYards": 6.0,
+          "recordedGames": 6,
+          "averageYards": 15.33,
+          "standardDeviation": 18.99,
+          "lowestYards": 0.0,
           "highestYards": 53.0,
-          "probabilityStatus": "Insufficient verified games",
+          "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 3,
-          "averageYards": 8.33,
-          "standardDeviation": 9.24,
+          "recordedGames": 4,
+          "averageYards": 7.5,
+          "standardDeviation": 7.72,
           "lowestYards": 3.0,
           "highestYards": 19.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 3,
-          "averageYards": 31.33,
-          "standardDeviation": 23.59,
-          "lowestYards": 9.0,
+          "recordedGames": 4,
+          "averageYards": 24.75,
+          "standardDeviation": 23.33,
+          "lowestYards": 5.0,
           "highestYards": 56.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
@@ -3682,11 +3796,11 @@
       "name": "P.Bryant",
       "categories": {
         "receiving": {
-          "recordedGames": 4,
-          "averageYards": 33.25,
-          "standardDeviation": 22.26,
+          "recordedGames": 5,
+          "averageYards": 37.8,
+          "standardDeviation": 21.8,
           "lowestYards": 0.0,
-          "highestYards": 47.0,
+          "highestYards": 56.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
@@ -3784,11 +3898,11 @@
       "name": "T.Franklin",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 9.86,
-          "standardDeviation": 11.25,
+          "recordedGames": 8,
+          "averageYards": 12.5,
+          "standardDeviation": 12.82,
           "lowestYards": 0.0,
-          "highestYards": 27.0,
+          "highestYards": 31.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
@@ -3818,9 +3932,9 @@
       "name": "A.St. Brown",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 81.57,
-          "standardDeviation": 48.9,
+          "recordedGames": 8,
+          "averageYards": 82.12,
+          "standardDeviation": 45.3,
           "lowestYards": 19.0,
           "highestYards": 153.0,
           "probabilityStatus": "Requires model validation",
@@ -3864,16 +3978,48 @@
     },
     {
       "team": "DET",
+      "playerId": "00-0031763",
+      "name": "D.Carter",
+      "categories": {
+        "receiving": {
+          "recordedGames": 1,
+          "averageYards": 5.0,
+          "standardDeviation": null,
+          "lowestYards": 5.0,
+          "highestYards": 5.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        }
+      }
+    },
+    {
+      "team": "DET",
       "playerId": "00-0040669",
       "name": "I.TeSlaa",
       "categories": {
         "receiving": {
-          "recordedGames": 6,
-          "averageYards": 32.83,
-          "standardDeviation": 39.21,
+          "recordedGames": 7,
+          "averageYards": 29.43,
+          "standardDeviation": 36.91,
           "lowestYards": 0.0,
           "highestYards": 95.0,
           "probabilityStatus": "Requires model validation",
+          "projectedProbability": null
+        }
+      }
+    },
+    {
+      "team": "DET",
+      "playerId": "J.Fox",
+      "name": "J.Fox",
+      "categories": {
+        "passing": {
+          "recordedGames": 1,
+          "averageYards": 11.0,
+          "standardDeviation": null,
+          "lowestYards": 11.0,
+          "highestYards": 11.0,
+          "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
       }
@@ -3884,27 +4030,27 @@
       "name": "J.Gibbs",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 39.43,
-          "standardDeviation": 20.57,
-          "lowestYards": 15.0,
+          "recordedGames": 8,
+          "averageYards": 34.5,
+          "standardDeviation": 23.6,
+          "lowestYards": 0.0,
           "highestYards": 65.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 7,
-          "averageYards": 110.43,
-          "standardDeviation": 47.01,
+          "recordedGames": 8,
+          "averageYards": 105.88,
+          "standardDeviation": 45.39,
           "lowestYards": 46.0,
           "highestYards": 156.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 7,
-          "averageYards": 149.86,
-          "standardDeviation": 46.92,
+          "recordedGames": 8,
+          "averageYards": 140.38,
+          "standardDeviation": 51.05,
           "lowestYards": 68.0,
           "highestYards": 207.0,
           "probabilityStatus": "Requires model validation",
@@ -3918,10 +4064,10 @@
       "name": "J.Goff",
       "categories": {
         "passing": {
-          "recordedGames": 7,
-          "averageYards": 280.57,
-          "standardDeviation": 78.16,
-          "lowestYards": 176.0,
+          "recordedGames": 8,
+          "averageYards": 266.75,
+          "standardDeviation": 82.25,
+          "lowestYards": 170.0,
           "highestYards": 412.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
@@ -3934,9 +4080,9 @@
       "name": "J.Goff",
       "categories": {
         "rushing": {
-          "recordedGames": 6,
-          "averageYards": 2.5,
-          "standardDeviation": 3.27,
+          "recordedGames": 7,
+          "averageYards": 2.86,
+          "standardDeviation": 3.13,
           "lowestYards": -1.0,
           "highestYards": 7.0,
           "probabilityStatus": "Requires model validation",
@@ -3966,12 +4112,30 @@
       "name": "J.Williams",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 62.43,
-          "standardDeviation": 25.91,
-          "lowestYards": 33.0,
+          "recordedGames": 8,
+          "averageYards": 58.5,
+          "standardDeviation": 26.44,
+          "lowestYards": 31.0,
           "highestYards": 102.0,
           "probabilityStatus": "Requires model validation",
+          "projectedProbability": null
+        },
+        "rushing": {
+          "recordedGames": 1,
+          "averageYards": 9.0,
+          "standardDeviation": null,
+          "lowestYards": 9.0,
+          "highestYards": 9.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        },
+        "combinedRushingReceiving": {
+          "recordedGames": 1,
+          "averageYards": 40.0,
+          "standardDeviation": null,
+          "lowestYards": 40.0,
+          "highestYards": 40.0,
+          "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
       }
@@ -3982,9 +4146,9 @@
       "name": "S.LaPorta",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 52.43,
-          "standardDeviation": 25.55,
+          "recordedGames": 8,
+          "averageYards": 49.88,
+          "standardDeviation": 24.73,
           "lowestYards": 18.0,
           "highestYards": 88.0,
           "probabilityStatus": "Requires model validation",
@@ -4016,27 +4180,27 @@
       "name": "S.Vaki",
       "categories": {
         "receiving": {
-          "recordedGames": 5,
-          "averageYards": 11.4,
-          "standardDeviation": 4.34,
+          "recordedGames": 6,
+          "averageYards": 10.67,
+          "standardDeviation": 4.27,
           "lowestYards": 5.0,
           "highestYards": 17.0,
-          "probabilityStatus": "Insufficient verified games",
+          "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 6,
-          "averageYards": 20.17,
-          "standardDeviation": 23.26,
+          "recordedGames": 7,
+          "averageYards": 19.29,
+          "standardDeviation": 21.36,
           "lowestYards": 5.0,
           "highestYards": 65.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 4,
-          "averageYards": 36.25,
-          "standardDeviation": 24.06,
+          "recordedGames": 5,
+          "averageYards": 33.2,
+          "standardDeviation": 21.92,
           "lowestYards": 18.0,
           "highestYards": 70.0,
           "probabilityStatus": "Insufficient verified games",
@@ -4050,11 +4214,27 @@
       "name": "T.Conklin",
       "categories": {
         "receiving": {
-          "recordedGames": 2,
-          "averageYards": 5.5,
-          "standardDeviation": 2.12,
-          "lowestYards": 4.0,
+          "recordedGames": 3,
+          "averageYards": 3.67,
+          "standardDeviation": 3.51,
+          "lowestYards": 0.0,
           "highestYards": 7.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        }
+      }
+    },
+    {
+      "team": "DET",
+      "playerId": "00-0037524",
+      "name": "T.Martin",
+      "categories": {
+        "receiving": {
+          "recordedGames": 1,
+          "averageYards": 11.0,
+          "standardDeviation": null,
+          "lowestYards": 11.0,
+          "highestYards": 11.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
@@ -4116,11 +4296,11 @@
       "name": "C.Watson",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 88.5,
-          "standardDeviation": 42.46,
+          "recordedGames": 9,
+          "averageYards": 97.67,
+          "standardDeviation": 48.31,
           "lowestYards": 41.0,
-          "highestYards": 147.0,
+          "highestYards": 171.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         }
@@ -4141,10 +4321,10 @@
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 2,
-          "averageYards": 37.5,
-          "standardDeviation": 2.12,
-          "lowestYards": 36.0,
+          "recordedGames": 3,
+          "averageYards": 26.67,
+          "standardDeviation": 18.82,
+          "lowestYards": 5.0,
           "highestYards": 39.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
@@ -4166,9 +4346,9 @@
       "name": "J.Love",
       "categories": {
         "passing": {
-          "recordedGames": 8,
-          "averageYards": 280.75,
-          "standardDeviation": 80.42,
+          "recordedGames": 9,
+          "averageYards": 290.89,
+          "standardDeviation": 81.14,
           "lowestYards": 145.0,
           "highestYards": 387.0,
           "probabilityStatus": "Requires model validation",
@@ -4182,12 +4362,12 @@
       "name": "J.Love",
       "categories": {
         "rushing": {
-          "recordedGames": 5,
-          "averageYards": 2.0,
-          "standardDeviation": 7.48,
+          "recordedGames": 6,
+          "averageYards": 3.83,
+          "standardDeviation": 8.06,
           "lowestYards": -8.0,
-          "highestYards": 12.0,
-          "probabilityStatus": "Insufficient verified games",
+          "highestYards": 13.0,
+          "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         }
       }
@@ -4255,12 +4435,12 @@
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 5,
-          "averageYards": 20.8,
-          "standardDeviation": 18.31,
+          "recordedGames": 6,
+          "averageYards": 28.67,
+          "standardDeviation": 25.29,
           "lowestYards": -2.0,
-          "highestYards": 42.0,
-          "probabilityStatus": "Insufficient verified games",
+          "highestYards": 68.0,
+          "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
@@ -4280,11 +4460,11 @@
       "name": "M.Golden",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 77.38,
-          "standardDeviation": 35.14,
+          "recordedGames": 9,
+          "averageYards": 87.0,
+          "standardDeviation": 43.75,
           "lowestYards": 21.0,
-          "highestYards": 123.0,
+          "highestYards": 164.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
@@ -4364,27 +4544,27 @@
       "name": "P.Strong",
       "categories": {
         "receiving": {
-          "recordedGames": 2,
-          "averageYards": 25.0,
-          "standardDeviation": 19.8,
+          "recordedGames": 3,
+          "averageYards": 20.33,
+          "standardDeviation": 16.17,
           "lowestYards": 11.0,
           "highestYards": 39.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 3,
-          "averageYards": 12.33,
-          "standardDeviation": 13.8,
+          "recordedGames": 4,
+          "averageYards": 14.75,
+          "standardDeviation": 12.26,
           "lowestYards": 2.0,
           "highestYards": 28.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 2,
-          "averageYards": 42.5,
-          "standardDeviation": 34.65,
+          "recordedGames": 3,
+          "averageYards": 39.33,
+          "standardDeviation": 25.11,
           "lowestYards": 18.0,
           "highestYards": 67.0,
           "probabilityStatus": "Insufficient verified games",
@@ -4414,27 +4594,27 @@
       "name": "S.Williams",
       "categories": {
         "receiving": {
-          "recordedGames": 3,
-          "averageYards": 28.0,
-          "standardDeviation": 21.28,
+          "recordedGames": 4,
+          "averageYards": 27.25,
+          "standardDeviation": 17.44,
           "lowestYards": 5.0,
           "highestYards": 47.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 3,
-          "averageYards": 10.33,
-          "standardDeviation": 7.09,
+          "recordedGames": 4,
+          "averageYards": 11.0,
+          "standardDeviation": 5.94,
           "lowestYards": 4.0,
           "highestYards": 18.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 3,
-          "averageYards": 38.33,
-          "standardDeviation": 14.19,
+          "recordedGames": 4,
+          "averageYards": 38.25,
+          "standardDeviation": 11.59,
           "lowestYards": 23.0,
           "highestYards": 51.0,
           "probabilityStatus": "Insufficient verified games",
@@ -4448,28 +4628,28 @@
       "name": "T.Kraft",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 43.75,
-          "standardDeviation": 17.55,
-          "lowestYards": 15.0,
+          "recordedGames": 9,
+          "averageYards": 39.0,
+          "standardDeviation": 21.74,
+          "lowestYards": 1.0,
           "highestYards": 65.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 2,
-          "averageYards": 2.5,
-          "standardDeviation": 0.71,
+          "recordedGames": 3,
+          "averageYards": 4.33,
+          "standardDeviation": 3.21,
           "lowestYards": 2.0,
-          "highestYards": 3.0,
+          "highestYards": 8.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 2,
-          "averageYards": 55.5,
-          "standardDeviation": 14.85,
-          "lowestYards": 45.0,
+          "recordedGames": 3,
+          "averageYards": 40.0,
+          "standardDeviation": 28.83,
+          "lowestYards": 9.0,
           "highestYards": 66.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
@@ -4548,11 +4728,11 @@
       "name": "C.Stroud",
       "categories": {
         "passing": {
-          "recordedGames": 7,
-          "averageYards": 266.71,
-          "standardDeviation": 80.52,
+          "recordedGames": 8,
+          "averageYards": 281.38,
+          "standardDeviation": 85.3,
           "lowestYards": 153.0,
-          "highestYards": 353.0,
+          "highestYards": 384.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         }
@@ -4564,12 +4744,44 @@
       "name": "C.Stroud",
       "categories": {
         "rushing": {
-          "recordedGames": 7,
-          "averageYards": 11.43,
-          "standardDeviation": 8.77,
+          "recordedGames": 8,
+          "averageYards": 12.5,
+          "standardDeviation": 8.67,
           "lowestYards": 4.0,
           "highestYards": 29.0,
           "probabilityStatus": "Requires model validation",
+          "projectedProbability": null
+        }
+      }
+    },
+    {
+      "team": "HOU",
+      "playerId": "D.Mills",
+      "name": "D.Mills",
+      "categories": {
+        "passing": {
+          "recordedGames": 1,
+          "averageYards": 7.0,
+          "standardDeviation": null,
+          "lowestYards": 7.0,
+          "highestYards": 7.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        }
+      }
+    },
+    {
+      "team": "HOU",
+      "playerId": "00-0036898",
+      "name": "D.Mills",
+      "categories": {
+        "rushing": {
+          "recordedGames": 1,
+          "averageYards": -2.0,
+          "standardDeviation": null,
+          "lowestYards": -2.0,
+          "highestYards": -2.0,
+          "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
       }
@@ -4610,16 +4822,66 @@
     },
     {
       "team": "HOU",
+      "playerId": "00-0033854",
+      "name": "D.Ogunbowale",
+      "categories": {
+        "receiving": {
+          "recordedGames": 1,
+          "averageYards": 3.0,
+          "standardDeviation": null,
+          "lowestYards": 3.0,
+          "highestYards": 3.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        }
+      }
+    },
+    {
+      "team": "HOU",
       "playerId": "00-0034383",
       "name": "D.Schultz",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 46.0,
-          "standardDeviation": 42.83,
+          "recordedGames": 8,
+          "averageYards": 45.5,
+          "standardDeviation": 39.68,
           "lowestYards": 9.0,
           "highestYards": 140.0,
           "probabilityStatus": "Requires model validation",
+          "projectedProbability": null
+        }
+      }
+    },
+    {
+      "team": "HOU",
+      "playerId": "00-0038705",
+      "name": "E.Demercado",
+      "categories": {
+        "receiving": {
+          "recordedGames": 1,
+          "averageYards": 8.0,
+          "standardDeviation": null,
+          "lowestYards": 8.0,
+          "highestYards": 8.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        },
+        "rushing": {
+          "recordedGames": 1,
+          "averageYards": 16.0,
+          "standardDeviation": null,
+          "lowestYards": 16.0,
+          "highestYards": 16.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        },
+        "combinedRushingReceiving": {
+          "recordedGames": 1,
+          "averageYards": 24.0,
+          "standardDeviation": null,
+          "lowestYards": 24.0,
+          "highestYards": 24.0,
+          "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
       }
@@ -4730,11 +4992,11 @@
       "name": "K.Boutte",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 27.71,
-          "standardDeviation": 9.09,
+          "recordedGames": 8,
+          "averageYards": 39.88,
+          "standardDeviation": 35.41,
           "lowestYards": 16.0,
-          "highestYards": 38.0,
+          "highestYards": 125.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         }
@@ -4778,9 +5040,9 @@
       "name": "M.Harrison",
       "categories": {
         "receiving": {
-          "recordedGames": 2,
+          "recordedGames": 3,
           "averageYards": 20.0,
-          "standardDeviation": 19.8,
+          "standardDeviation": 14.0,
           "lowestYards": 6.0,
           "highestYards": 34.0,
           "probabilityStatus": "Insufficient verified games",
@@ -4810,12 +5072,12 @@
       "name": "N.Collins",
       "categories": {
         "receiving": {
-          "recordedGames": 5,
-          "averageYards": 65.8,
-          "standardDeviation": 40.46,
+          "recordedGames": 6,
+          "averageYards": 64.0,
+          "standardDeviation": 36.46,
           "lowestYards": 6.0,
           "highestYards": 118.0,
-          "probabilityStatus": "Insufficient verified games",
+          "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
@@ -4844,11 +5106,11 @@
       "name": "T.Dell",
       "categories": {
         "receiving": {
-          "recordedGames": 1,
-          "averageYards": 43.0,
-          "standardDeviation": null,
+          "recordedGames": 2,
+          "averageYards": 74.0,
+          "standardDeviation": 43.84,
           "lowestYards": 43.0,
-          "highestYards": 43.0,
+          "highestYards": 105.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
@@ -4878,27 +5140,27 @@
       "name": "W.Marks",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 13.43,
-          "standardDeviation": 12.15,
+          "recordedGames": 8,
+          "averageYards": 12.25,
+          "standardDeviation": 11.73,
           "lowestYards": -2.0,
           "highestYards": 27.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 7,
-          "averageYards": 38.71,
-          "standardDeviation": 23.74,
+          "recordedGames": 8,
+          "averageYards": 42.62,
+          "standardDeviation": 24.61,
           "lowestYards": 8.0,
-          "highestYards": 66.0,
+          "highestYards": 70.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 7,
-          "averageYards": 52.14,
-          "standardDeviation": 29.05,
+          "recordedGames": 8,
+          "averageYards": 54.88,
+          "standardDeviation": 27.99,
           "lowestYards": 21.0,
           "highestYards": 85.0,
           "probabilityStatus": "Requires model validation",
@@ -4912,9 +5174,9 @@
       "name": "X.Hutchinson",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 36.86,
-          "standardDeviation": 19.21,
+          "recordedGames": 8,
+          "averageYards": 35.88,
+          "standardDeviation": 18.0,
           "lowestYards": 10.0,
           "highestYards": 65.0,
           "probabilityStatus": "Requires model validation",
@@ -4946,20 +5208,45 @@
       "name": "A.Dulin",
       "categories": {
         "receiving": {
-          "recordedGames": 2,
-          "averageYards": 14.5,
-          "standardDeviation": 20.51,
+          "recordedGames": 3,
+          "averageYards": 28.0,
+          "standardDeviation": 27.51,
           "lowestYards": 0.0,
-          "highestYards": 29.0,
+          "highestYards": 55.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 1,
+          "recordedGames": 2,
           "averageYards": 3.0,
-          "standardDeviation": null,
+          "standardDeviation": 0.0,
           "lowestYards": 3.0,
           "highestYards": 3.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        },
+        "combinedRushingReceiving": {
+          "recordedGames": 1,
+          "averageYards": 58.0,
+          "standardDeviation": null,
+          "lowestYards": 58.0,
+          "highestYards": 58.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        }
+      }
+    },
+    {
+      "team": "IND",
+      "playerId": "00-0039816",
+      "name": "A.Gould",
+      "categories": {
+        "receiving": {
+          "recordedGames": 1,
+          "averageYards": 16.0,
+          "standardDeviation": null,
+          "lowestYards": 16.0,
+          "highestYards": 16.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
@@ -5035,12 +5322,12 @@
       "name": "D.Burks",
       "categories": {
         "receiving": {
-          "recordedGames": 5,
-          "averageYards": 12.0,
-          "standardDeviation": 16.75,
+          "recordedGames": 6,
+          "averageYards": 10.0,
+          "standardDeviation": 15.76,
           "lowestYards": 0.0,
           "highestYards": 41.0,
-          "probabilityStatus": "Insufficient verified games",
+          "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
@@ -5085,9 +5372,9 @@
       "name": "D.Jones",
       "categories": {
         "passing": {
-          "recordedGames": 8,
-          "averageYards": 192.75,
-          "standardDeviation": 61.13,
+          "recordedGames": 9,
+          "averageYards": 191.33,
+          "standardDeviation": 57.34,
           "lowestYards": 108.0,
           "highestYards": 269.0,
           "probabilityStatus": "Requires model validation",
@@ -5101,9 +5388,9 @@
       "name": "D.Jones",
       "categories": {
         "rushing": {
-          "recordedGames": 8,
-          "averageYards": 9.38,
-          "standardDeviation": 9.07,
+          "recordedGames": 9,
+          "averageYards": 9.56,
+          "standardDeviation": 8.5,
           "lowestYards": 2.0,
           "highestYards": 30.0,
           "probabilityStatus": "Requires model validation",
@@ -5117,9 +5404,9 @@
       "name": "J.Downs",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 41.25,
-          "standardDeviation": 23.26,
+          "recordedGames": 9,
+          "averageYards": 39.33,
+          "standardDeviation": 22.51,
           "lowestYards": 16.0,
           "highestYards": 77.0,
           "probabilityStatus": "Requires model validation",
@@ -5151,27 +5438,27 @@
       "name": "J.Taylor",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 25.25,
-          "standardDeviation": 18.77,
+          "recordedGames": 9,
+          "averageYards": 24.44,
+          "standardDeviation": 17.73,
           "lowestYards": 2.0,
           "highestYards": 57.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 8,
-          "averageYards": 76.25,
-          "standardDeviation": 28.33,
+          "recordedGames": 9,
+          "averageYards": 72.89,
+          "standardDeviation": 28.36,
           "lowestYards": 23.0,
           "highestYards": 98.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 8,
-          "averageYards": 101.5,
-          "standardDeviation": 33.96,
+          "recordedGames": 9,
+          "averageYards": 97.33,
+          "standardDeviation": 34.14,
           "lowestYards": 47.0,
           "highestYards": 151.0,
           "probabilityStatus": "Requires model validation",
@@ -5185,9 +5472,9 @@
       "name": "K.Allen",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 46.43,
-          "standardDeviation": 26.23,
+          "recordedGames": 8,
+          "averageYards": 43.88,
+          "standardDeviation": 25.33,
           "lowestYards": 5.0,
           "highestYards": 82.0,
           "probabilityStatus": "Requires model validation",
@@ -5201,9 +5488,9 @@
       "name": "L.Treadwell",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 26.88,
-          "standardDeviation": 18.47,
+          "recordedGames": 9,
+          "averageYards": 23.89,
+          "standardDeviation": 19.46,
           "lowestYards": 0.0,
           "highestYards": 61.0,
           "probabilityStatus": "Requires model validation",
@@ -5265,27 +5552,27 @@
       "name": "S.McGowan",
       "categories": {
         "receiving": {
-          "recordedGames": 4,
-          "averageYards": 3.0,
-          "standardDeviation": 2.94,
-          "lowestYards": 0.0,
+          "recordedGames": 5,
+          "averageYards": 1.8,
+          "standardDeviation": 3.7,
+          "lowestYards": -3.0,
           "highestYards": 7.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 7,
-          "averageYards": 23.29,
-          "standardDeviation": 14.74,
+          "recordedGames": 8,
+          "averageYards": 26.0,
+          "standardDeviation": 15.66,
           "lowestYards": 0.0,
           "highestYards": 46.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 3,
-          "averageYards": 35.0,
-          "standardDeviation": 14.73,
+          "recordedGames": 4,
+          "averageYards": 36.75,
+          "standardDeviation": 12.53,
           "lowestYards": 19.0,
           "highestYards": 48.0,
           "probabilityStatus": "Insufficient verified games",
@@ -5299,9 +5586,9 @@
       "name": "T.Warren",
       "categories": {
         "receiving": {
-          "recordedGames": 6,
-          "averageYards": 38.5,
-          "standardDeviation": 26.96,
+          "recordedGames": 7,
+          "averageYards": 39.29,
+          "standardDeviation": 24.7,
           "lowestYards": 13.0,
           "highestYards": 83.0,
           "probabilityStatus": "Requires model validation",
@@ -5770,12 +6057,12 @@
       "name": "C.Allen",
       "categories": {
         "receiving": {
-          "recordedGames": 5,
-          "averageYards": 13.0,
-          "standardDeviation": 12.33,
+          "recordedGames": 6,
+          "averageYards": 10.83,
+          "standardDeviation": 12.24,
           "lowestYards": 0.0,
           "highestYards": 27.0,
-          "probabilityStatus": "Insufficient verified games",
+          "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         }
       }
@@ -5795,12 +6082,12 @@
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 5,
-          "averageYards": 15.4,
-          "standardDeviation": 6.43,
+          "recordedGames": 6,
+          "averageYards": 18.5,
+          "standardDeviation": 9.52,
           "lowestYards": 6.0,
-          "highestYards": 24.0,
-          "probabilityStatus": "Insufficient verified games",
+          "highestYards": 34.0,
+          "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
@@ -5820,11 +6107,43 @@
       "name": "J.Briningstool",
       "categories": {
         "receiving": {
-          "recordedGames": 3,
-          "averageYards": 5.0,
-          "standardDeviation": 4.58,
+          "recordedGames": 4,
+          "averageYards": 4.5,
+          "standardDeviation": 3.87,
           "lowestYards": 0.0,
           "highestYards": 9.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        }
+      }
+    },
+    {
+      "team": "KC",
+      "playerId": "00-0036945",
+      "name": "J.Fields",
+      "categories": {
+        "rushing": {
+          "recordedGames": 1,
+          "averageYards": -1.0,
+          "standardDeviation": null,
+          "lowestYards": -1.0,
+          "highestYards": -1.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        }
+      }
+    },
+    {
+      "team": "KC",
+      "playerId": "00-0040959",
+      "name": "J.Ott",
+      "categories": {
+        "rushing": {
+          "recordedGames": 1,
+          "averageYards": 19.0,
+          "standardDeviation": null,
+          "lowestYards": 19.0,
+          "highestYards": 19.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
@@ -5836,9 +6155,9 @@
       "name": "J.Royals",
       "categories": {
         "receiving": {
-          "recordedGames": 6,
-          "averageYards": 7.5,
-          "standardDeviation": 9.07,
+          "recordedGames": 7,
+          "averageYards": 9.0,
+          "standardDeviation": 9.18,
           "lowestYards": 0.0,
           "highestYards": 24.0,
           "probabilityStatus": "Requires model validation",
@@ -5884,27 +6203,27 @@
       "name": "K.Walker",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 18.71,
-          "standardDeviation": 19.97,
+          "recordedGames": 8,
+          "averageYards": 21.5,
+          "standardDeviation": 20.1,
           "lowestYards": 2.0,
           "highestYards": 61.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 7,
-          "averageYards": 110.0,
-          "standardDeviation": 54.14,
+          "recordedGames": 8,
+          "averageYards": 109.0,
+          "standardDeviation": 50.21,
           "lowestYards": 36.0,
           "highestYards": 177.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 7,
-          "averageYards": 128.71,
-          "standardDeviation": 56.55,
+          "recordedGames": 8,
+          "averageYards": 130.5,
+          "standardDeviation": 52.6,
           "lowestYards": 57.0,
           "highestYards": 191.0,
           "probabilityStatus": "Requires model validation",
@@ -5934,9 +6253,9 @@
       "name": "N.Gray",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 24.71,
-          "standardDeviation": 20.53,
+          "recordedGames": 8,
+          "averageYards": 23.0,
+          "standardDeviation": 19.62,
           "lowestYards": 0.0,
           "highestYards": 53.0,
           "probabilityStatus": "Requires model validation",
@@ -5950,9 +6269,9 @@
       "name": "P.Mahomes",
       "categories": {
         "passing": {
-          "recordedGames": 7,
-          "averageYards": 256.43,
-          "standardDeviation": 76.25,
+          "recordedGames": 8,
+          "averageYards": 254.62,
+          "standardDeviation": 70.78,
           "lowestYards": 165.0,
           "highestYards": 382.0,
           "probabilityStatus": "Requires model validation",
@@ -5966,9 +6285,9 @@
       "name": "P.Mahomes",
       "categories": {
         "rushing": {
-          "recordedGames": 7,
-          "averageYards": 11.0,
-          "standardDeviation": 8.76,
+          "recordedGames": 8,
+          "averageYards": 10.62,
+          "standardDeviation": 8.18,
           "lowestYards": 0.0,
           "highestYards": 23.0,
           "probabilityStatus": "Requires model validation",
@@ -5982,9 +6301,9 @@
       "name": "R.Rice",
       "categories": {
         "receiving": {
-          "recordedGames": 4,
-          "averageYards": 60.75,
-          "standardDeviation": 31.84,
+          "recordedGames": 5,
+          "averageYards": 58.4,
+          "standardDeviation": 28.07,
           "lowestYards": 19.0,
           "highestYards": 88.0,
           "probabilityStatus": "Insufficient verified games",
@@ -5998,12 +6317,30 @@
       "name": "T.Kelce",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 58.57,
-          "standardDeviation": 26.36,
+          "recordedGames": 8,
+          "averageYards": 60.25,
+          "standardDeviation": 24.86,
           "lowestYards": 15.0,
           "highestYards": 101.0,
           "probabilityStatus": "Requires model validation",
+          "projectedProbability": null
+        },
+        "rushing": {
+          "recordedGames": 1,
+          "averageYards": 1.0,
+          "standardDeviation": null,
+          "lowestYards": 1.0,
+          "highestYards": 1.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        },
+        "combinedRushingReceiving": {
+          "recordedGames": 1,
+          "averageYards": 73.0,
+          "standardDeviation": null,
+          "lowestYards": 73.0,
+          "highestYards": 73.0,
+          "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
       }
@@ -6030,9 +6367,9 @@
       "name": "X.Worthy",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 32.86,
-          "standardDeviation": 26.8,
+          "recordedGames": 8,
+          "averageYards": 34.75,
+          "standardDeviation": 25.39,
           "lowestYards": 11.0,
           "highestYards": 73.0,
           "probabilityStatus": "Requires model validation",
@@ -6046,27 +6383,27 @@
       "name": "B.Corum",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 14.14,
-          "standardDeviation": 18.33,
+          "recordedGames": 8,
+          "averageYards": 12.38,
+          "standardDeviation": 17.69,
           "lowestYards": 0.0,
           "highestYards": 53.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 8,
-          "averageYards": 48.62,
-          "standardDeviation": 31.09,
+          "recordedGames": 9,
+          "averageYards": 49.67,
+          "standardDeviation": 29.25,
           "lowestYards": 14.0,
           "highestYards": 93.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 7,
-          "averageYards": 62.0,
-          "standardDeviation": 33.01,
+          "recordedGames": 8,
+          "averageYards": 61.5,
+          "standardDeviation": 30.59,
           "lowestYards": 15.0,
           "highestYards": 101.0,
           "probabilityStatus": "Requires model validation",
@@ -6080,9 +6417,9 @@
       "name": "C.Parkinson",
       "categories": {
         "receiving": {
-          "recordedGames": 6,
-          "averageYards": 17.17,
-          "standardDeviation": 18.8,
+          "recordedGames": 7,
+          "averageYards": 16.57,
+          "standardDeviation": 17.23,
           "lowestYards": 0.0,
           "highestYards": 48.0,
           "probabilityStatus": "Requires model validation",
@@ -6153,9 +6490,9 @@
       "name": "K.Mumpfield",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 20.29,
-          "standardDeviation": 32.69,
+          "recordedGames": 8,
+          "averageYards": 20.25,
+          "standardDeviation": 30.26,
           "lowestYards": 0.0,
           "highestYards": 93.0,
           "probabilityStatus": "Requires model validation",
@@ -6169,27 +6506,27 @@
       "name": "K.Williams",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 30.25,
-          "standardDeviation": 24.78,
+          "recordedGames": 9,
+          "averageYards": 28.67,
+          "standardDeviation": 23.66,
           "lowestYards": 3.0,
           "highestYards": 70.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 8,
-          "averageYards": 68.5,
-          "standardDeviation": 21.88,
+          "recordedGames": 9,
+          "averageYards": 65.89,
+          "standardDeviation": 21.91,
           "lowestYards": 41.0,
           "highestYards": 99.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 8,
-          "averageYards": 98.75,
-          "standardDeviation": 38.88,
+          "recordedGames": 9,
+          "averageYards": 94.56,
+          "standardDeviation": 38.48,
           "lowestYards": 59.0,
           "highestYards": 158.0,
           "probabilityStatus": "Requires model validation",
@@ -6203,9 +6540,9 @@
       "name": "M.Stafford",
       "categories": {
         "passing": {
-          "recordedGames": 8,
-          "averageYards": 268.25,
-          "standardDeviation": 97.49,
+          "recordedGames": 9,
+          "averageYards": 263.78,
+          "standardDeviation": 92.17,
           "lowestYards": 155.0,
           "highestYards": 390.0,
           "probabilityStatus": "Requires model validation",
@@ -6219,12 +6556,12 @@
       "name": "M.Stafford",
       "categories": {
         "rushing": {
-          "recordedGames": 5,
-          "averageYards": 3.6,
-          "standardDeviation": 7.33,
+          "recordedGames": 6,
+          "averageYards": 3.17,
+          "standardDeviation": 6.65,
           "lowestYards": -3.0,
           "highestYards": 13.0,
-          "probabilityStatus": "Insufficient verified games",
+          "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         }
       }
@@ -6235,29 +6572,29 @@
       "name": "P.Nacua",
       "categories": {
         "receiving": {
-          "recordedGames": 6,
-          "averageYards": 94.17,
-          "standardDeviation": 29.55,
+          "recordedGames": 7,
+          "averageYards": 102.14,
+          "standardDeviation": 34.25,
           "lowestYards": 68.0,
-          "highestYards": 138.0,
+          "highestYards": 150.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 3,
-          "averageYards": 7.0,
-          "standardDeviation": 4.36,
+          "recordedGames": 4,
+          "averageYards": 10.25,
+          "standardDeviation": 7.41,
           "lowestYards": 2.0,
-          "highestYards": 10.0,
+          "highestYards": 20.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 3,
-          "averageYards": 117.33,
-          "standardDeviation": 35.5,
+          "recordedGames": 4,
+          "averageYards": 130.5,
+          "standardDeviation": 39.16,
           "lowestYards": 78.0,
-          "highestYards": 147.0,
+          "highestYards": 170.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
@@ -6335,9 +6672,9 @@
       "name": "T.Atwell",
       "categories": {
         "receiving": {
-          "recordedGames": 4,
-          "averageYards": 20.75,
-          "standardDeviation": 21.78,
+          "recordedGames": 5,
+          "averageYards": 19.8,
+          "standardDeviation": 18.98,
           "lowestYards": 4.0,
           "highestYards": 52.0,
           "probabilityStatus": "Insufficient verified games",
@@ -6367,9 +6704,9 @@
       "name": "T.Higbee",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 39.14,
-          "standardDeviation": 30.32,
+          "recordedGames": 8,
+          "averageYards": 35.88,
+          "standardDeviation": 29.56,
           "lowestYards": 12.0,
           "highestYards": 83.0,
           "probabilityStatus": "Requires model validation",
@@ -6431,11 +6768,29 @@
       "name": "C.Kolar",
       "categories": {
         "receiving": {
-          "recordedGames": 4,
-          "averageYards": 24.5,
-          "standardDeviation": 8.35,
+          "recordedGames": 5,
+          "averageYards": 25.8,
+          "standardDeviation": 7.79,
           "lowestYards": 20.0,
           "highestYards": 37.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        },
+        "rushing": {
+          "recordedGames": 1,
+          "averageYards": 3.0,
+          "standardDeviation": null,
+          "lowestYards": 3.0,
+          "highestYards": 3.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        },
+        "combinedRushingReceiving": {
+          "recordedGames": 1,
+          "averageYards": 34.0,
+          "standardDeviation": null,
+          "lowestYards": 34.0,
+          "highestYards": 34.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
@@ -6447,11 +6802,11 @@
       "name": "D.Davis",
       "categories": {
         "receiving": {
-          "recordedGames": 3,
-          "averageYards": 2.0,
-          "standardDeviation": 3.46,
+          "recordedGames": 4,
+          "averageYards": 5.25,
+          "standardDeviation": 7.09,
           "lowestYards": 0.0,
-          "highestYards": 6.0,
+          "highestYards": 15.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
@@ -6484,6 +6839,22 @@
     },
     {
       "team": "LAC",
+      "playerId": "D.Uiagalelei",
+      "name": "D.Uiagalelei",
+      "categories": {
+        "passing": {
+          "recordedGames": 1,
+          "averageYards": 24.0,
+          "standardDeviation": null,
+          "lowestYards": 24.0,
+          "highestYards": 24.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        }
+      }
+    },
+    {
+      "team": "LAC",
       "playerId": "00-0039489",
       "name": "H.Rucci",
       "categories": {
@@ -6504,9 +6875,9 @@
       "name": "J.Herbert",
       "categories": {
         "passing": {
-          "recordedGames": 7,
-          "averageYards": 199.71,
-          "standardDeviation": 41.73,
+          "recordedGames": 8,
+          "averageYards": 198.88,
+          "standardDeviation": 38.71,
           "lowestYards": 121.0,
           "highestYards": 257.0,
           "probabilityStatus": "Requires model validation",
@@ -6529,9 +6900,9 @@
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 7,
-          "averageYards": 26.14,
-          "standardDeviation": 17.16,
+          "recordedGames": 8,
+          "averageYards": 23.75,
+          "standardDeviation": 17.27,
           "lowestYards": 2.0,
           "highestYards": 54.0,
           "probabilityStatus": "Requires model validation",
@@ -6554,11 +6925,11 @@
       "name": "K.Lambert-Smith",
       "categories": {
         "receiving": {
-          "recordedGames": 1,
-          "averageYards": 32.0,
-          "standardDeviation": null,
+          "recordedGames": 2,
+          "averageYards": 41.0,
+          "standardDeviation": 12.73,
           "lowestYards": 32.0,
-          "highestYards": 32.0,
+          "highestYards": 50.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
@@ -6570,29 +6941,29 @@
       "name": "K.Mitchell",
       "categories": {
         "receiving": {
-          "recordedGames": 6,
-          "averageYards": 11.5,
-          "standardDeviation": 11.36,
+          "recordedGames": 7,
+          "averageYards": 14.71,
+          "standardDeviation": 13.41,
           "lowestYards": -5.0,
-          "highestYards": 24.0,
+          "highestYards": 34.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 7,
-          "averageYards": 20.71,
-          "standardDeviation": 18.49,
+          "recordedGames": 8,
+          "averageYards": 22.25,
+          "standardDeviation": 17.66,
           "lowestYards": 4.0,
           "highestYards": 52.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 6,
-          "averageYards": 34.17,
-          "standardDeviation": 20.4,
+          "recordedGames": 7,
+          "averageYards": 38.86,
+          "standardDeviation": 22.38,
           "lowestYards": 4.0,
-          "highestYards": 63.0,
+          "highestYards": 67.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         }
@@ -6604,30 +6975,30 @@
       "name": "K.Vidal",
       "categories": {
         "receiving": {
-          "recordedGames": 5,
-          "averageYards": 10.0,
-          "standardDeviation": 7.55,
+          "recordedGames": 6,
+          "averageYards": 9.33,
+          "standardDeviation": 6.95,
           "lowestYards": -1.0,
           "highestYards": 19.0,
-          "probabilityStatus": "Insufficient verified games",
+          "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 5,
-          "averageYards": 26.4,
-          "standardDeviation": 18.68,
+          "recordedGames": 6,
+          "averageYards": 27.0,
+          "standardDeviation": 16.77,
           "lowestYards": 6.0,
           "highestYards": 57.0,
-          "probabilityStatus": "Insufficient verified games",
+          "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 5,
-          "averageYards": 36.4,
-          "standardDeviation": 13.3,
+          "recordedGames": 6,
+          "averageYards": 36.33,
+          "standardDeviation": 11.89,
           "lowestYards": 20.0,
           "highestYards": 56.0,
-          "probabilityStatus": "Insufficient verified games",
+          "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         }
       }
@@ -6670,9 +7041,9 @@
       "name": "O.Gadsden",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 22.14,
-          "standardDeviation": 19.17,
+          "recordedGames": 8,
+          "averageYards": 21.5,
+          "standardDeviation": 17.84,
           "lowestYards": 0.0,
           "highestYards": 52.0,
           "probabilityStatus": "Requires model validation",
@@ -6713,9 +7084,9 @@
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 7,
-          "averageYards": 44.14,
-          "standardDeviation": 25.88,
+          "recordedGames": 8,
+          "averageYards": 46.12,
+          "standardDeviation": 24.61,
           "lowestYards": 18.0,
           "highestYards": 94.0,
           "probabilityStatus": "Requires model validation",
@@ -6738,29 +7109,29 @@
       "name": "Q.Johnston",
       "categories": {
         "receiving": {
-          "recordedGames": 6,
-          "averageYards": 33.67,
-          "standardDeviation": 18.39,
+          "recordedGames": 7,
+          "averageYards": 37.14,
+          "standardDeviation": 19.14,
           "lowestYards": 7.0,
-          "highestYards": 57.0,
+          "highestYards": 58.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 2,
-          "averageYards": 1.5,
-          "standardDeviation": 7.78,
+          "recordedGames": 3,
+          "averageYards": 2.67,
+          "standardDeviation": 5.86,
           "lowestYards": -4.0,
           "highestYards": 7.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 2,
-          "averageYards": 27.0,
-          "standardDeviation": 18.38,
+          "recordedGames": 3,
+          "averageYards": 39.0,
+          "standardDeviation": 24.52,
           "lowestYards": 14.0,
-          "highestYards": 40.0,
+          "highestYards": 63.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
@@ -6788,10 +7159,10 @@
       "name": "T.Harris",
       "categories": {
         "receiving": {
-          "recordedGames": 6,
-          "averageYards": 42.67,
-          "standardDeviation": 24.0,
-          "lowestYards": 16.0,
+          "recordedGames": 7,
+          "averageYards": 37.43,
+          "standardDeviation": 25.92,
+          "lowestYards": 6.0,
           "highestYards": 76.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
@@ -6836,28 +7207,28 @@
       "name": "A.Jeanty",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 47.0,
-          "standardDeviation": 17.66,
-          "lowestYards": 15.0,
+          "recordedGames": 9,
+          "averageYards": 41.22,
+          "standardDeviation": 23.95,
+          "lowestYards": -5.0,
           "highestYards": 68.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 8,
-          "averageYards": 42.12,
-          "standardDeviation": 30.54,
+          "recordedGames": 9,
+          "averageYards": 40.22,
+          "standardDeviation": 29.14,
           "lowestYards": 9.0,
           "highestYards": 102.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 8,
-          "averageYards": 89.12,
-          "standardDeviation": 31.52,
-          "lowestYards": 58.0,
+          "recordedGames": 9,
+          "averageYards": 81.44,
+          "standardDeviation": 37.42,
+          "lowestYards": 20.0,
           "highestYards": 147.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
@@ -6870,12 +7241,30 @@
       "name": "B.Bowers",
       "categories": {
         "receiving": {
-          "recordedGames": 6,
-          "averageYards": 91.17,
-          "standardDeviation": 18.85,
+          "recordedGames": 7,
+          "averageYards": 94.0,
+          "standardDeviation": 18.77,
           "lowestYards": 70.0,
           "highestYards": 116.0,
           "probabilityStatus": "Requires model validation",
+          "projectedProbability": null
+        },
+        "rushing": {
+          "recordedGames": 1,
+          "averageYards": 2.0,
+          "standardDeviation": null,
+          "lowestYards": 2.0,
+          "highestYards": 2.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        },
+        "combinedRushingReceiving": {
+          "recordedGames": 1,
+          "averageYards": 113.0,
+          "standardDeviation": null,
+          "lowestYards": 113.0,
+          "highestYards": 113.0,
+          "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
       }
@@ -7050,10 +7439,10 @@
       "name": "J.Bech",
       "categories": {
         "receiving": {
-          "recordedGames": 2,
-          "averageYards": 24.0,
-          "standardDeviation": 1.41,
-          "lowestYards": 23.0,
+          "recordedGames": 3,
+          "averageYards": 19.0,
+          "standardDeviation": 8.72,
+          "lowestYards": 9.0,
           "highestYards": 25.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
@@ -7066,9 +7455,9 @@
       "name": "J.Nailor",
       "categories": {
         "receiving": {
-          "recordedGames": 6,
-          "averageYards": 18.83,
-          "standardDeviation": 11.48,
+          "recordedGames": 7,
+          "averageYards": 17.43,
+          "standardDeviation": 11.12,
           "lowestYards": 9.0,
           "highestYards": 38.0,
           "probabilityStatus": "Requires model validation",
@@ -7082,9 +7471,9 @@
       "name": "K.Cousins",
       "categories": {
         "passing": {
-          "recordedGames": 8,
-          "averageYards": 265.5,
-          "standardDeviation": 60.32,
+          "recordedGames": 9,
+          "averageYards": 260.0,
+          "standardDeviation": 58.79,
           "lowestYards": 160.0,
           "highestYards": 365.0,
           "probabilityStatus": "Requires model validation",
@@ -7098,12 +7487,12 @@
       "name": "K.Cousins",
       "categories": {
         "rushing": {
-          "recordedGames": 5,
-          "averageYards": 1.4,
-          "standardDeviation": 4.51,
+          "recordedGames": 6,
+          "averageYards": 1.17,
+          "standardDeviation": 4.07,
           "lowestYards": -6.0,
           "highestYards": 6.0,
-          "probabilityStatus": "Insufficient verified games",
+          "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         }
       }
@@ -7148,9 +7537,9 @@
       "name": "M.Mayer",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 43.88,
-          "standardDeviation": 31.08,
+          "recordedGames": 9,
+          "averageYards": 43.11,
+          "standardDeviation": 29.17,
           "lowestYards": 2.0,
           "highestYards": 95.0,
           "probabilityStatus": "Requires model validation",
@@ -7173,10 +7562,10 @@
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 8,
-          "averageYards": 34.75,
-          "standardDeviation": 26.19,
-          "lowestYards": 5.0,
+          "recordedGames": 9,
+          "averageYards": 30.56,
+          "standardDeviation": 27.54,
+          "lowestYards": -3.0,
           "highestYards": 83.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
@@ -7198,9 +7587,9 @@
       "name": "T.Tucker",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 59.25,
-          "standardDeviation": 41.9,
+          "recordedGames": 9,
+          "averageYards": 58.78,
+          "standardDeviation": 39.22,
           "lowestYards": 0.0,
           "highestYards": 119.0,
           "probabilityStatus": "Requires model validation",
@@ -7228,6 +7617,22 @@
     },
     {
       "team": "MIA",
+      "playerId": "B.Pinion",
+      "name": "B.Pinion",
+      "categories": {
+        "passing": {
+          "recordedGames": 1,
+          "averageYards": 46.0,
+          "standardDeviation": null,
+          "lowestYards": 46.0,
+          "highestYards": 46.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        }
+      }
+    },
+    {
+      "team": "MIA",
       "playerId": "00-0032065",
       "name": "B.Pinion",
       "categories": {
@@ -7248,9 +7653,9 @@
       "name": "C.Bell",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 21.14,
-          "standardDeviation": 24.4,
+          "recordedGames": 8,
+          "averageYards": 18.5,
+          "standardDeviation": 23.79,
           "lowestYards": 0.0,
           "highestYards": 67.0,
           "probabilityStatus": "Requires model validation",
@@ -7282,11 +7687,27 @@
       "name": "C.Douglas",
       "categories": {
         "receiving": {
-          "recordedGames": 4,
-          "averageYards": 56.5,
-          "standardDeviation": 32.54,
+          "recordedGames": 5,
+          "averageYards": 59.2,
+          "standardDeviation": 28.82,
           "lowestYards": 19.0,
           "highestYards": 94.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        }
+      }
+    },
+    {
+      "team": "MIA",
+      "playerId": "00-0038930",
+      "name": "C.Washington",
+      "categories": {
+        "receiving": {
+          "recordedGames": 1,
+          "averageYards": 8.0,
+          "standardDeviation": null,
+          "lowestYards": 8.0,
+          "highestYards": 8.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
@@ -7348,10 +7769,10 @@
       "name": "G.Dulcich",
       "categories": {
         "receiving": {
-          "recordedGames": 6,
-          "averageYards": 42.67,
-          "standardDeviation": 25.8,
-          "lowestYards": 17.0,
+          "recordedGames": 7,
+          "averageYards": 38.57,
+          "standardDeviation": 25.93,
+          "lowestYards": 14.0,
           "highestYards": 86.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
@@ -7410,6 +7831,40 @@
     },
     {
       "team": "MIA",
+      "playerId": "00-0041096",
+      "name": "K.Allen",
+      "categories": {
+        "receiving": {
+          "recordedGames": 1,
+          "averageYards": 46.0,
+          "standardDeviation": null,
+          "lowestYards": 46.0,
+          "highestYards": 46.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        },
+        "rushing": {
+          "recordedGames": 1,
+          "averageYards": -1.0,
+          "standardDeviation": null,
+          "lowestYards": -1.0,
+          "highestYards": -1.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        },
+        "combinedRushingReceiving": {
+          "recordedGames": 1,
+          "averageYards": 45.0,
+          "standardDeviation": null,
+          "lowestYards": 45.0,
+          "highestYards": 45.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        }
+      }
+    },
+    {
+      "team": "MIA",
       "playerId": "00-0041529",
       "name": "K.Coleman",
       "categories": {
@@ -7421,6 +7876,15 @@
           "highestYards": 46.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
+        },
+        "rushing": {
+          "recordedGames": 1,
+          "averageYards": 16.0,
+          "standardDeviation": null,
+          "lowestYards": 16.0,
+          "highestYards": 16.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
         }
       }
     },
@@ -7430,30 +7894,30 @@
       "name": "M.Washington",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 47.0,
-          "standardDeviation": 12.9,
-          "lowestYards": 27.0,
+          "recordedGames": 8,
+          "averageYards": 43.75,
+          "standardDeviation": 15.07,
+          "lowestYards": 21.0,
           "highestYards": 67.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 5,
-          "averageYards": 7.6,
-          "standardDeviation": 6.11,
-          "lowestYards": 3.0,
+          "recordedGames": 6,
+          "averageYards": 6.33,
+          "standardDeviation": 6.28,
+          "lowestYards": 0.0,
           "highestYards": 18.0,
-          "probabilityStatus": "Insufficient verified games",
+          "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 5,
-          "averageYards": 54.8,
-          "standardDeviation": 13.79,
-          "lowestYards": 35.0,
+          "recordedGames": 6,
+          "averageYards": 49.17,
+          "standardDeviation": 18.51,
+          "lowestYards": 21.0,
           "highestYards": 70.0,
-          "probabilityStatus": "Insufficient verified games",
+          "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         }
       }
@@ -7464,9 +7928,9 @@
       "name": "M.Willis",
       "categories": {
         "passing": {
-          "recordedGames": 7,
-          "averageYards": 181.14,
-          "standardDeviation": 50.66,
+          "recordedGames": 8,
+          "averageYards": 174.5,
+          "standardDeviation": 50.53,
           "lowestYards": 85.0,
           "highestYards": 220.0,
           "probabilityStatus": "Requires model validation",
@@ -7480,9 +7944,9 @@
       "name": "M.Willis",
       "categories": {
         "rushing": {
-          "recordedGames": 7,
-          "averageYards": 32.14,
-          "standardDeviation": 27.17,
+          "recordedGames": 8,
+          "averageYards": 29.0,
+          "standardDeviation": 26.68,
           "lowestYards": 2.0,
           "highestYards": 74.0,
           "probabilityStatus": "Requires model validation",
@@ -7496,27 +7960,27 @@
       "name": "O.Gordon",
       "categories": {
         "receiving": {
-          "recordedGames": 4,
-          "averageYards": 3.5,
-          "standardDeviation": 7.0,
+          "recordedGames": 5,
+          "averageYards": 4.6,
+          "standardDeviation": 6.54,
           "lowestYards": 0.0,
           "highestYards": 14.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 6,
-          "averageYards": 68.0,
-          "standardDeviation": 37.68,
+          "recordedGames": 7,
+          "averageYards": 66.14,
+          "standardDeviation": 34.75,
           "lowestYards": 7.0,
           "highestYards": 103.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 4,
-          "averageYards": 81.75,
-          "standardDeviation": 23.54,
+          "recordedGames": 5,
+          "averageYards": 78.2,
+          "standardDeviation": 21.88,
           "lowestYards": 55.0,
           "highestYards": 103.0,
           "probabilityStatus": "Insufficient verified games",
@@ -7562,12 +8026,12 @@
       "name": "W.Kacmarek",
       "categories": {
         "receiving": {
-          "recordedGames": 5,
-          "averageYards": 4.8,
-          "standardDeviation": 6.14,
+          "recordedGames": 6,
+          "averageYards": 5.0,
+          "standardDeviation": 5.51,
           "lowestYards": 0.0,
           "highestYards": 15.0,
-          "probabilityStatus": "Insufficient verified games",
+          "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         }
       }
@@ -8024,9 +8488,9 @@
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 7,
-          "averageYards": 27.0,
-          "standardDeviation": 22.02,
+          "recordedGames": 8,
+          "averageYards": 30.5,
+          "standardDeviation": 22.66,
           "lowestYards": 0.0,
           "highestYards": 57.0,
           "probabilityStatus": "Requires model validation",
@@ -8049,11 +8513,11 @@
       "name": "D.Douglas",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 41.5,
-          "standardDeviation": 30.0,
+          "recordedGames": 9,
+          "averageYards": 48.22,
+          "standardDeviation": 34.55,
           "lowestYards": 9.0,
-          "highestYards": 86.0,
+          "highestYards": 102.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         }
@@ -8065,9 +8529,9 @@
       "name": "D.Maye",
       "categories": {
         "passing": {
-          "recordedGames": 8,
-          "averageYards": 247.88,
-          "standardDeviation": 68.78,
+          "recordedGames": 9,
+          "averageYards": 253.56,
+          "standardDeviation": 66.56,
           "lowestYards": 178.0,
           "highestYards": 374.0,
           "probabilityStatus": "Requires model validation",
@@ -8081,10 +8545,10 @@
       "name": "D.Maye",
       "categories": {
         "rushing": {
-          "recordedGames": 8,
-          "averageYards": 26.88,
-          "standardDeviation": 16.27,
-          "lowestYards": 4.0,
+          "recordedGames": 9,
+          "averageYards": 24.22,
+          "standardDeviation": 17.17,
+          "lowestYards": 3.0,
           "highestYards": 54.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
@@ -8113,9 +8577,9 @@
       "name": "E.Chism",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 21.57,
-          "standardDeviation": 23.75,
+          "recordedGames": 8,
+          "averageYards": 25.0,
+          "standardDeviation": 24.04,
           "lowestYards": -2.0,
           "highestYards": 57.0,
           "probabilityStatus": "Requires model validation",
@@ -8147,9 +8611,9 @@
       "name": "E.Raridon",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 24.71,
-          "standardDeviation": 23.46,
+          "recordedGames": 8,
+          "averageYards": 28.12,
+          "standardDeviation": 23.77,
           "lowestYards": 2.0,
           "highestYards": 57.0,
           "probabilityStatus": "Requires model validation",
@@ -8163,9 +8627,9 @@
       "name": "H.Henry",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 40.75,
-          "standardDeviation": 20.84,
+          "recordedGames": 9,
+          "averageYards": 40.11,
+          "standardDeviation": 19.59,
           "lowestYards": 5.0,
           "highestYards": 71.0,
           "probabilityStatus": "Requires model validation",
@@ -8179,9 +8643,9 @@
       "name": "K.Williams",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 27.14,
-          "standardDeviation": 32.59,
+          "recordedGames": 8,
+          "averageYards": 23.75,
+          "standardDeviation": 31.66,
           "lowestYards": 0.0,
           "highestYards": 91.0,
           "probabilityStatus": "Requires model validation",
@@ -8195,20 +8659,29 @@
       "name": "L.Larison",
       "categories": {
         "receiving": {
-          "recordedGames": 1,
-          "averageYards": 9.0,
-          "standardDeviation": null,
-          "lowestYards": 9.0,
+          "recordedGames": 2,
+          "averageYards": 4.5,
+          "standardDeviation": 6.36,
+          "lowestYards": 0.0,
           "highestYards": 9.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 1,
-          "averageYards": 6.0,
-          "standardDeviation": null,
-          "lowestYards": 6.0,
+          "recordedGames": 2,
+          "averageYards": 5.0,
+          "standardDeviation": 1.41,
+          "lowestYards": 4.0,
           "highestYards": 6.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        },
+        "combinedRushingReceiving": {
+          "recordedGames": 1,
+          "averageYards": 4.0,
+          "standardDeviation": null,
+          "lowestYards": 4.0,
+          "highestYards": 4.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
@@ -8220,9 +8693,9 @@
       "name": "M.Hollins",
       "categories": {
         "receiving": {
-          "recordedGames": 4,
-          "averageYards": 52.25,
-          "standardDeviation": 28.18,
+          "recordedGames": 5,
+          "averageYards": 49.0,
+          "standardDeviation": 25.47,
           "lowestYards": 18.0,
           "highestYards": 87.0,
           "probabilityStatus": "Insufficient verified games",
@@ -8268,27 +8741,27 @@
       "name": "R.Stevenson",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 30.29,
-          "standardDeviation": 30.72,
+          "recordedGames": 8,
+          "averageYards": 31.5,
+          "standardDeviation": 28.65,
           "lowestYards": 3.0,
           "highestYards": 93.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 8,
-          "averageYards": 45.88,
-          "standardDeviation": 20.38,
+          "recordedGames": 9,
+          "averageYards": 44.33,
+          "standardDeviation": 19.62,
           "lowestYards": 22.0,
           "highestYards": 82.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 7,
-          "averageYards": 77.57,
-          "standardDeviation": 27.35,
+          "recordedGames": 8,
+          "averageYards": 76.88,
+          "standardDeviation": 25.4,
           "lowestYards": 38.0,
           "highestYards": 115.0,
           "probabilityStatus": "Requires model validation",
@@ -8302,10 +8775,10 @@
       "name": "T.DeVito",
       "categories": {
         "passing": {
-          "recordedGames": 1,
-          "averageYards": 30.0,
-          "standardDeviation": null,
-          "lowestYards": 30.0,
+          "recordedGames": 2,
+          "averageYards": 25.5,
+          "standardDeviation": 6.36,
+          "lowestYards": 21.0,
           "highestYards": 30.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
@@ -8364,31 +8837,65 @@
     },
     {
       "team": "NO",
+      "playerId": "00-0039373",
+      "name": "A.Estime",
+      "categories": {
+        "receiving": {
+          "recordedGames": 1,
+          "averageYards": 5.0,
+          "standardDeviation": null,
+          "lowestYards": 5.0,
+          "highestYards": 5.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        },
+        "rushing": {
+          "recordedGames": 1,
+          "averageYards": 72.0,
+          "standardDeviation": null,
+          "lowestYards": 72.0,
+          "highestYards": 72.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        },
+        "combinedRushingReceiving": {
+          "recordedGames": 1,
+          "averageYards": 77.0,
+          "standardDeviation": null,
+          "lowestYards": 77.0,
+          "highestYards": 77.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        }
+      }
+    },
+    {
+      "team": "NO",
       "playerId": "00-0033906",
       "name": "A.Kamara",
       "categories": {
         "receiving": {
-          "recordedGames": 6,
-          "averageYards": 22.17,
-          "standardDeviation": 23.92,
+          "recordedGames": 7,
+          "averageYards": 21.43,
+          "standardDeviation": 21.92,
           "lowestYards": -6.0,
           "highestYards": 57.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 6,
-          "averageYards": 20.83,
-          "standardDeviation": 12.42,
+          "recordedGames": 7,
+          "averageYards": 22.43,
+          "standardDeviation": 12.09,
           "lowestYards": 5.0,
           "highestYards": 36.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 6,
-          "averageYards": 43.0,
-          "standardDeviation": 24.8,
+          "recordedGames": 7,
+          "averageYards": 43.86,
+          "standardDeviation": 22.76,
           "lowestYards": 6.0,
           "highestYards": 69.0,
           "probabilityStatus": "Requires model validation",
@@ -8402,9 +8909,9 @@
       "name": "B.Brown",
       "categories": {
         "receiving": {
-          "recordedGames": 2,
-          "averageYards": 31.0,
-          "standardDeviation": 36.77,
+          "recordedGames": 3,
+          "averageYards": 38.0,
+          "standardDeviation": 28.69,
           "lowestYards": 5.0,
           "highestYards": 57.0,
           "probabilityStatus": "Insufficient verified games",
@@ -8427,9 +8934,9 @@
       "name": "B.Lance",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 11.14,
-          "standardDeviation": 14.33,
+          "recordedGames": 8,
+          "averageYards": 9.75,
+          "standardDeviation": 13.84,
           "lowestYards": 0.0,
           "highestYards": 42.0,
           "probabilityStatus": "Requires model validation",
@@ -8477,9 +8984,9 @@
       "name": "C.Olave",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 90.86,
-          "standardDeviation": 49.57,
+          "recordedGames": 8,
+          "averageYards": 91.75,
+          "standardDeviation": 45.96,
           "lowestYards": 43.0,
           "highestYards": 182.0,
           "probabilityStatus": "Requires model validation",
@@ -8493,10 +9000,10 @@
       "name": "D.Vele",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 49.71,
-          "standardDeviation": 15.0,
-          "lowestYards": 26.0,
+          "recordedGames": 8,
+          "averageYards": 45.62,
+          "standardDeviation": 18.07,
+          "lowestYards": 17.0,
           "highestYards": 69.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
@@ -8509,12 +9016,28 @@
       "name": "J.Johnson",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 36.43,
-          "standardDeviation": 27.62,
+          "recordedGames": 8,
+          "averageYards": 36.12,
+          "standardDeviation": 25.59,
           "lowestYards": 0.0,
           "highestYards": 66.0,
           "probabilityStatus": "Requires model validation",
+          "projectedProbability": null
+        }
+      }
+    },
+    {
+      "team": "NO",
+      "playerId": "00-0041029",
+      "name": "J.Tyson",
+      "categories": {
+        "receiving": {
+          "recordedGames": 1,
+          "averageYards": 30.0,
+          "standardDeviation": null,
+          "lowestYards": 30.0,
+          "highestYards": 30.0,
+          "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
       }
@@ -8575,12 +9098,12 @@
       "name": "N.Fant",
       "categories": {
         "receiving": {
-          "recordedGames": 5,
-          "averageYards": 16.8,
-          "standardDeviation": 15.3,
+          "recordedGames": 6,
+          "averageYards": 16.0,
+          "standardDeviation": 13.83,
           "lowestYards": 0.0,
           "highestYards": 33.0,
-          "probabilityStatus": "Insufficient verified games",
+          "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         }
       }
@@ -8641,9 +9164,9 @@
       "name": "T.Shough",
       "categories": {
         "passing": {
-          "recordedGames": 7,
-          "averageYards": 245.86,
-          "standardDeviation": 102.1,
+          "recordedGames": 8,
+          "averageYards": 248.25,
+          "standardDeviation": 94.76,
           "lowestYards": 96.0,
           "highestYards": 410.0,
           "probabilityStatus": "Requires model validation",
@@ -8657,11 +9180,11 @@
       "name": "T.Shough",
       "categories": {
         "rushing": {
-          "recordedGames": 6,
-          "averageYards": 18.5,
-          "standardDeviation": 13.66,
+          "recordedGames": 7,
+          "averageYards": 23.14,
+          "standardDeviation": 17.51,
           "lowestYards": 5.0,
-          "highestYards": 36.0,
+          "highestYards": 51.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         }
@@ -8678,6 +9201,22 @@
           "standardDeviation": null,
           "lowestYards": 0.0,
           "highestYards": 0.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        }
+      }
+    },
+    {
+      "team": "NO",
+      "playerId": "00-0038040",
+      "name": "Z.White",
+      "categories": {
+        "rushing": {
+          "recordedGames": 1,
+          "averageYards": 5.0,
+          "standardDeviation": null,
+          "lowestYards": 5.0,
+          "highestYards": 5.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
@@ -8771,29 +9310,29 @@
       "name": "D.Mooney",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 16.14,
-          "standardDeviation": 17.42,
+          "recordedGames": 8,
+          "averageYards": 20.88,
+          "standardDeviation": 20.96,
           "lowestYards": 0.0,
-          "highestYards": 48.0,
+          "highestYards": 54.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 3,
-          "averageYards": 10.67,
-          "standardDeviation": 8.62,
-          "lowestYards": 3.0,
+          "recordedGames": 4,
+          "averageYards": 7.0,
+          "standardDeviation": 10.17,
+          "lowestYards": -4.0,
           "highestYards": 20.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 3,
-          "averageYards": 18.67,
-          "standardDeviation": 11.06,
+          "recordedGames": 4,
+          "averageYards": 26.5,
+          "standardDeviation": 18.08,
           "lowestYards": 7.0,
-          "highestYards": 29.0,
+          "highestYards": 50.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
@@ -8805,29 +9344,45 @@
       "name": "D.Singletary",
       "categories": {
         "receiving": {
-          "recordedGames": 4,
-          "averageYards": 13.75,
-          "standardDeviation": 9.74,
+          "recordedGames": 5,
+          "averageYards": 12.6,
+          "standardDeviation": 8.82,
           "lowestYards": 0.0,
           "highestYards": 22.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 4,
-          "averageYards": 20.0,
-          "standardDeviation": 14.31,
+          "recordedGames": 5,
+          "averageYards": 22.2,
+          "standardDeviation": 13.33,
           "lowestYards": 9.0,
           "highestYards": 41.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 4,
-          "averageYards": 33.75,
-          "standardDeviation": 19.0,
+          "recordedGames": 5,
+          "averageYards": 34.8,
+          "standardDeviation": 16.62,
           "lowestYards": 9.0,
           "highestYards": 55.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        }
+      }
+    },
+    {
+      "team": "NYG",
+      "playerId": "00-0041376",
+      "name": "G.Desrosiers",
+      "categories": {
+        "rushing": {
+          "recordedGames": 1,
+          "averageYards": 20.0,
+          "standardDeviation": null,
+          "lowestYards": 20.0,
+          "highestYards": 20.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
@@ -8839,9 +9394,9 @@
       "name": "I.Likely",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 56.43,
-          "standardDeviation": 36.95,
+          "recordedGames": 8,
+          "averageYards": 56.0,
+          "standardDeviation": 34.23,
           "lowestYards": 12.0,
           "highestYards": 99.0,
           "probabilityStatus": "Requires model validation",
@@ -8883,14 +9438,30 @@
     },
     {
       "team": "NYG",
+      "playerId": "00-0038938",
+      "name": "J.Hyatt",
+      "categories": {
+        "receiving": {
+          "recordedGames": 1,
+          "averageYards": 0.0,
+          "standardDeviation": null,
+          "lowestYards": 0.0,
+          "highestYards": 0.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        }
+      }
+    },
+    {
+      "team": "NYG",
       "playerId": "J.McCarthy",
       "name": "J.McCarthy",
       "categories": {
         "passing": {
-          "recordedGames": 2,
-          "averageYards": 247.5,
-          "standardDeviation": 6.36,
-          "lowestYards": 243.0,
+          "recordedGames": 3,
+          "averageYards": 207.33,
+          "standardDeviation": 69.72,
+          "lowestYards": 127.0,
           "highestYards": 252.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
@@ -8903,9 +9474,9 @@
       "name": "J.McCarthy",
       "categories": {
         "rushing": {
-          "recordedGames": 3,
-          "averageYards": 9.67,
-          "standardDeviation": 14.15,
+          "recordedGames": 4,
+          "averageYards": 12.75,
+          "standardDeviation": 13.1,
           "lowestYards": 1.0,
           "highestYards": 26.0,
           "probabilityStatus": "Insufficient verified games",
@@ -8919,12 +9490,12 @@
       "name": "J.Winston",
       "categories": {
         "passing": {
-          "recordedGames": 5,
-          "averageYards": 191.4,
-          "standardDeviation": 93.48,
-          "lowestYards": 111.0,
+          "recordedGames": 6,
+          "averageYards": 171.33,
+          "standardDeviation": 96.99,
+          "lowestYards": 71.0,
           "highestYards": 326.0,
-          "probabilityStatus": "Insufficient verified games",
+          "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         }
       }
@@ -8935,12 +9506,12 @@
       "name": "J.Winston",
       "categories": {
         "rushing": {
-          "recordedGames": 5,
-          "averageYards": 10.0,
-          "standardDeviation": 10.7,
+          "recordedGames": 6,
+          "averageYards": 10.17,
+          "standardDeviation": 9.58,
           "lowestYards": 1.0,
           "highestYards": 27.0,
-          "probabilityStatus": "Insufficient verified games",
+          "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         }
       }
@@ -8951,9 +9522,9 @@
       "name": "M.Fields",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 35.43,
-          "standardDeviation": 23.99,
+          "recordedGames": 8,
+          "averageYards": 36.0,
+          "standardDeviation": 22.27,
           "lowestYards": 19.0,
           "highestYards": 83.0,
           "probabilityStatus": "Requires model validation",
@@ -8967,9 +9538,9 @@
       "name": "M.Nabers",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 86.43,
-          "standardDeviation": 57.56,
+          "recordedGames": 8,
+          "averageYards": 81.0,
+          "standardDeviation": 55.46,
           "lowestYards": 1.0,
           "highestYards": 165.0,
           "probabilityStatus": "Requires model validation",
@@ -9131,9 +9702,9 @@
       "name": "A.Mitchell",
       "categories": {
         "receiving": {
-          "recordedGames": 4,
-          "averageYards": 66.25,
-          "standardDeviation": 58.24,
+          "recordedGames": 5,
+          "averageYards": 53.0,
+          "standardDeviation": 58.5,
           "lowestYards": 0.0,
           "highestYards": 142.0,
           "probabilityStatus": "Insufficient verified games",
@@ -9163,27 +9734,27 @@
       "name": "B.Allen",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 10.12,
-          "standardDeviation": 11.52,
+          "recordedGames": 9,
+          "averageYards": 11.33,
+          "standardDeviation": 11.37,
           "lowestYards": 0.0,
           "highestYards": 30.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 8,
-          "averageYards": 70.62,
-          "standardDeviation": 49.84,
+          "recordedGames": 9,
+          "averageYards": 66.44,
+          "standardDeviation": 48.28,
           "lowestYards": 7.0,
           "highestYards": 147.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 8,
-          "averageYards": 80.75,
-          "standardDeviation": 53.55,
+          "recordedGames": 9,
+          "averageYards": 77.78,
+          "standardDeviation": 50.88,
           "lowestYards": 15.0,
           "highestYards": 153.0,
           "probabilityStatus": "Requires model validation",
@@ -9197,27 +9768,27 @@
       "name": "B.Hall",
       "categories": {
         "receiving": {
-          "recordedGames": 3,
-          "averageYards": 34.0,
-          "standardDeviation": 25.36,
+          "recordedGames": 4,
+          "averageYards": 32.0,
+          "standardDeviation": 21.09,
           "lowestYards": 16.0,
           "highestYards": 63.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 3,
-          "averageYards": 54.33,
-          "standardDeviation": 41.31,
+          "recordedGames": 4,
+          "averageYards": 56.0,
+          "standardDeviation": 33.89,
           "lowestYards": 29.0,
           "highestYards": 102.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 3,
-          "averageYards": 88.33,
-          "standardDeviation": 31.66,
+          "recordedGames": 4,
+          "averageYards": 88.0,
+          "standardDeviation": 25.86,
           "lowestYards": 55.0,
           "highestYards": 118.0,
           "probabilityStatus": "Insufficient verified games",
@@ -9231,9 +9802,9 @@
       "name": "G.Smith",
       "categories": {
         "passing": {
-          "recordedGames": 8,
-          "averageYards": 239.12,
-          "standardDeviation": 65.56,
+          "recordedGames": 9,
+          "averageYards": 230.89,
+          "standardDeviation": 66.12,
           "lowestYards": 119.0,
           "highestYards": 321.0,
           "probabilityStatus": "Requires model validation",
@@ -9247,9 +9818,9 @@
       "name": "G.Smith",
       "categories": {
         "rushing": {
-          "recordedGames": 7,
-          "averageYards": 6.57,
-          "standardDeviation": 6.4,
+          "recordedGames": 8,
+          "averageYards": 6.75,
+          "standardDeviation": 5.95,
           "lowestYards": -1.0,
           "highestYards": 17.0,
           "probabilityStatus": "Requires model validation",
@@ -9322,9 +9893,9 @@
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 3,
-          "averageYards": 7.0,
-          "standardDeviation": 6.08,
+          "recordedGames": 4,
+          "averageYards": 6.25,
+          "standardDeviation": 5.19,
           "lowestYards": 3.0,
           "highestYards": 14.0,
           "probabilityStatus": "Insufficient verified games",
@@ -9379,9 +9950,9 @@
       "name": "K.Sadiq",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 23.25,
-          "standardDeviation": 34.02,
+          "recordedGames": 9,
+          "averageYards": 26.11,
+          "standardDeviation": 32.96,
           "lowestYards": 0.0,
           "highestYards": 105.0,
           "probabilityStatus": "Requires model validation",
@@ -9413,12 +9984,12 @@
       "name": "M.Taylor",
       "categories": {
         "receiving": {
-          "recordedGames": 5,
-          "averageYards": 27.2,
-          "standardDeviation": 23.32,
+          "recordedGames": 6,
+          "averageYards": 24.5,
+          "standardDeviation": 21.88,
           "lowestYards": -2.0,
           "highestYards": 62.0,
-          "probabilityStatus": "Insufficient verified games",
+          "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         }
       }
@@ -9429,9 +10000,9 @@
       "name": "O.Cooper",
       "categories": {
         "receiving": {
-          "recordedGames": 3,
-          "averageYards": 82.67,
-          "standardDeviation": 46.0,
+          "recordedGames": 4,
+          "averageYards": 76.5,
+          "standardDeviation": 39.53,
           "lowestYards": 30.0,
           "highestYards": 115.0,
           "probabilityStatus": "Insufficient verified games",
@@ -9509,9 +10080,9 @@
       "name": "D.Cooper",
       "categories": {
         "receiving": {
-          "recordedGames": 6,
-          "averageYards": 29.17,
-          "standardDeviation": 22.06,
+          "recordedGames": 7,
+          "averageYards": 28.57,
+          "standardDeviation": 20.2,
           "lowestYards": 9.0,
           "highestYards": 71.0,
           "probabilityStatus": "Requires model validation",
@@ -9525,9 +10096,9 @@
       "name": "D.Goedert",
       "categories": {
         "receiving": {
-          "recordedGames": 6,
-          "averageYards": 43.0,
-          "standardDeviation": 25.38,
+          "recordedGames": 7,
+          "averageYards": 44.0,
+          "standardDeviation": 23.32,
           "lowestYards": 4.0,
           "highestYards": 77.0,
           "probabilityStatus": "Requires model validation",
@@ -9625,28 +10196,28 @@
       "name": "E.Mitchell",
       "categories": {
         "receiving": {
-          "recordedGames": 2,
-          "averageYards": 13.0,
-          "standardDeviation": 14.14,
+          "recordedGames": 3,
+          "averageYards": 15.33,
+          "standardDeviation": 10.79,
           "lowestYards": 3.0,
           "highestYards": 23.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 2,
-          "averageYards": 22.5,
-          "standardDeviation": 16.26,
-          "lowestYards": 11.0,
+          "recordedGames": 3,
+          "averageYards": 17.0,
+          "standardDeviation": 14.93,
+          "lowestYards": 6.0,
           "highestYards": 34.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 2,
-          "averageYards": 35.5,
-          "standardDeviation": 2.12,
-          "lowestYards": 34.0,
+          "recordedGames": 3,
+          "averageYards": 32.33,
+          "standardDeviation": 5.69,
+          "lowestYards": 26.0,
           "highestYards": 37.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
@@ -9659,10 +10230,10 @@
       "name": "E.Moore",
       "categories": {
         "receiving": {
-          "recordedGames": 2,
-          "averageYards": 10.0,
-          "standardDeviation": 8.49,
-          "lowestYards": 4.0,
+          "recordedGames": 3,
+          "averageYards": 5.67,
+          "standardDeviation": 9.61,
+          "lowestYards": -3.0,
           "highestYards": 16.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
@@ -9675,11 +10246,27 @@
       "name": "E.Stowers",
       "categories": {
         "receiving": {
-          "recordedGames": 2,
-          "averageYards": 26.5,
-          "standardDeviation": 37.48,
+          "recordedGames": 3,
+          "averageYards": 17.67,
+          "standardDeviation": 30.6,
           "lowestYards": 0.0,
           "highestYards": 53.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        }
+      }
+    },
+    {
+      "team": "PHI",
+      "playerId": "00-0037086",
+      "name": "G.Calcaterra",
+      "categories": {
+        "receiving": {
+          "recordedGames": 1,
+          "averageYards": 0.0,
+          "standardDeviation": null,
+          "lowestYards": 0.0,
+          "highestYards": 0.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
@@ -9735,6 +10322,38 @@
     },
     {
       "team": "PHI",
+      "playerId": "J.Milton",
+      "name": "J.Milton",
+      "categories": {
+        "passing": {
+          "recordedGames": 1,
+          "averageYards": 169.0,
+          "standardDeviation": null,
+          "lowestYards": 169.0,
+          "highestYards": 169.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        }
+      }
+    },
+    {
+      "team": "PHI",
+      "playerId": "00-0039398",
+      "name": "J.Milton",
+      "categories": {
+        "rushing": {
+          "recordedGames": 1,
+          "averageYards": 64.0,
+          "standardDeviation": null,
+          "lowestYards": 64.0,
+          "highestYards": 64.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        }
+      }
+    },
+    {
+      "team": "PHI",
       "playerId": "00-0033246",
       "name": "J.Mundt",
       "categories": {
@@ -9755,10 +10374,10 @@
       "name": "M.Brown",
       "categories": {
         "receiving": {
-          "recordedGames": 2,
-          "averageYards": 23.5,
-          "standardDeviation": 9.19,
-          "lowestYards": 17.0,
+          "recordedGames": 3,
+          "averageYards": 21.0,
+          "standardDeviation": 7.81,
+          "lowestYards": 16.0,
           "highestYards": 30.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
@@ -9780,9 +10399,9 @@
       "name": "M.Lemon",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 31.38,
-          "standardDeviation": 23.49,
+          "recordedGames": 9,
+          "averageYards": 34.67,
+          "standardDeviation": 24.09,
           "lowestYards": -5.0,
           "highestYards": 67.0,
           "probabilityStatus": "Requires model validation",
@@ -9814,27 +10433,27 @@
       "name": "S.Barkley",
       "categories": {
         "receiving": {
-          "recordedGames": 6,
-          "averageYards": 6.83,
-          "standardDeviation": 10.15,
+          "recordedGames": 7,
+          "averageYards": 5.86,
+          "standardDeviation": 9.62,
           "lowestYards": -3.0,
           "highestYards": 24.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 6,
-          "averageYards": 45.67,
-          "standardDeviation": 34.61,
+          "recordedGames": 7,
+          "averageYards": 42.29,
+          "standardDeviation": 32.84,
           "lowestYards": 8.0,
           "highestYards": 83.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 6,
-          "averageYards": 52.5,
-          "standardDeviation": 30.72,
+          "recordedGames": 7,
+          "averageYards": 48.14,
+          "standardDeviation": 30.32,
           "lowestYards": 10.0,
           "highestYards": 80.0,
           "probabilityStatus": "Requires model validation",
@@ -10374,27 +10993,27 @@
       "name": "A.Barner",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 25.38,
-          "standardDeviation": 20.48,
-          "lowestYards": 8.0,
+          "recordedGames": 9,
+          "averageYards": 23.33,
+          "standardDeviation": 20.11,
+          "lowestYards": 7.0,
           "highestYards": 69.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 2,
-          "averageYards": 2.5,
-          "standardDeviation": 2.12,
+          "recordedGames": 3,
+          "averageYards": 2.67,
+          "standardDeviation": 1.53,
           "lowestYards": 1.0,
           "highestYards": 4.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 2,
-          "averageYards": 27.5,
-          "standardDeviation": 26.16,
+          "recordedGames": 3,
+          "averageYards": 21.67,
+          "standardDeviation": 21.08,
           "lowestYards": 9.0,
           "highestYards": 46.0,
           "probabilityStatus": "Insufficient verified games",
@@ -10424,9 +11043,9 @@
       "name": "C.Kupp",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 25.75,
-          "standardDeviation": 15.94,
+          "recordedGames": 9,
+          "averageYards": 26.44,
+          "standardDeviation": 15.06,
           "lowestYards": 7.0,
           "highestYards": 50.0,
           "probabilityStatus": "Requires model validation",
@@ -10440,10 +11059,10 @@
       "name": "D.Lock",
       "categories": {
         "passing": {
-          "recordedGames": 2,
-          "averageYards": 211.0,
-          "standardDeviation": 33.94,
-          "lowestYards": 187.0,
+          "recordedGames": 3,
+          "averageYards": 199.0,
+          "standardDeviation": 31.75,
+          "lowestYards": 175.0,
           "highestYards": 235.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
@@ -10456,11 +11075,11 @@
       "name": "D.Lock",
       "categories": {
         "rushing": {
-          "recordedGames": 1,
-          "averageYards": 13.0,
-          "standardDeviation": null,
+          "recordedGames": 2,
+          "averageYards": 14.5,
+          "standardDeviation": 2.12,
           "lowestYards": 13.0,
-          "highestYards": 13.0,
+          "highestYards": 16.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
@@ -10488,9 +11107,9 @@
       "name": "E.Saubert",
       "categories": {
         "receiving": {
-          "recordedGames": 4,
-          "averageYards": 5.0,
-          "standardDeviation": 12.36,
+          "recordedGames": 5,
+          "averageYards": 4.0,
+          "standardDeviation": 10.93,
           "lowestYards": -10.0,
           "highestYards": 17.0,
           "probabilityStatus": "Insufficient verified games",
@@ -10572,29 +11191,29 @@
       "name": "J.Price",
       "categories": {
         "receiving": {
-          "recordedGames": 4,
-          "averageYards": 7.25,
-          "standardDeviation": 0.96,
+          "recordedGames": 5,
+          "averageYards": 16.6,
+          "standardDeviation": 20.92,
           "lowestYards": 6.0,
-          "highestYards": 8.0,
+          "highestYards": 54.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 4,
-          "averageYards": 37.0,
-          "standardDeviation": 18.24,
+          "recordedGames": 5,
+          "averageYards": 34.4,
+          "standardDeviation": 16.83,
           "lowestYards": 15.0,
           "highestYards": 52.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 4,
-          "averageYards": 44.25,
-          "standardDeviation": 18.12,
+          "recordedGames": 5,
+          "averageYards": 51.0,
+          "standardDeviation": 21.77,
           "lowestYards": 22.0,
-          "highestYards": 60.0,
+          "highestYards": 78.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
@@ -10622,10 +11241,10 @@
       "name": "J.Smith-Njigba",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 123.12,
-          "standardDeviation": 25.56,
-          "lowestYards": 76.0,
+          "recordedGames": 9,
+          "averageYards": 115.11,
+          "standardDeviation": 33.91,
+          "lowestYards": 51.0,
           "highestYards": 155.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
@@ -10722,12 +11341,12 @@
       "name": "T.Horton",
       "categories": {
         "receiving": {
-          "recordedGames": 5,
-          "averageYards": 18.6,
-          "standardDeviation": 19.07,
+          "recordedGames": 6,
+          "averageYards": 19.17,
+          "standardDeviation": 17.12,
           "lowestYards": 0.0,
           "highestYards": 48.0,
-          "probabilityStatus": "Insufficient verified games",
+          "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         }
       }
@@ -10772,29 +11391,29 @@
       "name": "Z.Charbonnet",
       "categories": {
         "receiving": {
-          "recordedGames": 1,
-          "averageYards": 6.0,
-          "standardDeviation": null,
+          "recordedGames": 2,
+          "averageYards": 7.5,
+          "standardDeviation": 2.12,
           "lowestYards": 6.0,
-          "highestYards": 6.0,
+          "highestYards": 9.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 1,
-          "averageYards": 23.0,
-          "standardDeviation": null,
+          "recordedGames": 2,
+          "averageYards": 50.0,
+          "standardDeviation": 38.18,
           "lowestYards": 23.0,
-          "highestYards": 23.0,
+          "highestYards": 77.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 1,
-          "averageYards": 29.0,
-          "standardDeviation": null,
+          "recordedGames": 2,
+          "averageYards": 57.5,
+          "standardDeviation": 40.31,
           "lowestYards": 29.0,
-          "highestYards": 29.0,
+          "highestYards": 86.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
@@ -10806,11 +11425,11 @@
       "name": "B.Cooks",
       "categories": {
         "receiving": {
-          "recordedGames": 4,
-          "averageYards": 8.25,
-          "standardDeviation": 6.18,
+          "recordedGames": 5,
+          "averageYards": 11.6,
+          "standardDeviation": 9.21,
           "lowestYards": 0.0,
-          "highestYards": 13.0,
+          "highestYards": 25.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
@@ -10822,9 +11441,9 @@
       "name": "B.Purdy",
       "categories": {
         "passing": {
-          "recordedGames": 7,
-          "averageYards": 249.71,
-          "standardDeviation": 44.7,
+          "recordedGames": 8,
+          "averageYards": 247.5,
+          "standardDeviation": 41.85,
           "lowestYards": 189.0,
           "highestYards": 297.0,
           "probabilityStatus": "Requires model validation",
@@ -10838,11 +11457,11 @@
       "name": "B.Purdy",
       "categories": {
         "rushing": {
-          "recordedGames": 7,
-          "averageYards": 23.0,
-          "standardDeviation": 12.11,
+          "recordedGames": 8,
+          "averageYards": 25.12,
+          "standardDeviation": 12.72,
           "lowestYards": 5.0,
-          "highestYards": 34.0,
+          "highestYards": 40.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         }
@@ -10854,27 +11473,27 @@
       "name": "C.McCaffrey",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 35.86,
-          "standardDeviation": 18.3,
+          "recordedGames": 8,
+          "averageYards": 33.75,
+          "standardDeviation": 17.96,
           "lowestYards": 15.0,
           "highestYards": 61.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 7,
-          "averageYards": 55.57,
-          "standardDeviation": 18.73,
+          "recordedGames": 8,
+          "averageYards": 57.12,
+          "standardDeviation": 17.89,
           "lowestYards": 23.0,
           "highestYards": 75.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 7,
-          "averageYards": 91.43,
-          "standardDeviation": 20.49,
+          "recordedGames": 8,
+          "averageYards": 90.88,
+          "standardDeviation": 19.04,
           "lowestYards": 66.0,
           "highestYards": 117.0,
           "probabilityStatus": "Requires model validation",
@@ -10888,10 +11507,10 @@
       "name": "D.Robinson",
       "categories": {
         "receiving": {
-          "recordedGames": 2,
-          "averageYards": 42.0,
-          "standardDeviation": 11.31,
-          "lowestYards": 34.0,
+          "recordedGames": 3,
+          "averageYards": 35.33,
+          "standardDeviation": 14.05,
+          "lowestYards": 22.0,
           "highestYards": 50.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
@@ -10938,9 +11557,9 @@
       "name": "G.Kittle",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 60.71,
-          "standardDeviation": 30.13,
+          "recordedGames": 8,
+          "averageYards": 60.38,
+          "standardDeviation": 27.91,
           "lowestYards": 12.0,
           "highestYards": 88.0,
           "probabilityStatus": "Requires model validation",
@@ -10970,9 +11589,9 @@
       "name": "J.Cowing",
       "categories": {
         "receiving": {
-          "recordedGames": 4,
-          "averageYards": 11.75,
-          "standardDeviation": 18.01,
+          "recordedGames": 5,
+          "averageYards": 10.4,
+          "standardDeviation": 15.88,
           "lowestYards": 0.0,
           "highestYards": 38.0,
           "probabilityStatus": "Insufficient verified games",
@@ -11013,9 +11632,9 @@
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 2,
-          "averageYards": 10.5,
-          "standardDeviation": 6.36,
+          "recordedGames": 3,
+          "averageYards": 10.67,
+          "standardDeviation": 4.51,
           "lowestYards": 6.0,
           "highestYards": 15.0,
           "probabilityStatus": "Insufficient verified games",
@@ -11038,11 +11657,11 @@
       "name": "J.Watkins",
       "categories": {
         "receiving": {
-          "recordedGames": 3,
-          "averageYards": 46.0,
-          "standardDeviation": 20.88,
+          "recordedGames": 4,
+          "averageYards": 56.0,
+          "standardDeviation": 26.28,
           "lowestYards": 22.0,
-          "highestYards": 60.0,
+          "highestYards": 86.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
@@ -11063,11 +11682,11 @@
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 7,
-          "averageYards": 33.29,
-          "standardDeviation": 22.11,
+          "recordedGames": 8,
+          "averageYards": 37.88,
+          "standardDeviation": 24.24,
           "lowestYards": 13.0,
-          "highestYards": 65.0,
+          "highestYards": 70.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
@@ -11088,10 +11707,10 @@
       "name": "K.Hodge",
       "categories": {
         "receiving": {
-          "recordedGames": 1,
-          "averageYards": 18.0,
-          "standardDeviation": null,
-          "lowestYards": 18.0,
+          "recordedGames": 2,
+          "averageYards": 17.5,
+          "standardDeviation": 0.71,
+          "lowestYards": 17.0,
           "highestYards": 18.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
@@ -11111,6 +11730,15 @@
           "highestYards": 28.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
+        },
+        "rushing": {
+          "recordedGames": 1,
+          "averageYards": 4.0,
+          "standardDeviation": null,
+          "lowestYards": 4.0,
+          "highestYards": 4.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
         }
       }
     },
@@ -11120,9 +11748,9 @@
       "name": "L.Farrell",
       "categories": {
         "receiving": {
-          "recordedGames": 4,
-          "averageYards": 8.25,
-          "standardDeviation": 9.74,
+          "recordedGames": 5,
+          "averageYards": 6.6,
+          "standardDeviation": 9.21,
           "lowestYards": 0.0,
           "highestYards": 19.0,
           "probabilityStatus": "Insufficient verified games",
@@ -11152,10 +11780,10 @@
       "name": "M.Jones",
       "categories": {
         "rushing": {
-          "recordedGames": 1,
-          "averageYards": -2.0,
-          "standardDeviation": null,
-          "lowestYards": -2.0,
+          "recordedGames": 2,
+          "averageYards": -2.5,
+          "standardDeviation": 0.71,
+          "lowestYards": -3.0,
           "highestYards": -2.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
@@ -11168,27 +11796,27 @@
       "name": "B.Irving",
       "categories": {
         "receiving": {
-          "recordedGames": 6,
-          "averageYards": 13.0,
-          "standardDeviation": 17.66,
+          "recordedGames": 7,
+          "averageYards": 15.14,
+          "standardDeviation": 17.09,
           "lowestYards": 1.0,
           "highestYards": 48.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 8,
-          "averageYards": 91.0,
-          "standardDeviation": 52.12,
+          "recordedGames": 9,
+          "averageYards": 91.67,
+          "standardDeviation": 48.79,
           "lowestYards": 45.0,
           "highestYards": 170.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 6,
-          "averageYards": 95.83,
-          "standardDeviation": 45.02,
+          "recordedGames": 7,
+          "averageYards": 100.0,
+          "standardDeviation": 42.55,
           "lowestYards": 49.0,
           "highestYards": 175.0,
           "probabilityStatus": "Requires model validation",
@@ -11202,12 +11830,12 @@
       "name": "B.Mayfield",
       "categories": {
         "passing": {
-          "recordedGames": 5,
-          "averageYards": 135.8,
-          "standardDeviation": 98.43,
+          "recordedGames": 6,
+          "averageYards": 153.67,
+          "standardDeviation": 98.32,
           "lowestYards": 0.0,
-          "highestYards": 217.0,
-          "probabilityStatus": "Insufficient verified games",
+          "highestYards": 243.0,
+          "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         }
       }
@@ -11218,12 +11846,12 @@
       "name": "B.Mayfield",
       "categories": {
         "rushing": {
-          "recordedGames": 5,
-          "averageYards": 16.0,
-          "standardDeviation": 13.17,
-          "lowestYards": 1.0,
+          "recordedGames": 6,
+          "averageYards": 13.33,
+          "standardDeviation": 13.47,
+          "lowestYards": 0.0,
           "highestYards": 30.0,
-          "probabilityStatus": "Insufficient verified games",
+          "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         }
       }
@@ -11250,17 +11878,17 @@
       "name": "C.Godwin",
       "categories": {
         "receiving": {
-          "recordedGames": 8,
-          "averageYards": 30.38,
-          "standardDeviation": 14.08,
+          "recordedGames": 9,
+          "averageYards": 28.78,
+          "standardDeviation": 14.02,
           "lowestYards": 0.0,
           "highestYards": 46.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 3,
-          "averageYards": 6.0,
+          "recordedGames": 4,
+          "averageYards": 7.5,
           "standardDeviation": 5.2,
           "lowestYards": 3.0,
           "highestYards": 12.0,
@@ -11268,10 +11896,10 @@
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 3,
-          "averageYards": 47.0,
-          "standardDeviation": 9.64,
-          "lowestYards": 40.0,
+          "recordedGames": 4,
+          "averageYards": 42.25,
+          "standardDeviation": 12.34,
+          "lowestYards": 28.0,
           "highestYards": 58.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
@@ -11284,9 +11912,9 @@
       "name": "C.Otton",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 26.57,
-          "standardDeviation": 19.68,
+          "recordedGames": 8,
+          "averageYards": 26.38,
+          "standardDeviation": 18.23,
           "lowestYards": 0.0,
           "highestYards": 56.0,
           "probabilityStatus": "Requires model validation",
@@ -11300,27 +11928,27 @@
       "name": "E.Egbuka",
       "categories": {
         "receiving": {
-          "recordedGames": 6,
-          "averageYards": 40.0,
-          "standardDeviation": 21.84,
+          "recordedGames": 7,
+          "averageYards": 39.71,
+          "standardDeviation": 19.96,
           "lowestYards": 13.0,
           "highestYards": 63.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 2,
-          "averageYards": 5.5,
-          "standardDeviation": 12.02,
+          "recordedGames": 3,
+          "averageYards": 4.0,
+          "standardDeviation": 8.89,
           "lowestYards": -3.0,
           "highestYards": 14.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 2,
-          "averageYards": 32.5,
-          "standardDeviation": 27.58,
+          "recordedGames": 3,
+          "averageYards": 34.67,
+          "standardDeviation": 19.86,
           "lowestYards": 13.0,
           "highestYards": 52.0,
           "probabilityStatus": "Insufficient verified games",
@@ -11400,27 +12028,27 @@
       "name": "K.Gainwell",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 8.71,
-          "standardDeviation": 7.43,
+          "recordedGames": 8,
+          "averageYards": 15.12,
+          "standardDeviation": 19.39,
           "lowestYards": 0.0,
-          "highestYards": 22.0,
+          "highestYards": 60.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 8,
-          "averageYards": 36.12,
-          "standardDeviation": 50.54,
+          "recordedGames": 9,
+          "averageYards": 33.89,
+          "standardDeviation": 47.75,
           "lowestYards": -4.0,
           "highestYards": 140.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 7,
-          "averageYards": 37.43,
-          "standardDeviation": 45.7,
+          "recordedGames": 8,
+          "averageYards": 42.25,
+          "standardDeviation": 44.45,
           "lowestYards": 10.0,
           "highestYards": 140.0,
           "probabilityStatus": "Requires model validation",
@@ -11482,9 +12110,9 @@
       "name": "T.Hurst",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 24.0,
-          "standardDeviation": 17.41,
+          "recordedGames": 8,
+          "averageYards": 21.0,
+          "standardDeviation": 18.21,
           "lowestYards": 0.0,
           "highestYards": 40.0,
           "probabilityStatus": "Requires model validation",
@@ -11498,11 +12126,11 @@
       "name": "T.Johnson",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 25.43,
-          "standardDeviation": 24.02,
+          "recordedGames": 8,
+          "averageYards": 31.75,
+          "standardDeviation": 28.53,
           "lowestYards": 0.0,
-          "highestYards": 64.0,
+          "highestYards": 76.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
@@ -11844,27 +12472,27 @@
       "name": "A.Ekeler",
       "categories": {
         "receiving": {
-          "recordedGames": 3,
-          "averageYards": 10.0,
-          "standardDeviation": 5.57,
+          "recordedGames": 4,
+          "averageYards": 12.0,
+          "standardDeviation": 6.06,
           "lowestYards": 4.0,
-          "highestYards": 15.0,
+          "highestYards": 18.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 4,
-          "averageYards": 16.75,
-          "standardDeviation": 18.48,
+          "recordedGames": 5,
+          "averageYards": 16.6,
+          "standardDeviation": 16.01,
           "lowestYards": -1.0,
           "highestYards": 36.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 3,
-          "averageYards": 20.33,
-          "standardDeviation": 17.39,
+          "recordedGames": 4,
+          "averageYards": 23.75,
+          "standardDeviation": 15.76,
           "lowestYards": 7.0,
           "highestYards": 40.0,
           "probabilityStatus": "Insufficient verified games",
@@ -11926,9 +12554,9 @@
       "name": "A.Williams",
       "categories": {
         "receiving": {
-          "recordedGames": 7,
-          "averageYards": 37.0,
-          "standardDeviation": 18.85,
+          "recordedGames": 8,
+          "averageYards": 35.5,
+          "standardDeviation": 17.96,
           "lowestYards": 15.0,
           "highestYards": 64.0,
           "probabilityStatus": "Requires model validation",
@@ -11974,12 +12602,12 @@
       "name": "C.Okonkwo",
       "categories": {
         "receiving": {
-          "recordedGames": 5,
-          "averageYards": 36.4,
-          "standardDeviation": 27.57,
+          "recordedGames": 6,
+          "averageYards": 39.67,
+          "standardDeviation": 25.93,
           "lowestYards": 5.0,
           "highestYards": 69.0,
-          "probabilityStatus": "Insufficient verified games",
+          "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         }
       }
@@ -12006,9 +12634,9 @@
       "name": "C.Yankoff",
       "categories": {
         "receiving": {
-          "recordedGames": 3,
-          "averageYards": 5.33,
-          "standardDeviation": 7.57,
+          "recordedGames": 4,
+          "averageYards": 5.5,
+          "standardDeviation": 6.19,
           "lowestYards": 0.0,
           "highestYards": 14.0,
           "probabilityStatus": "Insufficient verified games",
@@ -12066,6 +12694,22 @@
     },
     {
       "team": "WAS",
+      "playerId": "00-0041176",
+      "name": "J.Bradley",
+      "categories": {
+        "receiving": {
+          "recordedGames": 1,
+          "averageYards": 12.0,
+          "standardDeviation": null,
+          "lowestYards": 12.0,
+          "highestYards": 12.0,
+          "probabilityStatus": "Insufficient verified games",
+          "projectedProbability": null
+        }
+      }
+    },
+    {
+      "team": "WAS",
       "playerId": "00-0040242",
       "name": "J.Croskey-Merritt",
       "categories": {
@@ -12104,12 +12748,12 @@
       "name": "J.Daniels",
       "categories": {
         "passing": {
-          "recordedGames": 5,
-          "averageYards": 195.2,
-          "standardDeviation": 74.64,
+          "recordedGames": 6,
+          "averageYards": 208.17,
+          "standardDeviation": 73.93,
           "lowestYards": 96.0,
           "highestYards": 300.0,
-          "probabilityStatus": "Insufficient verified games",
+          "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         }
       }
@@ -12120,12 +12764,12 @@
       "name": "J.Daniels",
       "categories": {
         "rushing": {
-          "recordedGames": 5,
-          "averageYards": 47.2,
-          "standardDeviation": 38.15,
+          "recordedGames": 6,
+          "averageYards": 42.0,
+          "standardDeviation": 36.42,
           "lowestYards": 10.0,
           "highestYards": 103.0,
-          "probabilityStatus": "Insufficient verified games",
+          "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         }
       }
@@ -12202,11 +12846,11 @@
       "name": "L.McCaffrey",
       "categories": {
         "receiving": {
-          "recordedGames": 1,
-          "averageYards": 0.0,
-          "standardDeviation": null,
+          "recordedGames": 2,
+          "averageYards": 3.0,
+          "standardDeviation": 4.24,
           "lowestYards": 0.0,
-          "highestYards": 0.0,
+          "highestYards": 6.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }
@@ -12250,27 +12894,27 @@
       "name": "R.White",
       "categories": {
         "receiving": {
-          "recordedGames": 6,
-          "averageYards": 14.67,
-          "standardDeviation": 16.12,
+          "recordedGames": 7,
+          "averageYards": 18.43,
+          "standardDeviation": 17.77,
           "lowestYards": 2.0,
-          "highestYards": 40.0,
+          "highestYards": 41.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "rushing": {
-          "recordedGames": 6,
-          "averageYards": 33.33,
-          "standardDeviation": 13.92,
+          "recordedGames": 7,
+          "averageYards": 32.57,
+          "standardDeviation": 12.87,
           "lowestYards": 18.0,
           "highestYards": 55.0,
           "probabilityStatus": "Requires model validation",
           "projectedProbability": null
         },
         "combinedRushingReceiving": {
-          "recordedGames": 6,
-          "averageYards": 48.0,
-          "standardDeviation": 23.34,
+          "recordedGames": 7,
+          "averageYards": 51.0,
+          "standardDeviation": 22.74,
           "lowestYards": 20.0,
           "highestYards": 83.0,
           "probabilityStatus": "Requires model validation",
@@ -12284,9 +12928,9 @@
       "name": "S.Diggs",
       "categories": {
         "receiving": {
-          "recordedGames": 6,
-          "averageYards": 42.0,
-          "standardDeviation": 8.29,
+          "recordedGames": 7,
+          "averageYards": 43.29,
+          "standardDeviation": 8.3,
           "lowestYards": 33.0,
           "highestYards": 55.0,
           "probabilityStatus": "Requires model validation",
@@ -12332,11 +12976,11 @@
       "name": "V.Jefferson",
       "categories": {
         "receiving": {
-          "recordedGames": 1,
-          "averageYards": 0.0,
-          "standardDeviation": null,
+          "recordedGames": 2,
+          "averageYards": 29.0,
+          "standardDeviation": 41.01,
           "lowestYards": 0.0,
-          "highestYards": 0.0,
+          "highestYards": 58.0,
           "probabilityStatus": "Insufficient verified games",
           "projectedProbability": null
         }

@@ -1,26 +1,26 @@
 {
   "season": 2026,
-  "updated": "2026-11-08T16:44:49.084469+00:00",
+  "updated": "2026-11-09T20:53:31.806896+00:00",
   "source": "nflverse",
   "definition": "Regular-season passing and rushing plays with valid EPA. Excludes nullified plays when identified. First half includes quarters 1 and 2. These are EPA-eligible play counts, not every official offensive snap. Early-season samples are small.",
   "teams": {
     "ARI": {
-      "games": 8,
-      "offensivePlaysPerGame": 72.0,
-      "opponentPlaysPerGame": 62.62,
-      "firstHalfOffensivePlays": 36.5,
-      "firstHalfOpponentPlays": 29.75,
-      "totalOffensivePlays": 576,
-      "totalOpponentPlays": 501
+      "games": 9,
+      "offensivePlaysPerGame": 69.89,
+      "opponentPlaysPerGame": 62.67,
+      "firstHalfOffensivePlays": 35.33,
+      "firstHalfOpponentPlays": 30.33,
+      "totalOffensivePlays": 629,
+      "totalOpponentPlays": 564
     },
     "ATL": {
-      "games": 8,
-      "offensivePlaysPerGame": 61.0,
-      "opponentPlaysPerGame": 68.12,
-      "firstHalfOffensivePlays": 30.12,
-      "firstHalfOpponentPlays": 33.88,
-      "totalOffensivePlays": 488,
-      "totalOpponentPlays": 545
+      "games": 9,
+      "offensivePlaysPerGame": 61.11,
+      "opponentPlaysPerGame": 66.78,
+      "firstHalfOffensivePlays": 30.44,
+      "firstHalfOpponentPlays": 33.56,
+      "totalOffensivePlays": 550,
+      "totalOpponentPlays": 601
     },
     "BAL": {
       "games": 9,
@@ -41,94 +41,94 @@
       "totalOpponentPlays": 485
     },
     "CAR": {
-      "games": 7,
-      "offensivePlaysPerGame": 69.57,
-      "opponentPlaysPerGame": 68.14,
-      "firstHalfOffensivePlays": 31.0,
-      "firstHalfOpponentPlays": 37.14,
-      "totalOffensivePlays": 487,
-      "totalOpponentPlays": 477
+      "games": 8,
+      "offensivePlaysPerGame": 69.12,
+      "opponentPlaysPerGame": 68.88,
+      "firstHalfOffensivePlays": 30.62,
+      "firstHalfOpponentPlays": 37.62,
+      "totalOffensivePlays": 553,
+      "totalOpponentPlays": 551
     },
     "CHI": {
-      "games": 8,
-      "offensivePlaysPerGame": 73.75,
-      "opponentPlaysPerGame": 54.0,
-      "firstHalfOffensivePlays": 37.75,
-      "firstHalfOpponentPlays": 26.38,
-      "totalOffensivePlays": 590,
-      "totalOpponentPlays": 432
+      "games": 9,
+      "offensivePlaysPerGame": 72.11,
+      "opponentPlaysPerGame": 55.56,
+      "firstHalfOffensivePlays": 37.33,
+      "firstHalfOpponentPlays": 27.22,
+      "totalOffensivePlays": 649,
+      "totalOpponentPlays": 500
     },
     "CIN": {
-      "games": 7,
-      "offensivePlaysPerGame": 63.43,
-      "opponentPlaysPerGame": 66.0,
-      "firstHalfOffensivePlays": 30.86,
-      "firstHalfOpponentPlays": 34.29,
-      "totalOffensivePlays": 444,
-      "totalOpponentPlays": 462
+      "games": 8,
+      "offensivePlaysPerGame": 62.5,
+      "opponentPlaysPerGame": 65.5,
+      "firstHalfOffensivePlays": 30.88,
+      "firstHalfOpponentPlays": 34.12,
+      "totalOffensivePlays": 500,
+      "totalOpponentPlays": 524
     },
     "CLE": {
-      "games": 8,
-      "offensivePlaysPerGame": 63.5,
-      "opponentPlaysPerGame": 64.0,
-      "firstHalfOffensivePlays": 29.88,
-      "firstHalfOpponentPlays": 33.75,
-      "totalOffensivePlays": 508,
-      "totalOpponentPlays": 512
+      "games": 9,
+      "offensivePlaysPerGame": 64.33,
+      "opponentPlaysPerGame": 65.11,
+      "firstHalfOffensivePlays": 30.0,
+      "firstHalfOpponentPlays": 32.78,
+      "totalOffensivePlays": 579,
+      "totalOpponentPlays": 586
     },
     "DAL": {
-      "games": 8,
-      "offensivePlaysPerGame": 68.0,
-      "opponentPlaysPerGame": 67.62,
-      "firstHalfOffensivePlays": 31.62,
-      "firstHalfOpponentPlays": 34.88,
-      "totalOffensivePlays": 544,
-      "totalOpponentPlays": 541
+      "games": 9,
+      "offensivePlaysPerGame": 69.11,
+      "opponentPlaysPerGame": 67.22,
+      "firstHalfOffensivePlays": 32.89,
+      "firstHalfOpponentPlays": 34.11,
+      "totalOffensivePlays": 622,
+      "totalOpponentPlays": 605
     },
     "DEN": {
-      "games": 8,
-      "offensivePlaysPerGame": 60.5,
-      "opponentPlaysPerGame": 71.38,
-      "firstHalfOffensivePlays": 32.5,
-      "firstHalfOpponentPlays": 33.0,
-      "totalOffensivePlays": 484,
-      "totalOpponentPlays": 571
+      "games": 9,
+      "offensivePlaysPerGame": 62.0,
+      "opponentPlaysPerGame": 70.78,
+      "firstHalfOffensivePlays": 33.44,
+      "firstHalfOpponentPlays": 32.44,
+      "totalOffensivePlays": 558,
+      "totalOpponentPlays": 637
     },
     "DET": {
-      "games": 7,
-      "offensivePlaysPerGame": 68.43,
-      "opponentPlaysPerGame": 70.0,
-      "firstHalfOffensivePlays": 34.14,
-      "firstHalfOpponentPlays": 33.86,
-      "totalOffensivePlays": 479,
-      "totalOpponentPlays": 490
+      "games": 8,
+      "offensivePlaysPerGame": 67.12,
+      "opponentPlaysPerGame": 68.38,
+      "firstHalfOffensivePlays": 33.5,
+      "firstHalfOpponentPlays": 33.25,
+      "totalOffensivePlays": 537,
+      "totalOpponentPlays": 547
     },
     "GB": {
-      "games": 8,
-      "offensivePlaysPerGame": 64.88,
-      "opponentPlaysPerGame": 69.0,
-      "firstHalfOffensivePlays": 32.12,
-      "firstHalfOpponentPlays": 32.75,
-      "totalOffensivePlays": 519,
-      "totalOpponentPlays": 552
+      "games": 9,
+      "offensivePlaysPerGame": 65.0,
+      "opponentPlaysPerGame": 68.33,
+      "firstHalfOffensivePlays": 32.67,
+      "firstHalfOpponentPlays": 32.67,
+      "totalOffensivePlays": 585,
+      "totalOpponentPlays": 615
     },
     "HOU": {
-      "games": 7,
-      "offensivePlaysPerGame": 64.71,
-      "opponentPlaysPerGame": 65.86,
-      "firstHalfOffensivePlays": 31.71,
-      "firstHalfOpponentPlays": 33.0,
-      "totalOffensivePlays": 453,
-      "totalOpponentPlays": 461
+      "games": 8,
+      "offensivePlaysPerGame": 65.12,
+      "opponentPlaysPerGame": 66.62,
+      "firstHalfOffensivePlays": 32.25,
+      "firstHalfOpponentPlays": 33.62,
+      "totalOffensivePlays": 521,
+      "totalOpponentPlays": 533
     },
     "IND": {
-      "games": 8,
-      "offensivePlaysPerGame": 65.88,
-      "opponentPlaysPerGame": 59.5,
-      "firstHalfOffensivePlays": 33.25,
-      "firstHalfOpponentPlays": 30.0,
-      "totalOffensivePlays": 527,
-      "totalOpponentPlays": 476
+      "games": 9,
+      "offensivePlaysPerGame": 65.67,
+      "opponentPlaysPerGame": 61.56,
+      "firstHalfOffensivePlays": 32.67,
+      "firstHalfOpponentPlays": 31.44,
+      "totalOffensivePlays": 591,
+      "totalOpponentPlays": 554
     },
     "JAX": {
       "games": 8,
@@ -140,49 +140,49 @@
       "totalOpponentPlays": 489
     },
     "KC": {
-      "games": 7,
-      "offensivePlaysPerGame": 62.57,
-      "opponentPlaysPerGame": 66.71,
-      "firstHalfOffensivePlays": 30.43,
-      "firstHalfOpponentPlays": 34.29,
-      "totalOffensivePlays": 438,
-      "totalOpponentPlays": 467
+      "games": 8,
+      "offensivePlaysPerGame": 62.88,
+      "opponentPlaysPerGame": 66.25,
+      "firstHalfOffensivePlays": 29.75,
+      "firstHalfOpponentPlays": 34.88,
+      "totalOffensivePlays": 503,
+      "totalOpponentPlays": 530
     },
     "LA": {
-      "games": 8,
-      "offensivePlaysPerGame": 68.5,
-      "opponentPlaysPerGame": 64.38,
-      "firstHalfOffensivePlays": 32.25,
-      "firstHalfOpponentPlays": 31.75,
-      "totalOffensivePlays": 548,
-      "totalOpponentPlays": 515
+      "games": 9,
+      "offensivePlaysPerGame": 69.11,
+      "opponentPlaysPerGame": 63.89,
+      "firstHalfOffensivePlays": 32.78,
+      "firstHalfOpponentPlays": 31.22,
+      "totalOffensivePlays": 622,
+      "totalOpponentPlays": 575
     },
     "LAC": {
-      "games": 7,
-      "offensivePlaysPerGame": 65.14,
-      "opponentPlaysPerGame": 61.43,
-      "firstHalfOffensivePlays": 31.14,
-      "firstHalfOpponentPlays": 32.14,
-      "totalOffensivePlays": 456,
-      "totalOpponentPlays": 430
+      "games": 8,
+      "offensivePlaysPerGame": 66.0,
+      "opponentPlaysPerGame": 62.25,
+      "firstHalfOffensivePlays": 32.0,
+      "firstHalfOpponentPlays": 32.62,
+      "totalOffensivePlays": 528,
+      "totalOpponentPlays": 498
     },
     "LV": {
-      "games": 8,
-      "offensivePlaysPerGame": 66.25,
-      "opponentPlaysPerGame": 65.75,
-      "firstHalfOffensivePlays": 30.38,
-      "firstHalfOpponentPlays": 34.5,
-      "totalOffensivePlays": 530,
-      "totalOpponentPlays": 526
+      "games": 9,
+      "offensivePlaysPerGame": 64.33,
+      "opponentPlaysPerGame": 66.22,
+      "firstHalfOffensivePlays": 28.89,
+      "firstHalfOpponentPlays": 35.11,
+      "totalOffensivePlays": 579,
+      "totalOpponentPlays": 596
     },
     "MIA": {
-      "games": 7,
-      "offensivePlaysPerGame": 60.0,
-      "opponentPlaysPerGame": 59.86,
-      "firstHalfOffensivePlays": 32.29,
-      "firstHalfOpponentPlays": 28.29,
-      "totalOffensivePlays": 420,
-      "totalOpponentPlays": 419
+      "games": 8,
+      "offensivePlaysPerGame": 59.62,
+      "opponentPlaysPerGame": 59.62,
+      "firstHalfOffensivePlays": 31.88,
+      "firstHalfOpponentPlays": 28.38,
+      "totalOffensivePlays": 477,
+      "totalOpponentPlays": 477
     },
     "MIN": {
       "games": 7,
@@ -194,49 +194,49 @@
       "totalOpponentPlays": 425
     },
     "NE": {
-      "games": 8,
-      "offensivePlaysPerGame": 63.62,
-      "opponentPlaysPerGame": 61.62,
-      "firstHalfOffensivePlays": 30.12,
-      "firstHalfOpponentPlays": 32.5,
-      "totalOffensivePlays": 509,
-      "totalOpponentPlays": 493
+      "games": 9,
+      "offensivePlaysPerGame": 63.56,
+      "opponentPlaysPerGame": 62.11,
+      "firstHalfOffensivePlays": 30.33,
+      "firstHalfOpponentPlays": 33.0,
+      "totalOffensivePlays": 572,
+      "totalOpponentPlays": 559
     },
     "NO": {
-      "games": 7,
-      "offensivePlaysPerGame": 68.14,
-      "opponentPlaysPerGame": 65.43,
-      "firstHalfOffensivePlays": 29.71,
-      "firstHalfOpponentPlays": 35.71,
-      "totalOffensivePlays": 477,
-      "totalOpponentPlays": 458
+      "games": 8,
+      "offensivePlaysPerGame": 68.88,
+      "opponentPlaysPerGame": 66.12,
+      "firstHalfOffensivePlays": 29.12,
+      "firstHalfOpponentPlays": 35.12,
+      "totalOffensivePlays": 551,
+      "totalOpponentPlays": 529
     },
     "NYG": {
-      "games": 7,
-      "offensivePlaysPerGame": 68.43,
-      "opponentPlaysPerGame": 62.14,
-      "firstHalfOffensivePlays": 34.43,
-      "firstHalfOpponentPlays": 29.43,
-      "totalOffensivePlays": 479,
-      "totalOpponentPlays": 435
+      "games": 8,
+      "offensivePlaysPerGame": 68.12,
+      "opponentPlaysPerGame": 63.0,
+      "firstHalfOffensivePlays": 33.75,
+      "firstHalfOpponentPlays": 30.38,
+      "totalOffensivePlays": 545,
+      "totalOpponentPlays": 504
     },
     "NYJ": {
-      "games": 8,
-      "offensivePlaysPerGame": 60.75,
-      "opponentPlaysPerGame": 65.25,
-      "firstHalfOffensivePlays": 31.0,
-      "firstHalfOpponentPlays": 31.25,
-      "totalOffensivePlays": 486,
-      "totalOpponentPlays": 522
+      "games": 9,
+      "offensivePlaysPerGame": 61.0,
+      "opponentPlaysPerGame": 65.22,
+      "firstHalfOffensivePlays": 31.89,
+      "firstHalfOpponentPlays": 30.56,
+      "totalOffensivePlays": 549,
+      "totalOpponentPlays": 587
     },
     "PHI": {
-      "games": 8,
-      "offensivePlaysPerGame": 62.62,
-      "opponentPlaysPerGame": 69.12,
-      "firstHalfOffensivePlays": 31.88,
-      "firstHalfOpponentPlays": 34.0,
-      "totalOffensivePlays": 501,
-      "totalOpponentPlays": 553
+      "games": 9,
+      "offensivePlaysPerGame": 63.33,
+      "opponentPlaysPerGame": 68.78,
+      "firstHalfOffensivePlays": 32.44,
+      "firstHalfOpponentPlays": 33.44,
+      "totalOffensivePlays": 570,
+      "totalOpponentPlays": 619
     },
     "PIT": {
       "games": 8,
@@ -248,31 +248,31 @@
       "totalOpponentPlays": 503
     },
     "SEA": {
-      "games": 8,
-      "offensivePlaysPerGame": 65.25,
-      "opponentPlaysPerGame": 62.25,
-      "firstHalfOffensivePlays": 31.88,
-      "firstHalfOpponentPlays": 32.75,
-      "totalOffensivePlays": 522,
-      "totalOpponentPlays": 498
+      "games": 9,
+      "offensivePlaysPerGame": 65.0,
+      "opponentPlaysPerGame": 61.22,
+      "firstHalfOffensivePlays": 32.22,
+      "firstHalfOpponentPlays": 32.0,
+      "totalOffensivePlays": 585,
+      "totalOpponentPlays": 551
     },
     "SF": {
-      "games": 7,
-      "offensivePlaysPerGame": 59.43,
-      "opponentPlaysPerGame": 66.0,
-      "firstHalfOffensivePlays": 30.71,
-      "firstHalfOpponentPlays": 32.43,
-      "totalOffensivePlays": 416,
-      "totalOpponentPlays": 462
+      "games": 8,
+      "offensivePlaysPerGame": 60.75,
+      "opponentPlaysPerGame": 63.88,
+      "firstHalfOffensivePlays": 31.88,
+      "firstHalfOpponentPlays": 30.5,
+      "totalOffensivePlays": 486,
+      "totalOpponentPlays": 511
     },
     "TB": {
-      "games": 8,
-      "offensivePlaysPerGame": 64.5,
-      "opponentPlaysPerGame": 60.0,
-      "firstHalfOffensivePlays": 33.5,
-      "firstHalfOpponentPlays": 27.75,
-      "totalOffensivePlays": 516,
-      "totalOpponentPlays": 480
+      "games": 9,
+      "offensivePlaysPerGame": 64.89,
+      "opponentPlaysPerGame": 59.89,
+      "firstHalfOffensivePlays": 33.56,
+      "firstHalfOpponentPlays": 28.44,
+      "totalOffensivePlays": 584,
+      "totalOpponentPlays": 539
     },
     "TEN": {
       "games": 8,
@@ -284,13 +284,13 @@
       "totalOpponentPlays": 555
     },
     "WAS": {
-      "games": 7,
-      "offensivePlaysPerGame": 65.29,
-      "opponentPlaysPerGame": 65.43,
-      "firstHalfOffensivePlays": 32.0,
-      "firstHalfOpponentPlays": 33.43,
-      "totalOffensivePlays": 457,
-      "totalOpponentPlays": 458
+      "games": 8,
+      "offensivePlaysPerGame": 64.62,
+      "opponentPlaysPerGame": 66.5,
+      "firstHalfOffensivePlays": 31.38,
+      "firstHalfOpponentPlays": 33.88,
+      "totalOffensivePlays": 517,
+      "totalOpponentPlays": 532
     }
   }
 }
