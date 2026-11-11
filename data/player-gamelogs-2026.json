@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-11-10T18:01:47.822139+00:00",
+  "updated": "2026-11-11T17:57:57.011092+00:00",
   "source": "nflverse play-by-play",
   "completedGames": 136,
   "note": "Completed regular-season games only. One record per observed player, game and statistical category. Players with no recorded opportunities in a category are not included for that game. Missing records must not automatically be treated as zero. Verify against official game logs.",
@@ -31349,7 +31349,7 @@
       "playerId": "00-0037809",
       "player": "C.Okonkwo",
       "category": "receiving",
-      "yards": 56.0,
+      "yards": 57.0,
       "opportunities": 7
     },
     {
@@ -31637,7 +31637,7 @@
       "playerId": null,
       "player": "J.Daniels",
       "category": "passing",
-      "yards": 273.0,
+      "yards": 274.0,
       "opportunities": 39
     },
     {

@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-11-10T18:01:47.986202+00:00",
+  "updated": "2026-11-11T17:57:57.204374+00:00",
   "source": "NFL player game logs",
   "note": "Descriptive statistics only. Missing games are not assumed to be zero. Combined yards include only games with observations in both categories. No projected probabilities are published until participation and model validation requirements are satisfied.",
   "players": [
@@ -12635,8 +12635,8 @@
       "categories": {
         "receiving": {
           "recordedGames": 6,
-          "averageYards": 39.67,
-          "standardDeviation": 25.93,
+          "averageYards": 39.83,
+          "standardDeviation": 26.06,
           "lowestYards": 5.0,
           "highestYards": 69.0,
           "probabilityStatus": "Requires model validation",
@@ -12781,8 +12781,8 @@
       "categories": {
         "passing": {
           "recordedGames": 6,
-          "averageYards": 208.17,
-          "standardDeviation": 73.93,
+          "averageYards": 208.33,
+          "standardDeviation": 74.11,
           "lowestYards": 96.0,
           "highestYards": 300.0,
           "probabilityStatus": "Requires model validation",
