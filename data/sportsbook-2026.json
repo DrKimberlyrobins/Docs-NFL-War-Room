@@ -3,63 +3,6 @@
   "season": 2026,
   "games": [
     {
-      "away": "WAS",
-      "home": "NYG",
-      "awayName": "Washington Commanders",
-      "homeName": "New York Giants",
-      "awayLabel": "WAS \u2014 Washington Commanders",
-      "homeLabel": "NYG \u2014 New York Giants",
-      "matchup": "WAS \u2014 Washington Commanders @ NYG \u2014 New York Giants",
-      "spread": {
-        "away": {
-          "open": 1.5,
-          "openPrice": null,
-          "current": 1.5,
-          "currentPrice": -105.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": -1.5,
-          "openPrice": -107.0,
-          "current": -1.5,
-          "currentPrice": -105.0,
-          "publicBet": null
-        }
-      },
-      "moneyline": {
-        "away": {
-          "open": null,
-          "openPrice": null,
-          "current": 105.0,
-          "currentPrice": 105.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": null,
-          "openPrice": null,
-          "current": -120.0,
-          "currentPrice": -120.0,
-          "publicBet": null
-        }
-      },
-      "total": {
-        "over": {
-          "open": 44.5,
-          "openPrice": -110.0,
-          "current": 40.5,
-          "currentPrice": -110.0,
-          "publicBet": null
-        },
-        "under": {
-          "open": 44.5,
-          "openPrice": null,
-          "current": 41.0,
-          "currentPrice": -114.0,
-          "publicBet": null
-        }
-      }
-    },
-    {
       "away": "NE",
       "home": "DET",
       "awayName": "New England Patriots",
@@ -87,15 +30,15 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": 125.0,
-          "currentPrice": 125.0,
+          "current": 128.0,
+          "currentPrice": 128.0,
           "publicBet": null
         },
         "home": {
           "open": null,
           "openPrice": null,
-          "current": -146.0,
-          "currentPrice": -146.0,
+          "current": -148.0,
+          "currentPrice": -148.0,
           "publicBet": null
         }
       },
@@ -103,7 +46,7 @@
         "over": {
           "open": 49.5,
           "openPrice": -112.0,
-          "current": 49.5,
+          "current": 50.0,
           "currentPrice": -111.0,
           "publicBet": null
         },
@@ -111,7 +54,7 @@
           "open": 49.5,
           "openPrice": null,
           "current": 50.5,
-          "currentPrice": -118.0,
+          "currentPrice": -110.0,
           "publicBet": null
         }
       }
@@ -274,8 +217,8 @@
         "over": {
           "open": 41.5,
           "openPrice": -113.0,
-          "current": 41.5,
-          "currentPrice": -115.0,
+          "current": 42.0,
+          "currentPrice": -111.0,
           "publicBet": null
         },
         "under": {
@@ -315,8 +258,8 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": 180.0,
-          "currentPrice": 180.0,
+          "current": 176.0,
+          "currentPrice": 176.0,
           "publicBet": null
         },
         "home": {
@@ -331,8 +274,8 @@
         "over": {
           "open": 43.5,
           "openPrice": -110.0,
-          "current": 37.5,
-          "currentPrice": -115.0,
+          "current": 38.0,
+          "currentPrice": -108.0,
           "publicBet": null
         },
         "under": {
@@ -363,8 +306,8 @@
         "home": {
           "open": 1.5,
           "openPrice": -115.0,
-          "current": -2.5,
-          "currentPrice": -105.0,
+          "current": -1.5,
+          "currentPrice": -120.0,
           "publicBet": null
         }
       },
@@ -372,15 +315,15 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": 115.0,
-          "currentPrice": 115.0,
+          "current": 118.0,
+          "currentPrice": 118.0,
           "publicBet": null
         },
         "home": {
           "open": null,
           "openPrice": null,
-          "current": -130.0,
-          "currentPrice": -130.0,
+          "current": -135.0,
+          "currentPrice": -135.0,
           "publicBet": null
         }
       },
@@ -414,7 +357,7 @@
           "open": -7.5,
           "openPrice": null,
           "current": -7.5,
-          "currentPrice": -115.0,
+          "currentPrice": 100.0,
           "publicBet": null
         },
         "home": {
@@ -429,15 +372,15 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": -441.0,
-          "currentPrice": -441.0,
+          "current": -420.0,
+          "currentPrice": -420.0,
           "publicBet": null
         },
         "home": {
           "open": null,
           "openPrice": null,
-          "current": 370.0,
-          "currentPrice": 370.0,
+          "current": 340.0,
+          "currentPrice": 340.0,
           "publicBet": null
         }
       },
@@ -550,8 +493,8 @@
         "home": {
           "open": null,
           "openPrice": null,
-          "current": 410.0,
-          "currentPrice": 410.0,
+          "current": 390.0,
+          "currentPrice": 390.0,
           "publicBet": null
         }
       },
@@ -567,7 +510,7 @@
           "open": 47.5,
           "openPrice": null,
           "current": 39.5,
-          "currentPrice": -110.0,
+          "currentPrice": -108.0,
           "publicBet": null
         }
       }
@@ -585,7 +528,7 @@
           "open": -5.5,
           "openPrice": null,
           "current": -6.5,
-          "currentPrice": -105.0,
+          "currentPrice": -110.0,
           "publicBet": null
         },
         "home": {
@@ -607,8 +550,8 @@
         "home": {
           "open": null,
           "openPrice": null,
-          "current": 240.0,
-          "currentPrice": 240.0,
+          "current": 245.0,
+          "currentPrice": 245.0,
           "publicBet": null
         }
       },
@@ -794,8 +737,65 @@
         "under": {
           "open": 38.5,
           "openPrice": null,
-          "current": 38.5,
+          "current": 39.0,
+          "currentPrice": -111.0,
+          "publicBet": null
+        }
+      }
+    },
+    {
+      "away": "WAS",
+      "home": "NYG",
+      "awayName": "Washington Commanders",
+      "homeName": "New York Giants",
+      "awayLabel": "WAS \u2014 Washington Commanders",
+      "homeLabel": "NYG \u2014 New York Giants",
+      "matchup": "WAS \u2014 Washington Commanders @ NYG \u2014 New York Giants",
+      "spread": {
+        "away": {
+          "open": 1.5,
+          "openPrice": null,
+          "current": 1.5,
           "currentPrice": -105.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": -1.5,
+          "openPrice": -107.0,
+          "current": -1.5,
+          "currentPrice": -105.0,
+          "publicBet": null
+        }
+      },
+      "moneyline": {
+        "away": {
+          "open": null,
+          "openPrice": null,
+          "current": 105.0,
+          "currentPrice": 105.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": null,
+          "openPrice": null,
+          "current": -120.0,
+          "currentPrice": -120.0,
+          "publicBet": null
+        }
+      },
+      "total": {
+        "over": {
+          "open": 44.5,
+          "openPrice": -110.0,
+          "current": 40.5,
+          "currentPrice": -110.0,
+          "publicBet": null
+        },
+        "under": {
+          "open": 44.5,
+          "openPrice": null,
+          "current": 41.0,
+          "currentPrice": -114.0,
           "publicBet": null
         }
       }
