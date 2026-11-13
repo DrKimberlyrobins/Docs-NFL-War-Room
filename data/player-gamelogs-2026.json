@@ -1,8 +1,8 @@
 {
   "season": 2026,
-  "updated": "2026-11-12T18:28:36.961009+00:00",
+  "updated": "2026-11-13T17:55:53.663427+00:00",
   "source": "nflverse play-by-play",
-  "completedGames": 136,
+  "completedGames": 137,
   "note": "Completed regular-season games only. One record per observed player, game and statistical category. Players with no recorded opportunities in a category are not included for that game. Missing records must not automatically be treated as zero. Verify against official game logs.",
   "logs": [
     {
@@ -23352,6 +23352,15 @@
       "opportunities": 1
     },
     {
+      "gameId": "2026_10_WAS_NYG",
+      "team": "NYG",
+      "playerId": "00-0040715",
+      "player": "C.Skattebo",
+      "category": "receiving",
+      "yards": 44.0,
+      "opportunities": 4
+    },
+    {
       "gameId": "2026_01_DAL_NYG",
       "team": "NYG",
       "playerId": "00-0040715",
@@ -23404,6 +23413,15 @@
       "category": "rushing",
       "yards": 124.0,
       "opportunities": 17
+    },
+    {
+      "gameId": "2026_10_WAS_NYG",
+      "team": "NYG",
+      "playerId": "00-0040715",
+      "player": "C.Skattebo",
+      "category": "rushing",
+      "yards": 78.0,
+      "opportunities": 18
     },
     {
       "gameId": "2026_01_DAL_NYG",
@@ -23476,6 +23494,15 @@
       "category": "receiving",
       "yards": 54.0,
       "opportunities": 4
+    },
+    {
+      "gameId": "2026_10_WAS_NYG",
+      "team": "NYG",
+      "playerId": "00-0036309",
+      "player": "D.Mooney",
+      "category": "receiving",
+      "yards": 8.0,
+      "opportunities": 5
     },
     {
       "gameId": "2026_03_TEN_NYG",
@@ -23604,6 +23631,15 @@
       "opportunities": 21
     },
     {
+      "gameId": "2026_10_WAS_NYG",
+      "team": "NYG",
+      "playerId": "00-0035250",
+      "player": "D.Singletary",
+      "category": "rushing",
+      "yards": 3.0,
+      "opportunities": 1
+    },
+    {
       "gameId": "2026_09_NYG_PHI",
       "team": "NYG",
       "playerId": "00-0041376",
@@ -23685,6 +23721,15 @@
       "opportunities": 6
     },
     {
+      "gameId": "2026_10_WAS_NYG",
+      "team": "NYG",
+      "playerId": "00-0037838",
+      "player": "I.Likely",
+      "category": "receiving",
+      "yards": 127.0,
+      "opportunities": 11
+    },
+    {
       "gameId": "2026_01_DAL_NYG",
       "team": "NYG",
       "playerId": null,
@@ -23748,6 +23793,15 @@
       "opportunities": 24
     },
     {
+      "gameId": "2026_10_WAS_NYG",
+      "team": "NYG",
+      "playerId": null,
+      "player": "J.McCarthy",
+      "category": "passing",
+      "yards": 293.0,
+      "opportunities": 37
+    },
+    {
       "gameId": "2026_05_NYG_WAS",
       "team": "NYG",
       "playerId": "00-0039923",
@@ -23782,6 +23836,15 @@
       "category": "rushing",
       "yards": 22.0,
       "opportunities": 4
+    },
+    {
+      "gameId": "2026_10_WAS_NYG",
+      "team": "NYG",
+      "playerId": "00-0039923",
+      "player": "J.McCarthy",
+      "category": "rushing",
+      "yards": 34.0,
+      "opportunities": 6
     },
     {
       "gameId": "2026_02_NYG_LA",
@@ -23892,6 +23955,15 @@
       "opportunities": 2
     },
     {
+      "gameId": "2026_10_WAS_NYG",
+      "team": "NYG",
+      "playerId": "00-0031503",
+      "player": "J.Winston",
+      "category": "rushing",
+      "yards": 1.0,
+      "opportunities": 2
+    },
+    {
       "gameId": "2026_01_DAL_NYG",
       "team": "NYG",
       "playerId": "00-0041042",
@@ -23964,6 +24036,15 @@
       "opportunities": 5
     },
     {
+      "gameId": "2026_10_WAS_NYG",
+      "team": "NYG",
+      "playerId": "00-0041042",
+      "player": "M.Fields",
+      "category": "receiving",
+      "yards": 62.0,
+      "opportunities": 4
+    },
+    {
       "gameId": "2026_01_DAL_NYG",
       "team": "NYG",
       "playerId": "00-0039337",
@@ -24034,6 +24115,15 @@
       "category": "receiving",
       "yards": 43.0,
       "opportunities": 8
+    },
+    {
+      "gameId": "2026_10_WAS_NYG",
+      "team": "NYG",
+      "playerId": "00-0039337",
+      "player": "M.Nabers",
+      "category": "receiving",
+      "yards": 44.0,
+      "opportunities": 7
     },
     {
       "gameId": "2026_05_NYG_WAS",
@@ -24159,6 +24249,15 @@
       "player": "T.Johnson",
       "category": "receiving",
       "yards": 35.0,
+      "opportunities": 3
+    },
+    {
+      "gameId": "2026_10_WAS_NYG",
+      "team": "NYG",
+      "playerId": "00-0039847",
+      "player": "T.Johnson",
+      "category": "receiving",
+      "yards": 8.0,
       "opportunities": 3
     },
     {
@@ -31128,6 +31227,15 @@
       "opportunities": 3
     },
     {
+      "gameId": "2026_10_WAS_NYG",
+      "team": "WAS",
+      "playerId": "00-0033699",
+      "player": "A.Ekeler",
+      "category": "receiving",
+      "yards": 26.0,
+      "opportunities": 4
+    },
+    {
       "gameId": "2026_04_IND_WAS",
       "team": "WAS",
       "playerId": "00-0033699",
@@ -31171,6 +31279,15 @@
       "category": "rushing",
       "yards": 16.0,
       "opportunities": 8
+    },
+    {
+      "gameId": "2026_10_WAS_NYG",
+      "team": "WAS",
+      "playerId": "00-0033699",
+      "player": "A.Ekeler",
+      "category": "rushing",
+      "yards": 26.0,
+      "opportunities": 9
     },
     {
       "gameId": "2026_04_IND_WAS",
@@ -31272,6 +31389,15 @@
       "opportunities": 6
     },
     {
+      "gameId": "2026_10_WAS_NYG",
+      "team": "WAS",
+      "playerId": "00-0041040",
+      "player": "A.Williams",
+      "category": "receiving",
+      "yards": 42.0,
+      "opportunities": 2
+    },
+    {
       "gameId": "2026_04_IND_WAS",
       "team": "WAS",
       "playerId": "00-0039913",
@@ -31297,6 +31423,15 @@
       "category": "receiving",
       "yards": 0.0,
       "opportunities": 1
+    },
+    {
+      "gameId": "2026_10_WAS_NYG",
+      "team": "WAS",
+      "playerId": "00-0039912",
+      "player": "B.Sinnott",
+      "category": "receiving",
+      "yards": 42.0,
+      "opportunities": 4
     },
     {
       "gameId": "2026_01_WAS_PHI",
@@ -31351,6 +31486,15 @@
       "category": "receiving",
       "yards": 57.0,
       "opportunities": 7
+    },
+    {
+      "gameId": "2026_10_WAS_NYG",
+      "team": "WAS",
+      "playerId": "00-0037809",
+      "player": "C.Okonkwo",
+      "category": "receiving",
+      "yards": 24.0,
+      "opportunities": 8
     },
     {
       "gameId": "2026_04_IND_WAS",
@@ -31641,6 +31785,15 @@
       "opportunities": 39
     },
     {
+      "gameId": "2026_10_WAS_NYG",
+      "team": "WAS",
+      "playerId": null,
+      "player": "J.Daniels",
+      "category": "passing",
+      "yards": 249.0,
+      "opportunities": 34
+    },
+    {
       "gameId": "2026_01_WAS_PHI",
       "team": "WAS",
       "playerId": "00-0039910",
@@ -31693,6 +31846,15 @@
       "category": "rushing",
       "yards": 16.0,
       "opportunities": 4
+    },
+    {
+      "gameId": "2026_10_WAS_NYG",
+      "team": "WAS",
+      "playerId": "00-0039910",
+      "player": "J.Daniels",
+      "category": "rushing",
+      "yards": 28.0,
+      "opportunities": 11
     },
     {
       "gameId": "2026_01_WAS_PHI",
@@ -31839,6 +32001,15 @@
       "opportunities": 1
     },
     {
+      "gameId": "2026_10_WAS_NYG",
+      "team": "WAS",
+      "playerId": "00-0041178",
+      "player": "R.Henry",
+      "category": "rushing",
+      "yards": 4.0,
+      "opportunities": 2
+    },
+    {
       "gameId": "2026_01_WAS_PHI",
       "team": "WAS",
       "playerId": "00-0037256",
@@ -31900,6 +32071,15 @@
       "category": "receiving",
       "yards": 41.0,
       "opportunities": 3
+    },
+    {
+      "gameId": "2026_10_WAS_NYG",
+      "team": "WAS",
+      "playerId": "00-0037256",
+      "player": "R.White",
+      "category": "receiving",
+      "yards": 5.0,
+      "opportunities": 2
     },
     {
       "gameId": "2026_01_WAS_PHI",
@@ -31965,6 +32145,15 @@
       "opportunities": 7
     },
     {
+      "gameId": "2026_10_WAS_NYG",
+      "team": "WAS",
+      "playerId": "00-0037256",
+      "player": "R.White",
+      "category": "rushing",
+      "yards": 47.0,
+      "opportunities": 11
+    },
+    {
       "gameId": "2026_01_WAS_PHI",
       "team": "WAS",
       "playerId": "00-0031588",
@@ -32028,6 +32217,15 @@
       "opportunities": 5
     },
     {
+      "gameId": "2026_10_WAS_NYG",
+      "team": "WAS",
+      "playerId": "00-0031588",
+      "player": "S.Diggs",
+      "category": "receiving",
+      "yards": 83.0,
+      "opportunities": 10
+    },
+    {
       "gameId": "2026_02_WAS_DAL",
       "team": "WAS",
       "playerId": "00-0037742",
@@ -32080,6 +32278,15 @@
       "category": "receiving",
       "yards": 81.0,
       "opportunities": 5
+    },
+    {
+      "gameId": "2026_10_WAS_NYG",
+      "team": "WAS",
+      "playerId": "00-0037742",
+      "player": "T.Burks",
+      "category": "receiving",
+      "yards": 27.0,
+      "opportunities": 3
     },
     {
       "gameId": "2026_01_WAS_PHI",

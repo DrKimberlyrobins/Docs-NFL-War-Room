@@ -1,13 +1,13 @@
 {
   "season": 2026,
-  "completedGames": 136,
-  "updated": "2026-11-12T18:28:29.775239+00:00",
+  "completedGames": 137,
+  "updated": "2026-11-13T17:55:44.983975+00:00",
   "source": "nflverse",
   "note": "Regular-season EPA per passing or rushing play. Defensive EPA is EPA allowed; lower is better. Offensive SOS is the average offensive EPA of unique opponents faced. EPA figures are not adjusted for SOS.",
   "teams": {
     "ARI": {
       "offensiveEPA": -0.0189,
-      "offensiveSOS": 0.0246,
+      "offensiveSOS": 0.0258,
       "defensiveEPAAllowed": 0.0845,
       "passingEPA": 0.0125,
       "rushingEPA": -0.0778,
@@ -95,7 +95,7 @@
     },
     "DAL": {
       "offensiveEPA": 0.1121,
-      "offensiveSOS": -0.0291,
+      "offensiveSOS": -0.0272,
       "defensiveEPAAllowed": 0.1007,
       "passingEPA": 0.1893,
       "rushingEPA": -0.0269,
@@ -139,7 +139,7 @@
     },
     "HOU": {
       "offensiveEPA": 0.0655,
-      "offensiveSOS": 0.0139,
+      "offensiveSOS": 0.015,
       "defensiveEPAAllowed": 0.0196,
       "passingEPA": 0.1894,
       "rushingEPA": -0.1613,
@@ -150,7 +150,7 @@
     },
     "IND": {
       "offensiveEPA": -0.1184,
-      "offensiveSOS": 0.0151,
+      "offensiveSOS": 0.0159,
       "defensiveEPAAllowed": 0.0497,
       "passingEPA": -0.1892,
       "rushingEPA": -0.0126,
@@ -183,7 +183,7 @@
     },
     "LA": {
       "offensiveEPA": 0.0383,
-      "offensiveSOS": -0.0029,
+      "offensiveSOS": -0.0011,
       "defensiveEPAAllowed": -0.0854,
       "passingEPA": 0.0748,
       "rushingEPA": -0.0218,
@@ -249,7 +249,7 @@
     },
     "NO": {
       "offensiveEPA": -0.0278,
-      "offensiveSOS": -0.0217,
+      "offensiveSOS": -0.0205,
       "defensiveEPAAllowed": 0.056,
       "passingEPA": 0.0315,
       "rushingEPA": -0.1415,
@@ -259,15 +259,15 @@
       "defensivePlays": 529
     },
     "NYG": {
-      "offensiveEPA": 0.0168,
-      "offensiveSOS": -0.0049,
-      "defensiveEPAAllowed": -0.0172,
-      "passingEPA": 0.1202,
-      "rushingEPA": -0.1302,
-      "passingEPAAllowed": 0.0434,
-      "rushingEPAAllowed": -0.1158,
-      "offensivePlays": 545,
-      "defensivePlays": 504
+      "offensiveEPA": 0.026,
+      "offensiveSOS": -0.004,
+      "defensiveEPAAllowed": -0.0097,
+      "passingEPA": 0.1232,
+      "rushingEPA": -0.1155,
+      "passingEPAAllowed": 0.0506,
+      "rushingEPAAllowed": -0.1079,
+      "offensivePlays": 609,
+      "defensivePlays": 570
     },
     "NYJ": {
       "offensiveEPA": 0.0025,
@@ -282,7 +282,7 @@
     },
     "PHI": {
       "offensiveEPA": -0.1133,
-      "offensiveSOS": 0.0312,
+      "offensiveSOS": 0.0333,
       "defensiveEPAAllowed": 0.077,
       "passingEPA": -0.0872,
       "rushingEPA": -0.1624,
@@ -304,7 +304,7 @@
     },
     "SEA": {
       "offensiveEPA": -0.0318,
-      "offensiveSOS": 0.0145,
+      "offensiveSOS": 0.0155,
       "defensiveEPAAllowed": -0.0812,
       "passingEPA": 0.1057,
       "rushingEPA": -0.216,
@@ -315,7 +315,7 @@
     },
     "SF": {
       "offensiveEPA": 0.164,
-      "offensiveSOS": -0.0168,
+      "offensiveSOS": -0.0159,
       "defensiveEPAAllowed": -0.0631,
       "passingEPA": 0.2897,
       "rushingEPA": -0.0012,
@@ -337,7 +337,7 @@
     },
     "TEN": {
       "offensiveEPA": -0.0758,
-      "offensiveSOS": -0.0108,
+      "offensiveSOS": -0.0097,
       "defensiveEPAAllowed": 0.0592,
       "passingEPA": -0.0597,
       "rushingEPA": -0.1031,
@@ -347,15 +347,15 @@
       "defensivePlays": 555
     },
     "WAS": {
-      "offensiveEPA": -0.0196,
-      "offensiveSOS": 0.0097,
-      "defensiveEPAAllowed": 0.0289,
-      "passingEPA": 0.0443,
-      "rushingEPA": -0.1372,
-      "passingEPAAllowed": 0.0838,
-      "rushingEPAAllowed": -0.0742,
-      "offensivePlays": 517,
-      "defensivePlays": 532
+      "offensiveEPA": -0.012,
+      "offensiveSOS": 0.011,
+      "defensiveEPAAllowed": 0.037,
+      "passingEPA": 0.051,
+      "rushingEPA": -0.1263,
+      "passingEPAAllowed": 0.0905,
+      "rushingEPAAllowed": -0.0628,
+      "offensivePlays": 583,
+      "defensivePlays": 596
     }
   }
 }
