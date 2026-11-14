@@ -192,8 +192,8 @@
         "home": {
           "open": -2.5,
           "openPrice": -120.0,
-          "current": -3.0,
-          "currentPrice": -105.0,
+          "current": -2.5,
+          "currentPrice": -120.0,
           "publicBet": null
         }
       },
@@ -201,15 +201,15 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": 135.0,
-          "currentPrice": 135.0,
+          "current": 130.0,
+          "currentPrice": 130.0,
           "publicBet": null
         },
         "home": {
           "open": null,
           "openPrice": null,
-          "current": -154.0,
-          "currentPrice": -154.0,
+          "current": -148.0,
+          "currentPrice": -148.0,
           "publicBet": null
         }
       },
@@ -243,7 +243,7 @@
           "open": 2.5,
           "openPrice": null,
           "current": 4.0,
-          "currentPrice": -111.0,
+          "currentPrice": -108.0,
           "publicBet": null
         },
         "home": {
@@ -503,7 +503,7 @@
           "open": 47.5,
           "openPrice": -112.0,
           "current": 39.5,
-          "currentPrice": -110.0,
+          "currentPrice": -108.0,
           "publicBet": null
         },
         "under": {
@@ -550,8 +550,8 @@
         "home": {
           "open": null,
           "openPrice": null,
-          "current": 250.0,
-          "currentPrice": 250.0,
+          "current": 245.0,
+          "currentPrice": 245.0,
           "publicBet": null
         }
       },
@@ -600,8 +600,8 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": -215.0,
-          "currentPrice": -215.0,
+          "current": -210.0,
+          "currentPrice": -210.0,
           "publicBet": null
         },
         "home": {
@@ -737,8 +737,8 @@
         "under": {
           "open": 38.5,
           "openPrice": null,
-          "current": 38.5,
-          "currentPrice": -105.0,
+          "current": 39.0,
+          "currentPrice": -111.0,
           "publicBet": null
         }
       }
