@@ -3,6 +3,177 @@
   "season": 2026,
   "games": [
     {
+      "away": "PIT",
+      "home": "CIN",
+      "awayName": "Pittsburgh Steelers",
+      "homeName": "Cincinnati Bengals",
+      "awayLabel": "PIT \u2014 Pittsburgh Steelers",
+      "homeLabel": "CIN \u2014 Cincinnati Bengals",
+      "matchup": "PIT \u2014 Pittsburgh Steelers @ CIN \u2014 Cincinnati Bengals",
+      "spread": {
+        "away": {
+          "open": 3.5,
+          "openPrice": null,
+          "current": 4.5,
+          "currentPrice": -108.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": -3.5,
+          "openPrice": -115.0,
+          "current": -3.5,
+          "currentPrice": -120.0,
+          "publicBet": null
+        }
+      },
+      "moneyline": {
+        "away": {
+          "open": null,
+          "openPrice": null,
+          "current": 195.0,
+          "currentPrice": 195.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": null,
+          "openPrice": null,
+          "current": -210.0,
+          "currentPrice": -210.0,
+          "publicBet": null
+        }
+      },
+      "total": {
+        "over": {
+          "open": 48.0,
+          "openPrice": -108.0,
+          "current": 49.5,
+          "currentPrice": -105.0,
+          "publicBet": null
+        },
+        "under": {
+          "open": 48.0,
+          "openPrice": null,
+          "current": 50.0,
+          "currentPrice": -111.0,
+          "publicBet": null
+        }
+      }
+    },
+    {
+      "away": "LAC",
+      "home": "BAL",
+      "awayName": "Los Angeles Chargers",
+      "homeName": "Baltimore Ravens",
+      "awayLabel": "LAC \u2014 Los Angeles Chargers",
+      "homeLabel": "BAL \u2014 Baltimore Ravens",
+      "matchup": "LAC \u2014 Los Angeles Chargers @ BAL \u2014 Baltimore Ravens",
+      "spread": {
+        "away": {
+          "open": 5.5,
+          "openPrice": null,
+          "current": 5.0,
+          "currentPrice": -111.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": -5.5,
+          "openPrice": -107.0,
+          "current": -4.5,
+          "currentPrice": -110.0,
+          "publicBet": null
+        }
+      },
+      "moneyline": {
+        "away": {
+          "open": null,
+          "openPrice": null,
+          "current": 190.0,
+          "currentPrice": 190.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": null,
+          "openPrice": null,
+          "current": -225.0,
+          "currentPrice": -225.0,
+          "publicBet": null
+        }
+      },
+      "total": {
+        "over": {
+          "open": 38.5,
+          "openPrice": -111.0,
+          "current": 38.5,
+          "currentPrice": -115.0,
+          "publicBet": null
+        },
+        "under": {
+          "open": 38.5,
+          "openPrice": null,
+          "current": 39.0,
+          "currentPrice": -111.0,
+          "publicBet": null
+        }
+      }
+    },
+    {
+      "away": "SF",
+      "home": "DAL",
+      "awayName": "San Francisco 49ers",
+      "homeName": "Dallas Cowboys",
+      "awayLabel": "SF \u2014 San Francisco 49ers",
+      "homeLabel": "DAL \u2014 Dallas Cowboys",
+      "matchup": "SF \u2014 San Francisco 49ers @ DAL \u2014 Dallas Cowboys",
+      "spread": {
+        "away": {
+          "open": -3.5,
+          "openPrice": null,
+          "current": -3.5,
+          "currentPrice": -111.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": 3.5,
+          "openPrice": -110.0,
+          "current": 3.5,
+          "currentPrice": -105.0,
+          "publicBet": null
+        }
+      },
+      "moneyline": {
+        "away": {
+          "open": null,
+          "openPrice": null,
+          "current": -198.0,
+          "currentPrice": -198.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": null,
+          "openPrice": null,
+          "current": 166.0,
+          "currentPrice": 166.0,
+          "publicBet": null
+        }
+      },
+      "total": {
+        "over": {
+          "open": 53.5,
+          "openPrice": -112.0,
+          "current": 55.5,
+          "currentPrice": -111.0,
+          "publicBet": null
+        },
+        "under": {
+          "open": 53.5,
+          "openPrice": null,
+          "current": 55.5,
+          "currentPrice": -102.0,
+          "publicBet": null
+        }
+      }
+    },
+    {
       "away": "SEA",
       "home": "LV",
       "awayName": "Seattle Seahawks",
@@ -112,177 +283,6 @@
           "openPrice": null,
           "current": 38.5,
           "currentPrice": -110.0,
-          "publicBet": null
-        }
-      }
-    },
-    {
-      "away": "SF",
-      "home": "DAL",
-      "awayName": "San Francisco 49ers",
-      "homeName": "Dallas Cowboys",
-      "awayLabel": "SF \u2014 San Francisco 49ers",
-      "homeLabel": "DAL \u2014 Dallas Cowboys",
-      "matchup": "SF \u2014 San Francisco 49ers @ DAL \u2014 Dallas Cowboys",
-      "spread": {
-        "away": {
-          "open": -3.5,
-          "openPrice": null,
-          "current": -3.5,
-          "currentPrice": -111.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": 3.5,
-          "openPrice": -110.0,
-          "current": 3.5,
-          "currentPrice": -105.0,
-          "publicBet": null
-        }
-      },
-      "moneyline": {
-        "away": {
-          "open": null,
-          "openPrice": null,
-          "current": -198.0,
-          "currentPrice": -198.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": null,
-          "openPrice": null,
-          "current": 166.0,
-          "currentPrice": 166.0,
-          "publicBet": null
-        }
-      },
-      "total": {
-        "over": {
-          "open": 53.5,
-          "openPrice": -112.0,
-          "current": 55.5,
-          "currentPrice": -111.0,
-          "publicBet": null
-        },
-        "under": {
-          "open": 53.5,
-          "openPrice": null,
-          "current": 55.5,
-          "currentPrice": -102.0,
-          "publicBet": null
-        }
-      }
-    },
-    {
-      "away": "PIT",
-      "home": "CIN",
-      "awayName": "Pittsburgh Steelers",
-      "homeName": "Cincinnati Bengals",
-      "awayLabel": "PIT \u2014 Pittsburgh Steelers",
-      "homeLabel": "CIN \u2014 Cincinnati Bengals",
-      "matchup": "PIT \u2014 Pittsburgh Steelers @ CIN \u2014 Cincinnati Bengals",
-      "spread": {
-        "away": {
-          "open": 3.5,
-          "openPrice": null,
-          "current": 3.5,
-          "currentPrice": -108.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": -3.5,
-          "openPrice": -115.0,
-          "current": -3.5,
-          "currentPrice": -110.0,
-          "publicBet": null
-        }
-      },
-      "moneyline": {
-        "away": {
-          "open": null,
-          "openPrice": null,
-          "current": 165.0,
-          "currentPrice": 165.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": null,
-          "openPrice": null,
-          "current": -188.0,
-          "currentPrice": -188.0,
-          "publicBet": null
-        }
-      },
-      "total": {
-        "over": {
-          "open": 48.0,
-          "openPrice": -108.0,
-          "current": 49.5,
-          "currentPrice": -105.0,
-          "publicBet": null
-        },
-        "under": {
-          "open": 48.0,
-          "openPrice": null,
-          "current": 49.5,
-          "currentPrice": -111.0,
-          "publicBet": null
-        }
-      }
-    },
-    {
-      "away": "LAC",
-      "home": "BAL",
-      "awayName": "Los Angeles Chargers",
-      "homeName": "Baltimore Ravens",
-      "awayLabel": "LAC \u2014 Los Angeles Chargers",
-      "homeLabel": "BAL \u2014 Baltimore Ravens",
-      "matchup": "LAC \u2014 Los Angeles Chargers @ BAL \u2014 Baltimore Ravens",
-      "spread": {
-        "away": {
-          "open": 5.5,
-          "openPrice": null,
-          "current": 5.0,
-          "currentPrice": -111.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": -5.5,
-          "openPrice": -107.0,
-          "current": -4.5,
-          "currentPrice": -110.0,
-          "publicBet": null
-        }
-      },
-      "moneyline": {
-        "away": {
-          "open": null,
-          "openPrice": null,
-          "current": 190.0,
-          "currentPrice": 190.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": null,
-          "openPrice": null,
-          "current": -225.0,
-          "currentPrice": -225.0,
-          "publicBet": null
-        }
-      },
-      "total": {
-        "over": {
-          "open": 38.5,
-          "openPrice": -111.0,
-          "current": 38.5,
-          "currentPrice": -115.0,
-          "publicBet": null
-        },
-        "under": {
-          "open": 38.5,
-          "openPrice": null,
-          "current": 39.0,
-          "currentPrice": -111.0,
           "publicBet": null
         }
       }
