@@ -22,7 +22,7 @@
           "open": -5.5,
           "openPrice": -107.0,
           "current": -4.5,
-          "currentPrice": -110.0,
+          "currentPrice": -108.0,
           "publicBet": null
         }
       },
@@ -46,14 +46,14 @@
         "over": {
           "open": 38.5,
           "openPrice": -111.0,
-          "current": 38.5,
-          "currentPrice": -115.0,
+          "current": 39.5,
+          "currentPrice": -105.0,
           "publicBet": null
         },
         "under": {
           "open": 38.5,
           "openPrice": null,
-          "current": 39.0,
+          "current": 39.5,
           "currentPrice": -111.0,
           "publicBet": null
         }
