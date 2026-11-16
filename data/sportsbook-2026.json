@@ -3,6 +3,63 @@
   "season": 2026,
   "games": [
     {
+      "away": "LAC",
+      "home": "BAL",
+      "awayName": "Los Angeles Chargers",
+      "homeName": "Baltimore Ravens",
+      "awayLabel": "LAC \u2014 Los Angeles Chargers",
+      "homeLabel": "BAL \u2014 Baltimore Ravens",
+      "matchup": "LAC \u2014 Los Angeles Chargers @ BAL \u2014 Baltimore Ravens",
+      "spread": {
+        "away": {
+          "open": 5.5,
+          "openPrice": null,
+          "current": 4.5,
+          "currentPrice": -108.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": -5.5,
+          "openPrice": -107.0,
+          "current": -4.5,
+          "currentPrice": -110.0,
+          "publicBet": null
+        }
+      },
+      "moneyline": {
+        "away": {
+          "open": null,
+          "openPrice": null,
+          "current": 190.0,
+          "currentPrice": 190.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": null,
+          "openPrice": null,
+          "current": -225.0,
+          "currentPrice": -225.0,
+          "publicBet": null
+        }
+      },
+      "total": {
+        "over": {
+          "open": 38.5,
+          "openPrice": -111.0,
+          "current": 38.5,
+          "currentPrice": -115.0,
+          "publicBet": null
+        },
+        "under": {
+          "open": 38.5,
+          "openPrice": null,
+          "current": 39.0,
+          "currentPrice": -111.0,
+          "publicBet": null
+        }
+      }
+    },
+    {
       "away": "PIT",
       "home": "CIN",
       "awayName": "Pittsburgh Steelers",
@@ -54,63 +111,6 @@
           "open": 48.0,
           "openPrice": null,
           "current": 50.0,
-          "currentPrice": -111.0,
-          "publicBet": null
-        }
-      }
-    },
-    {
-      "away": "LAC",
-      "home": "BAL",
-      "awayName": "Los Angeles Chargers",
-      "homeName": "Baltimore Ravens",
-      "awayLabel": "LAC \u2014 Los Angeles Chargers",
-      "homeLabel": "BAL \u2014 Baltimore Ravens",
-      "matchup": "LAC \u2014 Los Angeles Chargers @ BAL \u2014 Baltimore Ravens",
-      "spread": {
-        "away": {
-          "open": 5.5,
-          "openPrice": null,
-          "current": 5.0,
-          "currentPrice": -111.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": -5.5,
-          "openPrice": -107.0,
-          "current": -4.5,
-          "currentPrice": -110.0,
-          "publicBet": null
-        }
-      },
-      "moneyline": {
-        "away": {
-          "open": null,
-          "openPrice": null,
-          "current": 190.0,
-          "currentPrice": 190.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": null,
-          "openPrice": null,
-          "current": -225.0,
-          "currentPrice": -225.0,
-          "publicBet": null
-        }
-      },
-      "total": {
-        "over": {
-          "open": 38.5,
-          "openPrice": -111.0,
-          "current": 38.5,
-          "currentPrice": -115.0,
-          "publicBet": null
-        },
-        "under": {
-          "open": 38.5,
-          "openPrice": null,
-          "current": 39.0,
           "currentPrice": -111.0,
           "publicBet": null
         }
