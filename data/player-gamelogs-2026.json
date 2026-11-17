@@ -1,8 +1,8 @@
 {
   "season": 2026,
-  "updated": "2026-11-16T20:35:52.049715+00:00",
+  "updated": "2026-11-17T19:15:08.103186+00:00",
   "source": "nflverse play-by-play",
-  "completedGames": 149,
+  "completedGames": 150,
   "note": "Completed regular-season games only. One record per observed player, game and statistical category. Players with no recorded opportunities in a category are not included for that game. Missing records must not automatically be treated as zero. Verify against official game logs.",
   "logs": [
     {
@@ -2319,6 +2319,15 @@
       "opportunities": 1
     },
     {
+      "gameId": "2026_10_LAC_BAL",
+      "team": "BAL",
+      "playerId": "00-0032398",
+      "player": "C.Moore",
+      "category": "receiving",
+      "yards": 0.0,
+      "opportunities": 1
+    },
+    {
       "gameId": "2026_09_JAX_BAL",
       "team": "BAL",
       "playerId": null,
@@ -2398,6 +2407,15 @@
       "category": "receiving",
       "yards": 7.0,
       "opportunities": 2
+    },
+    {
+      "gameId": "2026_10_LAC_BAL",
+      "team": "BAL",
+      "playerId": "00-0032764",
+      "player": "D.Henry",
+      "category": "receiving",
+      "yards": 10.0,
+      "opportunities": 5
     },
     {
       "gameId": "2026_01_BAL_IND",
@@ -2481,6 +2499,15 @@
       "opportunities": 17
     },
     {
+      "gameId": "2026_10_LAC_BAL",
+      "team": "BAL",
+      "playerId": "00-0032764",
+      "player": "D.Henry",
+      "category": "rushing",
+      "yards": 10.0,
+      "opportunities": 10
+    },
+    {
       "gameId": "2026_01_BAL_IND",
       "team": "BAL",
       "playerId": "00-0034798",
@@ -2553,6 +2580,24 @@
       "opportunities": 2
     },
     {
+      "gameId": "2026_10_LAC_BAL",
+      "team": "BAL",
+      "playerId": null,
+      "player": "J.Brissett",
+      "category": "passing",
+      "yards": 340.0,
+      "opportunities": 51
+    },
+    {
+      "gameId": "2026_10_LAC_BAL",
+      "team": "BAL",
+      "playerId": "00-0033119",
+      "player": "J.Brissett",
+      "category": "rushing",
+      "yards": 2.0,
+      "opportunities": 2
+    },
+    {
       "gameId": "2026_03_BAL_DAL",
       "team": "BAL",
       "playerId": "00-0040887",
@@ -2596,6 +2641,15 @@
       "category": "receiving",
       "yards": 15.0,
       "opportunities": 2
+    },
+    {
+      "gameId": "2026_10_LAC_BAL",
+      "team": "BAL",
+      "playerId": "00-0040887",
+      "player": "J.Cuevas",
+      "category": "receiving",
+      "yards": 37.0,
+      "opportunities": 3
     },
     {
       "gameId": "2026_08_BAL_BUF",
@@ -2706,6 +2760,15 @@
       "opportunities": 3
     },
     {
+      "gameId": "2026_10_LAC_BAL",
+      "team": "BAL",
+      "playerId": "00-0034975",
+      "player": "J.Hill",
+      "category": "receiving",
+      "yards": 34.0,
+      "opportunities": 7
+    },
+    {
       "gameId": "2026_01_BAL_IND",
       "team": "BAL",
       "playerId": "00-0034975",
@@ -2778,6 +2841,15 @@
       "opportunities": 9
     },
     {
+      "gameId": "2026_10_LAC_BAL",
+      "team": "BAL",
+      "playerId": "00-0034975",
+      "player": "J.Hill",
+      "category": "rushing",
+      "yards": 4.0,
+      "opportunities": 3
+    },
+    {
       "gameId": "2026_01_BAL_IND",
       "team": "BAL",
       "playerId": "00-0040870",
@@ -2812,6 +2884,15 @@
       "category": "receiving",
       "yards": 13.0,
       "opportunities": 1
+    },
+    {
+      "gameId": "2026_10_LAC_BAL",
+      "team": "BAL",
+      "playerId": "00-0040870",
+      "player": "J.Lane",
+      "category": "receiving",
+      "yards": 61.0,
+      "opportunities": 11
     },
     {
       "gameId": "2026_01_BAL_IND",
@@ -3012,6 +3093,15 @@
       "opportunities": 2
     },
     {
+      "gameId": "2026_10_LAC_BAL",
+      "team": "BAL",
+      "playerId": "00-0034753",
+      "player": "M.Andrews",
+      "category": "receiving",
+      "yards": 82.0,
+      "opportunities": 8
+    },
+    {
       "gameId": "2026_09_JAX_BAL",
       "team": "BAL",
       "playerId": "00-0034753",
@@ -3163,6 +3253,15 @@
       "category": "receiving",
       "yards": 6.0,
       "opportunities": 2
+    },
+    {
+      "gameId": "2026_10_LAC_BAL",
+      "team": "BAL",
+      "playerId": "00-0036550",
+      "player": "R.Bateman",
+      "category": "receiving",
+      "yards": 42.0,
+      "opportunities": 5
     },
     {
       "gameId": "2026_04_TEN_BAL",
@@ -3325,6 +3424,15 @@
       "category": "receiving",
       "yards": 6.0,
       "opportunities": 6
+    },
+    {
+      "gameId": "2026_10_LAC_BAL",
+      "team": "BAL",
+      "playerId": "00-0039064",
+      "player": "Z.Flowers",
+      "category": "receiving",
+      "yards": 74.0,
+      "opportunities": 7
     },
     {
       "gameId": "2026_03_BAL_DAL",
@@ -19095,6 +19203,15 @@
       "opportunities": 3
     },
     {
+      "gameId": "2026_10_LAC_BAL",
+      "team": "LAC",
+      "playerId": "00-0038046",
+      "player": "C.Kolar",
+      "category": "receiving",
+      "yards": 16.0,
+      "opportunities": 3
+    },
+    {
       "gameId": "2026_09_HOU_LAC",
       "team": "LAC",
       "playerId": "00-0038046",
@@ -19257,6 +19374,15 @@
       "opportunities": 32
     },
     {
+      "gameId": "2026_10_LAC_BAL",
+      "team": "LAC",
+      "playerId": null,
+      "player": "J.Herbert",
+      "category": "passing",
+      "yards": 129.0,
+      "opportunities": 20
+    },
+    {
       "gameId": "2026_04_LAC_SEA",
       "team": "LAC",
       "playerId": "00-0036355",
@@ -19336,6 +19462,15 @@
       "category": "rushing",
       "yards": 7.0,
       "opportunities": 1
+    },
+    {
+      "gameId": "2026_10_LAC_BAL",
+      "team": "LAC",
+      "playerId": "00-0036355",
+      "player": "J.Herbert",
+      "category": "rushing",
+      "yards": 51.0,
+      "opportunities": 7
     },
     {
       "gameId": "2026_06_LAC_KC",
@@ -19419,6 +19554,15 @@
       "opportunities": 4
     },
     {
+      "gameId": "2026_10_LAC_BAL",
+      "team": "LAC",
+      "playerId": "00-0038454",
+      "player": "K.Mitchell",
+      "category": "receiving",
+      "yards": 0.0,
+      "opportunities": 1
+    },
+    {
       "gameId": "2026_01_ARI_LAC",
       "team": "LAC",
       "playerId": "00-0038454",
@@ -19491,6 +19635,15 @@
       "opportunities": 7
     },
     {
+      "gameId": "2026_10_LAC_BAL",
+      "team": "LAC",
+      "playerId": "00-0038454",
+      "player": "K.Mitchell",
+      "category": "rushing",
+      "yards": 4.0,
+      "opportunities": 3
+    },
+    {
       "gameId": "2026_03_LAC_BUF",
       "team": "LAC",
       "playerId": "00-0039391",
@@ -19545,6 +19698,15 @@
       "opportunities": 3
     },
     {
+      "gameId": "2026_10_LAC_BAL",
+      "team": "LAC",
+      "playerId": "00-0039391",
+      "player": "K.Vidal",
+      "category": "receiving",
+      "yards": 14.0,
+      "opportunities": 2
+    },
+    {
       "gameId": "2026_03_LAC_BUF",
       "team": "LAC",
       "playerId": "00-0039391",
@@ -19597,6 +19759,15 @@
       "category": "rushing",
       "yards": 30.0,
       "opportunities": 7
+    },
+    {
+      "gameId": "2026_10_LAC_BAL",
+      "team": "LAC",
+      "playerId": "00-0039391",
+      "player": "K.Vidal",
+      "category": "rushing",
+      "yards": 0.0,
+      "opportunities": 2
     },
     {
       "gameId": "2026_01_ARI_LAC",
@@ -19752,6 +19923,15 @@
       "opportunities": 4
     },
     {
+      "gameId": "2026_10_LAC_BAL",
+      "team": "LAC",
+      "playerId": "00-0040189",
+      "player": "O.Gadsden",
+      "category": "receiving",
+      "yards": 7.0,
+      "opportunities": 1
+    },
+    {
       "gameId": "2026_04_LAC_SEA",
       "team": "LAC",
       "playerId": "00-0040189",
@@ -19813,6 +19993,15 @@
       "category": "receiving",
       "yards": 7.0,
       "opportunities": 3
+    },
+    {
+      "gameId": "2026_10_LAC_BAL",
+      "team": "LAC",
+      "playerId": "00-0040666",
+      "player": "O.Hampton",
+      "category": "receiving",
+      "yards": 0.0,
+      "opportunities": 2
     },
     {
       "gameId": "2026_01_ARI_LAC",
@@ -19887,6 +20076,15 @@
       "opportunities": 13
     },
     {
+      "gameId": "2026_10_LAC_BAL",
+      "team": "LAC",
+      "playerId": "00-0040666",
+      "player": "O.Hampton",
+      "category": "rushing",
+      "yards": 105.0,
+      "opportunities": 22
+    },
+    {
       "gameId": "2026_01_ARI_LAC",
       "team": "LAC",
       "playerId": "00-0038544",
@@ -19948,6 +20146,15 @@
       "category": "receiving",
       "yards": 58.0,
       "opportunities": 4
+    },
+    {
+      "gameId": "2026_10_LAC_BAL",
+      "team": "LAC",
+      "playerId": "00-0038544",
+      "player": "Q.Johnston",
+      "category": "receiving",
+      "yards": 6.0,
+      "opportunities": 1
     },
     {
       "gameId": "2026_02_LV_LAC",
@@ -20049,6 +20256,15 @@
       "opportunities": 7
     },
     {
+      "gameId": "2026_10_LAC_BAL",
+      "team": "LAC",
+      "playerId": "00-0040727",
+      "player": "T.Harris",
+      "category": "receiving",
+      "yards": 86.0,
+      "opportunities": 5
+    },
+    {
       "gameId": "2026_05_DEN_LAC",
       "team": "LAC",
       "playerId": "00-0040311",
@@ -20065,6 +20281,15 @@
       "category": "receiving",
       "yards": 21.0,
       "opportunities": 3
+    },
+    {
+      "gameId": "2026_10_LAC_BAL",
+      "team": "LAC",
+      "playerId": "00-0040311",
+      "player": "T.Wease",
+      "category": "receiving",
+      "yards": 0.0,
+      "opportunities": 1
     },
     {
       "gameId": "2026_07_LA_LV",
