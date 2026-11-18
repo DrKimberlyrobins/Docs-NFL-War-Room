@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-11-17T19:15:08.103186+00:00",
+  "updated": "2026-11-18T18:55:56.131432+00:00",
   "source": "nflverse play-by-play",
   "completedGames": 150,
   "note": "Completed regular-season games only. One record per observed player, game and statistical category. Players with no recorded opportunities in a category are not included for that game. Missing records must not automatically be treated as zero. Verify against official game logs.",
@@ -6402,7 +6402,7 @@
       "player": "L.Burden",
       "category": "receiving",
       "yards": 97.0,
-      "opportunities": 9
+      "opportunities": 10
     },
     {
       "gameId": "2026_01_CHI_CAR",

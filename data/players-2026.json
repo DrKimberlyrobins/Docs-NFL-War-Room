@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-11-17T19:15:05.513103+00:00",
+  "updated": "2026-11-18T18:55:53.704353+00:00",
   "source": "nflverse play-by-play",
   "completedGames": 150,
   "note": "Completed regular-season games only. Passing attempts exclude sacks. Receiver statistics use recorded targets. Per-game averages use completed team games, not individual player appearances. Red-zone targets are passes from the opponent's 20 or closer; inside-10 targets are from the opponent's 10 or closer. Verify totals against official stats.",
@@ -2253,8 +2253,8 @@
         {
           "id": "00-0040735",
           "name": "L.Burden",
-          "targets": 65,
-          "targetsPerGame": 7.22,
+          "targets": 66,
+          "targetsPerGame": 7.33,
           "receptions": 49,
           "receptionsPerGame": 5.44,
           "receivingYards": 644.0,
@@ -2263,7 +2263,7 @@
           "explosiveReceptions": 14,
           "explosiveRate": 28.6,
           "yardsPerGame": 71.56,
-          "catchRate": 75.4,
+          "catchRate": 74.2,
           "redZoneTargets": 11,
           "inside10Targets": 4,
           "receivingTouchdowns": 4
