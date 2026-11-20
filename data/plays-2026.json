@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-11-19T19:04:19.307184+00:00",
+  "updated": "2026-11-20T18:41:08.394108+00:00",
   "source": "nflverse",
   "definition": "Regular-season passing and rushing plays with valid EPA. Excludes nullified plays when identified. First half includes quarters 1 and 2. These are EPA-eligible play counts, not every official offensive snap. Early-season samples are small.",
   "teams": {
@@ -113,22 +113,22 @@
       "totalOpponentPlays": 683
     },
     "HOU": {
-      "games": 9,
-      "offensivePlaysPerGame": 65.33,
-      "opponentPlaysPerGame": 66.67,
-      "firstHalfOffensivePlays": 32.67,
-      "firstHalfOpponentPlays": 32.67,
-      "totalOffensivePlays": 588,
-      "totalOpponentPlays": 600
+      "games": 10,
+      "offensivePlaysPerGame": 65.3,
+      "opponentPlaysPerGame": 65.0,
+      "firstHalfOffensivePlays": 32.6,
+      "firstHalfOpponentPlays": 32.5,
+      "totalOffensivePlays": 653,
+      "totalOpponentPlays": 650
     },
     "IND": {
-      "games": 10,
-      "offensivePlaysPerGame": 64.8,
-      "opponentPlaysPerGame": 62.3,
-      "firstHalfOffensivePlays": 32.6,
-      "firstHalfOpponentPlays": 31.2,
-      "totalOffensivePlays": 648,
-      "totalOpponentPlays": 623
+      "games": 11,
+      "offensivePlaysPerGame": 63.45,
+      "opponentPlaysPerGame": 62.55,
+      "firstHalfOffensivePlays": 32.45,
+      "firstHalfOpponentPlays": 31.27,
+      "totalOffensivePlays": 698,
+      "totalOpponentPlays": 688
     },
     "JAX": {
       "games": 9,
