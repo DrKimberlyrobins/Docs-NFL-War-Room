@@ -3,83 +3,26 @@
   "season": 2026,
   "games": [
     {
-      "away": "NYJ",
-      "home": "LAC",
-      "awayName": "New York Jets",
-      "homeName": "Los Angeles Chargers",
-      "awayLabel": "NYJ \u2014 New York Jets",
-      "homeLabel": "LAC \u2014 Los Angeles Chargers",
-      "matchup": "NYJ \u2014 New York Jets @ LAC \u2014 Los Angeles Chargers",
+      "away": "CIN",
+      "home": "WAS",
+      "awayName": "Cincinnati Bengals",
+      "homeName": "Washington Commanders",
+      "awayLabel": "CIN \u2014 Cincinnati Bengals",
+      "homeLabel": "WAS \u2014 Washington Commanders",
+      "matchup": "CIN \u2014 Cincinnati Bengals @ WAS \u2014 Washington Commanders",
       "spread": {
         "away": {
-          "open": 3.5,
-          "openPrice": null,
-          "current": 3.0,
-          "currentPrice": -104.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": -3.5,
-          "openPrice": -105.0,
-          "current": -3.0,
-          "currentPrice": -111.0,
-          "publicBet": null
-        }
-      },
-      "moneyline": {
-        "away": {
-          "open": null,
-          "openPrice": null,
-          "current": 150.0,
-          "currentPrice": 150.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": null,
-          "openPrice": null,
-          "current": -167.0,
-          "currentPrice": -167.0,
-          "publicBet": null
-        }
-      },
-      "total": {
-        "over": {
-          "open": 41.5,
-          "openPrice": 100.0,
-          "current": 42.5,
-          "currentPrice": -116.0,
-          "publicBet": null
-        },
-        "under": {
-          "open": 41.5,
-          "openPrice": null,
-          "current": 43.5,
-          "currentPrice": -103.0,
-          "publicBet": null
-        }
-      }
-    },
-    {
-      "away": "JAX",
-      "home": "NYG",
-      "awayName": "Jacksonville Jaguars",
-      "homeName": "New York Giants",
-      "awayLabel": "JAX \u2014 Jacksonville Jaguars",
-      "homeLabel": "NYG \u2014 New York Giants",
-      "matchup": "JAX \u2014 Jacksonville Jaguars @ NYG \u2014 New York Giants",
-      "spread": {
-        "away": {
-          "open": -6.0,
+          "open": -6.5,
           "openPrice": null,
           "current": -5.5,
           "currentPrice": -120.0,
           "publicBet": null
         },
         "home": {
-          "open": 6.0,
-          "openPrice": -110.0,
-          "current": 6.5,
-          "currentPrice": -114.0,
+          "open": 6.5,
+          "openPrice": -111.0,
+          "current": 6.0,
+          "currentPrice": -107.0,
           "publicBet": null
         }
       },
@@ -87,31 +30,88 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": -261.0,
-          "currentPrice": -261.0,
+          "current": -290.0,
+          "currentPrice": -290.0,
           "publicBet": null
         },
         "home": {
           "open": null,
           "openPrice": null,
-          "current": 235.0,
-          "currentPrice": 235.0,
+          "current": 241.0,
+          "currentPrice": 241.0,
           "publicBet": null
         }
       },
       "total": {
         "over": {
-          "open": 44.5,
-          "openPrice": -112.0,
-          "current": 44.5,
+          "open": 53.0,
+          "openPrice": -110.0,
+          "current": 54.5,
           "currentPrice": -110.0,
           "publicBet": null
         },
         "under": {
-          "open": 44.5,
+          "open": 53.0,
+          "openPrice": null,
+          "current": 55.0,
+          "currentPrice": -114.0,
+          "publicBet": null
+        }
+      }
+    },
+    {
+      "away": "MIN",
+      "home": "SF",
+      "awayName": "Minnesota Vikings",
+      "homeName": "San Francisco 49ers",
+      "awayLabel": "MIN \u2014 Minnesota Vikings",
+      "homeLabel": "SF \u2014 San Francisco 49ers",
+      "matchup": "MIN \u2014 Minnesota Vikings @ SF \u2014 San Francisco 49ers",
+      "spread": {
+        "away": {
+          "open": 3.5,
+          "openPrice": null,
+          "current": 4.5,
+          "currentPrice": -111.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": -3.5,
+          "openPrice": -115.0,
+          "current": -3.5,
+          "currentPrice": -115.0,
+          "publicBet": null
+        }
+      },
+      "moneyline": {
+        "away": {
+          "open": null,
+          "openPrice": null,
+          "current": 180.0,
+          "currentPrice": 180.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": null,
+          "openPrice": null,
+          "current": -198.0,
+          "currentPrice": -198.0,
+          "publicBet": null
+        }
+      },
+      "total": {
+        "over": {
+          "open": 46.0,
+          "openPrice": -106.0,
+          "current": 45.5,
+          "currentPrice": -104.0,
+          "publicBet": null
+        },
+        "under": {
+          "open": 46.0,
           "openPrice": null,
           "current": 45.5,
-          "currentPrice": -116.0,
+          "currentPrice": -111.0,
           "publicBet": null
         }
       }
@@ -174,83 +174,26 @@
       }
     },
     {
-      "away": "MIN",
-      "home": "SF",
-      "awayName": "Minnesota Vikings",
-      "homeName": "San Francisco 49ers",
-      "awayLabel": "MIN \u2014 Minnesota Vikings",
-      "homeLabel": "SF \u2014 San Francisco 49ers",
-      "matchup": "MIN \u2014 Minnesota Vikings @ SF \u2014 San Francisco 49ers",
+      "away": "JAX",
+      "home": "NYG",
+      "awayName": "Jacksonville Jaguars",
+      "homeName": "New York Giants",
+      "awayLabel": "JAX \u2014 Jacksonville Jaguars",
+      "homeLabel": "NYG \u2014 New York Giants",
+      "matchup": "JAX \u2014 Jacksonville Jaguars @ NYG \u2014 New York Giants",
       "spread": {
         "away": {
-          "open": 3.5,
-          "openPrice": null,
-          "current": 4.0,
-          "currentPrice": -108.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": -3.5,
-          "openPrice": -104.0,
-          "current": -3.5,
-          "currentPrice": -115.0,
-          "publicBet": null
-        }
-      },
-      "moneyline": {
-        "away": {
-          "open": null,
-          "openPrice": null,
-          "current": 176.0,
-          "currentPrice": 176.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": null,
-          "openPrice": null,
-          "current": -194.0,
-          "currentPrice": -194.0,
-          "publicBet": null
-        }
-      },
-      "total": {
-        "over": {
-          "open": 46.5,
-          "openPrice": -111.0,
-          "current": 45.5,
-          "currentPrice": -108.0,
-          "publicBet": null
-        },
-        "under": {
-          "open": 46.5,
-          "openPrice": null,
-          "current": 45.5,
-          "currentPrice": -104.0,
-          "publicBet": null
-        }
-      }
-    },
-    {
-      "away": "CIN",
-      "home": "WAS",
-      "awayName": "Cincinnati Bengals",
-      "homeName": "Washington Commanders",
-      "awayLabel": "CIN \u2014 Cincinnati Bengals",
-      "homeLabel": "WAS \u2014 Washington Commanders",
-      "matchup": "CIN \u2014 Cincinnati Bengals @ WAS \u2014 Washington Commanders",
-      "spread": {
-        "away": {
-          "open": -6.5,
+          "open": -6.0,
           "openPrice": null,
           "current": -5.5,
           "currentPrice": -120.0,
           "publicBet": null
         },
         "home": {
-          "open": 6.5,
-          "openPrice": -111.0,
-          "current": 6.0,
-          "currentPrice": -107.0,
+          "open": 6.0,
+          "openPrice": -110.0,
+          "current": 6.5,
+          "currentPrice": -114.0,
           "publicBet": null
         }
       },
@@ -258,31 +201,88 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": -290.0,
-          "currentPrice": -290.0,
+          "current": -261.0,
+          "currentPrice": -261.0,
           "publicBet": null
         },
         "home": {
           "open": null,
           "openPrice": null,
-          "current": 241.0,
-          "currentPrice": 241.0,
+          "current": 235.0,
+          "currentPrice": 235.0,
           "publicBet": null
         }
       },
       "total": {
         "over": {
-          "open": 53.0,
-          "openPrice": -110.0,
-          "current": 54.5,
+          "open": 44.5,
+          "openPrice": -112.0,
+          "current": 44.5,
           "currentPrice": -110.0,
           "publicBet": null
         },
         "under": {
-          "open": 53.0,
+          "open": 44.5,
           "openPrice": null,
-          "current": 55.0,
-          "currentPrice": -114.0,
+          "current": 45.5,
+          "currentPrice": -116.0,
+          "publicBet": null
+        }
+      }
+    },
+    {
+      "away": "NYJ",
+      "home": "LAC",
+      "awayName": "New York Jets",
+      "homeName": "Los Angeles Chargers",
+      "awayLabel": "NYJ \u2014 New York Jets",
+      "homeLabel": "LAC \u2014 Los Angeles Chargers",
+      "matchup": "NYJ \u2014 New York Jets @ LAC \u2014 Los Angeles Chargers",
+      "spread": {
+        "away": {
+          "open": 3.5,
+          "openPrice": null,
+          "current": 3.0,
+          "currentPrice": -104.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": -3.5,
+          "openPrice": -105.0,
+          "current": -3.0,
+          "currentPrice": -111.0,
+          "publicBet": null
+        }
+      },
+      "moneyline": {
+        "away": {
+          "open": null,
+          "openPrice": null,
+          "current": 150.0,
+          "currentPrice": 150.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": null,
+          "openPrice": null,
+          "current": -167.0,
+          "currentPrice": -167.0,
+          "publicBet": null
+        }
+      },
+      "total": {
+        "over": {
+          "open": 41.5,
+          "openPrice": 100.0,
+          "current": 42.5,
+          "currentPrice": -116.0,
+          "publicBet": null
+        },
+        "under": {
+          "open": 41.5,
+          "openPrice": null,
+          "current": 43.5,
+          "currentPrice": -103.0,
           "publicBet": null
         }
       }
