@@ -1,8 +1,8 @@
 {
   "season": 2026,
-  "updated": "2026-11-23T22:07:32.040266+00:00",
+  "updated": "2026-11-24T20:44:27.443107+00:00",
   "source": "nflverse play-by-play",
-  "completedGames": 162,
+  "completedGames": 163,
   "note": "Completed regular-season games only. One record per observed player, game and statistical category. Players with no recorded opportunities in a category are not included for that game. Missing records must not automatically be treated as zero. Verify against official game logs.",
   "logs": [
     {
@@ -7485,6 +7485,15 @@
       "opportunities": 9
     },
     {
+      "gameId": "2026_11_CIN_WAS",
+      "team": "CIN",
+      "playerId": "00-0038597",
+      "player": "C.Brown",
+      "category": "receiving",
+      "yards": 30.0,
+      "opportunities": 8
+    },
+    {
       "gameId": "2026_01_TB_CIN",
       "team": "CIN",
       "playerId": "00-0038597",
@@ -7566,6 +7575,15 @@
       "opportunities": 10
     },
     {
+      "gameId": "2026_11_CIN_WAS",
+      "team": "CIN",
+      "playerId": "00-0038597",
+      "player": "C.Brown",
+      "category": "rushing",
+      "yards": 6.0,
+      "opportunities": 6
+    },
+    {
       "gameId": "2026_02_CIN_HOU",
       "team": "CIN",
       "playerId": "00-0041069",
@@ -7582,6 +7600,15 @@
       "category": "receiving",
       "yards": 2.0,
       "opportunities": 1
+    },
+    {
+      "gameId": "2026_11_CIN_WAS",
+      "team": "CIN",
+      "playerId": "00-0041069",
+      "player": "C.Young",
+      "category": "receiving",
+      "yards": 4.0,
+      "opportunities": 2
     },
     {
       "gameId": "2026_01_TB_CIN",
@@ -7665,6 +7692,15 @@
       "opportunities": 2
     },
     {
+      "gameId": "2026_11_CIN_WAS",
+      "team": "CIN",
+      "playerId": "00-0040785",
+      "player": "D.Meyers",
+      "category": "receiving",
+      "yards": 2.0,
+      "opportunities": 2
+    },
+    {
       "gameId": "2026_01_TB_CIN",
       "team": "CIN",
       "playerId": "00-0040785",
@@ -7726,6 +7762,15 @@
       "category": "receiving",
       "yards": 15.0,
       "opportunities": 3
+    },
+    {
+      "gameId": "2026_11_CIN_WAS",
+      "team": "CIN",
+      "playerId": "00-0035631",
+      "player": "D.Sample",
+      "category": "receiving",
+      "yards": 9.0,
+      "opportunities": 1
     },
     {
       "gameId": "2026_02_CIN_HOU",
@@ -7836,6 +7881,15 @@
       "opportunities": 45
     },
     {
+      "gameId": "2026_11_CIN_WAS",
+      "team": "CIN",
+      "playerId": null,
+      "player": "J.Burrow",
+      "category": "passing",
+      "yards": 300.0,
+      "opportunities": 43
+    },
+    {
       "gameId": "2026_01_TB_CIN",
       "team": "CIN",
       "playerId": "00-0036442",
@@ -7915,6 +7969,15 @@
       "category": "rushing",
       "yards": 8.0,
       "opportunities": 1
+    },
+    {
+      "gameId": "2026_11_CIN_WAS",
+      "team": "CIN",
+      "playerId": "00-0036442",
+      "player": "J.Burrow",
+      "category": "rushing",
+      "yards": -1.0,
+      "opportunities": 2
     },
     {
       "gameId": "2026_01_TB_CIN",
@@ -7998,6 +8061,15 @@
       "opportunities": 14
     },
     {
+      "gameId": "2026_11_CIN_WAS",
+      "team": "CIN",
+      "playerId": "00-0036900",
+      "player": "J.Chase",
+      "category": "receiving",
+      "yards": 31.0,
+      "opportunities": 9
+    },
+    {
       "gameId": "2026_08_TEN_CIN",
       "team": "CIN",
       "playerId": "00-0041116",
@@ -8023,6 +8095,15 @@
       "category": "receiving",
       "yards": 4.0,
       "opportunities": 2
+    },
+    {
+      "gameId": "2026_11_CIN_WAS",
+      "team": "CIN",
+      "playerId": "00-0041116",
+      "player": "J.Endries",
+      "category": "receiving",
+      "yards": 33.0,
+      "opportunities": 5
     },
     {
       "gameId": "2026_01_TB_CIN",
@@ -8095,6 +8176,15 @@
       "category": "receiving",
       "yards": 9.0,
       "opportunities": 2
+    },
+    {
+      "gameId": "2026_11_CIN_WAS",
+      "team": "CIN",
+      "playerId": "00-0034829",
+      "player": "M.Gesicki",
+      "category": "receiving",
+      "yards": 77.0,
+      "opportunities": 6
     },
     {
       "gameId": "2026_04_JAX_CIN",
@@ -8187,6 +8277,15 @@
       "opportunities": 4
     },
     {
+      "gameId": "2026_11_CIN_WAS",
+      "team": "CIN",
+      "playerId": "00-0033526",
+      "player": "S.Perine",
+      "category": "receiving",
+      "yards": 71.0,
+      "opportunities": 4
+    },
+    {
       "gameId": "2026_01_TB_CIN",
       "team": "CIN",
       "playerId": "00-0033526",
@@ -8265,6 +8364,15 @@
       "player": "S.Perine",
       "category": "rushing",
       "yards": 14.0,
+      "opportunities": 6
+    },
+    {
+      "gameId": "2026_11_CIN_WAS",
+      "team": "CIN",
+      "playerId": "00-0033526",
+      "player": "S.Perine",
+      "category": "rushing",
+      "yards": 26.0,
       "opportunities": 6
     },
     {
@@ -8365,6 +8473,15 @@
       "category": "receiving",
       "yards": 66.0,
       "opportunities": 6
+    },
+    {
+      "gameId": "2026_11_CIN_WAS",
+      "team": "CIN",
+      "playerId": "00-0036410",
+      "player": "T.Higgins",
+      "category": "receiving",
+      "yards": 43.0,
+      "opportunities": 3
     },
     {
       "gameId": "2026_01_TB_CIN",
@@ -37446,6 +37563,15 @@
       "opportunities": 4
     },
     {
+      "gameId": "2026_11_CIN_WAS",
+      "team": "WAS",
+      "playerId": "00-0033699",
+      "player": "A.Ekeler",
+      "category": "receiving",
+      "yards": 3.0,
+      "opportunities": 3
+    },
+    {
       "gameId": "2026_04_IND_WAS",
       "team": "WAS",
       "playerId": "00-0033699",
@@ -37498,6 +37624,15 @@
       "category": "rushing",
       "yards": 26.0,
       "opportunities": 9
+    },
+    {
+      "gameId": "2026_11_CIN_WAS",
+      "team": "WAS",
+      "playerId": "00-0033699",
+      "player": "A.Ekeler",
+      "category": "rushing",
+      "yards": 41.0,
+      "opportunities": 7
     },
     {
       "gameId": "2026_04_IND_WAS",
@@ -37608,6 +37743,15 @@
       "opportunities": 2
     },
     {
+      "gameId": "2026_11_CIN_WAS",
+      "team": "WAS",
+      "playerId": "00-0041040",
+      "player": "A.Williams",
+      "category": "receiving",
+      "yards": 122.0,
+      "opportunities": 11
+    },
+    {
       "gameId": "2026_04_IND_WAS",
       "team": "WAS",
       "playerId": "00-0039913",
@@ -37705,6 +37849,15 @@
       "category": "receiving",
       "yards": 24.0,
       "opportunities": 8
+    },
+    {
+      "gameId": "2026_11_CIN_WAS",
+      "team": "WAS",
+      "playerId": "00-0037809",
+      "player": "C.Okonkwo",
+      "category": "receiving",
+      "yards": 66.0,
+      "opportunities": 5
     },
     {
       "gameId": "2026_04_IND_WAS",
@@ -37896,6 +38049,15 @@
       "opportunities": 4
     },
     {
+      "gameId": "2026_11_CIN_WAS",
+      "team": "WAS",
+      "playerId": "00-0040242",
+      "player": "J.Croskey-Merritt",
+      "category": "receiving",
+      "yards": 23.0,
+      "opportunities": 3
+    },
+    {
       "gameId": "2026_01_WAS_PHI",
       "team": "WAS",
       "playerId": "00-0040242",
@@ -37939,6 +38101,15 @@
       "category": "rushing",
       "yards": 82.0,
       "opportunities": 11
+    },
+    {
+      "gameId": "2026_11_CIN_WAS",
+      "team": "WAS",
+      "playerId": "00-0040242",
+      "player": "J.Croskey-Merritt",
+      "category": "rushing",
+      "yards": 54.0,
+      "opportunities": 13
     },
     {
       "gameId": "2026_01_WAS_PHI",
@@ -38004,6 +38175,15 @@
       "opportunities": 34
     },
     {
+      "gameId": "2026_11_CIN_WAS",
+      "team": "WAS",
+      "playerId": null,
+      "player": "J.Daniels",
+      "category": "passing",
+      "yards": 289.0,
+      "opportunities": 38
+    },
+    {
       "gameId": "2026_01_WAS_PHI",
       "team": "WAS",
       "playerId": "00-0039910",
@@ -38065,6 +38245,15 @@
       "category": "rushing",
       "yards": 28.0,
       "opportunities": 11
+    },
+    {
+      "gameId": "2026_11_CIN_WAS",
+      "team": "WAS",
+      "playerId": "00-0039910",
+      "player": "J.Daniels",
+      "category": "rushing",
+      "yards": 55.0,
+      "opportunities": 6
     },
     {
       "gameId": "2026_01_WAS_PHI",
@@ -38436,6 +38625,15 @@
       "opportunities": 10
     },
     {
+      "gameId": "2026_11_CIN_WAS",
+      "team": "WAS",
+      "playerId": "00-0031588",
+      "player": "S.Diggs",
+      "category": "receiving",
+      "yards": 45.0,
+      "opportunities": 6
+    },
+    {
       "gameId": "2026_02_WAS_DAL",
       "team": "WAS",
       "playerId": "00-0037742",
@@ -38496,6 +38694,15 @@
       "player": "T.Burks",
       "category": "receiving",
       "yards": 27.0,
+      "opportunities": 3
+    },
+    {
+      "gameId": "2026_11_CIN_WAS",
+      "team": "WAS",
+      "playerId": "00-0037742",
+      "player": "T.Burks",
+      "category": "receiving",
+      "yards": 30.0,
       "opportunities": 3
     },
     {
@@ -38560,6 +38767,15 @@
       "category": "receiving",
       "yards": 58.0,
       "opportunities": 7
+    },
+    {
+      "gameId": "2026_11_CIN_WAS",
+      "team": "WAS",
+      "playerId": "00-0036415",
+      "player": "V.Jefferson",
+      "category": "receiving",
+      "yards": 0.0,
+      "opportunities": 1
     }
   ]
 }
