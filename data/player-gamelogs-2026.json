@@ -1,8 +1,8 @@
 {
   "season": 2026,
-  "updated": "2026-11-25T20:00:34.843477+00:00",
+  "updated": "2026-11-26T19:43:35.842444+00:00",
   "source": "nflverse play-by-play",
-  "completedGames": 163,
+  "completedGames": 164,
   "note": "Completed regular-season games only. One record per observed player, game and statistical category. Players with no recorded opportunities in a category are not included for that game. Missing records must not automatically be treated as zero. Verify against official game logs.",
   "logs": [
     {
@@ -13380,6 +13380,24 @@
       "opportunities": 2
     },
     {
+      "gameId": "2026_12_GB_LA",
+      "team": "GB",
+      "playerId": "00-0037091",
+      "player": "B.Melton",
+      "category": "receiving",
+      "yards": 20.0,
+      "opportunities": 3
+    },
+    {
+      "gameId": "2026_12_GB_LA",
+      "team": "GB",
+      "playerId": "00-0037091",
+      "player": "B.Melton",
+      "category": "rushing",
+      "yards": 3.0,
+      "opportunities": 1
+    },
+    {
       "gameId": "2026_01_GB_MIN",
       "team": "GB",
       "playerId": "00-0038685",
@@ -13425,6 +13443,15 @@
       "opportunities": 1
     },
     {
+      "gameId": "2026_12_GB_LA",
+      "team": "GB",
+      "playerId": "00-0038685",
+      "player": "C.Brooks",
+      "category": "receiving",
+      "yards": 22.0,
+      "opportunities": 5
+    },
+    {
       "gameId": "2026_01_GB_MIN",
       "team": "GB",
       "playerId": "00-0038685",
@@ -13459,6 +13486,15 @@
       "category": "rushing",
       "yards": 1.0,
       "opportunities": 2
+    },
+    {
+      "gameId": "2026_12_GB_LA",
+      "team": "GB",
+      "playerId": "00-0038685",
+      "player": "C.Brooks",
+      "category": "rushing",
+      "yards": 4.0,
+      "opportunities": 1
     },
     {
       "gameId": "2026_01_GB_MIN",
@@ -13549,6 +13585,15 @@
       "category": "receiving",
       "yards": 37.0,
       "opportunities": 5
+    },
+    {
+      "gameId": "2026_12_GB_LA",
+      "team": "GB",
+      "playerId": "00-0038124",
+      "player": "C.Watson",
+      "category": "receiving",
+      "yards": 65.0,
+      "opportunities": 4
     },
     {
       "gameId": "2026_07_GB_DET",
@@ -13686,6 +13731,15 @@
       "opportunities": 35
     },
     {
+      "gameId": "2026_12_GB_LA",
+      "team": "GB",
+      "playerId": null,
+      "player": "J.Love",
+      "category": "passing",
+      "yards": 198.0,
+      "opportunities": 30
+    },
+    {
       "gameId": "2026_01_GB_MIN",
       "team": "GB",
       "playerId": "00-0036264",
@@ -13746,6 +13800,15 @@
       "player": "J.Love",
       "category": "rushing",
       "yards": 0.0,
+      "opportunities": 1
+    },
+    {
+      "gameId": "2026_12_GB_LA",
+      "team": "GB",
+      "playerId": "00-0036264",
+      "player": "J.Love",
+      "category": "rushing",
+      "yards": 7.0,
       "opportunities": 1
     },
     {
@@ -13839,6 +13902,15 @@
       "opportunities": 4
     },
     {
+      "gameId": "2026_12_GB_LA",
+      "team": "GB",
+      "playerId": "00-0040948",
+      "player": "J.Sturdivant",
+      "category": "receiving",
+      "yards": 0.0,
+      "opportunities": 1
+    },
+    {
       "gameId": "2026_03_ATL_GB",
       "team": "GB",
       "playerId": "00-0040142",
@@ -13846,6 +13918,15 @@
       "category": "receiving",
       "yards": 10.0,
       "opportunities": 3
+    },
+    {
+      "gameId": "2026_12_GB_LA",
+      "team": "GB",
+      "playerId": "00-0040142",
+      "player": "K.Johnson",
+      "category": "receiving",
+      "yards": 19.0,
+      "opportunities": 2
     },
     {
       "gameId": "2026_02_GB_NYJ",
@@ -13909,6 +13990,15 @@
       "category": "rushing",
       "yards": 42.0,
       "opportunities": 10
+    },
+    {
+      "gameId": "2026_12_GB_LA",
+      "team": "GB",
+      "playerId": "00-0040142",
+      "player": "K.Johnson",
+      "category": "rushing",
+      "yards": 13.0,
+      "opportunities": 8
     },
     {
       "gameId": "2026_01_GB_MIN",
@@ -14001,6 +14091,15 @@
       "opportunities": 9
     },
     {
+      "gameId": "2026_12_GB_LA",
+      "team": "GB",
+      "playerId": "00-0040667",
+      "player": "M.Golden",
+      "category": "receiving",
+      "yards": 39.0,
+      "opportunities": 5
+    },
+    {
       "gameId": "2026_04_GB_TB",
       "team": "GB",
       "playerId": "00-0040667",
@@ -14091,6 +14190,15 @@
       "opportunities": 3
     },
     {
+      "gameId": "2026_12_GB_LA",
+      "team": "GB",
+      "playerId": "00-0039811",
+      "player": "M.Lloyd",
+      "category": "receiving",
+      "yards": 6.0,
+      "opportunities": 1
+    },
+    {
       "gameId": "2026_01_GB_MIN",
       "team": "GB",
       "playerId": "00-0039811",
@@ -14170,6 +14278,15 @@
       "category": "rushing",
       "yards": 13.0,
       "opportunities": 4
+    },
+    {
+      "gameId": "2026_12_GB_LA",
+      "team": "GB",
+      "playerId": "00-0039811",
+      "player": "M.Lloyd",
+      "category": "rushing",
+      "yards": 10.0,
+      "opportunities": 1
     },
     {
       "gameId": "2026_04_GB_TB",
@@ -14352,6 +14469,15 @@
       "opportunities": 2
     },
     {
+      "gameId": "2026_12_GB_LA",
+      "team": "GB",
+      "playerId": "00-0040009",
+      "player": "S.Williams",
+      "category": "receiving",
+      "yards": 3.0,
+      "opportunities": 3
+    },
+    {
       "gameId": "2026_06_DAL_GB",
       "team": "GB",
       "playerId": "00-0040009",
@@ -14386,6 +14512,15 @@
       "category": "rushing",
       "yards": 13.0,
       "opportunities": 3
+    },
+    {
+      "gameId": "2026_12_GB_LA",
+      "team": "GB",
+      "playerId": "00-0040009",
+      "player": "S.Williams",
+      "category": "rushing",
+      "yards": 18.0,
+      "opportunities": 2
     },
     {
       "gameId": "2026_01_GB_MIN",
@@ -14476,6 +14611,15 @@
       "category": "receiving",
       "yards": 19.0,
       "opportunities": 4
+    },
+    {
+      "gameId": "2026_12_GB_LA",
+      "team": "GB",
+      "playerId": "00-0038996",
+      "player": "T.Kraft",
+      "category": "receiving",
+      "yards": 24.0,
+      "opportunities": 5
     },
     {
       "gameId": "2026_04_GB_TB",
@@ -19725,6 +19869,15 @@
       "opportunities": 4
     },
     {
+      "gameId": "2026_12_GB_LA",
+      "team": "LA",
+      "playerId": "00-0039738",
+      "player": "B.Corum",
+      "category": "receiving",
+      "yards": 21.0,
+      "opportunities": 3
+    },
+    {
       "gameId": "2026_01_SF_LA",
       "team": "LA",
       "playerId": "00-0039738",
@@ -19815,6 +19968,15 @@
       "opportunities": 17
     },
     {
+      "gameId": "2026_12_GB_LA",
+      "team": "LA",
+      "playerId": "00-0039738",
+      "player": "B.Corum",
+      "category": "rushing",
+      "yards": 184.0,
+      "opportunities": 32
+    },
+    {
       "gameId": "2026_10_LA_ARI",
       "team": "LA",
       "playerId": "00-0041399",
@@ -19893,6 +20055,15 @@
       "player": "C.Parkinson",
       "category": "receiving",
       "yards": 11.0,
+      "opportunities": 2
+    },
+    {
+      "gameId": "2026_12_GB_LA",
+      "team": "LA",
+      "playerId": "00-0036244",
+      "player": "C.Parkinson",
+      "category": "receiving",
+      "yards": -1.0,
       "opportunities": 2
     },
     {
@@ -20022,6 +20193,15 @@
       "opportunities": 1
     },
     {
+      "gameId": "2026_12_GB_LA",
+      "team": "LA",
+      "playerId": "00-0039074",
+      "player": "D.Allen",
+      "category": "receiving",
+      "yards": 14.0,
+      "opportunities": 2
+    },
+    {
       "gameId": "2026_06_ARI_LA",
       "team": "LA",
       "playerId": "00-0039074",
@@ -20139,6 +20319,15 @@
       "opportunities": 4
     },
     {
+      "gameId": "2026_12_GB_LA",
+      "team": "LA",
+      "playerId": "00-0040590",
+      "player": "K.Mumpfield",
+      "category": "receiving",
+      "yards": 69.0,
+      "opportunities": 5
+    },
+    {
       "gameId": "2026_01_SF_LA",
       "team": "LA",
       "playerId": "00-0037840",
@@ -20226,6 +20415,15 @@
       "player": "K.Williams",
       "category": "receiving",
       "yards": 9.0,
+      "opportunities": 5
+    },
+    {
+      "gameId": "2026_12_GB_LA",
+      "team": "LA",
+      "playerId": "00-0037840",
+      "player": "K.Williams",
+      "category": "receiving",
+      "yards": 19.0,
       "opportunities": 5
     },
     {
@@ -20319,6 +20517,15 @@
       "opportunities": 12
     },
     {
+      "gameId": "2026_12_GB_LA",
+      "team": "LA",
+      "playerId": "00-0037840",
+      "player": "K.Williams",
+      "category": "rushing",
+      "yards": 46.0,
+      "opportunities": 12
+    },
+    {
       "gameId": "2026_01_SF_LA",
       "team": "LA",
       "playerId": null,
@@ -20409,6 +20616,15 @@
       "opportunities": 28
     },
     {
+      "gameId": "2026_12_GB_LA",
+      "team": "LA",
+      "playerId": null,
+      "player": "M.Stafford",
+      "category": "passing",
+      "yards": 140.0,
+      "opportunities": 24
+    },
+    {
       "gameId": "2026_01_SF_LA",
       "team": "LA",
       "playerId": "00-0026498",
@@ -20470,6 +20686,15 @@
       "category": "rushing",
       "yards": -2.0,
       "opportunities": 2
+    },
+    {
+      "gameId": "2026_12_GB_LA",
+      "team": "LA",
+      "playerId": "00-0026498",
+      "player": "M.Stafford",
+      "category": "rushing",
+      "yards": 0.0,
+      "opportunities": 1
     },
     {
       "gameId": "2026_01_SF_LA",
@@ -20778,6 +21003,15 @@
       "opportunities": 4
     },
     {
+      "gameId": "2026_12_GB_LA",
+      "team": "LA",
+      "playerId": "00-0033110",
+      "player": "T.Higbee",
+      "category": "receiving",
+      "yards": 14.0,
+      "opportunities": 3
+    },
+    {
       "gameId": "2026_02_NYG_LA",
       "team": "LA",
       "playerId": "00-0038359",
@@ -20793,6 +21027,24 @@
       "player": "X.Smith",
       "category": "receiving",
       "yards": 40.0,
+      "opportunities": 2
+    },
+    {
+      "gameId": "2026_12_GB_LA",
+      "team": "LA",
+      "playerId": "00-0038359",
+      "player": "X.Smith",
+      "category": "receiving",
+      "yards": 4.0,
+      "opportunities": 1
+    },
+    {
+      "gameId": "2026_12_GB_LA",
+      "team": "LA",
+      "playerId": "00-0038359",
+      "player": "X.Smith",
+      "category": "rushing",
+      "yards": 11.0,
       "opportunities": 2
     },
     {
