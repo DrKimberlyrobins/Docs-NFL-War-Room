@@ -3,120 +3,6 @@
   "season": 2026,
   "games": [
     {
-      "away": "CHI",
-      "home": "DET",
-      "awayName": "Chicago Bears",
-      "homeName": "Detroit Lions",
-      "awayLabel": "CHI \u2014 Chicago Bears",
-      "homeLabel": "DET \u2014 Detroit Lions",
-      "matchup": "CHI \u2014 Chicago Bears @ DET \u2014 Detroit Lions",
-      "spread": {
-        "away": {
-          "open": -2.5,
-          "openPrice": null,
-          "current": -1.0,
-          "currentPrice": -102.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": 2.5,
-          "openPrice": -104.0,
-          "current": 1.5,
-          "currentPrice": -107.0,
-          "publicBet": null
-        }
-      },
-      "moneyline": {
-        "away": {
-          "open": null,
-          "openPrice": null,
-          "current": -115.0,
-          "currentPrice": -115.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": null,
-          "openPrice": null,
-          "current": 108.0,
-          "currentPrice": 108.0,
-          "publicBet": null
-        }
-      },
-      "total": {
-        "over": {
-          "open": 54.5,
-          "openPrice": -115.0,
-          "current": 56.0,
-          "currentPrice": -111.0,
-          "publicBet": null
-        },
-        "under": {
-          "open": 54.5,
-          "openPrice": null,
-          "current": 56.5,
-          "currentPrice": -106.0,
-          "publicBet": null
-        }
-      }
-    },
-    {
-      "away": "PHI",
-      "home": "DAL",
-      "awayName": "Philadelphia Eagles",
-      "homeName": "Dallas Cowboys",
-      "awayLabel": "PHI \u2014 Philadelphia Eagles",
-      "homeLabel": "DAL \u2014 Dallas Cowboys",
-      "matchup": "PHI \u2014 Philadelphia Eagles @ DAL \u2014 Dallas Cowboys",
-      "spread": {
-        "away": {
-          "open": 8.5,
-          "openPrice": null,
-          "current": 8.5,
-          "currentPrice": -102.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": -8.5,
-          "openPrice": -110.0,
-          "current": -8.5,
-          "currentPrice": -108.0,
-          "publicBet": null
-        }
-      },
-      "moneyline": {
-        "away": {
-          "open": null,
-          "openPrice": null,
-          "current": 385.0,
-          "currentPrice": 385.0,
-          "publicBet": null
-        },
-        "home": {
-          "open": null,
-          "openPrice": null,
-          "current": -459.0,
-          "currentPrice": -459.0,
-          "publicBet": null
-        }
-      },
-      "total": {
-        "over": {
-          "open": 47.5,
-          "openPrice": -108.0,
-          "current": 48.5,
-          "currentPrice": -115.0,
-          "publicBet": null
-        },
-        "under": {
-          "open": 47.5,
-          "openPrice": null,
-          "current": 49.5,
-          "currentPrice": -107.0,
-          "publicBet": null
-        }
-      }
-    },
-    {
       "away": "KC",
       "home": "BUF",
       "awayName": "Kansas City Chiefs",
@@ -129,14 +15,14 @@
           "open": 3.0,
           "openPrice": null,
           "current": 3.0,
-          "currentPrice": -112.0,
+          "currentPrice": -105.0,
           "publicBet": null
         },
         "home": {
           "open": -3.0,
           "openPrice": -106.0,
           "current": -3.0,
-          "currentPrice": -101.0,
+          "currentPrice": -105.0,
           "publicBet": null
         }
       },
@@ -144,15 +30,15 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": 136.0,
-          "currentPrice": 136.0,
+          "current": 145.0,
+          "currentPrice": 145.0,
           "publicBet": null
         },
         "home": {
           "open": null,
           "openPrice": null,
-          "current": -153.0,
-          "currentPrice": -153.0,
+          "current": -163.0,
+          "currentPrice": -163.0,
           "publicBet": null
         }
       },
@@ -161,14 +47,14 @@
           "open": 50.5,
           "openPrice": -109.0,
           "current": 45.5,
-          "currentPrice": -110.0,
+          "currentPrice": -114.0,
           "publicBet": null
         },
         "under": {
           "open": 50.5,
           "openPrice": null,
-          "current": 46.0,
-          "currentPrice": -108.0,
+          "current": 46.5,
+          "currentPrice": -111.0,
           "publicBet": null
         }
       }
@@ -186,14 +72,14 @@
           "open": -1.5,
           "openPrice": null,
           "current": -4.5,
-          "currentPrice": -108.0,
+          "currentPrice": -110.0,
           "publicBet": null
         },
         "home": {
           "open": 1.5,
           "openPrice": -110.0,
-          "current": 4.5,
-          "currentPrice": -110.0,
+          "current": 5.0,
+          "currentPrice": -111.0,
           "publicBet": null
         }
       },
@@ -201,15 +87,15 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": -227.0,
-          "currentPrice": -227.0,
+          "current": -235.0,
+          "currentPrice": -235.0,
           "publicBet": null
         },
         "home": {
           "open": null,
           "openPrice": null,
-          "current": 194.0,
-          "currentPrice": 194.0,
+          "current": 205.0,
+          "currentPrice": 205.0,
           "publicBet": null
         }
       },
@@ -339,7 +225,7 @@
           "open": 44.5,
           "openPrice": null,
           "current": 47.5,
-          "currentPrice": -115.0,
+          "currentPrice": -113.0,
           "publicBet": null
         }
       }
@@ -389,7 +275,7 @@
           "open": 43.5,
           "openPrice": -109.0,
           "current": 41.5,
-          "currentPrice": -108.0,
+          "currentPrice": -111.0,
           "publicBet": null
         },
         "under": {
@@ -429,8 +315,8 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": -241.0,
-          "currentPrice": -241.0,
+          "current": -243.0,
+          "currentPrice": -243.0,
           "publicBet": null
         },
         "home": {
@@ -493,8 +379,8 @@
         "home": {
           "open": null,
           "openPrice": null,
-          "current": -310.0,
-          "currentPrice": -310.0,
+          "current": -311.0,
+          "currentPrice": -311.0,
           "publicBet": null
         }
       },
@@ -543,8 +429,8 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": 775.0,
-          "currentPrice": 775.0,
+          "current": 780.0,
+          "currentPrice": 780.0,
           "publicBet": null
         },
         "home": {
@@ -559,8 +445,8 @@
         "over": {
           "open": 47.5,
           "openPrice": -110.0,
-          "current": 49.5,
-          "currentPrice": -106.0,
+          "current": 49.0,
+          "currentPrice": -111.0,
           "publicBet": null
         },
         "under": {
@@ -592,7 +478,7 @@
           "open": -4.5,
           "openPrice": 100.0,
           "current": 2.5,
-          "currentPrice": -115.0,
+          "currentPrice": -111.0,
           "publicBet": null
         }
       },
@@ -714,8 +600,8 @@
         "away": {
           "open": null,
           "openPrice": null,
-          "current": 130.0,
-          "currentPrice": 130.0,
+          "current": 129.0,
+          "currentPrice": 129.0,
           "publicBet": null
         },
         "home": {
@@ -853,6 +739,120 @@
           "openPrice": null,
           "current": 43.5,
           "currentPrice": -105.0,
+          "publicBet": null
+        }
+      }
+    },
+    {
+      "away": "PHI",
+      "home": "DAL",
+      "awayName": "Philadelphia Eagles",
+      "homeName": "Dallas Cowboys",
+      "awayLabel": "PHI \u2014 Philadelphia Eagles",
+      "homeLabel": "DAL \u2014 Dallas Cowboys",
+      "matchup": "PHI \u2014 Philadelphia Eagles @ DAL \u2014 Dallas Cowboys",
+      "spread": {
+        "away": {
+          "open": 1.5,
+          "openPrice": null,
+          "current": 9.5,
+          "currentPrice": -110.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": -1.5,
+          "openPrice": -107.0,
+          "current": -8.5,
+          "currentPrice": -105.0,
+          "publicBet": null
+        }
+      },
+      "moneyline": {
+        "away": {
+          "open": null,
+          "openPrice": null,
+          "current": 391.0,
+          "currentPrice": 391.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": null,
+          "openPrice": null,
+          "current": -476.0,
+          "currentPrice": -476.0,
+          "publicBet": null
+        }
+      },
+      "total": {
+        "over": {
+          "open": 49.0,
+          "openPrice": -110.0,
+          "current": 48.5,
+          "currentPrice": -115.0,
+          "publicBet": null
+        },
+        "under": {
+          "open": 49.0,
+          "openPrice": null,
+          "current": 49.5,
+          "currentPrice": -102.0,
+          "publicBet": null
+        }
+      }
+    },
+    {
+      "away": "CHI",
+      "home": "DET",
+      "awayName": "Chicago Bears",
+      "homeName": "Detroit Lions",
+      "awayLabel": "CHI \u2014 Chicago Bears",
+      "homeLabel": "DET \u2014 Detroit Lions",
+      "matchup": "CHI \u2014 Chicago Bears @ DET \u2014 Detroit Lions",
+      "spread": {
+        "away": {
+          "open": -2.5,
+          "openPrice": null,
+          "current": -1.0,
+          "currentPrice": -102.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": 2.5,
+          "openPrice": -104.0,
+          "current": 1.5,
+          "currentPrice": -107.0,
+          "publicBet": null
+        }
+      },
+      "moneyline": {
+        "away": {
+          "open": null,
+          "openPrice": null,
+          "current": -115.0,
+          "currentPrice": -115.0,
+          "publicBet": null
+        },
+        "home": {
+          "open": null,
+          "openPrice": null,
+          "current": 108.0,
+          "currentPrice": 108.0,
+          "publicBet": null
+        }
+      },
+      "total": {
+        "over": {
+          "open": 54.5,
+          "openPrice": -115.0,
+          "current": 56.0,
+          "currentPrice": -111.0,
+          "publicBet": null
+        },
+        "under": {
+          "open": 54.5,
+          "openPrice": null,
+          "current": 56.5,
+          "currentPrice": -106.0,
           "publicBet": null
         }
       }
