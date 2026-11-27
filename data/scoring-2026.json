@@ -1,8 +1,8 @@
 {
   "season": 2026,
-  "updated": "2026-11-26T19:43:30.358168+00:00",
+  "updated": "2026-11-27T19:33:15.006337+00:00",
   "source": "nflverse",
-  "completedGames": 164,
+  "completedGames": 167,
   "note": "Completed regular-season games only. First-quarter scores use the first second-quarter scoring state. Halftime scores use the first third-quarter scoring state. Verify results against official scores.",
   "teams": {
     "LAC": {
@@ -69,13 +69,13 @@
       "finalPointsAllowed": 22.2
     },
     "BUF": {
-      "games": 10,
-      "firstQuarterPointsScored": 5.2,
-      "firstQuarterPointsAllowed": 3.8,
-      "firstHalfPointsScored": 16.0,
-      "firstHalfPointsAllowed": 10.0,
-      "finalPointsScored": 31.3,
-      "finalPointsAllowed": 20.8
+      "games": 11,
+      "firstQuarterPointsScored": 4.73,
+      "firstQuarterPointsAllowed": 3.45,
+      "firstHalfPointsScored": 15.18,
+      "firstHalfPointsAllowed": 9.36,
+      "finalPointsScored": 29.64,
+      "finalPointsAllowed": 19.82
     },
     "CAR": {
       "games": 10,
@@ -87,13 +87,13 @@
       "finalPointsAllowed": 26.9
     },
     "CHI": {
-      "games": 10,
-      "firstQuarterPointsScored": 7.9,
-      "firstQuarterPointsAllowed": 2.3,
-      "firstHalfPointsScored": 15.1,
-      "firstHalfPointsAllowed": 10.0,
-      "finalPointsScored": 26.2,
-      "finalPointsAllowed": 19.7
+      "games": 11,
+      "firstQuarterPointsScored": 7.18,
+      "firstQuarterPointsAllowed": 2.36,
+      "firstHalfPointsScored": 14.64,
+      "firstHalfPointsAllowed": 10.82,
+      "finalPointsScored": 27.36,
+      "finalPointsAllowed": 21.09
     },
     "JAX": {
       "games": 10,
@@ -123,22 +123,22 @@
       "finalPointsAllowed": 21.4
     },
     "DAL": {
-      "games": 11,
-      "firstQuarterPointsScored": 6.64,
-      "firstQuarterPointsAllowed": 5.0,
-      "firstHalfPointsScored": 13.36,
-      "firstHalfPointsAllowed": 11.91,
-      "finalPointsScored": 30.64,
-      "finalPointsAllowed": 28.36
+      "games": 12,
+      "firstQuarterPointsScored": 7.25,
+      "firstQuarterPointsAllowed": 4.58,
+      "firstHalfPointsScored": 14.58,
+      "firstHalfPointsAllowed": 11.75,
+      "finalPointsScored": 31.25,
+      "finalPointsAllowed": 29.25
     },
     "KC": {
-      "games": 10,
-      "firstQuarterPointsScored": 7.4,
-      "firstQuarterPointsAllowed": 4.0,
-      "firstHalfPointsScored": 14.6,
-      "firstHalfPointsAllowed": 9.5,
-      "finalPointsScored": 27.1,
-      "finalPointsAllowed": 16.3
+      "games": 11,
+      "firstQuarterPointsScored": 6.73,
+      "firstQuarterPointsAllowed": 3.64,
+      "firstHalfPointsScored": 13.55,
+      "firstHalfPointsAllowed": 9.27,
+      "finalPointsScored": 25.55,
+      "finalPointsAllowed": 16.0
     },
     "DEN": {
       "games": 10,
@@ -204,13 +204,13 @@
       "finalPointsAllowed": 24.2
     },
     "DET": {
-      "games": 10,
+      "games": 11,
       "firstQuarterPointsScored": 3.0,
-      "firstQuarterPointsAllowed": 4.1,
-      "firstHalfPointsScored": 12.0,
-      "firstHalfPointsAllowed": 8.4,
-      "finalPointsScored": 28.8,
-      "finalPointsAllowed": 22.0
+      "firstQuarterPointsAllowed": 3.73,
+      "firstHalfPointsScored": 12.64,
+      "firstHalfPointsAllowed": 8.55,
+      "finalPointsScored": 29.36,
+      "finalPointsAllowed": 23.55
     },
     "NO": {
       "games": 10,
@@ -276,13 +276,13 @@
       "finalPointsAllowed": 20.9
     },
     "PHI": {
-      "games": 10,
-      "firstQuarterPointsScored": 4.1,
-      "firstQuarterPointsAllowed": 4.9,
-      "firstHalfPointsScored": 12.1,
-      "firstHalfPointsAllowed": 9.8,
-      "finalPointsScored": 16.7,
-      "finalPointsAllowed": 23.7
+      "games": 11,
+      "firstQuarterPointsScored": 3.73,
+      "firstQuarterPointsAllowed": 5.73,
+      "firstHalfPointsScored": 11.91,
+      "firstHalfPointsAllowed": 11.45,
+      "finalPointsScored": 18.73,
+      "finalPointsAllowed": 25.0
     },
     "WAS": {
       "games": 10,
